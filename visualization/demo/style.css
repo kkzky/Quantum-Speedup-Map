@@ -5,3 +5,41 @@
 .limit-mark{font:italic 36px Georgia,serif;color:#7d8d92;padding-right:15px}.asymptotic-card .canvas-wrap{height:540px}.asymptotic-card .chart-heading h2{margin:0}.selection{margin-top:24px}.gain-row{display:flex;align-items:center;justify-content:space-between;gap:25px;border-bottom:1px solid var(--line);padding:0 0 20px;margin-bottom:18px}.gain-row strong{font:23px Georgia,serif;color:#a72830}.detail-meta{color:var(--muted);font-size:12px}.axis-guide{justify-content:center;gap:38px;font-size:11px}.intro{padding-bottom:24px}.intro h1{margin-bottom:0}.comparison .formula{font-size:21px;line-height:1.5}@media(max-width:850px){.asymptotic-card .canvas-wrap{height:465px}.axis-guide{gap:12px;font-size:9px;padding:0 9px}.gain-row{align-items:flex-start;flex-direction:column;gap:9px}.limit-mark{font-size:28px}.intro h1{font-size:28px}}@media(max-width:550px){.axis-guide{justify-content:flex-start;flex-wrap:wrap;height:auto;padding:12px;gap:9px 20px}.limit-mark{display:none}.comparison{grid-template-columns:1fr}.asymptotic-card .chart-heading h2{font-size:15px}}
 
 .charts .canvas-wrap{height:460px}.charts .axis-guide{gap:14px;font-size:9px;padding:0 14px}.cost-card .chart-heading h2{margin:0}.charts .chart-heading h2{font-size:17px}.gradient{background:linear-gradient(90deg,#fff 0%,#ffcaca 20%,#ff9b9b 40%,#ff6d6d 60%,#ff3737 80%,#f00 100%)}@media(max-width:1100px){.charts .chart-heading{padding:16px}.charts .chart-heading h2{font-size:15px}}@media(max-width:850px){.charts{grid-template-columns:1fr}.charts .canvas-wrap{height:460px}}@media(max-width:550px){.charts .axis-guide{gap:8px 15px;font-size:9px}.charts .canvas-wrap{height:440px}}
+
+[hidden]{display:none!important}
+#detail{scroll-margin-top:20px;outline:none}
+.detail-meta{font-size:16px;color:#000;line-height:1.65;gap:20px}
+.detail-meta strong{font-weight:600}
+.entry-navigation{display:flex;justify-content:flex-end;margin-top:24px}
+.entry-navigation a{color:#000;font-size:16px;font-weight:500;text-decoration:none;line-height:1.6}
+.entry-navigation a:hover{text-decoration:underline;text-underline-offset:4px}
+.entry-page{max-width:1060px;padding-top:30px;padding-bottom:60px}
+.back-link{display:inline-block;color:var(--ink);text-decoration:none;margin-bottom:24px;font-size:14px}
+.back-link:hover{text-decoration:underline;text-underline-offset:4px}
+#entryContent{background:#fff;border:1px solid var(--line);border-radius:12px;padding:42px 48px;color:#000;font:17px/1.8 Georgia,'Times New Roman',serif}
+.document-heading{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:32px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.document-heading h1{font:400 36px/1.2 Georgia,serif;letter-spacing:-.5px;margin:0}
+.label-cells{display:inline-flex;flex-shrink:0;border:1px solid #000}
+.category-cell{display:inline-block;width:28px;height:16px;vertical-align:middle;border:1px solid #000}
+.label-cells .category-cell{border:0}
+.label-cells .category-cell+.category-cell{border-left:1px solid #000}
+#entryContent section+section{margin-top:32px}
+#entryContent h2{font:600 26px/1.4 Georgia,serif;margin:0 0 14px}
+#entryContent .document-problem h2{font-size:21px}
+.document-problem h2 span{font-weight:400}
+#entryContent p{margin:0 0 18px;overflow-wrap:anywhere}
+#entryContent a{color:#24528e;text-decoration:underline;text-decoration-color:#acbed5;text-underline-offset:3px;overflow-wrap:anywhere}
+#entryContent a:hover{text-decoration-color:currentColor}
+.document-dimension{margin-top:20px}
+.document-dimension h3{display:flex;align-items:center;gap:10px;font:600 17px/1.6 'Segoe UI',Arial,sans-serif;margin:0 0 5px}
+.document-dimension p{margin-bottom:0!important}
+.historical-note{display:block;margin-top:14px;font-size:14px;line-height:1.75}
+.algorithm-index{padding-left:22px;margin:0}
+.algorithm-index li{padding-left:5px;margin-bottom:16px;overflow-wrap:anywhere}
+.small-caps{font-variant:small-caps}
+.math-inline{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle;padding:3px 0;line-height:1.1}
+.math-block{display:block;max-width:100%;overflow-x:auto;padding:10px 0;margin:4px 0}
+#entryContent math{font-family:'Cambria Math','STIX Two Math',math;font-size:1.06em}
+@media(max-width:850px){.detail-meta{font-size:16px;grid-template-columns:1fr;gap:12px}.entry-page{padding-top:24px}#entryContent{padding:30px}.document-heading h1{font-size:31px}}
+@media(max-width:550px){#entryContent{padding:24px 20px;font-size:16px}.document-heading{gap:14px;margin-bottom:25px}.document-heading h1{font-size:28px}#entryContent h2{font-size:24px}#entryContent .document-problem h2{font-size:20px}.entry-navigation a{font-size:15px}.entry-page{padding-bottom:30px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

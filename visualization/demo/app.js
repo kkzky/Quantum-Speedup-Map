@@ -39,10 +39,19 @@ const colorRGB = s => {
   return [255,pale,pale];
 };
 const color = s => `rgb(${colorRGB(s).join(',')})`;
-const scene = new SpeedupScene($('scene'), {onSelect:select,onHover:tooltip});
-const costScene = new CostScene($('cost'), {onSelect:select,onHover:tooltip});
+const selectFromChart = slug => select(slug, {scroll:true});
+const scene = new SpeedupScene($('scene'), {onSelect:selectFromChart,onHover:tooltip});
+const costScene = new CostScene($('cost'), {onSelect:selectFromChart,onHover:tooltip});
 
-function select(slug) { selected = slug; update(); }
+function select(slug, {scroll = false} = {}) {
+  selected = slug;
+  update();
+  tooltip(null);
+  if (scroll) {
+    $('detail').focus({preventScroll:true});
+    $('detail').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+  }
+}
 function tooltip(point, position) {
   const el = $('tooltip');
   if (!point) { el.hidden = true; return; }
@@ -70,10 +79,36 @@ function update() {
   $('problemList').innerHTML = points.map(p => `<button class="problem-button ${p.slug===selected?'selected':''}" data-slug="${p.slug}" aria-pressed="${p.slug===selected}"><span class="problem-swatch" style="background:${p.color}"></span>${esc(p.name)}</button>`).join('');
   const p = points.find(p=>p.slug===selected);
   const papers = [...p.papers.slice(0,3),...p.papers.filter(r=>selected==='factoring'&&/2048|million/i.test(r.title))];
-  $('detail').innerHTML = `<div class="detail-top"><div><div class="eyebrow">${esc(p.model)}</div><h2>${esc(p.name)}</h2><p>${esc(p.parameter)}</p></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${p.Q}</div></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${p.C}</div></div></div><div class="gain-row"><span class="field-label">ASYMPTOTIC SPEEDUP · T<sub>C</sub> / T<sub>Q</sub></span><strong>${p.gain}</strong></div><div class="detail-meta"><div><i class="dot blue"></i>${esc(evidenceLabels[p.evidence])}</div><div><i class="dot green"></i>${esc(hardwareLabels[p.hardware])}</div></div><div class="papers">${papers.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div>`;
+  $('detail').innerHTML = `<div class="detail-top"><div><div class="eyebrow">${esc(p.model)}</div><h2>${esc(p.name)}</h2><p>${esc(p.parameter)}</p></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${p.Q}</div></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${p.C}</div></div></div><div class="gain-row"><span class="field-label">ASYMPTOTIC SPEEDUP, T<sub>C</sub> / T<sub>Q</sub></span><strong>${p.gain}</strong></div><div class="detail-meta"><div><i class="dot blue"></i><strong>evidence level:</strong> ${esc(evidenceLabels[p.evidence])}</div><div><i class="dot green"></i><strong>Required hardware:</strong> ${esc(hardwareLabels[p.hardware])}</div></div><div class="papers">${papers.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div><div class="entry-navigation"><a id="entryLink" href="#entry/${p.slug}">→ ${esc(p.name)}</a></div>`;
   window.demoState = {points,selected};
 }
 $('problemList').addEventListener('click',event=>{const button=event.target.closest('[data-slug]');if(button)select(button.dataset.slug);});
 $('reset').addEventListener('click',()=>scene.reset());
 $('resetCost').addEventListener('click',()=>costScene.reset());
+function showPage() {
+  const slug = location.hash.startsWith('#entry/') ? location.hash.slice(7) : null;
+  const entry = window.ENTRY_PAGES[slug];
+  const wasEntry = !$('entryPage').hidden;
+  $('explore').hidden = !!entry;
+  $('entryPage').hidden = !entry;
+  tooltip(null);
+  if (entry) {
+    selected = slug;
+    $('entryContent').innerHTML = entry.html;
+    document.title = `${entry.title}, Quantum Speedup Map`;
+    window.scrollTo({top:0,behavior:'instant'});
+  } else {
+    document.title = 'Quantum Speedup Map, Asymptotic View';
+    if (wasEntry) {
+      update();
+      requestAnimationFrame(()=>{
+        scene.resize();
+        costScene.resize();
+        $('detail').scrollIntoView({behavior:'instant',block:'start'});
+      });
+    }
+  }
+}
+window.addEventListener('hashchange',showPage);
 update();
+showPage();

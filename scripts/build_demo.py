@@ -1,11 +1,13 @@
 """Bundle the browser demo into one offline HTML file."""
 from pathlib import Path
+from build_entry_pages import build as build_entry_pages
 
 root = Path(__file__).resolve().parents[1]
 demo = root / 'visualization/demo'
+build_entry_pages()
 html = (demo / 'index.html').read_text(encoding='utf-8')
 html = html.replace('<link rel="stylesheet" href="style.css">', '<style>' + (demo / 'style.css').read_text(encoding='utf-8') + '</style>')
-for name in ['sample-data.js', 'scene3d.js', 'cost2d.js', 'app.js']:
+for name in ['sample-data.js', 'entry-pages.js', 'scene3d.js', 'cost2d.js', 'app.js']:
     script = (demo / name).read_text(encoding='utf-8').replace('</script', '<\\/script')
     html = html.replace(f'<script src="{name}"></script>', '<script>' + script + '</script>')
 output = root / 'visualization/quantum-speedup-demo.html'
