@@ -2,7 +2,7 @@
 
 A structured catalogue of quantum speedups for discrete computational problems, with a separate chapter on complexity bounds and implications.
 
-The dataset contains **102 entries**, **162 literature records**, **264 citation occurrences** and **17 named relations** from the English catalogue dated **9 November 2026**. Entries retain their original numbers within 1–107; numbers 45, 47, 48, 57 and 58 are outside the current catalogue. Each entry includes its formal problem statement, quantum and classical complexity comparisons, strength/evidence/hardware labels, and literature references with definition or theorem locations.
+The dataset contains **102 entries**, **162 literature records**, **264 citation occurrences** and **17 named relations** from the English catalogue dated **9 November 2026**. Each entry includes its formal problem statement, quantum and classical complexity comparisons, strength/evidence/hardware labels, and literature references with definition or theorem locations.
 
 ## Scope
 
@@ -15,12 +15,18 @@ The four chapters are:
 
 The first three chapters concern discrete objects and configurations, including integers, finite fields and groups, and lattices. They include real-valued weights, approximate outputs and continuous or simulation subroutines used to solve discrete target problems. The fourth chapter also covers continuous and quantum-state problems that inform quantum complexity classes.
 
+## Interactive demo
+
+The [eight-problem visualization](visualization/quantum-speedup-demo.html) is a self-contained HTML file: download it and open it in a browser. It links a rotatable strength/evidence/hardware plot to a quantum-versus-classical complexity plot with a shared continuous color scale. Titles identify the problems in all views. See the [coordinate definitions and resource assumptions](visualization/README.md).
+
+![Quantum speedup visualization preview](visualization/demo-preview.png)
+
 ## Data
 
 | Location | Contents |
 | --- | --- |
 | [`data/catalogue.json`](data/catalogue.json) | Catalogue metadata, chapter definitions, classification categories, conventions and entry order. |
-| [`data/entries/`](data/entries/) | One structured JSON record per problem, named by its original number. |
+| [`data/entries/`](data/entries/) | One structured JSON record per problem. |
 | [`data/references.json`](data/references.json) | Shared literature records and access links. |
 | [`data/citations.json`](data/citations.json) | Individual citations, linked to an entry, section and literature record, with the original URL and local locator. |
 | [`data/reference_access.json`](data/reference_access.json) | Additional full-text access routes and their provenance. |
@@ -50,7 +56,7 @@ The importer reconstructs the structured records from the TeX snapshot and incor
 Open `data/quantum_speedups.sqlite` in a SQLite client. The following query selects entries whose strongest strength category is exponential or subexponential to polynomial:
 
 ```sql
-SELECT e.number, e.title
+SELECT e.title
 FROM entries AS e
 JOIN entry_labels AS l ON l.entry_id = e.id
 WHERE l.dimension = 'strength'
@@ -61,7 +67,7 @@ ORDER BY e.ordinal;
 Find the entries and locations citing Grover's original search paper:
 
 ```sql
-SELECT e.number, e.title, c.section, c.locator_latex, c.url
+SELECT e.title, c.section, c.locator_latex, c.url
 FROM citations AS c
 JOIN entries AS e ON e.id = c.entry_id
 JOIN "references" AS r ON r.id = c.reference_id
@@ -72,7 +78,7 @@ ORDER BY e.ordinal, c.id;
 Search problem statements, complexity comparisons, labels and algorithm references:
 
 ```sql
-SELECT e.number, e.title
+SELECT e.title
 FROM entry_search
 JOIN entries AS e ON e.id = entry_search.id
 WHERE entry_search MATCH '"subset sum" OR lattice'

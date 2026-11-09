@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quantum Speedup Map · Explore</title><style>:root{--ink:#17242a;--muted:#6c787d;--line:#e1e6e5;--paper:#f7f9f8;--red:#f02732;--blue:#3267aa;--green:#398068}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);font-size:14px}header{height:76px;border-bottom:1px solid var(--line);padding:0 4.5%;display:flex;align-items:center;gap:48px;background:#fff}.brand{font-size:17px;font-weight:650;display:flex;gap:11px;align-items:center;text-decoration:none;color:var(--ink)}.brand-icon{width:29px;height:29px;background:var(--ink);border-radius:50%;color:#fff;font:italic 26px Georgia;text-align:center;line-height:22px}nav{display:flex;gap:28px;height:100%;align-items:center}nav a{color:var(--muted);text-decoration:none;height:100%;display:flex;align-items:center;font-size:13px}nav a.active{color:var(--ink);border-bottom:2px solid var(--ink)}.prototype{margin-left:auto;font-size:10px;letter-spacing:1.3px;color:var(--muted);border:1px solid var(--line);padding:7px 10px;border-radius:4px}main{max-width:1580px;margin:auto;padding:0 4.5%}.intro{display:flex;justify-content:space-between;align-items:center;padding:36px 0 28px}.eyebrow,.field-label{font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:600}.intro h1{font:400 40px Georgia,serif;letter-spacing:-1.2px;margin:10px 0}.intro p{color:var(--muted);margin:10px 0 0;font-size:14px}.intro-note{font-size:12px;color:var(--muted);line-height:1.8;position:relative;padding-left:21px}.redline{height:36px;width:3px;background:var(--red);position:absolute;left:0;top:4px}.controls{display:flex;align-items:center;background:white;border:1px solid var(--line);border-radius:10px;padding:17px 21px;margin-bottom:20px;gap:28px}.scale-label{min-width:138px;display:flex;flex-direction:column;gap:6px}.scale-label strong{font-size:18px;font-weight:500;font-variant-numeric:tabular-nums}.size-control{width:30%;max-width:350px}.size-control>div{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin-top:3px}input[type=range]{accent-color:var(--ink);width:100%;cursor:pointer}.oracle-control{border-left:1px solid var(--line);padding-left:25px;display:flex;flex-direction:column;gap:6px}select{font:13px inherit;border:0;background:#f4f6f5;padding:7px 10px;color:var(--ink);border-radius:4px;min-width:195px}.control-note{margin-left:auto;color:var(--muted);font-size:11px;line-height:1.7}.charts{display:grid;grid-template-columns:1fr 1fr;gap:20px}.chart-card{border:1px solid var(--line);background:#fff;border-radius:12px;overflow:hidden}.chart-heading{height:84px;display:flex;align-items:center;justify-content:space-between;padding:18px 23px}.chart-heading h2{font-size:18px;font-weight:550;margin:8px 0 0}.quiet{border:1px solid var(--line);background:white;color:var(--muted);font-size:11px;padding:7px 9px;border-radius:5px;cursor:pointer}.pill{background:#f3f5f4;padding:6px 9px;border-radius:4px;color:var(--muted);font-size:10px}.canvas-wrap{height:405px;position:relative}canvas{display:block;width:100%;height:100%;touch-action:none}.plot-help{position:absolute;bottom:10px;left:23px;font-size:10px;color:#8d979b;pointer-events:none}.axis-guide,.gradient-guide{height:46px;display:flex;align-items:center;gap:15px;border-top:1px solid #edf0ef;padding:0 23px;font-size:10px;color:var(--muted)}.axis-guide span{white-space:nowrap}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:5px}.red{background:var(--red)}.blue{background:var(--blue)}.green{background:var(--green)}.gradient-guide{gap:12px}.gradient{height:6px;flex:1;background:linear-gradient(90deg,#fff 0%,#ffd8da 25%,#ff7d84 60%,#f00012 100%);border:1px solid #f6dedf;border-radius:3px}.strength-strip{display:flex;gap:20px;align-items:center;padding:16px 21px;background:#fff;border:1px solid var(--line);border-radius:9px;margin:16px 0 24px}.strength-strip .field-label{min-width:155px;font-size:9px}#landmarks{display:flex;justify-content:space-between;gap:12px;width:100%;font-family:Georgia,serif;font-size:14px}#landmarks span{display:flex;align-items:center;gap:8px}#landmarks i{display:inline-block;width:10px;height:10px;border-radius:3px;border:1px solid #d6b7b9}.selection{display:grid;grid-template-columns:245px 1fr;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.selection aside{padding:23px 15px;border-right:1px solid var(--line)}.selection aside>.eyebrow{padding-left:12px;margin-bottom:13px}.problem-button{width:100%;display:flex;align-items:center;gap:10px;text-align:left;padding:11px 12px;background:transparent;border:0;border-radius:6px;color:var(--muted);cursor:pointer;font:12px inherit;margin:1px 0}.problem-button:hover{background:#f7f9f8}.problem-button.selected{background:#f0f3f2;color:var(--ink);font-weight:600}.problem-swatch{width:9px;height:9px;border:1px solid #b99b9e;border-radius:50%;flex-shrink:0}#detail{padding:26px 30px;min-width:0}.detail-top{display:flex;justify-content:space-between;gap:20px}.detail-top h2{font:400 28px Georgia;margin:6px 0 9px}.detail-top p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}.strength-value{text-align:right;white-space:nowrap}.strength-value strong{display:block;font:36px Georgia;margin-top:5px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}.comparison>div{background:#f6f8f7;border-radius:7px;padding:14px 16px}.comparison .formula{font:22px Georgia;margin-top:8px;min-height:27px}.comparison p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:0}.detail-meta{display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:12px;line-height:1.7}.detail-meta h3{font-size:11px;font-weight:600;margin:0 0 5px}.detail-meta p{margin:0;color:var(--muted)}.papers{border-top:1px solid var(--line);margin-top:20px;padding-top:14px;display:flex;flex-wrap:wrap;gap:8px 16px}.papers a{font-size:11px;color:var(--blue);text-decoration:none}.papers a:hover{text-decoration:underline}.method{padding:44px 0 20px}.method h2{font:26px Georgia;margin:9px 0 20px}.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.method h3{font-size:13px;font-weight:600;margin:10px 0}.method p{font-size:12px;color:var(--muted);line-height:1.8}.method b{font-weight:500;color:var(--ink)}footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;padding:22px 0;color:var(--muted);font-size:10px;margin-top:20px}#tooltip{position:fixed;z-index:30;background:#19272df2;color:white;padding:11px 14px;border-radius:7px;max-width:300px;pointer-events:none;font-size:12px;box-shadow:0 5px 20px #0002}#tooltip small{display:block;color:#b8c6cb;line-height:1.7;margin-top:4px}@media(max-width:1100px){main{padding:0 3%}.controls{gap:17px}.control-note{display:none}.axis-guide{gap:9px;padding:0 14px;font-size:9px}.chart-heading{padding:18px 17px}.chart-heading h2{font-size:16px}#landmarks{font-size:12px}.strength-strip .field-label{min-width:120px}}@media(max-width:850px){header{height:66px;padding:0 4%;gap:25px}.prototype{display:none}nav{gap:18px}.intro h1{font-size:31px}.intro-note{display:none}.charts{grid-template-columns:1fr}.canvas-wrap{height:410px}.controls{flex-wrap:wrap}.size-control{flex:1;width:auto}.oracle-control{width:100%;border-left:0;border-top:1px solid var(--line);padding:12px 0 0;flex-direction:row;align-items:center;justify-content:space-between}.selection{grid-template-columns:1fr}.selection aside{border-right:0;border-bottom:1px solid var(--line);padding:16px}.selection aside>.eyebrow{display:none}#problemList{display:flex;flex-wrap:wrap}.problem-button{width:auto;font-size:11px;padding:8px}.strength-strip{flex-direction:column;align-items:flex-start}#landmarks{flex-wrap:wrap;gap:13px}.method-grid{grid-template-columns:1fr;gap:4px}.detail-meta{grid-template-columns:1fr;gap:14px}.comparison{gap:10px}#detail{padding:21px}.detail-top h2{font-size:25px}}
+
+@media(max-width:550px){header{gap:18px}.brand{font-size:13px;white-space:nowrap;gap:7px}.brand-icon{width:24px;height:24px;font-size:23px;line-height:19px}nav{gap:12px}nav a{font-size:11px}nav a:last-child{display:none}}
+</style></head>
+<body>
+<header><a class="brand" href="#"><span class="brand-icon">q</span>Quantum Speedup Map</a><nav><a href="#explore" class="active">Explore</a><a href="#method">Coordinates</a><a href="https://github.com/kkzky/Quantum-Speedup-Map" target="_blank" rel="noreferrer">Database ↗</a></nav><span class="prototype">RESEARCH DEMO</span></header>
+<main id="explore">
+<div class="intro"><div><div class="eyebrow">ALGORITHMS / COMPLEXITY / IMPLEMENTATION</div><h1>Where does quantum help?</h1><p>Eight problems. Two connected views of quantum advantage.</p></div><div class="intro-note"><span class="redline"></span>Continuous coordinates<br>Shared strength gradient</div></div>
+<section class="controls" aria-label="Comparison settings"><div class="scale-label"><span class="field-label">REFERENCE SIZE</span><strong id="sizeLabel">N = 4,096</strong></div><div class="size-control"><input id="size" aria-label="Log base two of reference size" type="range" min="6" max="24" step="0.25" value="12"><div><span>2⁶</span><span>2¹²</span><span>2¹⁸</span><span>2²⁴</span></div></div><div class="oracle-control"><label class="field-label" for="oracle">HARDWARE MODEL · GATES / QUERY</label><select id="oracle"><option value="1">1 · ideal oracle</option><option value="1000" selected>10³ · reversible oracle</option><option value="1000000">10⁶ · expensive oracle</option></select></div><div class="control-note">N follows each problem’s natural parameter.<br>Click a point to inspect its model.</div></section>
+<div class="charts"><section class="chart-card"><div class="chart-heading"><div><span class="eyebrow">THREE DIMENSIONS</span><h2>Strength, evidence, hardware</h2></div><button id="reset" class="quiet" aria-label="Reset three-dimensional view">Reset view ↺</button></div><div class="canvas-wrap"><canvas id="scene" aria-label="Rotatable three-dimensional scatter plot"></canvas><span class="plot-help">Drag to rotate · scroll to zoom · click to inspect</span></div><div class="axis-guide"><span><i class="dot red"></i>Strength · stronger →</span><span><i class="dot blue"></i>Evidence · firmer ↑</span><span><i class="dot green"></i>Hardware · larger burden ↗</span></div></section>
+<section class="chart-card"><div class="chart-heading"><div><span class="eyebrow">COST COMPARISON</span><h2>Quantum versus classical</h2></div><span class="pill">Double-log axes</span></div><div class="canvas-wrap"><canvas id="cost" aria-label="Quantum and classical complexity scatter plot"></canvas><span class="plot-help">Scroll to zoom · drag to pan · double-click to fit</span></div><div class="gradient-guide"><span>No advantage</span><div class="gradient"></div><span>Stronger advantage</span></div></section></div>
+<div class="strength-strip"><span class="field-label">STRENGTH LANDMARKS</span><div id="landmarks"></div></div>
+<section class="selection"><aside><div class="eyebrow">PROBLEMS</div><div id="problemList" role="list" aria-label="Select a problem"></div></aside><article id="detail" aria-live="polite"></article></section>
+<section id="method" class="method"><div><div class="eyebrow">COORDINATES</div><h2>A shared scale, with visible assumptions.</h2></div><div class="method-grid"><article><h3>Strength comes from the two costs</h3><p>Both cost axes use <b>u(T) = log₂ log₂ T</b>. Strength is their difference: <b>u(T<sub>C</sub>) − u(T<sub>Q</sub>)</b>. A square-root improvement has strength 1; an exponential-to-polynomial comparison moves as N grows. The background and every point use this same value.</p><p>The plotted costs are leading-order asymptotic models evaluated at N, with constants and the stated lower-order factors suppressed. Each detail panel gives the input parameter and resource being counted.</p></article><article><h3>Evidence uses explicit anchors</h3><p>0: no established speedup; 0.5: best-known classical comparison; 0.75: conditional hardness; 1: rigorous oracle separation. These are evidence categories placed on a continuous axis. Proven oracle comparisons share the same height.</p><h3>Hardware uses a resource model</h3><p>The coordinate is <b>log₁₀(Q × G)</b>, where Q is modeled logical storage and G is modeled coherent work. Query algorithms use the chosen gate cost per query. Each panel exposes Q and G. This is an editable resource estimate; physical error correction and oracle construction are additional implementation inputs.</p></article></div></section>
+<footer><span>Quantum Speedup Map</span><span>Mathematical models · linked literature · continuous comparisons</span></footer>
+</main><div id="tooltip" role="tooltip" hidden></div>
+<script>window.SAMPLE_DATA = [
+  {
+    "slug": "search",
+    "name": "Unstructured search",
+    "shortName": "Grover",
+    "problem": "Given coherent access to a Boolean oracle \\[ f:\\{0,\\ldots,N-1\\}\\longrightarrow\\{0,1\\}, \\] output an $x$ with $f(x)=1$, or report that no such $x$ exists, with success probability at least $2/3$. Let $M=|f^{-1}(1)|$. In a combinatorial search problem, $x$ represents a candidate solution and $f$ its feasibility predicate. Complexity is measured in oracle queries for both models, with an additional quantum gate bound expressed in terms of the oracle implementation cost.",
+    "quantum": {
+      "headline_latex": "$\\Theta(\\sqrt N)$ oracle queries, Grover search and amplitude amplification.",
+      "headline_text": "$\\Theta(\\sqrt N)$ oracle queries, Grover search and amplitude amplification.",
+      "details_latex": "For $M\\ge1$, the expected query bound is $O(\\sqrt{N/M})$, including the case of unknown $M$.\nIf a reversible evaluation of $f$ costs $C_f$ gates, the direct implementation uses\n$O((C_f+\\log N)\\sqrt{N/M})$ gates.\nFor a general reversible trial with success probability $p$, amplitude amplification reduces the required number of trials to $O(p^{-1/2})$.",
+      "details_text": "For $M\\ge1$, the expected query bound is $O(\\sqrt{N/M})$, including the case of unknown $M$. If a reversible evaluation of $f$ costs $C_f$ gates, the direct implementation uses $O((C_f+\\log N)\\sqrt{N/M})$ gates. For a general reversible trial with success probability $p$, amplitude amplification reduces the required number of trials to $O(p^{-1/2})$."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N)$ oracle queries, exhaustive or randomized search.",
+      "headline_text": "$\\Theta(N)$ oracle queries, exhaustive or randomized search.",
+      "details_latex": "Under a promise of $M\\ge1$ marked inputs, randomized sampling requires $\\Theta(N/M)$ queries in the worst case over their locations. A general trial with success probability $p$ needs $\\Theta(p^{-1})$ independent repetitions. The upper and lower bounds concern the same Boolean-oracle access model.",
+      "details_text": "Under a promise of $M\\ge1$ marked inputs, randomized sampling requires $\\Theta(N/M)$ queries in the worst case over their locations. A general trial with success probability $p$ needs $\\Theta(p^{-1})$ independent repetitions. The upper and lower bounds concern the same Boolean-oracle access model."
+    },
+    "evidence": "Fully rigorous: the classical and quantum query lower bounds match the stated algorithms; see Bennett–Bernstein–Brassard–Vazirani (1997).",
+    "hardware": "Small-instance search circuits have been implemented. A useful large search requires $\\lceil\\log_2N\\rceil$ logical candidate qubits, reversible-oracle workspace, and $\\Theta(\\sqrt N)$ coherent iterations in the worst case.",
+    "papers": [
+      {
+        "title": "A Fast Quantum Mechanical Algorithm for Database Search",
+        "url": "https://arxiv.org/pdf/quant-ph/9605043",
+        "locator": "Section 3, ``Algorithm'', preprint p.~3, steps (i)--(iii)."
+      },
+      {
+        "title": "Quantum Amplitude Amplification and Estimation",
+        "url": "https://arxiv.org/pdf/quant-ph/0005055",
+        "locator": "Section 2, Theorem 2 for known success probability; Theorem 3 and \\textsc{QSearch} for unknown success probability, preprint pp.~7--9."
+      }
+    ]
+  },
+  {
+    "slug": "mst",
+    "name": "Minimum spanning tree",
+    "shortName": "Spanning tree",
+    "problem": "Given a connected undirected graph $G=(V,E)$, $|V|=n$, $|E|=m$, and weights $w:E\\to\\mathbb R$, output a spanning tree $T$ minimizing $\\sum_{e\\in T}w(e)$. This is the minimum-cost network connecting all vertices. The comparison counts weight-oracle queries; explicit-input classical time counts comparisons and RAM operations, and quantum gate cost includes reversible weight access.",
+    "quantum": {
+      "headline_latex": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(\\sqrt{nm})$ array queries, D\\\"urr--Heiligman--H{\\o}yer--Mhalla.",
+      "headline_text": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(\\sqrt{nm})$ array queries, Dürr–Heiligman–Høyer–Mhalla.",
+      "details_latex": "The adjacency array supplies each vertex degree and coherent access to its indexed weighted neighbors. Both bounds allow bounded error and have polylogarithmic computational overhead when graph access and weight comparison are efficient. The output consists of $n-1$ classical edges.",
+      "details_text": "The adjacency array supplies each vertex degree and coherent access to its indexed weighted neighbors. Both bounds allow bounded error and have polylogarithmic computational overhead when graph access and weight comparison are efficient. The output consists of $n-1$ classical edges."
+    },
+    "classical": {
+      "headline_latex": "$O(m)$ expected time, Karger--Klein--Tarjan; $\\Theta(n^2)$ matrix queries.",
+      "headline_text": "$O(m)$ expected time, Karger–Klein–Tarjan; $\\Theta(n^2)$ matrix queries.",
+      "details_latex": "The randomized linear-time algorithm uses an explicit edge list and weight comparisons. In the oracle representation, inspecting the edge weights requires $\\Omega(m)$ queries in the worst case. Thus the matrix comparison is $n^2$ against $n^{3/2}$; the array advantage is a factor $\\sqrt{m/n}$. For $b$-bit weights, arithmetic and comparison costs must be included when converting either query bound to bit or gate complexity.",
+      "details_text": "The randomized linear-time algorithm uses an explicit edge list and weight comparisons. In the oracle representation, inspecting the edge weights requires $\\Omega(m)$ queries in the worst case. Thus the matrix comparison is $n^2$ against $n^{3/2}$; the array advantage is a factor $\\sqrt{m/n}$. For $b$-bit weights, arithmetic and comparison costs must be included when converting either query bound to bit or gate complexity."
+    },
+    "evidence": "The classical and quantum query bounds are tight for their respective input representations.",
+    "hardware": "Fault-tolerant graph access is required at useful scale. Active search and weight registers use $O(\\log n+b)$ logical qubits, in addition to reversible-oracle workspace and $O(n(\\log n+b))$ classical component records.",
+    "papers": [
+      {
+        "title": "Quantum Query Complexity of Some Graph Problems",
+        "url": "https://arxiv.org/pdf/quant-ph/0401091",
+        "locator": "Section 4, ``Minimum Spanning Tree'', Theorem 8; Section 8, Theorem 24, for the lower bound."
+      },
+      {
+        "title": "A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees",
+        "url": "https://doi.org/10.1145/201019.201022",
+        "locator": "The minimum-spanning-tree algorithm and its expected linear-time analysis."
+      }
+    ]
+  },
+  {
+    "slug": "formula",
+    "name": "Balanced AND–OR evaluation",
+    "shortName": "AND–OR",
+    "problem": "Given a fixed read-once formula $F$ with $N$ input leaves and gates AND, OR and NOT, query input bits and compute $F(x)$. For alternating AND–OR trees, this decides the winner of a finite perfect-information game with known tree and queried terminal outcomes. Complexity counts queries to the leaf bits; gate complexity additionally includes access to the preprocessed formula graph.",
+    "quantum": {
+      "headline_latex": "$O(\\sqrt N)$ queries, quantum-walk and span-program formula evaluation.",
+      "headline_text": "$O(\\sqrt N)$ queries, quantum-walk and span-program formula evaluation.",
+      "details_latex": "The bound applies to fixed read-once AND--OR formulas, allowing negations on inputs. Efficient implementations have nearly matching time after preprocessing the formula. The output is the Boolean value at the root.",
+      "details_text": "The bound applies to fixed read-once AND–OR formulas, allowing negations on inputs. Efficient implementations have nearly matching time after preprocessing the formula. The output is the Boolean value at the root."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N^c)$ for balanced binary trees, randomized alpha--beta pruning, where $c=\\log_2((1+\\sqrt{33})/4)\\approx0.753$.",
+      "headline_text": "$\\Theta(N^c)$ for balanced binary trees, randomized alpha–beta pruning, where $c=\\log_2((1+\\sqrt{33})/4)\\approx0.753$.",
+      "details_latex": "The randomized algorithm evaluates children in random order and stops as soon as the parent value is determined. This is the optimal randomized classical bound for the balanced alternating binary tree. Arbitrary formulas have structure-dependent classical complexity and the general $O(N)$ leaf-reading upper bound.",
+      "details_text": "The randomized algorithm evaluates children in random order and stops as soon as the parent value is determined. This is the optimal randomized classical bound for the balanced alternating binary tree. Arbitrary formulas have structure-dependent classical complexity and the general $O(N)$ leaf-reading upper bound."
+    },
+    "evidence": "Rigorous: the balanced-tree classical and quantum exponents have matching lower bounds.",
+    "hardware": "Fault-tolerant evaluation uses logarithmic graph-address registers, phase-estimation ancillas and coherent access to the preprocessed formula. Regular balanced trees admit succinct graph descriptions.",
+    "papers": [
+      {
+        "title": "Span-Program-Based Quantum Algorithm for Evaluating Formulas",
+        "url": "https://theoryofcomputing.org/articles/v008a013/",
+        "locator": "Formula-evaluation construction and the main algorithmic theorem."
+      },
+      {
+        "title": "Reflections for Quantum Query Algorithms",
+        "url": "https://arxiv.org/pdf/1005.1601",
+        "locator": "Theorem 1.3 and Algorithms 1--3: conversion of span-program witnesses to query algorithms."
+      }
+    ]
+  },
+  {
+    "slug": "collision",
+    "name": "Hash collisions",
+    "shortName": "Collision",
+    "problem": "Given a random function $H$ with $n$-bit outputs and a sufficiently large domain, find distinct $x,x'$ with $H(x)=H(x')$. Collision resistance is the relevant property for many hash-based constructions and commitment schemes. The random-function comparison measures hash-oracle queries; total quantum time additionally counts coherent table access, and explicit circuits use gate or bit complexity.",
+    "quantum": {
+      "headline_latex": "$O(r+\\sqrt{2^n/r})$ queries with a table of $r$ values, Brassard--H\\o yer--Tapp collision search.",
+      "headline_text": "$O(r+\\sqrt{2^n/r})$ queries with a table of $r$ values, Brassard–Høyer–Tapp collision search.",
+      "details_latex": "The table parameter satisfies $1\\le r\\le 2^n$. Optimizing it gives $r=2^{n/3}$ and the tight $\\Theta(2^{n/3})$ quantum query bound. Near-matching time assumes efficient coherent lookup into the stored table. A gate implementation includes the lookup circuit and reversible hash cost. The random-function setting yields the matching quantum collision lower-bound scale.",
+      "details_text": "The table parameter satisfies $1\\le r\\le 2^n$. Optimizing it gives $r=2^{n/3}$ and the tight $\\Theta(2^{n/3})$ quantum query bound. Near-matching time assumes efficient coherent lookup into the stored table. A gate implementation includes the lookup circuit and reversible hash cost. The random-function setting yields the matching quantum collision lower-bound scale."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(2^{n/2})$ queries, birthday search or Pollard-rho collision finding.",
+      "headline_text": "$\\Theta(2^{n/2})$ queries, birthday search or Pollard-rho collision finding.",
+      "details_latex": "Birthday storage is of order $2^{n/2}$ entries; Pollard-rho offers low-memory collision finding under the usual random-function assumptions. For a hash given by a $G$-gate circuit on $\\ell$ input bits, the predicate $x\\ne x'$, $H(x)=H(x')$ has $O(\\ell+n+G)$ gates. Boolean tensor contraction and witness recovery give $\\operatorname{poly}(\\ell+n+G)2^{O((\\ell+n+G)/\\sqrt{\\log(\\ell+n+G)})}$ classical time. A linear-size explicit family therefore has a subexponential comparator.",
+      "details_text": "Birthday storage is of order $2^{n/2}$ entries; Pollard-rho offers low-memory collision finding under the usual random-function assumptions. For a hash given by a $G$-gate circuit on $\\ell$ input bits, the predicate $x\\ne x'$, $H(x)=H(x')$ has $O(\\ell+n+G)$ gates. Boolean tensor contraction and witness recovery give $\\operatorname{poly}(\\ell+n+G)2^{O((\\ell+n+G)/\\sqrt{\\log(\\ell+n+G)})}$ classical time. A linear-size explicit family therefore has a subexponential comparator."
+    },
+    "evidence": "Fully proved in the collision-oracle model with the stated domain promise; random-function collision bounds give the corresponding cryptographic query scale.",
+    "hardware": "The time-efficient BHT implementation stores about $2^{n/3}$ entries with coherent access and requires exponentially many fault-tolerant operations. Polynomial-qubit alternatives use different time-memory tradeoffs; the lookup model is a material resource assumption. [Before “ETH is false”, the generic collision comparison used $\\Theta(2^{n/2})$ classical versus $\\Theta(2^{n/3})$ quantum queries, an exponential-constant improvement also used for explicit hash circuits.]",
+    "papers": [
+      {
+        "title": "Quantum Algorithm for the Collision Problem",
+        "url": "https://arxiv.org/pdf/quant-ph/9705002",
+        "locator": "Theorem 1 and \\textsc{Collision}$(F,k)$: table-based quantum collision search; Section 3: coherent table-access costs."
+      },
+      {
+        "title": "Quantum Lower Bounds for the Collision and the Element Distinctness Problems",
+        "url": "https://arxiv.org/pdf/quant-ph/0112086",
+        "locator": "Theorem 1.1: tight cube-root collision query lower bound."
+      },
+      {
+        "title": "The Exponential Time Hypothesis Is False",
+        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "locator": "Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit."
+      }
+    ]
+  },
+  {
+    "slug": "claw",
+    "name": "Claw finding",
+    "shortName": "Claw finding",
+    "problem": "Given evaluation oracles for $f:[N]\\to Z$ and $g:[M]\\to Z$, with $N\\le M$, find $(x,y)$ with $f(x)=g(y)$ or determine that none exists. Claws arise when matching two halves of a cryptanalytic computation, including double encryption and prescribed-degree isogeny search. Complexity is measured in evaluation-oracle queries; runtime includes list-access costs, and explicit functions are additionally compared in gate and bit complexity.",
+    "quantum": {
+      "headline_latex": "$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, Tani quantum-walk claw finding.",
+      "headline_text": "$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, Tani quantum-walk claw finding.",
+      "details_latex": "The balanced case is $\\Theta(N^{2/3})$. The algorithm stores evaluated subsets of both domains; coherent sorting or lookup contributes to its gate cost. The stated bounded-error bounds include finding a claw or deciding that none exists, for the evaluation-oracle model. Quantum-walk spectral and marked-fraction parameters determine the two regimes.",
+      "details_text": "The balanced case is $\\Theta(N^{2/3})$. The algorithm stores evaluated subsets of both domains; coherent sorting or lookup contributes to its gate cost. The stated bounded-error bounds include finding a claw or deciding that none exists, for the evaluation-oracle model. Quantum-walk spectral and marked-fraction parameters determine the two regimes."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N+M)$ queries in the worst case, classical list matching.",
+      "headline_text": "$\\Theta(N+M)$ queries in the worst case, classical list matching.",
+      "details_latex": "Hashing both lists gives expected linear-time matching with suitable value representation; sorting gives a logarithmic time overhead. For $N=M$, the bound is $\\Theta(N)$. If $f$ and $g$ have explicit verification circuits of combined size $G$ and the combined witness length is $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$, circuit encoding gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search. In the balanced case with $G=O(\\log N)$, this becomes $N^{o(1)}$.",
+      "details_text": "Hashing both lists gives expected linear-time matching with suitable value representation; sorting gives a logarithmic time overhead. For $N=M$, the bound is $\\Theta(N)$. If $f$ and $g$ have explicit verification circuits of combined size $G$ and the combined witness length is $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$, circuit encoding gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search. In the balanced case with $G=O(\\log N)$, this becomes $N^{o(1)}$."
+    },
+    "evidence": "Fully proved for the evaluation-oracle task and its matching query lower bounds. Explicit small circuits have the separate representation-dependent classical comparator.",
+    "hardware": "Time-efficient walks need coherent access to stored function values and exponential storage in the logarithmic domain size. Reversible function evaluation and walk updates require fault tolerance for cryptographic domains. [Before “ETH is false”, the balanced generic comparison was $\\Theta(N)$ classical versus $\\Theta(N^{2/3})$ quantum queries, also transferred to explicit function evaluations.]",
+    "papers": [
+      {
+        "title": "Claw Finding Algorithms Using Quantum Walk",
+        "url": "https://arxiv.org/pdf/0708.2584",
+        "locator": "Section 3: claw detection; Section 4, \\textsc{ClawSearch} and Theorem 8: finding a claw and the two domain-size regimes."
+      },
+      {
+        "title": "The Exponential Time Hypothesis Is False",
+        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "locator": "Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit."
+      }
+    ]
+  },
+  {
+    "slug": "local",
+    "name": "Hypercube local search",
+    "shortName": "Local search",
+    "problem": "Given value-oracle access to $f:\\{0,1\\}^n\\to\\mathbb R$, output $x$ such that $f(x)\\le f(x\\oplus e_i)$ for every coordinate $i$, with probability at least $2/3$. Values have a finite comparison encoding. This models single-bit local improvement in combinatorial optimization. Complexity is measured in value-oracle queries for both quantum and randomized classical algorithms.",
+    "quantum": {
+      "headline_latex": "$\\Theta(2^{n/3}n^{1/6})$ queries, quantum sampling and local descent.",
+      "headline_text": "$\\Theta(2^{n/3}n^{1/6})$ queries, quantum sampling and local descent.",
+      "details_latex": "Minimum finding selects a low-valued starting point, and quantum search finds improving neighbors. The bound is tight. On a fixed-dimensional grid with $N$ vertices and dimension at least six, the optimal quantum query complexity is $\\Theta(N^{1/3})$.",
+      "details_text": "Minimum finding selects a low-valued starting point, and quantum search finds improving neighbors. The bound is tight. On a fixed-dimensional grid with $N$ vertices and dimension at least six, the optimal quantum query complexity is $\\Theta(N^{1/3})$."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(2^{n/2}n^{1/2})$ queries, randomized sampling and local descent.",
+      "headline_text": "$\\Theta(2^{n/2}n^{1/2})$ queries, randomized sampling and local descent.",
+      "details_latex": "The Aldous-type algorithm samples vertices, chooses the lowest sampled value, and follows improving neighbors. For a fixed-dimensional grid of dimension at least four, the tight randomized bound is $\\Theta(N^{1/2})$.",
+      "details_text": "The Aldous-type algorithm samples vertices, chooses the lowest sampled value, and follows improving neighbors. For a fixed-dimensional grid of dimension at least four, the tight randomized bound is $\\Theta(N^{1/2})$."
+    },
+    "evidence": "Matching quantum and randomized query lower bounds establish the separation.",
+    "hardware": "A fault-tolerant implementation needs an $n$-qubit vertex register, value and comparison workspace, and coherent neighborhood access. Exponentially many queries dominate the runtime; the evaluator determines the additional logical-qubit count.",
+    "papers": [
+      {
+        "title": "(Almost) Tight Bounds for Randomized and Quantum Local Search on Hypercubes and Grids",
+        "url": "https://arxiv.org/pdf/quant-ph/0504085",
+        "locator": "Introduction, Theorems 1--2 and the discussion of matching sampling/descent upper bounds; Section 3 for the hypercube lower bound."
+      },
+      {
+        "title": "Lower Bounds for Local Search by Quantum Arguments",
+        "url": "https://arxiv.org/pdf/quant-ph/0307149",
+        "locator": "Proposition 2 for the quantum algorithm and the preceding paragraph for randomized sampling and descent."
+      }
+    ]
+  },
+  {
+    "slug": "factoring",
+    "name": "Integer factorization",
+    "shortName": "Factoring",
+    "problem": "Given an odd composite integer $N$ in binary, output primes $p_i$ and positive integers $e_i$ such that $N=\\prod_i p_i^{e_i}$. Write $n=\\lceil\\log_2N\\rceil$. The balanced semiprime case underlies RSA. The explicit-integer comparison uses quantum gate complexity and classical bit complexity.",
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^2)$ total gates, Shor and Regev factoring.",
+      "headline_text": "$\\widetilde O(n^2)$ total gates, Shor and Regev factoring.",
+      "details_latex": "Shor's order-finding algorithm uses $\\widetilde O(n^3)$ gates with elementary arithmetic and $\\widetilde O(n^2)$ with fast arithmetic; its logical space is $O(n)$. Regev uses $\\widetilde O(n^{3/2})$ gates per circuit and $\\lceil\\sqrt n\\rceil+4$ repetitions, followed by polynomial-time lattice postprocessing. The total quantum gate count is $\\widetilde O(n^2)$, with shorter individual coherent computations. Pilatte establishes unconditional correctness for the recent factoring framework.",
+      "details_text": "Shor's order-finding algorithm uses $\\widetilde O(n^3)$ gates with elementary arithmetic and $\\widetilde O(n^2)$ with fast arithmetic; its logical space is $O(n)$. Regev uses $\\widetilde O(n^{3/2})$ gates per circuit and $\\lceil\\sqrt n\\rceil+4$ repetitions, followed by polynomial-time lattice postprocessing. The total quantum gate count is $\\widetilde O(n^2)$, with shorter individual coherent computations. Pilatte establishes unconditional correctness for the recent factoring framework."
+    },
+    "classical": {
+      "headline_latex": "$L_N[1/3,(64/9)^{1/3}]$ heuristic time, general number field sieve.",
+      "headline_text": "$L_N[1/3,(64/9)^{1/3}]$ heuristic time, general number field sieve.",
+      "details_latex": "Here $L_N[\\alpha,c]=\\exp((c+o(1))(\\log N)^\\alpha(\\log\\log N)^{1-\\alpha})$. This is the standard fastest heuristic comparator for general balanced RSA semiprimes. It includes smooth-relation collection and sparse linear algebra. Rudich--Rousseau also announce deterministic worst-case $N^{o(1)}=2^{o(n)}$ time using the Boolean tensor-contraction theorem. That result specifies a deterministic guarantee; its $o(n)$ exponent does not quantitatively rank it against heuristic GNFS.",
+      "details_text": "Here $L_N[\\alpha,c]=\\exp((c+o(1))(\\log N)^\\alpha(\\log\\log N)^{1-\\alpha})$. This is the standard fastest heuristic comparator for general balanced RSA semiprimes. It includes smooth-relation collection and sparse linear algebra. Rudich–Rousseau also announce deterministic worst-case $N^{o(1)}=2^{o(n)}$ time using the Boolean tensor-contraction theorem. That result specifies a deterministic guarantee; its $o(n)$ exponent does not quantitatively rank it against heuristic GNFS."
+    },
+    "evidence": "Strong evidence under the standard assumption that factoring is classically hard in polynomial time. The algorithms give upper bounds in the explicit-integer model.",
+    "hardware": "Small factoring circuits have been demonstrated. RSA-sized instances require fault tolerance and polynomial arithmetic workspace. Gidney's RSA-2048 estimate uses about 1,409 logical qubits and projects fewer than one million physical qubits and an approximately one-week runtime under the specified architecture assumptions.",
+    "papers": [
+      {
+        "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+        "url": "https://arxiv.org/pdf/quant-ph/9508027",
+        "locator": "Section 5: order finding and factor extraction."
+      },
+      {
+        "title": "An Efficient Quantum Factoring Algorithm",
+        "url": "https://arxiv.org/pdf/2308.06572",
+        "locator": "Theorem 1.1: circuit cost and repetition count; Section 3: quantum procedure."
+      },
+      {
+        "title": "Unconditional Correctness of Recent Quantum Algorithms for Factoring and Computing Discrete Logarithms",
+        "url": "https://www.cambridge.org/core/journals/forum-of-mathematics-pi/article/unconditional-correctness-of-recent-quantum-algorithms-for-factoring-and-computing-discrete-logarithms/3077F5BD48D1F62000B1ED800EB86308",
+        "locator": "Main factoring correctness theorem."
+      },
+      {
+        "title": "How to Factor 2048 Bit RSA Integers with Less Than a Million Noisy Qubits",
+        "url": "https://arxiv.org/pdf/2505.15917",
+        "locator": "Resource-estimate summary and architecture assumptions."
+      },
+      {
+        "title": "Deterministic Factoring in Time $N^{o(1)}$",
+        "url": "https://hexagonmath.org/2610.00600v1",
+        "locator": "Main deterministic factoring statement."
+      }
+    ]
+  },
+  {
+    "slug": "even",
+    "name": "Even–Mansour key recovery",
+    "shortName": "Even–Mansour",
+    "problem": "Let $P$ be a public random permutation on $\\{0,1\\}^n$, and let $E(x)=P(x\\oplus k_1)\\oplus k_2$. Given coherent oracle access to both $E$ and $P$, recover $k_1,k_2$. The coherent chosen-plaintext access is part of this cryptographic model, commonly called Q2. The comparison counts coherent or classical oracle queries to the encryption and public permutation, with polynomial auxiliary quantum-gate and classical-bit costs.",
+    "quantum": {
+      "headline_latex": "$O(n)$ coherent queries and polynomial auxiliary time, Kuwakado--Morii and Simon period finding.",
+      "headline_text": "$O(n)$ coherent queries and polynomial auxiliary time, Kuwakado–Morii and Simon period finding.",
+      "details_latex": "The function $F(x)=E(x)\\oplus P(x)$ has period $k_1$. The bounded-extra-collision analysis for a random public permutation supplies the success guarantee for Simon sampling; polynomial-time linear algebra recovers the period. One additional evaluation gives $k_2$. Coherent evaluation of both $E$ and $P$ is available in the stated Q2 model, so each sample has polynomial additional gates and two oracle evaluations.",
+      "details_text": "The function $F(x)=E(x)\\oplus P(x)$ has period $k_1$. The bounded-extra-collision analysis for a random public permutation supplies the success guarantee for Simon sampling; polynomial-time linear algebra recovers the period. One additional evaluation gives $k_2$. Coherent evaluation of both $E$ and $P$ is available in the stated Q2 model, so each sample has polynomial additional gates and two oracle evaluations."
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde\\Theta(2^n/D)$ public-permutation work with $D$ classical encryption queries, generic Even--Mansour attacks.",
+      "headline_text": "$\\widetilde\\Theta(2^n/D)$ public-permutation work with $D$ classical encryption queries, generic Even–Mansour attacks.",
+      "details_latex": "The time--data tradeoff has scale $TD\\asymp2^n$, with $2\\le D\\le 2^n$ and total work including data acquisition. Minimizing $D+T$ gives the square-root total-work scale. The lower bound concerns the public random permutation and secret-key encryption access specified by the idealized construction.",
+      "details_text": "The time–data tradeoff has scale $TD\\asymp2^n$, with $2\\le D\\le 2^n$ and total work including data acquisition. Minimizing $D+T$ gives the square-root total-work scale. The lower bound concerns the public random permutation and secret-key encryption access specified by the idealized construction."
+    },
+    "evidence": "Fully proved in the stated random-permutation oracle model, with the bounded-extra-collision analysis supporting the period-recovery algorithm.",
+    "hardware": "The algorithm needs polynomial logical qubits for the input, output and period equations, plus workspace for the public permutation and coherent encryption device. The depth is polynomial in $n$ times the oracle depth. Realizing the supplied coherent secret-key oracle is part of the hardware model.",
+    "papers": [
+      {
+        "title": "Breaking Symmetric Cryptosystems Using Quantum Period Finding",
+        "url": "https://arxiv.org/pdf/1602.05973",
+        "locator": "Theorem 1: Simon sampling with an approximate promise; Section 3.2, ``Application to the Even-Mansour construction'': the Kuwakado--Morii attack and its extra-collision analysis; Figure 6: the period function."
+      },
+      {
+        "title": "Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm",
+        "url": "https://arxiv.org/pdf/2002.12439",
+        "locator": "Section 5.1 and Table 2: classical Even--Mansour time--data tradeoff."
+      }
+    ]
+  }
+];
+</script><script>/* Native canvas scene: coordinates remain continuous under rotation and zoom. */
+(function () {
+  'use strict';
+  class SpeedupScene {
+    constructor(canvas, callbacks = {}) {
+      this.canvas = canvas;
+      this.ctx = canvas.getContext('2d');
+      this.callbacks = callbacks;
+      this.points = [];
+      this.projected = [];
+      this.options = {};
+      this.yaw = -0.50;
+      this.pitch = -0.30;
+      this.zoom = 1;
+      this.hovered = null;
+      canvas.style.touchAction = 'none';
+      canvas.style.cursor = 'grab';
+      canvas.setAttribute('aria-label', 'Rotatable three-dimensional plot of strength, evidence and hardware resources');
+      canvas.addEventListener('pointerdown', e => {
+        this.drag = { x: e.clientX, y: e.clientY, moved: 0 };
+        canvas.setPointerCapture(e.pointerId);
+        canvas.style.cursor = 'grabbing';
+      });
+      canvas.addEventListener('pointermove', e => {
+        const rect = canvas.getBoundingClientRect();
+        if (this.drag) {
+          const dx = e.clientX - this.drag.x, dy = e.clientY - this.drag.y;
+          this.drag.moved += Math.abs(dx) + Math.abs(dy);
+          this.yaw += dx * 0.007;
+          this.pitch = Math.max(-1.05, Math.min(0.65, this.pitch + dy * 0.006));
+          this.drag.x = e.clientX; this.drag.y = e.clientY;
+          this.draw();
+          return;
+        }
+        const p = this.hit(e.clientX - rect.left, e.clientY - rect.top);
+        if (p?.slug !== this.hovered?.slug) {
+          this.hovered = p;
+          canvas.style.cursor = p ? 'pointer' : 'grab';
+          this.callbacks.onHover?.(p || null, { x: e.clientX, y: e.clientY });
+          this.draw();
+        }
+      });
+      canvas.addEventListener('pointerup', e => {
+        const rect = canvas.getBoundingClientRect();
+        if (this.drag && this.drag.moved < 5) {
+          const p = this.hit(e.clientX - rect.left, e.clientY - rect.top);
+          if (p) this.callbacks.onSelect?.(p.slug, p);
+        }
+        this.drag = null;
+        canvas.style.cursor = 'grab';
+        if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
+      });
+      canvas.addEventListener('pointercancel', () => { this.drag = null; });
+      canvas.addEventListener('pointerleave', () => {
+        if (!this.drag) {
+          this.hovered = null;
+          this.callbacks.onHover?.(null);
+          this.draw();
+        }
+      });
+      canvas.addEventListener('wheel', e => {
+        e.preventDefault();
+        this.zoom = Math.max(0.65, Math.min(1.5, this.zoom * Math.exp(-e.deltaY * 0.001)));
+        this.draw();
+      }, { passive: false });
+      this.observer = new ResizeObserver(() => this.resize());
+      this.observer.observe(canvas);
+      this.resize();
+    }
+
+    setData(points, options = {}) {
+      this.points = points;
+      this.options = options;
+      this.draw();
+    }
+
+    reset() {
+      this.yaw = -0.50; this.pitch = -0.30; this.zoom = 1;
+      this.draw();
+    }
+
+    resize() {
+      const rect = this.canvas.getBoundingClientRect();
+      this.width = rect.width || 600;
+      this.height = rect.height || 430;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      this.canvas.width = Math.round(this.width * dpr);
+      this.canvas.height = Math.round(this.height * dpr);
+      this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      this.draw();
+    }
+
+    project(x, y, z) {
+      const wx = (x - 0.5) * 1.9, wy = (y - 0.5) * 1.5, wz = (z - 0.5) * 1.3;
+      const xx = Math.cos(this.yaw) * wx + Math.sin(this.yaw) * wz;
+      const zz = -Math.sin(this.yaw) * wx + Math.cos(this.yaw) * wz;
+      const yy = Math.cos(this.pitch) * wy - Math.sin(this.pitch) * zz;
+      const depth = Math.sin(this.pitch) * wy + Math.cos(this.pitch) * zz;
+      const scale = Math.min(this.width / 3.30, this.height / 2.80) * this.zoom;
+      return { x: this.width * 0.53 + xx * scale, y: this.height * 0.48 - yy * scale, depth };
+    }
+
+    line(a, b, color = '#e5e8ed', width = 1, dashed = false) {
+      const c = this.ctx, p = this.project(...a), q = this.project(...b);
+      c.beginPath(); c.moveTo(p.x, p.y); c.lineTo(q.x, q.y);
+      c.strokeStyle = color; c.lineWidth = width;
+      c.setLineDash(dashed ? [3, 4] : []); c.stroke(); c.setLineDash([]);
+    }
+
+    label(str, p, color, dx = 0, dy = 0, align = 'center', size = 11) {
+      const c = this.ctx;
+      c.font = `500 ${size}px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
+      c.textAlign = align; c.textBaseline = 'middle';
+      const tw = c.measureText(str).width;
+      const left = align === 'right' ? tw + 7 : align === 'left' ? 7 : tw / 2 + 7;
+      const right = align === 'left' ? this.width - tw - 7 : align === 'right' ? this.width - 7 : this.width - tw / 2 - 7;
+      c.fillStyle = color; c.fillText(str, Math.max(left, Math.min(right, p.x + dx)), Math.max(8, Math.min(this.height - 8, p.y + dy)));
+    }
+
+    hit(x, y) {
+      return this.projected.filter(p => Math.hypot(p.x - x, p.y - y) < 13)
+        .sort((a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y))[0] || null;
+    }
+
+    draw() {
+      const c = this.ctx, w = this.width, h = this.height;
+      if (!w || !h) return;
+      c.clearRect(0, 0, w, h);
+      const maxS = this.options.strengthMax || 8, maxH = this.options.hardwareMax || 14;
+      const floor = [[0, 0, 0], [1, 0, 0], [1, 0, 1], [0, 0, 1]].map(p => this.project(...p));
+      c.beginPath(); floor.forEach((p, i) => i ? c.lineTo(p.x, p.y) : c.moveTo(p.x, p.y));
+      c.closePath(); c.fillStyle = '#f7f8fa'; c.fill();
+      for (let i = 0; i <= 4; i++) {
+        const t = i / 4;
+        this.line([t, 0, 0], [t, 0, 1]);
+        this.line([0, 0, t], [1, 0, t]);
+        this.line([0, t, 1], [1, t, 1], '#ebedf1');
+        this.line([1, 0, t], [1, 1, t], '#ebedf1');
+      }
+      this.line([0, 0, 1], [0, 1, 1], '#dde2e8');
+      this.line([1, 0, 1], [1, 1, 1], '#dde2e8');
+      this.line([0, 1, 1], [1, 1, 1], '#dde2e8');
+      this.line([0, 0, 0], [1, 0, 0], '#c84e4a', 1.6);
+      this.line([0, 0, 0], [0, 1, 0], '#526fa6', 1.6);
+      this.line([0, 0, 0], [0, 0, 1], '#448779', 1.6);
+      this.label('STRENGTH', this.project(0.55, 0, 0), '#ad3333', 0, 48, 'center', 11);
+      this.label('EVIDENCE', this.project(0, 0.53, 0), '#46689b', -32, -12, 'right', 11);
+      this.label('HARDWARE', this.project(0, 0, 1), '#337c6c', -8, 18, 'right', 11);
+      [0, 0.5, 0.75, 1].forEach(t => {
+        const p = this.project(0, t, 0);
+        this.label(t.toFixed(t === 0 || t === 1 ? 0 : 2).replace(/0$/, t === 0 ? '0' : ''), p, '#7e8998', -11, 0, 'right', 10);
+      });
+      const strengthTicks = this.options.strengthTicks || [{ value: 0 }, { value: 1 }, { value: maxS / 2 }, { value: maxS }];
+      strengthTicks.forEach(t => {
+        if (t.value < 0 || t.value > maxS) return;
+        const p = this.project(t.value / maxS, 0, 0);
+        c.beginPath(); c.moveTo(p.x, p.y); c.lineTo(p.x, p.y + 5); c.strokeStyle = '#c8908b'; c.lineWidth = 1; c.stroke();
+        this.label(Number(t.value.toFixed(1)).toString(), p, '#8b6c70', 0, 16, 'center', 10);
+        if (t.value === 1 || t.value > 2) this.label(t.label || '', p, '#8b6c70', 0, 31, 'center', 9);
+      });
+      [0.5, 1].forEach(t => {
+        const p = this.project(0, 0, t);
+        this.label((t * maxH).toFixed(0), p, '#6b8b82', -9, 0, 'right', 10);
+      });
+      this.projected = this.points.map(p => ({ ...p, ...this.project(p.strength / maxS, p.evidence, p.hardware / maxH) }))
+        .sort((a, b) => b.depth - a.depth);
+      const occupied = [];
+      this.projected.forEach(p => {
+        const selected = p.slug === this.options.selectedSlug || p.selected;
+        const active = selected || p.slug === this.hovered?.slug;
+        if (selected) {
+          this.line([p.strength / maxS, p.evidence, p.hardware / maxH], [p.strength / maxS, 0, p.hardware / maxH], '#b7bdc7', 1, true);
+        }
+        c.beginPath(); c.arc(p.x, p.y, active ? 9 : 6.5, 0, Math.PI * 2);
+        c.fillStyle = '#fff'; c.fill();
+        c.beginPath(); c.arc(p.x, p.y, active ? 6.4 : 4.8, 0, Math.PI * 2);
+        c.fillStyle = p.color || '#c83732'; c.fill(); c.lineWidth = 1.1; c.strokeStyle = '#9e3737'; c.stroke();
+        if (active) {
+          c.beginPath(); c.arc(p.x, p.y, 10.5, 0, Math.PI * 2); c.strokeStyle = '#27384c'; c.lineWidth = 1.3; c.stroke();
+        }
+      });
+      const labelOrder = [...this.projected].sort((a, b) => Number(b.slug === this.options.selectedSlug) - Number(a.slug === this.options.selectedSlug));
+      labelOrder.forEach(p => {
+        const selected = p.slug === this.options.selectedSlug;
+        const name = p.shortName || p.name;
+        c.font = `${selected ? 600 : 500} 11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
+        const tw = c.measureText(name).width;
+        const offsets = [[12, -18], [12, 12], [-tw - 12, -18], [-tw - 12, 14], [12, -34], [-tw / 2, 24]];
+        for (const [dx, dy] of offsets) {
+          const box = { x: p.x + dx - 3, y: p.y + dy - 8, w: tw + 6, h: 17 };
+          if (box.x < 7 || box.y < 7 || box.x + box.w > w - 7 || box.y + box.h > h - 7) continue;
+          if (occupied.some(q => box.x < q.x + q.w && box.x + box.w > q.x && box.y < q.y + q.h && box.y + box.h > q.y)) continue;
+          occupied.push(box);
+          c.fillStyle = 'rgba(255,255,255,0.88)'; c.fillRect(box.x, box.y, box.w, box.h);
+          c.fillStyle = selected ? '#223247' : '#5d6775'; c.textAlign = 'left'; c.textBaseline = 'middle'; c.fillText(name, p.x + dx, p.y + dy);
+          break;
+        }
+      });
+    }
+  }
+  window.SpeedupScene = SpeedupScene;
+})();
+</script><script>/* Cost expressions are evaluated in log2 space; displayed N has a per-problem definition. */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const alpha = Math.log2((1+Math.sqrt(33))/4);
+const models = {
+ search:{q:b=>b/2,c:b=>b,space:b=>Math.log2(2*b+16),Q:'O(√N)',C:'Θ(N)',parameter:'N = number of candidate solutions',model:'Boolean-oracle queries',regime:'Unstructured search with a constant success probability.',storage:'Q = 2 log₂ N + 16 modeled logical qubits; reversible-oracle workspace is represented by the query-cost setting.',evidence:1,evidenceText:'Matching classical and quantum query bounds.',paperLimit:2},
+ mst:{q:b=>1.5*b,c:b=>2*b,space:b=>Math.log2(4*b+32),Q:'Θ(N<sup>3/2</sup>)',C:'Θ(N²)',parameter:'N = number of graph vertices',model:'Adjacency-matrix queries',regime:'Dense matrix access, with fixed precision for edge weights.',storage:'Q = 4 log₂ N + 32 active logical qubits in this model. Classical component records and the supplied coherent graph oracle are separate resources.',evidence:1,evidenceText:'A rigorous separation in the adjacency-matrix oracle model.'},
+ formula:{q:b=>b/2,c:b=>alpha*b,space:b=>Math.log2(4*b+20),Q:'O(√N)',C:`Θ(N<sup>${alpha.toFixed(3)}…</sup>)`,parameter:'N = number of leaves in a balanced binary formula',model:'Leaf-value queries',regime:'Balanced AND–OR trees; classical randomized alpha–beta pruning.',storage:'Q = 4 log₂ N + 20 modeled address and estimation qubits; a succinct formula oracle is supplied.',evidence:1,evidenceText:'Rigorous classical randomized and quantum query comparisons.'},
+ collision:{q:b=>b/3,c:b=>b/2,space:b=>b/3+Math.log2(b),Q:'O(N<sup>1/3</sup>)',C:'Θ(√N)',parameter:'N = hash range size',model:'Random-function queries',regime:'BHT search with a balanced table of N¹ᐟ³ values.',storage:'Q = N¹ᐟ³ log₂ N coherent table bits. The model charges stored table bits as logical storage; lookup cost follows the oracle setting.',evidence:1,evidenceText:'A rigorous generic collision comparison with coherent table access.'},
+ claw:{q:b=>2*b/3,c:b=>b,space:b=>2*b/3+Math.log2(b+1),Q:'O(N<sup>2/3</sup>)',C:'Θ(N)',parameter:'N = the size of each of two function domains',model:'Function-value queries',regime:'Balanced-domain claw finding with stored function values.',storage:'Q = N²ᐟ³(log₂ N + 1) modeled coherent data bits. Function evaluation and lookup are represented by the oracle setting.',evidence:1,evidenceText:'A rigorous query separation for the stated input access.'},
+ local:{q:b=>b/3+Math.log2(b)/6,c:b=>b/2+Math.log2(b)/2,space:b=>Math.log2(3*b+32),Q:'Θ(N<sup>1/3</sup>(log₂ N)<sup>1/6</sup>)',C:'Θ(N<sup>1/2</sup>(log₂ N)<sup>1/2</sup>)',parameter:'N = 2ⁿ vertices of the n-dimensional Boolean hypercube',model:'Value-oracle queries',regime:'Find a local minimum; the displayed polylogarithmic factors are retained.',storage:'Q = 3 log₂ N + 32 modeled vertex, value and comparison qubits. The evaluator is represented by the oracle setting.',evidence:1,evidenceText:'Matching query bounds on the Boolean hypercube.'},
+ factoring:{q:b=>2*b,c:b=>(64/9)**(1/3)*(2**b*Math.LN2)**(1/3)*Math.log(2**b*Math.LN2)**(2/3)/Math.LN2,space:b=>b+1,Q:'Õ(N²)',C:'exp(c N<sup>1/3</sup>(ln N)<sup>2/3</sup>)',parameter:'N = bit length of the integer',model:'Quantum gates / classical heuristic running time',regime:'Shor–Regev versus GNFS. The GNFS leading constant is included in the plotted cost; quantum polylogarithmic factors are suppressed.',storage:'Q = 2N modeled logical qubits and G = N² modeled gates. These leading-order terms are illustrative resource scaling; the linked RSA-2048 estimate gives a specific architecture.',evidence:.75,evidenceText:'Conditional hardness evidence; the GNFS comparator is heuristic. This point follows the catalogue’s strong-evidence anchor.',gates:true},
+ even:{q:b=>b,c:b=>2**b/2,space:b=>b+Math.log2(3),Q:'O(N)',C:'Õ(2<sup>N/2</sup>)',parameter:'N = block length in bits',model:'Ideal-permutation and encryption queries',regime:'Simon-based recovery with coherent encryption access. The classical total-query tradeoff is evaluated at its balanced optimum.',storage:'Q = 3N modeled logical qubits. A coherent secret-key encryption oracle is supplied; its realization is an explicit assumption of this resource model.',evidence:1,evidenceText:'A rigorous generic separation under the coherent-oracle access model.'}
+};
+let b=12,oracle=1000,selected='factoring',points=[],hits=[],view=null,drag=null,moved=false;
+function color(s){const p=Math.pow(1-Math.exp(-Math.max(0,s)/3.5),.88);return `rgb(255,${Math.round(255*(1-p))},${Math.round(255*(1-p))})`;}
+function fmt(v){return v.toLocaleString('en-US',{maximumFractionDigits:0});}
+function power(log2){if(log2<32)return fmt(2**log2);return '≈ 10^'+(log2*Math.LOG10E*Math.LN2).toFixed(1);}
+function select(slug){selected=slug;update(false);}
+function tip(point,pos){const el=$('tooltip');if(!point){el.hidden=true;return}el.hidden=false;el.innerHTML=`<b>${esc(point.name)}</b><small>Strength ${point.strength.toFixed(2)} · ${esc(models[point.slug].model)}</small>`;el.style.left=Math.min(window.innerWidth-310,pos.x+15)+'px';el.style.top=Math.max(10,Math.min(window.innerHeight-70,pos.y+10))+'px';}
+const scene = new SpeedupScene($('scene'),{onSelect:select,onHover:tip});
+const cost=$('cost'),ctx=cost.getContext('2d');
+function update(resetView=true){
+ b=+$('size').value;oracle=+$('oracle').value;
+ $('sizeLabel').textContent='N = '+fmt(2**b);
+ points=SAMPLE_DATA.map(d=>{const m=models[d.slug],lq=m.q(b),lc=m.c(b),strength=Math.log2(lc/lq),logSpace=m.space(b),logWork=lq+(m.gates?0:Math.log2(oracle));return {...d,lq,lc,ux:Math.log2(lq),uy:Math.log2(lc),strength,evidence:m.evidence,hardware:(logSpace+logWork)*Math.LOG10E*Math.LN2,logSpace,logWork,color:color(strength),selected:d.slug===selected};});
+ const maxStrength=Math.max(b-Math.log2(2*b),...points.map(p=>p.strength))*1.13;
+ scene.setData(points,{strengthMax:maxStrength,hardwareMax:Math.ceil(Math.max(...points.map(p=>p.hardware))+1),strengthTicks:[{value:0,label:'T → T'},{value:1,label:'N → √N'},{value:Math.log2(3),label:'N → ∛N'},{value:b-Math.log2(2*b),label:'2ᴺ → N²'}],selectedSlug:selected});
+ if(resetView)view={min:Math.max(0,Math.log2(b)-2.5),max:b+.55};
+ renderCost();renderList();renderDetail();
+ const marks=[{v:0,label:'T → T'},{v:Math.log2(4/3),label:'N² → N³ᐟ²'},{v:1,label:'N → √N'},{v:Math.log2(3),label:'N → ∛N'},{v:b-Math.log2(2*b),label:'2ᴺ → N²'}];
+ $('landmarks').innerHTML=marks.map(m=>`<span><i style="background:${color(m.v)}"></i>${m.label}</span>`).join('');
+ window.demoState={points,b,oracle,selected,view,color};
+}
+function renderList(){$('problemList').innerHTML=points.map(p=>`<button class="problem-button ${p.slug===selected?'selected':''}" data-slug="${p.slug}" aria-pressed="${p.slug===selected}"><span class="problem-swatch" style="background:${p.color}"></span>${esc(p.name)}</button>`).join('');}
+function renderDetail(){const p=points.find(p=>p.slug===selected),m=models[selected];$('detail').innerHTML=`<div class="detail-top"><div><div class="eyebrow">${esc(m.model)}</div><h2>${esc(p.name)}</h2><p>${esc(m.parameter)}<br>${esc(m.regime)}</p></div><div class="strength-value"><span class="field-label">STRENGTH</span><strong style="color:#ba2931">${p.strength.toFixed(2)}</strong></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${m.Q}</div><p>Plotted log₂ cost: ${fmt(p.lq)}</p></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${m.C}</div><p>Plotted log₂ cost: ${fmt(p.lc)}</p></div></div><div class="detail-meta"><div><h3><i class="dot blue"></i>Evidence · ${m.evidence===1?'rigorous oracle comparison':'conditional evidence'}</h3><p>${esc(m.evidenceText)}</p><h3 style="margin-top:14px"><i class="dot green"></i>Hardware · modeled resource volume 10<sup>${p.hardware.toFixed(1)}</sup></h3><p>${esc(m.storage)}</p></div><div><h3>Resource assumptions at this N</h3><p>Logical storage Q: ${power(p.logSpace)}<br>Coherent work G: ${power(p.logWork)} gate-equivalent operations<br>${m.gates?'Gate model · oracle setting does not enter this point.':'Query model · '+fmt(oracle)+' modeled gates per oracle call.'}<br>Resource volume: Q × G. Constants are model choices exposed here.</p></div></div><div class="papers">${[...p.papers.slice(0,3), ...p.papers.filter(r=>selected==='factoring' && /2048|million/i.test(r.title))].map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div>`;}
+function setupCanvas(){const r=cost.getBoundingClientRect(),d=window.devicePixelRatio||1;cost.width=Math.round(r.width*d);cost.height=Math.round(r.height*d);ctx.setTransform(d,0,0,d,0,0);return r;}
+function renderCost(){if(!view)return;const {width:w,height:h}=setupCanvas();const L=85,R=30,T=29,B=70,W=w-L-R,H=h-T-B,span=view.max-view.min;
+ ctx.clearRect(0,0,w,h);const mapX=u=>L+(view.max-u)/span*W,mapY=u=>T+(view.max-u)/span*H;
+ const bg=document.createElement('canvas');bg.width=Math.max(1,Math.round(W));bg.height=Math.max(1,Math.round(H));const bc=bg.getContext('2d'),im=bc.createImageData(bg.width,bg.height);
+ for(let y=0;y<bg.height;y++)for(let x=0;x<bg.width;x++){const s=(x/bg.width-y/bg.height)*span,p=Math.pow(1-Math.exp(-Math.max(0,s)/3.5),.88),i=(y*bg.width+x)*4;im.data[i]=255;im.data[i+1]=im.data[i+2]=Math.round(255*(1-p));im.data[i+3]=255;}
+ bc.putImageData(im,0,0);ctx.drawImage(bg,L,T,W,H);ctx.strokeStyle='#dce3e2';ctx.strokeRect(L,T,W,H);
+ const ticks=[{u:Math.log2(b/2),label:'√N'},{u:Math.log2(b),label:'N'},{u:Math.log2(2*b),label:'N²'},{u:b/2,label:'2^√N'},{u:b,label:'2^N'}].filter(t=>t.u>view.min&&t.u<view.max).sort((a,b)=>a.u-b.u);
+ ctx.font='10px Segoe UI, Arial';ctx.fillStyle='#637279';let prev=-100;
+ for(const tick of ticks){if(tick.u-prev<.55)continue;prev=tick.u;const x=mapX(tick.u),y=mapY(tick.u);ctx.strokeStyle='#18242a14';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,T);ctx.lineTo(x,T+H);ctx.moveTo(L,y);ctx.lineTo(L+W,y);ctx.stroke();ctx.textAlign='center';ctx.fillText(tick.label,x,T+H+20);ctx.textAlign='right';ctx.fillText(tick.label,L-9,y+3);}
+ ctx.strokeStyle='#778b9066';ctx.setLineDash([4,4]);ctx.beginPath();ctx.moveTo(L,T);ctx.lineTo(L+W,T+H);ctx.stroke();ctx.setLineDash([]);
+ ctx.save();ctx.translate(L+W*.4,T+H*.4-7);ctx.rotate(Math.atan2(H,W));ctx.fillStyle='#687b80';ctx.font='10px Segoe UI';ctx.fillText('equal cost',0,0);ctx.restore();
+ ctx.fillStyle='#283c44';ctx.textAlign='center';ctx.font='11px Segoe UI';ctx.fillText('Quantum complexity  ·  high → low',L+W/2,h-26);ctx.save();ctx.translate(21,T+H/2);ctx.rotate(-Math.PI/2);ctx.fillText('Classical complexity  ·  low → high',0,0);ctx.restore();
+ hits=[];ctx.save();ctx.beginPath();ctx.rect(L-8,T-8,W+16,H+16);ctx.clip();
+ const ordered=[...points].sort((a,b)=>(a.slug===selected)-(b.slug===selected));
+ for(const p of ordered){const x=mapX(p.ux),y=mapY(p.uy);if(x<L||x>L+W||y<T||y>T+H)continue;const active=p.slug===selected;ctx.beginPath();ctx.arc(x,y,active?7:5,0,2*Math.PI);ctx.fillStyle=p.color;ctx.fill();ctx.strokeStyle=active?'#142b36':'#714548';ctx.lineWidth=active?2:1.2;ctx.stroke();if(active){ctx.beginPath();ctx.arc(x,y,11,0,2*Math.PI);ctx.strokeStyle='#142b3644';ctx.lineWidth=1;ctx.stroke();}hits.push({x,y,p});if(active||p.strength>2){ctx.font=active?'600 11px Segoe UI':'11px Segoe UI';const tw=ctx.measureText(p.shortName).width;const tx=x+12+tw>L+W?x-tw-12:x+12;ctx.fillStyle='#ffffffdd';ctx.fillRect(tx-3,y-18,tw+6,16);ctx.fillStyle='#1b3039';ctx.textAlign='left';ctx.fillText(p.shortName,tx,y-6);}}
+ ctx.restore();window.costHits=hits;
+}
+function hit(e){const r=cost.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;return [...hits].reverse().find(h=>Math.hypot(h.x-x,h.y-y)<13)?.p;}
+cost.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,min:view.min,max:view.max};moved=false;cost.setPointerCapture(e.pointerId)});
+cost.addEventListener('pointermove',e=>{if(drag){const delta=(e.clientX-drag.x+e.clientY-drag.y)/cost.clientWidth*(drag.max-drag.min);if(Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>4)moved=true;view={min:drag.min+delta,max:drag.max+delta};renderCost();tip(null);return}const p=hit(e);cost.style.cursor=p?'pointer':'grab';tip(p,{x:e.clientX,y:e.clientY})});
+cost.addEventListener('pointerup',e=>{if(!moved){const p=hit(e);if(p)select(p.slug)}drag=null;});cost.addEventListener('pointerleave',()=>tip(null));
+cost.addEventListener('wheel',e=>{e.preventDefault();const r=cost.getBoundingClientRect(),f=Math.exp(e.deltaY*.001),mid=(view.max+view.min)/2,span=Math.min(30,Math.max(1.8,(view.max-view.min)*f));view={min:mid-span/2,max:mid+span/2};renderCost();},{passive:false});
+cost.addEventListener('dblclick',()=>update(true));
+$('problemList').addEventListener('click',e=>{const btn=e.target.closest('button[data-slug]');if(btn)select(btn.dataset.slug)});
+$('size').addEventListener('input',()=>update(true));$('oracle').addEventListener('change',()=>update(false));$('reset').addEventListener('click',()=>{scene.reset();update(true)});
+new ResizeObserver(()=>renderCost()).observe(cost);update(true);
+</script></body></html>
