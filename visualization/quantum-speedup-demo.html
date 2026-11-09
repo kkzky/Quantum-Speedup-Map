@@ -627,7 +627,8 @@
       if (!width || !height) return;
       c.clearRect(0, 0, width, height);
       const compact = width < 480, maximum = this.viewMax || this.options.costMax || 4.25;
-      const L = 16, T = 78, W = Math.max(120, width - L - (compact ? 92 : 125)), H = Math.max(120, height - T - 28);
+      const L = compact ? 74 : 82, T = 20;
+      const W = Math.max(120, width - L - 14), H = Math.max(120, height - T - 74);
       const mapX = value => L + W * (1 - value / maximum);
       const mapY = value => T + H * (1 - value / maximum);
       const triangle = () => {
@@ -675,26 +676,26 @@
       c.restore();
       c.restore();
       triangle(); c.strokeStyle = '#d4c4c7'; c.lineWidth = 1; c.stroke();
-      c.beginPath(); c.moveTo(L, T); c.lineTo(L + W, T); c.lineTo(L + W, T + H); c.strokeStyle = '#9d7a7d'; c.lineWidth = 1.2; c.stroke();
+      c.beginPath(); c.moveTo(L, T); c.lineTo(L, T + H); c.lineTo(L + W, T + H); c.strokeStyle = '#9d7a7d'; c.lineWidth = 1.2; c.stroke();
       c.font = `500 ${compact ? 9 : 10}px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
-      const topLabels = [];
+      const bottomLabels = [];
       ticks.forEach((t, i) => {
         if (t.value < 0 || t.value > maximum) return;
         const x = mapX(t.value), y = mapY(t.value), label = String(t.label || '');
-        c.beginPath(); c.moveTo(x, T); c.lineTo(x, T - 5); c.moveTo(L + W, y); c.lineTo(L + W + 5, y);
+        c.beginPath(); c.moveTo(x, T + H); c.lineTo(x, T + H + 5); c.moveTo(L, y); c.lineTo(L - 5, y);
         c.strokeStyle = '#bba6aa'; c.stroke();
         const tw = c.measureText(label).width;
         const labelX = Math.max(tw / 2 + 3, Math.min(width - tw / 2 - 3, x));
-        let labelY = T - 15;
-        if (topLabels.some(q => Math.abs(labelX - q.x) < (tw + q.w) / 2 + 5)) labelY -= 16;
-        topLabels.push({ x: labelX, w: tw });
+        let labelY = T + H + 18;
+        if (bottomLabels.some(q => Math.abs(labelX - q.x) < (tw + q.w) / 2 + 5)) labelY += 14;
+        bottomLabels.push({ x: labelX, w: tw });
         c.fillStyle = '#74676f'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(label, labelX, labelY);
-        c.textAlign = 'left'; c.fillText(label, L + W + 10, y);
+        c.textAlign = 'right'; c.fillText(label, L - 9, y);
       });
       c.font = '600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif';
       c.fillStyle = '#695463'; c.textAlign = 'center'; c.textBaseline = 'middle';
-      c.fillText('QUANTUM COMPLEXITY', L + W / 2, 22);
-      c.save(); c.translate(width - 13, T + H / 2); c.rotate(Math.PI / 2); c.fillText('CLASSICAL COMPLEXITY', 0, 0); c.restore();
+      c.fillText('QUANTUM COMPLEXITY', L + W / 2, height - 31);
+      c.save(); c.translate(15, T + H / 2); c.rotate(-Math.PI / 2); c.fillText('CLASSICAL COMPLEXITY', 0, 0); c.restore();
     }
   }
   window.CostScene = CostScene;
