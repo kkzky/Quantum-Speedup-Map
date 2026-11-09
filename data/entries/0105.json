@@ -1,9 +1,10 @@
 {
   "id": "entry-105",
   "number": 105,
-  "ordinal": 59,
+  "slug": "job-shop-scheduling-with-delivery-and-changeover-costs",
   "title_latex": "Job-shop scheduling with delivery and changeover costs",
   "title": "Job-shop scheduling with delivery and changeover costs",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Discrete production scheduling",
@@ -14,80 +15,145 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(KSpN)$ gates for hardware-efficient VQE and F-VQE; $O(KSp(N+q))$ for QAOA.",
-      "headline_text": "$O(KSpN)$ gates for hardware-efficient VQE and F-VQE; $O(KSp(N+q))$ for QAOA.",
       "details_latex": "The time-indexed QUBO has $N=\\sum_m J(J+e_m)+\\sum_m e_m$ binary variables before presolving, and $q$ nonzero quadratic terms. Here $p$ counts circuit layers, $K$ counts primitive circuit evaluations and $S$ the shots per evaluation. A computational-basis sample gives a schedule assignment and its classically evaluated cost. VQE minimizes the sampled energy or a conditional-value-at-risk objective; filtering VQE (F-VQE) reweights sampled energies and uses parameter-shift updates. Variational imaginary-time evolution (VarQITE) uses the same state family and estimates a parameter metric: with $d$ parameters, a direct iteration needs $O(d^2+dq)$ measurement settings and an $O(d^3)$ classical linear-system solve. These settings contribute to $K$. QAOA uses phases for the QUBO terms and a transverse-field mixer. Parameter optimization and feasibility checks are part of the hybrid computation.",
+      "headline_text": "$O(KSpN)$ gates for hardware-efficient VQE and F-VQE; $O(KSp(N+q))$ for QAOA.",
       "details_text": "The time-indexed QUBO has $N=\\sum_m J(J+e_m)+\\sum_m e_m$ binary variables before presolving, and $q$ nonzero quadratic terms. Here $p$ counts circuit layers, $K$ counts primitive circuit evaluations and $S$ the shots per evaluation. A computational-basis sample gives a schedule assignment and its classically evaluated cost. VQE minimizes the sampled energy or a conditional-value-at-risk objective; filtering VQE (F-VQE) reweights sampled energies and uses parameter-shift updates. Variational imaginary-time evolution (VarQITE) uses the same state family and estimates a parameter metric: with $d$ parameters, a direct iteration needs $O(d^2+dq)$ measurement settings and an $O(d^3)$ classical linear-system solve. These settings contribute to $K$. QAOA uses phases for the QUBO terms and a transverse-field mixer. Parameter optimization and feasibility checks are part of the hybrid computation."
     },
     "classical": {
       "headline_latex": "$\\min\\{O^*(2^N),\\operatorname{poly}(N,q,W)2^{\\omega N/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.",
+      "details_latex": "Here $W$ bounds the scaled integer QUBO score, $\\omega$ is the matrix-multiplication exponent, and $L$ is the size of a score-and-feasibility circuit. Enumerating machine permutations and initial idle slots also gives $\\operatorname{poly}(J,M,\\sum_m e_m)(J!)^M\\prod_m(e_m+1)$ time, with coefficient bit costs included in the polynomial. The smallest applicable bound is used. Classical branch-and-bound, constraint programming and mixed-integer solvers use scheduling-specific propagation and lower bounds. Presolving reduces the binary variable count before either classical or quantum optimization.",
       "headline_text": "$\\min\\{O^*(2^N),\\operatorname{poly}(N,q,W)2^{\\omega N/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.",
-      "details_latex": "Here $W$ bounds the integer QUBO score range after scaling, $\\omega$ is the matrix-multiplication exponent, and $L$ is the size of a Boolean circuit checking the score threshold and constraints. These bounds apply to the same time-indexed instance, including its horizon and coefficient precision. Classical branch-and-bound, constraint programming and mixed-integer solvers use scheduling-specific propagation and lower bounds; their instance-dependent running times supply practical comparisons. The raw QUBO variable count can be reduced by fixing assignments and simplifying constraints before either classical or quantum optimization.",
-      "details_text": "Here $W$ bounds the integer QUBO score range after scaling, $\\omega$ is the matrix-multiplication exponent, and $L$ is the size of a Boolean circuit checking the score threshold and constraints. These bounds apply to the same time-indexed instance, including its horizon and coefficient precision. Classical branch-and-bound, constraint programming and mixed-integer solvers use scheduling-specific propagation and lower bounds; their instance-dependent running times supply practical comparisons. The raw QUBO variable count can be reduced by fixing assignments and simplifying constraints before either classical or quantum optimization."
+      "details_text": "Here $W$ bounds the scaled integer QUBO score, $\\omega$ is the matrix-multiplication exponent, and $L$ is the size of a score-and-feasibility circuit. Enumerating machine permutations and initial idle slots also gives $\\operatorname{poly}(J,M,\\sum_m e_m)(J!)^M\\prod_m(e_m+1)$ time, with coefficient bit costs included in the polynomial. The smallest applicable bound is used. Classical branch-and-bound, constraint programming and mixed-integer solvers use scheduling-specific propagation and lower bounds. Presolving reduces the binary variable count before either classical or quantum optimization."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "Circuit and sampling costs are parameterized by the optimization effort. The published study establishes empirical convergence and solution-quality comparisons among the variational methods.",
+      "category_id": "strength-unspecified",
       "description_text": "Circuit and sampling costs are parameterized by the optimization effort. The published study establishes empirical convergence and solution-quality comparisons among the variational methods."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The hardware experiments compare sampled energies and optimum frequencies on the tested instances; an asymptotic quantum speedup has not been established.",
+      "category_id": "evidence-unspecified",
       "description_text": "The hardware experiments compare sampled energies and optimum frequencies on the tested instances; an asymptotic quantum speedup has not been established."
     },
     "hardware": {
-      "category_id": "hardware-small",
       "color_key": "hardwareSmall",
       "description_latex": "Amaro et al. compared the four methods on a five-qubit instance and ran F-VQE on instances with up to 23 physical superconducting qubits after presolving. VQE, F-VQE and QAOA use $N$ data qubits; the Hadamard-test implementation of VarQITE adds an ancilla. Logical implementations must protect the complete repeated-measurement computation.",
+      "category_id": "hardware-small",
       "description_text": "Amaro et al. compared the four methods on a five-qubit instance and ran F-VQE on instances with up to 23 physical superconducting qubits after presolving. VQE, F-VQE and QAOA use $N$ data qubits; the Hadamard-test implementation of VarQITE adds an ancilla. Logical implementations must protect the complete repeated-measurement computation."
     }
   },
+  "algorithm_heading_latex": "Algorithm: QAOA; VQE; filtering VQE; variational imaginary-time evolution",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "105.1",
       "content_latex": "\\href{https://arxiv.org/abs/2109.03745}{Amaro et al., \\emph{A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem} (2022)}. Sections II.A--II.B and Appendix A define the scheduling problem and QUBO; Sections II.C.1--II.C.4 and Table II specify VQE, QAOA, VarQITE and F-VQE; Section III gives the experiments.",
       "content_text": "Amaro et al., A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem (2022). Sections II.A–II.B and Appendix A define the scheduling problem and QUBO; Sections II.C.1–II.C.4 and Table II specify VQE, QAOA, VarQITE and F-VQE; Section III gives the experiments.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2109.03745",
+          "title": "A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem",
+          "label_latex": "Amaro et al., \\emph{A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem} (2022)",
+          "locator_latex": "Sections II.A--II.B and Appendix A define the scheduling problem and QUBO; Sections II.C.1--II.C.4 and Table II specify VQE, QAOA, VarQITE and F-VQE; Section III gives the experiments."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-105-citation-001"
+        "entry-105-citation-00169"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "105.2",
       "content_latex": "\\href{https://arxiv.org/abs/2106.10055}{Amaro et al., \\emph{Filtering Variational Quantum Algorithms for Combinatorial Optimization} (2022)}. Filtering objective, parameter-shift update and adaptive-filter prescription.",
       "content_text": "Amaro et al., Filtering Variational Quantum Algorithms for Combinatorial Optimization (2022). Filtering objective, parameter-shift update and adaptive-filter prescription.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2106.10055",
+          "title": "Filtering Variational Quantum Algorithms for Combinatorial Optimization",
+          "label_latex": "Amaro et al., \\emph{Filtering Variational Quantum Algorithms for Combinatorial Optimization} (2022)",
+          "locator_latex": "Filtering objective, parameter-shift update and adaptive-filter prescription."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-105-citation-002"
+        "entry-105-citation-00170"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "105.3",
       "content_latex": "\\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4: exact optimization of integer-weighted pairwise objectives.",
       "content_text": "Koivisto, Optimal 2-Constraint Satisfaction via Sum-Product Algorithms (2006). Sections 2–4: exact optimization of integer-weighted pairwise objectives.",
+      "links": [
+        {
+          "url": "https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf",
+          "title": "Optimal 2-Constraint Satisfaction via Sum-Product Algorithms",
+          "label_latex": "Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)",
+          "locator_latex": "Sections 2--4: exact optimization of integer-weighted pairwise objectives."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-105-citation-003"
+        "entry-105-citation-00171"
       ]
     },
     {
-      "item_number": 4,
-      "index_label": "105.4",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; exact threshold counting and witness recovery.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1; exact threshold counting and witness recovery.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1; exact threshold counting and witness recovery."
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
       "citation_ids": [
-        "entry-105-citation-004"
+        "entry-105-citation-00172"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-105-citation-001",
-    "entry-105-citation-002",
-    "entry-105-citation-003",
-    "entry-105-citation-004"
+  "algorithm_ids": [
+    "qaoa",
+    "vqe",
+    "varqite"
   ],
-  "source_latex": "\\entrytitle{105}{Job-shop scheduling with delivery and changeover costs}{white}{white}{hardwareSmall}\n\\setcounter{problem}{104}\n\\begin{problem}[Discrete production scheduling]\nGiven $J$ unit-time jobs, $M$ machines, due dates $d_j$, idle allowances $e_m$, production groups $P_{mj}$ and nonnegative costs $c_e,c_l,c_p$, choose distinct integer slots $t_{mj}\\in\\{1,\\ldots,J+e_m\\}$ for the jobs on each machine. Require $t_{m+1,j}\\ge t_{mj}$ and that each machine's occupied slots form one consecutive interval. If $\\pi_m(r)$ is its $r$th processed job, minimize\n\\[\nc_e\\sum_j(d_j-t_{Mj})_++c_l\\sum_j(t_{Mj}-d_j)_+\n+c_p\\sum_{m=1}^{M}\\sum_{r=1}^{J-1}\\mathbf1[P_{m,\\pi_m(r)}\\ne P_{m,\\pi_m(r+1)}],\n\\]\nwhere $(a)_+=\\max(a,0)$. This scheduling model captures delivery penalties and production-group changes in steel manufacturing. Complexity counts quantum gates and measurement samples and classical bit operations for the time-indexed binary formulation.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(KSpN)$ gates for hardware-efficient VQE and F-VQE; $O(KSp(N+q))$ for QAOA.}\nThe time-indexed QUBO has $N=\\sum_m J(J+e_m)+\\sum_m e_m$ binary variables before presolving, and $q$ nonzero quadratic terms. Here $p$ counts circuit layers, $K$ counts primitive circuit evaluations and $S$ the shots per evaluation. A computational-basis sample gives a schedule assignment and its classically evaluated cost. VQE minimizes the sampled energy or a conditional-value-at-risk objective; filtering VQE (F-VQE) reweights sampled energies and uses parameter-shift updates. Variational imaginary-time evolution (VarQITE) uses the same state family and estimates a parameter metric: with $d$ parameters, a direct iteration needs $O(d^2+dq)$ measurement settings and an $O(d^3)$ classical linear-system solve. These settings contribute to $K$. QAOA uses phases for the QUBO terms and a transverse-field mixer. Parameter optimization and feasibility checks are part of the hybrid computation.\n\n\\complexity{Classical}{$\\min\\{O^*(2^N),\\operatorname{poly}(N,q,W)2^{\\omega N/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.}\nHere $W$ bounds the integer QUBO score range after scaling, $\\omega$ is the matrix-multiplication exponent, and $L$ is the size of a Boolean circuit checking the score threshold and constraints. These bounds apply to the same time-indexed instance, including its horizon and coefficient precision. Classical branch-and-bound, constraint programming and mixed-integer solvers use scheduling-specific propagation and lower bounds; their instance-dependent running times supply practical comparisons. The raw QUBO variable count can be reduced by fixing assignments and simplifying constraints before either classical or quantum optimization.\n\n\\dimensionlabel{Strength}{white} Circuit and sampling costs are parameterized by the optimization effort. The published study establishes empirical convergence and solution-quality comparisons among the variational methods.\n\\dimensionlabel{Evidence}{white} The hardware experiments compare sampled energies and optimum frequencies on the tested instances; an asymptotic quantum speedup has not been established.\n\\dimensionlabel{Hardware}{hardwareSmall} Amaro et al. compared the four methods on a five-qubit instance and ran F-VQE on instances with up to 23 physical superconducting qubits after presolving. VQE, F-VQE and QAOA use $N$ data qubits; the Hadamard-test implementation of VarQITE adds an ancilla. Logical implementations must protect the complete repeated-measurement computation.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{105}\n\\item \\href{https://arxiv.org/abs/2109.03745}{Amaro et al., \\emph{A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem} (2022)}. Sections II.A--II.B and Appendix A define the scheduling problem and QUBO; Sections II.C.1--II.C.4 and Table II specify VQE, QAOA, VarQITE and F-VQE; Section III gives the experiments.\n\\item \\href{https://arxiv.org/abs/2106.10055}{Amaro et al., \\emph{Filtering Variational Quantum Algorithms for Combinatorial Optimization} (2022)}. Filtering objective, parameter-shift update and adaptive-filter prescription.\n\\item \\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4: exact optimization of integer-weighted pairwise objectives.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; exact threshold counting and witness recovery.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "qaoa",
+      "label_latex": "QAOA and the Quantum Alternating Operator Ansatz",
+      "problem_numbers": [
+        49,
+        50,
+        51,
+        52,
+        99,
+        103,
+        104,
+        106
+      ]
+    },
+    {
+      "algorithm_id": "vqe",
+      "label_latex": "Variational quantum eigensolver and filtering VQE",
+      "problem_numbers": [
+        99,
+        107
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{105}{Job-shop scheduling with delivery and changeover costs}{white}{white}{hardwareSmall}\n\\setcounter{problem}{104}\n\\begin{problem}[Discrete production scheduling]\nGiven $J$ unit-time jobs, $M$ machines, due dates $d_j$, idle allowances $e_m$, production groups $P_{mj}$ and nonnegative costs $c_e,c_l,c_p$, choose distinct integer slots $t_{mj}\\in\\{1,\\ldots,J+e_m\\}$ for the jobs on each machine. Require $t_{m+1,j}\\ge t_{mj}$ and that each machine's occupied slots form one consecutive interval. If $\\pi_m(r)$ is its $r$th processed job, minimize\n\\[\nc_e\\sum_j(d_j-t_{Mj})_++c_l\\sum_j(t_{Mj}-d_j)_+\n+c_p\\sum_{m=1}^{M}\\sum_{r=1}^{J-1}\\mathbf1[P_{m,\\pi_m(r)}\\ne P_{m,\\pi_m(r+1)}],\n\\]\nwhere $(a)_+=\\max(a,0)$. This scheduling model captures delivery penalties and production-group changes in steel manufacturing. Complexity counts quantum gates and measurement samples and classical bit operations for the time-indexed binary formulation.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(KSpN)$ gates for hardware-efficient VQE and F-VQE; $O(KSp(N+q))$ for QAOA.}\nThe time-indexed QUBO has $N=\\sum_m J(J+e_m)+\\sum_m e_m$ binary variables before presolving, and $q$ nonzero quadratic terms. Here $p$ counts circuit layers, $K$ counts primitive circuit evaluations and $S$ the shots per evaluation. A computational-basis sample gives a schedule assignment and its classically evaluated cost. VQE minimizes the sampled energy or a conditional-value-at-risk objective; filtering VQE (F-VQE) reweights sampled energies and uses parameter-shift updates. Variational imaginary-time evolution (VarQITE) uses the same state family and estimates a parameter metric: with $d$ parameters, a direct iteration needs $O(d^2+dq)$ measurement settings and an $O(d^3)$ classical linear-system solve. These settings contribute to $K$. QAOA uses phases for the QUBO terms and a transverse-field mixer. Parameter optimization and feasibility checks are part of the hybrid computation.\n\n\\complexity{Classical}{$\\min\\{O^*(2^N),\\operatorname{poly}(N,q,W)2^{\\omega N/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.}\nHere $W$ bounds the scaled integer QUBO score, $\\omega$ is the matrix-multiplication exponent, and $L$ is the size of a score-and-feasibility circuit. Enumerating machine permutations and initial idle slots also gives $\\operatorname{poly}(J,M,\\sum_m e_m)(J!)^M\\prod_m(e_m+1)$ time, with coefficient bit costs included in the polynomial. The smallest applicable bound is used. Classical branch-and-bound, constraint programming and mixed-integer solvers use scheduling-specific propagation and lower bounds. Presolving reduces the binary variable count before either classical or quantum optimization.\n\n\\dimensionlabel{Strength}{white} Circuit and sampling costs are parameterized by the optimization effort. The published study establishes empirical convergence and solution-quality comparisons among the variational methods.\n\\dimensionlabel{Evidence}{white} The hardware experiments compare sampled energies and optimum frequencies on the tested instances; an asymptotic quantum speedup has not been established.\n\\dimensionlabel{Hardware}{hardwareSmall} Amaro et al. compared the four methods on a five-qubit instance and ran F-VQE on instances with up to 23 physical superconducting qubits after presolving. VQE, F-VQE and QAOA use $N$ data qubits; the Hadamard-test implementation of VarQITE adds an ancilla. Logical implementations must protect the complete repeated-measurement computation.\n\\subhead{Algorithm: QAOA; VQE; filtering VQE; variational imaginary-time evolution}\n\\begin{algorithmindex}{105}\n\\item \\href{https://arxiv.org/abs/2109.03745}{Amaro et al., \\emph{A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem} (2022)}. Sections II.A--II.B and Appendix A define the scheduling problem and QUBO; Sections II.C.1--II.C.4 and Table II specify VQE, QAOA, VarQITE and F-VQE; Section III gives the experiments.\n\\item \\href{https://arxiv.org/abs/2106.10055}{Amaro et al., \\emph{Filtering Variational Quantum Algorithms for Combinatorial Optimization} (2022)}. Filtering objective, parameter-shift update and adaptive-filter prescription.\n\\item \\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4: exact optimization of integer-weighted pairwise objectives.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; exact threshold counting and witness recovery.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{qaoa}{QAOA and the Quantum Alternating Operator Ansatz}: \\problemref{49}, \\problemref{50}, \\problemref{51}, \\problemref{52}, \\problemref{99}, \\problemref{103}, \\problemref{104}, \\problemref{106}.\n\\par\\algorithmref{vqe}{Variational quantum eigensolver and filtering VQE}: \\problemref{99}, \\problemref{107}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 76,
+  "citation_ids": [
+    "entry-105-citation-00169",
+    "entry-105-citation-00170",
+    "entry-105-citation-00171",
+    "entry-105-citation-00172"
+  ]
 }

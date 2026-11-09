@@ -1,6 +1,30 @@
 /* Native canvas scene: coordinates remain continuous under rotation and zoom. */
 (function () {
   'use strict';
+  const importance = p => p.importance === 'high' ? 3 : p.importance === 'peripheral' ? 1 : 2;
+  const pointRadius = p => p.importance === 'high' ? 6.8 : p.importance === 'peripheral' ? 2.8 : 4.7;
+  function spreadPoints(points, valid = () => true) {
+    const placed = [];
+    const order = [...points].sort((a,b) => Number(b.selected)-Number(a.selected) || importance(b)-importance(a));
+    for (const point of order) {
+      const p = {...point, anchorX:point.x, anchorY:point.y, radius:pointRadius(point)};
+      let found = false;
+      for (let ring=0; ring<=16 && !found; ring++) {
+        const count=ring ? 6*ring : 1, radius=ring*7;
+        for(let i=0;i<count;i++) {
+          const angle=i/count*Math.PI*2;
+          const x=point.x+Math.cos(angle)*radius,y=point.y+Math.sin(angle)*radius;
+          if(!valid(x,y,p.radius))continue;
+          if(placed.some(q=>Math.hypot(x-q.x,y-q.y)<p.radius+q.radius+2))continue;
+          p.x=x;p.y=y;found=true;break;
+        }
+      }
+      placed.push(p);
+    }
+    return placed.sort((a,b)=>Number(a.selected)-Number(b.selected));
+  }
+  window.quantumPointLayout = {importance,pointRadius,spreadPoints};
+
   class SpeedupScene {
     constructor(canvas, callbacks = {}) {
       this.canvas = canvas;
@@ -114,11 +138,13 @@
       const tw = c.measureText(str).width;
       const left = align === 'right' ? tw + 7 : align === 'left' ? 7 : tw / 2 + 7;
       const right = align === 'left' ? this.width - tw - 7 : align === 'right' ? this.width - 7 : this.width - tw / 2 - 7;
-      c.fillStyle = color; c.fillText(str, Math.max(left, Math.min(right, p.x + dx)), Math.max(8, Math.min(this.height - 8, p.y + dy)));
+      const x=Math.max(left,Math.min(right,p.x+dx)),y=Math.max(8,Math.min(this.height-8,p.y+dy));
+      c.fillStyle = color; c.fillText(str,x,y);
+      this.axisLabelBoxes?.push({x:x-(align==='right'?tw:align==='center'?tw/2:0)-3,y:y-size/2-3,w:tw+6,h:size+6});
     }
 
     hit(x, y) {
-      return this.projected.filter(p => Math.hypot(p.x - x, p.y - y) < 13)
+      return this.projected.filter(p => Math.hypot(p.x - x, p.y - y) < Math.max(7,(p.radius||5)+4))
         .sort((a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y)
           || this.projected.indexOf(b) - this.projected.indexOf(a))[0] || null;
     }
@@ -127,7 +153,9 @@
       const c = this.ctx, w = this.width, h = this.height;
       if (!w || !h) return;
       c.clearRect(0, 0, w, h);
+      this.axisLabelBoxes=[];
       const maxS = this.options.strengthMax || 5.4, maxH = this.options.hardwareMax || 3.4;
+      const hardwarePosition = value => value === this.options.hardwareUnspecified ? 1.32 : value / maxH;
       const compact = w < 600;
       const floor = [[0, 0, 0], [1, 0, 0], [1, 0, 1], [0, 0, 1]].map(p => this.project(...p));
       c.beginPath(); floor.forEach((p, i) => i ? c.lineTo(p.x, p.y) : c.moveTo(p.x, p.y));
@@ -147,7 +175,7 @@
       this.line([0, 0, 0], [0, 0, 1], '#448779', 1.6);
       this.label('ASYMPTOTIC SPEEDUP', this.project(0.55, 0, 0), '#ad3333', 0, 62, 'center', 11);
       this.label('EVIDENCE', this.project(0, 1, 0), '#46689b', -12, -29, 'right', 11);
-      this.label('HARDWARE', this.project(0, 0, 1), '#337c6c', -12, -28, 'right', 11);
+      this.label('HARDWARE', this.project(0, 0, 1), '#337c6c', -12, -51, 'right', 11);
       const evidenceTicks = this.options.evidenceTicks || [
         { value: 0, label: 'Unestablished' }, { value: 0.5, label: 'Partial' },
         { value: 0.75, label: 'Conditional' }, { value: 1, label: 'Proved' }
@@ -172,39 +200,57 @@
         const p = this.project(0, 0, t.value / maxH);
         this.label(t.label || '', p, '#6b8b82', -12, t.value === 0 ? 11 : 0, 'right', compact ? 9 : 11);
       });
-      this.projected = this.points.map(p => ({ ...p, ...this.project(p.strength / maxS, p.evidence, p.hardware / maxH) }))
+      if(this.points.some(p=>p.hardware===this.options.hardwareUnspecified)){
+        const z=hardwarePosition(this.options.hardwareUnspecified);
+        this.line([-.025,0,z],[.025,0,z],'#8a9291',1.1);
+        this.line([0,0,z],[1,0,z],'#d9dfdc',1,true);
+        this.label('Unspecified',this.project(0,0,z),'#6b7773',-12,0,'right',compact?9:11);
+      }
+      this.projected = this.points.map(p => ({ ...p, ...this.project(p.strength / maxS, p.evidence, hardwarePosition(p.hardware)) }))
         .sort((a, b) => b.depth - a.depth
           || Number(a.slug === this.options.selectedSlug) - Number(b.slug === this.options.selectedSlug));
-      const occupied = [];
+      const occupied = [...this.axisLabelBoxes];
+      this.projected = spreadPoints(this.projected, (x,y,r) => x>=r+6 && x<=w-r-6 && y>=r+6 && y<=h-r-6);
       this.projected.forEach(p => {
         const selected = p.slug === this.options.selectedSlug || p.selected;
         const active = selected || p.slug === this.hovered?.slug;
         if (selected) {
-          this.line([p.strength / maxS, p.evidence, p.hardware / maxH], [p.strength / maxS, 0, p.hardware / maxH], '#b7bdc7', 1, true);
+          this.line([p.strength / maxS, p.evidence, hardwarePosition(p.hardware)], [p.strength / maxS, 0, hardwarePosition(p.hardware)], '#b7bdc7', 1, true);
         }
-        c.beginPath(); c.arc(p.x, p.y, active ? 9 : 6.5, 0, Math.PI * 2);
+        if(Math.hypot(p.x-p.anchorX,p.y-p.anchorY)>3){c.beginPath();c.moveTo(p.anchorX,p.anchorY);c.lineTo(p.x,p.y);c.strokeStyle='#9caaa944';c.lineWidth=.6;c.stroke();}
+        const radius = active ? Math.max(6.4,p.radius+1) : p.radius;
+        c.beginPath(); c.arc(p.x, p.y, radius+1.7, 0, Math.PI * 2);
         c.fillStyle = '#fff'; c.fill();
-        c.beginPath(); c.arc(p.x, p.y, active ? 6.4 : 4.8, 0, Math.PI * 2);
+        c.beginPath(); c.arc(p.x, p.y, radius, 0, Math.PI * 2);
         c.fillStyle = p.color || '#c83732'; c.fill(); c.lineWidth = 1.1; c.strokeStyle = '#9e3737'; c.stroke();
         if (active) {
-          c.beginPath(); c.arc(p.x, p.y, 10.5, 0, Math.PI * 2); c.strokeStyle = '#27384c'; c.lineWidth = 1.3; c.stroke();
+          c.beginPath(); c.arc(p.x, p.y, radius+4, 0, Math.PI * 2); c.strokeStyle = '#27384c'; c.lineWidth = 1.3; c.stroke();
         }
       });
-      const labelOrder = [...this.projected].sort((a, b) => Number(b.slug === this.options.selectedSlug) - Number(a.slug === this.options.selectedSlug));
+      const labelOrder = [...this.projected].filter(p=>p.importance!=='peripheral'||p.slug===this.options.selectedSlug||p.slug===this.hovered?.slug).sort((a,b)=>Number(b.slug===this.options.selectedSlug)-Number(a.slug===this.options.selectedSlug)||importance(b)-importance(a));
       labelOrder.forEach(p => {
         const selected = p.slug === this.options.selectedSlug;
-        const name = p.shortName || p.name;
-        c.font = `${selected ? 600 : 500} 11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
+        const fullName = p.shortName || p.name;
+        let name = fullName.length>44 ? fullName.slice(0,41)+'…' : fullName;
+        const fontSize = p.importance==='high' ? 13 : 11;
+        c.font = `${selected || p.importance==='high' ? 600 : 500} ${fontSize}px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
+        while(c.measureText(name).width>w-24&&name.length>10)name=name.slice(0,-2)+'…';
         const tw = c.measureText(name).width;
-        const offsets = [[12, -18], [12, 12], [-tw - 12, -18], [-tw - 12, 14], [12, -34], [-tw / 2, 24]];
+        let shown=false;
+        const offsets = [[12,-18],[12,12],[-tw-12,-18],[-tw-12,14],[12,-34],[-tw/2,24],[12,-52],[-tw-12,-52],[12,44],[-tw-12,44]];
         for (const [dx, dy] of offsets) {
-          const box = { x: p.x + dx - 3, y: p.y + dy - 8, w: tw + 6, h: 17 };
+          const box = { x: p.x + dx - 3, y: p.y + dy - 8, w: tw + 6, h: fontSize+6 };
           if (box.x < 7 || box.y < 7 || box.x + box.w > w - 7 || box.y + box.h > h - 7) continue;
           if (occupied.some(q => box.x < q.x + q.w && box.x + box.w > q.x && box.y < q.y + q.h && box.y + box.h > q.y)) continue;
           occupied.push(box);
           c.fillStyle = 'rgba(255,255,255,0.88)'; c.fillRect(box.x, box.y, box.w, box.h);
-          c.fillStyle = selected ? '#223247' : '#5d6775'; c.textAlign = 'left'; c.textBaseline = 'middle'; c.fillText(name, p.x + dx, p.y + dy);
+          c.fillStyle = selected || p.importance==='high' ? '#17242a' : '#3f4b51'; c.textAlign = 'left'; c.textBaseline = 'middle'; c.fillText(name, p.x + dx, p.y + dy);
+          shown=true;
           break;
+        }
+        if(!shown&&(selected||p.slug===this.hovered?.slug)){
+          const x=Math.max(10,Math.min(w-tw-10,p.x-tw/2)),y=Math.max(16,Math.min(h-16,p.y-24));
+          c.fillStyle='#fff';c.fillRect(x-3,y-10,tw+6,20);c.fillStyle='#17242a';c.textAlign='left';c.textBaseline='middle';c.fillText(name,x,y);
         }
       });
     }

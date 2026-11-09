@@ -1,0 +1,95 @@
+{
+  "id": "entry-126",
+  "number": 126,
+  "slug": "prior-g22",
+  "title": "Longest common substring of run-length encoded strings",
+  "title_latex": "Longest common substring of run-length encoded strings",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g22",
+  "inventory_ids": [
+    "G22"
+  ],
+  "problem": {
+    "name": "Longest common substring of run-length encoded strings",
+    "name_latex": "Longest common substring of run-length encoded strings",
+    "statement_latex": "Given two run-length encoded strings with at most $n$ runs each and uncompressed length at most $N$, find a longest common substring. Let $d$ be the number of runs spanned by an optimal match, with the convention of Lee--Lin. Queries return a run character and length.",
+    "statement_text": "Given two run-length encoded strings with at most $n$ runs each and uncompressed length at most $N$, find a longest common substring. Let $d$ be the number of runs spanned by an optimal match, with the convention of Lee–Lin. Queries return a run character and length."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{2/3}d^{-1/6+o(1)}\\operatorname{polylog}N)$ time by Lee--Lin; the algorithm searches over possible match scales.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n^{2/3}d^{-1/6+o(1)}\\operatorname{polylog}N)$ time by Lee–Lin; the algorithm searches over possible match scales.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n)$ encoded-input queries suffice to read the runs; classical compressed-string algorithms perform the remaining processing. This comparison measures oracle access rather than decompression time.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ encoded-input queries suffice to read the runs; classical compressed-string algorithms perform the remaining processing. This comparison measures oracle access rather than decompression time.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-rle-lcs"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2411.02421}{\\emph{Near-Optimal Quantum Algorithm for Finding the Longest Common Substring between Run-Length Encoded Strings}}. Main theorem",
+      "content_text": "Near-Optimal Quantum Algorithm for Finding the Longest Common Substring between Run-Length Encoded Strings. Main theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2411.02421",
+          "title": "Near-Optimal Quantum Algorithm for Finding the Longest Common Substring between Run-Length Encoded Strings",
+          "label_latex": "\\emph{Near-Optimal Quantum Algorithm for Finding the Longest Common Substring between Run-Length Encoded Strings}",
+          "locator_latex": "Main theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-126-citation-00199"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Lee--Lin run-length encoded substring algorithm",
+  "plot": {
+    "quantum": "\\widetilde O(n^{2/3}d^{-1/6+o(1)})",
+    "classical": "O(n)",
+    "parameter": "encoded run count n and matched run count d",
+    "model": "run queries; word costs include log N",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde O(n^{1/3}d^{1/6-o(1)})",
+    "quantum_exponent": 0.6666666666666666,
+    "classical_exponent": 1
+  },
+  "ordinal": 96,
+  "citation_ids": [
+    "entry-126-citation-00199"
+  ]
+}

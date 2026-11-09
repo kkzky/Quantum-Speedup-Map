@@ -1,0 +1,95 @@
+{
+  "id": "entry-201",
+  "number": 201,
+  "slug": "prior-q08",
+  "title": "Full oracle interrogation",
+  "title_latex": "Full oracle interrogation",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q08",
+  "inventory_ids": [
+    "Q08"
+  ],
+  "problem": {
+    "name": "Full oracle interrogation",
+    "name_latex": "Full oracle interrogation",
+    "statement_latex": "Given indexed bit-query access to an unknown $x\\in\\{0,1\\}^N$, output the entire string with probability at least $2/3$. Complexity counts oracle queries; the output contains $N$ bits.",
+    "statement_text": "Given indexed bit-query access to an unknown $x\\in\\{0,1\\}^N$, output the entire string with probability at least $2/3$. Complexity counts oracle queries; the output contains $N$ bits."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "white",
+      "description_latex": "No established asymptotic speedup in the comparison stated above.",
+      "category_id": "strength-unspecified",
+      "description_text": "No established asymptotic speedup in the comparison stated above."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The near-factor-two reduction and the linear classical query lower bound are proved.",
+      "category_id": "evidence-proved",
+      "description_text": "The near-factor-two reduction and the linear classical query lower bound are proved."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$N/2+O(\\sqrt N)$ queries by van Dam's oracle-interrogation algorithm, using a superposition over low-Hamming-weight query patterns.",
+      "details_latex": "",
+      "headline_text": "$N/2+O(\\sqrt N)$ queries by van Dam's oracle-interrogation algorithm, using a superposition over low-Hamming-weight query patterns.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$N-O(1)$ queries are necessary at constant success probability; reading every bit uses $N$. Both complexities are $\\Theta(N)$.",
+      "details_latex": "",
+      "headline_text": "$N-O(1)$ queries are necessary at constant success probability; reading every bit uses $N$. Both complexities are $\\Theta(N)$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "van-dam-oracle-interrogation"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/9805006}{\\emph{Quantum Oracle Interrogation: Getting all information for almost half the price}}. Full-interrogation algorithm",
+      "content_text": "Quantum Oracle Interrogation: Getting all information for almost half the price. Full-interrogation algorithm",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/9805006",
+          "title": "Quantum Oracle Interrogation: Getting all information for almost half the price",
+          "label_latex": "\\emph{Quantum Oracle Interrogation: Getting all information for almost half the price}",
+          "locator_latex": "Full-interrogation algorithm"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-201-citation-00378"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: van Dam oracle interrogation",
+  "plot": {
+    "quantum": "N/2+O(\\sqrt N)",
+    "classical": "N",
+    "parameter": "oracle string length N",
+    "model": "bit queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Asymptotic factor two",
+    "quantum_exponent": 1,
+    "classical_exponent": 1
+  },
+  "ordinal": 193,
+  "citation_ids": [
+    "entry-201-citation-00378"
+  ]
+}

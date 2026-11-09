@@ -1,9 +1,10 @@
 {
   "id": "entry-079",
   "number": 79,
-  "ordinal": 80,
+  "slug": "minimum-weight-nonzero-codewords",
   "title_latex": "Minimum-weight nonzero codewords",
   "title": "Minimum-weight nonzero codewords",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Minimum-weight nonzero codewords",
@@ -14,80 +15,188 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(2^{k/2})$ weight evaluations, D\\\"urr--H\\o yer minimum finding; $C/\\sqrt{p_w}$ for amplified ISD trials.",
-      "headline_text": "$O(2^{k/2})$ weight evaluations, Dürr–Høyer minimum finding; $C/\\sqrt{p_w}$ for amplified ISD trials.",
       "details_latex": "The direct exact method has polynomial workspace and includes coherent computation of $uG$, its Hamming weight and comparison with a threshold. For random codes, let an ISD trial cost $C$ and find a nonzero word of weight at most $w$ with probability $p_w$. Amplification replaces the trial count by $O(p_w^{-1/2})$, and quantum nearest-neighbor walks can reduce the internal cost. Full attacks optimize weight, representations and list sizes.",
+      "headline_text": "$O(2^{k/2})$ weight evaluations, Dürr–Høyer minimum finding; $C/\\sqrt{p_w}$ for amplified ISD trials.",
       "details_text": "The direct exact method has polynomial workspace and includes coherent computation of $uG$, its Hamming weight and comparison with a threshold. For random codes, let an ISD trial cost $C$ and find a nonzero word of weight at most $w$ with probability $p_w$. Amplification replaces the trial count by $O(p_w^{-1/2})$, and quantum nearest-neighbor walks can reduce the internal cost. Full attacks optimize weight, representations and list sizes."
     },
     "classical": {
       "headline_latex": "The minimum of $O(2^k)$ weight evaluations, optimized ISD and applicable sparse-circuit counting.",
-      "headline_text": "The minimum of $O(2^k)$ weight evaluations, optimized ISD and applicable sparse-circuit counting.",
       "details_latex": "Exhaustive enumeration can update codewords in Gray-code order. An ISD trial family gives expected work $C/p_w$, with optimized representations and nearest-neighbor matching improving the random-code comparator. If a generator or parity-check matrix has $s$ nonzero entries, the threshold predicate has $O(n+s)$ Boolean gates, yielding $\\operatorname{poly}(n+s)2^{O((n+s)/\\sqrt{\\log(n+s)})}$ deterministic classical time. Binary search over the weight adds a polynomial factor. A linear-size representation gives subexponential time in $n$; dense constant-rate codes retain the stronger enumeration or ISD bound.",
+      "headline_text": "The minimum of $O(2^k)$ weight evaluations, optimized ISD and applicable sparse-circuit counting.",
       "details_text": "Exhaustive enumeration can update codewords in Gray-code order. An ISD trial family gives expected work $C/p_w$, with optimized representations and nearest-neighbor matching improving the random-code comparator. If a generator or parity-check matrix has $s$ nonzero entries, the threshold predicate has $O(n+s)$ Boolean gates, yielding $\\operatorname{poly}(n+s)2^{O((n+s)/\\sqrt{\\log(n+s)})}$ deterministic classical time. Binary search over the weight adds a polynomial factor. A linear-size representation gives subexponential time in $n$; dense constant-rate codes retain the stronger enumeration or ISD bound."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial speedup from quadratic acceleration of exhaustive weight search or a specified ISD success probability, giving a smaller exponential constant in the dense-code comparison.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial speedup from quadratic acceleration of exhaustive weight search or a specified ISD success probability, giving a smaller exponential constant in the dense-code comparison."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "Rigorous oracle amplification; partial evidence for a full-runtime separation on explicit random codes. Sparse representations have the separate subexponential classical bound.",
+      "category_id": "evidence-partial",
       "description_text": "Rigorous oracle amplification; partial evidence for a full-runtime separation on explicit random codes. Sparse representations have the separate subexponential classical bound."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The direct circuit uses $k$ message qubits, $n$ codeword qubits, a weight register and polynomial ancillas. Exponentially many fault-tolerant repetitions dominate its cost. Faster quantum-walk variants use exponential coherent lists.\n\n{\\small [Before ``ETH is false'', the generic exact comparison was $O(2^k)$ classical weight evaluations versus $O(2^{k/2})$ quantum evaluations, a quadratic speedup also applied to sparse representations.]\\par}",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The direct circuit uses $k$ message qubits, $n$ codeword qubits, a weight register and polynomial ancillas. Exponentially many fault-tolerant repetitions dominate its cost. Faster quantum-walk variants use exponential coherent lists. [Before “ETH is false”, the generic exact comparison was $O(2^k)$ classical weight evaluations versus $O(2^{k/2})$ quantum evaluations, a quadratic speedup also applied to sparse representations.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: D\\\"urr--H{\\o}yer minimum finding; quantum information-set decoding",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "79.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9607014}{D\\\"urr and H\\o yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996)}. The minimum-finding algorithm and its expected $O(\\sqrt N)$ query theorem.",
       "content_text": "Dürr and Høyer, A Quantum Algorithm for Finding the Minimum (1996). The minimum-finding algorithm and its expected $O(\\sqrt N)$ query theorem.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/9607014",
+          "title": "A Quantum Algorithm for Finding the Minimum",
+          "label_latex": "D\\\"urr and H\\o yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996)",
+          "locator_latex": "The minimum-finding algorithm and its expected $O(\\sqrt N)$ query theorem."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-079-citation-001"
+        "entry-079-citation-00275"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "79.2",
       "content_latex": "\\href{https://arxiv.org/pdf/1703.00263}{Kachigar and Tillich, \\emph{Quantum Information Set Decoding Algorithms} (2017)}. Algorithm 2 and the quantum-walk cost analyses, applied at zero syndrome with the zero vector excluded.",
       "content_text": "Kachigar and Tillich, Quantum Information Set Decoding Algorithms (2017). Algorithm 2 and the quantum-walk cost analyses, applied at zero syndrome with the zero vector excluded.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1703.00263",
+          "title": "Quantum Information Set Decoding Algorithms",
+          "label_latex": "Kachigar and Tillich, \\emph{Quantum Information Set Decoding Algorithms} (2017)",
+          "locator_latex": "Algorithm 2 and the quantum-walk cost analyses, applied at zero syndrome with the zero vector excluded."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-079-citation-002"
+        "entry-079-citation-00276"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "79.3",
       "content_latex": "\\href{https://arxiv.org/pdf/1808.00714}{Kirshanova, \\emph{Improved Quantum Information Set Decoding} (2018)}. Algorithm 1 and Theorem 1: the parameter-dependent ISD construction.",
       "content_text": "Kirshanova, Improved Quantum Information Set Decoding (2018). Algorithm 1 and Theorem 1: the parameter-dependent ISD construction.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1808.00714",
+          "title": "Improved Quantum Information Set Decoding",
+          "label_latex": "Kirshanova, \\emph{Improved Quantum Information Set Decoding} (2018)",
+          "locator_latex": "Algorithm 1 and Theorem 1: the parameter-dependent ISD construction."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-079-citation-003"
+        "entry-079-citation-00277"
       ]
     },
     {
-      "item_number": 4,
-      "index_label": "79.4",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1: Boolean tensor contraction; witness self-reduction following the theorem and the bounded-width reductions in Appendix D: explicit-circuit search bound.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1: Boolean tensor contraction; witness self-reduction following the theorem and the bounded-width reductions in Appendix D: explicit-circuit search bound.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1: Boolean tensor contraction; witness self-reduction following the theorem and the bounded-width reductions in Appendix D: explicit-circuit search bound."
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
       "citation_ids": [
-        "entry-079-citation-004"
+        "entry-079-citation-00278"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-079-citation-001",
-    "entry-079-citation-002",
-    "entry-079-citation-003",
-    "entry-079-citation-004"
+  "algorithm_ids": [
+    "grover",
+    "minimum-finding",
+    "quantum-walk-isd"
   ],
-  "source_latex": "\\entrytitle{79}{Minimum-weight nonzero codewords}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{78}\n\\begin{problem}[Minimum-weight nonzero codewords]\nGiven a full-rank generator matrix $G\\in\\mathbb F_2^{k\\times n}$, output $u\\ne0$ minimizing $|uG|$. The minimum value is the code's minimum distance. This is a discrete optimization problem related to syndrome decoding and the search for short dual codewords in statistical cryptanalysis. Complexity is measured in weight-oracle evaluations for the direct search, and quantum gates or classical bit operations for explicitly represented codes.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(2^{k/2})$ weight evaluations, D\\\"urr--H\\o yer minimum finding; $C/\\sqrt{p_w}$ for amplified ISD trials.}\nThe direct exact method has polynomial workspace and includes coherent computation of $uG$, its Hamming weight and comparison with a threshold. For random codes, let an ISD trial cost $C$ and find a nonzero word of weight at most $w$ with probability $p_w$. Amplification replaces the trial count by $O(p_w^{-1/2})$, and quantum nearest-neighbor walks can reduce the internal cost. Full attacks optimize weight, representations and list sizes.\n\n\\complexity{Classical}{The minimum of $O(2^k)$ weight evaluations, optimized ISD and applicable sparse-circuit counting.}\nExhaustive enumeration can update codewords in Gray-code order. An ISD trial family gives expected work $C/p_w$, with optimized representations and nearest-neighbor matching improving the random-code comparator. If a generator or parity-check matrix has $s$ nonzero entries, the threshold predicate has $O(n+s)$ Boolean gates, yielding $\\operatorname{poly}(n+s)2^{O((n+s)/\\sqrt{\\log(n+s)})}$ deterministic classical time. Binary search over the weight adds a polynomial factor. A linear-size representation gives subexponential time in $n$; dense constant-rate codes retain the stronger enumeration or ISD bound.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup from quadratic acceleration of exhaustive weight search or a specified ISD success probability, giving a smaller exponential constant in the dense-code comparison.\n\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous oracle amplification; partial evidence for a full-runtime separation on explicit random codes. Sparse representations have the separate subexponential classical bound.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The direct circuit uses $k$ message qubits, $n$ codeword qubits, a weight register and polynomial ancillas. Exponentially many fault-tolerant repetitions dominate its cost. Faster quantum-walk variants use exponential coherent lists.\n\n{\\small [Before ``ETH is false'', the generic exact comparison was $O(2^k)$ classical weight evaluations versus $O(2^{k/2})$ quantum evaluations, a quadratic speedup also applied to sparse representations.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{79}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9607014}{D\\\"urr and H\\o yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996)}. The minimum-finding algorithm and its expected $O(\\sqrt N)$ query theorem.\n\\item \\href{https://arxiv.org/pdf/1703.00263}{Kachigar and Tillich, \\emph{Quantum Information Set Decoding Algorithms} (2017)}. Algorithm 2 and the quantum-walk cost analyses, applied at zero syndrome with the zero vector excluded.\n\\item \\href{https://arxiv.org/pdf/1808.00714}{Kirshanova, \\emph{Improved Quantum Information Set Decoding} (2018)}. Algorithm 1 and Theorem 1: the parameter-dependent ISD construction.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1: Boolean tensor contraction; witness self-reduction following the theorem and the bounded-width reductions in Appendix D: explicit-circuit search bound.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    },
+    {
+      "algorithm_id": "minimum-finding",
+      "label_latex": "D\\\"urr--H{\\o}yer minimum finding",
+      "problem_numbers": [
+        2,
+        7,
+        11,
+        14,
+        15,
+        16,
+        17,
+        28,
+        29,
+        31,
+        34,
+        53,
+        59,
+        91,
+        116,
+        118,
+        131,
+        132,
+        134
+      ]
+    },
+    {
+      "algorithm_id": "quantum-walk-isd",
+      "label_latex": "Kachigar--Tillich and Kirshanova quantum-walk ISD",
+      "problem_numbers": [
+        78
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{79}{Minimum-weight nonzero codewords}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{78}\n\\begin{problem}[Minimum-weight nonzero codewords]\nGiven a full-rank generator matrix $G\\in\\mathbb F_2^{k\\times n}$, output $u\\ne0$ minimizing $|uG|$. The minimum value is the code's minimum distance. This is a discrete optimization problem related to syndrome decoding and the search for short dual codewords in statistical cryptanalysis. Complexity is measured in weight-oracle evaluations for the direct search, and quantum gates or classical bit operations for explicitly represented codes.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(2^{k/2})$ weight evaluations, D\\\"urr--H\\o yer minimum finding; $C/\\sqrt{p_w}$ for amplified ISD trials.}\nThe direct exact method has polynomial workspace and includes coherent computation of $uG$, its Hamming weight and comparison with a threshold. For random codes, let an ISD trial cost $C$ and find a nonzero word of weight at most $w$ with probability $p_w$. Amplification replaces the trial count by $O(p_w^{-1/2})$, and quantum nearest-neighbor walks can reduce the internal cost. Full attacks optimize weight, representations and list sizes.\n\n\\complexity{Classical}{The minimum of $O(2^k)$ weight evaluations, optimized ISD and applicable sparse-circuit counting.}\nExhaustive enumeration can update codewords in Gray-code order. An ISD trial family gives expected work $C/p_w$, with optimized representations and nearest-neighbor matching improving the random-code comparator. If a generator or parity-check matrix has $s$ nonzero entries, the threshold predicate has $O(n+s)$ Boolean gates, yielding $\\operatorname{poly}(n+s)2^{O((n+s)/\\sqrt{\\log(n+s)})}$ deterministic classical time. Binary search over the weight adds a polynomial factor. A linear-size representation gives subexponential time in $n$; dense constant-rate codes retain the stronger enumeration or ISD bound.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup from quadratic acceleration of exhaustive weight search or a specified ISD success probability, giving a smaller exponential constant in the dense-code comparison.\n\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous oracle amplification; partial evidence for a full-runtime separation on explicit random codes. Sparse representations have the separate subexponential classical bound.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The direct circuit uses $k$ message qubits, $n$ codeword qubits, a weight register and polynomial ancillas. Exponentially many fault-tolerant repetitions dominate its cost. Faster quantum-walk variants use exponential coherent lists.\n\n{\\small [Before ``ETH is false'', the generic exact comparison was $O(2^k)$ classical weight evaluations versus $O(2^{k/2})$ quantum evaluations, a quadratic speedup also applied to sparse representations.]\\par}\n\\subhead{Algorithm: D\\\"urr--H{\\o}yer minimum finding; quantum information-set decoding}\n\\begin{algorithmindex}{79}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9607014}{D\\\"urr and H\\o yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996)}. The minimum-finding algorithm and its expected $O(\\sqrt N)$ query theorem.\n\\item \\href{https://arxiv.org/pdf/1703.00263}{Kachigar and Tillich, \\emph{Quantum Information Set Decoding Algorithms} (2017)}. Algorithm 2 and the quantum-walk cost analyses, applied at zero syndrome with the zero vector excluded.\n\\item \\href{https://arxiv.org/pdf/1808.00714}{Kirshanova, \\emph{Improved Quantum Information Set Decoding} (2018)}. Algorithm 1 and Theorem 1: the parameter-dependent ISD construction.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1: Boolean tensor contraction; witness self-reduction following the theorem and the bounded-width reductions in Appendix D: explicit-circuit search bound.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{grover}{Grover search and amplitude amplification}: \\problemref{1}, \\problemref{5}, \\problemref{20}, \\problemref{53}, \\problemref{78}, \\problemref{81}, \\problemref{82}, \\problemref{83}, \\problemref{90}, \\problemref{95}, \\problemref{96}.\n\\par\\algorithmref{minimum-finding}{D\\\"urr--H{\\o}yer minimum finding}: \\problemref{2}, \\problemref{7}, \\problemref{11}, \\problemref{14}, \\problemref{15}, \\problemref{16}, \\problemref{17}, \\problemref{28}, \\problemref{29}, \\problemref{31}, \\problemref{34}, \\problemref{53}, \\problemref{59}, \\problemref{91}.\n\\par\\algorithmref{quantum-walk-isd}{Kachigar--Tillich and Kirshanova quantum-walk ISD}: \\problemref{78}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 136,
+  "citation_ids": [
+    "entry-079-citation-00275",
+    "entry-079-citation-00276",
+    "entry-079-citation-00277",
+    "entry-079-citation-00278"
+  ]
 }

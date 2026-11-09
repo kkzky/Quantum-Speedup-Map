@@ -1,0 +1,93 @@
+{
+  "id": "entry-161",
+  "number": 161,
+  "slug": "prior-a18",
+  "title": "Generalized hidden shift",
+  "title_latex": "Generalized hidden shift",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a18",
+  "inventory_ids": [
+    "A18"
+  ],
+  "problem": {
+    "name": "Generalized hidden shift",
+    "name_latex": "Generalized hidden shift",
+    "statement_latex": "Given injective functions $f_b:\\mathbb Z_N\\to S$ for $b\\in\\{0,\\ldots,M-1\\}$ satisfying $f_b(x)=f_0(x+bs)$, recover $s\\in\\mathbb Z_N$. Access to $(b,x)\\mapsto f_b(x)$ is coherent.",
+    "statement_text": "Given injective functions $f_b:\\mathbb Z_N\\to S$ for $b\\in\\{0,\\ldots,M-1\\}$ satisfying $f_b(x)=f_0(x+bs)$, recover $s\\in\\mathbb Z_N$. Access to $(b,x)\\mapsto f_b(x)$ is coherent."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log N)$ time by Childs--van Dam when $M>N^\\varepsilon$ for a fixed $\\varepsilon>0$, using a pretty-good measurement and a lattice-point subroutine.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log N)$ time by Childs–van Dam when $M>N^\\varepsilon$ for a fixed $\\varepsilon>0$, using a pretty-good measurement and a lattice-point subroutine.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Collision-based classical hidden-shift recovery uses $\\widetilde O(\\sqrt N)$ oracle calls; distinct oracle labels hide the shift until cross-function collisions occur.",
+      "details_latex": "",
+      "headline_text": "Collision-based classical hidden-shift recovery uses $\\widetilde O(\\sqrt N)$ oracle calls; distinct oracle labels hide the shift until cross-function collisions occur.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "generalized-hidden-shift-pgm"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0507190}{\\emph{Quantum algorithm for a generalized hidden shift problem}}. Main efficient-algorithm theorem.",
+      "content_text": "Quantum algorithm for a generalized hidden shift problem. Main efficient-algorithm theorem.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0507190",
+          "title": "Quantum algorithm for a generalized hidden shift problem",
+          "label_latex": "\\emph{Quantum algorithm for a generalized hidden shift problem}",
+          "locator_latex": "Main efficient-algorithm theorem."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-161-citation-00323"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Childs--van Dam generalized hidden-shift algorithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log N)",
+    "classical": "\\widetilde\\Theta(\\sqrt N)",
+    "parameter": "cyclic-group size N; M>N^epsilon",
+    "model": "hidden-shift queries and efficient quantum gates",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial in log N"
+  },
+  "ordinal": 160,
+  "citation_ids": [
+    "entry-161-citation-00323"
+  ]
+}

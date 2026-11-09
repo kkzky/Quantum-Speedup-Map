@@ -1,0 +1,95 @@
+{
+  "id": "entry-228",
+  "number": 228,
+  "slug": "prior-q43",
+  "title": "Disjoint-support testing of finite distributions",
+  "title_latex": "Disjoint-support testing of finite distributions",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-q43",
+  "inventory_ids": [
+    "Q43"
+  ],
+  "problem": {
+    "name": "Disjoint-support testing of finite distributions",
+    "name_latex": "Disjoint-support testing of finite distributions",
+    "statement_latex": "Given coherent samplers for $p,q$ on $[N]$, distinguish $\\operatorname{supp}(p)\\cap\\operatorname{supp}(q)=\\varnothing$ from $\\|p-q\\|_1\\le2-\\varepsilon$. This is the orthogonality-testing promise of Bravyi--Harrow--Hassidim.",
+    "statement_text": "Given coherent samplers for $p,q$ on $[N]$, distinguish $\\operatorname{supp}(p)\\cap\\operatorname{supp}(q)=\\varnothing$ from $\\|p-q\\|_1\\le2-\\varepsilon$. This is the orthogonality-testing promise of Bravyi–Harrow–Hassidim."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(N^{1/3})$ queries for constant $\\varepsilon$ by coherent collision detection between samples from the two distributions.",
+      "details_latex": "",
+      "headline_text": "$O(N^{1/3})$ queries for constant $\\varepsilon$ by coherent collision detection between samples from the two distributions.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(\\sqrt N)$ samples in the worst-case constant-gap setting, using cross-collisions and the classical collision lower bound.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\sqrt N)$ samples in the worst-case constant-gap setting, using cross-collisions and the classical collision lower bound.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-distribution-orthogonality"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0907.3920}{\\emph{Quantum algorithms for testing properties of distributions}}. Orthogonality-testing algorithm.",
+      "content_text": "Quantum algorithms for testing properties of distributions. Orthogonality-testing algorithm.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0907.3920",
+          "title": "Quantum algorithms for testing properties of distributions",
+          "label_latex": "\\emph{Quantum algorithms for testing properties of distributions}",
+          "locator_latex": "Orthogonality-testing algorithm."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-228-citation-00097"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Bravyi--Harrow--Hassidim orthogonality tester",
+  "plot": {
+    "quantum": "O(N^{1/3})",
+    "classical": "\\Theta(N^{1/2})",
+    "parameter": "domain size N; fixed separation epsilon",
+    "model": "coherent sampler queries versus independent samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Omega(N^{1/6})",
+    "quantum_exponent": 0.3333333333333333,
+    "classical_exponent": 0.5
+  },
+  "ordinal": 48,
+  "citation_ids": [
+    "entry-228-citation-00097"
+  ]
+}

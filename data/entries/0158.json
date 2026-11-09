@@ -1,0 +1,93 @@
+{
+  "id": "entry-158",
+  "number": 158,
+  "slug": "prior-a15",
+  "title": "Shifted multiplicative characters",
+  "title_latex": "Shifted multiplicative characters",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a15",
+  "inventory_ids": [
+    "A15"
+  ],
+  "problem": {
+    "name": "Shifted multiplicative characters",
+    "name_latex": "Shifted multiplicative characters",
+    "statement_latex": "Let $\\chi$ be a known nontrivial multiplicative character of $\\mathbb F_q$, extended by $\\chi(0)=0$. Given $f(x)=\\chi(x+s)$ by coherent queries, recover the shift $s\\in\\mathbb F_q$. The Legendre character is the principal example.",
+    "statement_text": "Let $\\chi$ be a known nontrivial multiplicative character of $\\mathbb F_q$, extended by $\\chi(0)=0$. Given $f(x)=\\chi(x+s)$ by coherent queries, recover the shift $s\\in\\mathbb F_q$. The Legendre character is the principal example."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log q)$ gates and constantly many oracle calls by van Dam--Hallgren--Ip, using Fourier transforms and Gauss-sum phases.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log q)$ gates and constantly many oracle calls by van Dam–Hallgren–Ip, using Fourier transforms and Gauss-sum phases.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde O(q)$ time by testing candidate shifts against $O(\\log q)$ sampled evaluations; the query information can be collected with polynomially many calls. The difficulty is computational recovery from those evaluations.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(q)$ time by testing candidate shifts against $O(\\log q)$ sampled evaluations; the query information can be collected with polynomially many calls. The difficulty is computational recovery from those evaluations.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "multiplicative-character-hidden-shift"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0211140}{\\emph{Quantum Algorithms for some Hidden Shift Problems}}. Shifted Legendre-symbol and multiplicative-character algorithms.",
+      "content_text": "Quantum Algorithms for some Hidden Shift Problems. Shifted Legendre-symbol and multiplicative-character algorithms.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0211140",
+          "title": "Quantum Algorithms for some Hidden Shift Problems",
+          "label_latex": "\\emph{Quantum Algorithms for some Hidden Shift Problems}",
+          "locator_latex": "Shifted Legendre-symbol and multiplicative-character algorithms."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-158-citation-00320"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: van Dam--Hallgren--Ip multiplicative-character hidden shift",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log q)",
+    "classical": "\\widetilde O(q)",
+    "parameter": "field size q",
+    "model": "gate/time comparison with character evaluation",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial relative to shift enumeration"
+  },
+  "ordinal": 157,
+  "citation_ids": [
+    "entry-158-citation-00320"
+  ]
+}

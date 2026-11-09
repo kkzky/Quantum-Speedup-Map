@@ -1,0 +1,102 @@
+{
+  "id": "entry-139",
+  "number": 139,
+  "slug": "prior-g38",
+  "title": "Cycle finding from an edge list",
+  "title_latex": "Cycle finding from an edge list",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g38",
+  "inventory_ids": [
+    "G38"
+  ],
+  "problem": {
+    "name": "Cycle finding from an edge list",
+    "name_latex": "Cycle finding from an edge list",
+    "statement_latex": "Given an indexed edge list of an undirected graph with $m$ edges, maximum degree at most $d$, and fixed $k\\ge3$, decide whether the graph contains a simple $k$-cycle. Complexity counts edge-list queries.",
+    "statement_text": "Given an indexed edge list of an undirected graph with $m$ edges, maximum degree at most $d$, and fixed $k\\ge3$, decide whether the graph contains a simple $k$-cycle. Complexity counts edge-list queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\min\\{m,(2d)^{(k^2+k-6)/4}2^{2dk}m^{3/4-1/(2^{k+2}-4)}\\})$ queries by Gilani--Wang--Wu--Zhou's adaptation of Belovs' learning graph. For $d=O(\\log m/\\log\\log m)$ this is $m^{3/4-1/(2^{k+2}-4)+o(1)}$.",
+      "details_latex": "",
+      "headline_text": "$O(\\min\\{m,(2d)^{(k^2+k-6)/4}2^{2dk}m^{3/4-1/(2^{k+2}-4)}\\})$ queries by Gilani–Wang–Wu–Zhou's adaptation of Belovs' learning graph. For $d=O(\\log m/\\log\\log m)$ this is $m^{3/4-1/(2^{k+2}-4)+o(1)}$.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(m)$ worst-case edge-list queries, by reading the list and classical cycle testing. The degree promise permits the same linear-query lower bound.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(m)$ worst-case edge-list queries, by reading the list and classical cycle testing. The degree promise permits the same linear-query lower bound.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "belovs-k-distinctness"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "belovs-k-distinctness",
+      "label_latex": "Belovs learning graph for k-distinctness",
+      "problem_numbers": [
+        108
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2412.17786}{\\emph{Quantum Algorithms on Edge Lists: Hiding, Shuffling, and Cycle Finding}}. Theorem 6.16 and Corollary 6.17; Section 6.2",
+      "content_text": "Quantum Algorithms on Edge Lists: Hiding, Shuffling, and Cycle Finding. Theorem 6.16 and Corollary 6.17; Section 6.2",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2412.17786",
+          "title": "Quantum Algorithms on Edge Lists: Hiding, Shuffling, and Cycle Finding",
+          "label_latex": "\\emph{Quantum Algorithms on Edge Lists: Hiding, Shuffling, and Cycle Finding}",
+          "locator_latex": "Theorem 6.16 and Corollary 6.17; Section 6.2"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-139-citation-00213"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Belovs learning graph for k-distinctness",
+  "plot": {
+    "quantum": "m^{3/4-1/(2^{k+2}-4)+o(1)}",
+    "classical": "O(m)",
+    "parameter": "m edges and fixed cycle parameter k",
+    "model": "edge-list queries under the stated degree promise",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "m^{1/4+1/(2^{k+2}-4)-o(1)}",
+    "classical_exponent": 1
+  },
+  "ordinal": 108,
+  "citation_ids": [
+    "entry-139-citation-00213"
+  ]
+}

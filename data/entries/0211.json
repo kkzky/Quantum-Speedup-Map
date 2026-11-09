@@ -1,0 +1,137 @@
+{
+  "id": "entry-211",
+  "number": 211,
+  "slug": "prior-q20",
+  "title": "Linearity testing of Boolean functions",
+  "title_latex": "Linearity testing of Boolean functions",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-q20",
+  "inventory_ids": [
+    "Q20"
+  ],
+  "problem": {
+    "name": "Linearity testing of Boolean functions",
+    "name_latex": "Linearity testing of Boolean functions",
+    "statement_latex": "Given a coherent oracle for $f:\\mathbb F_2^n\\to\\mathbb F_2$, distinguish linear functions $f(x)=a\\cdot x$ from functions at normalized Hamming distance at least $\\varepsilon$ from every linear function.",
+    "statement_text": "Given a coherent oracle for $f:\\mathbb F_2^n\\to\\mathbb F_2$, distinguish linear functions $f(x)=a\\cdot x$ from functions at normalized Hamming distance at least $\\varepsilon$ from every linear function."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\varepsilon^{-1/2})$ queries by quantum linearity testing, amplifying detection of Fourier mass incompatible with linearity.",
+      "details_latex": "",
+      "headline_text": "$O(\\varepsilon^{-1/2})$ queries by quantum linearity testing, amplifying detection of Fourier mass incompatible with linearity.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(\\varepsilon^{-1})$ randomized queries by the Blum--Luby--Rubinfeld test and the corresponding distance-dependent lower bound.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\varepsilon^{-1})$ randomized queries by the Blum–Luby–Rubinfeld test and the corresponding distance-dependent lower bound.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-boolean-property-tests",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-boolean-property-tests",
+      "label_latex": "Quantum linearity and symmetry testing",
+      "problem_numbers": [
+        212
+      ]
+    },
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1306.6195}{\\emph{Improved quantum test for linearity of a Boolean function}}. Main algorithm; earlier construction: arXiv:1106.4831",
+      "content_text": "Improved quantum test for linearity of a Boolean function. Main algorithm; earlier construction: arXiv:1106.4831",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1306.6195",
+          "title": "Improved quantum test for linearity of a Boolean function",
+          "label_latex": "\\emph{Improved quantum test for linearity of a Boolean function}",
+          "locator_latex": "Main algorithm; earlier construction: arXiv:1106.4831"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-211-citation-00078"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum linearity and symmetry testing; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "O(\\varepsilon^{-1/2})",
+    "classical": "\\Theta(\\varepsilon^{-1})",
+    "parameter": "inverse distance 1/epsilon",
+    "model": "Boolean membership queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Omega(\\varepsilon^{-1/2})",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 34,
+  "citation_ids": [
+    "entry-211-citation-00078"
+  ]
+}

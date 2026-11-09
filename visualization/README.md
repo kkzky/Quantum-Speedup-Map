@@ -1,13 +1,24 @@
-# Asymptotic visualization demo
+# Quantum Speedup Map
 
-Open `quantum-speedup-demo.html` in a browser, or serve the editable source:
+The visualization includes every problem in `data/full_catalogue.json` and links to independent problem and algorithm pages. Search accepts problem names and algorithm names. An algorithm match selects its associated problem in a plot; page search opens either type of page.
+
+Both plots support fullscreen, search and reset. Point size and label size reflect editorial importance. Peripheral points show their labels when selected. The two plots share the selected problem and its complexity comparison, evidence, hardware discussion and source links.
+
+The quantum/classical plot uses an ordered, compressed scale for asymptotic growth. The displayed formulas retain their parameters and resource model. Comparisons without a single plotted growth rate appear in the Unspecified complexity strip. Unknown hardware requirements have a separate gray position in the three-dimensional plot.
+
+Open `quantum-speedup-demo.html` directly for the standalone version, or serve the editable source:
 
 ```sh
 python -m http.server 8765 --bind 127.0.0.1 --directory visualization/demo
 ```
 
-Install the build dependencies with `python -m pip install -r scripts/requirements-demo.txt`, then rebuild with `python scripts/build_demo.py`. The build reads `sources/catalogue-preview.tex`, exports the problem and algorithm records to `visualization/catalogue-preview.json`, and renders their complete pages as HTML and native MathML. The eight chart examples link into these pages.
+From the repository root, rebuild all data and pages with:
 
-Problem links use `#entry/<slug>`, algorithm links use `#algorithm/<slug>`, and merged applications link to `#entry/<slug>/<application>`. These links also work in the standalone offline file. The preview dataset keeps independent algorithm records, their literature, their problem applications, and the catalogue's reciprocal links. The main database remains the preceding snapshot while this demo is under review.
+```sh
+python -m pip install -r requirements.txt
+python scripts/build_all.py
+```
 
-Use commas or parentheses for separators in interface text.
+Problem links use `#entry/<slug>`, algorithm links use `#algorithm/<slug>`, and merged applications use `#entry/<slug>/<application>`. These routes also work in the standalone file.
+
+The build combines `sources/catalogue-preview.tex` with the research records in `data/additions/`, exports the JSON and SQLite databases, and renders mathematical expressions as native MathML. `visualization/catalogue-preview.json` mirrors the full catalogue used by the pages.

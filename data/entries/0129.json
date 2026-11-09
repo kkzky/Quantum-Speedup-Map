@@ -1,0 +1,139 @@
+{
+  "id": "entry-129",
+  "number": 129,
+  "slug": "prior-g25",
+  "title": "Common subsequence of length k",
+  "title_latex": "Common subsequence of length $k$",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g25",
+  "inventory_ids": [
+    "G25"
+  ],
+  "problem": {
+    "name": "Common subsequence of length k",
+    "name_latex": "Common subsequence of length $k$",
+    "statement_latex": "Given two strings of length at most $n$ and a fixed positive integer $k$, decide whether they have a common subsequence of length at least $k$, and output one if it exists. Complexity counts character queries.",
+    "statement_text": "Given two strings of length at most $n$ and a fixed positive integer $k$, decide whether they have a common subsequence of length at least $k$, and output one if it exists. Complexity counts character queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^{2/3}\\log^{k-1}n)$ queries by Childs and collaborators' quantum divide-and-conquer algorithm.",
+      "details_latex": "",
+      "headline_text": "$O(n^{2/3}\\log^{k-1}n)$ queries by Childs and collaborators' quantum divide-and-conquer algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ queries to read both strings; classical dynamic programming then decides the subsequence condition.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n)$ queries to read both strings; classical dynamic programming then decides the subsequence condition.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-divide-conquer",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-divide-conquer",
+      "label_latex": "Quantum divide and conquer",
+      "problem_numbers": [
+        130,
+        131,
+        132
+      ]
+    },
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2210.06419}{\\emph{Quantum divide and conquer}}. Theorem7; Section3.4",
+      "content_text": "Quantum divide and conquer. Theorem7; Section3.4",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2210.06419",
+          "title": "Quantum divide and conquer",
+          "label_latex": "\\emph{Quantum divide and conquer}",
+          "locator_latex": "Theorem7; Section3.4"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-129-citation-00202"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum divide and conquer; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "O(n^{2/3}\\log^{k-1}n)",
+    "classical": "\\Theta(n)",
+    "parameter": "string length n; fixed k",
+    "model": "character queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Omega(n^{1/3}/\\log^{k-1}n)",
+    "quantum_exponent": 0.6666666666666666,
+    "classical_exponent": 1
+  },
+  "ordinal": 99,
+  "citation_ids": [
+    "entry-129-citation-00202"
+  ]
+}

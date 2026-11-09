@@ -1,0 +1,930 @@
+[
+  {
+    "key": "yz_codeword_hash_search",
+    "title": "Codeword search with random hash constraints",
+    "problem_latex": "For security parameter $\\lambda$, fix the folded Reed--Solomon code $C_\\lambda\\subseteq\\Sigma^n$ from Lemma 4.2, where $n=\\Theta(\\lambda)$ and $|\\Sigma|=2^{\\lambda^{\\Theta(1)}}$. Given oracle access to $H:\\Sigma\\to\\{0,1\\}^n$, output $c\\in C_\\lambda$ satisfying $H_i(c_i)=1$ for every coordinate $i$. This NP search relation has a publicly checkable witness. Complexity uses random-oracle queries and gates; $H_i$ denotes output bit $i$.",
+    "quantum_latex": "$\\operatorname{poly}(\\lambda)$ gates and at most $n\\lambda$ quantum queries, by Yamakawa--Zhandry, with success $1-\\operatorname{negl}(\\lambda)$ over random $H$. Prepare the code superposition and coordinate states supported on $H_i^{-1}(1)$, Fourier transform both, coherently add and decode the dual code, then inverse transform. Verification uses $n$ classical hash queries and polynomial code-membership work. A salted two-message construction handles nonuniform provers.",
+    "classical_latex": "For fixed $0<c<c'<1$ in the code construction, every computationally unbounded classical algorithm using at most $2^{\\lambda^c}$ oracle queries succeeds with probability at most $2^{-\\Omega(\\lambda)}$ (Lemma 6.9). Random codeword trials provide an $O(n2^n)$-query exponential comparator on typical random oracles. The keyless bound concerns uniform algorithms; the keyed construction treats oracle-dependent advice. Substituting an explicit cryptographic hash makes hardness an assumption about that family.",
+    "strength": "to_polynomial",
+    "evidence": "proved",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "crypto",
+    "algorithms": [
+      {
+        "key": "dqi",
+        "name": "Yamakawa--Zhandry Fourier-decoding algorithm",
+        "role": "Uses Fourier transformation and dual-code decoding to construct a codeword satisfying all hash constraints; this is the Yamakawa--Zhandry construction of decoded quantum interferometry.",
+        "references": [
+          {
+            "title": "Verifiable Quantum Advantage without Structure",
+            "url": "https://arxiv.org/abs/2204.02063v3",
+            "locator": "Lemma 4.2; Section 6, Theorem 6.1 and Lemmas 6.3, 6.9; Figure 1; Section 7"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Verifiable Quantum Advantage without Structure",
+        "url": "https://arxiv.org/abs/2204.02063v3",
+        "locator": "Lemma 4.2; Section 6, Theorem 6.1 and Lemmas 6.3, 6.9; Figure 1; Section 7"
+      }
+    ],
+    "strength_note": "Subexponential-or-exponential classical oracle complexity to polynomial quantum queries and gates.",
+    "evidence_note": "The random-oracle query separation is unconditional. Concrete-hash implementations use a separate hardness assumption.",
+    "hardware_note": "$O(n\\log|\\Sigma|)$ data qubits plus polynomial reversible-decoding and hash workspace; fault-tolerant operation is the relevant scale.",
+    "plot": {
+      "quantum": "\\operatorname{poly}(\\lambda)",
+      "classical": "\\Omega(2^{\\lambda^c})",
+      "parameter": "$\\lambda$ is the security parameter; $c\\in(0,1)$ is fixed by the code family.",
+      "model": "Random-oracle queries",
+      "quantum_kind": "polynomial",
+      "classical_kind": "subexponential",
+      "quantum_exponent": null,
+      "classical_exponent": null,
+      "gain": "2^{\\lambda^c}/\\operatorname{poly}(\\lambda)"
+    }
+  },
+  {
+    "key": "trapdoor_claw_proof_quantumness",
+    "title": "Interactive proofs of quantumness",
+    "problem_latex": "A classical verifier supplies a public key for a trapdoor claw-free pair $(f_{k,0},f_{k,1})$. The prover commits to an image $y$, then answers a random challenge with a preimage or a prescribed measurement relation between its two preimages. The objective is an acceptance probability above the efficient-classical-prover threshold. Complexity uses gates, communication, and security parameter $\\lambda$.",
+    "quantum_latex": "$\\operatorname{poly}(\\lambda)$ prover gates and verifier time. Coherent function evaluation and image measurement retain a superposition of the two preimages. BCMVV uses complementary-basis challenges. The computational Bell protocol achieves $p_x=1$ and $p_{\\rm CHSH}=\\cos^2(\\pi/8)$; Rabin-function implementations use modular squaring.",
+    "classical_latex": "Under claw-freeness, classical polynomial-time provers satisfy $p_x+4p_{\\rm CHSH}-4\\leq\\operatorname{negl}(\\lambda)$. For the factoring-based instantiation, factoring the $\\lambda$-bit modulus gives an attack with heuristic number-field-sieve time $\\exp(O(\\lambda^{1/3}(\\log\\lambda)^{2/3}))$. The LWE instantiation uses its lattice-attack parameters and adaptive-hardcore-bit assumption.",
+    "strength": "to_polynomial",
+    "evidence": "strong",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "crypto",
+    "algorithms": [
+      {
+        "key": "bcmvv_protocol",
+        "name": "BCMVV test of quantumness",
+        "role": "Uses trapdoor claw-free functions and complementary measurements.",
+        "references": [
+          {
+            "title": "A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device",
+            "url": "https://arxiv.org/abs/1804.00640",
+            "locator": "Test-of-quantumness and randomness-generation protocols; noisy trapdoor claw-free functions; LWE construction"
+          }
+        ]
+      },
+      {
+        "key": "computational_bell_test",
+        "name": "Computational Bell-test protocol",
+        "role": "Uses a claw-state commitment and a CHSH-type challenge.",
+        "references": [
+          {
+            "title": "Classically verifiable quantum advantage from a computational Bell test",
+            "url": "https://www.nature.com/articles/s41567-022-01643-7",
+            "locator": "Interactive protocol; Theorems 1 and 2; Table 1; modular-squaring circuits"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device",
+        "url": "https://arxiv.org/abs/1804.00640",
+        "locator": "Test-of-quantumness and randomness-generation protocols; noisy trapdoor claw-free functions; LWE construction"
+      },
+      {
+        "title": "Classically verifiable quantum advantage from a computational Bell test",
+        "url": "https://www.nature.com/articles/s41567-022-01643-7",
+        "locator": "Interactive protocol; Theorems 1 and 2; Table 1; modular-squaring circuits"
+      }
+    ],
+    "strength_note": "Polynomial quantum proving versus superpolynomial classical attacks under the selected cryptographic assumption.",
+    "evidence_note": "Exceeding the classical soundness threshold yields a cryptographic attack.",
+    "hardware_note": "Polynomial qubits, reversible arithmetic, and mid-circuit measurement with feed-forward; costs depend on the trapdoor family."
+  },
+  {
+    "key": "classical_verification_bqp",
+    "title": "Classical verification of quantum computation",
+    "problem_latex": "Given a quantum circuit deciding a promise problem with completeness at least $2/3$ and soundness at most $1/3$, construct an interactive protocol with a classical polynomial-time verifier and a quantum polynomial-time honest prover certifying the decision. Security is against efficient quantum cheating provers. Complexity uses gates, verifier time, and classical communication.",
+    "quantum_latex": "$\\operatorname{poly}(T,\\lambda)$ gates for circuit size $T$ and security parameter $\\lambda$, using Mahadev's four-message protocol. Cryptographic commitments enforce computational- or Hadamard-basis measurements; the verifier checks a computation-verification test.",
+    "classical_latex": "The verifier runs in $\\operatorname{poly}(T,\\lambda)$ classical time. A classical honest prover for every BQP computation would require classical algorithms for those computations; generic simulation and problem-specific algorithms supply their respective comparators. Protocol soundness reduces to quantum hardness of LWE.",
+    "strength": "none",
+    "evidence": "strong",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "mahadev_verification",
+        "name": "Mahadev verification protocol",
+        "role": "Certifies delegated computation using a classical cryptographic measurement protocol.",
+        "references": [
+          {
+            "title": "Classical Verification of Quantum Computations",
+            "url": "https://arxiv.org/abs/1804.01082",
+            "locator": "Main verification theorem; measurement protocol; construction from noisy trapdoor claw-free functions"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Classical Verification of Quantum Computations",
+        "url": "https://arxiv.org/abs/1804.01082",
+        "locator": "Main verification theorem; measurement protocol; construction from noisy trapdoor claw-free functions"
+      }
+    ],
+    "strength_note": "Efficient classical verification of BQP computation.",
+    "evidence_note": "Completeness and computational soundness are proved under quantum hardness of LWE.",
+    "hardware_note": "Polynomial quantum space, coherent cryptographic evaluation, and repeated measurements; fault-tolerant implementation is the relevant regime."
+  },
+  {
+    "key": "certified_randomness",
+    "title": "Certified randomness from an untrusted quantum device",
+    "problem_latex": "A classical verifier interacts with an untrusted device and outputs $Z$ with conditional smooth min-entropy $H_{\\min}^{\\varepsilon}(Z\\mid E,\\mathrm{transcript})\\geq k$, for the side information $E$ admitted by the protocol. A seeded extractor gives nearly uniform bits. Complexity counts prover gates, communication, verification, and certified entropy.",
+    "quantum_latex": "BCMVV uses polynomially many cryptographic rounds to certify entropy under LWE-based assumptions. A separate random-circuit protocol executes challenged circuits and classically checks selected probabilities. Its 2025 experiment certified $71{,}313$ entropy bits with 56 trapped-ion qubits under a restricted-adversary model.",
+    "classical_latex": "A classical device can retain every output, yielding zero conditional entropy against its own side information. The circuit-based protocol bounds the number of samples obtainable by a time-limited classical adversary; its verification used combined sustained performance $1.1\\times10^{18}$ floating-point operations per second.",
+    "strength": "none",
+    "evidence": "strong",
+    "hardware": "small",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "bcmvv_randomness",
+        "name": "BCMVV certified-randomness protocol",
+        "role": "Turns unpredictable measurements into certified entropy.",
+        "references": [
+          {
+            "title": "A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device",
+            "url": "https://arxiv.org/abs/1804.00640",
+            "locator": "Test-of-quantumness and randomness-generation protocols; noisy trapdoor claw-free functions; LWE construction"
+          }
+        ]
+      },
+      {
+        "key": "rcs_certified_randomness",
+        "name": "Random-circuit certified-randomness protocol",
+        "role": "Uses challenged samples and classical verification to certify entropy.",
+        "references": [
+          {
+            "title": "Certified randomness using a trapped-ion quantum processor",
+            "url": "https://arxiv.org/abs/2503.20498",
+            "locator": "Protocol, restricted-adversary security model, entropy certification, and 56-qubit experiment"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device",
+        "url": "https://arxiv.org/abs/1804.00640",
+        "locator": "Test-of-quantumness and randomness-generation protocols; noisy trapdoor claw-free functions; LWE construction"
+      },
+      {
+        "title": "Certified randomness using a trapped-ion quantum processor",
+        "url": "https://arxiv.org/abs/2503.20498",
+        "locator": "Protocol, restricted-adversary security model, entropy certification, and 56-qubit experiment"
+      }
+    ],
+    "strength_note": "Certifiable entropy under an explicit adversarial model; verification work enters the resource tradeoff.",
+    "evidence_note": "LWE-based certification has a cryptographic proof; the circuit experiment has a security analysis for its restricted adversary.",
+    "hardware_note": "The circuit protocol was demonstrated on 56 trapped-ion qubits; trapdoor-function protocols require coherent cryptographic circuits."
+  },
+  {
+    "key": "random_circuit_sampling",
+    "title": "Random circuit sampling",
+    "problem_latex": "Given an $n$-qubit circuit $U$ with $g$ gates from a specified ensemble, sample $x\\in\\{0,1\\}^n$ from $p_U(x)=|\\langle x|U|0^n\\rangle|^2$, exactly or within total variation distance $\\varepsilon$. Geometry, gate distribution, and noise define the instance family. Complexity uses gates and classical sampling time.",
+    "quantum_latex": "$O(g+n)$ operations per ideal sample by direct circuit execution and measurement. Finite-gate-set compilation adds its precision overhead.",
+    "classical_latex": "Use the minimum of state-vector simulation $O(g2^n)$, tensor contraction $\\operatorname{poly}(g)2^{O(w)}$ at contraction width $w$, and fixed-algebraic-gate path counting $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ for a sparse Boolean encoding of size $s$ of the required marginal. Sequential conditional probabilities give samples with polynomial overhead. Constant-rate noisy random circuits in the anticoncentration regime admit polynomial-time approximate classical sampling.",
+    "strength": "to_polynomial",
+    "evidence": "strong",
+    "hardware": "small",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "random_circuit_execution",
+        "name": "Random-circuit execution",
+        "role": "Executes the circuit and measures the output.",
+        "references": [
+          {
+            "title": "On the complexity and verification of quantum random circuit sampling",
+            "url": "https://arxiv.org/abs/1803.04402",
+            "locator": "RCS definition; average-case hardness theorem; verification discussion"
+          },
+          {
+            "title": "Quantum supremacy using a programmable superconducting processor",
+            "url": "https://www.nature.com/articles/s41586-019-1666-5",
+            "locator": "53-qubit experiment; supplementary simulation methods"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "On the complexity and verification of quantum random circuit sampling",
+        "url": "https://arxiv.org/abs/1803.04402",
+        "locator": "RCS definition; average-case hardness theorem; verification discussion"
+      },
+      {
+        "title": "Quantum supremacy using a programmable superconducting processor",
+        "url": "https://www.nature.com/articles/s41586-019-1666-5",
+        "locator": "53-qubit experiment; supplementary simulation methods"
+      },
+      {
+        "title": "Simulating quantum computation by contracting tensor networks",
+        "url": "https://arxiv.org/abs/quant-ph/0511069",
+        "locator": "Main circuit-treewidth simulation theorem"
+      },
+      {
+        "title": "The Exponential Time Hypothesis Is False",
+        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "locator": "Theorem 1.1; Appendix D; sparse fixed-width counting"
+      },
+      {
+        "title": "A polynomial-time classical algorithm for noisy random circuit sampling",
+        "url": "https://arxiv.org/abs/2211.03999",
+        "locator": "Main theorem for constant-rate noise in the anticoncentration regime"
+      }
+    ],
+    "strength_note": "Ideal sampling compares polynomial quantum cost with the best applicable exponential or subexponential generic classical simulator.",
+    "evidence_note": "Polynomial approximate classical sampling implies a polynomial-hierarchy collapse under the corresponding average-case hardness and anticoncentration assumptions.",
+    "hardware_note": "Implemented on superconducting processors, including 53-qubit Sycamore; asymptotic comparisons specify target noise and accuracy."
+  },
+  {
+    "key": "fock_boson_sampling",
+    "title": "Fock-state boson sampling",
+    "problem_latex": "Given an $m\\times m$ interferometer $U$ and single photons in $n\\leq m$ specified inputs, sample $s\\in\\mathbb N^m$, $\\sum_i s_i=n$, with $p(s)=|\\operatorname{Per}(U_s)|^2/\\prod_i s_i!$. Matrix $U_s$ uses occupied input columns and repeats row $i$ exactly $s_i$ times. Complexity uses optical operations and classical arithmetic time at specified precision.",
+    "quantum_latex": "$O(m^2)$ two-mode optical elements implement a general interferometer, followed by photon-number detection. Scattershot boson sampling varies the occupied input modes.",
+    "classical_latex": "Clifford--Clifford exact sampling costs $O(n2^n+mn^2)$. Their collision-aware algorithm has Haar-average bound $O(\\frac{n(m+n)}m\\frac{\\binom{2m+n}{n+1}}{\\binom{m+n}{n+1}}+n^2m)$. For fixed nonzero uniform loss, the November 2026 loss theorem gives polynomial approximate sampling with total-variation error averaged over Haar interferometers.",
+    "strength": "to_polynomial",
+    "evidence": "strong",
+    "hardware": "small",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "linear_optical_boson_sampling",
+        "name": "Linear-optical boson sampling",
+        "role": "Interferes single photons and measures occupations.",
+        "references": [
+          {
+            "title": "The Computational Complexity of Linear Optics",
+            "url": "https://arxiv.org/abs/1011.3245",
+            "locator": "BosonSampling definition; exact- and approximate-sampling hardness"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "The Computational Complexity of Linear Optics",
+        "url": "https://arxiv.org/abs/1011.3245",
+        "locator": "BosonSampling definition; exact- and approximate-sampling hardness"
+      },
+      {
+        "title": "The Classical Complexity of Boson Sampling",
+        "url": "https://arxiv.org/abs/1706.01260",
+        "locator": "Main exact-sampling algorithm and complexity theorem"
+      },
+      {
+        "title": "Faster classical Boson Sampling",
+        "url": "https://arxiv.org/abs/2005.04214",
+        "locator": "Algorithm A; Theorem 5, general average-case bound"
+      },
+      {
+        "title": "Boson sampling is fragile to loss",
+        "url": "https://arxiv.org/abs/2611.01434",
+        "locator": "Section IV.1; average-case total-variation sampling theorem; November 2026 preprint"
+      }
+    ],
+    "strength_note": "Ideal sampling compares polynomial optical resources with exponential classical bounds, keeping photon and mode counts independent.",
+    "evidence_note": "Efficient exact sampling implies polynomial-hierarchy collapse; approximate hardness adds permanent average-case hardness and anticoncentration conjectures.",
+    "hardware_note": "Requires $n$ indistinguishable photons, $m$ modes, and photon-number-resolving detectors; experiments implement finite lossy instances."
+  },
+  {
+    "key": "gaussian_boson_sampling",
+    "title": "Gaussian boson sampling",
+    "problem_latex": "Given a complex symmetric $B$ with singular values below one, sample $s\\in\\mathbb N^m$ with $p(s)=\\sqrt{\\det(I-BB^\\dagger)}|\\operatorname{Haf}(B_s)|^2/\\prod_i s_i!$, where $B_s$ repeats row and column $i$ exactly $s_i$ times. This is discrete photon-number sampling from a pure zero-mean Gaussian state. Complexity uses optical operations and classical sampling time.",
+    "quantum_latex": "$O(m^2)$ optical elements, $m$ squeezed input modes, and photon counting implement a general instance. Total detected photon count $N=\\sum_i s_i$ is a random output parameter controlled by squeezing.",
+    "classical_latex": "Conditional heterodyne sampling and loop-hafnian evaluation cost $O(mN^3 2^{N/2})$ for an $N$-photon output, with the numerical cutoff specified. Polynomial classical samplers cover the nonnegative graph distributions in Anand et al. Equal bounded squeezing and fixed uniform loss admit polynomial sampling with Haar-average total-variation accuracy by the 2026 loss theorem.",
+    "strength": "to_polynomial",
+    "evidence": "strong",
+    "hardware": "small",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "gaussian_boson_sampling",
+        "name": "Gaussian boson sampling",
+        "role": "Prepares a Gaussian optical state and measures discrete occupations.",
+        "references": [
+          {
+            "title": "Gaussian Boson Sampling",
+            "url": "https://arxiv.org/abs/1612.01199",
+            "locator": "Photon-count probabilities and GBS protocol"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Gaussian Boson Sampling",
+        "url": "https://arxiv.org/abs/1612.01199",
+        "locator": "Photon-count probabilities and GBS protocol"
+      },
+      {
+        "title": "Quadratic speedup for simulating Gaussian boson sampling",
+        "url": "https://arxiv.org/abs/2010.15595",
+        "locator": "Section III algorithm and O(mN^3 2^(N/2)) bound"
+      },
+      {
+        "title": "The Complexity of Bipartite Gaussian Boson Sampling",
+        "url": "https://arxiv.org/abs/2110.06964",
+        "locator": "Approximate-sampling hardness under permanent conjectures"
+      },
+      {
+        "title": "Simulating Gaussian boson sampling on graphs in polynomial time",
+        "url": "https://arxiv.org/abs/2511.16558v3",
+        "locator": "Theorem 1.1 and Section 4: graph-application distributions"
+      },
+      {
+        "title": "Boson sampling is fragile to loss",
+        "url": "https://arxiv.org/abs/2611.01434",
+        "locator": "Section IV.1; average-case total-variation sampling theorem; November 2026 preprint"
+      }
+    ],
+    "strength_note": "General ideal instances compare polynomial optical resources with exponential hafnian-based sampling time; structure and loss determine the comparator.",
+    "evidence_note": "Ideal bipartite GBS has approximate-sampling hardness when the mode count is quadratic in photon count, under permanent conjectures and noncollapse of the polynomial hierarchy.",
+    "hardware_note": "Squeezed-light processors and photon detectors implement this model; resources include modes, squeezing, loss, and detected photons."
+  },
+  {
+    "key": "iqp_sampling",
+    "title": "Sampling commuting quantum circuits",
+    "problem_latex": "Given a circuit $U$ of $g$ gates diagonal in the Pauli-$X$ basis, sample $x$ with probability $|\\langle x|U|0^n\\rangle|^2$. Standard IQP families use a fixed finite gate set; approximation error is total variation distance. Complexity uses gates and classical sampling time.",
+    "quantum_latex": "$O(g+n)$ gates and measurements. Equivalently, apply Hadamards, commuting diagonal phase gates, Hadamards, then computational-basis measurement.",
+    "classical_latex": "Take the best of $O(g2^n)$ state-vector simulation, $\\operatorname{poly}(g)2^{O(w)}$ contraction at width $w$, and $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ sparse-Boolean-encoding path counting for finite-algebraic-gate marginals. Clifford-only circuits admit polynomial stabilizer simulation.",
+    "strength": "to_polynomial",
+    "evidence": "strong",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "iqp_circuit_sampling",
+        "name": "IQP circuit sampling",
+        "role": "Executes commuting phase gates between Hadamard layers.",
+        "references": [
+          {
+            "title": "Average-case complexity versus approximate simulation of commuting quantum computations",
+            "url": "https://arxiv.org/abs/1504.07999",
+            "locator": "Theorem 1; Conjectures 2 and 3; IQP definition"
+          },
+          {
+            "title": "Classical simulation of commuting quantum computations implies collapse of the polynomial hierarchy",
+            "url": "https://arxiv.org/abs/1005.1407",
+            "locator": "Postselection argument and weak-simulation hardness"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Average-case complexity versus approximate simulation of commuting quantum computations",
+        "url": "https://arxiv.org/abs/1504.07999",
+        "locator": "Theorem 1; Conjectures 2 and 3; IQP definition"
+      },
+      {
+        "title": "Classical simulation of commuting quantum computations implies collapse of the polynomial hierarchy",
+        "url": "https://arxiv.org/abs/1005.1407",
+        "locator": "Postselection argument and weak-simulation hardness"
+      },
+      {
+        "title": "Simulating quantum computation by contracting tensor networks",
+        "url": "https://arxiv.org/abs/quant-ph/0511069",
+        "locator": "Main circuit-treewidth simulation theorem"
+      },
+      {
+        "title": "The Exponential Time Hypothesis Is False",
+        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "locator": "Theorem 1.1; Appendix D; sparse fixed-width counting"
+      }
+    ],
+    "strength_note": "Polynomial quantum sampling versus the best applicable exponential or subexponential classical simulator.",
+    "evidence_note": "Polynomial classical sampling within $1/192$ in $\\ell_1$ distance gives a third-level polynomial-hierarchy collapse under either average-case conjecture in Bremner--Montanaro--Shepherd.",
+    "hardware_note": "$n$ qubits and $g$ commuting gates; non-Clifford operations and approximation accuracy determine implementation demands."
+  },
+  {
+    "key": "dqc1_trace_estimation",
+    "title": "Normalized trace estimation for a quantum circuit",
+    "problem_latex": "Given an $n$-qubit unitary circuit $U$ of size $g$, estimate both components of $2^{-n}\\operatorname{Tr}(U)$ to additive error $\\varepsilon$ with failure probability $\\delta$. The input is a succinct circuit. Complexity uses gates and classical time; the problem characterizes DQC1.",
+    "quantum_latex": "$O(g\\varepsilon^{-2}\\log(1/\\delta))$ gates by Knill--Laflamme. A clean control applies controlled-$U$ to $I/2^n$; its $X$ and $Y$ expectations give the trace.",
+    "classical_latex": "Random-vector trace estimation with state-vector circuit application costs $O(g2^n\\varepsilon^{-2}\\log(1/\\delta))$. Tensor contraction provides width-dependent alternatives. For fixed finite algebraic gates, trace path counting also costs $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ in the size $s$ of its sparse Boolean encoding.",
+    "strength": "to_polynomial",
+    "evidence": "partial",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "knill_laflamme_trace",
+        "name": "Knill--Laflamme normalized-trace algorithm",
+        "role": "Reads the normalized trace from controlled-unitary interference.",
+        "references": [
+          {
+            "title": "On the Power of One Bit of Quantum Information",
+            "url": "https://arxiv.org/abs/quant-ph/9802037",
+            "locator": "One-clean-qubit model and normalized-trace circuit"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "On the Power of One Bit of Quantum Information",
+        "url": "https://arxiv.org/abs/quant-ph/9802037",
+        "locator": "One-clean-qubit model and normalized-trace circuit"
+      },
+      {
+        "title": "Computation with Unitaries and One Pure Qubit",
+        "url": "https://arxiv.org/abs/quant-ph/0608132",
+        "locator": "Normalized trace estimation and completeness for the one-pure-qubit complexity class"
+      },
+      {
+        "title": "Simulating quantum computation by contracting tensor networks",
+        "url": "https://arxiv.org/abs/quant-ph/0511069",
+        "locator": "Main circuit-treewidth simulation theorem"
+      },
+      {
+        "title": "The Exponential Time Hypothesis Is False",
+        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "locator": "Theorem 1.1; Appendix D; sparse fixed-width counting"
+      }
+    ],
+    "strength_note": "Polynomial quantum gates versus the best applicable exponential or subexponential generic classical trace computation.",
+    "evidence_note": "Inverse-polynomial-accuracy trace estimation is DQC1-complete; efficient classical estimation would simulate DQC1.",
+    "hardware_note": "One clean and $n$ maximally mixed qubits plus controlled-circuit workspace; repetitions scale as $\\varepsilon^{-2}$."
+  },
+  {
+    "key": "two_dimensional_hidden_linear_function",
+    "title": "Two-dimensional hidden linear function",
+    "problem_latex": "On an $n$-vertex square grid, input bits $A_e,b_v$ define $q(x)=2\\sum_{e=\\{u,v\\}}A_ex_ux_v+\\sum_v b_vx_v\\pmod4$. Let $L_q=\\{x:q(x\\oplus y)=q(x)+q(y)\\ \\forall y\\}$. Output $z\\in\\mathbb F_2^n$ with $q(x)=2z^Tx$ for every $x\\in L_q$. Complexity counts bounded-fan-in circuit depth.",
+    "quantum_latex": "$O(1)$ depth and $O(n)$ gates on a nearest-neighbor grid: apply $H^{\\otimes n}$, the Clifford phase $i^{q(x)}$, and $H^{\\otimes n}$. Every measured output satisfies the relation. An encoded construction extends the separation to a related noisy three-dimensional task.",
+    "classical_latex": "$\\Omega(\\log n)$ depth for bounded-fan-in randomized classical circuits solving all instances with the stipulated success probability. Stabilizer simulation or finite-field linear algebra gives polynomial sequential time; parallel linear algebra gives polylogarithmic depth.",
+    "strength": "polynomial",
+    "evidence": "proved",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "bravyi_gosset_koenig",
+        "name": "Bravyi--Gosset--K\\\"onig shallow-circuit algorithm",
+        "role": "Samples a solution of the hidden linear relation using a Clifford circuit.",
+        "references": [
+          {
+            "title": "Quantum advantage with shallow circuits",
+            "url": "https://arxiv.org/abs/1704.00690",
+            "locator": "Section 3, Eq. (14), 2D Hidden Linear Function definition; main depth-separation theorem"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Quantum advantage with shallow circuits",
+        "url": "https://arxiv.org/abs/1704.00690",
+        "locator": "Section 3, Eq. (14), 2D Hidden Linear Function definition; main depth-separation theorem"
+      },
+      {
+        "title": "Quantum advantage with noisy shallow circuits",
+        "url": "https://arxiv.org/abs/1904.01502",
+        "locator": "Noisy three-dimensional relation and main theorem"
+      }
+    ],
+    "strength_note": "Constant quantum depth versus logarithmic classical depth; this is a parallel-computation separation.",
+    "evidence_note": "The classical bounded-fan-in depth lower bound is unconditional.",
+    "hardware_note": "$O(n)$ qubits and constant-depth local gates; the noisy extension uses three-dimensional encoded states.",
+    "plot": {
+      "quantum": "O(1)",
+      "classical": "\\Omega(\\log n)",
+      "parameter": "$n$ is the grid vertex count.",
+      "model": "Bounded-fan-in circuit depth",
+      "quantum_kind": "constant",
+      "classical_kind": "logarithmic",
+      "quantum_exponent": null,
+      "classical_exponent": null,
+      "gain": "\\Omega(\\log n)"
+    }
+  },
+  {
+    "key": "equality_quantum_fingerprinting",
+    "title": "Equality in simultaneous-message communication",
+    "problem_latex": "Alice receives $x\\in\\{0,1\\}^n$ and Bob receives $y\\in\\{0,1\\}^n$. Each sends one message to a referee deciding $x=y$ with error at most $1/3$. The senders have independent private randomness and no shared random key or prior entanglement. Complexity counts transmitted bits or qubits.",
+    "quantum_latex": "$\\Theta(\\log n)$ qubits by quantum fingerprinting. An error-correcting code maps inputs to quantum states; the referee uses a SWAP test. Error $\\delta$ costs $O(\\log n\\log(1/\\delta))$ qubits.",
+    "classical_latex": "$\\Theta(\\sqrt n)$ bits for bounded-error private-coin simultaneous-message protocols. Classical fingerprints sample codeword positions; matching lower bounds apply in the same model.",
+    "strength": "polynomial",
+    "evidence": "proved",
+    "hardware": "small",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "quantum_fingerprinting",
+        "name": "Quantum fingerprinting",
+        "role": "Encodes strings in logarithmic-size quantum messages and compares their fingerprints.",
+        "references": [
+          {
+            "title": "Quantum fingerprinting",
+            "url": "https://arxiv.org/abs/quant-ph/0102001",
+            "locator": "Fingerprint states, SWAP test, and simultaneous-message equality bounds"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Quantum fingerprinting",
+        "url": "https://arxiv.org/abs/quant-ph/0102001",
+        "locator": "Fingerprint states, SWAP test, and simultaneous-message equality bounds"
+      }
+    ],
+    "strength_note": "$\\Theta(\\sqrt n/\\log n)$ reduction in communication, conventionally called an exponential separation in message length.",
+    "evidence_note": "Matching classical and quantum communication bounds hold without shared randomness or entanglement.",
+    "hardware_note": "$O(\\log n)$ transmitted qubits; preparation reads the classical input. Optical protocols implement related encodings.",
+    "plot": {
+      "quantum": "\\Theta(\\log n)",
+      "classical": "\\Theta(\\sqrt n)",
+      "parameter": "$n$ is each party's input length.",
+      "model": "Private-coin simultaneous messages",
+      "quantum_kind": "logarithmic",
+      "classical_kind": "polynomial",
+      "quantum_exponent": null,
+      "classical_exponent": 0.5,
+      "gain": "\\Theta(\\sqrt n/\\log n)"
+    }
+  },
+  {
+    "key": "hidden_matching_communication",
+    "title": "Hidden matching in one-way communication",
+    "problem_latex": "Alice holds $x\\in\\{0,1\\}^n$ and Bob a perfect matching $M$ on $[n]$. After one message from Alice, Bob outputs an edge $(i,j)\\in M$ and the bit $x_i\\oplus x_j$, with success at least $2/3$. Complexity counts one-way communicated bits or qubits.",
+    "quantum_latex": "$\\lceil\\log_2n\\rceil$ qubits with exact success. Alice sends $n^{-1/2}\\sum_i(-1)^{x_i}|i\\rangle$; Bob measures in the basis $(|i\\rangle\\pm|j\\rangle)/\\sqrt2$ for edges in $M$.",
+    "classical_latex": "$\\Omega(\\sqrt n)$ randomized classical bits are necessary. Shared randomness enables a matching $O(\\sqrt n)$ birthday-paradox protocol; sending sampled indices explicitly costs $O(\\sqrt n\\log n)$ with private randomness.",
+    "strength": "polynomial",
+    "evidence": "proved",
+    "hardware": "small",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "hidden_matching_protocol",
+        "name": "Hidden Matching quantum communication protocol",
+        "role": "Phase-encodes Alice's bits and measures an edge parity in Bob's basis.",
+        "references": [
+          {
+            "title": "Exponential Separation of Quantum and Classical One-Way Communication Complexity",
+            "url": "https://webee.technion.ac.il/people/zivby/papers/qcc/qcc.journal.pdf",
+            "locator": "Hidden Matching relation; quantum protocol; randomized classical lower bound"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Exponential Separation of Quantum and Classical One-Way Communication Complexity",
+        "url": "https://webee.technion.ac.il/people/zivby/papers/qcc/qcc.journal.pdf",
+        "locator": "Hidden Matching relation; quantum protocol; randomized classical lower bound"
+      },
+      {
+        "title": "Experimental demonstration of quantum advantage for one-way communication complexity surpassing best-known classical protocol",
+        "url": "https://www.nature.com/articles/s41467-019-12139-z",
+        "locator": "Hidden Matching and Sampling Matching protocols; optical experiment"
+      }
+    ],
+    "strength_note": "$\\Theta(\\sqrt n/\\log n)$ communication reduction against the public-coin classical optimum.",
+    "evidence_note": "The classical lower bound holds even with shared randomness.",
+    "hardware_note": "$\\log_2n$ transmitted qubits ideally; coherent-state optical variants have experimental demonstrations.",
+    "plot": {
+      "quantum": "O(\\log n)",
+      "classical": "\\Theta(\\sqrt n)",
+      "parameter": "$n$ is the input length and matching vertex count.",
+      "model": "One-way communication",
+      "quantum_kind": "logarithmic",
+      "classical_kind": "polynomial",
+      "quantum_exponent": null,
+      "classical_exponent": 0.5,
+      "gain": "\\Theta(\\sqrt n/\\log n)"
+    }
+  },
+  {
+    "key": "set_disjointness_communication",
+    "title": "Set disjointness in two-party communication",
+    "problem_latex": "Alice and Bob hold $x,y\\in\\{0,1\\}^n$ and decide whether $\\sum_i x_iy_i=0$, with error at most $1/3$. Complexity counts two-way communication; local computation is free.",
+    "quantum_latex": "$\\Theta(\\sqrt n)$ communicated qubits. Aaronson--Ambainis distributed search finds an index with $x_i=y_i=1$ and removes the logarithmic overhead of straightforward index-register communication.",
+    "classical_latex": "$\\Theta(n)$ randomized classical bits, achieved by sending one input and matched by lower bounds. The quantum $\\Omega(\\sqrt n)$ lower bound also holds with prior entanglement.",
+    "strength": "polynomial",
+    "evidence": "proved",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "aaronson_ambainis_disjointness",
+        "name": "Aaronson--Ambainis disjointness protocol",
+        "role": "Uses distributed quantum search to detect an intersection.",
+        "references": [
+          {
+            "title": "Quantum Search of Spatial Regions",
+            "url": "https://toc.ilab.sztaki.hu/articles/v001a004/index.html",
+            "locator": "Section 7: O(sqrt n)-qubit disjointness protocol; spatial-search theorems"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Quantum Search of Spatial Regions",
+        "url": "https://toc.ilab.sztaki.hu/articles/v001a004/index.html",
+        "locator": "Section 7: O(sqrt n)-qubit disjointness protocol; spatial-search theorems"
+      },
+      {
+        "title": "Quantum communication complexity of symmetric predicates",
+        "url": "https://arxiv.org/abs/quant-ph/0204025",
+        "locator": "Set-disjointness lower bound and symmetric-predicate theorem"
+      }
+    ],
+    "strength_note": "A tight quadratic communication improvement arising from quantum search.",
+    "evidence_note": "Both classical and quantum bounded-error communication complexities have matching lower bounds.",
+    "hardware_note": "Coherent quantum links and distributed search registers; total communication is $\\Theta(\\sqrt n)$ qubits.",
+    "plot": {
+      "quantum": "\\Theta(\\sqrt n)",
+      "classical": "\\Theta(n)",
+      "parameter": "$n$ is the universe size.",
+      "model": "Two-party bounded-error communication",
+      "quantum_kind": "polynomial",
+      "classical_kind": "polynomial",
+      "quantum_exponent": 0.5,
+      "classical_exponent": 1,
+      "gain": "\\Theta(\\sqrt n)"
+    }
+  },
+  {
+    "key": "discrete_logarithm_concept_learning",
+    "title": "Learning discrete-logarithm interval concepts",
+    "problem_latex": "For prime $p$, generator $g\\in\\mathbb F_p^*$, and hidden $s$, let $f_s(x)=+1$ when $\\log_gx$ lies in the cyclic interval of $(p-1)/2$ exponents starting at $s$, and $-1$ otherwise. Given uniform classical labeled examples, learn a classifier with error at most $0.01$. Complexity uses gates and training/inference time; $n=\\lceil\\log_2p\\rceil$.",
+    "quantum_latex": "$\\operatorname{poly}(n)$ time at constant accuracy by support-vector classification with quantum kernel estimation. Kernels are squared overlaps of modular-exponentiation feature states. Alternatively, Shor's algorithm maps examples to exponent intervals for classical learning.",
+    "classical_latex": "Achieving accuracy $1/2+1/\\operatorname{poly}(n)$ gives an efficient classical discrete-logarithm algorithm. A direct attack computes logarithms with the number field sieve and learns the interval, with heuristic time $\\exp(O(n^{1/3}(\\log n)^{2/3}))$ for prime fields, up to polynomial training overhead.",
+    "strength": "to_polynomial",
+    "evidence": "strong",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "crypto",
+    "algorithms": [
+      {
+        "key": "svm_quantum_kernel",
+        "name": "Support-vector classification with quantum kernel estimation",
+        "role": "Learns through modular-exponentiation feature-state overlaps.",
+        "references": [
+          {
+            "title": "A rigorous and robust quantum speed-up in supervised machine learning",
+            "url": "https://arxiv.org/abs/2010.02174",
+            "locator": "Theorems 1 and 2; Appendix B, Definition 6 and Theorem 8; Appendix C.3"
+          }
+        ]
+      },
+      {
+        "key": "shor-order",
+        "name": "Shor order finding and discrete logarithms",
+        "role": "Computes discrete logarithms as a preprocessing module for interval learning.",
+        "references": [
+          {
+            "title": "A rigorous and robust quantum speed-up in supervised machine learning",
+            "url": "https://arxiv.org/abs/2010.02174",
+            "locator": "Theorems 1 and 2; Appendix B, Definition 6 and Theorem 8; Appendix C.3"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "A rigorous and robust quantum speed-up in supervised machine learning",
+        "url": "https://arxiv.org/abs/2010.02174",
+        "locator": "Theorems 1 and 2; Appendix B, Definition 6 and Theorem 8; Appendix C.3"
+      }
+    ],
+    "strength_note": "Subexponential known classical preprocessing to polynomial quantum learning.",
+    "evidence_note": "An efficient classical learner with inverse-polynomial prediction advantage would solve discrete logarithms.",
+    "hardware_note": "Polynomial logical qubits and modular arithmetic; kernel shots and classical support-vector training enter the cost."
+  },
+  {
+    "key": "spatial_lattice_search",
+    "title": "Spatial search on a lattice",
+    "problem_latex": "A $d$-dimensional lattice of $N$ vertices has a unique marked vertex, recognized by an oracle. Find it with success at least $2/3$, using adjacent-vertex movements and queries at the walker's position. Complexity counts local movement and oracle steps.",
+    "quantum_latex": "$O(\\sqrt N)$ steps for fixed $d\\geq3$ by Aaronson--Ambainis; $O(\\sqrt{N\\log N})$ for $d=2$ by Tulsi's ancilla-controlled walk. The ancilla raises success to a constant.",
+    "classical_latex": "$\\Theta(N)$ classical steps and queries, achieved by a systematic traversal and matched by unstructured-search query lower bounds. The 2026 electrostatic theorem gives a matching $\\Omega(\\sqrt{N\\log N})$ quantum local-step lower bound in two dimensions.",
+    "strength": "polynomial",
+    "evidence": "proved",
+    "hardware": "polynomial",
+    "importance": "high",
+    "chapter": "graphs",
+    "algorithms": [
+      {
+        "key": "tulsi_spatial_search",
+        "name": "Tulsi ancilla-controlled spatial search",
+        "role": "Uses a controlled walk to find a marked grid vertex.",
+        "references": [
+          {
+            "title": "Faster quantum walk algorithm for the two dimensional spatial search",
+            "url": "https://arxiv.org/abs/0801.0497",
+            "locator": "Ancilla-controlled walk and O(sqrt(N log N)) theorem"
+          }
+        ]
+      },
+      {
+        "key": "aaronson_ambainis_spatial_search",
+        "name": "Aaronson--Ambainis spatial search",
+        "role": "Provides local search on higher-dimensional grids.",
+        "references": [
+          {
+            "title": "Quantum Search of Spatial Regions",
+            "url": "https://toc.ilab.sztaki.hu/articles/v001a004/index.html",
+            "locator": "Section 7: O(sqrt n)-qubit disjointness protocol; spatial-search theorems"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Faster quantum walk algorithm for the two dimensional spatial search",
+        "url": "https://arxiv.org/abs/0801.0497",
+        "locator": "Ancilla-controlled walk and O(sqrt(N log N)) theorem"
+      },
+      {
+        "title": "Quantum Search of Spatial Regions",
+        "url": "https://toc.ilab.sztaki.hu/articles/v001a004/index.html",
+        "locator": "Section 7: O(sqrt n)-qubit disjointness protocol; spatial-search theorems"
+      },
+      {
+        "title": "Electrostatic Limits on Quantum Spatial Search",
+        "url": "https://arxiv.org/abs/2610.23560",
+        "locator": "Main local-step lower bound; October 2026 preprint"
+      }
+    ],
+    "strength_note": "A quadratic speedup for $d\\geq3$, and factor $\\sqrt{N/\\log N}$ in two dimensions.",
+    "evidence_note": "The classical lower bound is unconditional in the model charging local movement and queries.",
+    "hardware_note": "Digital position register: $\\lceil\\log_2N\\rceil$ qubits plus coin and ancilla; a physical lattice encoding uses $N$ sites.",
+    "plot": {
+      "quantum": "O(\\sqrt{N\\log N})",
+      "classical": "\\Theta(N)",
+      "parameter": "$N$ vertices; displayed case $d=2$.",
+      "model": "Local movement and oracle steps",
+      "quantum_kind": "polynomial",
+      "classical_kind": "polynomial",
+      "quantum_exponent": 0.5,
+      "classical_exponent": 1,
+      "gain": "\\Omega(\\sqrt{N/\\log N})"
+    }
+  },
+  {
+    "key": "general_hsp_query_identification",
+    "title": "Hidden subgroup identification in a general finite group",
+    "problem_latex": "Given finite $G$ and an oracle $f:G\\to X$ constant on, and distinct between, the left cosets of unknown $H\\leq G$, output generators of $H$. Complexity counts oracle queries; $n=\\lceil\\log_2|G|\\rceil$.",
+    "quantum_latex": "$O(n^2+\\log(1/\\delta))$ queries with error $\\delta$ by the Ettinger--H{\\o}yer--Knill subgroup-state test. An exact construction uses $O(n^4)$ queries with arbitrary one-qubit gates. General subgroup discrimination and preprocessing require exponential resources.",
+    "classical_latex": "Repeated birthday-collision sampling finds generators with $O(n2^{n/2})$ queries in the worst case; equal oracle values give elements of $H$. Simon-type order-two subgroups require $\\Omega(2^{n/2})$ randomized queries. For finite abelian groups, subgroup-sensitive identification costs $O(\\sqrt{(|G|/|H|)\\log|H|}+\\log|H|)$ deterministic queries.",
+    "strength": "to_polynomial",
+    "evidence": "proved",
+    "hardware": "exponential",
+    "importance": "high",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "ettinger_hoyer_knill",
+        "name": "Ettinger--H{\\o}yer--Knill subgroup identification",
+        "role": "Collects coset states and jointly tests candidate subgroups.",
+        "references": [
+          {
+            "title": "The quantum query complexity of the hidden subgroup problem is polynomial",
+            "url": "https://arxiv.org/abs/quant-ph/0401083",
+            "locator": "Theorems 1 and 2; Sections 2.1 and 2.2"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "The quantum query complexity of the hidden subgroup problem is polynomial",
+        "url": "https://arxiv.org/abs/quant-ph/0401083",
+        "locator": "Theorems 1 and 2; Sections 2.1 and 2.2"
+      },
+      {
+        "title": "Deterministic Algorithms for the Hidden Subgroup Problem",
+        "url": "https://arxiv.org/abs/2104.14436",
+        "locator": "Section 5: birthday sampling; Section 6: finding the subgroup"
+      },
+      {
+        "title": "Deterministic Algorithms for the Hidden Subgroup Problem",
+        "url": "https://arxiv.org/abs/2110.00827",
+        "locator": "Finite abelian identification upper bound"
+      }
+    ],
+    "strength_note": "Exponential classical queries to polynomial quantum queries.",
+    "evidence_note": "The upper bound holds for every finite group; oracle lower bounds give an exponential worst-case classical separation.",
+    "hardware_note": "Polynomially many coset-state registers suffice; general joint measurements and subgroup enumeration have exponential implementation cost.",
+    "plot": {
+      "quantum": "O(n^2)",
+      "classical": "\\Omega(2^{n/2})",
+      "parameter": "$n=\\lceil\\log_2|G|\\rceil$; fixed bounded error.",
+      "model": "Oracle queries",
+      "quantum_kind": "polynomial",
+      "classical_kind": "exponential",
+      "quantum_exponent": 2,
+      "classical_exponent": null,
+      "gain": "\\Omega(2^{n/2}/n^2)"
+    }
+  },
+  {
+    "key": "anonymous_leader_election",
+    "title": "Exact leader election in anonymous networks",
+    "problem_latex": "In a connected synchronous network of $n$ identical processors without unique identifiers, each knows $n$. Output bits summing to exactly one, in bounded time with zero error, on every topology. Complexity counts rounds and transmitted bits or qubits.",
+    "quantum_latex": "$O(n)$ rounds and $O(mn^2)$ communication for $m$ links by Kobayashi--Matsumoto--Tani. Coherent symmetric-function computation enables exact symmetry breaking.",
+    "classical_latex": "Exact bounded-time leader election is impossible on general anonymous classical networks even with known n. Symmetric executions on symmetric topologies keep processors indistinguishable.",
+    "strength": "none",
+    "evidence": "proved",
+    "hardware": "polynomial",
+    "importance": "medium",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "quantum_anonymous_leader_election",
+        "name": "Kobayashi--Matsumoto--Tani leader election",
+        "role": "Uses coherent distributed symmetric-function evaluation to select one leader.",
+        "references": [
+          {
+            "title": "Computing on Anonymous Quantum Network",
+            "url": "https://arxiv.org/abs/1001.5307",
+            "locator": "Symmetric-function reduction and O(n)-round leader-election corollary"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Exact Quantum Algorithms for the Leader Election Problem",
+        "url": "https://arxiv.org/abs/0712.4213",
+        "locator": "Exact anonymous leader-election protocols and classical impossibility"
+      },
+      {
+        "title": "Computing on Anonymous Quantum Network",
+        "url": "https://arxiv.org/abs/1001.5307",
+        "locator": "Symmetric-function reduction and O(n)-round leader-election corollary"
+      }
+    ],
+    "strength_note": "An exact-solvability separation in the anonymous-network model.",
+    "evidence_note": "Quantum solvability and classical impossibility are unconditional.",
+    "hardware_note": "Quantum links and polynomial coherent local resources are required."
+  },
+  {
+    "key": "magic_square_game",
+    "title": "Mermin--Peres magic-square game",
+    "problem_latex": "A referee independently samples row $r\\in\\{1,2,3\\}$ for Alice and column $c\\in\\{1,2,3\\}$ for Bob. Alice outputs three signs of product $+1$ and Bob three of product $-1$; their intersection values must agree. No communication follows the inputs. Complexity uses winning probability and shared entanglement.",
+    "quantum_latex": "Success $1$ with two EPR pairs and constant-size local measurements. Commuting Mermin--Peres observables supply the required parities and agreement.",
+    "classical_latex": "Optimal classical success is exactly $8/9$, allowing shared randomness and arbitrary local computation. A deterministic assignment satisfying eight of nine input pairs attains it.",
+    "strength": "none",
+    "evidence": "proved",
+    "hardware": "small",
+    "importance": "medium",
+    "chapter": "complexity",
+    "algorithms": [
+      {
+        "key": "magic_square_strategy",
+        "name": "Mermin--Peres magic-square strategy",
+        "role": "Uses entangled measurements to satisfy row, column, and intersection constraints.",
+        "references": [
+          {
+            "title": "Experimental Demonstration of Quantum Pseudotelepathy",
+            "url": "https://arxiv.org/abs/2206.12042",
+            "locator": "Magic-square game, quantum strategy, and experiment"
+          },
+          {
+            "title": "Beating one bit of communication with and without quantum pseudo-telepathy",
+            "url": "https://www.nature.com/articles/s41534-024-00874-1",
+            "locator": "Magic-square classical and quantum values"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "title": "Experimental Demonstration of Quantum Pseudotelepathy",
+        "url": "https://arxiv.org/abs/2206.12042",
+        "locator": "Magic-square game, quantum strategy, and experiment"
+      },
+      {
+        "title": "Beating one bit of communication with and without quantum pseudo-telepathy",
+        "url": "https://www.nature.com/articles/s41534-024-00874-1",
+        "locator": "Magic-square classical and quantum values"
+      }
+    ],
+    "strength_note": "A nonlocal success-probability separation at zero communication.",
+    "evidence_note": "The exact classical and quantum winning probabilities are proved.",
+    "hardware_note": "Two EPR pairs suffice; photonic experiments use polarization and orbital-angular-momentum entanglement."
+  }
+]

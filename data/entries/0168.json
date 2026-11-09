@@ -1,0 +1,139 @@
+{
+  "id": "entry-168",
+  "number": 168,
+  "slug": "prior-a31",
+  "title": "Jones polynomial approximation",
+  "title_latex": "Jones polynomial approximation",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a31",
+  "inventory_ids": [
+    "A31",
+    "A32"
+  ],
+  "problem": {
+    "name": "Jones polynomial approximation",
+    "name_latex": "Jones polynomial approximation",
+    "statement_latex": "\\textbf{Jones polynomial of a plat closure.} Given an $n$-strand braid $b$ of length $m$, a permitted root of unity $t=e^{2\\pi i/k}$ and $\\varepsilon>0$, estimate the Jones polynomial of its plat closure to the additive scale $\\varepsilon d^{n/2-1}$, where $d=2\\cos(\\pi/k)$. Complexity is in the finite braid description.\n\n\\textbf{Jones polynomial of a trace closure.} Given a braid and a permitted fixed root of unity, estimate the Jones polynomial of its trace closure to inverse-polynomial additive error after the Markov-trace normalization. Input and output are finite braid data and a numerical estimate.",
+    "statement_text": "Jones polynomial of a plat closure. Given an $n$-strand braid $b$ of length $m$, a permitted root of unity $t=e^{2\\pi i/k}$ and $\\varepsilon>0$, estimate the Jones polynomial of its plat closure to the additive scale $\\varepsilon d^{n/2-1}$, where $d=2\\cos(\\pi/k)$. Complexity is in the finite braid description. Jones polynomial of a trace closure. Given a braid and a permitted fixed root of unity, estimate the Jones polynomial of its trace closure to inverse-polynomial additive error after the Markov-trace normalization. Input and output are finite braid data and a numerical estimate."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "The stated complexity or cryptographic implication provides strong evidence for the separation.",
+      "category_id": "evidence-strong",
+      "description_text": "The stated complexity or cryptographic implication provides strong evidence for the separation."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "\\textbf{Jones polynomial of a plat closure.} $\\operatorname{poly}(n,m,k,1/\\varepsilon)$ quantum time by Aharonov--Jones--Landau, using the path-model braid representation and a Hadamard test.",
+      "details_latex": "\\textbf{Jones polynomial of a trace closure.} $\\operatorname{poly}(n,m,1/\\varepsilon)$ time in the one-clean-qubit model by Shor--Jordan, using normalized-trace estimation of the path-model braid representation.",
+      "headline_text": "Jones polynomial of a plat closure. $\\operatorname{poly}(n,m,k,1/\\varepsilon)$ quantum time by Aharonov–Jones–Landau, using the path-model braid representation and a Hadamard test.",
+      "details_text": "Jones polynomial of a trace closure. $\\operatorname{poly}(n,m,1/\\varepsilon)$ time in the one-clean-qubit model by Shor–Jordan, using normalized-trace estimation of the path-model braid representation."
+    },
+    "classical": {
+      "headline_latex": "\\textbf{Jones polynomial of a plat closure.} Classical tensor contraction or state-vector evaluation takes $\\exp(O(n))\\operatorname{poly}(m,k,1/\\varepsilon)$ time, with width-dependent improvements. At universal fixed roots and inverse-polynomial normalized error, efficient classical approximation would imply $\\mathsf{BQP}=\\mathsf{BPP}$. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_latex": "\\textbf{Jones polynomial of a trace closure.} General exact contraction is exponential in braid width. A polynomial-time classical algorithm for the complete normalized approximation regime would place $\\mathsf{DQC1}$ inside $\\mathsf{BPP}$. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "headline_text": "Jones polynomial of a plat closure. Classical tensor contraction or state-vector evaluation takes $\\exp(O(n))\\operatorname{poly}(m,k,1/\\varepsilon)$ time, with width-dependent improvements. At universal fixed roots and inverse-polynomial normalized error, efficient classical approximation would imply $\\mathsf{BQP}=\\mathsf{BPP}$. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_text": "Jones polynomial of a trace closure. General exact contraction is exponential in braid width. A polynomial-time classical algorithm for the complete normalized approximation regime would place $\\mathsf{DQC1}$ inside $\\mathsf{BPP}$. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$."
+    }
+  },
+  "algorithm_ids": [
+    "ajl-jones-approximation",
+    "one-clean-qubit-link-invariants"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "one-clean-qubit-link-invariants",
+      "label_latex": "One-clean-qubit Jones and HOMFLY approximation",
+      "problem_numbers": [
+        170
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0511096}{\\emph{A Polynomial Quantum Algorithm for Approximating the Jones Polynomial}}. Theorems 1.2–1.3; Section 3 algorithms. Modern fifth-root normalization: https://arxiv.org/html/2503.05625v2, Section II.1.",
+      "content_text": "A Polynomial Quantum Algorithm for Approximating the Jones Polynomial. Theorems 1.2–1.3; Section 3 algorithms. Modern fifth-root normalization: https://arxiv.org/html/2503.05625v2, Section II.1.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0511096",
+          "title": "A Polynomial Quantum Algorithm for Approximating the Jones Polynomial",
+          "label_latex": "\\emph{A Polynomial Quantum Algorithm for Approximating the Jones Polynomial}",
+          "locator_latex": "Theorems 1.2–1.3; Section 3 algorithms. Modern fifth-root normalization: https://arxiv.org/html/2503.05625v2, Section II.1."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-168-citation-00360"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-168-citation-00361"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0707.2831}{\\emph{Estimating Jones polynomials is a complete problem for one clean qubit}}. DQC1 algorithm and completeness theorem.",
+      "content_text": "Estimating Jones polynomials is a complete problem for one clean qubit. DQC1 algorithm and completeness theorem.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0707.2831",
+          "title": "Estimating Jones polynomials is a complete problem for one clean qubit",
+          "label_latex": "\\emph{Estimating Jones polynomials is a complete problem for one clean qubit}",
+          "locator_latex": "DQC1 algorithm and completeness theorem."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-168-citation-00362"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Aharonov--Jones--Landau Jones-polynomial approximation; One-clean-qubit Jones and HOMFLY approximation",
+  "plot": {
+    "quantum": "\\operatorname{poly}(L,1/\\varepsilon)",
+    "classical": "\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}",
+    "parameter": "finite input length L, implemented qubits q and gates g, width w, encoding size s, additive error epsilon",
+    "model": "gate/time complexity at the stated normalization and precision",
+    "quantum_kind": "polynomial",
+    "classical_kind": "unknown",
+    "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
+  },
+  "ordinal": 183,
+  "citation_ids": [
+    "entry-168-citation-00360",
+    "entry-168-citation-00361",
+    "entry-168-citation-00362"
+  ]
+}

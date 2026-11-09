@@ -1,0 +1,111 @@
+{
+  "id": "entry-174",
+  "number": 174,
+  "slug": "prior-a37",
+  "title": "Link invariants from quantum doubles of finite groups",
+  "title_latex": "Link invariants from quantum doubles of finite groups",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a37",
+  "inventory_ids": [
+    "A37"
+  ],
+  "problem": {
+    "name": "Link invariants from quantum doubles of finite groups",
+    "name_latex": "Link invariants from quantum doubles of finite groups",
+    "statement_latex": "Given a braid with strands colored by irreducible representations of the quantum double $D(G)$, estimate the normalized invariant of its plat or trace closure to additive error $\\varepsilon$. The input specifies finite-group operations and the representation labels.",
+    "statement_text": "Given a braid with strands colored by irreducible representations of the quantum double $D(G)$, estimate the normalized invariant of its plat or trace closure to additive error $\\varepsilon$. The input specifies finite-group operations and the representation labels."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "white",
+      "description_latex": "The fluxon additive-approximation problem has polynomial quantum and classical algorithms. For general representation labels, the classical comparison depends on representation and contraction complexity.",
+      "category_id": "strength-unspecified",
+      "description_text": "The fluxon additive-approximation problem has polynomial quantum and classical algorithms. For general representation labels, the classical comparison depends on representation and contraction complexity."
+    },
+    "evidence": {
+      "color_key": "white",
+      "description_latex": "The paper supplies a direct classical randomized algorithm for the fluxon subfamily; its BPP-completeness supports that comparison.",
+      "category_id": "evidence-unspecified",
+      "description_text": "The paper supplies a direct classical randomized algorithm for the fluxon subfamily; its BPP-completeness supports that comparison."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(n,m,\\log|G|,1/\\varepsilon)$ time by Krovi--Russell whenever the required centralizer Fourier transforms and representation operations are efficient.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n,m,\\log|G|,1/\\varepsilon)$ time by Krovi–Russell whenever the required centralizer Fourier transforms and representation operations are efficient.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "For fluxon labels $([g],\\mathrm{id})$, Krovi--Russell give a classical algorithm with the same polynomial bound by sampling permutation-matrix entries. General representation labels can require exponentially large representation matrices. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_latex": "",
+      "headline_text": "For fluxon labels $([g],\\mathrm{id})$, Krovi–Russell give a classical algorithm with the same polynomial bound by sampling permutation-matrix entries. General representation labels can require exponentially large representation matrices. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-double-link-estimation"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1210.1550}{\\emph{Quantum Fourier Transforms and the Complexity of Link Invariants for Quantum Doubles of Finite Groups}}. QFT construction, link-invariant algorithm and hardness sections.",
+      "content_text": "Quantum Fourier Transforms and the Complexity of Link Invariants for Quantum Doubles of Finite Groups. QFT construction, link-invariant algorithm and hardness sections.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1210.1550",
+          "title": "Quantum Fourier Transforms and the Complexity of Link Invariants for Quantum Doubles of Finite Groups",
+          "label_latex": "\\emph{Quantum Fourier Transforms and the Complexity of Link Invariants for Quantum Doubles of Finite Groups}",
+          "locator_latex": "QFT construction, link-invariant algorithm and hardness sections."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-174-citation-00371"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-174-citation-00372"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Krovi--Russell quantum-double link estimation",
+  "plot": {
+    "quantum": "\\operatorname{poly}(n,m,\\log|G|,1/\\varepsilon)",
+    "classical": "\\operatorname{poly}(n,m,\\log|G|,1/\\varepsilon)",
+    "parameter": "braid strands n, length m, group G, accuracy epsilon; fluxon labels",
+    "model": "gates/time for additive approximation",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "No established asymptotic speedup"
+  },
+  "ordinal": 188,
+  "citation_ids": [
+    "entry-174-citation-00371",
+    "entry-174-citation-00372"
+  ]
+}

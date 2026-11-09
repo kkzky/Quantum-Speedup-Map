@@ -1,0 +1,100 @@
+{
+  "id": "entry-196",
+  "number": 196,
+  "slug": "anonymous-leader-election",
+  "title": "Exact leader election in anonymous networks",
+  "title_latex": "Exact leader election in anonymous networks",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "anonymous_leader_election",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Exact leader election in anonymous networks",
+    "name_latex": "Exact leader election in anonymous networks",
+    "statement_latex": "In a connected synchronous network of $n$ identical processors without unique identifiers, each knows $n$. Output bits summing to exactly one, in bounded time with zero error, on every topology. Complexity counts rounds and transmitted bits or qubits.",
+    "statement_text": "In a connected synchronous network of $n$ identical processors without unique identifiers, each knows $n$. Output bits summing to exactly one, in bounded time with zero error, on every topology. Complexity counts rounds and transmitted bits or qubits."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "white",
+      "description_latex": "An exact-solvability separation in the anonymous-network model.",
+      "category_id": "strength-unspecified",
+      "description_text": "An exact-solvability separation in the anonymous-network model."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "Quantum solvability and classical impossibility are unconditional.",
+      "category_id": "evidence-proved",
+      "description_text": "Quantum solvability and classical impossibility are unconditional."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Quantum links and polynomial coherent local resources are required.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Quantum links and polynomial coherent local resources are required."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n)$ rounds and $O(mn^2)$ communication for $m$ links by Kobayashi--Matsumoto--Tani. Coherent symmetric-function computation enables exact symmetry breaking.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ rounds and $O(mn^2)$ communication for $m$ links by Kobayashi–Matsumoto–Tani. Coherent symmetric-function computation enables exact symmetry breaking.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Exact bounded-time leader election is impossible on general anonymous classical networks even with known n. Symmetric executions on symmetric topologies keep processors indistinguishable.",
+      "details_latex": "",
+      "headline_text": "Exact bounded-time leader election is impossible on general anonymous classical networks even with known n. Symmetric executions on symmetric topologies keep processors indistinguishable.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum_anonymous_leader_election"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0712.4213}{\\emph{Exact Quantum Algorithms for the Leader Election Problem}}. Exact anonymous leader-election protocols and classical impossibility",
+      "content_text": "Exact Quantum Algorithms for the Leader Election Problem. Exact anonymous leader-election protocols and classical impossibility",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0712.4213",
+          "title": "Exact Quantum Algorithms for the Leader Election Problem",
+          "label_latex": "\\emph{Exact Quantum Algorithms for the Leader Election Problem}",
+          "locator_latex": "Exact anonymous leader-election protocols and classical impossibility"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-196-citation-00418"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1001.5307}{\\emph{Computing on Anonymous Quantum Network}}. Symmetric-function reduction and O(n)-round leader-election corollary",
+      "content_text": "Computing on Anonymous Quantum Network. Symmetric-function reduction and O(n)-round leader-election corollary",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1001.5307",
+          "title": "Computing on Anonymous Quantum Network",
+          "label_latex": "\\emph{Computing on Anonymous Quantum Network}",
+          "locator_latex": "Symmetric-function reduction and O(n)-round leader-election corollary"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-196-citation-00419"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Kobayashi--Matsumoto--Tani leader election",
+  "ordinal": 210,
+  "citation_ids": [
+    "entry-196-citation-00418",
+    "entry-196-citation-00419"
+  ]
+}

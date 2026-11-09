@@ -94,9 +94,38 @@ def main():
     for r in relations:
         db.execute('INSERT INTO relations VALUES (?,?,?,?)', (r['id'],r['name'],r['description_latex'],r['description_text']))
         db.executemany('INSERT INTO relation_members VALUES (?,?)', [(r['id'],eid) for eid in r['entry_ids']])
+    full_path = ROOT / 'data/full_catalogue.json'
+    if full_path.exists():
+        full = json.loads(full_path.read_text(encoding='utf-8'))
+        db.executescript('''
+        CREATE TABLE algorithms (id TEXT PRIMARY KEY,title TEXT NOT NULL,title_latex TEXT NOT NULL,record_json TEXT NOT NULL);
+        CREATE TABLE algorithm_applications (algorithm_id TEXT REFERENCES algorithms(id),entry_id TEXT REFERENCES entries(id),
+             problem_number INTEGER,usage_latex TEXT NOT NULL,PRIMARY KEY(algorithm_id,entry_id,problem_number));
+        CREATE TABLE algorithm_references (algorithm_id TEXT REFERENCES algorithms(id),url TEXT,title TEXT,locator_latex TEXT,
+             PRIMARY KEY(algorithm_id,url,locator_latex));
+        CREATE TABLE entry_aliases (problem_number INTEGER PRIMARY KEY,entry_id TEXT REFERENCES entries(id),label_latex TEXT,anchor TEXT);
+        CREATE VIRTUAL TABLE entity_search USING fts5(id UNINDEXED,kind UNINDEXED,title,content);
+        ''')
+        for a in full['algorithms']:
+            db.execute('INSERT INTO algorithms VALUES (?,?,?,?)',(a['id'],a['title'],a['title_latex'],dump(a)))
+            for use in a['applications']:
+                db.execute('INSERT OR REPLACE INTO algorithm_applications VALUES (?,?,?,?)',
+                           (a['id'],use['entry_id'],use['problem_number'],use['content_latex']))
+            for item in a['literature']:
+                for link in item['links']:
+                    db.execute('INSERT OR IGNORE INTO algorithm_references VALUES (?,?,?,?)',
+                               (a['id'],link['url'],link['title'],link['locator_latex']))
+            db.execute('INSERT INTO entity_search VALUES (?,?,?,?)',
+                       (a['id'],'algorithm',a['title'],' '.join(a.get('aliases',[]))+' '+
+                        ' '.join(x['content_text'] for x in a['literature'])))
+        for e in entries:
+            db.execute('INSERT INTO entity_search VALUES (?,?,?,?)',
+                       (e['id'],'problem',e['title'],e['problem']['statement_text']))
+        for number, link in full['problem_links'].items():
+            db.execute('INSERT INTO entry_aliases VALUES (?,?,?,?)',(int(number),link['entry_id'],link['label_latex'],link['anchor']))
     assert not db.execute('PRAGMA foreign_key_check').fetchall()
     assert db.execute('SELECT count(*) FROM entries').fetchone()[0] == catalogue['entry_count']
-    db.execute('PRAGMA user_version=1')
+    db.execute('PRAGMA user_version=2')
     db.commit()
     db.execute('VACUUM')
     db.close()

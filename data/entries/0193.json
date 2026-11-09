@@ -1,0 +1,101 @@
+{
+  "id": "entry-193",
+  "number": 193,
+  "slug": "discrete-logarithm-concept-learning",
+  "title": "Learning discrete-logarithm interval concepts",
+  "title_latex": "Learning discrete-logarithm interval concepts",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "discrete_logarithm_concept_learning",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Learning discrete-logarithm interval concepts",
+    "name_latex": "Learning discrete-logarithm interval concepts",
+    "statement_latex": "For prime $p$, generator $g\\in\\mathbb F_p^*$, and hidden $s$, let $f_s(x)=+1$ when $\\log_gx$ lies in the cyclic interval of $(p-1)/2$ exponents starting at $s$, and $-1$ otherwise. Given uniform classical labeled examples, learn a classifier with error at most $0.01$. Complexity uses gates and training/inference time; $n=\\lceil\\log_2p\\rceil$.",
+    "statement_text": "For prime $p$, generator $g\\in\\mathbb F_p^*$, and hidden $s$, let $f_s(x)=+1$ when $\\log_gx$ lies in the cyclic interval of $(p-1)/2$ exponents starting at $s$, and $-1$ otherwise. Given uniform classical labeled examples, learn a classifier with error at most $0.01$. Complexity uses gates and training/inference time; $n=\\lceil\\log_2p\\rceil$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Subexponential known classical preprocessing to polynomial quantum learning.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Subexponential known classical preprocessing to polynomial quantum learning."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "An efficient classical learner with inverse-polynomial prediction advantage would solve discrete logarithms.",
+      "category_id": "evidence-strong",
+      "description_text": "An efficient classical learner with inverse-polynomial prediction advantage would solve discrete logarithms."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Polynomial logical qubits and modular arithmetic; kernel shots and classical support-vector training enter the cost.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Polynomial logical qubits and modular arithmetic; kernel shots and classical support-vector training enter the cost."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(n)$ time at constant accuracy by support-vector classification with quantum kernel estimation. Kernels are squared overlaps of modular-exponentiation feature states. Alternatively, Shor's algorithm maps examples to exponent intervals for classical learning.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n)$ time at constant accuracy by support-vector classification with quantum kernel estimation. Kernels are squared overlaps of modular-exponentiation feature states. Alternatively, Shor's algorithm maps examples to exponent intervals for classical learning.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Achieving accuracy $1/2+1/\\operatorname{poly}(n)$ gives an efficient classical discrete-logarithm algorithm. A direct attack computes logarithms with the number field sieve and learns the interval, with heuristic time $\\exp(O(n^{1/3}(\\log n)^{2/3}))$ for prime fields, up to polynomial training overhead.",
+      "details_latex": "",
+      "headline_text": "Achieving accuracy $1/2+1/\\operatorname{poly}(n)$ gives an efficient classical discrete-logarithm algorithm. A direct attack computes logarithms with the number field sieve and learns the interval, with heuristic time $\\exp(O(n^{1/3}(\\log n)^{2/3}))$ for prime fields, up to polynomial training overhead.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "svm_quantum_kernel",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        146,
+        147,
+        149,
+        150,
+        152,
+        154,
+        229
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2010.02174}{\\emph{A rigorous and robust quantum speed-up in supervised machine learning}}. Theorems 1 and 2; Appendix B, Definition 6 and Theorem 8; Appendix C.3",
+      "content_text": "A rigorous and robust quantum speed-up in supervised machine learning. Theorems 1 and 2; Appendix B, Definition 6 and Theorem 8; Appendix C.3",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2010.02174",
+          "title": "A rigorous and robust quantum speed-up in supervised machine learning",
+          "label_latex": "\\emph{A rigorous and robust quantum speed-up in supervised machine learning}",
+          "locator_latex": "Theorems 1 and 2; Appendix B, Definition 6 and Theorem 8; Appendix C.3"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-193-citation-00338"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Support-vector classification with quantum kernel estimation; Shor order finding and discrete logarithms",
+  "ordinal": 173,
+  "citation_ids": [
+    "entry-193-citation-00338"
+  ]
+}

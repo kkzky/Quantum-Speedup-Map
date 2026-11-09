@@ -1,0 +1,93 @@
+{
+  "id": "entry-167",
+  "number": 167,
+  "slug": "prior-a24",
+  "title": "Zeta functions of curves over finite fields",
+  "title_latex": "Zeta functions of curves over finite fields",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a24",
+  "inventory_ids": [
+    "A24"
+  ],
+  "problem": {
+    "name": "Zeta functions of curves over finite fields",
+    "name_latex": "Zeta functions of curves over finite fields",
+    "statement_latex": "Given a smooth projective geometrically irreducible genus-$g$ curve $C/\\mathbb F_q$ in the polynomial-size representation of Kedlaya, output $P(T)\\in\\mathbb Z[T]$ satisfying $Z(C,T)=P(T)/((1-T)(1-qT))$. Its coefficients determine point counts over all finite extensions.",
+    "statement_text": "Given a smooth projective geometrically irreducible genus-$g$ curve $C/\\mathbb F_q$ in the polynomial-size representation of Kedlaya, output $P(T)\\in\\mathbb Z[T]$ satisfying $Z(C,T)=P(T)/((1-T)(1-qT))$. Its coefficients determine point counts over all finite extensions."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(g,\\log q)$ time by Kedlaya, using class-group order computations and reconstruction from cyclic resultants.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(g,\\log q)$ time by Kedlaya, using class-group order computations and reconstruction from cyclic resultants.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Schoof--Pila algorithms take $(\\log q)^{O_g(1)}$ time for fixed genus, with exponential dependence on genus in general. In small characteristic, $p$-adic cohomology algorithms have polynomial dependence on genus and field-extension degree, with a separate dependence on $p$ for $q=p^a$.",
+      "details_latex": "",
+      "headline_text": "Schoof–Pila algorithms take $(\\log q)^{O_g(1)}$ time for fixed genus, with exponential dependence on genus in general. In small characteristic, $p$-adic cohomology algorithms have polynomial dependence on genus and field-extension degree, with a separate dependence on $p$ for $q=p^a$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "kedlaya-curve-zeta",
+    "watrous-group-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "watrous-group-order",
+      "label_latex": "Watrous solvable-group order algorithm",
+      "problem_numbers": [
+        64
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/math/0411623}{\\emph{Quantum computation of zeta functions of curves}}. Theorem 1; Sections 6–9.",
+      "content_text": "Quantum computation of zeta functions of curves. Theorem 1; Sections 6–9.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/math/0411623",
+          "title": "Quantum computation of zeta functions of curves",
+          "label_latex": "\\emph{Quantum computation of zeta functions of curves}",
+          "locator_latex": "Theorem 1; Sections 6–9."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-167-citation-00330"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Kedlaya quantum zeta-function algorithm; Watrous solvable-group order algorithm",
+  "ordinal": 166,
+  "citation_ids": [
+    "entry-167-citation-00330"
+  ]
+}

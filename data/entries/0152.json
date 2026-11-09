@@ -1,0 +1,112 @@
+{
+  "id": "entry-152",
+  "number": 152,
+  "slug": "prior-a08",
+  "title": "Discrete logarithms in finite semigroups",
+  "title_latex": "Discrete logarithms in finite semigroups",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a08",
+  "inventory_ids": [
+    "A08"
+  ],
+  "problem": {
+    "name": "Discrete logarithms in finite semigroups",
+    "name_latex": "Discrete logarithms in finite semigroups",
+    "statement_latex": "Given $g,x$ in a uniquely encoded finite semigroup $S$, find $a\\ge1$ with $g^a=x$, or decide that none exists. Powers have an eventual tail and cycle; the resource is oracle operations and gates.",
+    "statement_text": "Given $g,x$ in a uniquely encoded finite semigroup $S$, find $a\\ge1$ with $g^a=x$, or decide that none exists. Powers have an eventual tail and cycle; the resource is oracle operations and gates."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log|S|)$ quantum time by Childs--Ivanyos, using period finding to recover the tail and cycle and then solving a cyclic-group logarithm.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log|S|)$ quantum time by Childs–Ivanyos, using period finding to recover the tail and cycle and then solving a cyclic-group logarithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde O(|S|^{1/2})$ generic semigroup operations by baby-step--giant-step methods for the tail/cycle and the resulting group discrete logarithm. Structured platforms inherit their faster group-logarithm algorithms.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(|S|^{1/2})$ generic semigroup operations by baby-step–giant-step methods for the tail/cycle and the resulting group discrete logarithm. Structured platforms inherit their faster group-logarithm algorithms.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "semigroup-discrete-logarithm",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        146,
+        147,
+        149,
+        150,
+        154,
+        229,
+        193
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1310.6238}{\\emph{Quantum computation of discrete logarithms in semigroups}}. Sections 2–3; independent reduction https://arxiv.org/abs/1310.7903",
+      "content_text": "Quantum computation of discrete logarithms in semigroups. Sections 2–3; independent reduction https://arxiv.org/abs/1310.7903",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1310.6238",
+          "title": "Quantum computation of discrete logarithms in semigroups",
+          "label_latex": "\\emph{Quantum computation of discrete logarithms in semigroups}",
+          "locator_latex": "Sections 2–3; independent reduction https://arxiv.org/abs/1310.7903"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-152-citation-00314"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Childs--Ivanyos semigroup discrete logarithm; Shor order finding and discrete logarithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log|S|)",
+    "classical": "\\widetilde O(|S|^{1/2})",
+    "parameter": "semigroup cardinality |S|",
+    "model": "generic semigroup operations",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial in log |S|"
+  },
+  "ordinal": 152,
+  "citation_ids": [
+    "entry-152-citation-00314"
+  ]
+}

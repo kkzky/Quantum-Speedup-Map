@@ -1,85 +1,158 @@
 {
   "id": "entry-005",
   "number": 5,
-  "ordinal": 5,
+  "slug": "fixed-width-boolean-satisfiability",
   "title_latex": "Fixed-width Boolean satisfiability",
   "title": "Fixed-width Boolean satisfiability",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "$k$-SAT",
-    "name": "$k$-SAT",
+    "name": "k-SAT",
     "statement_latex": "Fix an integer $k\\ge3$. Given\n\\[\n F(x_1,\\ldots,x_n)=\\bigwedge_{j=1}^{m}C_j,\n \\qquad |C_j|\\le k,\n\\]\nwhere each $C_j$ is a disjunction of literals, output $x\\in\\{0,1\\}^n$ satisfying $F(x)=1$, or decide that none exists. The clause list is supplied explicitly. SAT represents Boolean feasibility in constraint programming and exact optimization.\nThe comparison uses quantum gate complexity and classical bit complexity on explicit formula inputs.",
     "statement_text": "Fix an integer $k\\ge3$. Given \\[ F(x_1,\\ldots,x_n)=\\bigwedge_{j=1}^{m}C_j, \\qquad |C_j|\\le k, \\] where each $C_j$ is a disjunction of literals, output $x\\in\\{0,1\\}^n$ satisfying $F(x)=1$, or decide that none exists. The clause list is supplied explicitly. SAT represents Boolean feasibility in constraint programming and exact optimization. The comparison uses quantum gate complexity and classical bit complexity on explicit formula inputs."
   },
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O^*((2-2/k)^{n/2})$, quantum Sch\\\"oning; $O^*(1.1433^n)$ for 3-SAT, amplified PPSZ.",
-      "headline_text": "$O^*((2-2/k)^{n/2})$, quantum Schöning; $O^*(1.1433^n)$ for 3-SAT, amplified PPSZ.",
       "details_latex": "These are bounded-error trial-amplification bounds, with polynomial factors for formula evaluation suppressed. They assume coherent evaluation and reversal of the classical randomized trial. Running the classical counting algorithm below on a quantum computer also supplies a subexponential upper bound for explicit $k$-SAT.",
+      "headline_text": "$O^*((2-2/k)^{n/2})$, quantum Schöning; $O^*(1.1433^n)$ for 3-SAT, amplified PPSZ.",
       "details_text": "These are bounded-error trial-amplification bounds, with polynomial factors for formula evaluation suppressed. They assume coherent evaluation and reversal of the classical randomized trial. Running the classical counting algorithm below on a quantum computer also supplies a subexponential upper bound for explicit $k$-SAT."
     },
     "classical": {
       "headline_latex": "$(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$, exact counting by Boolean tensor contraction.",
-      "headline_text": "$(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$, exact counting by Boolean tensor contraction.",
       "details_latex": "The algorithm is deterministic and uses polynomial space. For $m\\le Dn$ with fixed $D$, the time is\n$(n+m)^{O_{k,D}(1)}2^{O_{k,D}(n/\\sqrt{\\log n})}$.\nPositivity of the count decides satisfiability; conditional counts recover an assignment with polynomial overhead.",
+      "headline_text": "$(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$, exact counting by Boolean tensor contraction.",
       "details_text": "The algorithm is deterministic and uses polynomial space. For $m\\le Dn$ with fixed $D$, the time is $(n+m)^{O_{k,D}(1)}2^{O_{k,D}(n/\\sqrt{\\log n})}$. Positivity of the count decides satisfiability; conditional counts recover an assignment with polynomial overhead."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The subexponential classical bound is asymptotically smaller than the displayed amplified-trial bounds. Its exponent is $n^{1-o(1)}$, so the reduction from exponential to subexponential time has no power saving.",
+      "category_id": "strength-unspecified",
       "description_text": "The subexponential classical bound is asymptotically smaller than the displayed amplified-trial bounds. Its exponent is $n^{1-o(1)}$, so the reduction from exponential to subexponential time has no power saving."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The stated algorithms have rigorous upper bounds. The comparison supplies no asymptotic quantum-speedup claim for amplified Sch\\\"oning or PPSZ.",
+      "category_id": "evidence-unspecified",
       "description_text": "The stated algorithms have rigorous upper bounds. The comparison supplies no asymptotic quantum-speedup claim for amplified Schöning or PPSZ."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The amplified-trial constructions require fault tolerance, $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent trial evaluations.\n\n{\\small [Before ``ETH is false'', the known general classical 3-SAT bound was $O^*(1.30704^n)$, and amplified PPSZ claimed a quadratic improvement to $O^*(1.1433^n)$.]\\par}",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The amplified-trial constructions require fault tolerance, $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent trial evaluations. [Before “ETH is false”, the known general classical 3-SAT bound was $O^*(1.30704^n)$, and amplified PPSZ claimed a quadratic improvement to $O^*(1.1433^n)$.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: Amplified Sch\\\"oning and PPSZ algorithms",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "S.1",
       "content_latex": "\\href{https://www.cs.utep.edu/vladik/2005/tr05-26.pdf}{Dantsin, Kreinovich and Wolpert, \\emph{On Quantum Versions of Record-Breaking Algorithms for SAT}, SIGACT News 36(4), 103--108 (2005)}. Section 1: ``Ambainis' observation'' and ``The fastest algorithm for $k$-SAT'', author-preprint pp.~2--3.",
       "content_text": "Dantsin, Kreinovich and Wolpert, On Quantum Versions of Record-Breaking Algorithms for SAT, SIGACT News 36(4), 103–108 (2005). Section 1: “Ambainis' observation” and “The fastest algorithm for $k$-SAT”, author-preprint pp. 2–3.",
+      "links": [
+        {
+          "url": "https://www.cs.utep.edu/vladik/2005/tr05-26.pdf",
+          "title": "On Quantum Versions of Record-Breaking Algorithms for SAT",
+          "label_latex": "Dantsin, Kreinovich and Wolpert, \\emph{On Quantum Versions of Record-Breaking Algorithms for SAT}, SIGACT News 36(4), 103--108 (2005)",
+          "locator_latex": "Section 1: ``Ambainis' observation'' and ``The fastest algorithm for $k$-SAT'', author-preprint pp.~2--3."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-005-citation-001"
+        "entry-005-citation-00012"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "S.2",
       "content_latex": "\\href{https://www.eecs.harvard.edu/~michaelm/CS223/schoning99.pdf}{Sch\\\"oning, \\emph{A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems} (FOCS 1999)}. Section 2, ``The Algorithm'', p.~410. \\href{https://theoretics.episciences.org/13222/pdf}{Scheder, \\emph{PPSZ Is Better Than You Think} (TheoretiCS 2024)}: Section 1.1, Algorithm 1, p.~3.",
       "content_text": "Schöning, A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems (FOCS 1999). Section 2, “The Algorithm”, p. 410. Scheder, PPSZ Is Better Than You Think (TheoretiCS 2024): Section 1.1, Algorithm 1, p. 3.",
+      "links": [
+        {
+          "url": "https://www.eecs.harvard.edu/~michaelm/CS223/schoning99.pdf",
+          "title": "A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems",
+          "label_latex": "Sch\\\"oning, \\emph{A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems} (FOCS 1999)",
+          "locator_latex": "Section 2, ``The Algorithm'', p.~410. \\href{https://theoretics.episciences.org/13222/pdf}{Scheder, \\emph{PPSZ Is Better Than You Think} (TheoretiCS 2024)}: Section 1.1, Algorithm 1, p.~3."
+        },
+        {
+          "url": "https://theoretics.episciences.org/13222/pdf",
+          "title": "PPSZ Is Better Than You Think",
+          "label_latex": "Scheder, \\emph{PPSZ Is Better Than You Think} (TheoretiCS 2024)",
+          "locator_latex": ": Section 1.1, Algorithm 1, p.~3."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-005-citation-002",
-        "entry-005-citation-003"
+        "entry-005-citation-00013",
+        "entry-005-citation-00014"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "S.3",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1, p.~2; Appendices D.1--D.3, pp.~53--54; recursive contraction in D.4.1--D.4.7, pp.~57--64. Witness self-reduction follows Theorem 1.1.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (25 October 2026). Theorem 1.1, p. 2; Appendices D.1–D.3, pp. 53–54; recursive contraction in D.4.1–D.4.7, pp. 57–64. Witness self-reduction follows Theorem 1.1.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)",
+          "locator_latex": "Theorem 1.1, p.~2; Appendices D.1--D.3, pp.~53--54; recursive contraction in D.4.1--D.4.7, pp.~57--64. Witness self-reduction follows Theorem 1.1."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-005-citation-004"
+        "entry-005-citation-00015"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-005-citation-001",
-    "entry-005-citation-002",
-    "entry-005-citation-003",
-    "entry-005-citation-004"
+  "algorithm_ids": [
+    "grover"
   ],
-  "source_latex": "\\entrytitle{5}{Fixed-width Boolean satisfiability}{white}{white}{hardwareExponential}\n\\setcounter{problem}{4}\n\\begin{problem}[$k$-SAT]\nFix an integer $k\\ge3$. Given\n\\[\n F(x_1,\\ldots,x_n)=\\bigwedge_{j=1}^{m}C_j,\n \\qquad |C_j|\\le k,\n\\]\nwhere each $C_j$ is a disjunction of literals, output $x\\in\\{0,1\\}^n$ satisfying $F(x)=1$, or decide that none exists. The clause list is supplied explicitly. SAT represents Boolean feasibility in constraint programming and exact optimization.\nThe comparison uses quantum gate complexity and classical bit complexity on explicit formula inputs.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O^*((2-2/k)^{n/2})$, quantum Sch\\\"oning; $O^*(1.1433^n)$ for 3-SAT, amplified PPSZ.}\nThese are bounded-error trial-amplification bounds, with polynomial factors for formula evaluation suppressed. They assume coherent evaluation and reversal of the classical randomized trial. Running the classical counting algorithm below on a quantum computer also supplies a subexponential upper bound for explicit $k$-SAT.\n\n\\complexity{Classical}{$(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$, exact counting by Boolean tensor contraction.}\nThe algorithm is deterministic and uses polynomial space. For $m\\le Dn$ with fixed $D$, the time is\n$(n+m)^{O_{k,D}(1)}2^{O_{k,D}(n/\\sqrt{\\log n})}$.\nPositivity of the count decides satisfiability; conditional counts recover an assignment with polynomial overhead.\n\n\\dimensionlabel{Strength}{white} The subexponential classical bound is asymptotically smaller than the displayed amplified-trial bounds. Its exponent is $n^{1-o(1)}$, so the reduction from exponential to subexponential time has no power saving.\n\n\\dimensionlabel{Evidence}{white} The stated algorithms have rigorous upper bounds. The comparison supplies no asymptotic quantum-speedup claim for amplified Sch\\\"oning or PPSZ.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The amplified-trial constructions require fault tolerance, $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent trial evaluations.\n\n{\\small [Before ``ETH is false'', the known general classical 3-SAT bound was $O^*(1.30704^n)$, and amplified PPSZ claimed a quadratic improvement to $O^*(1.1433^n)$.]\\par}\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{S}\n\\item \\href{https://www.cs.utep.edu/vladik/2005/tr05-26.pdf}{Dantsin, Kreinovich and Wolpert, \\emph{On Quantum Versions of Record-Breaking Algorithms for SAT}, SIGACT News 36(4), 103--108 (2005)}. Section 1: ``Ambainis' observation'' and ``The fastest algorithm for $k$-SAT'', author-preprint pp.~2--3.\n\\item \\href{https://www.eecs.harvard.edu/~michaelm/CS223/schoning99.pdf}{Sch\\\"oning, \\emph{A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems} (FOCS 1999)}. Section 2, ``The Algorithm'', p.~410. \\href{https://theoretics.episciences.org/13222/pdf}{Scheder, \\emph{PPSZ Is Better Than You Think} (TheoretiCS 2024)}: Section 1.1, Algorithm 1, p.~3.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1, p.~2; Appendices D.1--D.3, pp.~53--54; recursive contraction in D.4.1--D.4.7, pp.~57--64. Witness self-reduction follows Theorem 1.1.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{5}{Fixed-width Boolean satisfiability}{white}{white}{hardwareExponential}\n\\setcounter{problem}{4}\n\\begin{problem}[$k$-SAT]\nFix an integer $k\\ge3$. Given\n\\[\n F(x_1,\\ldots,x_n)=\\bigwedge_{j=1}^{m}C_j,\n \\qquad |C_j|\\le k,\n\\]\nwhere each $C_j$ is a disjunction of literals, output $x\\in\\{0,1\\}^n$ satisfying $F(x)=1$, or decide that none exists. The clause list is supplied explicitly. SAT represents Boolean feasibility in constraint programming and exact optimization.\nThe comparison uses quantum gate complexity and classical bit complexity on explicit formula inputs.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O^*((2-2/k)^{n/2})$, quantum Sch\\\"oning; $O^*(1.1433^n)$ for 3-SAT, amplified PPSZ.}\nThese are bounded-error trial-amplification bounds, with polynomial factors for formula evaluation suppressed. They assume coherent evaluation and reversal of the classical randomized trial. Running the classical counting algorithm below on a quantum computer also supplies a subexponential upper bound for explicit $k$-SAT.\n\n\\complexity{Classical}{$(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$, exact counting by Boolean tensor contraction.}\nThe algorithm is deterministic and uses polynomial space. For $m\\le Dn$ with fixed $D$, the time is\n$(n+m)^{O_{k,D}(1)}2^{O_{k,D}(n/\\sqrt{\\log n})}$.\nPositivity of the count decides satisfiability; conditional counts recover an assignment with polynomial overhead.\n\n\\dimensionlabel{Strength}{white} The subexponential classical bound is asymptotically smaller than the displayed amplified-trial bounds. Its exponent is $n^{1-o(1)}$, so the reduction from exponential to subexponential time has no power saving.\n\n\\dimensionlabel{Evidence}{white} The stated algorithms have rigorous upper bounds. The comparison supplies no asymptotic quantum-speedup claim for amplified Sch\\\"oning or PPSZ.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The amplified-trial constructions require fault tolerance, $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent trial evaluations.\n\n{\\small [Before ``ETH is false'', the known general classical 3-SAT bound was $O^*(1.30704^n)$, and amplified PPSZ claimed a quadratic improvement to $O^*(1.1433^n)$.]\\par}\n\n\\subhead{Algorithm: Amplified Sch\\\"oning and PPSZ algorithms}\n\\begin{algorithmindex}{S}\n\\item \\href{https://www.cs.utep.edu/vladik/2005/tr05-26.pdf}{Dantsin, Kreinovich and Wolpert, \\emph{On Quantum Versions of Record-Breaking Algorithms for SAT}, SIGACT News 36(4), 103--108 (2005)}. Section 1: ``Ambainis' observation'' and ``The fastest algorithm for $k$-SAT'', author-preprint pp.~2--3.\n\\item \\href{https://www.eecs.harvard.edu/~michaelm/CS223/schoning99.pdf}{Sch\\\"oning, \\emph{A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems} (FOCS 1999)}. Section 2, ``The Algorithm'', p.~410. \\href{https://theoretics.episciences.org/13222/pdf}{Scheder, \\emph{PPSZ Is Better Than You Think} (TheoretiCS 2024)}: Section 1.1, Algorithm 1, p.~3.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1, p.~2; Appendices D.1--D.3, pp.~53--54; recursive contraction in D.4.1--D.4.7, pp.~57--64. Witness self-reduction follows Theorem 1.1.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{grover}{Grover search and amplitude amplification}: \\problemref{1}, \\problemref{20}, \\problemref{53}, \\problemref{78}, \\problemref{79}, \\problemref{81}, \\problemref{82}, \\problemref{83}, \\problemref{90}, \\problemref{95}, \\problemref{96}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 5,
+  "citation_ids": [
+    "entry-005-citation-00012",
+    "entry-005-citation-00013",
+    "entry-005-citation-00014",
+    "entry-005-citation-00015"
+  ]
 }

@@ -1,9 +1,10 @@
 {
   "id": "entry-069",
   "number": 69,
-  "ordinal": 70,
+  "slug": "supersingular-isogeny-path-finding",
   "title_latex": "Supersingular isogeny path finding",
   "title": "Supersingular isogeny path finding",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Supersingular isogeny path finding",
@@ -14,60 +15,84 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$p^{1/4+o(1)}$ time, Biasse--Jao--Sankar supersingular isogeny search.",
-      "headline_text": "$p^{1/4+o(1)}$ time, Biasse–Jao–Sankar supersingular isogeny search.",
       "details_latex": "Amplitude amplification reaches the subgraph of curves defined over $\\mathbb F_p$, after which the algorithm uses its abelian structure. Reversible isogeny evaluation and the endpoint-recognition predicate determine the arithmetic factors. The exponent absorbs the subexponential costs required by the second stage.",
+      "headline_text": "$p^{1/4+o(1)}$ time, Biasse–Jao–Sankar supersingular isogeny search.",
       "details_text": "Amplitude amplification reaches the subgraph of curves defined over $\\mathbb F_p$, after which the algorithm uses its abelian structure. Reversible isogeny evaluation and the endpoint-recognition predicate determine the arithmetic factors. The exponent absorbs the subexponential costs required by the second stage."
     },
     "classical": {
       "headline_latex": "$p^{1/3+o(1)}$ time and memory, Wesolowski supersingular isogeny algorithm.",
-      "headline_text": "$p^{1/3+o(1)}$ time and memory, Wesolowski supersingular isogeny algorithm.",
       "details_latex": "The result uses a heuristic assumption on smoothness of the relevant random integers. Non-scalar endomorphism computations and reductions between endomorphism and isogeny problems produce an explicitly evaluable path. The $o(1)$ exponent includes superpolynomial factors in $\\log p$. For regimes using the random-walk approach, Delfs--Galbraith provides a $p^{1/2+o(1)}$ alternative with different memory requirements.",
+      "headline_text": "$p^{1/3+o(1)}$ time and memory, Wesolowski supersingular isogeny algorithm.",
       "details_text": "The result uses a heuristic assumption on smoothness of the relevant random integers. Non-scalar endomorphism computations and reductions between endomorphism and isogeny problems produce an explicitly evaluable path. The $o(1)$ exponent includes superpolynomial factors in $\\log p$. For regimes using the random-walk approach, Delfs–Galbraith provides a $p^{1/2+o(1)}$ alternative with different memory requirements."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial speedup through a smaller exponential constant in the input bit length $\\log p$, from $1/3$ to $1/4$. Amplitude amplification is an essential quantum component.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial speedup through a smaller exponential constant in the input bit length $\\log p$, from $1/3$ to $1/4$. Amplitude amplification is an essential quantum component."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "Partial evidence for explicit curves. The classical $p^{1/3+o(1)}$ comparison is a 2026 preprint with a stated smoothness heuristic.",
+      "category_id": "evidence-partial",
       "description_text": "Partial evidence for explicit curves. The classical $p^{1/3+o(1)}$ comparison is a 2026 preprint with a stated smoothness heuristic."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "Curve registers have polynomial size in $\\log p$. Reversible field arithmetic and exponentially many coherent operations require fault tolerance; runtime is the principal obstacle at cryptographic sizes.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "Curve registers have polynomial size in $\\log p$. Reversible field arithmetic and exponentially many coherent operations require fault tolerance; runtime is the principal obstacle at cryptographic sizes."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Biasse--Jao--Sankar supersingular isogeny search",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "69.1",
       "content_latex": "\\href{https://cacr.uwaterloo.ca/techreports/2014/cacr2014-24.pdf}{Biasse, Jao and Sankar, \\emph{A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves} (INDOCRYPT 2014)}. Theorem 1: main complexity result; Algorithm 1: complete isogeny procedure; Algorithms 2--3: reaching and navigating the $\\mathbb F_p$ subgraph.",
       "content_text": "Biasse, Jao and Sankar, A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves (INDOCRYPT 2014). Theorem 1: main complexity result; Algorithm 1: complete isogeny procedure; Algorithms 2–3: reaching and navigating the $\\mathbb F_p$ subgraph.",
+      "links": [
+        {
+          "url": "https://cacr.uwaterloo.ca/techreports/2014/cacr2014-24.pdf",
+          "title": "A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves",
+          "label_latex": "Biasse, Jao and Sankar, \\emph{A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves} (INDOCRYPT 2014)",
+          "locator_latex": "Theorem 1: main complexity result; Algorithm 1: complete isogeny procedure; Algorithms 2--3: reaching and navigating the $\\mathbb F_p$ subgraph."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-069-citation-001"
+        "entry-069-citation-00247"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "69.2",
       "content_latex": "\\href{https://eprint.iacr.org/2026/1486}{Wesolowski, \\emph{The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$} (2026)}. Main complexity statement and smoothness assumption in the abstract.",
       "content_text": "Wesolowski, The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$ (2026). Main complexity statement and smoothness assumption in the abstract.",
+      "links": [
+        {
+          "url": "https://eprint.iacr.org/2026/1486",
+          "title": "The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$",
+          "label_latex": "Wesolowski, \\emph{The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$} (2026)",
+          "locator_latex": "Main complexity statement and smoothness assumption in the abstract."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-069-citation-002"
+        "entry-069-citation-00248"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-069-citation-001",
-    "entry-069-citation-002"
+  "algorithm_ids": [
+    "biasse-jao-sankar"
   ],
-  "source_latex": "\\entrytitle{69}{Supersingular isogeny path finding}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{68}\n\\begin{problem}[Supersingular isogeny path finding]\nGiven supersingular elliptic curves $E,E'/\\mathbb F_{p^2}$, output an explicitly evaluable isogeny $E\\to E'$. One may represent it as a composition of low-degree isogenies. This is the unrestricted path problem underlying several isogeny constructions. Complexity is measured in field-operation-scale time, with polynomial-bit arithmetic translated into quantum gates and classical bit operations.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$p^{1/4+o(1)}$ time, Biasse--Jao--Sankar supersingular isogeny search.}\nAmplitude amplification reaches the subgraph of curves defined over $\\mathbb F_p$, after which the algorithm uses its abelian structure. Reversible isogeny evaluation and the endpoint-recognition predicate determine the arithmetic factors. The exponent absorbs the subexponential costs required by the second stage.\n\n\\complexity{Classical}{$p^{1/3+o(1)}$ time and memory, Wesolowski supersingular isogeny algorithm.}\nThe result uses a heuristic assumption on smoothness of the relevant random integers. Non-scalar endomorphism computations and reductions between endomorphism and isogeny problems produce an explicitly evaluable path. The $o(1)$ exponent includes superpolynomial factors in $\\log p$. For regimes using the random-walk approach, Delfs--Galbraith provides a $p^{1/2+o(1)}$ alternative with different memory requirements.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant in the input bit length $\\log p$, from $1/3$ to $1/4$. Amplitude amplification is an essential quantum component.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence for explicit curves. The classical $p^{1/3+o(1)}$ comparison is a 2026 preprint with a stated smoothness heuristic.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Curve registers have polynomial size in $\\log p$. Reversible field arithmetic and exponentially many coherent operations require fault tolerance; runtime is the principal obstacle at cryptographic sizes.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{69}\n\\item \\href{https://cacr.uwaterloo.ca/techreports/2014/cacr2014-24.pdf}{Biasse, Jao and Sankar, \\emph{A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves} (INDOCRYPT 2014)}. Theorem 1: main complexity result; Algorithm 1: complete isogeny procedure; Algorithms 2--3: reaching and navigating the $\\mathbb F_p$ subgraph.\n\\item \\href{https://eprint.iacr.org/2026/1486}{Wesolowski, \\emph{The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$} (2026)}. Main complexity statement and smoothness assumption in the abstract.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{69}{Supersingular isogeny path finding}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{68}\n\\begin{problem}[Supersingular isogeny path finding]\nGiven supersingular elliptic curves $E,E'/\\mathbb F_{p^2}$, output an explicitly evaluable isogeny $E\\to E'$. One may represent it as a composition of low-degree isogenies. This is the unrestricted path problem underlying several isogeny constructions. Complexity is measured in field-operation-scale time, with polynomial-bit arithmetic translated into quantum gates and classical bit operations.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$p^{1/4+o(1)}$ time, Biasse--Jao--Sankar supersingular isogeny search.}\nAmplitude amplification reaches the subgraph of curves defined over $\\mathbb F_p$, after which the algorithm uses its abelian structure. Reversible isogeny evaluation and the endpoint-recognition predicate determine the arithmetic factors. The exponent absorbs the subexponential costs required by the second stage.\n\n\\complexity{Classical}{$p^{1/3+o(1)}$ time and memory, Wesolowski supersingular isogeny algorithm.}\nThe result uses a heuristic assumption on smoothness of the relevant random integers. Non-scalar endomorphism computations and reductions between endomorphism and isogeny problems produce an explicitly evaluable path. The $o(1)$ exponent includes superpolynomial factors in $\\log p$. For regimes using the random-walk approach, Delfs--Galbraith provides a $p^{1/2+o(1)}$ alternative with different memory requirements.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant in the input bit length $\\log p$, from $1/3$ to $1/4$. Amplitude amplification is an essential quantum component.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence for explicit curves. The classical $p^{1/3+o(1)}$ comparison is a 2026 preprint with a stated smoothness heuristic.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Curve registers have polynomial size in $\\log p$. Reversible field arithmetic and exponentially many coherent operations require fault tolerance; runtime is the principal obstacle at cryptographic sizes.\n\n\n\\subhead{Algorithm: Biasse--Jao--Sankar supersingular isogeny search}\n\\begin{algorithmindex}{69}\n\\item \\href{https://cacr.uwaterloo.ca/techreports/2014/cacr2014-24.pdf}{Biasse, Jao and Sankar, \\emph{A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves} (INDOCRYPT 2014)}. Theorem 1: main complexity result; Algorithm 1: complete isogeny procedure; Algorithms 2--3: reaching and navigating the $\\mathbb F_p$ subgraph.\n\\item \\href{https://eprint.iacr.org/2026/1486}{Wesolowski, \\emph{The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$} (2026)}. Main complexity statement and smoothness assumption in the abstract.\n\\end{algorithmindex}",
+  "importance": "peripheral",
+  "origin": "manuscript",
+  "ordinal": 126,
+  "citation_ids": [
+    "entry-069-citation-00247",
+    "entry-069-citation-00248"
+  ]
 }

@@ -1,0 +1,100 @@
+{
+  "id": "entry-197",
+  "number": 197,
+  "slug": "magic-square-game",
+  "title": "Mermin–Peres magic-square game",
+  "title_latex": "Mermin--Peres magic-square game",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "magic_square_game",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Mermin–Peres magic-square game",
+    "name_latex": "Mermin--Peres magic-square game",
+    "statement_latex": "A referee independently samples row $r\\in\\{1,2,3\\}$ for Alice and column $c\\in\\{1,2,3\\}$ for Bob. Alice outputs three signs of product $+1$ and Bob three of product $-1$; their intersection values must agree. No communication follows the inputs. Complexity uses winning probability and shared entanglement.",
+    "statement_text": "A referee independently samples row $r\\in\\{1,2,3\\}$ for Alice and column $c\\in\\{1,2,3\\}$ for Bob. Alice outputs three signs of product $+1$ and Bob three of product $-1$; their intersection values must agree. No communication follows the inputs. Complexity uses winning probability and shared entanglement."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "white",
+      "description_latex": "A nonlocal success-probability separation at zero communication.",
+      "category_id": "strength-unspecified",
+      "description_text": "A nonlocal success-probability separation at zero communication."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The exact classical and quantum winning probabilities are proved.",
+      "category_id": "evidence-proved",
+      "description_text": "The exact classical and quantum winning probabilities are proved."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "Two EPR pairs suffice; photonic experiments use polarization and orbital-angular-momentum entanglement.",
+      "category_id": "hardware-small",
+      "description_text": "Two EPR pairs suffice; photonic experiments use polarization and orbital-angular-momentum entanglement."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "Success $1$ with two EPR pairs and constant-size local measurements. Commuting Mermin--Peres observables supply the required parities and agreement.",
+      "details_latex": "",
+      "headline_text": "Success $1$ with two EPR pairs and constant-size local measurements. Commuting Mermin–Peres observables supply the required parities and agreement.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Optimal classical success is exactly $8/9$, allowing shared randomness and arbitrary local computation. A deterministic assignment satisfying eight of nine input pairs attains it.",
+      "details_latex": "",
+      "headline_text": "Optimal classical success is exactly $8/9$, allowing shared randomness and arbitrary local computation. A deterministic assignment satisfying eight of nine input pairs attains it.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "magic_square_strategy"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2206.12042}{\\emph{Experimental Demonstration of Quantum Pseudotelepathy}}. Magic-square game, quantum strategy, and experiment",
+      "content_text": "Experimental Demonstration of Quantum Pseudotelepathy. Magic-square game, quantum strategy, and experiment",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2206.12042",
+          "title": "Experimental Demonstration of Quantum Pseudotelepathy",
+          "label_latex": "\\emph{Experimental Demonstration of Quantum Pseudotelepathy}",
+          "locator_latex": "Magic-square game, quantum strategy, and experiment"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-197-citation-00420"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://www.nature.com/articles/s41534-024-00874-1}{\\emph{Beating one bit of communication with and without quantum pseudo-telepathy}}. Magic-square classical and quantum values",
+      "content_text": "Beating one bit of communication with and without quantum pseudo-telepathy. Magic-square classical and quantum values",
+      "links": [
+        {
+          "url": "https://www.nature.com/articles/s41534-024-00874-1",
+          "title": "Beating one bit of communication with and without quantum pseudo-telepathy",
+          "label_latex": "\\emph{Beating one bit of communication with and without quantum pseudo-telepathy}",
+          "locator_latex": "Magic-square classical and quantum values"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-197-citation-00421"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Mermin--Peres magic-square strategy",
+  "ordinal": 211,
+  "citation_ids": [
+    "entry-197-citation-00420",
+    "entry-197-citation-00421"
+  ]
+}

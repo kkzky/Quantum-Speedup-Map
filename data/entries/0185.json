@@ -1,0 +1,136 @@
+{
+  "id": "entry-185",
+  "number": 185,
+  "slug": "fock-boson-sampling",
+  "title": "Fock-state boson sampling",
+  "title_latex": "Fock-state boson sampling",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "fock_boson_sampling",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Fock-state boson sampling",
+    "name_latex": "Fock-state boson sampling",
+    "statement_latex": "Given an $m\\times m$ interferometer $U$ and single photons in $n\\leq m$ specified inputs, sample $s\\in\\mathbb N^m$, $\\sum_i s_i=n$, with $p(s)=|\\operatorname{Per}(U_s)|^2/\\prod_i s_i!$. Matrix $U_s$ uses occupied input columns and repeats row $i$ exactly $s_i$ times. Complexity uses optical operations and classical arithmetic time at specified precision.",
+    "statement_text": "Given an $m\\times m$ interferometer $U$ and single photons in $n\\leq m$ specified inputs, sample $s\\in\\mathbb N^m$, $\\sum_i s_i=n$, with $p(s)=|\\operatorname{Per}(U_s)|^2/\\prod_i s_i!$. Matrix $U_s$ uses occupied input columns and repeats row $i$ exactly $s_i$ times. Complexity uses optical operations and classical arithmetic time at specified precision."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Ideal sampling compares polynomial optical resources with exponential classical bounds, keeping photon and mode counts independent.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Ideal sampling compares polynomial optical resources with exponential classical bounds, keeping photon and mode counts independent."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "Efficient exact sampling implies polynomial-hierarchy collapse; approximate hardness adds permanent average-case hardness and anticoncentration conjectures.",
+      "category_id": "evidence-strong",
+      "description_text": "Efficient exact sampling implies polynomial-hierarchy collapse; approximate hardness adds permanent average-case hardness and anticoncentration conjectures."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "Requires $n$ indistinguishable photons, $m$ modes, and photon-number-resolving detectors; experiments implement finite lossy instances.",
+      "category_id": "hardware-small",
+      "description_text": "Requires $n$ indistinguishable photons, $m$ modes, and photon-number-resolving detectors; experiments implement finite lossy instances."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(m^2)$ two-mode optical elements implement a general interferometer, followed by photon-number detection. Scattershot boson sampling varies the occupied input modes.",
+      "details_latex": "",
+      "headline_text": "$O(m^2)$ two-mode optical elements implement a general interferometer, followed by photon-number detection. Scattershot boson sampling varies the occupied input modes.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Clifford--Clifford exact sampling costs $O(n2^n+mn^2)$. Their collision-aware algorithm has Haar-average bound $O(\\frac{n(m+n)}m\\frac{\\binom{2m+n}{n+1}}{\\binom{m+n}{n+1}}+n^2m)$. For fixed nonzero uniform loss, the November 2026 loss theorem gives polynomial approximate sampling with total-variation error averaged over Haar interferometers.",
+      "details_latex": "",
+      "headline_text": "Clifford–Clifford exact sampling costs $O(n2^n+mn^2)$. Their collision-aware algorithm has Haar-average bound $O(\\frac{n(m+n)}m\\frac{\\binom{2m+n}{n+1}}{\\binom{m+n}{n+1}}+n^2m)$. For fixed nonzero uniform loss, the November 2026 loss theorem gives polynomial approximate sampling with total-variation error averaged over Haar interferometers.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "linear_optical_boson_sampling"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1011.3245}{\\emph{The Computational Complexity of Linear Optics}}. BosonSampling definition; exact- and approximate-sampling hardness",
+      "content_text": "The Computational Complexity of Linear Optics. BosonSampling definition; exact- and approximate-sampling hardness",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1011.3245",
+          "title": "The Computational Complexity of Linear Optics",
+          "label_latex": "\\emph{The Computational Complexity of Linear Optics}",
+          "locator_latex": "BosonSampling definition; exact- and approximate-sampling hardness"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-185-citation-00391"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1706.01260}{\\emph{The Classical Complexity of Boson Sampling}}. Main exact-sampling algorithm and complexity theorem",
+      "content_text": "The Classical Complexity of Boson Sampling. Main exact-sampling algorithm and complexity theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1706.01260",
+          "title": "The Classical Complexity of Boson Sampling",
+          "label_latex": "\\emph{The Classical Complexity of Boson Sampling}",
+          "locator_latex": "Main exact-sampling algorithm and complexity theorem"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-185-citation-00392"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2005.04214}{\\emph{Faster classical Boson Sampling}}. Algorithm A; Theorem 5, general average-case bound",
+      "content_text": "Faster classical Boson Sampling. Algorithm A; Theorem 5, general average-case bound",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2005.04214",
+          "title": "Faster classical Boson Sampling",
+          "label_latex": "\\emph{Faster classical Boson Sampling}",
+          "locator_latex": "Algorithm A; Theorem 5, general average-case bound"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-185-citation-00393"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2611.01434}{\\emph{Boson sampling is fragile to loss}}. Section IV.1; average-case total-variation sampling theorem; November 2026 preprint",
+      "content_text": "Boson sampling is fragile to loss. Section IV.1; average-case total-variation sampling theorem; November 2026 preprint",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2611.01434",
+          "title": "Boson sampling is fragile to loss",
+          "label_latex": "\\emph{Boson sampling is fragile to loss}",
+          "locator_latex": "Section IV.1; average-case total-variation sampling theorem; November 2026 preprint"
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
+      "citation_ids": [
+        "entry-185-citation-00394"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Linear-optical boson sampling",
+  "ordinal": 201,
+  "citation_ids": [
+    "entry-185-citation-00391",
+    "entry-185-citation-00392",
+    "entry-185-citation-00393",
+    "entry-185-citation-00394"
+  ]
+}

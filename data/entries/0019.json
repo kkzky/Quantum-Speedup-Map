@@ -1,73 +1,138 @@
 {
   "id": "entry-019",
   "number": 19,
-  "ordinal": 19,
-  "title_latex": "Zero-one knapsack",
-  "title": "Zero-one knapsack",
+  "slug": "knapsack-and-binary-integer-programming",
+  "title_latex": "Knapsack and binary integer programming",
+  "title": "Knapsack and binary integer programming",
+  "aliases": [
+    30
+  ],
   "chapter_id": "chapter-1",
   "problem": {
-    "name_latex": "Zero-one knapsack",
-    "name": "Zero-one knapsack",
-    "statement_latex": "Given positive integer weights $w_i$, nonnegative profits $p_i$, and capacity $W$, maximize $\\sum_i p_ix_i$ subject to $x_i\\in\\{0,1\\}$ and $\\sum_iw_ix_i\\leq W$. The decision version also supplies a profit target. Knapsack models budgeted selection and resource allocation.\nThe meet-in-the-middle comparison uses quantum coherent-memory time and classical RAM time, with polynomial bit-arithmetic costs for weights and profits.",
-    "statement_text": "Given positive integer weights $w_i$, nonnegative profits $p_i$, and capacity $W$, maximize $\\sum_i p_ix_i$ subject to $x_i\\in\\{0,1\\}$ and $\\sum_iw_ix_i\\leq W$. The decision version also supplies a profit target. Knapsack models budgeted selection and resource allocation. The meet-in-the-middle comparison uses quantum coherent-memory time and classical RAM time, with polynomial bit-arithmetic costs for weights and profits."
+    "name_latex": "Knapsack and binary integer programming",
+    "name": "Knapsack and binary integer programming",
+    "statement_latex": "\\textbf{Zero-one knapsack.} Given positive integer weights $w_i$, nonnegative profits $p_i$ and capacity $W$, maximize $\\sum_{i=1}^n p_ix_i$ subject to $x\\in\\{0,1\\}^n$ and $\\sum_{i=1}^n w_ix_i\\le W$. The decision form also supplies a profit threshold. This models budgeted selection and resource allocation.\n\n\\entryalias{30}\\textbf{Binary integer programming.} Given $A\\in\\mathbb Z^{d\\times n}$ and $b\\in\\mathbb Z^d$, find $x\\in\\{0,1\\}^n$ with $Ax\\le b$, or decide infeasibility. A linear objective is handled through a profit threshold. The quantum regime of interest has fixed or slowly growing $d$ and binary-encoded coefficients; knapsack contributes capacity and profit-threshold inequalities.\n\nThe quantum bound uses coherent-memory time with bit-arithmetic costs; classical meet in the middle and capacity dynamic programming use RAM time, and Boolean encodings use bit complexity.",
+    "statement_text": "Zero-one knapsack. Given positive integer weights $w_i$, nonnegative profits $p_i$ and capacity $W$, maximize $\\sum_{i=1}^n p_ix_i$ subject to $x\\in\\{0,1\\}^n$ and $\\sum_{i=1}^n w_ix_i\\le W$. The decision form also supplies a profit threshold. This models budgeted selection and resource allocation. 30Binary integer programming. Given $A\\in\\mathbb Z^{d\\times n}$ and $b\\in\\mathbb Z^d$, find $x\\in\\{0,1\\}^n$ with $Ax\\le b$, or decide infeasibility. A linear objective is handled through a profit threshold. The quantum regime of interest has fixed or slowly growing $d$ and binary-encoded coefficients; knapsack contributes capacity and profit-threshold inequalities. The quantum bound uses coherent-memory time with bit-arithmetic costs; classical meet in the middle and capacity dynamic programming use RAM time, and Boolean encodings use bit complexity."
   },
   "quantum_speedup": {
     "quantum": {
-      "headline_latex": "$\\widetilde O(2^{n/3})$, Arvind--Schuler integer-programming search.",
-      "headline_text": "$\\widetilde O(2^{n/3})$, Arvind–Schuler integer-programming search.",
-      "details_latex": "The capacity and profit threshold give a constant number of inequalities. Binary search over the profit range recovers the optimum with a polynomial bit-length factor. The construction requires coherent access to precomputed partial-sum and dominance-search data. QuantumTreeGenerator, a separate branch-and-bound construction, gives instance-dependent search estimates based on classical solver trees.",
-      "details_text": "The capacity and profit threshold give a constant number of inequalities. Binary search over the profit range recovers the optimum with a polynomial bit-length factor. The construction requires coherent access to precomputed partial-sum and dominance-search data. QuantumTreeGenerator, a separate branch-and-bound construction, gives instance-dependent search estimates based on classical solver trees."
+      "headline_latex": "$\\widetilde O(2^{n/3}n^d)$, Arvind--Schuler binary integer programming; $O^*(2^{n/3})$ for fixed $d$, including knapsack.",
+      "details_latex": "Precomputed partial-sum vectors support coherent multidimensional range queries. The bound includes preprocessing and search; coefficient arithmetic contributes polynomial factors in bit length. For $d=o(n/\\log n)$, the time is $2^{(1/3+o(1))n}$. Threshold search recovers the optimum with polynomial bit-length overhead. For knapsack, QuantumTreeGenerator additionally gives instance-dependent branch-and-bound estimates from classical solver trees. With $B$-bit coefficients, the reversible arithmetic has cost polynomial in $dn(B+\\log n)$.",
+      "headline_text": "$\\widetilde O(2^{n/3}n^d)$, Arvind–Schuler binary integer programming; $O^*(2^{n/3})$ for fixed $d$, including knapsack.",
+      "details_text": "Precomputed partial-sum vectors support coherent multidimensional range queries. The bound includes preprocessing and search; coefficient arithmetic contributes polynomial factors in bit length. For $d=o(n/\\log n)$, the time is $2^{(1/3+o(1))n}$. Threshold search recovers the optimum with polynomial bit-length overhead. For knapsack, QuantumTreeGenerator additionally gives instance-dependent branch-and-bound estimates from classical solver trees. With $B$-bit coefficients, the reversible arithmetic has cost polynomial in $dn(B+\\log n)$."
     },
     "classical": {
-      "headline_latex": "$O^*(2^{n/2})$, Horowitz--Sahni meet in the middle; $O(nW)$, capacity dynamic programming.",
-      "headline_text": "$O^*(2^{n/2})$, Horowitz–Sahni meet in the middle; $O(nW)$, capacity dynamic programming.",
-      "details_latex": "The first bound enumerates partial weight-profit pairs and removes dominated pairs, using exponential memory. The second stores the best profit for each achievable capacity and is pseudopolynomial in the binary-encoded input. The smaller applicable expression supplies the comparison. If the numerical data have $B$ bits, a direct Boolean arithmetic encoding has size $O(n(B+\\log n))$; any tensor-contraction bound applied to that encoding retains this dependence on $B$.",
-      "details_text": "The first bound enumerates partial weight-profit pairs and removes dominated pairs, using exponential memory. The second stores the best profit for each achievable capacity and is pseudopolynomial in the binary-encoded input. The smaller applicable expression supplies the comparison. If the numerical data have $B$ bits, a direct Boolean arithmetic encoding has size $O(n(B+\\log n))$; any tensor-contraction bound applied to that encoding retains this dependence on $B$."
+      "headline_latex": "$O^*(2^{n/2})$ for fixed $d$, meet in the middle with dominance searching; $O(nW)$ for knapsack, capacity dynamic programming.",
+      "details_latex": "The two half-assignment lists store partial-sum vectors and are matched by coordinatewise inequalities. Horowitz--Sahni knapsack removes dominated weight--profit pairs; capacity dynamic programming instead stores the best profit at each capacity. The smaller applicable bound supplies the comparison. A direct knapsack threshold circuit has size $O(n(B+\\log n))$, retained when applying Boolean tensor contraction. If every integer-programming row has support at most fixed $r$, forbidden local assignments give fixed-width clauses on the original $n$ variables: polynomially many rows give $\\operatorname{poly}(\\text{input size})2^{O_r(n\\log\\log n/\\sqrt{\\log n})}$ time and polynomial space, while linearly many rows improve the exponent to $O_r(n/\\sqrt{\\log n})$.",
+      "headline_text": "$O^*(2^{n/2})$ for fixed $d$, meet in the middle with dominance searching; $O(nW)$ for knapsack, capacity dynamic programming.",
+      "details_text": "The two half-assignment lists store partial-sum vectors and are matched by coordinatewise inequalities. Horowitz–Sahni knapsack removes dominated weight–profit pairs; capacity dynamic programming instead stores the best profit at each capacity. The smaller applicable bound supplies the comparison. A direct knapsack threshold circuit has size $O(n(B+\\log n))$, retained when applying Boolean tensor contraction. If every integer-programming row has support at most fixed $r$, forbidden local assignments give fixed-width clauses on the original $n$ variables: polynomially many rows give $\\operatorname{poly}(\\text{input size})2^{O_r(n\\log\\log n/\\sqrt{\\log n})}$ time and polynomial space, while linearly many rows improve the exponent to $O_r(n/\\sqrt{\\log n})$."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
-      "description_latex": "Polynomial speedup through a smaller exponential constant in item count in the large-coefficient meet-in-the-middle regime, based on Grover search and amplitude amplification. Small-capacity instances have the pseudopolynomial classical comparator.",
-      "description_text": "Polynomial speedup through a smaller exponential constant in item count in the large-coefficient meet-in-the-middle regime, based on Grover search and amplitude amplification. Small-capacity instances have the pseudopolynomial classical comparator."
+      "description_latex": "The fixed-$d$, dense, large-coefficient comparison improves the exponential constant from $1/2$ to $1/3$, a polynomial speedup based on Grover search and amplitude amplification. Small capacities and bounded row support select the stated stronger classical bounds.",
+      "category_id": "strength-polynomial",
+      "description_text": "The fixed-$d$, dense, large-coefficient comparison improves the exponential constant from $1/2$ to $1/3$, a polynomial speedup based on Grover search and amplitude amplification. Small capacities and bounded row support select the stated stronger classical bounds."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
-      "description_latex": "The few-inequality upper bound is rigorous in its access model. Evidence for practical speedup from branch-and-bound estimates depends on the solver trees and implementation costs.",
-      "description_text": "The few-inequality upper bound is rigorous in its access model. Evidence for practical speedup from branch-and-bound estimates depends on the solver trees and implementation costs."
+      "description_latex": "Rigorous quantum bounds in the coherent-memory model, with partial evidence against the applicable classical algorithms. The separate branch-and-bound estimates depend on solver trees and implementation costs.",
+      "category_id": "evidence-partial",
+      "description_text": "Rigorous quantum bounds in the coherent-memory model, with partial evidence against the applicable classical algorithms. The separate branch-and-bound estimates depend on solver trees and implementation costs."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
-      "description_latex": "Active registers include $n$ assignment qubits, $O(\\log W)$ weight bits and $O(\\log\\sum_i p_i)$ profit bits, plus reversible workspace. The asymptotic search construction additionally needs exponential coherent memory. Useful numerical instances require fault tolerance.",
-      "description_text": "Active registers include $n$ assignment qubits, $O(\\log W)$ weight bits and $O(\\log\\sum_i p_i)$ profit bits, plus reversible workspace. The asymptotic search construction additionally needs exponential coherent memory. Useful numerical instances require fault tolerance."
+      "description_latex": "Active registers contain $n$ assignment qubits and $d$ arithmetic accumulators; knapsack uses weight and profit registers of widths $O(\\log W)$ and $O(\\log\\sum_i p_i)$, with reversible workspace. Exponential coherent range-search data and long coherent searches dominate useful fault-tolerant implementations.",
+      "category_id": "hardware-superpolynomial",
+      "description_text": "Active registers contain $n$ assignment qubits and $d$ arithmetic accumulators; knapsack uses weight and profit registers of widths $O(\\log W)$ and $O(\\log\\sum_i p_i)$, with reversible workspace. Exponential coherent range-search data and long coherent searches dominate useful fault-tolerant implementations."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Arvind--Schuler binary integer programming; QuantumTreeGenerator",
   "algorithm_items": [
     {
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0212048}{Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)}. Section 2, Theorem 1 and steps 1--6, pp.~3--4: partial-sum preprocessing, range-tree queries and quantum search; Corollary 2 gives threshold optimization.",
+      "content_text": "Arvind and Schuler, The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems (ISAAC 2003). Section 2, Theorem 1 and steps 1–6, pp. 3–4: partial-sum preprocessing, range-tree queries and quantum search; Corollary 2 gives threshold optimization.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0212048",
+          "title": "The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems",
+          "label_latex": "Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)",
+          "locator_latex": "Section 2, Theorem 1 and steps 1--6, pp.~3--4: partial-sum preprocessing, range-tree queries and quantum search; Corollary 2 gives threshold optimization."
+        }
+      ],
       "item_number": 1,
-      "index_label": "19.1",
-      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0212048}{Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)}. Section 2, Theorem 1, steps 1--6, and Corollary 2: fixed-inequality feasibility and optimization by thresholds.",
-      "content_text": "Arvind and Schuler, The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems (ISAAC 2003). Section 2, Theorem 1, steps 1–6, and Corollary 2: fixed-inequality feasibility and optimization by thresholds.",
+      "index_label": "",
       "citation_ids": [
-        "entry-019-citation-001"
+        "entry-019-citation-00043"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "19.2",
       "content_latex": "\\href{https://www.nature.com/articles/s41534-025-01097-8}{\\emph{A Quantum Algorithm for Solving 0-1 Knapsack Problems} (npj Quantum Information 2025)}. The \\textsc{QuantumTreeGenerator} construction and the numerical comparison with COMBO search trees.",
       "content_text": "A Quantum Algorithm for Solving 0-1 Knapsack Problems (npj Quantum Information 2025). The QuantumTreeGenerator construction and the numerical comparison with COMBO search trees.",
+      "links": [
+        {
+          "url": "https://www.nature.com/articles/s41534-025-01097-8",
+          "title": "A Quantum Algorithm for Solving 0-1 Knapsack Problems",
+          "label_latex": "\\emph{A Quantum Algorithm for Solving 0-1 Knapsack Problems} (npj Quantum Information 2025)",
+          "locator_latex": "The \\textsc{QuantumTreeGenerator} construction and the numerical comparison with COMBO search trees."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-019-citation-002"
+        "entry-019-citation-00044"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendices D.1--D.4, applied to the bounded-row-arity clauses.",
+      "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and Appendices D.1–D.4, applied to the bounded-row-arity clauses.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1 and Appendices D.1--D.4, applied to the bounded-row-arity clauses."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-019-citation-00045"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-019-citation-001",
-    "entry-019-citation-002"
+  "algorithm_ids": [
+    "backtracking",
+    "arvind-schuler"
   ],
-  "source_latex": "\\entrytitle{19}{Zero-one knapsack}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{18}\n\\begin{problem}[Zero-one knapsack]\nGiven positive integer weights $w_i$, nonnegative profits $p_i$, and capacity $W$, maximize $\\sum_i p_ix_i$ subject to $x_i\\in\\{0,1\\}$ and $\\sum_iw_ix_i\\leq W$. The decision version also supplies a profit target. Knapsack models budgeted selection and resource allocation.\nThe meet-in-the-middle comparison uses quantum coherent-memory time and classical RAM time, with polynomial bit-arithmetic costs for weights and profits.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(2^{n/3})$, Arvind--Schuler integer-programming search.}\nThe capacity and profit threshold give a constant number of inequalities. Binary search over the profit range recovers the optimum with a polynomial bit-length factor. The construction requires coherent access to precomputed partial-sum and dominance-search data. QuantumTreeGenerator, a separate branch-and-bound construction, gives instance-dependent search estimates based on classical solver trees.\n\\complexity{Classical}{$O^*(2^{n/2})$, Horowitz--Sahni meet in the middle; $O(nW)$, capacity dynamic programming.}\nThe first bound enumerates partial weight-profit pairs and removes dominated pairs, using exponential memory. The second stores the best profit for each achievable capacity and is pseudopolynomial in the binary-encoded input. The smaller applicable expression supplies the comparison. If the numerical data have $B$ bits, a direct Boolean arithmetic encoding has size $O(n(B+\\log n))$; any tensor-contraction bound applied to that encoding retains this dependence on $B$.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant in item count in the large-coefficient meet-in-the-middle regime, based on Grover search and amplitude amplification. Small-capacity instances have the pseudopolynomial classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} The few-inequality upper bound is rigorous in its access model. Evidence for practical speedup from branch-and-bound estimates depends on the solver trees and implementation costs.\n\\dimensionlabel{Hardware}{hardwareExponential} Active registers include $n$ assignment qubits, $O(\\log W)$ weight bits and $O(\\log\\sum_i p_i)$ profit bits, plus reversible workspace. The asymptotic search construction additionally needs exponential coherent memory. Useful numerical instances require fault tolerance.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{19}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0212048}{Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)}. Section 2, Theorem 1, steps 1--6, and Corollary 2: fixed-inequality feasibility and optimization by thresholds.\n\\item \\href{https://www.nature.com/articles/s41534-025-01097-8}{\\emph{A Quantum Algorithm for Solving 0-1 Knapsack Problems} (npj Quantum Information 2025)}. The \\textsc{QuantumTreeGenerator} construction and the numerical comparison with COMBO search trees.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "backtracking",
+      "label_latex": "Quantum backtracking and branch and bound",
+      "problem_numbers": [
+        3,
+        4,
+        7,
+        71,
+        74
+      ]
+    },
+    {
+      "algorithm_id": "arvind-schuler",
+      "label_latex": "Arvind--Schuler binary integer-programming search",
+      "problem_numbers": [
+        18
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{19}{Knapsack and binary integer programming}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\begin{problem}[Knapsack and binary integer programming]\n\\textbf{Zero-one knapsack.} Given positive integer weights $w_i$, nonnegative profits $p_i$ and capacity $W$, maximize $\\sum_{i=1}^n p_ix_i$ subject to $x\\in\\{0,1\\}^n$ and $\\sum_{i=1}^n w_ix_i\\le W$. The decision form also supplies a profit threshold. This models budgeted selection and resource allocation.\n\n\\entryalias{30}\\textbf{Binary integer programming.} Given $A\\in\\mathbb Z^{d\\times n}$ and $b\\in\\mathbb Z^d$, find $x\\in\\{0,1\\}^n$ with $Ax\\le b$, or decide infeasibility. A linear objective is handled through a profit threshold. The quantum regime of interest has fixed or slowly growing $d$ and binary-encoded coefficients; knapsack contributes capacity and profit-threshold inequalities.\n\nThe quantum bound uses coherent-memory time with bit-arithmetic costs; classical meet in the middle and capacity dynamic programming use RAM time, and Boolean encodings use bit complexity.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(2^{n/3}n^d)$, Arvind--Schuler binary integer programming; $O^*(2^{n/3})$ for fixed $d$, including knapsack.}\nPrecomputed partial-sum vectors support coherent multidimensional range queries. The bound includes preprocessing and search; coefficient arithmetic contributes polynomial factors in bit length. For $d=o(n/\\log n)$, the time is $2^{(1/3+o(1))n}$. Threshold search recovers the optimum with polynomial bit-length overhead. For knapsack, QuantumTreeGenerator additionally gives instance-dependent branch-and-bound estimates from classical solver trees. With $B$-bit coefficients, the reversible arithmetic has cost polynomial in $dn(B+\\log n)$.\n\n\\complexity{Classical}{$O^*(2^{n/2})$ for fixed $d$, meet in the middle with dominance searching; $O(nW)$ for knapsack, capacity dynamic programming.}\nThe two half-assignment lists store partial-sum vectors and are matched by coordinatewise inequalities. Horowitz--Sahni knapsack removes dominated weight--profit pairs; capacity dynamic programming instead stores the best profit at each capacity. The smaller applicable bound supplies the comparison. A direct knapsack threshold circuit has size $O(n(B+\\log n))$, retained when applying Boolean tensor contraction. If every integer-programming row has support at most fixed $r$, forbidden local assignments give fixed-width clauses on the original $n$ variables: polynomially many rows give $\\operatorname{poly}(\\text{input size})2^{O_r(n\\log\\log n/\\sqrt{\\log n})}$ time and polynomial space, while linearly many rows improve the exponent to $O_r(n/\\sqrt{\\log n})$.\n\n\\dimensionlabel{Strength}{strengthPolynomial} The fixed-$d$, dense, large-coefficient comparison improves the exponential constant from $1/2$ to $1/3$, a polynomial speedup based on Grover search and amplitude amplification. Small capacities and bounded row support select the stated stronger classical bounds.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum bounds in the coherent-memory model, with partial evidence against the applicable classical algorithms. The separate branch-and-bound estimates depend on solver trees and implementation costs.\n\\dimensionlabel{Hardware}{hardwareExponential} Active registers contain $n$ assignment qubits and $d$ arithmetic accumulators; knapsack uses weight and profit registers of widths $O(\\log W)$ and $O(\\log\\sum_i p_i)$, with reversible workspace. Exponential coherent range-search data and long coherent searches dominate useful fault-tolerant implementations.\n\\subhead{Algorithm: Arvind--Schuler binary integer programming; QuantumTreeGenerator}\n\\begin{algorithmindex}{19}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0212048}{Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)}. Section 2, Theorem 1 and steps 1--6, pp.~3--4: partial-sum preprocessing, range-tree queries and quantum search; Corollary 2 gives threshold optimization.\n\\item \\href{https://www.nature.com/articles/s41534-025-01097-8}{\\emph{A Quantum Algorithm for Solving 0-1 Knapsack Problems} (npj Quantum Information 2025)}. The \\textsc{QuantumTreeGenerator} construction and the numerical comparison with COMBO search trees.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendices D.1--D.4, applied to the bounded-row-arity clauses.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{backtracking}{Quantum backtracking and branch and bound}: \\problemref{3}, \\problemref{4}, \\problemref{7}, \\problemref{71}, \\problemref{74}.\n\\par\\algorithmref{arvind-schuler}{Arvind--Schuler binary integer-programming search}: \\problemref{18}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 17,
+  "citation_ids": [
+    "entry-019-citation-00043",
+    "entry-019-citation-00044",
+    "entry-019-citation-00045"
+  ]
 }

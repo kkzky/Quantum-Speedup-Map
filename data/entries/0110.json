@@ -1,0 +1,120 @@
+{
+  "id": "entry-110",
+  "number": 110,
+  "slug": "prior-g03",
+  "title": "k-sum",
+  "title_latex": "$k$-sum",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g03",
+  "inventory_ids": [
+    "G03"
+  ],
+  "problem": {
+    "name": "k-sum",
+    "name_latex": "$k$-sum",
+    "statement_latex": "Given $x_1,\\ldots,x_n$ in a finite abelian group and a target $t$, find distinct $i_1,\\ldots,i_k$ with $\\sum_{j=1}^k x_{i_j}=t$, or report that none exist. Here $k$ is constant and group elements are supplied by an indexed oracle.",
+    "statement_text": "Given $x_1,\\ldots,x_n$ in a finite abelian group and a target $t$, find distinct $i_1,\\ldots,i_k$ with $\\sum_{j=1}^k x_{i_j}=t$, or report that none exist. Here $k$ is constant and group elements are supplied by an indexed oracle."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^{k/(k+1)})$ input queries by the subset quantum walk. This is tight for sufficiently large groups.",
+      "details_latex": "",
+      "headline_text": "$O(n^{k/(k+1)})$ input queries by the subset quantum walk. This is tight for sufficiently large groups.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ queries, followed by classical processing. Meet-in-the-middle gives $\\widetilde O(n^{\\lceil k/2\\rceil})$ time for fixed $k$; query and arithmetic bounds measure different resources.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n)$ queries, followed by classical processing. Meet-in-the-middle gives $\\widetilde O(n^{\\lceil k/2\\rceil})$ time for fixed $k$; query and arithmetic bounds measure different resources.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "subset-quantum-walk"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "subset-quantum-walk",
+      "label_latex": "Ambainis--Childs--Eisenberg subset quantum walk",
+      "problem_numbers": [
+        108
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0311038}{\\emph{Quantum algorithms for subset finding}}. General subset-finding algorithm; k-sum application",
+      "content_text": "Quantum algorithms for subset finding. General subset-finding algorithm; k-sum application",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0311038",
+          "title": "Quantum algorithms for subset finding",
+          "label_latex": "\\emph{Quantum algorithms for subset finding}",
+          "locator_latex": "General subset-finding algorithm; k-sum application"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-110-citation-00182"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1206.6528}{\\emph{Adversary lower bound for the k-sum problem}}. Main theorem",
+      "content_text": "Adversary lower bound for the k-sum problem. Main theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1206.6528",
+          "title": "Adversary lower bound for the k-sum problem",
+          "label_latex": "\\emph{Adversary lower bound for the k-sum problem}",
+          "locator_latex": "Main theorem"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-110-citation-00183"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Ambainis--Childs--Eisenberg subset quantum walk",
+  "plot": {
+    "quantum": "\\Theta(n^{k/(k+1)})",
+    "classical": "\\Theta(n)",
+    "parameter": "n items; constant k; sufficiently large group",
+    "model": "indexed queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "n^{1/(k+1)}",
+    "classical_exponent": 1
+  },
+  "ordinal": 80,
+  "citation_ids": [
+    "entry-110-citation-00182",
+    "entry-110-citation-00183"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "entry-142",
+  "number": 142,
+  "slug": "prior-g44",
+  "title": "Random spanning-tree sampling",
+  "title_latex": "Random spanning-tree sampling",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g44",
+  "inventory_ids": [
+    "G44"
+  ],
+  "problem": {
+    "name": "Random spanning-tree sampling",
+    "name_latex": "Random spanning-tree sampling",
+    "statement_latex": "Given adjacency-list access to a connected graph $G=(V,E,w)$ with $n$ vertices, $m$ edges and nonnegative finitely encoded weights, sample a tree with probability proportional to $\\prod_{e\\in T}w_e$, within total-variation error $\\varepsilon$. Unit weights give the uniform spanning-tree distribution.",
+    "statement_text": "Given adjacency-list access to a connected graph $G=(V,E,w)$ with $n$ vertices, $m$ edges and nonnegative finitely encoded weights, sample a tree with probability proportional to $\\prod_{e\\in T}w_e$, within total-variation error $\\varepsilon$. Unit weights give the uniform spanning-tree distribution."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The implementation runs circuits on $O(\\log n)$ qubits and uses quantum-read/classical-write memory of $\\widetilde O(\\sqrt{mn})$ bits, together with adjacency-list oracle access.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The implementation runs circuits on $O(\\log n)$ qubits and uses quantum-read/classical-write memory of $\\widetilde O(\\sqrt{mn})$ bits, together with adjacency-list oracle access."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt{mn}\\log(1/\\varepsilon))$ time and adjacency-list queries by Apers--Gao--Ji--Liu. The quantum query lower bound is $\\Omega(\\sqrt{mn})$ at constant error.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt{mn}\\log(1/\\varepsilon))$ time and adjacency-list queries by Apers–Gao–Ji–Liu. The quantum query lower bound is $\\Omega(\\sqrt{mn})$ at constant error.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(m\\log^2m)$ time at constant error by Anari--Liu--Oveis Gharan--Vinzant--Vuong's down-up-walk sampler, with logarithmic dependence on the target accuracy. The general weighted adjacency-list problem requires $\\Omega(m)$ classical queries.",
+      "details_latex": "",
+      "headline_text": "$O(m\\log^2m)$ time at constant error by Anari–Liu–Oveis Gharan–Vinzant–Vuong's down-up-walk sampler, with logarithmic dependence on the target accuracy. The general weighted adjacency-list problem requires $\\Omega(m)$ classical queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-spanning-tree-sampling"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2504.15603}{\\emph{Quantum Speedup for Sampling Random Spanning Trees}}. Main theorem; large-step up-down walk",
+      "content_text": "Quantum Speedup for Sampling Random Spanning Trees. Main theorem; large-step up-down walk",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2504.15603",
+          "title": "Quantum Speedup for Sampling Random Spanning Trees",
+          "label_latex": "\\emph{Quantum Speedup for Sampling Random Spanning Trees}",
+          "locator_latex": "Main theorem; large-step up-down walk"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-142-citation-00218"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Apers--Gao--Ji--Liu spanning-tree sampler",
+  "plot": {
+    "quantum": "\\widetilde\\Theta(\\sqrt{mn})",
+    "classical": "\\widetilde\\Theta(m)",
+    "parameter": "n vertices and m edges; constant sampling error",
+    "model": "weighted adjacency-list queries and coherent-RAM time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Theta(\\sqrt{m/n})"
+  },
+  "ordinal": 111,
+  "citation_ids": [
+    "entry-142-citation-00218"
+  ]
+}

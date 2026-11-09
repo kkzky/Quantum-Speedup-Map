@@ -1,0 +1,103 @@
+{
+  "id": "entry-137",
+  "number": 137,
+  "slug": "prior-g36",
+  "title": "Cycle detection",
+  "title_latex": "Cycle detection",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g36",
+  "inventory_ids": [
+    "G36"
+  ],
+  "problem": {
+    "name": "Cycle detection",
+    "name_latex": "Cycle detection",
+    "statement_latex": "Given an undirected graph $G=(V,E)$, decide whether it contains a cycle. Two input models are considered: an adjacency matrix and neighbor arrays with maximum degree $d_{\\max}$.",
+    "statement_text": "Given an undirected graph $G=(V,E)$, decide whether it contains a cycle. Two input models are considered: an adjacency matrix and neighbor arrays with maximum degree $d_{\\max}$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The cited implementation uses $O(\\log n)$ work qubits in addition to the supplied graph oracle, at the stated time cost.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The cited implementation uses $O(\\log n)$ work qubits in addition to the supplied graph oracle, at the stated time cost."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{3/2})$ matrix-query time, or $\\widetilde O(n\\sqrt{d_{\\max}})$ neighbor-array time, using $O(\\log n)$ work qubits in the Cade--Montanaro--Belovs construction.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n^{3/2})$ matrix-query time, or $\\widetilde O(n\\sqrt{d_{\\max}})$ neighbor-array time, using $O(\\log n)$ work qubits in the Cade–Montanaro–Belovs construction.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n^2)$ matrix-query time or $O(n+m)$ adjacency-list time by depth-first search.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n^2)$ matrix-query time or $O(n+m)$ adjacency-list time by depth-first search.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "span-connectivity"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "span-connectivity",
+      "label_latex": "Belovs--Reichardt span-program connectivity",
+      "problem_numbers": [
+        44
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1610.00581}{\\emph{Time and Space Efficient Quantum Algorithms for Detecting Cycles and Testing Bipartiteness}}. Cycle-detection algorithms",
+      "content_text": "Time and Space Efficient Quantum Algorithms for Detecting Cycles and Testing Bipartiteness. Cycle-detection algorithms",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1610.00581",
+          "title": "Time and Space Efficient Quantum Algorithms for Detecting Cycles and Testing Bipartiteness",
+          "label_latex": "\\emph{Time and Space Efficient Quantum Algorithms for Detecting Cycles and Testing Bipartiteness}",
+          "locator_latex": "Cycle-detection algorithms"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-137-citation-00211"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Belovs--Reichardt span-program connectivity",
+  "plot": {
+    "quantum": "\\widetilde O(n^{3/2})",
+    "classical": "\\Theta(n^2)",
+    "parameter": "vertex count n",
+    "model": "adjacency-matrix queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt n)",
+    "quantum_exponent": 1.5,
+    "classical_exponent": 2
+  },
+  "ordinal": 106,
+  "citation_ids": [
+    "entry-137-citation-00211"
+  ]
+}

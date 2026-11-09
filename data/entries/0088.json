@@ -1,9 +1,10 @@
 {
   "id": "entry-088",
   "number": 88,
-  "ordinal": 89,
+  "slug": "even",
   "title_latex": "Even--Mansour recovery with quantum queries",
   "title": "Even–Mansour recovery with quantum queries",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Even--Mansour key recovery with quantum chosen plaintexts",
@@ -14,60 +15,94 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(n)$ coherent queries and polynomial auxiliary time, Kuwakado--Morii and Simon period finding.",
-      "headline_text": "$O(n)$ coherent queries and polynomial auxiliary time, Kuwakado–Morii and Simon period finding.",
       "details_latex": "The function $F(x)=E(x)\\oplus P(x)$ has period $k_1$. The bounded-extra-collision analysis for a random public permutation supplies the success guarantee for Simon sampling; polynomial-time linear algebra recovers the period. One additional evaluation gives $k_2$. Coherent evaluation of both $E$ and $P$ is available in the stated Q2 model, so each sample has polynomial additional gates and two oracle evaluations.",
+      "headline_text": "$O(n)$ coherent queries and polynomial auxiliary time, Kuwakado–Morii and Simon period finding.",
       "details_text": "The function $F(x)=E(x)\\oplus P(x)$ has period $k_1$. The bounded-extra-collision analysis for a random public permutation supplies the success guarantee for Simon sampling; polynomial-time linear algebra recovers the period. One additional evaluation gives $k_2$. Coherent evaluation of both $E$ and $P$ is available in the stated Q2 model, so each sample has polynomial additional gates and two oracle evaluations."
     },
     "classical": {
       "headline_latex": "$\\widetilde\\Theta(2^n/D)$ public-permutation work with $D$ classical encryption queries, generic Even--Mansour attacks.",
-      "headline_text": "$\\widetilde\\Theta(2^n/D)$ public-permutation work with $D$ classical encryption queries, generic Even–Mansour attacks.",
       "details_latex": "The time--data tradeoff has scale $TD\\asymp2^n$, with $2\\le D\\le 2^n$ and total work including data acquisition. Minimizing $D+T$ gives the square-root total-work scale. The lower bound concerns the public random permutation and secret-key encryption access specified by the idealized construction.",
+      "headline_text": "$\\widetilde\\Theta(2^n/D)$ public-permutation work with $D$ classical encryption queries, generic Even–Mansour attacks.",
       "details_text": "The time–data tradeoff has scale $TD\\asymp2^n$, with $2\\le D\\le 2^n$ and total work including data acquisition. Minimizing $D+T$ gives the square-root total-work scale. The lower bound concerns the public random permutation and secret-key encryption access specified by the idealized construction."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-exponential-subexponential-to-polynomial",
       "color_key": "strengthPolynomialTime",
       "description_latex": "Exponential to polynomial in $n$, from Simon period finding. This uses the XOR period created by the Even--Mansour construction and its coherent chosen-plaintext access.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
       "description_text": "Exponential to polynomial in $n$, from Simon period finding. This uses the XOR period created by the Even–Mansour construction and its coherent chosen-plaintext access."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Fully proved in the stated random-permutation oracle model, with the bounded-extra-collision analysis supporting the period-recovery algorithm.",
+      "category_id": "evidence-proved",
       "description_text": "Fully proved in the stated random-permutation oracle model, with the bounded-extra-collision analysis supporting the period-recovery algorithm."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "The algorithm needs polynomial logical qubits for the input, output and period equations, plus workspace for the public permutation and coherent encryption device. The depth is polynomial in $n$ times the oracle depth. Realizing the supplied coherent secret-key oracle is part of the hardware model.",
+      "category_id": "hardware-polynomial",
       "description_text": "The algorithm needs polynomial logical qubits for the input, output and period equations, plus workspace for the public permutation and coherent encryption device. The depth is polynomial in $n$ times the oracle depth. Realizing the supplied coherent secret-key oracle is part of the hardware model."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Kuwakado--Morii attack with Simon period finding",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "88.1",
       "content_latex": "\\href{https://arxiv.org/pdf/1602.05973}{Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Breaking Symmetric Cryptosystems Using Quantum Period Finding} (CRYPTO 2016)}. Theorem 1: Simon sampling with an approximate promise; Section 3.2, ``Application to the Even-Mansour construction'': the Kuwakado--Morii attack and its extra-collision analysis; Figure 6: the period function.",
       "content_text": "Kaplan, Leurent, Leverrier and Naya-Plasencia, Breaking Symmetric Cryptosystems Using Quantum Period Finding (CRYPTO 2016). Theorem 1: Simon sampling with an approximate promise; Section 3.2, “Application to the Even-Mansour construction”: the Kuwakado–Morii attack and its extra-collision analysis; Figure 6: the period function.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1602.05973",
+          "title": "Breaking Symmetric Cryptosystems Using Quantum Period Finding",
+          "label_latex": "Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Breaking Symmetric Cryptosystems Using Quantum Period Finding} (CRYPTO 2016)",
+          "locator_latex": "Theorem 1: Simon sampling with an approximate promise; Section 3.2, ``Application to the Even-Mansour construction'': the Kuwakado--Morii attack and its extra-collision analysis; Figure 6: the period function."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-088-citation-001"
+        "entry-088-citation-00294"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "88.2",
       "content_latex": "\\href{https://arxiv.org/pdf/2002.12439}{Bonnetain et al., \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)}. Section 5.1 and Table 2: classical Even--Mansour time--data tradeoff.",
       "content_text": "Bonnetain et al., Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm (ASIACRYPT 2019; full version 2020). Section 5.1 and Table 2: classical Even–Mansour time–data tradeoff.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2002.12439",
+          "title": "Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm",
+          "label_latex": "Bonnetain et al., \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)",
+          "locator_latex": "Section 5.1 and Table 2: classical Even--Mansour time--data tradeoff."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-088-citation-002"
+        "entry-088-citation-00295"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-088-citation-001",
-    "entry-088-citation-002"
+  "algorithm_ids": [
+    "simon"
   ],
-  "source_latex": "\\entrytitle{88}{Even--Mansour recovery with quantum queries}{strengthPolynomialTime}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{87}\n\\begin{problem}[Even--Mansour key recovery with quantum chosen plaintexts]\nLet $P$ be a public random permutation on $\\{0,1\\}^n$, and let $E(x)=P(x\\oplus k_1)\\oplus k_2$. Given coherent oracle access to both $E$ and $P$, recover $k_1,k_2$. The coherent chosen-plaintext access is part of this cryptographic model, commonly called Q2. The comparison counts coherent or classical oracle queries to the encryption and public permutation, with polynomial auxiliary quantum-gate and classical-bit costs.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(n)$ coherent queries and polynomial auxiliary time, Kuwakado--Morii and Simon period finding.}\nThe function $F(x)=E(x)\\oplus P(x)$ has period $k_1$. The bounded-extra-collision analysis for a random public permutation supplies the success guarantee for Simon sampling; polynomial-time linear algebra recovers the period. One additional evaluation gives $k_2$. Coherent evaluation of both $E$ and $P$ is available in the stated Q2 model, so each sample has polynomial additional gates and two oracle evaluations.\n\n\\complexity{Classical}{$\\widetilde\\Theta(2^n/D)$ public-permutation work with $D$ classical encryption queries, generic Even--Mansour attacks.}\nThe time--data tradeoff has scale $TD\\asymp2^n$, with $2\\le D\\le 2^n$ and total work including data acquisition. Minimizing $D+T$ gives the square-root total-work scale. The lower bound concerns the public random permutation and secret-key encryption access specified by the idealized construction.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Exponential to polynomial in $n$, from Simon period finding. This uses the XOR period created by the Even--Mansour construction and its coherent chosen-plaintext access.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully proved in the stated random-permutation oracle model, with the bounded-extra-collision analysis supporting the period-recovery algorithm.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The algorithm needs polynomial logical qubits for the input, output and period equations, plus workspace for the public permutation and coherent encryption device. The depth is polynomial in $n$ times the oracle depth. Realizing the supplied coherent secret-key oracle is part of the hardware model.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{88}\n\\item \\href{https://arxiv.org/pdf/1602.05973}{Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Breaking Symmetric Cryptosystems Using Quantum Period Finding} (CRYPTO 2016)}. Theorem 1: Simon sampling with an approximate promise; Section 3.2, ``Application to the Even-Mansour construction'': the Kuwakado--Morii attack and its extra-collision analysis; Figure 6: the period function.\n\\item \\href{https://arxiv.org/pdf/2002.12439}{Bonnetain et al., \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)}. Section 5.1 and Table 2: classical Even--Mansour time--data tradeoff.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "simon",
+      "label_latex": "Simon period finding and offline Simon",
+      "problem_numbers": [
+        89,
+        177,
+        178
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{88}{Even--Mansour recovery with quantum queries}{strengthPolynomialTime}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{87}\n\\begin{problem}[Even--Mansour key recovery with quantum chosen plaintexts]\nLet $P$ be a public random permutation on $\\{0,1\\}^n$, and let $E(x)=P(x\\oplus k_1)\\oplus k_2$. Given coherent oracle access to both $E$ and $P$, recover $k_1,k_2$. The coherent chosen-plaintext access is part of this cryptographic model, commonly called Q2. The comparison counts coherent or classical oracle queries to the encryption and public permutation, with polynomial auxiliary quantum-gate and classical-bit costs.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(n)$ coherent queries and polynomial auxiliary time, Kuwakado--Morii and Simon period finding.}\nThe function $F(x)=E(x)\\oplus P(x)$ has period $k_1$. The bounded-extra-collision analysis for a random public permutation supplies the success guarantee for Simon sampling; polynomial-time linear algebra recovers the period. One additional evaluation gives $k_2$. Coherent evaluation of both $E$ and $P$ is available in the stated Q2 model, so each sample has polynomial additional gates and two oracle evaluations.\n\n\\complexity{Classical}{$\\widetilde\\Theta(2^n/D)$ public-permutation work with $D$ classical encryption queries, generic Even--Mansour attacks.}\nThe time--data tradeoff has scale $TD\\asymp2^n$, with $2\\le D\\le 2^n$ and total work including data acquisition. Minimizing $D+T$ gives the square-root total-work scale. The lower bound concerns the public random permutation and secret-key encryption access specified by the idealized construction.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Exponential to polynomial in $n$, from Simon period finding. This uses the XOR period created by the Even--Mansour construction and its coherent chosen-plaintext access.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully proved in the stated random-permutation oracle model, with the bounded-extra-collision analysis supporting the period-recovery algorithm.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The algorithm needs polynomial logical qubits for the input, output and period equations, plus workspace for the public permutation and coherent encryption device. The depth is polynomial in $n$ times the oracle depth. Realizing the supplied coherent secret-key oracle is part of the hardware model.\n\n\n\\subhead{Algorithm: Kuwakado--Morii attack with Simon period finding}\n\\begin{algorithmindex}{88}\n\\item \\href{https://arxiv.org/pdf/1602.05973}{Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Breaking Symmetric Cryptosystems Using Quantum Period Finding} (CRYPTO 2016)}. Theorem 1: Simon sampling with an approximate promise; Section 3.2, ``Application to the Even-Mansour construction'': the Kuwakado--Morii attack and its extra-collision analysis; Figure 6: the period function.\n\\item \\href{https://arxiv.org/pdf/2002.12439}{Bonnetain et al., \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)}. Section 5.1 and Table 2: classical Even--Mansour time--data tradeoff.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{simon}{Simon period finding and offline Simon}: \\problemref{89}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 142,
+  "citation_ids": [
+    "entry-088-citation-00294",
+    "entry-088-citation-00295"
+  ]
 }

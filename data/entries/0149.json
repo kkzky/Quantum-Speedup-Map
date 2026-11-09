@@ -1,0 +1,130 @@
+{
+  "id": "entry-149",
+  "number": 149,
+  "slug": "prior-a05",
+  "title": "Basis representation of a finite black-box ring",
+  "title_latex": "Basis representation of a finite black-box ring",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a05",
+  "inventory_ids": [
+    "A05"
+  ],
+  "problem": {
+    "name": "Basis representation of a finite black-box ring",
+    "name_latex": "Basis representation of a finite black-box ring",
+    "statement_latex": "Given generators of a finite ring $R$ and uniquely encoded addition and multiplication oracles, compute an additive invariant-factor basis and the multiplication structure constants in that basis. Complexity is in $\\log|R|$ and the generator-description length.",
+    "statement_text": "Given generators of a finite ring $R$ and uniquely encoded addition and multiplication oracles, compute an additive invariant-factor basis and the multiplication structure constants in that basis. Complexity is in $\\log|R|$ and the generator-description length."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log|R|)$ quantum time by Arvind--Das--Mukhopadhyay, using abelian-group decomposition and quantum discrete logarithms.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log|R|)$ quantum time by Arvind–Das–Mukhopadhyay, using abelian-group decomposition and quantum discrete logarithms.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Generic additive-group structure and discrete-logarithm algorithms give $\\widetilde O(|R|^{1/2})$ ring operations, with polynomially many basis products. If structure constants are supplied initially, the basis-conversion work is already present in the input.",
+      "details_latex": "",
+      "headline_text": "Generic additive-group structure and discrete-logarithm algorithms give $\\widetilde O(|R|^{1/2})$ ring operations, with polynomially many basis products. If structure constants are supplied initially, the basis-conversion work is already present in the input.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "black-box-ring-basis",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        146,
+        147,
+        150,
+        152,
+        154,
+        229,
+        193
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://doi.org/10.1007/11809678_15}{\\emph{The Complexity of Black-Box Ring Problems}}. Basis-representation construction; source PDF https://citeseerx.ist.psu.edu/document?doi=8c18a1a053fc1317bdc53810c4ebe29aaa1bc799&repid=rep1&type=pdf",
+      "content_text": "The Complexity of Black-Box Ring Problems. Basis-representation construction; source PDF https://citeseerx.ist.psu.edu/document?doi=8c18a1a053fc1317bdc53810c4ebe29aaa1bc799 repid=rep1 type=pdf",
+      "links": [
+        {
+          "url": "https://doi.org/10.1007/11809678_15",
+          "title": "The Complexity of Black-Box Ring Problems",
+          "label_latex": "\\emph{The Complexity of Black-Box Ring Problems}",
+          "locator_latex": "Basis-representation construction; source PDF https://citeseerx.ist.psu.edu/document?doi=8c18a1a053fc1317bdc53810c4ebe29aaa1bc799&repid=rep1&type=pdf"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-149-citation-00310"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0809.3413}{\\emph{Structure computation and discrete logarithms in finite abelian p-groups}}. Generic structure and discrete-logarithm algorithms applied to the additive group",
+      "content_text": "Structure computation and discrete logarithms in finite abelian p-groups. Generic structure and discrete-logarithm algorithms applied to the additive group",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0809.3413",
+          "title": "Structure computation and discrete logarithms in finite abelian p-groups",
+          "label_latex": "\\emph{Structure computation and discrete logarithms in finite abelian p-groups}",
+          "locator_latex": "Generic structure and discrete-logarithm algorithms applied to the additive group"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-149-citation-00311"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Arvind--Das--Mukhopadhyay finite-ring basis algorithm; Shor order finding and discrete logarithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log|R|)",
+    "classical": "\\widetilde O(|R|^{1/2})",
+    "parameter": "ring cardinality |R|",
+    "model": "generic ring operations",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial in log |R|"
+  },
+  "ordinal": 149,
+  "citation_ids": [
+    "entry-149-citation-00310",
+    "entry-149-citation-00311"
+  ]
+}

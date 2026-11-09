@@ -1,0 +1,111 @@
+{
+  "id": "entry-166",
+  "number": 166,
+  "slug": "prior-a23",
+  "title": "Hidden quadratic and cubic polynomial graphs",
+  "title_latex": "Hidden quadratic and cubic polynomial graphs",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a23",
+  "inventory_ids": [
+    "A23"
+  ],
+  "problem": {
+    "name": "Hidden quadratic and cubic polynomial graphs",
+    "name_latex": "Hidden quadratic and cubic polynomial graphs",
+    "statement_latex": "For a polynomial $P:\\mathbb F_q^n\\to\\mathbb F_q$ of fixed degree two or three, an oracle $F(x,y)$ has equal outputs exactly when $y-P(x)$ agrees. Recover the nonconstant coefficients of $P$; the constant term is absorbed by output relabeling.",
+    "statement_text": "For a polynomial $P:\\mathbb F_q^n\\to\\mathbb F_q$ of fixed degree two or three, an oracle $F(x,y)$ has equal outputs exactly when $y-P(x)$ agrees. Recover the nonconstant coefficients of $P$; the constant term is absorbed by output relabeling."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log q)$ time for fixed degree and number of variables by Decker--Wocjan's polynomial-graph Fourier algorithm.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log q)$ time for fixed degree and number of variables by Decker–Wocjan's polynomial-graph Fourier algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(\\sqrt q)$ classical oracle queries are required for the hard fixed-degree families; polynomially many queries in $q$ suffice by acquiring enough labeled points and interpolating.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(\\sqrt q)$ classical oracle queries are required for the hard fixed-degree families; polynomially many queries in $q$ suffice by acquiring enough labeled points and interpolating.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "hidden-polynomial-graph"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0703195}{\\emph{Efficient Quantum Algorithm for Hidden Quadratic and Cubic Polynomial Function Graphs}}. Quadratic/cubic hidden-graph algorithms.",
+      "content_text": "Efficient Quantum Algorithm for Hidden Quadratic and Cubic Polynomial Function Graphs. Quadratic/cubic hidden-graph algorithms.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0703195",
+          "title": "Efficient Quantum Algorithm for Hidden Quadratic and Cubic Polynomial Function Graphs",
+          "label_latex": "\\emph{Efficient Quantum Algorithm for Hidden Quadratic and Cubic Polynomial Function Graphs}",
+          "locator_latex": "Quadratic/cubic hidden-graph algorithms."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-166-citation-00328"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0706.1219}{\\emph{Efficient Quantum Algorithm for Identifying Hidden Polynomials}}. Classical query lower bound and hidden-polynomial identification",
+      "content_text": "Efficient Quantum Algorithm for Identifying Hidden Polynomials. Classical query lower bound and hidden-polynomial identification",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0706.1219",
+          "title": "Efficient Quantum Algorithm for Identifying Hidden Polynomials",
+          "label_latex": "\\emph{Efficient Quantum Algorithm for Identifying Hidden Polynomials}",
+          "locator_latex": "Classical query lower bound and hidden-polynomial identification"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-166-citation-00329"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Decker--Wocjan hidden-polynomial-graph algorithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log q)",
+    "classical": "\\Omega(\\sqrt q)",
+    "parameter": "field size q; fixed degree and number of variables",
+    "model": "hidden-label oracle queries and efficient quantum time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial in log q"
+  },
+  "ordinal": 165,
+  "citation_ids": [
+    "entry-166-citation-00328",
+    "entry-166-citation-00329"
+  ]
+}

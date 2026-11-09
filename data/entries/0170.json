@@ -1,0 +1,119 @@
+{
+  "id": "entry-170",
+  "number": 170,
+  "slug": "prior-a33",
+  "title": "HOMFLY polynomial approximation",
+  "title_latex": "HOMFLY polynomial approximation",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a33",
+  "inventory_ids": [
+    "A33"
+  ],
+  "problem": {
+    "name": "HOMFLY polynomial approximation",
+    "name_latex": "HOMFLY polynomial approximation",
+    "statement_latex": "Given a braid and fixed admissible root-of-unity parameters for a Hecke-algebra representation, estimate the normalized HOMFLY invariant of its trace closure within additive $\\varepsilon$. The normalization is the representation's normalized Markov trace.",
+    "statement_text": "Given a braid and fixed admissible root-of-unity parameters for a Hecke-algebra representation, estimate the normalized HOMFLY invariant of its trace closure within additive $\\varepsilon$. The normalization is the representation's normalized Markov trace."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "The stated complexity or cryptographic implication provides strong evidence for the separation.",
+      "category_id": "evidence-strong",
+      "description_text": "The stated complexity or cryptographic implication provides strong evidence for the separation."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The one-clean-qubit model uses one initialized control qubit together with a polynomial-size maximally mixed register; coherent controlled representation gates and repeated measurements implement the estimator.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The one-clean-qubit model uses one initialized control qubit together with a polynomial-size maximally mixed register; coherent controlled representation gates and repeated measurements implement the estimator."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(n,m,1/\\varepsilon)$ gates by Jordan--Wocjan normalized-trace estimation in the one-clean-qubit model, for the representation families constructed in the paper.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n,m,1/\\varepsilon)$ gates by Jordan–Wocjan normalized-trace estimation in the one-clean-qubit model, for the representation families constructed in the paper.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Classical evaluation by Hecke-algebra state propagation is exponential in the representation size parameter. The Jones specialization contains the $\\mathsf{DQC1}$-complete additive-approximation regime. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_latex": "",
+      "headline_text": "Classical evaluation by Hecke-algebra state propagation is exponential in the representation size parameter. The Jones specialization contains the $\\mathsf{DQC1}$-complete additive-approximation regime. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "one-clean-qubit-link-invariants"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "one-clean-qubit-link-invariants",
+      "label_latex": "One-clean-qubit Jones and HOMFLY approximation",
+      "problem_numbers": [
+        168
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0807.4688}{\\emph{The Jones polynomial: quantum algorithms and applications in quantum complexity theory; Estimating Jones and HOMFLY polynomials with One Clean Qubit}}. HOMFLY algorithm; precursor https://arxiv.org/abs/quant-ph/0603069",
+      "content_text": "The Jones polynomial: quantum algorithms and applications in quantum complexity theory; Estimating Jones and HOMFLY polynomials with One Clean Qubit. HOMFLY algorithm; precursor https://arxiv.org/abs/quant-ph/0603069",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0807.4688",
+          "title": "The Jones polynomial: quantum algorithms and applications in quantum complexity theory; Estimating Jones and HOMFLY polynomials with One Clean Qubit",
+          "label_latex": "\\emph{The Jones polynomial: quantum algorithms and applications in quantum complexity theory; Estimating Jones and HOMFLY polynomials with One Clean Qubit}",
+          "locator_latex": "HOMFLY algorithm; precursor https://arxiv.org/abs/quant-ph/0603069"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-170-citation-00363"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-170-citation-00364"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: One-clean-qubit Jones and HOMFLY approximation",
+  "plot": {
+    "quantum": "\\operatorname{poly}(L,1/\\varepsilon)",
+    "classical": "\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}",
+    "parameter": "finite input length L, implemented qubits q and gates g, width w, encoding size s, additive error epsilon",
+    "model": "gate/time complexity at the stated normalization and precision",
+    "quantum_kind": "polynomial",
+    "classical_kind": "unknown",
+    "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
+  },
+  "ordinal": 184,
+  "citation_ids": [
+    "entry-170-citation-00363",
+    "entry-170-citation-00364"
+  ]
+}

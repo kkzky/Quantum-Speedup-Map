@@ -1,9 +1,10 @@
 {
   "id": "entry-084",
   "number": 84,
-  "ordinal": 85,
+  "slug": "collision",
   "title_latex": "Hash collisions",
   "title": "Hash collisions",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Hash collisions",
@@ -14,70 +15,102 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(r+\\sqrt{2^n/r})$ queries with a table of $r$ values, Brassard--H\\o yer--Tapp collision search.",
-      "headline_text": "$O(r+\\sqrt{2^n/r})$ queries with a table of $r$ values, Brassard–Høyer–Tapp collision search.",
       "details_latex": "The table parameter satisfies $1\\le r\\le 2^n$. Optimizing it gives $r=2^{n/3}$ and the tight $\\Theta(2^{n/3})$ quantum query bound. Near-matching time assumes efficient coherent lookup into the stored table. A gate implementation includes the lookup circuit and reversible hash cost. The random-function setting yields the matching quantum collision lower-bound scale.",
+      "headline_text": "$O(r+\\sqrt{2^n/r})$ queries with a table of $r$ values, Brassard–Høyer–Tapp collision search.",
       "details_text": "The table parameter satisfies $1\\le r\\le 2^n$. Optimizing it gives $r=2^{n/3}$ and the tight $\\Theta(2^{n/3})$ quantum query bound. Near-matching time assumes efficient coherent lookup into the stored table. A gate implementation includes the lookup circuit and reversible hash cost. The random-function setting yields the matching quantum collision lower-bound scale."
     },
     "classical": {
       "headline_latex": "$\\Theta(2^{n/2})$ queries, birthday search or Pollard-rho collision finding.",
-      "headline_text": "$\\Theta(2^{n/2})$ queries, birthday search or Pollard-rho collision finding.",
       "details_latex": "Birthday storage is of order $2^{n/2}$ entries; Pollard-rho offers low-memory collision finding under the usual random-function assumptions. For a hash given by a $G$-gate circuit on $\\ell$ input bits, the predicate $x\\ne x'$, $H(x)=H(x')$ has $O(\\ell+n+G)$ gates. Boolean tensor contraction and witness recovery give $\\operatorname{poly}(\\ell+n+G)2^{O((\\ell+n+G)/\\sqrt{\\log(\\ell+n+G)})}$ classical time. A linear-size explicit family therefore has a subexponential comparator.",
+      "headline_text": "$\\Theta(2^{n/2})$ queries, birthday search or Pollard-rho collision finding.",
       "details_text": "Birthday storage is of order $2^{n/2}$ entries; Pollard-rho offers low-memory collision finding under the usual random-function assumptions. For a hash given by a $G$-gate circuit on $\\ell$ input bits, the predicate $x\\ne x'$, $H(x)=H(x')$ has $O(\\ell+n+G)$ gates. Boolean tensor contraction and witness recovery give $\\operatorname{poly}(\\ell+n+G)2^{O((\\ell+n+G)/\\sqrt{\\log(\\ell+n+G)})}$ classical time. A linear-size explicit family therefore has a subexponential comparator."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial speedup of degree $3/2$ relative to the classical birthday query count. The BHT construction combines a stored table with Grover search. In output length $n$, the exponent changes from $1/2$ to $1/3$ without power saving.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial speedup of degree $3/2$ relative to the classical birthday query count. The BHT construction combines a stored table with Grover search. In output length $n$, the exponent changes from $1/2$ to $1/3$ without power saving."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Fully proved in the collision-oracle model with the stated domain promise; random-function collision bounds give the corresponding cryptographic query scale.",
+      "category_id": "evidence-proved",
       "description_text": "Fully proved in the collision-oracle model with the stated domain promise; random-function collision bounds give the corresponding cryptographic query scale."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The time-efficient BHT implementation stores about $2^{n/3}$ entries with coherent access and requires exponentially many fault-tolerant operations. Polynomial-qubit alternatives use different time-memory tradeoffs; the lookup model is a material resource assumption.\n\n{\\small [Before ``ETH is false'', the generic collision comparison used $\\Theta(2^{n/2})$ classical versus $\\Theta(2^{n/3})$ quantum queries, an exponential-constant improvement also used for explicit hash circuits.]\\par}",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The time-efficient BHT implementation stores about $2^{n/3}$ entries with coherent access and requires exponentially many fault-tolerant operations. Polynomial-qubit alternatives use different time-memory tradeoffs; the lookup model is a material resource assumption. [Before “ETH is false”, the generic collision comparison used $\\Theta(2^{n/2})$ classical versus $\\Theta(2^{n/3})$ quantum queries, an exponential-constant improvement also used for explicit hash circuits.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: Brassard--H{\\o}yer--Tapp collision search",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "84.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9705002}{Brassard, H\\o yer and Tapp, \\emph{Quantum Algorithm for the Collision Problem} (1997)}. Theorem 1 and \\textsc{Collision}$(F,k)$: table-based quantum collision search; Section 3: coherent table-access costs.",
       "content_text": "Brassard, Høyer and Tapp, Quantum Algorithm for the Collision Problem (1997). Theorem 1 and Collision$(F,k)$: table-based quantum collision search; Section 3: coherent table-access costs.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/9705002",
+          "title": "Quantum Algorithm for the Collision Problem",
+          "label_latex": "Brassard, H\\o yer and Tapp, \\emph{Quantum Algorithm for the Collision Problem} (1997)",
+          "locator_latex": "Theorem 1 and \\textsc{Collision}$(F,k)$: table-based quantum collision search; Section 3: coherent table-access costs."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-084-citation-001"
+        "entry-084-citation-00285"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "84.2",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0112086}{Shi, \\emph{Quantum Lower Bounds for the Collision and the Element Distinctness Problems} (FOCS 2002)}. Theorem 1.1: tight cube-root collision query lower bound.",
       "content_text": "Shi, Quantum Lower Bounds for the Collision and the Element Distinctness Problems (FOCS 2002). Theorem 1.1: tight cube-root collision query lower bound.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0112086",
+          "title": "Quantum Lower Bounds for the Collision and the Element Distinctness Problems",
+          "label_latex": "Shi, \\emph{Quantum Lower Bounds for the Collision and the Element Distinctness Problems} (FOCS 2002)",
+          "locator_latex": "Theorem 1.1: tight cube-root collision query lower bound."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-084-citation-002"
+        "entry-084-citation-00286"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "84.3",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-084-citation-003"
+        "entry-084-citation-00287"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-084-citation-001",
-    "entry-084-citation-002",
-    "entry-084-citation-003"
+  "algorithm_ids": [
+    "bht-collision"
   ],
-  "source_latex": "\\entrytitle{84}{Hash collisions}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{83}\n\\begin{problem}[Hash collisions]\nGiven a random function $H$ with $n$-bit outputs and a sufficiently large domain, find distinct $x,x'$ with $H(x)=H(x')$. Collision resistance is the relevant property for many hash-based constructions and commitment schemes. The random-function comparison measures hash-oracle queries; total quantum time additionally counts coherent table access, and explicit circuits use gate or bit complexity.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(r+\\sqrt{2^n/r})$ queries with a table of $r$ values, Brassard--H\\o yer--Tapp collision search.}\nThe table parameter satisfies $1\\le r\\le 2^n$. Optimizing it gives $r=2^{n/3}$ and the tight $\\Theta(2^{n/3})$ quantum query bound. Near-matching time assumes efficient coherent lookup into the stored table. A gate implementation includes the lookup circuit and reversible hash cost. The random-function setting yields the matching quantum collision lower-bound scale.\n\n\\complexity{Classical}{$\\Theta(2^{n/2})$ queries, birthday search or Pollard-rho collision finding.}\nBirthday storage is of order $2^{n/2}$ entries; Pollard-rho offers low-memory collision finding under the usual random-function assumptions. For a hash given by a $G$-gate circuit on $\\ell$ input bits, the predicate $x\\ne x'$, $H(x)=H(x')$ has $O(\\ell+n+G)$ gates. Boolean tensor contraction and witness recovery give $\\operatorname{poly}(\\ell+n+G)2^{O((\\ell+n+G)/\\sqrt{\\log(\\ell+n+G)})}$ classical time. A linear-size explicit family therefore has a subexponential comparator.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup of degree $3/2$ relative to the classical birthday query count. The BHT construction combines a stored table with Grover search. In output length $n$, the exponent changes from $1/2$ to $1/3$ without power saving.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully proved in the collision-oracle model with the stated domain promise; random-function collision bounds give the corresponding cryptographic query scale.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The time-efficient BHT implementation stores about $2^{n/3}$ entries with coherent access and requires exponentially many fault-tolerant operations. Polynomial-qubit alternatives use different time-memory tradeoffs; the lookup model is a material resource assumption.\n\n{\\small [Before ``ETH is false'', the generic collision comparison used $\\Theta(2^{n/2})$ classical versus $\\Theta(2^{n/3})$ quantum queries, an exponential-constant improvement also used for explicit hash circuits.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{84}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9705002}{Brassard, H\\o yer and Tapp, \\emph{Quantum Algorithm for the Collision Problem} (1997)}. Theorem 1 and \\textsc{Collision}$(F,k)$: table-based quantum collision search; Section 3: coherent table-access costs.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0112086}{Shi, \\emph{Quantum Lower Bounds for the Collision and the Element Distinctness Problems} (FOCS 2002)}. Theorem 1.1: tight cube-root collision query lower bound.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{84}{Hash collisions}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{83}\n\\begin{problem}[Hash collisions]\nGiven a random function $H$ with $n$-bit outputs and a sufficiently large domain, find distinct $x,x'$ with $H(x)=H(x')$. Collision resistance is the relevant property for many hash-based constructions and commitment schemes. The random-function comparison measures hash-oracle queries; total quantum time additionally counts coherent table access, and explicit circuits use gate or bit complexity.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(r+\\sqrt{2^n/r})$ queries with a table of $r$ values, Brassard--H\\o yer--Tapp collision search.}\nThe table parameter satisfies $1\\le r\\le 2^n$. Optimizing it gives $r=2^{n/3}$ and the tight $\\Theta(2^{n/3})$ quantum query bound. Near-matching time assumes efficient coherent lookup into the stored table. A gate implementation includes the lookup circuit and reversible hash cost. The random-function setting yields the matching quantum collision lower-bound scale.\n\n\\complexity{Classical}{$\\Theta(2^{n/2})$ queries, birthday search or Pollard-rho collision finding.}\nBirthday storage is of order $2^{n/2}$ entries; Pollard-rho offers low-memory collision finding under the usual random-function assumptions. For a hash given by a $G$-gate circuit on $\\ell$ input bits, the predicate $x\\ne x'$, $H(x)=H(x')$ has $O(\\ell+n+G)$ gates. Boolean tensor contraction and witness recovery give $\\operatorname{poly}(\\ell+n+G)2^{O((\\ell+n+G)/\\sqrt{\\log(\\ell+n+G)})}$ classical time. A linear-size explicit family therefore has a subexponential comparator.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup of degree $3/2$ relative to the classical birthday query count. The BHT construction combines a stored table with Grover search. In output length $n$, the exponent changes from $1/2$ to $1/3$ without power saving.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully proved in the collision-oracle model with the stated domain promise; random-function collision bounds give the corresponding cryptographic query scale.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The time-efficient BHT implementation stores about $2^{n/3}$ entries with coherent access and requires exponentially many fault-tolerant operations. Polynomial-qubit alternatives use different time-memory tradeoffs; the lookup model is a material resource assumption.\n\n{\\small [Before ``ETH is false'', the generic collision comparison used $\\Theta(2^{n/2})$ classical versus $\\Theta(2^{n/3})$ quantum queries, an exponential-constant improvement also used for explicit hash circuits.]\\par}\n\\subhead{Algorithm: Brassard--H{\\o}yer--Tapp collision search}\n\\begin{algorithmindex}{84}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9705002}{Brassard, H\\o yer and Tapp, \\emph{Quantum Algorithm for the Collision Problem} (1997)}. Theorem 1 and \\textsc{Collision}$(F,k)$: table-based quantum collision search; Section 3: coherent table-access costs.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0112086}{Shi, \\emph{Quantum Lower Bounds for the Collision and the Element Distinctness Problems} (FOCS 2002)}. Theorem 1.1: tight cube-root collision query lower bound.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.\n\\end{algorithmindex}",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 139,
+  "citation_ids": [
+    "entry-084-citation-00285",
+    "entry-084-citation-00286",
+    "entry-084-citation-00287"
+  ]
 }

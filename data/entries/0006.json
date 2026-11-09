@@ -1,9 +1,10 @@
 {
   "id": "entry-006",
   "number": 6,
-  "ordinal": 6,
+  "slug": "approximate-counting-of-feasible-assignments",
   "title_latex": "Approximate counting of feasible assignments",
   "title": "Approximate counting of feasible assignments",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Approximate counting",
@@ -14,60 +15,103 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(1/\\epsilon)$ queries, quantum counting and amplitude estimation.",
-      "headline_text": "$O(1/\\epsilon)$ queries, quantum counting and amplitude estimation.",
       "details_latex": "For additive error $\\epsilon$ and constant failure probability, coherent sampling and its inverse give the stated bound. Relative error $\\epsilon a$ for $a>0$ costs $O(1/(\\epsilon\\sqrt a))$ calls. Gate complexity multiplies these counts by the state-preparation, oracle and reflection costs. The finite domain permits exact enumeration when that is cheaper than the displayed precision-dependent bound.",
+      "headline_text": "$O(1/\\epsilon)$ queries, quantum counting and amplitude estimation.",
       "details_text": "For additive error $\\epsilon$ and constant failure probability, coherent sampling and its inverse give the stated bound. Relative error $\\epsilon a$ for $a>0$ costs $O(1/(\\epsilon\\sqrt a))$ calls. Gate complexity multiplies these counts by the state-preparation, oracle and reflection costs. The finite domain permits exact enumeration when that is cheaper than the displayed precision-dependent bound."
     },
     "classical": {
       "headline_latex": "$\\Theta(1/\\epsilon^2)$ worst-case sampling queries, Monte Carlo estimation.",
-      "headline_text": "$\\Theta(1/\\epsilon^2)$ worst-case sampling queries, Monte Carlo estimation.",
       "details_latex": "Independent samples give the additive-error bound, capped by $2^n$ evaluations of the entire domain. Relative error costs $O(1/(a\\epsilon^2))$ samples. When $f$ is an explicit fixed-width CNF, deterministic tensor contraction computes the count exactly in $\\operatorname{poly}(n,m)2^{O(n\\log\\log n/\\sqrt{\\log n})}$ bit operations and polynomial space; for $m=O(n)$ the exponent is $O(n/\\sqrt{\\log n})$. This exact method is an additional comparator at high precision or very small feasible density.",
+      "headline_text": "$\\Theta(1/\\epsilon^2)$ worst-case sampling queries, Monte Carlo estimation.",
       "details_text": "Independent samples give the additive-error bound, capped by $2^n$ evaluations of the entire domain. Relative error costs $O(1/(a\\epsilon^2))$ samples. When $f$ is an explicit fixed-width CNF, deterministic tensor contraction computes the count exactly in $\\operatorname{poly}(n,m)2^{O(n\\log\\log n/\\sqrt{\\log n})}$ bit operations and polynomial space; for $m=O(n)$ the exponent is $O(n/\\sqrt{\\log n})$. This exact method is an additional comparator at high precision or very small feasible density."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Quadratic polynomial improvement in inverse additive precision in the sampling-oracle model, from amplitude estimation. Relative-error improvement also depends on the feasible density $a$.",
+      "category_id": "strength-polynomial",
       "description_text": "Quadratic polynomial improvement in inverse additive precision in the sampling-oracle model, from amplitude estimation. Relative-error improvement also depends on the feasible density $a$."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Tight worst-case sampling-oracle separation in the precision range before finite-domain saturation. Explicit formula structure gives the additional classical comparison stated above.",
+      "category_id": "evidence-proved",
       "description_text": "Tight worst-case sampling-oracle separation in the precision range before finite-domain saturation. Explicit formula structure gives the additional classical comparison stated above."
     },
     "hardware": {
-      "category_id": "hardware-small",
       "color_key": "hardwareSmall",
       "description_latex": "Small amplitude-estimation circuits have been demonstrated. The input register needs $n$ qubits plus oracle workspace; phase-estimation implementations add $O(\\log(1/\\epsilon))$ ancillas, while iterative variants reduce this register. Useful high precision requires long coherent oracle sequences and fault tolerance.",
+      "category_id": "hardware-small",
       "description_text": "Small amplitude-estimation circuits have been demonstrated. The input register needs $n$ qubits plus oracle workspace; phase-estimation implementations add $O(\\log(1/\\epsilon))$ ancillas, while iterative variants reduce this register. Useful high precision requires long coherent oracle sequences and fault tolerance."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum counting and amplitude estimation",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "6.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard, H{\\o}yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 4, \\textsc{Est Amp} and Theorem 12; Theorem 13 defines \\textsc{Count}, and Theorem 15 gives relative approximation.",
       "content_text": "Brassard, Høyer, Mosca and Tapp, Quantum Amplitude Amplification and Estimation (2002). Section 4, Est Amp and Theorem 12; Theorem 13 defines Count, and Theorem 15 gives relative approximation.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0005055",
+          "title": "Quantum Amplitude Amplification and Estimation",
+          "label_latex": "Brassard, H{\\o}yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)",
+          "locator_latex": "Section 4, \\textsc{Est Amp} and Theorem 12; Theorem 13 defines \\textsc{Count}, and Theorem 15 gives relative approximation."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-006-citation-001"
+        "entry-006-citation-00016"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "6.2",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D: exact fixed-width counting.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and Appendix D: exact fixed-width counting.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1 and Appendix D: exact fixed-width counting."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-006-citation-002"
+        "entry-006-citation-00017"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-006-citation-001",
-    "entry-006-citation-002"
+  "algorithm_ids": [
+    "amplitude-estimation"
   ],
-  "source_latex": "\\entrytitle{6}{Approximate counting of feasible assignments}{strengthPolynomial}{evidenceProved}{hardwareSmall}\n\\setcounter{problem}{5}\n\\begin{problem}[Approximate counting]\nFor an oracle $f:\\{0,1\\}^n\\to\\{0,1\\}$, let $a=2^{-n}\\sum_x f(x)$. Output $\\widehat a$ such that $|\\widehat a-a|\\leq\\epsilon$ with probability at least $2/3$. The count is $2^n\\widehat a$; this estimates solution density, feasible volume, or a probability under a reversibly samplable candidate distribution.\nThe black-box bounds count oracle queries, with gate costs obtained from the reversible oracle; the explicit-CNF comparator counts classical bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(1/\\epsilon)$ queries, quantum counting and amplitude estimation.}\nFor additive error $\\epsilon$ and constant failure probability, coherent sampling and its inverse give the stated bound. Relative error $\\epsilon a$ for $a>0$ costs $O(1/(\\epsilon\\sqrt a))$ calls. Gate complexity multiplies these counts by the state-preparation, oracle and reflection costs. The finite domain permits exact enumeration when that is cheaper than the displayed precision-dependent bound.\n\\complexity{Classical}{$\\Theta(1/\\epsilon^2)$ worst-case sampling queries, Monte Carlo estimation.}\nIndependent samples give the additive-error bound, capped by $2^n$ evaluations of the entire domain. Relative error costs $O(1/(a\\epsilon^2))$ samples. When $f$ is an explicit fixed-width CNF, deterministic tensor contraction computes the count exactly in $\\operatorname{poly}(n,m)2^{O(n\\log\\log n/\\sqrt{\\log n})}$ bit operations and polynomial space; for $m=O(n)$ the exponent is $O(n/\\sqrt{\\log n})$. This exact method is an additional comparator at high precision or very small feasible density.\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic polynomial improvement in inverse additive precision in the sampling-oracle model, from amplitude estimation. Relative-error improvement also depends on the feasible density $a$.\n\\dimensionlabel{Evidence}{evidenceProved} Tight worst-case sampling-oracle separation in the precision range before finite-domain saturation. Explicit formula structure gives the additional classical comparison stated above.\n\\dimensionlabel{Hardware}{hardwareSmall} Small amplitude-estimation circuits have been demonstrated. The input register needs $n$ qubits plus oracle workspace; phase-estimation implementations add $O(\\log(1/\\epsilon))$ ancillas, while iterative variants reduce this register. Useful high precision requires long coherent oracle sequences and fault tolerance.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{6}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard, H{\\o}yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 4, \\textsc{Est Amp} and Theorem 12; Theorem 13 defines \\textsc{Count}, and Theorem 15 gives relative approximation.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D: exact fixed-width counting.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "amplitude-estimation",
+      "label_latex": "Quantum amplitude estimation and counting",
+      "problem_numbers": [
+        54,
+        90,
+        99,
+        112,
+        120,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{6}{Approximate counting of feasible assignments}{strengthPolynomial}{evidenceProved}{hardwareSmall}\n\\setcounter{problem}{5}\n\\begin{problem}[Approximate counting]\nFor an oracle $f:\\{0,1\\}^n\\to\\{0,1\\}$, let $a=2^{-n}\\sum_x f(x)$. Output $\\widehat a$ such that $|\\widehat a-a|\\leq\\epsilon$ with probability at least $2/3$. The count is $2^n\\widehat a$; this estimates solution density, feasible volume, or a probability under a reversibly samplable candidate distribution.\nThe black-box bounds count oracle queries, with gate costs obtained from the reversible oracle; the explicit-CNF comparator counts classical bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(1/\\epsilon)$ queries, quantum counting and amplitude estimation.}\nFor additive error $\\epsilon$ and constant failure probability, coherent sampling and its inverse give the stated bound. Relative error $\\epsilon a$ for $a>0$ costs $O(1/(\\epsilon\\sqrt a))$ calls. Gate complexity multiplies these counts by the state-preparation, oracle and reflection costs. The finite domain permits exact enumeration when that is cheaper than the displayed precision-dependent bound.\n\\complexity{Classical}{$\\Theta(1/\\epsilon^2)$ worst-case sampling queries, Monte Carlo estimation.}\nIndependent samples give the additive-error bound, capped by $2^n$ evaluations of the entire domain. Relative error costs $O(1/(a\\epsilon^2))$ samples. When $f$ is an explicit fixed-width CNF, deterministic tensor contraction computes the count exactly in $\\operatorname{poly}(n,m)2^{O(n\\log\\log n/\\sqrt{\\log n})}$ bit operations and polynomial space; for $m=O(n)$ the exponent is $O(n/\\sqrt{\\log n})$. This exact method is an additional comparator at high precision or very small feasible density.\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic polynomial improvement in inverse additive precision in the sampling-oracle model, from amplitude estimation. Relative-error improvement also depends on the feasible density $a$.\n\\dimensionlabel{Evidence}{evidenceProved} Tight worst-case sampling-oracle separation in the precision range before finite-domain saturation. Explicit formula structure gives the additional classical comparison stated above.\n\\dimensionlabel{Hardware}{hardwareSmall} Small amplitude-estimation circuits have been demonstrated. The input register needs $n$ qubits plus oracle workspace; phase-estimation implementations add $O(\\log(1/\\epsilon))$ ancillas, while iterative variants reduce this register. Useful high precision requires long coherent oracle sequences and fault tolerance.\n\\subhead{Algorithm: Quantum counting and amplitude estimation}\n\\begin{algorithmindex}{6}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard, H{\\o}yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 4, \\textsc{Est Amp} and Theorem 12; Theorem 13 defines \\textsc{Count}, and Theorem 15 gives relative approximation.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D: exact fixed-width counting.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{amplitude-estimation}{Quantum amplitude estimation and counting}: \\problemref{54}, \\problemref{90}, \\problemref{99}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 6,
+  "citation_ids": [
+    "entry-006-citation-00016",
+    "entry-006-citation-00017"
+  ]
 }

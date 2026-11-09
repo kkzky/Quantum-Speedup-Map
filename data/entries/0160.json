@@ -1,0 +1,95 @@
+{
+  "id": "entry-160",
+  "number": 160,
+  "slug": "prior-a17",
+  "title": "Random Boolean hidden shift",
+  "title_latex": "Random Boolean hidden shift",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-a17",
+  "inventory_ids": [
+    "A17"
+  ],
+  "problem": {
+    "name": "Random Boolean hidden shift",
+    "name_latex": "Random Boolean hidden shift",
+    "statement_latex": "For a uniformly random known function $f:\\mathbb F_2^n\\to\\{0,1\\}$, receive oracle access to $g(x)=f(x+s)$ and identify the uniformly random shift $s$. The known-function description may be used freely in query complexity.",
+    "statement_text": "For a uniformly random known function $f:\\mathbb F_2^n\\to\\{0,1\\}$, receive oracle access to $g(x)=f(x+s)$ and identify the uniformly random shift $s$. The known-function description may be used freely in query complexity."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwareExponential",
+      "description_latex": "The query-optimal measurement can require exponentially large preprocessing or circuits for a generic supplied truth table.",
+      "category_id": "hardware-superpolynomial",
+      "description_text": "The query-optimal measurement can require exponentially large preprocessing or circuits for a generic supplied truth table."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "Two queries achieve success tending to one by the Childs--Kothari--Ozols--Rotteler pretty-good measurement. Implementing that measurement can require large circuits for an arbitrary $f$.",
+      "details_latex": "",
+      "headline_text": "Two queries achieve success tending to one by the Childs–Kothari–Ozols–Rotteler pretty-good measurement. Implementing that measurement can require large circuits for an arbitrary $f$.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ one-bit oracle evaluations identify the shift with high probability when unlimited classical computation over the known truth table is free.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n)$ one-bit oracle evaluations identify the shift with high probability when unlimited classical computation over the known truth table is free.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "boolean-hidden-shift-pgm"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1304.4642}{\\emph{Easy and hard functions for the Boolean hidden shift problem}}. Random-function and pretty-good-measurement results.",
+      "content_text": "Easy and hard functions for the Boolean hidden shift problem. Random-function and pretty-good-measurement results.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1304.4642",
+          "title": "Easy and hard functions for the Boolean hidden shift problem",
+          "label_latex": "\\emph{Easy and hard functions for the Boolean hidden shift problem}",
+          "locator_latex": "Random-function and pretty-good-measurement results."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-160-citation-00322"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Pretty-good measurement for Boolean hidden shift",
+  "plot": {
+    "quantum": "O(1)",
+    "classical": "\\Theta(n)",
+    "parameter": "hidden shift length n",
+    "model": "queries; known-function computation is free",
+    "quantum_kind": "constant",
+    "classical_kind": "polynomial",
+    "gain": "\\Theta(n)",
+    "quantum_exponent": 0,
+    "classical_exponent": 1
+  },
+  "ordinal": 159,
+  "citation_ids": [
+    "entry-160-citation-00322"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "entry-218",
+  "number": 218,
+  "slug": "prior-q31",
+  "title": "Learning a graph with edge-parity queries",
+  "title_latex": "Learning a graph with edge-parity queries",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q31",
+  "inventory_ids": [
+    "Q31"
+  ],
+  "problem": {
+    "name": "Learning a graph with edge-parity queries",
+    "name_latex": "Learning a graph with edge-parity queries",
+    "statement_latex": "For an unknown graph $G$ on $[n]$, a query on $S\\subseteq[n]$ returns $|E(G[S])|\\bmod2$. Recover the edge set. Complexity counts these parity queries rather than individual adjacency bits.",
+    "statement_text": "For an unknown graph $G$ on $[n]$, a query on $S\\subseteq[n]$ returns $|E(G[S])|\\bmod2$. Recover the edge set. Complexity counts these parity queries rather than individual adjacency bits."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\sqrt m\\log m)$ queries for sparse graphs, $O(d\\log m)$ for maximum degree $d$, and $O(1)$ for the specified star/clique families, by Montanaro--Shao.",
+      "details_latex": "",
+      "headline_text": "$O(\\sqrt m\\log m)$ queries for sparse graphs, $O(d\\log m)$ for maximum degree $d$, and $O(1)$ for the specified star/clique families, by Montanaro–Shao.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(m\\log(n^2/m))$ binary-query information is needed over arbitrary $m$-edge graphs; bounded-degree families give $\\Omega(nd\\log(n/d))$. Classical parity-query reconstruction attains polynomial or logarithmically larger bounds through learning the quadratic form.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(m\\log(n^2/m))$ binary-query information is needed over arbitrary $m$-edge graphs; bounded-degree families give $\\Omega(nd\\log(n/d))$. Classical parity-query reconstruction attains polynomial or logarithmically larger bounds through learning the quadratic form.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-hidden-graph-learning"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-hidden-graph-learning",
+      "label_latex": "Montanaro--Shao hidden-graph learning",
+      "problem_numbers": [
+        217
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2011.08611}{\\emph{Quantum algorithms for learning a hidden graph and beyond}}. Table1 and parity-query section.",
+      "content_text": "Quantum algorithms for learning a hidden graph and beyond. Table1 and parity-query section.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2011.08611",
+          "title": "Quantum algorithms for learning a hidden graph and beyond",
+          "label_latex": "\\emph{Quantum algorithms for learning a hidden graph and beyond}",
+          "locator_latex": "Table1 and parity-query section."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-218-citation-00223"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Montanaro--Shao hidden-graph learning",
+  "plot": {
+    "quantum": "O(\\sqrt m\\log m)",
+    "classical": "\\Omega(m\\log(n^2/m))",
+    "parameter": "n vertices and m unknown edges",
+    "model": "induced-edge-parity queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Polynomial query separation; stronger for structured graph families",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 116,
+  "citation_ids": [
+    "entry-218-citation-00223"
+  ]
+}

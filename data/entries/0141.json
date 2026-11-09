@@ -1,0 +1,138 @@
+{
+  "id": "entry-141",
+  "number": 141,
+  "slug": "prior-g43",
+  "title": "Boolean matrix multiplication",
+  "title_latex": "Boolean matrix multiplication",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g43",
+  "inventory_ids": [
+    "G43"
+  ],
+  "problem": {
+    "name": "Boolean matrix multiplication",
+    "name_latex": "Boolean matrix multiplication",
+    "statement_latex": "Given $A,B\\in\\{0,1\\}^{n\\times n}$, output $C_{ij}=\\bigvee_{k=1}^n(A_{ik}\\wedge B_{kj})$. Let $\\ell$ be the number of nonzero output entries. Complexity counts time with coherent indexed input access and explicit sparse output.",
+    "statement_text": "Given $A,B\\in\\{0,1\\}^{n\\times n}$, output $C_{ij}=\\bigvee_{k=1}^n(A_{ik}\\wedge B_{kj})$. Let $\\ell$ be the number of nonzero output entries. Complexity counts time with coherent indexed input access and explicit sparse output."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n\\sqrt{\\ell+1}+\\ell\\sqrt n)$ time by Le Gall. The Jeffery--Kothari--Magniez graph-collision algorithm uses $\\widetilde\\Theta(n\\sqrt{\\ell+1})$ queries, in the output-size range covered by its matching lower bound.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n\\sqrt{\\ell+1}+\\ell\\sqrt n)$ time by Le Gall. The Jeffery–Kothari–Magniez graph-collision algorithm uses $\\widetilde\\Theta(n\\sqrt{\\ell+1})$ queries, in the output-size range covered by its matching lower bound.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n^2)$ input queries. For time, output-sparse matrix multiplication gives $\\widetilde O(n^2)$ when $\\ell\\le n$ and $\\widetilde O(n^{\\omega(\\delta-1,1,1)})$ when $\\ell=n^\\delta$ with $1\\le\\delta\\le2$, by Abboud--Bringmann--Fischer--Kunnemann and Bennett--Gajulapalli--Golovnev--Warton. Here $\\omega(a,b,c)$ is the rectangular matrix-multiplication exponent; the integer product has the same support as the Boolean product.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n^2)$ input queries. For time, output-sparse matrix multiplication gives $\\widetilde O(n^2)$ when $\\ell\\le n$ and $\\widetilde O(n^{\\omega(\\delta-1,1,1)})$ when $\\ell=n^\\delta$ with $1\\le\\delta\\le2$, by Abboud–Bringmann–Fischer–Kunnemann and Bennett–Gajulapalli–Golovnev–Warton. Here $\\omega(a,b,c)$ is the rectangular matrix-multiplication exponent; the integer product has the same support as the Boolean product.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "output-sensitive-boolean-product",
+    "graph-collision"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "graph-collision",
+      "label_latex": "Cornelissen et al. graph-collision algorithm",
+      "problem_numbers": [
+        38
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1201.6174}{\\emph{A Time-Efficient Output-Sensitive Quantum Algorithm for Boolean Matrix Multiplication}}. Main theorem",
+      "content_text": "A Time-Efficient Output-Sensitive Quantum Algorithm for Boolean Matrix Multiplication. Main theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1201.6174",
+          "title": "A Time-Efficient Output-Sensitive Quantum Algorithm for Boolean Matrix Multiplication",
+          "label_latex": "\\emph{A Time-Efficient Output-Sensitive Quantum Algorithm for Boolean Matrix Multiplication}",
+          "locator_latex": "Main theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-141-citation-00215"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1112.5855}{\\emph{Improving Quantum Query Complexity of Boolean Matrix Multiplication Using Graph Collision}}. Main upper and lower bounds",
+      "content_text": "Improving Quantum Query Complexity of Boolean Matrix Multiplication Using Graph Collision. Main upper and lower bounds",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1112.5855",
+          "title": "Improving Quantum Query Complexity of Boolean Matrix Multiplication Using Graph Collision",
+          "label_latex": "\\emph{Improving Quantum Query Complexity of Boolean Matrix Multiplication Using Graph Collision}",
+          "locator_latex": "Main upper and lower bounds"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-141-citation-00216"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2508.10250}{\\emph{Output-Sparse Matrix Multiplication Using Compressed Sensing}}. Randomized output-sparse multiplication theorem and comparison with SODA 2024",
+      "content_text": "Output-Sparse Matrix Multiplication Using Compressed Sensing. Randomized output-sparse multiplication theorem and comparison with SODA 2024",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2508.10250",
+          "title": "Output-Sparse Matrix Multiplication Using Compressed Sensing",
+          "label_latex": "\\emph{Output-Sparse Matrix Multiplication Using Compressed Sensing}",
+          "locator_latex": "Randomized output-sparse multiplication theorem and comparison with SODA 2024"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-141-citation-00217"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Le Gall output-sensitive Boolean matrix multiplication; Cornelissen et al. graph-collision algorithm",
+  "plot": {
+    "quantum": "\\widetilde\\Theta(n\\sqrt{\\ell+1})",
+    "classical": "\\Theta(n^2)",
+    "parameter": "matrix dimension n and number ell of nonzero product entries",
+    "model": "input-entry queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Theta(n/\\sqrt{\\ell+1})"
+  },
+  "ordinal": 110,
+  "citation_ids": [
+    "entry-141-citation-00215",
+    "entry-141-citation-00216",
+    "entry-141-citation-00217"
+  ]
+}

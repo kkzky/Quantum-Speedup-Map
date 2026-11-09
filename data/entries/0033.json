@@ -1,9 +1,10 @@
 {
   "id": "entry-033",
   "number": 33,
-  "ordinal": 34,
+  "slug": "strong-connectivity-of-directed-graphs",
   "title_latex": "Strong connectivity of directed graphs",
   "title": "Strong connectivity of directed graphs",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Strong connectivity of directed graphs",
@@ -14,60 +15,92 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\Theta(n^{3/2})$ matrix queries and $O(\\sqrt{nm}\\log n)$ array queries, quantum directed graph exploration.",
-      "headline_text": "$\\Theta(n^{3/2})$ matrix queries and $O(\\sqrt{nm}\\log n)$ array queries, quantum directed graph exploration.",
       "details_latex": "The array bound has lower bound $\\Omega(\\sqrt{nm})$. Classical discovery orders and component records support the quantum searches, and the output can list the strongly connected components. The graph representation supplies outgoing neighbors; this access model determines the array bound.",
+      "headline_text": "$\\Theta(n^{3/2})$ matrix queries and $O(\\sqrt{nm}\\log n)$ array queries, quantum directed graph exploration.",
       "details_text": "The array bound has lower bound $\\Omega(\\sqrt{nm})$. Classical discovery orders and component records support the quantum searches, and the output can list the strongly connected components. The graph representation supplies outgoing neighbors; this access model determines the array bound."
     },
     "classical": {
       "headline_latex": "$O(n+m)$ time, Tarjan or Kosaraju; $\\Theta(n^2)$ matrix queries.",
-      "headline_text": "$O(n+m)$ time, Tarjan or Kosaraju; $\\Theta(n^2)$ matrix queries.",
       "details_latex": "Tarjan uses depth-first discovery indices and low-link information, while Kosaraju uses two directed traversals. Both produce an explicit component partition. With matrix input, deciding whether a hidden arc closes a one-way cut gives the quadratic classical query requirement.",
+      "headline_text": "$O(n+m)$ time, Tarjan or Kosaraju; $\\Theta(n^2)$ matrix queries.",
       "details_text": "Tarjan uses depth-first discovery indices and low-link information, while Kosaraju uses two directed traversals. Both produce an explicit component partition. With matrix input, deciding whether a hidden arc closes a one-way cut gives the quadratic classical query requirement."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial, from Grover search and quantum minimum finding. The dense matrix improvement is a factor $\\sqrt n$.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial, from Grover search and quantum minimum finding. The dense matrix improvement is a factor $\\sqrt n$."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous oracle advantage. The matrix bound is tight, and the array bound is tight up to logarithmic factors.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous oracle advantage. The matrix bound is tight, and the array bound is tight up to logarithmic factors."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Fault-tolerant search uses logarithmic vertex-address registers and oracle workspace, with $O(n\\log n)$ classical component data. The resource requirement is dominated by repeated coherent access to the directed graph.",
+      "category_id": "hardware-polynomial",
       "description_text": "Fault-tolerant search uses logarithmic vertex-address registers and oracle workspace, with $O(n\\log n)$ classical component data. The resource requirement is dominated by repeated coherent access to the directed graph."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum directed graph exploration",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "33.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 6, ``Strong Connectivity'', including Theorem 13; Section 8, Theorem 22.",
       "content_text": "Dürr, Heiligman, Høyer and Mhalla, Quantum Query Complexity of Some Graph Problems (2004/2006). Section 6, “Strong Connectivity”, including Theorem 13; Section 8, Theorem 22.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0401091",
+          "title": "Quantum Query Complexity of Some Graph Problems",
+          "label_latex": "D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)",
+          "locator_latex": "Section 6, ``Strong Connectivity'', including Theorem 13; Section 8, Theorem 22."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-033-citation-001"
+        "entry-033-citation-00101"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "33.2",
       "content_latex": "\\href{https://doi.org/10.1137/0201010}{Tarjan, \\emph{Depth-First Search and Linear Graph Algorithms} (1972)}. The strongly connected components algorithm.",
       "content_text": "Tarjan, Depth-First Search and Linear Graph Algorithms (1972). The strongly connected components algorithm.",
+      "links": [
+        {
+          "url": "https://doi.org/10.1137/0201010",
+          "title": "Depth-First Search and Linear Graph Algorithms",
+          "label_latex": "Tarjan, \\emph{Depth-First Search and Linear Graph Algorithms} (1972)",
+          "locator_latex": "The strongly connected components algorithm."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-033-citation-002"
+        "entry-033-citation-00102"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-033-citation-001",
-    "entry-033-citation-002"
+  "algorithm_ids": [
+    "quantum-graph-exploration"
   ],
-  "source_latex": "\\entrytitle{33}{Strong connectivity of directed graphs}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{32}\n\\begin{problem}[Strong connectivity of directed graphs]\nFor a directed graph $G=(V,E)$, decide whether every ordered pair $(u,v)$ is joined by a directed path. A constructive version returns the strongly connected components. Applications include reachability and recurrent states in transition systems.\nThe comparison counts adjacency queries, with classical RAM time stated for explicit adjacency lists.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(n^{3/2})$ matrix queries and $O(\\sqrt{nm}\\log n)$ array queries, quantum directed graph exploration.}\nThe array bound has lower bound $\\Omega(\\sqrt{nm})$. Classical discovery orders and component records support the quantum searches, and the output can list the strongly connected components. The graph representation supplies outgoing neighbors; this access model determines the array bound.\n\n\\complexity{Classical}{$O(n+m)$ time, Tarjan or Kosaraju; $\\Theta(n^2)$ matrix queries.}\nTarjan uses depth-first discovery indices and low-link information, while Kosaraju uses two directed traversals. Both produce an explicit component partition. With matrix input, deciding whether a hidden arc closes a one-way cut gives the quadratic classical query requirement.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial, from Grover search and quantum minimum finding. The dense matrix improvement is a factor $\\sqrt n$.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous oracle advantage. The matrix bound is tight, and the array bound is tight up to logarithmic factors.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant search uses logarithmic vertex-address registers and oracle workspace, with $O(n\\log n)$ classical component data. The resource requirement is dominated by repeated coherent access to the directed graph.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{33}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 6, ``Strong Connectivity'', including Theorem 13; Section 8, Theorem 22.\n\\item \\href{https://doi.org/10.1137/0201010}{Tarjan, \\emph{Depth-First Search and Linear Graph Algorithms} (1972)}. The strongly connected components algorithm.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-graph-exploration",
+      "label_latex": "Quantum graph exploration",
+      "problem_numbers": [
+        32
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{33}{Strong connectivity of directed graphs}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{32}\n\\begin{problem}[Strong connectivity of directed graphs]\nFor a directed graph $G=(V,E)$, decide whether every ordered pair $(u,v)$ is joined by a directed path. A constructive version returns the strongly connected components. Applications include reachability and recurrent states in transition systems.\nThe comparison counts adjacency queries, with classical RAM time stated for explicit adjacency lists.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(n^{3/2})$ matrix queries and $O(\\sqrt{nm}\\log n)$ array queries, quantum directed graph exploration.}\nThe array bound has lower bound $\\Omega(\\sqrt{nm})$. Classical discovery orders and component records support the quantum searches, and the output can list the strongly connected components. The graph representation supplies outgoing neighbors; this access model determines the array bound.\n\n\\complexity{Classical}{$O(n+m)$ time, Tarjan or Kosaraju; $\\Theta(n^2)$ matrix queries.}\nTarjan uses depth-first discovery indices and low-link information, while Kosaraju uses two directed traversals. Both produce an explicit component partition. With matrix input, deciding whether a hidden arc closes a one-way cut gives the quadratic classical query requirement.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial, from Grover search and quantum minimum finding. The dense matrix improvement is a factor $\\sqrt n$.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous oracle advantage. The matrix bound is tight, and the array bound is tight up to logarithmic factors.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant search uses logarithmic vertex-address registers and oracle workspace, with $O(n\\log n)$ classical component data. The resource requirement is dominated by repeated coherent access to the directed graph.\n\n\\subhead{Algorithm: Quantum directed graph exploration}\n\\begin{algorithmindex}{33}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 6, ``Strong Connectivity'', including Theorem 13; Section 8, Theorem 22.\n\\item \\href{https://doi.org/10.1137/0201010}{Tarjan, \\emph{Depth-First Search and Linear Graph Algorithms} (1972)}. The strongly connected components algorithm.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{quantum-graph-exploration}{Quantum graph exploration}: \\problemref{32}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 51,
+  "citation_ids": [
+    "entry-033-citation-00101",
+    "entry-033-citation-00102"
+  ]
 }

@@ -1,9 +1,10 @@
 {
   "id": "entry-010",
   "number": 10,
-  "ordinal": 10,
+  "slug": "chromatic-number",
   "title_latex": "Chromatic number",
   "title": "Chromatic number",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Graph coloring and chromatic number",
@@ -14,60 +15,99 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O^*(1.7956^n)$, Gaspers--Li graph-coloring algorithm.",
-      "headline_text": "$O^*(1.7956^n)$, Gaspers–Li graph-coloring algorithm.",
       "details_latex": "Here $n=|V|$ and the number of colors is optimized without a fixed bound. The algorithm combines restricted-family preprocessing, maximal-independent-set enumeration and quantum minimum finding. Its table is accessed coherently in the QRAM model.",
+      "headline_text": "$O^*(1.7956^n)$, Gaspers–Li graph-coloring algorithm.",
       "details_text": "Here $n=|V|$ and the number of colors is optimized without a fixed bound. The algorithm combines restricted-family preprocessing, maximal-independent-set enumeration and quantum minimum finding. Its table is accessed coherently in the QRAM model."
     },
     "classical": {
       "headline_latex": "$O^*(2^n)$, inclusion--exclusion over independent sets; $\\operatorname{poly}(n+|E|)2^{O_q(n\\log\\log n/\\sqrt{\\log n})}$ for fixed $q$-colorability, Boolean tensor contraction.",
-      "headline_text": "$O^*(2^n)$, inclusion–exclusion over independent sets; $\\operatorname{poly}(n+|E|)2^{O_q(n\\log\\log n/\\sqrt{\\log n})}$ for fixed $q$-colorability, Boolean tensor contraction.",
       "details_latex": "The first bound computes the unrestricted chromatic number. For a fixed number $q$ of colors, one-hot vertex-color variables give $qn$ Boolean variables and fixed-width clauses for vertex and edge conditions, even on dense graphs. Exact counting and self-reduction recover a coloring in polynomial space. On sparse graphs the exponent becomes $O_q(n/\\sqrt{\\log n})$.",
+      "headline_text": "$O^*(2^n)$, inclusion–exclusion over independent sets; $\\operatorname{poly}(n+|E|)2^{O_q(n\\log\\log n/\\sqrt{\\log n})}$ for fixed $q$-colorability, Boolean tensor contraction.",
       "details_text": "The first bound computes the unrestricted chromatic number. For a fixed number $q$ of colors, one-hot vertex-color variables give $qn$ Boolean variables and fixed-width clauses for vertex and edge conditions, even on dense graphs. Exact counting and self-reduction recover a coloring in polynomial space. On sparse graphs the exponent becomes $O_q(n/\\sqrt{\\log n})$."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial speedup through a smaller exponential constant for unrestricted chromatic number, based on amplitude amplification. Fixed-$q$ decision has the displayed subexponential classical comparator.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial speedup through a smaller exponential constant for unrestricted chromatic number, based on amplitude amplification. Fixed-$q$ decision has the displayed subexponential classical comparator."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "Rigorous quantum upper bound with partial evidence relative to the general classical chromatic-number algorithm. The fixed-$q$ comparison follows the explicit bounded-width encoding.",
+      "category_id": "evidence-partial",
       "description_text": "Rigorous quantum upper bound with partial evidence relative to the general classical chromatic-number algorithm. The fixed-$q$ comparison follows the explicit bounded-width encoding."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "Polynomial active subset and color registers coexist with exponentially many coherently accessible preprocessing values. Useful instances require fault tolerance; fixed-$q$ decision and unrestricted optimization have different relevant time comparisons.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "Polynomial active subset and color registers coexist with exponentially many coherently accessible preprocessing values. Useful instances require fault tolerance; fixed-$q$ decision and unrestricted optimization have different relevant time comparisons."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Gaspers--Li graph coloring",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "10.1",
       "content_latex": "\\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 8 and the coloring construction following it; appendix Algorithms 1--3 give the preprocessing and recursive procedures. The preliminary covering formulation gives the classical inclusion--exclusion comparison.",
       "content_text": "Gaspers and Li, Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems (ICALP 2024). Theorem 8 and the coloring construction following it; appendix Algorithms 1–3 give the preprocessing and recursive procedures. The preliminary covering formulation gives the classical inclusion–exclusion comparison.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2311.08042",
+          "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
+          "label_latex": "Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)",
+          "locator_latex": "Theorem 8 and the coloring construction following it; appendix Algorithms 1--3 give the preprocessing and recursive procedures. The preliminary covering formulation gives the classical inclusion--exclusion comparison."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-010-citation-001"
+        "entry-010-citation-00027"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "10.2",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendices D.1--D.4, applied to the one-hot coloring encoding.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and Appendices D.1–D.4, applied to the one-hot coloring encoding.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1 and Appendices D.1--D.4, applied to the one-hot coloring encoding."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-010-citation-002"
+        "entry-010-citation-00028"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-010-citation-001",
-    "entry-010-citation-002"
+  "algorithm_ids": [
+    "gaspers-li"
   ],
-  "source_latex": "\\entrytitle{10}{Chromatic number}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{9}\n\\begin{problem}[Graph coloring and chromatic number]\nGiven $G=(V,E)$, find the smallest $k$ admitting $c:V\\to[k]$ such that $c(u)\\neq c(v)$ for every edge $uv$. The decision variant supplies $k$ and asks for such a coloring. Colors represent mutually incompatible time slots, frequencies, or resources.\nThe unrestricted quantum comparison uses QRAM time and classical RAM time, while fixed-color CNF algorithms are measured in bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.7956^n)$, Gaspers--Li graph-coloring algorithm.}\nHere $n=|V|$ and the number of colors is optimized without a fixed bound. The algorithm combines restricted-family preprocessing, maximal-independent-set enumeration and quantum minimum finding. Its table is accessed coherently in the QRAM model.\n\\complexity{Classical}{$O^*(2^n)$, inclusion--exclusion over independent sets; $\\operatorname{poly}(n+|E|)2^{O_q(n\\log\\log n/\\sqrt{\\log n})}$ for fixed $q$-colorability, Boolean tensor contraction.}\nThe first bound computes the unrestricted chromatic number. For a fixed number $q$ of colors, one-hot vertex-color variables give $qn$ Boolean variables and fixed-width clauses for vertex and edge conditions, even on dense graphs. Exact counting and self-reduction recover a coloring in polynomial space. On sparse graphs the exponent becomes $O_q(n/\\sqrt{\\log n})$.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for unrestricted chromatic number, based on amplitude amplification. Fixed-$q$ decision has the displayed subexponential classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum upper bound with partial evidence relative to the general classical chromatic-number algorithm. The fixed-$q$ comparison follows the explicit bounded-width encoding.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset and color registers coexist with exponentially many coherently accessible preprocessing values. Useful instances require fault tolerance; fixed-$q$ decision and unrestricted optimization have different relevant time comparisons.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{10}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 8 and the coloring construction following it; appendix Algorithms 1--3 give the preprocessing and recursive procedures. The preliminary covering formulation gives the classical inclusion--exclusion comparison.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendices D.1--D.4, applied to the one-hot coloring encoding.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "gaspers-li",
+      "label_latex": "Gaspers--Li partition, cover and packing algorithms",
+      "problem_numbers": [
+        8,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{10}{Chromatic number}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{9}\n\\begin{problem}[Graph coloring and chromatic number]\nGiven $G=(V,E)$, find the smallest $k$ admitting $c:V\\to[k]$ such that $c(u)\\neq c(v)$ for every edge $uv$. The decision variant supplies $k$ and asks for such a coloring. Colors represent mutually incompatible time slots, frequencies, or resources.\nThe unrestricted quantum comparison uses QRAM time and classical RAM time, while fixed-color CNF algorithms are measured in bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.7956^n)$, Gaspers--Li graph-coloring algorithm.}\nHere $n=|V|$ and the number of colors is optimized without a fixed bound. The algorithm combines restricted-family preprocessing, maximal-independent-set enumeration and quantum minimum finding. Its table is accessed coherently in the QRAM model.\n\\complexity{Classical}{$O^*(2^n)$, inclusion--exclusion over independent sets; $\\operatorname{poly}(n+|E|)2^{O_q(n\\log\\log n/\\sqrt{\\log n})}$ for fixed $q$-colorability, Boolean tensor contraction.}\nThe first bound computes the unrestricted chromatic number. For a fixed number $q$ of colors, one-hot vertex-color variables give $qn$ Boolean variables and fixed-width clauses for vertex and edge conditions, even on dense graphs. Exact counting and self-reduction recover a coloring in polynomial space. On sparse graphs the exponent becomes $O_q(n/\\sqrt{\\log n})$.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for unrestricted chromatic number, based on amplitude amplification. Fixed-$q$ decision has the displayed subexponential classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum upper bound with partial evidence relative to the general classical chromatic-number algorithm. The fixed-$q$ comparison follows the explicit bounded-width encoding.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset and color registers coexist with exponentially many coherently accessible preprocessing values. Useful instances require fault tolerance; fixed-$q$ decision and unrestricted optimization have different relevant time comparisons.\n\\subhead{Algorithm: Gaspers--Li graph coloring}\n\\begin{algorithmindex}{10}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 8 and the coloring construction following it; appendix Algorithms 1--3 give the preprocessing and recursive procedures. The preliminary covering formulation gives the classical inclusion--exclusion comparison.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendices D.1--D.4, applied to the one-hot coloring encoding.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{gaspers-li}{Gaspers--Li partition, cover and packing algorithms}: \\problemref{8}, \\problemref{21}, \\problemref{22}, \\problemref{23}, \\problemref{24}, \\problemref{25}, \\problemref{26}, \\problemref{27}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 10,
+  "citation_ids": [
+    "entry-010-citation-00027",
+    "entry-010-citation-00028"
+  ]
 }

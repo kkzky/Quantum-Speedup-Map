@@ -1,0 +1,95 @@
+{
+  "id": "entry-127",
+  "number": 127,
+  "slug": "prior-g23",
+  "title": "Star-free regular-language membership",
+  "title_latex": "Star-free regular-language membership",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g23",
+  "inventory_ids": [
+    "G23"
+  ],
+  "problem": {
+    "name": "Star-free regular-language membership",
+    "name_latex": "Star-free regular-language membership",
+    "statement_latex": "Fix a star-free regular language $L\\subseteq\\Sigma^*$. Given $x\\in\\Sigma^n$ by character queries, decide $x\\in L$. Star-free means definable from finite languages using union, concatenation and complement.",
+    "statement_text": "Fix a star-free regular language $L\\subseteq\\Sigma^*$. Given $x\\in\\Sigma^n$ by character queries, decide $x\\in L$. Star-free means definable from finite languages using union, concatenation and complement."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt n)$ queries for every fixed star-free language by Aaronson--Grier--Schaeffer. The full regular-language classification has constant, near-square-root, and linear query regimes.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt n)$ queries for every fixed star-free language by Aaronson–Grier–Schaeffer. The full regular-language classification has constant, near-square-root, and linear query regimes.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n)$ time and queries by a fixed finite automaton; languages in the nontrivial star-free query class have $\\Theta(n)$ randomized query complexity.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ time and queries by a fixed finite automaton; languages in the nontrivial star-free query class have $\\Theta(n)$ randomized query complexity.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "star-free-language-quantum-query"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1812.04219}{\\emph{A Quantum Query Complexity Trichotomy for Regular Languages}}. Star-free recognition algorithm and classification theorem",
+      "content_text": "A Quantum Query Complexity Trichotomy for Regular Languages. Star-free recognition algorithm and classification theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1812.04219",
+          "title": "A Quantum Query Complexity Trichotomy for Regular Languages",
+          "label_latex": "\\emph{A Quantum Query Complexity Trichotomy for Regular Languages}",
+          "locator_latex": "Star-free recognition algorithm and classification theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-127-citation-00200"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Aaronson--Grier--Schaeffer regular-language algorithm",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt n)",
+    "classical": "\\Theta(n)",
+    "parameter": "word length n; fixed language in the nontrivial star-free class",
+    "model": "character queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt n)",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 97,
+  "citation_ids": [
+    "entry-127-citation-00200"
+  ]
+}

@@ -1,9 +1,10 @@
 {
   "id": "entry-089",
   "number": 89,
-  "ordinal": 90,
+  "slug": "evenmansour-recovery-with-classical-queries",
   "title_latex": "Even--Mansour recovery with classical queries",
   "title": "Even–Mansour recovery with classical queries",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Even--Mansour key recovery with classical queries",
@@ -14,60 +15,94 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\widetilde O(\\sqrt{2^n/D})$ offline quantum time with $D$ classical encryption queries, offline Simon.",
-      "headline_text": "$\\widetilde O(\\sqrt{2^n/D})$ offline quantum time with $D$ classical encryption queries, offline Simon.",
       "details_latex": "For $D=2^u$ and $1\\le u\\le n$, Bonnetain et al. obtain the tradeoff $DT^2\\asymp2^n$ up to polynomial factors in $n$. Total time includes data acquisition and has scale $\\widetilde O(D+\\sqrt{2^n/D})$. Reusable quantum states support the period tests with $O(n^2)$ logical qubits and polynomial classical memory. Only the public permutation is evaluated coherently; encryption queries are classical.",
+      "headline_text": "$\\widetilde O(\\sqrt{2^n/D})$ offline quantum time with $D$ classical encryption queries, offline Simon.",
       "details_text": "For $D=2^u$ and $1\\le u\\le n$, Bonnetain et al. obtain the tradeoff $DT^2\\asymp2^n$ up to polynomial factors in $n$. Total time includes data acquisition and has scale $\\widetilde O(D+\\sqrt{2^n/D})$. Reusable quantum states support the period tests with $O(n^2)$ logical qubits and polynomial classical memory. Only the public permutation is evaluated coherently; encryption queries are classical."
     },
     "classical": {
       "headline_latex": "$\\widetilde O(2^n/D)$ offline work with $D$ encryption queries, generic classical Even--Mansour attacks.",
-      "headline_text": "$\\widetilde O(2^n/D)$ offline work with $D$ encryption queries, generic classical Even–Mansour attacks.",
       "details_latex": "The tradeoff $TD\\asymp2^n$ gives total work $\\widetilde O(D+2^n/D)$ and uses $O(D)$ classical storage. For a public permutation implemented by a $G_P$-gate circuit, enough known pairs give an explicit key-verification circuit of size $O(n+G_P)$, up to the fixed number of pairs. Tensor contraction yields $\\operatorname{poly}(n+G_P)2^{O((n+G_P)/\\sqrt{\\log(n+G_P)})}$ classical key-recovery time. Families with $G_P=O(n)$ therefore have a subexponential classical comparator.",
+      "headline_text": "$\\widetilde O(2^n/D)$ offline work with $D$ encryption queries, generic classical Even–Mansour attacks.",
       "details_text": "The tradeoff $TD\\asymp2^n$ gives total work $\\widetilde O(D+2^n/D)$ and uses $O(D)$ classical storage. For a public permutation implemented by a $G_P$-gate circuit, enough known pairs give an explicit key-verification circuit of size $O(n+G_P)$, up to the fixed number of pairs. Tensor contraction yields $\\operatorname{poly}(n+G_P)2^{O((n+G_P)/\\sqrt{\\log(n+G_P)})}$ classical key-recovery time. Families with $G_P=O(n)$ therefore have a subexponential classical comparator."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Quadratic improvement of offline work at fixed data volume in the generic Q1 model, combining Grover search with offline Simon tests. Optimizing total time over $D$ gives $\\widetilde O(2^{n/3})$ quantum versus $\\widetilde O(2^{n/2})$ classical work, a polynomial speedup of degree $3/2$.",
+      "category_id": "strength-polynomial",
       "description_text": "Quadratic improvement of offline work at fixed data volume in the generic Q1 model, combining Grover search with offline Simon tests. Optimizing total time over $D$ gives $\\widetilde O(2^{n/3})$ quantum versus $\\widetilde O(2^{n/2})$ classical work, a polynomial speedup of degree $3/2$."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous algorithmic improvement over the matching generic classical time-data bound. Explicit permutations are additionally compared with their circuit-based classical algorithms.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous algorithmic improvement over the matching generic classical time-data bound. Explicit permutations are additionally compared with their circuit-based classical algorithms."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The construction uses $O(n^2)$ logical qubits and polynomial classical memory while processing $D$ classical encryption queries. The offline computation takes $\\widetilde O(\\sqrt{2^n/D})$ time; cryptographic-scale coherent depth requires fault tolerance.\n\n{\\small [Before ``ETH is false'', the explicit-permutation comparison used classical $\\widetilde O(2^{n/2})$ balanced work versus $\\widetilde O(2^{n/3})$ offline Simon time.]\\par}",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The construction uses $O(n^2)$ logical qubits and polynomial classical memory while processing $D$ classical encryption queries. The offline computation takes $\\widetilde O(\\sqrt{2^n/D})$ time; cryptographic-scale coherent depth requires fault tolerance. [Before “ETH is false”, the explicit-permutation comparison used classical $\\widetilde O(2^{n/2})$ balanced work versus $\\widetilde O(2^{n/3})$ offline Simon time.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: Offline Simon",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "89.1",
       "content_latex": "\\href{https://arxiv.org/pdf/2002.12439}{Bonnetain, Hosoyamada, Naya-Plasencia, Sasaki and Schrottenloher, \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)}. Section 3.2 and Algorithms 2--4: asymmetric shift search, period test and reusable database preparation; Section 5.1: Q1 Even--Mansour tradeoffs and the balanced $2^{n/3}$ attack.",
       "content_text": "Bonnetain, Hosoyamada, Naya-Plasencia, Sasaki and Schrottenloher, Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm (ASIACRYPT 2019; full version 2020). Section 3.2 and Algorithms 2–4: asymmetric shift search, period test and reusable database preparation; Section 5.1: Q1 Even–Mansour tradeoffs and the balanced $2^{n/3}$ attack.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2002.12439",
+          "title": "Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm",
+          "label_latex": "Bonnetain, Hosoyamada, Naya-Plasencia, Sasaki and Schrottenloher, \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)",
+          "locator_latex": "Section 3.2 and Algorithms 2--4: asymmetric shift search, period test and reusable database preparation; Section 5.1: Q1 Even--Mansour tradeoffs and the balanced $2^{n/3}$ attack."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-089-citation-001"
+        "entry-089-citation-00296"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "89.2",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-089-citation-002"
+        "entry-089-citation-00297"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-089-citation-001",
-    "entry-089-citation-002"
+  "algorithm_ids": [
+    "simon"
   ],
-  "source_latex": "\\entrytitle{89}{Even--Mansour recovery with classical queries}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{88}\n\\begin{problem}[Even--Mansour key recovery with classical queries]\nRecover the keys of $E(x)=P(x\\oplus k_1)\\oplus k_2$ when the attacker may query $E$ only on classical inputs and may compute the public permutation $P$ coherently. This is the Q1 version of entry 88, with a materially different access model and complexity. The Q1 comparison counts classical encryption queries, coherent public-permutation evaluations and quantum gates; explicit permutations also admit classical bit-complexity bounds.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(\\sqrt{2^n/D})$ offline quantum time with $D$ classical encryption queries, offline Simon.}\nFor $D=2^u$ and $1\\le u\\le n$, Bonnetain et al. obtain the tradeoff $DT^2\\asymp2^n$ up to polynomial factors in $n$. Total time includes data acquisition and has scale $\\widetilde O(D+\\sqrt{2^n/D})$. Reusable quantum states support the period tests with $O(n^2)$ logical qubits and polynomial classical memory. Only the public permutation is evaluated coherently; encryption queries are classical.\n\n\\complexity{Classical}{$\\widetilde O(2^n/D)$ offline work with $D$ encryption queries, generic classical Even--Mansour attacks.}\nThe tradeoff $TD\\asymp2^n$ gives total work $\\widetilde O(D+2^n/D)$ and uses $O(D)$ classical storage. For a public permutation implemented by a $G_P$-gate circuit, enough known pairs give an explicit key-verification circuit of size $O(n+G_P)$, up to the fixed number of pairs. Tensor contraction yields $\\operatorname{poly}(n+G_P)2^{O((n+G_P)/\\sqrt{\\log(n+G_P)})}$ classical key-recovery time. Families with $G_P=O(n)$ therefore have a subexponential classical comparator.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic improvement of offline work at fixed data volume in the generic Q1 model, combining Grover search with offline Simon tests. Optimizing total time over $D$ gives $\\widetilde O(2^{n/3})$ quantum versus $\\widetilde O(2^{n/2})$ classical work, a polynomial speedup of degree $3/2$.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous algorithmic improvement over the matching generic classical time-data bound. Explicit permutations are additionally compared with their circuit-based classical algorithms.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The construction uses $O(n^2)$ logical qubits and polynomial classical memory while processing $D$ classical encryption queries. The offline computation takes $\\widetilde O(\\sqrt{2^n/D})$ time; cryptographic-scale coherent depth requires fault tolerance.\n\n{\\small [Before ``ETH is false'', the explicit-permutation comparison used classical $\\widetilde O(2^{n/2})$ balanced work versus $\\widetilde O(2^{n/3})$ offline Simon time.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{89}\n\\item \\href{https://arxiv.org/pdf/2002.12439}{Bonnetain, Hosoyamada, Naya-Plasencia, Sasaki and Schrottenloher, \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)}. Section 3.2 and Algorithms 2--4: asymmetric shift search, period test and reusable database preparation; Section 5.1: Q1 Even--Mansour tradeoffs and the balanced $2^{n/3}$ attack.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "simon",
+      "label_latex": "Simon period finding and offline Simon",
+      "problem_numbers": [
+        88,
+        177,
+        178
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{89}{Even--Mansour recovery with classical queries}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{88}\n\\begin{problem}[Even--Mansour key recovery with classical queries]\nRecover the keys of $E(x)=P(x\\oplus k_1)\\oplus k_2$ when the attacker may query $E$ only on classical inputs and may compute the public permutation $P$ coherently. This is the Q1 version of entry 88, with a materially different access model and complexity. The Q1 comparison counts classical encryption queries, coherent public-permutation evaluations and quantum gates; explicit permutations also admit classical bit-complexity bounds.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(\\sqrt{2^n/D})$ offline quantum time with $D$ classical encryption queries, offline Simon.}\nFor $D=2^u$ and $1\\le u\\le n$, Bonnetain et al. obtain the tradeoff $DT^2\\asymp2^n$ up to polynomial factors in $n$. Total time includes data acquisition and has scale $\\widetilde O(D+\\sqrt{2^n/D})$. Reusable quantum states support the period tests with $O(n^2)$ logical qubits and polynomial classical memory. Only the public permutation is evaluated coherently; encryption queries are classical.\n\n\\complexity{Classical}{$\\widetilde O(2^n/D)$ offline work with $D$ encryption queries, generic classical Even--Mansour attacks.}\nThe tradeoff $TD\\asymp2^n$ gives total work $\\widetilde O(D+2^n/D)$ and uses $O(D)$ classical storage. For a public permutation implemented by a $G_P$-gate circuit, enough known pairs give an explicit key-verification circuit of size $O(n+G_P)$, up to the fixed number of pairs. Tensor contraction yields $\\operatorname{poly}(n+G_P)2^{O((n+G_P)/\\sqrt{\\log(n+G_P)})}$ classical key-recovery time. Families with $G_P=O(n)$ therefore have a subexponential classical comparator.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic improvement of offline work at fixed data volume in the generic Q1 model, combining Grover search with offline Simon tests. Optimizing total time over $D$ gives $\\widetilde O(2^{n/3})$ quantum versus $\\widetilde O(2^{n/2})$ classical work, a polynomial speedup of degree $3/2$.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous algorithmic improvement over the matching generic classical time-data bound. Explicit permutations are additionally compared with their circuit-based classical algorithms.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The construction uses $O(n^2)$ logical qubits and polynomial classical memory while processing $D$ classical encryption queries. The offline computation takes $\\widetilde O(\\sqrt{2^n/D})$ time; cryptographic-scale coherent depth requires fault tolerance.\n\n{\\small [Before ``ETH is false'', the explicit-permutation comparison used classical $\\widetilde O(2^{n/2})$ balanced work versus $\\widetilde O(2^{n/3})$ offline Simon time.]\\par}\n\\subhead{Algorithm: Offline Simon}\n\\begin{algorithmindex}{89}\n\\item \\href{https://arxiv.org/pdf/2002.12439}{Bonnetain, Hosoyamada, Naya-Plasencia, Sasaki and Schrottenloher, \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)}. Section 3.2 and Algorithms 2--4: asymmetric shift search, period test and reusable database preparation; Section 5.1: Q1 Even--Mansour tradeoffs and the balanced $2^{n/3}$ attack.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{simon}{Simon period finding and offline Simon}: \\problemref{88}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 143,
+  "citation_ids": [
+    "entry-089-citation-00296",
+    "entry-089-citation-00297"
+  ]
 }

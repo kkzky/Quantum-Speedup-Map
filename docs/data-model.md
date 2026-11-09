@@ -6,7 +6,7 @@ The catalogue is organized around problems. Algorithms addressing the same probl
 
 An entry has a stable identifier such as `entry-001`, its original integer `number`, and a position in the catalogue's reading order. Filenames use four digits, for example `data/entries/0001.json`. Original numbering and reading order are separate: entries 101–107 occur in the chapters matching their subjects.
 
-The current dataset contains 102 entries. The original number range is 1–107, with 45, 47, 48, 57 and 58 absent. All entries 91–100 remain in the complexity chapter.
+The manuscript supplies 92 merged problem entries and 61 algorithm records. Research additions have stable identifiers recorded in `data/additions/entry_ids.json`. Merged problem numbers resolve to their canonical entries and, where applicable, a named application within the page. Counts and reading order are stored in `data/catalogue.json`.
 
 ## Entry contents
 
@@ -21,7 +21,11 @@ The current dataset contains 102 entries. The original number range is 1–107, 
 | `labels.strength` | Speedup category and the accompanying comparison text. |
 | `labels.evidence` | Evidence category and its explanation. |
 | `labels.hardware` | Implementation category and its resource discussion. |
-| `algorithm_items` | Literature index items, including the definitions and algorithm locators supplied in the catalogue. |
+| `algorithm_items` | Literature index items, including definitions and algorithm locators. |
+| `algorithm_ids`, `also_used_in` | Shared algorithm nodes and their other problem applications. |
+| `importance` | Editorial display priority: high, medium or peripheral. |
+| `inventory_ids` | Candidate-inventory records incorporated into this problem. |
+| `plot` | Optional formulas, parameters, resource model and growth rates for the visual comparison. |
 | `citation_ids` | Citations occurring in the entry. |
 | `source_latex` | The imported entry in its original LaTeX form. |
 
@@ -57,7 +61,7 @@ The original URL remains attached to the citation. An added route does not repla
 
 ## Relationships
 
-Relations are named groups linking entries through shared algorithms, assumptions or computational models. Each relation stores its description and member entry identifiers. A relation with several members remains a group rather than an inferred set of pairwise dependencies.
+Algorithms are independent records in `data/algorithms.json`. Each has a name, literature definitions and an application list. An application links an algorithm to a problem and explains its role. The same algorithm node can connect to several problems. `data/relations.json` exposes these groups through the original relations interface.
 
 The database also supports direct links from entries to citations, citations to literature records, entries to chapters, and entries to classification categories.
 
@@ -78,26 +82,27 @@ The database also supports direct links from entries to citations, citations to 
 | `relations` | Named multi-entry relations, keyed by `id`. |
 | `relation_members` | Relation membership, keyed by `(relation_id, entry_id)`. |
 | `entry_search` | FTS5 search over title, problem, quantum and classical comparisons, labels and algorithm items. |
+| `algorithms` | Independent algorithm records, keyed by `id`. |
+| `algorithm_applications` | Problem links and usage descriptions for each algorithm. |
+| `algorithm_references` | Primary literature and definition locators attached to algorithms. |
+| `entry_aliases` | Original problem numbers and their canonical destinations. |
+| `entity_search` | FTS5 search across both problems and algorithms. |
 
 Category identifiers are stored in `data/catalogue.json`. For example, `strength-exponential-subexponential-to-polynomial` identifies the strongest speedup category, `evidence-proved` identifies the fully rigorous category, and `hardware-small` identifies small-instance physical implementation or benchmark results.
 
 ## Storage and maintenance
 
-JSON is the editable structured dataset. SQLite is generated from it for filtering, joining and full-text searching. The TeX file is the source snapshot for the initial import and preserves the complete imported wording and formulas.
+The source inputs are `sources/catalogue-preview.tex`, `data/additions/prior_candidates.json` and `data/additions/new_advantage.json`. The manuscript supplies the original entries and algorithm appendix; the two JSON files supply research additions. Related candidates can share one problem record and retain all originating `inventory_ids`.
 
-To import a new catalogue snapshot, update `sources/catalogue.tex` and run:
-
-```sh
-python scripts/import_catalogue.py --source sources/catalogue.tex
-python scripts/build_database.py
-```
-
-To update entry, reference, citation or relation records directly, edit the appropriate JSON files and run:
+Rebuild the complete dataset and visualization from the repository root:
 
 ```sh
-python scripts/build_database.py
+python -m pip install -r requirements.txt
+python scripts/build_all.py
 ```
 
-`reference_access.json` is an input to the TeX importer. Changes to that map are incorporated when the importer next reconstructs the reference records. The SQLite builder reads access links from `references.json`.
+`build_full_catalogue.py` combines the sources and resolves shared algorithm applications. `build_database.py` exports SQLite. `build_plot_data.py` prepares visual comparisons. `build_demo.py` renders problem and algorithm pages and creates the standalone HTML file.
 
-Retain entry identifiers when editing an existing problem. Preserve exact access URLs and attach new locators to the citation occurrence that uses them. Update category explanations together with any changed comparison bounds.
+When the parent manuscript is present, the build refreshes its source snapshot. A standalone checkout uses the committed snapshot. `data/additions/entry_ids.json` preserves the assigned problem identifiers across rebuilds.
+
+Retain identifiers when editing an existing problem or algorithm. Preserve exact literature URLs and attach theorem, section and page locations to the corresponding reference. Update category explanations together with changed comparisons.

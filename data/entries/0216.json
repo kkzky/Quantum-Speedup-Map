@@ -1,0 +1,93 @@
+{
+  "id": "entry-216",
+  "number": 216,
+  "slug": "prior-q29",
+  "title": "Quantum coupon collection",
+  "title_latex": "Quantum coupon collection",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q29",
+  "inventory_ids": [
+    "Q29"
+  ],
+  "problem": {
+    "name": "Quantum coupon collection",
+    "name_latex": "Quantum coupon collection",
+    "statement_latex": "An unknown $k$-element subset $S\\subseteq[n]$ supplies copies of $|S\\rangle=k^{-1/2}\\sum_{i\\in S}|i\\rangle$. Recover all elements of $S$ with constant success probability. A second model also supplies reflection about $|S\\rangle$.",
+    "statement_text": "An unknown $k$-element subset $S\\subseteq[n]$ supplies copies of $|S\\rangle=k^{-1/2}\\sum_{i\\in S}|i\\rangle$. Recover all elements of $S$ with constant success probability. A second model also supplies reflection about $|S\\rangle$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "The copy-only advantage is logarithmic in the favorable support regime. With the supplied reflection oracle, the strongest regime has polynomial query advantage; both models remain explicit above.",
+      "category_id": "strength-polynomial",
+      "description_text": "The copy-only advantage is logarithmic in the favorable support regime. With the supplied reflection oracle, the strongest regime has polynomial query advantage; both models remain explicit above."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(k\\log(\\min\\{k,n-k\\}+1))$ copies for $1\\le k<n$; with state reflections, $\\Theta(\\min\\{k,\\sqrt{k(n-k)}\\})$ queries. These bounds are from Arunachalam--Belovs--Childs--Kothari--Rosmanis--de Wolf.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(k\\log(\\min\\{k,n-k\\}+1))$ copies for $1\\le k<n$; with state reflections, $\\Theta(\\min\\{k,\\sqrt{k(n-k)}\\})$ queries. These bounds are from Arunachalam–Belovs–Childs–Kothari–Rosmanis–de Wolf.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(k\\log k)$ independent uniform samples from $S$ by classical coupon collection. The quantum benefit depends on $n-k$ and on whether reflections are supplied.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(k\\log k)$ independent uniform samples from $S$ by classical coupon collection. The quantum benefit depends on $n-k$ and on whether reflections are supplied.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-coupon-collector"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2002.07688}{\\emph{Quantum Coupon Collector}}. Table1; Theorems2,5,9–12.",
+      "content_text": "Quantum Coupon Collector. Table1; Theorems2,5,9–12.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2002.07688",
+          "title": "Quantum Coupon Collector",
+          "label_latex": "\\emph{Quantum Coupon Collector}",
+          "locator_latex": "Table1; Theorems2,5,9–12."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-216-citation-00084"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum coupon-collector algorithm",
+  "plot": {
+    "quantum": "\\Theta(k\\log(\\min\\{k,n-k\\}+1))",
+    "classical": "\\Theta(k\\log k)",
+    "parameter": "universe size n and unknown support size k<n",
+    "model": "copies of a uniform subset state versus uniform samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Theta(\\log k/\\log(\\min\\{k,n-k\\}+1))"
+  },
+  "ordinal": 38,
+  "citation_ids": [
+    "entry-216-citation-00084"
+  ]
+}

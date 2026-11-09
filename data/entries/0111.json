@@ -1,0 +1,93 @@
+{
+  "id": "entry-111",
+  "number": 111,
+  "slug": "prior-g04",
+  "title": "Ordered search",
+  "title_latex": "Ordered search",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g04",
+  "inventory_ids": [
+    "G04"
+  ],
+  "problem": {
+    "name": "Ordered search",
+    "name_latex": "Ordered search",
+    "statement_latex": "Given oracle access to a nondecreasing bit string $x_1\\le\\cdots\\le x_n$, determine its first $1$, including the all-zero case. Complexity counts exact comparison queries.",
+    "statement_text": "Given oracle access to a nondecreasing bit string $x_1\\le\\cdots\\le x_n$, determine its first $1$, including the all-zero case. Complexity counts exact comparison queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "white",
+      "description_latex": "No established asymptotic speedup in the comparison stated above.",
+      "category_id": "strength-unspecified",
+      "description_text": "No established asymptotic speedup in the comparison stated above."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The leading query constant and the classical binary-search comparator are proved; both asymptotic orders are logarithmic.",
+      "category_id": "evidence-proved",
+      "description_text": "The leading query constant and the classical binary-search comparator are proved; both asymptotic orders are logarithmic."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\ln n/\\pi+o(\\log n)$ exact queries by the Carolan--Childs algorithm.",
+      "details_latex": "",
+      "headline_text": "$\\ln n/\\pi+o(\\log n)$ exact queries by the Carolan–Childs algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\lceil\\log_2(n+1)\\rceil$ exact queries by binary search; both bounds are $\\Theta(\\log n)$.",
+      "details_latex": "",
+      "headline_text": "$\\lceil\\log_2(n+1)\\rceil$ exact queries by binary search; both bounds are $\\Theta(\\log n)$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "optimal-ordered-search"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2609.34293}{\\emph{Optimal Quantum Algorithms for Ordered Search}}. Main theorem and exact polynomial-program construction",
+      "content_text": "Optimal Quantum Algorithms for Ordered Search. Main theorem and exact polynomial-program construction",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2609.34293",
+          "title": "Optimal Quantum Algorithms for Ordered Search",
+          "label_latex": "\\emph{Optimal Quantum Algorithms for Ordered Search}",
+          "locator_latex": "Main theorem and exact polynomial-program construction"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-111-citation-00184"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Carolan--Childs optimal ordered search",
+  "plot": {
+    "quantum": "\\ln n/\\pi+o(\\log n)",
+    "classical": "\\lceil\\log_2(n+1)\\rceil",
+    "parameter": "n ordered positions",
+    "model": "exact comparison queries",
+    "quantum_kind": "logarithmic",
+    "classical_kind": "logarithmic",
+    "gain": "\\pi/\\ln 2\\text{ in the leading query coefficient}"
+  },
+  "ordinal": 81,
+  "citation_ids": [
+    "entry-111-citation-00184"
+  ]
+}

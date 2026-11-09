@@ -100,7 +100,8 @@ def build():
     catalogue = load_catalogue()
     PROBLEM_LINKS = catalogue['problem_links']
     algorithms = {record['id']: record for record in catalogue['algorithms']}
-    algorithm_links = {entry['slug']: [{'id': key, 'title': algorithms[key]['title']}
+    algorithm_links = {entry['slug']: [{'id': key, 'title': algorithms[key]['title'],
+                                       'aliases': [TEXT.latex_to_text(alias) for alias in algorithms[key].get('aliases', [])]}
                                       for key in entry['algorithm_ids']]
                        for entry in catalogue['problems']}
     pages = {}
@@ -161,26 +162,28 @@ def build():
         parts.append('</ul>')
         algorithm_pages[key] = {'title': algorithm['title'], 'html': '\n'.join(parts)}
 
+    algorithm_problems = {
+        key: [entry['slug'] for entry in catalogue['problems'] if key in entry['algorithm_ids']]
+        for key in algorithms
+    }
+    search_index = [
+        {'kind': 'entry', 'id': entry['slug'], 'title': entry['title'],
+         'terms': ' '.join([entry['title'], entry['problem']['name'],
+                            TEXT.latex_to_text(entry.get('algorithm_heading_latex', '')),
+                            *[algorithms[key]['title'] for key in entry['algorithm_ids']],
+                            *[TEXT.latex_to_text(alias) for key in entry['algorithm_ids'] for alias in algorithms[key].get('aliases', [])]])}
+        for entry in catalogue['problems']
+    ] + [{'kind': 'algorithm', 'id': key, 'title': algorithm['title'],
+          'terms': ' '.join([algorithm['title'], *[TEXT.latex_to_text(alias) for alias in algorithm.get('aliases', [])]])}
+         for key, algorithm in algorithms.items()]
+
     output = ROOT / 'visualization/demo/entry-pages.js'
     output.write_text('\n'.join('window.' + name + ' = ' + json.dumps(value, ensure_ascii=False, indent=2) + ';'
                                 for name, value in [('ENTRY_PAGES', pages), ('ALGORITHM_PAGES', algorithm_pages),
-                                                    ('PROBLEM_ALGORITHMS', algorithm_links)]) + '\n', encoding='utf-8')
+                                                    ('PROBLEM_ALGORITHMS', algorithm_links),
+                                                    ('PAGE_SEARCH_INDEX', search_index),
+                                                    ('ALGORITHM_PROBLEMS', algorithm_problems)]) + '\n', encoding='utf-8')
 
-    sample_path = ROOT / 'visualization/demo/sample-data.js'
-    samples = json.loads(sample_path.read_text(encoding='utf-8').split('=', 1)[1].strip().removesuffix(';'))
-    by_slug = {entry['slug']: entry for entry in catalogue['problems']}
-    for sample in samples:
-        entry = by_slug[sample['slug']]
-        sample['problem'] = text(re.sub(r'\\entryalias\{\d+\}', '', entry['problem']['statement_latex']))
-        for model in ('quantum', 'classical'):
-            sample[model] = dict(entry['quantum_speedup'][model])
-            sample[model].update({key.replace('_latex', '_text'): text(value)
-                                  for key, value in entry['quantum_speedup'][model].items()})
-        for dimension in ('evidence', 'hardware'):
-            sample[dimension] = text(entry['labels'][dimension]['description_latex'])
-        sample['papers'] = [{'title': link['title'], 'url': link['url'], 'locator': link['locator_latex']}
-                            for item in entry['algorithm_items'] for link in item['links']]
-    sample_path.write_text('window.SAMPLE_DATA = ' + json.dumps(samples, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
     return output
 
 

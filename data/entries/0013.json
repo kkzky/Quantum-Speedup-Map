@@ -1,9 +1,10 @@
 {
   "id": "entry-013",
   "number": 13,
-  "ordinal": 13,
+  "slug": "exact-treewidth",
   "title_latex": "Exact treewidth",
   "title": "Exact treewidth",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Treewidth",
@@ -14,60 +15,84 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O^*(1.538^n)$ with exponential QRAM, quantum treewidth dynamic programming.",
-      "headline_text": "$O^*(1.538^n)$ with exponential QRAM, quantum treewidth dynamic programming.",
       "details_latex": "K\\c{l}evickis--Pr\\=usis--Vihrovs also give $O^*(1.554^n)$ time with $O^*(1.452^n)$ space, and $O^*(1.618^n)$ time with polynomial space. The fastest variant uses $O^*(1.538^n)$ space. These are distinct memory tradeoffs obtained from separator-based structural decompositions and quantum search.",
+      "headline_text": "$O^*(1.538^n)$ with exponential QRAM, quantum treewidth dynamic programming.",
       "details_text": "Kļevickis–Prūsis–Vihrovs also give $O^*(1.554^n)$ time with $O^*(1.452^n)$ space, and $O^*(1.618^n)$ time with polynomial space. The fastest variant uses $O^*(1.538^n)$ space. These are distinct memory tradeoffs obtained from separator-based structural decompositions and quantum search."
     },
     "classical": {
       "headline_latex": "$O^*(1.7347^n)$ with exponential space, potential-maximal-clique dynamic programming; $O^*(2.6151^n)$ with polynomial space, Fomin--Villanger.",
-      "headline_text": "$O^*(1.7347^n)$ with exponential space, potential-maximal-clique dynamic programming; $O^*(2.6151^n)$ with polynomial space, Fomin–Villanger.",
       "details_latex": "The first bound enumerates potential maximal cliques and optimizes compatible decomposition blocks. The polynomial-space method enumerates connected sets with constrained neighborhoods and recursively assembles decompositions. The comparison with the polynomial-space quantum algorithm therefore uses the $2.6151^n$ bound; the $1.538^n$ quantum algorithm uses the exponential-space comparison.",
+      "headline_text": "$O^*(1.7347^n)$ with exponential space, potential-maximal-clique dynamic programming; $O^*(2.6151^n)$ with polynomial space, Fomin–Villanger.",
       "details_text": "The first bound enumerates potential maximal cliques and optimizes compatible decomposition blocks. The polynomial-space method enumerates connected sets with constrained neighborhoods and recursively assembles decompositions. The comparison with the polynomial-space quantum algorithm therefore uses the $2.6151^n$ bound; the $1.538^n$ quantum algorithm uses the exponential-space comparison."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial speedups through smaller exponential constants in both displayed memory regimes. The quantum constructions combine structural enumeration with amplitude amplification and minimum finding.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial speedups through smaller exponential constants in both displayed memory regimes. The quantum constructions combine structural enumeration with amplitude amplification and minimum finding."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "Rigorous time-space bounds and partial evidence relative to the best classical algorithms for the same space regime.",
+      "category_id": "evidence-partial",
       "description_text": "Rigorous time-space bounds and partial evidence relative to the best classical algorithms for the same space regime."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The fastest quantum construction needs exponential coherent memory and polynomial active graph registers. The $1.618^n$ variant reduces storage to polynomial logical workspace but retains exponential coherent running time. Fault tolerance is needed in either useful regime.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The fastest quantum construction needs exponential coherent memory and polynomial active graph registers. The $1.618^n$ variant reduces storage to polynomial logical workspace but retains exponential coherent running time. Fault tolerance is needed in either useful regime."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum treewidth dynamic programming",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "13.1",
       "content_latex": "\\href{https://arxiv.org/pdf/2202.08186}{K\\c{l}evickis, Pr\\=usis and Vihrovs, \\emph{Quantum Speedups for Treewidth} (TQC 2022)}. Theorems 21, 22 and 24 give the three tradeoffs; Algorithm 4 gives the fastest construction. Algorithm 1 states the classical polynomial-space procedure.",
       "content_text": "Kļevickis, Prūsis and Vihrovs, Quantum Speedups for Treewidth (TQC 2022). Theorems 21, 22 and 24 give the three tradeoffs; Algorithm 4 gives the fastest construction. Algorithm 1 states the classical polynomial-space procedure.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2202.08186",
+          "title": "Quantum Speedups for Treewidth",
+          "label_latex": "K\\c{l}evickis, Pr\\=usis and Vihrovs, \\emph{Quantum Speedups for Treewidth} (TQC 2022)",
+          "locator_latex": "Theorems 21, 22 and 24 give the three tradeoffs; Algorithm 4 gives the fastest construction. Algorithm 1 states the classical polynomial-space procedure."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-013-citation-001"
+        "entry-013-citation-00032"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "13.2",
       "content_latex": "\\href{https://arxiv.org/pdf/1309.1559}{Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)}. Proposition 5 states the $O(1.7347^n)$ potential-maximal-clique enumeration bound of Fomin--Villanger; the preceding triangulation preliminaries define the blocks used in classical treewidth dynamic programming.",
       "content_text": "Fomin, Todinca and Villanger, Large Induced Subgraphs via Triangulations and CMSO (SIAM Journal on Computing 2015). Proposition 5 states the $O(1.7347^n)$ potential-maximal-clique enumeration bound of Fomin–Villanger; the preceding triangulation preliminaries define the blocks used in classical treewidth dynamic programming.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1309.1559",
+          "title": "Large Induced Subgraphs via Triangulations and CMSO",
+          "label_latex": "Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)",
+          "locator_latex": "Proposition 5 states the $O(1.7347^n)$ potential-maximal-clique enumeration bound of Fomin--Villanger; the preceding triangulation preliminaries define the blocks used in classical treewidth dynamic programming."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-013-citation-002"
+        "entry-013-citation-00033"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-013-citation-001",
-    "entry-013-citation-002"
+  "algorithm_ids": [
+    "treewidth-dp"
   ],
-  "source_latex": "\\entrytitle{13}{Exact treewidth}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{12}\n\\begin{problem}[Treewidth]\nFor a graph $G$, find a tree decomposition $(T,\\{B_t\\})$ minimizing $\\max_t|B_t|-1$. Every vertex belongs to a bag, every edge has both endpoints in a bag, and the bags containing each vertex induce a connected subtree. Treewidth governs the complexity of many graph and constraint algorithms.\nThe polynomial-space quantum bound counts gate time, the exponential-memory quantum bounds use QRAM time, and classical bounds use RAM time.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.538^n)$ with exponential QRAM, quantum treewidth dynamic programming.}\nK\\c{l}evickis--Pr\\=usis--Vihrovs also give $O^*(1.554^n)$ time with $O^*(1.452^n)$ space, and $O^*(1.618^n)$ time with polynomial space. The fastest variant uses $O^*(1.538^n)$ space. These are distinct memory tradeoffs obtained from separator-based structural decompositions and quantum search.\n\\complexity{Classical}{$O^*(1.7347^n)$ with exponential space, potential-maximal-clique dynamic programming; $O^*(2.6151^n)$ with polynomial space, Fomin--Villanger.}\nThe first bound enumerates potential maximal cliques and optimizes compatible decomposition blocks. The polynomial-space method enumerates connected sets with constrained neighborhoods and recursively assembles decompositions. The comparison with the polynomial-space quantum algorithm therefore uses the $2.6151^n$ bound; the $1.538^n$ quantum algorithm uses the exponential-space comparison.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedups through smaller exponential constants in both displayed memory regimes. The quantum constructions combine structural enumeration with amplitude amplification and minimum finding.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous time-space bounds and partial evidence relative to the best classical algorithms for the same space regime.\n\\dimensionlabel{Hardware}{hardwareExponential} The fastest quantum construction needs exponential coherent memory and polynomial active graph registers. The $1.618^n$ variant reduces storage to polynomial logical workspace but retains exponential coherent running time. Fault tolerance is needed in either useful regime.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{13}\n\\item \\href{https://arxiv.org/pdf/2202.08186}{K\\c{l}evickis, Pr\\=usis and Vihrovs, \\emph{Quantum Speedups for Treewidth} (TQC 2022)}. Theorems 21, 22 and 24 give the three tradeoffs; Algorithm 4 gives the fastest construction. Algorithm 1 states the classical polynomial-space procedure.\n\\item \\href{https://arxiv.org/pdf/1309.1559}{Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)}. Proposition 5 states the $O(1.7347^n)$ potential-maximal-clique enumeration bound of Fomin--Villanger; the preceding triangulation preliminaries define the blocks used in classical treewidth dynamic programming.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{13}{Exact treewidth}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{12}\n\\begin{problem}[Treewidth]\nFor a graph $G$, find a tree decomposition $(T,\\{B_t\\})$ minimizing $\\max_t|B_t|-1$. Every vertex belongs to a bag, every edge has both endpoints in a bag, and the bags containing each vertex induce a connected subtree. Treewidth governs the complexity of many graph and constraint algorithms.\nThe polynomial-space quantum bound counts gate time, the exponential-memory quantum bounds use QRAM time, and classical bounds use RAM time.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.538^n)$ with exponential QRAM, quantum treewidth dynamic programming.}\nK\\c{l}evickis--Pr\\=usis--Vihrovs also give $O^*(1.554^n)$ time with $O^*(1.452^n)$ space, and $O^*(1.618^n)$ time with polynomial space. The fastest variant uses $O^*(1.538^n)$ space. These are distinct memory tradeoffs obtained from separator-based structural decompositions and quantum search.\n\\complexity{Classical}{$O^*(1.7347^n)$ with exponential space, potential-maximal-clique dynamic programming; $O^*(2.6151^n)$ with polynomial space, Fomin--Villanger.}\nThe first bound enumerates potential maximal cliques and optimizes compatible decomposition blocks. The polynomial-space method enumerates connected sets with constrained neighborhoods and recursively assembles decompositions. The comparison with the polynomial-space quantum algorithm therefore uses the $2.6151^n$ bound; the $1.538^n$ quantum algorithm uses the exponential-space comparison.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedups through smaller exponential constants in both displayed memory regimes. The quantum constructions combine structural enumeration with amplitude amplification and minimum finding.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous time-space bounds and partial evidence relative to the best classical algorithms for the same space regime.\n\\dimensionlabel{Hardware}{hardwareExponential} The fastest quantum construction needs exponential coherent memory and polynomial active graph registers. The $1.618^n$ variant reduces storage to polynomial logical workspace but retains exponential coherent running time. Fault tolerance is needed in either useful regime.\n\\subhead{Algorithm: Quantum treewidth dynamic programming}\n\\begin{algorithmindex}{13}\n\\item \\href{https://arxiv.org/pdf/2202.08186}{K\\c{l}evickis, Pr\\=usis and Vihrovs, \\emph{Quantum Speedups for Treewidth} (TQC 2022)}. Theorems 21, 22 and 24 give the three tradeoffs; Algorithm 4 gives the fastest construction. Algorithm 1 states the classical polynomial-space procedure.\n\\item \\href{https://arxiv.org/pdf/1309.1559}{Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)}. Proposition 5 states the $O(1.7347^n)$ potential-maximal-clique enumeration bound of Fomin--Villanger; the preceding triangulation preliminaries define the blocks used in classical treewidth dynamic programming.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 13,
+  "citation_ids": [
+    "entry-013-citation-00032",
+    "entry-013-citation-00033"
+  ]
 }

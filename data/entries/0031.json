@@ -1,9 +1,10 @@
 {
   "id": "entry-031",
   "number": 31,
-  "ordinal": 32,
+  "slug": "mst",
   "title_latex": "Minimum spanning tree",
   "title": "Minimum spanning tree",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Minimum spanning tree",
@@ -14,60 +15,110 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(\\sqrt{nm})$ array queries, D\\\"urr--Heiligman--H{\\o}yer--Mhalla.",
-      "headline_text": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(\\sqrt{nm})$ array queries, Dürr–Heiligman–Høyer–Mhalla.",
       "details_latex": "The adjacency array supplies each vertex degree and coherent access to its indexed weighted neighbors. Both bounds allow bounded error and have polylogarithmic computational overhead when graph access and weight comparison are efficient. The output consists of $n-1$ classical edges.",
+      "headline_text": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(\\sqrt{nm})$ array queries, Dürr–Heiligman–Høyer–Mhalla.",
       "details_text": "The adjacency array supplies each vertex degree and coherent access to its indexed weighted neighbors. Both bounds allow bounded error and have polylogarithmic computational overhead when graph access and weight comparison are efficient. The output consists of $n-1$ classical edges."
     },
     "classical": {
       "headline_latex": "$O(m)$ expected time, Karger--Klein--Tarjan; $\\Theta(n^2)$ matrix queries.",
-      "headline_text": "$O(m)$ expected time, Karger–Klein–Tarjan; $\\Theta(n^2)$ matrix queries.",
       "details_latex": "The randomized linear-time algorithm uses an explicit edge list and weight comparisons. In the oracle representation, inspecting the edge weights requires $\\Omega(m)$ queries in the worst case. Thus the matrix comparison is $n^2$ against $n^{3/2}$; the array advantage is a factor $\\sqrt{m/n}$. For $b$-bit weights, arithmetic and comparison costs must be included when converting either query bound to bit or gate complexity.",
+      "headline_text": "$O(m)$ expected time, Karger–Klein–Tarjan; $\\Theta(n^2)$ matrix queries.",
       "details_text": "The randomized linear-time algorithm uses an explicit edge list and weight comparisons. In the oracle representation, inspecting the edge weights requires $\\Omega(m)$ queries in the worst case. Thus the matrix comparison is $n^2$ against $n^{3/2}$; the array advantage is a factor $\\sqrt{m/n}$. For $b$-bit weights, arithmetic and comparison costs must be included when converting either query bound to bit or gate complexity."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial: a factor $\\sqrt n$ for matrix input and $\\sqrt{m/n}$ for array input. The quantum improvement comes from amplitude amplification and minimum finding inside Bor\\r uvka phases.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial: a factor $\\sqrt n$ for matrix input and $\\sqrt{m/n}$ for array input. The quantum improvement comes from amplitude amplification and minimum finding inside Borůvka phases."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "The classical and quantum query bounds are tight for their respective input representations.",
+      "category_id": "evidence-proved",
       "description_text": "The classical and quantum query bounds are tight for their respective input representations."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Fault-tolerant graph access is required at useful scale. Active search and weight registers use $O(\\log n+b)$ logical qubits, in addition to reversible-oracle workspace and $O(n(\\log n+b))$ classical component records.",
+      "category_id": "hardware-polynomial",
       "description_text": "Fault-tolerant graph access is required at useful scale. Active search and weight registers use $O(\\log n+b)$ logical qubits, in addition to reversible-oracle workspace and $O(n(\\log n+b))$ classical component records."
     }
   },
+  "algorithm_heading_latex": "Algorithm: D\\\"urr--Heiligman--H{\\o}yer--Mhalla minimum spanning tree",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "31.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 4, ``Minimum Spanning Tree'', Theorem 8; Section 8, Theorem 24, for the lower bound.",
       "content_text": "Dürr, Heiligman, Høyer and Mhalla, Quantum Query Complexity of Some Graph Problems (2004/2006). Section 4, “Minimum Spanning Tree”, Theorem 8; Section 8, Theorem 24, for the lower bound.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0401091",
+          "title": "Quantum Query Complexity of Some Graph Problems",
+          "label_latex": "D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)",
+          "locator_latex": "Section 4, ``Minimum Spanning Tree'', Theorem 8; Section 8, Theorem 24, for the lower bound."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-031-citation-001"
+        "entry-031-citation-00098"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "31.2",
       "content_latex": "\\href{https://doi.org/10.1145/201019.201022}{Karger, Klein and Tarjan, \\emph{A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees} (1995)}. The minimum-spanning-tree algorithm and its expected linear-time analysis.",
       "content_text": "Karger, Klein and Tarjan, A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees (1995). The minimum-spanning-tree algorithm and its expected linear-time analysis.",
+      "links": [
+        {
+          "url": "https://doi.org/10.1145/201019.201022",
+          "title": "A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees",
+          "label_latex": "Karger, Klein and Tarjan, \\emph{A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees} (1995)",
+          "locator_latex": "The minimum-spanning-tree algorithm and its expected linear-time analysis."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-031-citation-002"
+        "entry-031-citation-00099"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-031-citation-001",
-    "entry-031-citation-002"
+  "algorithm_ids": [
+    "minimum-finding"
   ],
-  "source_latex": "\\entrytitle{31}{Minimum spanning tree}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{30}\n\\begin{problem}[Minimum spanning tree]\nGiven a connected undirected graph $G=(V,E)$, $|V|=n$, $|E|=m$, and weights $w:E\\to\\mathbb R$, output a spanning tree $T$ minimizing $\\sum_{e\\in T}w(e)$. This is the minimum-cost network connecting all vertices.\nThe comparison counts weight-oracle queries; explicit-input classical time counts comparisons and RAM operations, and quantum gate cost includes reversible weight access.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(n^{3/2})$ matrix queries or $\\Theta(\\sqrt{nm})$ array queries, D\\\"urr--Heiligman--H{\\o}yer--Mhalla.}\nThe adjacency array supplies each vertex degree and coherent access to its indexed weighted neighbors. Both bounds allow bounded error and have polylogarithmic computational overhead when graph access and weight comparison are efficient. The output consists of $n-1$ classical edges.\n\n\\complexity{Classical}{$O(m)$ expected time, Karger--Klein--Tarjan; $\\Theta(n^2)$ matrix queries.}\nThe randomized linear-time algorithm uses an explicit edge list and weight comparisons. In the oracle representation, inspecting the edge weights requires $\\Omega(m)$ queries in the worst case. Thus the matrix comparison is $n^2$ against $n^{3/2}$; the array advantage is a factor $\\sqrt{m/n}$. For $b$-bit weights, arithmetic and comparison costs must be included when converting either query bound to bit or gate complexity.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial: a factor $\\sqrt n$ for matrix input and $\\sqrt{m/n}$ for array input. The quantum improvement comes from amplitude amplification and minimum finding inside Bor\\r uvka phases.\n\n\\dimensionlabel{Evidence}{evidenceProved} The classical and quantum query bounds are tight for their respective input representations.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant graph access is required at useful scale. Active search and weight registers use $O(\\log n+b)$ logical qubits, in addition to reversible-oracle workspace and $O(n(\\log n+b))$ classical component records.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{31}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 4, ``Minimum Spanning Tree'', Theorem 8; Section 8, Theorem 24, for the lower bound.\n\\item \\href{https://doi.org/10.1145/201019.201022}{Karger, Klein and Tarjan, \\emph{A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees} (1995)}. The minimum-spanning-tree algorithm and its expected linear-time analysis.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "minimum-finding",
+      "label_latex": "D\\\"urr--H{\\o}yer minimum finding",
+      "problem_numbers": [
+        2,
+        7,
+        11,
+        14,
+        15,
+        16,
+        17,
+        28,
+        29,
+        34,
+        53,
+        59,
+        79,
+        91,
+        116,
+        118,
+        131,
+        132,
+        134
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{31}{Minimum spanning tree}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{30}\n\\begin{problem}[Minimum spanning tree]\nGiven a connected undirected graph $G=(V,E)$, $|V|=n$, $|E|=m$, and weights $w:E\\to\\mathbb R$, output a spanning tree $T$ minimizing $\\sum_{e\\in T}w(e)$. This is the minimum-cost network connecting all vertices.\nThe comparison counts weight-oracle queries; explicit-input classical time counts comparisons and RAM operations, and quantum gate cost includes reversible weight access.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(n^{3/2})$ matrix queries or $\\Theta(\\sqrt{nm})$ array queries, D\\\"urr--Heiligman--H{\\o}yer--Mhalla.}\nThe adjacency array supplies each vertex degree and coherent access to its indexed weighted neighbors. Both bounds allow bounded error and have polylogarithmic computational overhead when graph access and weight comparison are efficient. The output consists of $n-1$ classical edges.\n\n\\complexity{Classical}{$O(m)$ expected time, Karger--Klein--Tarjan; $\\Theta(n^2)$ matrix queries.}\nThe randomized linear-time algorithm uses an explicit edge list and weight comparisons. In the oracle representation, inspecting the edge weights requires $\\Omega(m)$ queries in the worst case. Thus the matrix comparison is $n^2$ against $n^{3/2}$; the array advantage is a factor $\\sqrt{m/n}$. For $b$-bit weights, arithmetic and comparison costs must be included when converting either query bound to bit or gate complexity.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial: a factor $\\sqrt n$ for matrix input and $\\sqrt{m/n}$ for array input. The quantum improvement comes from amplitude amplification and minimum finding inside Bor\\r uvka phases.\n\n\\dimensionlabel{Evidence}{evidenceProved} The classical and quantum query bounds are tight for their respective input representations.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant graph access is required at useful scale. Active search and weight registers use $O(\\log n+b)$ logical qubits, in addition to reversible-oracle workspace and $O(n(\\log n+b))$ classical component records.\n\n\\subhead{Algorithm: D\\\"urr--Heiligman--H{\\o}yer--Mhalla minimum spanning tree}\n\\begin{algorithmindex}{31}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 4, ``Minimum Spanning Tree'', Theorem 8; Section 8, Theorem 24, for the lower bound.\n\\item \\href{https://doi.org/10.1145/201019.201022}{Karger, Klein and Tarjan, \\emph{A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees} (1995)}. The minimum-spanning-tree algorithm and its expected linear-time analysis.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{minimum-finding}{D\\\"urr--H{\\o}yer minimum finding}: \\problemref{2}, \\problemref{7}, \\problemref{11}, \\problemref{14}, \\problemref{15}, \\problemref{16}, \\problemref{17}, \\problemref{28}, \\problemref{29}, \\problemref{34}, \\problemref{53}, \\problemref{59}, \\problemref{79}, \\problemref{91}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 49,
+  "citation_ids": [
+    "entry-031-citation-00098",
+    "entry-031-citation-00099"
+  ]
 }

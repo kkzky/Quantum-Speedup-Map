@@ -1,9 +1,10 @@
 {
   "id": "entry-009",
   "number": 9,
-  "ordinal": 9,
+  "slug": "set-multicover-with-repeated-sets",
   "title_latex": "Set multicover with repeated sets",
   "title": "Set multicover with repeated sets",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Set multicover with repeated sets",
@@ -14,60 +15,84 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\operatorname{poly}(m,n)^{\\log n}T_D^n$, quantum lattice dynamic programming.",
-      "headline_text": "$\\operatorname{poly}(m,n)^{\\log n}T_D^n$, quantum lattice dynamic programming.",
       "details_latex": "For fixed $D$, the base satisfies $T_D<D+1$, with $T_2<2.660$, $T_3<3.529$ and $T_4<4.421$. The quasipolynomial prefactor is part of the bound. Coherent access to precomputed lattice states is assumed. Truncating coverage coordinates at $D$ retains all relevant states, and no set needs multiplicity above $D$.",
+      "headline_text": "$\\operatorname{poly}(m,n)^{\\log n}T_D^n$, quantum lattice dynamic programming.",
       "details_text": "For fixed $D$, the base satisfies $T_D<D+1$, with $T_2<2.660$, $T_3<3.529$ and $T_4<4.421$. The quasipolynomial prefactor is part of the bound. Coherent access to precomputed lattice states is assumed. Truncating coverage coordinates at $D$ retains all relevant states, and no set needs multiplicity above $D$."
     },
     "classical": {
       "headline_latex": "$O(m(D+1)^n)$, demand-vector dynamic programming.",
-      "headline_text": "$O(m(D+1)^n)$, demand-vector dynamic programming.",
       "details_latex": "The state space consists of capped coverage vectors in $\\{0,\\ldots,D\\}^n$. Let $I=\\sum_j|S_j|$ be the incidence count. When $m+I=O(n)$ and $D$ is fixed, a linear-size bounded-width Boolean encoding gives the stronger deterministic bound $\\operatorname{poly}(m,n)2^{O_D(n/\\sqrt{\\log n})}$ with polynomial space. This includes the multiplicity variables, capped local coverage sums and objective threshold.",
+      "headline_text": "$O(m(D+1)^n)$, demand-vector dynamic programming.",
       "details_text": "The state space consists of capped coverage vectors in $\\{0,\\ldots,D\\}^n$. Let $I=\\sum_j|S_j|$ be the incidence count. When $m+I=O(n)$ and $D$ is fixed, a linear-size bounded-width Boolean encoding gives the stronger deterministic bound $\\operatorname{poly}(m,n)2^{O_D(n/\\sqrt{\\log n})}$ with polynomial space. This includes the multiplicity variables, capped local coverage sums and objective threshold."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial speedup through a smaller exponential constant for fixed demand in the general lattice comparison, using quantum search. Linear-incidence instances have a subexponential classical comparator.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial speedup through a smaller exponential constant for fixed demand in the general lattice comparison, using quantum search. Linear-incidence instances have a subexponential classical comparator."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "Rigorous QRAM upper bound and partial evidence against the best general classical lattice algorithm.",
+      "category_id": "evidence-partial",
       "description_text": "Rigorous QRAM upper bound and partial evidence against the best general classical lattice algorithm."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The active coverage register has $O(n\\log(D+1))$ qubits, with polynomial workspace and exponential coherent preprocessing storage. The dependence on $D$ affects both the lattice size and reversible arithmetic.\n{\\small [Before ``ETH is false'', the lattice comparison used $O(m(D+1)^n)$ classically and $\\operatorname{poly}(m,n)^{\\log n}T_D^n$ quantumly, including the linear-incidence regime now covered by the subexponential bound.]\\par}",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The active coverage register has $O(n\\log(D+1))$ qubits, with polynomial workspace and exponential coherent preprocessing storage. The dependence on $D$ affects both the lattice size and reversible arithmetic. [Before “ETH is false”, the lattice comparison used $O(m(D+1)^n)$ classically and $\\operatorname{poly}(m,n)^{\\log n}T_D^n$ quantumly, including the linear-incidence regime now covered by the subexponential bound.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum dynamic programming on lattice graphs",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "9.1",
       "content_latex": "\\href{https://arxiv.org/pdf/2104.14384}{Glos, Kokainis, Mori and Vihrovs, \\emph{Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs} (MFCS 2021)}. Algorithm 1 and Theorem 5: lattice search; Sections 6--7 and Theorem 9: QRAM implementation and repeated-set multicover.",
       "content_text": "Glos, Kokainis, Mori and Vihrovs, Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs (MFCS 2021). Algorithm 1 and Theorem 5: lattice search; Sections 6–7 and Theorem 9: QRAM implementation and repeated-set multicover.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2104.14384",
+          "title": "Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs",
+          "label_latex": "Glos, Kokainis, Mori and Vihrovs, \\emph{Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs} (MFCS 2021)",
+          "locator_latex": "Algorithm 1 and Theorem 5: lattice search; Sections 6--7 and Theorem 9: QRAM implementation and repeated-set multicover."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-009-citation-001"
+        "entry-009-citation-00025"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "9.2",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D, applied to the bounded-demand, linear-incidence encoding.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and Appendix D, applied to the bounded-demand, linear-incidence encoding.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1 and Appendix D, applied to the bounded-demand, linear-incidence encoding."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-009-citation-002"
+        "entry-009-citation-00026"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-009-citation-001",
-    "entry-009-citation-002"
+  "algorithm_ids": [
+    "lattice-dp"
   ],
-  "source_latex": "\\entrytitle{9}{Set multicover with repeated sets}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{8}\n\\begin{problem}[Set multicover with repeated sets]\nGiven $\\mathcal F=\\{S_1,\\ldots,S_m\\}\\subseteq2^{[n]}$ and a fixed demand $D\\geq1$, minimize $\\sum_jx_j$ over integers $x_j\\geq0$ satisfying $\\sum_{j:i\\in S_j}x_j\\geq D$ for every $i$. Here a set may be selected repeatedly. This models redundant coverage or repeated resource provision.\nThe quantum algorithm is measured in QRAM time, classical lattice dynamic programming in RAM time, and the bounded-incidence encoding in bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\operatorname{poly}(m,n)^{\\log n}T_D^n$, quantum lattice dynamic programming.}\nFor fixed $D$, the base satisfies $T_D<D+1$, with $T_2<2.660$, $T_3<3.529$ and $T_4<4.421$. The quasipolynomial prefactor is part of the bound. Coherent access to precomputed lattice states is assumed. Truncating coverage coordinates at $D$ retains all relevant states, and no set needs multiplicity above $D$.\n\\complexity{Classical}{$O(m(D+1)^n)$, demand-vector dynamic programming.}\nThe state space consists of capped coverage vectors in $\\{0,\\ldots,D\\}^n$. Let $I=\\sum_j|S_j|$ be the incidence count. When $m+I=O(n)$ and $D$ is fixed, a linear-size bounded-width Boolean encoding gives the stronger deterministic bound $\\operatorname{poly}(m,n)2^{O_D(n/\\sqrt{\\log n})}$ with polynomial space. This includes the multiplicity variables, capped local coverage sums and objective threshold.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for fixed demand in the general lattice comparison, using quantum search. Linear-incidence instances have a subexponential classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous QRAM upper bound and partial evidence against the best general classical lattice algorithm.\n\\dimensionlabel{Hardware}{hardwareExponential} The active coverage register has $O(n\\log(D+1))$ qubits, with polynomial workspace and exponential coherent preprocessing storage. The dependence on $D$ affects both the lattice size and reversible arithmetic.\n{\\small [Before ``ETH is false'', the lattice comparison used $O(m(D+1)^n)$ classically and $\\operatorname{poly}(m,n)^{\\log n}T_D^n$ quantumly, including the linear-incidence regime now covered by the subexponential bound.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{9}\n\\item \\href{https://arxiv.org/pdf/2104.14384}{Glos, Kokainis, Mori and Vihrovs, \\emph{Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs} (MFCS 2021)}. Algorithm 1 and Theorem 5: lattice search; Sections 6--7 and Theorem 9: QRAM implementation and repeated-set multicover.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D, applied to the bounded-demand, linear-incidence encoding.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{9}{Set multicover with repeated sets}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{8}\n\\begin{problem}[Set multicover with repeated sets]\nGiven $\\mathcal F=\\{S_1,\\ldots,S_m\\}\\subseteq2^{[n]}$ and a fixed demand $D\\geq1$, minimize $\\sum_jx_j$ over integers $x_j\\geq0$ satisfying $\\sum_{j:i\\in S_j}x_j\\geq D$ for every $i$. Here a set may be selected repeatedly. This models redundant coverage or repeated resource provision.\nThe quantum algorithm is measured in QRAM time, classical lattice dynamic programming in RAM time, and the bounded-incidence encoding in bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\operatorname{poly}(m,n)^{\\log n}T_D^n$, quantum lattice dynamic programming.}\nFor fixed $D$, the base satisfies $T_D<D+1$, with $T_2<2.660$, $T_3<3.529$ and $T_4<4.421$. The quasipolynomial prefactor is part of the bound. Coherent access to precomputed lattice states is assumed. Truncating coverage coordinates at $D$ retains all relevant states, and no set needs multiplicity above $D$.\n\\complexity{Classical}{$O(m(D+1)^n)$, demand-vector dynamic programming.}\nThe state space consists of capped coverage vectors in $\\{0,\\ldots,D\\}^n$. Let $I=\\sum_j|S_j|$ be the incidence count. When $m+I=O(n)$ and $D$ is fixed, a linear-size bounded-width Boolean encoding gives the stronger deterministic bound $\\operatorname{poly}(m,n)2^{O_D(n/\\sqrt{\\log n})}$ with polynomial space. This includes the multiplicity variables, capped local coverage sums and objective threshold.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for fixed demand in the general lattice comparison, using quantum search. Linear-incidence instances have a subexponential classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous QRAM upper bound and partial evidence against the best general classical lattice algorithm.\n\\dimensionlabel{Hardware}{hardwareExponential} The active coverage register has $O(n\\log(D+1))$ qubits, with polynomial workspace and exponential coherent preprocessing storage. The dependence on $D$ affects both the lattice size and reversible arithmetic.\n{\\small [Before ``ETH is false'', the lattice comparison used $O(m(D+1)^n)$ classically and $\\operatorname{poly}(m,n)^{\\log n}T_D^n$ quantumly, including the linear-incidence regime now covered by the subexponential bound.]\\par}\n\\subhead{Algorithm: Quantum dynamic programming on lattice graphs}\n\\begin{algorithmindex}{9}\n\\item \\href{https://arxiv.org/pdf/2104.14384}{Glos, Kokainis, Mori and Vihrovs, \\emph{Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs} (MFCS 2021)}. Algorithm 1 and Theorem 5: lattice search; Sections 6--7 and Theorem 9: QRAM implementation and repeated-set multicover.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D, applied to the bounded-demand, linear-incidence encoding.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 9,
+  "citation_ids": [
+    "entry-009-citation-00025",
+    "entry-009-citation-00026"
+  ]
 }

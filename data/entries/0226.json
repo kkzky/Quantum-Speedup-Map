@@ -1,0 +1,122 @@
+{
+  "id": "entry-226",
+  "number": 226,
+  "slug": "prior-q41",
+  "title": "Support-size estimation",
+  "title_latex": "Support-size estimation",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q41",
+  "inventory_ids": [
+    "Q41"
+  ],
+  "problem": {
+    "name": "Support-size estimation",
+    "name_latex": "Support-size estimation",
+    "statement_latex": "Given a distribution $p$ whose nonzero probabilities are at least $1/m$, estimate $S(p)=|\\{i:p_i>0\\}|$ to additive error $\\varepsilon m$. Access is through the coherent sampler used by Li--Wu.",
+    "statement_text": "Given a distribution $p$ whose nonzero probabilities are at least $1/m$, estimate $S(p)=|\\{i:p_i>0\\}|$ to additive error $\\varepsilon m$. Access is through the coherent sampler used by Li–Wu."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt m/\\varepsilon^{3/2})$ quantum queries by Li--Wu, using amplitude estimation and polynomial approximations to the zero-probability threshold.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt m/\\varepsilon^{3/2})$ quantum queries by Li–Wu, using amplitude estimation and polynomial approximations to the zero-probability threshold.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(m/\\log m)$ independent samples for fixed $\\varepsilon$ in the standard minimum-mass model, by optimal unseen-species/support estimators.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(m/\\log m)$ independent samples for fixed $\\varepsilon$ in the standard minimum-mass model, by optimal unseen-species/support estimators.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-support-estimation",
+    "amplitude-estimation"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-support-estimation",
+      "label_latex": "Li--Wu support-size and support-coverage estimation",
+      "problem_numbers": [
+        227
+      ]
+    },
+    {
+      "algorithm_id": "amplitude-estimation",
+      "label_latex": "Quantum amplitude estimation and counting",
+      "problem_numbers": [
+        6,
+        54,
+        90,
+        99,
+        112,
+        120,
+        221,
+        222,
+        223,
+        224,
+        225,
+        227
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1710.06025}{\\emph{Quantum Query Complexity of Entropy Estimation}}. Algorithm9 and Theorem8.2.",
+      "content_text": "Quantum Query Complexity of Entropy Estimation. Algorithm9 and Theorem8.2.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1710.06025",
+          "title": "Quantum Query Complexity of Entropy Estimation",
+          "label_latex": "\\emph{Quantum Query Complexity of Entropy Estimation}",
+          "locator_latex": "Algorithm9 and Theorem8.2."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-226-citation-00095"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Li--Wu support-size and support-coverage estimation; Quantum amplitude estimation and counting",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt m)",
+    "classical": "\\Theta(m/\\log m)",
+    "parameter": "inverse minimum nonzero mass m; fixed accuracy epsilon",
+    "model": "coherent sampler queries versus independent samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt m)",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 46,
+  "citation_ids": [
+    "entry-226-citation-00095"
+  ]
+}

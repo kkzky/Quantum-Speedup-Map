@@ -1,0 +1,95 @@
+{
+  "id": "entry-155",
+  "number": 155,
+  "slug": "prior-a11",
+  "title": "Polynomial factorization over a finite field",
+  "title_latex": "Polynomial factorization over a finite field",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a11",
+  "inventory_ids": [
+    "A11"
+  ],
+  "problem": {
+    "name": "Polynomial factorization over a finite field",
+    "name_latex": "Polynomial factorization over a finite field",
+    "statement_latex": "Given $f\\in\\mathbb F_q[x]$ of degree $n$, output its monic irreducible factors and multiplicities. The field and coefficients have explicit finite encodings; complexity counts bit operations.",
+    "statement_text": "Given $f\\in\\mathbb F_q[x]$ of degree $n$, output its monic irreducible factors and multiplicities. The field and coefficients have explicit finite encodings; complexity counts bit operations."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^{4/3+o(1)}\\log^{2+o(1)}q)$ expected time by Doliskani; typical factor-degree patterns admit $O(n^{1+o(1)}\\log^{2+o(1)}q)$.",
+      "details_latex": "",
+      "headline_text": "$O(n^{4/3+o(1)}\\log^{2+o(1)}q)$ expected time by Doliskani; typical factor-degree patterns admit $O(n^{1+o(1)}\\log^{2+o(1)}q)$.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n^{3/2+o(1)}\\log^{1+o(1)}q+n^{1+o(1)}\\log^{2+o(1)}q)$ randomized time by Kedlaya--Umans modular-composition factorization. The improvement depends on the relative growth of $n$ and $\\log q$.",
+      "details_latex": "",
+      "headline_text": "$O(n^{3/2+o(1)}\\log^{1+o(1)}q+n^{1+o(1)}\\log^{2+o(1)}q)$ randomized time by Kedlaya–Umans modular-composition factorization. The improvement depends on the relative growth of $n$ and $\\log q$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "doliskani-finite-field-factorization"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1807.09675}{\\emph{Toward an Optimal Quantum Algorithm for Polynomial Factorization over Finite Fields}}. Theorem 1; distinct-degree algorithm; classical https://doi.org/10.1137/08073408X; update https://arxiv.org/abs/2511.10851",
+      "content_text": "Toward an Optimal Quantum Algorithm for Polynomial Factorization over Finite Fields. Theorem 1; distinct-degree algorithm; classical https://doi.org/10.1137/08073408X; update https://arxiv.org/abs/2511.10851",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1807.09675",
+          "title": "Toward an Optimal Quantum Algorithm for Polynomial Factorization over Finite Fields",
+          "label_latex": "\\emph{Toward an Optimal Quantum Algorithm for Polynomial Factorization over Finite Fields}",
+          "locator_latex": "Theorem 1; distinct-degree algorithm; classical https://doi.org/10.1137/08073408X; update https://arxiv.org/abs/2511.10851"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-155-citation-00317"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Doliskani quantum finite-field factorization",
+  "plot": {
+    "quantum": "O(n^{4/3+o(1)}\\log^{2+o(1)}q)",
+    "classical": "O(n^{3/2+o(1)}\\log^{1+o(1)}q+n^{1+o(1)}\\log^{2+o(1)}q)",
+    "parameter": "degree n and field size q",
+    "model": "bit operations",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Polynomial degree saving in the applicable field-size regime",
+    "quantum_exponent": 1.3333333333333333,
+    "classical_exponent": 1.5
+  },
+  "ordinal": 155,
+  "citation_ids": [
+    "entry-155-citation-00317"
+  ]
+}

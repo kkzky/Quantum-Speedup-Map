@@ -1,9 +1,10 @@
 {
   "id": "entry-062",
   "number": 62,
-  "ordinal": 63,
+  "slug": "discrete-logarithms-in-finite-fields",
   "title_latex": "Discrete logarithms in finite fields",
   "title": "Discrete logarithms in finite fields",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Discrete logarithms in finite fields",
@@ -14,60 +15,102 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(n^3)$ gates and $O(n)$ logical qubits, Shor discrete logarithms.",
-      "headline_text": "$O(n^3)$ gates and $O(n)$ logical qubits, Shor discrete logarithms.",
       "details_latex": "For $n=\\lceil\\log_2q\\rceil$, this conventional bound includes reversible field exponentiation and Fourier sampling; fast multiplication improves the arithmetic cost. The group-operation query count is polynomial in $n$. The output is the classical exponent $x$, with constant success probability amplified by repetition.",
+      "headline_text": "$O(n^3)$ gates and $O(n)$ logical qubits, Shor discrete logarithms.",
       "details_text": "For $n=\\lceil\\log_2q\\rceil$, this conventional bound includes reversible field exponentiation and Fourier sampling; fast multiplication improves the arithmetic cost. The group-operation query count is polynomial in $n$. The output is the classical exponent $x$, with constant success probability amplified by repetition."
     },
     "classical": {
       "headline_latex": "$L_q[1/3,(64/9)^{1/3}]$ heuristic time in general large prime fields, number field sieve discrete logarithms.",
-      "headline_text": "$L_q[1/3,(64/9)^{1/3}]$ heuristic time in general large prime fields, number field sieve discrete logarithms.",
       "details_latex": "The bound includes relation collection, sparse linear algebra and individual-logarithm descent. Special field representations can improve the $L$-constant. For applicable families in small fixed characteristic, Barbulescu--Gaudry--Joux--Thom\\'e and subsequent rigorous developments give quasi-polynomial time $\\exp((\\log\\log q)^{O(1)})$. The characteristic and field representation therefore determine the matched classical comparator.",
+      "headline_text": "$L_q[1/3,(64/9)^{1/3}]$ heuristic time in general large prime fields, number field sieve discrete logarithms.",
       "details_text": "The bound includes relation collection, sparse linear algebra and individual-logarithm descent. Special field representations can improve the $L$-constant. For applicable families in small fixed characteristic, Barbulescu–Gaudry–Joux–Thomé and subsequent rigorous developments give quasi-polynomial time $\\exp((\\log\\log q)^{O(1)})$. The characteristic and field representation therefore determine the matched classical comparator."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-exponential-subexponential-to-polynomial",
       "color_key": "strengthPolynomialTime",
       "description_latex": "Subexponential to polynomial for large prime fields; quasi-polynomial to polynomial in the stated small-characteristic families. The quantum mechanism is abelian Fourier sampling.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
       "description_text": "Subexponential to polynomial for large prime fields; quasi-polynomial to polynomial in the stated small-characteristic families. The quantum mechanism is abelian Fourier sampling."
     },
     "evidence": {
-      "category_id": "evidence-strong",
       "color_key": "evidenceStrong",
       "description_latex": "Strong conditional evidence under the corresponding classical discrete-logarithm hardness assumption; generic-group lower bounds apply to the separately specified oracle model.",
+      "category_id": "evidence-strong",
       "description_text": "Strong conditional evidence under the corresponding classical discrete-logarithm hardness assumption; generic-group lower bounds apply to the separately specified oracle model."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Cryptographic fields require fault-tolerant reversible arithmetic. The data and arithmetic workspace use $O(n)$ logical qubits in space-efficient implementations, with polynomially many coherent field multiplications. Physical-qubit counts depend on the chosen arithmetic circuits and error-correction architecture.",
+      "category_id": "hardware-polynomial",
       "description_text": "Cryptographic fields require fault-tolerant reversible arithmetic. The data and arithmetic workspace use $O(n)$ logical qubits in space-efficient implementations, with polynomially many coherent field multiplications. Physical-qubit counts depend on the chosen arithmetic circuits and error-correction architecture."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Shor discrete logarithm",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "62.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9508027}{Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)}. Section 6, equations (6.1)--(6.3): discrete-logarithm algorithm.",
       "content_text": "Shor, Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer (1997). Section 6, equations (6.1)–(6.3): discrete-logarithm algorithm.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/9508027",
+          "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+          "label_latex": "Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)",
+          "locator_latex": "Section 6, equations (6.1)--(6.3): discrete-logarithm algorithm."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-062-citation-001"
+        "entry-062-citation-00232"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "62.2",
       "content_latex": "\\href{https://arxiv.org/pdf/1306.4244}{Barbulescu, Gaudry, Joux and Thom\\'e, \\emph{A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic} (2014)}. Theorem 3: the quasi-polynomial bound for sparse medium subfield representations; descent construction in the following sections.",
       "content_text": "Barbulescu, Gaudry, Joux and Thomé, A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic (2014). Theorem 3: the quasi-polynomial bound for sparse medium subfield representations; descent construction in the following sections.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1306.4244",
+          "title": "A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic",
+          "label_latex": "Barbulescu, Gaudry, Joux and Thom\\'e, \\emph{A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic} (2014)",
+          "locator_latex": "Theorem 3: the quasi-polynomial bound for sparse medium subfield representations; descent construction in the following sections."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-062-citation-002"
+        "entry-062-citation-00233"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-062-citation-001",
-    "entry-062-citation-002"
+  "algorithm_ids": [
+    "shor-order"
   ],
-  "source_latex": "\\entrytitle{62}{Discrete logarithms in finite fields}{strengthPolynomialTime}{evidenceStrong}{hardwarePolynomial}\n\\setcounter{problem}{61}\n\\begin{problem}[Discrete logarithms in finite fields]\nGiven a finite field $\\mathbb F_q$, an element $g$ of order $r$, and $h\\in\\langle g\\rangle$, find $x\\in\\mathbb Z/r\\mathbb Z$ with $g^x=h$. The input length is $\\Theta(\\log q)$ plus the field representation. Prime-field Diffie--Hellman is the principal cryptographic application. The explicit-field comparison uses quantum gate complexity and classical bit complexity; the black-box comparison counts group operations.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(n^3)$ gates and $O(n)$ logical qubits, Shor discrete logarithms.}\nFor $n=\\lceil\\log_2q\\rceil$, this conventional bound includes reversible field exponentiation and Fourier sampling; fast multiplication improves the arithmetic cost. The group-operation query count is polynomial in $n$. The output is the classical exponent $x$, with constant success probability amplified by repetition.\n\n\\complexity{Classical}{$L_q[1/3,(64/9)^{1/3}]$ heuristic time in general large prime fields, number field sieve discrete logarithms.}\nThe bound includes relation collection, sparse linear algebra and individual-logarithm descent. Special field representations can improve the $L$-constant. For applicable families in small fixed characteristic, Barbulescu--Gaudry--Joux--Thom\\'e and subsequent rigorous developments give quasi-polynomial time $\\exp((\\log\\log q)^{O(1)})$. The characteristic and field representation therefore determine the matched classical comparator.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial for large prime fields; quasi-polynomial to polynomial in the stated small-characteristic families. The quantum mechanism is abelian Fourier sampling.\n\n\\dimensionlabel{Evidence}{evidenceStrong} Strong conditional evidence under the corresponding classical discrete-logarithm hardness assumption; generic-group lower bounds apply to the separately specified oracle model.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Cryptographic fields require fault-tolerant reversible arithmetic. The data and arithmetic workspace use $O(n)$ logical qubits in space-efficient implementations, with polynomially many coherent field multiplications. Physical-qubit counts depend on the chosen arithmetic circuits and error-correction architecture.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{62}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9508027}{Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)}. Section 6, equations (6.1)--(6.3): discrete-logarithm algorithm.\n\\item \\href{https://arxiv.org/pdf/1306.4244}{Barbulescu, Gaudry, Joux and Thom\\'e, \\emph{A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic} (2014)}. Theorem 3: the quasi-polynomial bound for sparse medium subfield representations; descent construction in the following sections.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        63,
+        64,
+        146,
+        147,
+        149,
+        150,
+        152,
+        154,
+        229,
+        193
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{62}{Discrete logarithms in finite fields}{strengthPolynomialTime}{evidenceStrong}{hardwarePolynomial}\n\\setcounter{problem}{61}\n\\begin{problem}[Discrete logarithms in finite fields]\nGiven a finite field $\\mathbb F_q$, an element $g$ of order $r$, and $h\\in\\langle g\\rangle$, find $x\\in\\mathbb Z/r\\mathbb Z$ with $g^x=h$. The input length is $\\Theta(\\log q)$ plus the field representation. Prime-field Diffie--Hellman is the principal cryptographic application. The explicit-field comparison uses quantum gate complexity and classical bit complexity; the black-box comparison counts group operations.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(n^3)$ gates and $O(n)$ logical qubits, Shor discrete logarithms.}\nFor $n=\\lceil\\log_2q\\rceil$, this conventional bound includes reversible field exponentiation and Fourier sampling; fast multiplication improves the arithmetic cost. The group-operation query count is polynomial in $n$. The output is the classical exponent $x$, with constant success probability amplified by repetition.\n\n\\complexity{Classical}{$L_q[1/3,(64/9)^{1/3}]$ heuristic time in general large prime fields, number field sieve discrete logarithms.}\nThe bound includes relation collection, sparse linear algebra and individual-logarithm descent. Special field representations can improve the $L$-constant. For applicable families in small fixed characteristic, Barbulescu--Gaudry--Joux--Thom\\'e and subsequent rigorous developments give quasi-polynomial time $\\exp((\\log\\log q)^{O(1)})$. The characteristic and field representation therefore determine the matched classical comparator.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial for large prime fields; quasi-polynomial to polynomial in the stated small-characteristic families. The quantum mechanism is abelian Fourier sampling.\n\n\\dimensionlabel{Evidence}{evidenceStrong} Strong conditional evidence under the corresponding classical discrete-logarithm hardness assumption; generic-group lower bounds apply to the separately specified oracle model.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Cryptographic fields require fault-tolerant reversible arithmetic. The data and arithmetic workspace use $O(n)$ logical qubits in space-efficient implementations, with polynomially many coherent field multiplications. Physical-qubit counts depend on the chosen arithmetic circuits and error-correction architecture.\n\n\n\\subhead{Algorithm: Shor discrete logarithm}\n\\begin{algorithmindex}{62}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9508027}{Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)}. Section 6, equations (6.1)--(6.3): discrete-logarithm algorithm.\n\\item \\href{https://arxiv.org/pdf/1306.4244}{Barbulescu, Gaudry, Joux and Thom\\'e, \\emph{A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic} (2014)}. Theorem 3: the quasi-polynomial bound for sparse medium subfield representations; descent construction in the following sections.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{shor-order}{Shor order finding and discrete logarithm}: \\problemref{61}, \\problemref{63}, \\problemref{64}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 119,
+  "citation_ids": [
+    "entry-062-citation-00232",
+    "entry-062-citation-00233"
+  ]
 }

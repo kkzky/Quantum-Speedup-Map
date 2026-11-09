@@ -1,0 +1,112 @@
+{
+  "id": "entry-150",
+  "number": 150,
+  "slug": "prior-a06",
+  "title": "Ideal operations in finite rings",
+  "title_latex": "Ideal operations in finite rings",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a06",
+  "inventory_ids": [
+    "A06"
+  ],
+  "problem": {
+    "name": "Ideal operations in finite rings",
+    "name_latex": "Ideal operations in finite rings",
+    "statement_latex": "Given a uniquely encoded finite black-box ring $R$, generators of ideals $I,J$, and $a\\in R$, compute an additive basis of an ideal, decide $a\\in I$, or compute generators of $I\\cap J$ and annihilators as specified in the paper. Complexity counts reversible ring operations and gates.",
+    "statement_text": "Given a uniquely encoded finite black-box ring $R$, generators of ideals $I,J$, and $a\\in R$, compute an additive basis of an ideal, decide $a\\in I$, or compute generators of $I\\cap J$ and annihilators as specified in the paper. Complexity counts reversible ring operations and gates."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log|R|)$ time by Wocjan--Jordan--Ahmadi--Brennan, using uniform ideal states and abelian hidden-subgroup computations.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log|R|)$ time by Wocjan–Jordan–Ahmadi–Brennan, using uniform ideal states and abelian hidden-subgroup computations.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Once an additive basis and multiplication constants are available, Smith-normal-form and finite-module algorithms run in polynomial bit complexity. For a generic black-box input, constructing the needed coordinates has the $\\widetilde O(|R|^{1/2})$ generic-group bound.",
+      "details_latex": "",
+      "headline_text": "Once an additive basis and multiplication constants are available, Smith-normal-form and finite-module algorithms run in polynomial bit complexity. For a generic black-box input, constructing the needed coordinates has the $\\widetilde O(|R|^{1/2})$ generic-group bound.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-finite-ring-ideals",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        146,
+        147,
+        149,
+        152,
+        154,
+        229,
+        193
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0908.0022}{\\emph{Efficient quantum processing of ideals in finite rings}}. Ideal basis algorithm and applications sections.",
+      "content_text": "Efficient quantum processing of ideals in finite rings. Ideal basis algorithm and applications sections.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0908.0022",
+          "title": "Efficient quantum processing of ideals in finite rings",
+          "label_latex": "\\emph{Efficient quantum processing of ideals in finite rings}",
+          "locator_latex": "Ideal basis algorithm and applications sections."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-150-citation-00312"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Wocjan--Jordan--Ahmadi--Brennan ideal algorithms; Shor order finding and discrete logarithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log|R|)",
+    "classical": "\\widetilde O(|R|^{1/2})",
+    "parameter": "ring cardinality |R|; black-box representation",
+    "model": "ring operations with coordinate construction",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Strongest regime: generic black-box input"
+  },
+  "ordinal": 150,
+  "citation_ids": [
+    "entry-150-citation-00312"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "entry-147",
+  "number": 147,
+  "slug": "prior-a02",
+  "title": "Isomorphism of coprime abelian-by-cyclic groups",
+  "title_latex": "Isomorphism of coprime abelian-by-cyclic groups",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a02",
+  "inventory_ids": [
+    "A02"
+  ],
+  "problem": {
+    "name": "Isomorphism of coprime abelian-by-cyclic groups",
+    "name_latex": "Isomorphism of coprime abelian-by-cyclic groups",
+    "statement_latex": "Given black-box groups $G,H$ promised to have decompositions $A\\rtimes\\mathbb Z_m$ with $A$ abelian and $\\gcd(|A|,m)=1$, decide whether $G\\cong H$ and construct an isomorphism. Let $N=\\min\\{|G|,|H|\\}$; input generators and operations have polylogarithmic descriptions.",
+    "statement_text": "Given black-box groups $G,H$ promised to have decompositions $A\\rtimes\\mathbb Z_m$ with $A$ abelian and $\\gcd(|A|,m)=1$, decide whether $G\\cong H$ and construct an isomorphism. Let $N=\\min\\{|G|,|H|\\}$; input generators and operations have polylogarithmic descriptions."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log N)$ quantum time by Le Gall, through abelian decomposition and simultaneous matrix-conjugacy calculations.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log N)$ quantum time by Le Gall, through abelian decomposition and simultaneous matrix-conjugacy calculations.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$N^{1+o(1)}$ time by Le Gall's classical algorithm for the same group family.",
+      "details_latex": "",
+      "headline_text": "$N^{1+o(1)}$ time by Le Gall's classical algorithm for the same group family.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "coprime-group-isomorphism",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        146,
+        149,
+        150,
+        152,
+        154,
+        229,
+        193
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1001.0608}{\\emph{An Efficient Quantum Algorithm for some Instances of the Group Isomorphism Problem}}. Theorems 1.2 and 1.3; STACS 2010 https://doi.org/10.4230/LIPIcs.STACS.2010.2484",
+      "content_text": "An Efficient Quantum Algorithm for some Instances of the Group Isomorphism Problem. Theorems 1.2 and 1.3; STACS 2010 https://doi.org/10.4230/LIPIcs.STACS.2010.2484",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1001.0608",
+          "title": "An Efficient Quantum Algorithm for some Instances of the Group Isomorphism Problem",
+          "label_latex": "\\emph{An Efficient Quantum Algorithm for some Instances of the Group Isomorphism Problem}",
+          "locator_latex": "Theorems 1.2 and 1.3; STACS 2010 https://doi.org/10.4230/LIPIcs.STACS.2010.2484"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-147-citation-00308"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Le Gall coprime group-isomorphism algorithm; Shor order finding and discrete logarithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log N)",
+    "classical": "N^{1+o(1)}",
+    "parameter": "group order N; logarithmic input encoding",
+    "model": "black-box group time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial in log N"
+  },
+  "ordinal": 147,
+  "citation_ids": [
+    "entry-147-citation-00308"
+  ]
+}

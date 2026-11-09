@@ -1,0 +1,84 @@
+{
+  "id": "entry-165",
+  "number": 165,
+  "slug": "prior-a22",
+  "title": "Hidden quadratic level sets",
+  "title_latex": "Hidden quadratic level sets",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a22",
+  "inventory_ids": [
+    "A22"
+  ],
+  "problem": {
+    "name": "Hidden quadratic level sets",
+    "name_latex": "Hidden quadratic level sets",
+    "statement_latex": "Let $q=p^a$ for fixed characteristic $p$. Given an oracle on $\\mathbb F_q^n$ with $f(x)=f(y)$ exactly when $P(x)=P(y)$ for an unknown polynomial $P$ of degree at most two, recover a polynomial defining the same level-set partition. Coefficients are determined up to the partition-preserving equivalence.",
+    "statement_text": "Let $q=p^a$ for fixed characteristic $p$. Given an oracle on $\\mathbb F_q^n$ with $f(x)=f(y)$ exactly when $P(x)=P(y)$ for an unknown polynomial $P$ of degree at most two, recover a polynomial defining the same level-set partition. Coefficients are determined up to the partition-preserving equivalence."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(n,\\log q)$ quantum time over constant-characteristic fields, by Decker--Draisma--Ivanyos--Santha's reduction from quadratic level sets to hidden symmetry and hidden subgroups.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n,\\log q)$ quantum time over constant-characteristic fields, by Decker–Draisma–Ivanyos–Santha's reduction from quadratic level sets to hidden symmetry and hidden subgroups.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Classical recovery can enumerate the finite coefficient space in $q^{O(n^2)}$ time. Collision lower bounds for the hidden-label oracle give a positive-power-of-$q$ obstruction for its hard subfamilies.",
+      "details_latex": "",
+      "headline_text": "Classical recovery can enumerate the finite coefficient space in $q^{O(n^2)}$ time. Collision lower bounds for the hidden-label oracle give a positive-power-of-$q$ obstruction for its hard subfamilies.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "hidden-symmetry-subgroup-reduction"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1107.2189}{\\emph{Hidden Symmetry Subgroup Problems}}. Theorem 3 and Section 4.3: multivariate quadratic hidden polynomials over constant-characteristic fields",
+      "content_text": "Hidden Symmetry Subgroup Problems. Theorem 3 and Section 4.3: multivariate quadratic hidden polynomials over constant-characteristic fields",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1107.2189",
+          "title": "Hidden Symmetry Subgroup Problems",
+          "label_latex": "\\emph{Hidden Symmetry Subgroup Problems}",
+          "locator_latex": "Theorem 3 and Section 4.3: multivariate quadratic hidden polynomials over constant-characteristic fields"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-165-citation-00327"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Decker--Draisma--Ivanyos--Santha hidden-symmetry algorithm",
+  "ordinal": 164,
+  "citation_ids": [
+    "entry-165-citation-00327"
+  ]
+}

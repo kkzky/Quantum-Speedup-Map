@@ -1,0 +1,129 @@
+{
+  "id": "entry-195",
+  "number": 195,
+  "slug": "general-hsp-query-identification",
+  "title": "Hidden subgroup identification in a general finite group",
+  "title_latex": "Hidden subgroup identification in a general finite group",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "general_hsp_query_identification",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Hidden subgroup identification in a general finite group",
+    "name_latex": "Hidden subgroup identification in a general finite group",
+    "statement_latex": "Given finite $G$ and an oracle $f:G\\to X$ constant on, and distinct between, the left cosets of unknown $H\\leq G$, output generators of $H$. Complexity counts oracle queries; $n=\\lceil\\log_2|G|\\rceil$.",
+    "statement_text": "Given finite $G$ and an oracle $f:G\\to X$ constant on, and distinct between, the left cosets of unknown $H\\leq G$, output generators of $H$. Complexity counts oracle queries; $n=\\lceil\\log_2|G|\\rceil$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential classical queries to polynomial quantum queries.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential classical queries to polynomial quantum queries."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The upper bound holds for every finite group; oracle lower bounds give an exponential worst-case classical separation.",
+      "category_id": "evidence-proved",
+      "description_text": "The upper bound holds for every finite group; oracle lower bounds give an exponential worst-case classical separation."
+    },
+    "hardware": {
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomially many coset-state registers suffice; general joint measurements and subgroup enumeration have exponential implementation cost.",
+      "category_id": "hardware-superpolynomial",
+      "description_text": "Polynomially many coset-state registers suffice; general joint measurements and subgroup enumeration have exponential implementation cost."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^2+\\log(1/\\delta))$ queries with error $\\delta$ by the Ettinger--H{\\o}yer--Knill subgroup-state test. An exact construction uses $O(n^4)$ queries with arbitrary one-qubit gates. General subgroup discrimination and preprocessing require exponential resources.",
+      "details_latex": "",
+      "headline_text": "$O(n^2+\\log(1/\\delta))$ queries with error $\\delta$ by the Ettinger–Høyer–Knill subgroup-state test. An exact construction uses $O(n^4)$ queries with arbitrary one-qubit gates. General subgroup discrimination and preprocessing require exponential resources.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Repeated birthday-collision sampling finds generators with $O(n2^{n/2})$ queries in the worst case; equal oracle values give elements of $H$. Simon-type order-two subgroups require $\\Omega(2^{n/2})$ randomized queries. For finite abelian groups, subgroup-sensitive identification costs $O(\\sqrt{(|G|/|H|)\\log|H|}+\\log|H|)$ deterministic queries.",
+      "details_latex": "",
+      "headline_text": "Repeated birthday-collision sampling finds generators with $O(n2^{n/2})$ queries in the worst case; equal oracle values give elements of $H$. Simon-type order-two subgroups require $\\Omega(2^{n/2})$ randomized queries. For finite abelian groups, subgroup-sensitive identification costs $O(\\sqrt{(|G|/|H|)\\log|H|}+\\log|H|)$ deterministic queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "ettinger_hoyer_knill"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0401083}{\\emph{The quantum query complexity of the hidden subgroup problem is polynomial}}. Theorems 1 and 2; Sections 2.1 and 2.2",
+      "content_text": "The quantum query complexity of the hidden subgroup problem is polynomial. Theorems 1 and 2; Sections 2.1 and 2.2",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0401083",
+          "title": "The quantum query complexity of the hidden subgroup problem is polynomial",
+          "label_latex": "\\emph{The quantum query complexity of the hidden subgroup problem is polynomial}",
+          "locator_latex": "Theorems 1 and 2; Sections 2.1 and 2.2"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-195-citation-00415"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2104.14436}{\\emph{Deterministic Algorithms for the Hidden Subgroup Problem}}. Section 5: birthday sampling; Section 6: finding the subgroup",
+      "content_text": "Deterministic Algorithms for the Hidden Subgroup Problem. Section 5: birthday sampling; Section 6: finding the subgroup",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2104.14436",
+          "title": "Deterministic Algorithms for the Hidden Subgroup Problem",
+          "label_latex": "\\emph{Deterministic Algorithms for the Hidden Subgroup Problem}",
+          "locator_latex": "Section 5: birthday sampling; Section 6: finding the subgroup"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-195-citation-00416"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2110.00827}{\\emph{Deterministic Algorithms for the Hidden Subgroup Problem}}. Finite abelian identification upper bound",
+      "content_text": "Deterministic Algorithms for the Hidden Subgroup Problem. Finite abelian identification upper bound",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2110.00827",
+          "title": "Deterministic Algorithms for the Hidden Subgroup Problem",
+          "label_latex": "\\emph{Deterministic Algorithms for the Hidden Subgroup Problem}",
+          "locator_latex": "Finite abelian identification upper bound"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-195-citation-00417"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Ettinger--H{\\o}yer--Knill subgroup identification",
+  "plot": {
+    "quantum": "O(n^2)",
+    "classical": "\\Omega(2^{n/2})",
+    "parameter": "$n=\\lceil\\log_2|G|\\rceil$; fixed bounded error.",
+    "model": "Oracle queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "quantum_exponent": 2,
+    "classical_exponent": null,
+    "gain": "\\Omega(2^{n/2}/n^2)"
+  },
+  "ordinal": 209,
+  "citation_ids": [
+    "entry-195-citation-00415",
+    "entry-195-citation-00416",
+    "entry-195-citation-00417"
+  ]
+}

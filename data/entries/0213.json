@@ -1,0 +1,123 @@
+{
+  "id": "entry-213",
+  "number": 213,
+  "slug": "prior-q22",
+  "title": "Monotonicity testing of Boolean functions",
+  "title_latex": "Monotonicity testing of Boolean functions",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q22",
+  "inventory_ids": [
+    "Q22",
+    "Q23"
+  ],
+  "problem": {
+    "name": "Monotonicity testing of Boolean functions",
+    "name_latex": "Monotonicity testing of Boolean functions",
+    "statement_latex": "\\textbf{Monotonicity testing of Boolean functions.} For $f:\\{0,1\\}^n\\to\\{0,1\\}$, distinguish $x\\le y\\Rightarrow f(x)\\le f(y)$ from distance at least $\\varepsilon$ to every monotone Boolean function, using membership queries.\n\n\\textbf{Monotonicity testing from quantum examples.} Distinguish monotone Boolean functions on $\\{0,1\\}^n$ from functions $\\varepsilon$-far from monotone using independent uniform quantum examples $2^{-n/2}\\sum_x|x,f(x)\\rangle$. Classical access consists of passive uniform labeled samples.",
+    "statement_text": "Monotonicity testing of Boolean functions. For $f:\\{0,1\\}^n\\to\\{0,1\\}$, distinguish $x\\le y\\Rightarrow f(x)\\le f(y)$ from distance at least $\\varepsilon$ to every monotone Boolean function, using membership queries. Monotonicity testing from quantum examples. Distinguish monotone Boolean functions on $\\{0,1\\}^n$ from functions $\\varepsilon$-far from monotone using independent uniform quantum examples $2^{-n/2}\\sum_x|x,f(x)\\rangle$. Classical access consists of passive uniform labeled samples."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "\\textbf{Monotonicity testing of Boolean functions.} $\\widetilde O(n^{1/4}/\\sqrt\\varepsilon)$ queries by Belovs--Blais quantum monotonicity testing.",
+      "details_latex": "\\textbf{Monotonicity testing from quantum examples.} $\\widetilde O(n^2\\log(1/\\delta)/\\varepsilon^2)$ quantum examples by Caro--Naik--Slote, with failure probability $\\delta$.",
+      "headline_text": "Monotonicity testing of Boolean functions. $\\widetilde O(n^{1/4}/\\sqrt\\varepsilon)$ queries by Belovs–Blais quantum monotonicity testing.",
+      "details_text": "Monotonicity testing from quantum examples. $\\widetilde O(n^2\\log(1/\\delta)/\\varepsilon^2)$ quantum examples by Caro–Naik–Slote, with failure probability $\\delta$."
+    },
+    "classical": {
+      "headline_latex": "\\textbf{Monotonicity testing of Boolean functions.} $\\widetilde O(\\sqrt n/\\varepsilon^2)$ queries by the directed-isoperimetric classical tester. At constant distance, adaptive classical lower bounds are $n^{1/2-o(1)}$.",
+      "details_latex": "\\textbf{Monotonicity testing from quantum examples.} $\\exp(\\Omega(\\min\\{\\sqrt n/\\varepsilon,n\\}))$ passive samples are necessary in the theorem's parameter regime; learning the truth table gives an $O(n2^n)$-sample upper bound.",
+      "headline_text": "Monotonicity testing of Boolean functions. $\\widetilde O(\\sqrt n/\\varepsilon^2)$ queries by the directed-isoperimetric classical tester. At constant distance, adaptive classical lower bounds are $n^{1/2-o(1)}$.",
+      "details_text": "Monotonicity testing from quantum examples. $\\exp(\\Omega(\\min\\{\\sqrt n/\\varepsilon,n\\}))$ passive samples are necessary in the theorem's parameter regime; learning the truth table gives an $O(n2^n)$-sample upper bound."
+    }
+  },
+  "algorithm_ids": [
+    "quantum-monotonicity-tester",
+    "quantum-data-property-testing"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-data-property-testing",
+      "label_latex": "Caro--Naik--Slote property testing from quantum data",
+      "problem_numbers": [
+        212,
+        214
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://theoryofcomputing.org/articles/v011a016/v011a016.pdf}{\\emph{Quantum Algorithm for Monotonicity Testing}}. Main theorem and Section3 algorithm.",
+      "content_text": "Quantum Algorithm for Monotonicity Testing. Main theorem and Section3 algorithm.",
+      "links": [
+        {
+          "url": "https://theoryofcomputing.org/articles/v011a016/v011a016.pdf",
+          "title": "Quantum Algorithm for Monotonicity Testing",
+          "label_latex": "\\emph{Quantum Algorithm for Monotonicity Testing}",
+          "locator_latex": "Main theorem and Section3 algorithm."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-213-citation-00081"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/html/LIPIcs.ITCS.2026.34/LIPIcs.ITCS.2026.34.html}{\\emph{Testing classical properties from quantum data}}. Algorithm1 and Theorem9.",
+      "content_text": "Testing classical properties from quantum data. Algorithm1 and Theorem9.",
+      "links": [
+        {
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/html/LIPIcs.ITCS.2026.34/LIPIcs.ITCS.2026.34.html",
+          "title": "Testing classical properties from quantum data",
+          "label_latex": "\\emph{Testing classical properties from quantum data}",
+          "locator_latex": "Algorithm1 and Theorem9."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-213-citation-00082"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Belovs--Blais quantum monotonicity tester; Caro--Naik--Slote property testing from quantum data",
+  "plot": {
+    "quantum": "\\widetilde O(n^2/\\varepsilon^2)",
+    "classical": "\\exp(\\Omega(\\min\\{\\sqrt n/\\varepsilon,n\\}))",
+    "parameter": "Boolean dimension n and distance epsilon",
+    "model": "passive quantum examples versus classical labeled samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "subexponential",
+    "gain": "Subexponential to polynomial at constant distance",
+    "quantum_exponent": 2
+  },
+  "ordinal": 36,
+  "citation_ids": [
+    "entry-213-citation-00081",
+    "entry-213-citation-00082"
+  ]
+}

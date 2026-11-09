@@ -1,9 +1,10 @@
 {
   "id": "entry-102",
   "number": 102,
-  "ordinal": 31,
+  "slug": "recursive-fourier-sampling",
   "title_latex": "Recursive Fourier sampling",
   "title": "Recursive Fourier sampling",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Recursive Fourier sampling",
@@ -14,70 +15,102 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(2^h)$ queries, recursive Bernstein--Vazirani Fourier sampling.",
-      "headline_text": "$O(2^h)$ queries, recursive Bernstein–Vazirani Fourier sampling.",
       "details_latex": "The exact algorithm recursively recovers $s_v$ with Hadamard transforms, queries $g_v$, and uncomputes $s_v$. Johnson's clean implementation uses $2^{h+1}-1$ queries. For the restriction in which all $g_v$ equal a fixed nonparity function $g$, Aaronson proves the lower bound $\\Omega((1-\\mu(g))^{-h/2})$, where $\\mu(g)$ is its nonparity coefficient. The function $g(s)=\\mathbf 1[|s|\\not\\equiv0\\pmod 3]$ has $\\mu(g)=3/4-O(1/n)$, yielding $2^{\\Omega(h)}$ queries and a matching $\\Theta(2^h)$ bound when $h=o(n)$. The non-oracle gate count has an additional factor polynomial in $n$ and $h$.",
+      "headline_text": "$O(2^h)$ queries, recursive Bernstein–Vazirani Fourier sampling.",
       "details_text": "The exact algorithm recursively recovers $s_v$ with Hadamard transforms, queries $g_v$, and uncomputes $s_v$. Johnson's clean implementation uses $2^{h+1}-1$ queries. For the restriction in which all $g_v$ equal a fixed nonparity function $g$, Aaronson proves the lower bound $\\Omega((1-\\mu(g))^{-h/2})$, where $\\mu(g)$ is its nonparity coefficient. The function $g(s)=\\mathbf 1[|s|\\not\\equiv0\\pmod 3]$ has $\\mu(g)=3/4-O(1/n)$, yielding $2^{\\Omega(h)}$ queries and a matching $\\Theta(2^h)$ bound when $h=o(n)$. The non-oracle gate count has an additional factor polynomial in $n$ and $h$."
     },
     "classical": {
       "headline_latex": "$O(n^h)$ queries, recursive classical Fourier sampling.",
-      "headline_text": "$O(n^h)$ queries, recursive classical Fourier sampling.",
       "details_latex": "At each vertex, recursively evaluating $n$ linearly independent children recovers $s_v$; one query to $g_v$ then determines its answer. This uses $\\sum_{j=0}^{h}n^j$ queries. For success probability $1/2+\\epsilon$, Johnson proves the lower bound $\\epsilon\\prod_{j=1}^{h}(n-j\\log_2 n)$ in the positive-factor range $h\\log_2 n<n$. For constant $\\epsilon>0$ and $h=o(n/\\log n)$, these bounds give randomized query complexity $2^{\\Theta(h\\log n)}$.",
+      "headline_text": "$O(n^h)$ queries, recursive classical Fourier sampling.",
       "details_text": "At each vertex, recursively evaluating $n$ linearly independent children recovers $s_v$; one query to $g_v$ then determines its answer. This uses $\\sum_{j=0}^{h}n^j$ queries. For success probability $1/2+\\epsilon$, Johnson proves the lower bound $\\epsilon\\prod_{j=1}^{h}(n-j\\log_2 n)$ in the positive-factor range $h\\log_2 n<n$. For constant $\\epsilon>0$ and $h=o(n/\\log n)$, these bounds give randomized query complexity $2^{\\Theta(h\\log n)}$."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-exponential-subexponential-to-polynomial",
       "color_key": "strengthPolynomialTime",
       "description_latex": "Subexponential to polynomial in the strongest comparison: throughout $h=\\omega(1)$ and $h=O(\\log n)$, the quantum cost is polynomial in the oracle address length $\\ell$, while the classical cost is superpolynomial. At larger depths within the stated lower-bound range, both costs become superpolynomial and the general bounds describe an intermediate improvement. Fixed depth gives a polynomial query advantage.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
       "description_text": "Subexponential to polynomial in the strongest comparison: throughout $h=\\omega(1)$ and $h=O(\\log n)$, the quantum cost is polynomial in the oracle address length $\\ell$, while the classical cost is superpolynomial. At larger depths within the stated lower-bound range, both costs become superpolynomial and the general bounds describe an intermediate improvement. Fixed depth gives a polynomial query advantage."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Unconditional randomized and quantum query lower bounds for the same oracle problem family establish the separation.",
+      "category_id": "evidence-proved",
       "description_text": "Unconditional randomized and quantum query lower bounds for the same oracle problem family establish the separation."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "The recursive circuit uses $O(nh)=O(\\ell)$ logical qubits outside the oracle implementation and $O(2^h)$ coherent oracle calls, with polynomial non-oracle gate overhead. Oracle implementation determines the additional workspace and gate cost.",
+      "category_id": "hardware-polynomial",
       "description_text": "The recursive circuit uses $O(nh)=O(\\ell)$ logical qubits outside the oracle implementation and $O(2^h)$ coherent oracle calls, with polynomial non-oracle gate overhead. Oracle implementation determines the additional workspace and gate cost."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Recursive Bernstein--Vazirani Fourier sampling",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "102.1",
       "content_latex": "\\href{https://doi.org/10.1137/S0097539796300921}{Bernstein and Vazirani, \\emph{Quantum Complexity Theory} (1997)}. Section 8.4 introduces recursive Fourier sampling and the quantum--classical oracle separation.",
       "content_text": "Bernstein and Vazirani, Quantum Complexity Theory (1997). Section 8.4 introduces recursive Fourier sampling and the quantum–classical oracle separation.",
+      "links": [
+        {
+          "url": "https://doi.org/10.1137/S0097539796300921",
+          "title": "Quantum Complexity Theory",
+          "label_latex": "Bernstein and Vazirani, \\emph{Quantum Complexity Theory} (1997)",
+          "locator_latex": "Section 8.4 introduces recursive Fourier sampling and the quantum--classical oracle separation."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-102-citation-001"
+        "entry-102-citation-00063"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "102.2",
       "content_latex": "\\href{https://citeseerx.ist.psu.edu/document?doi=ee55b07d326ac3cb422fa755aae4484ab3b2ad2d\\&repid=rep1\\&type=pdf}{Johnson, \\emph{Upper and Lower Bounds for Recursive Fourier Sampling}, Ph.D. thesis, University of California, Berkeley (2008)}. Section 1.2.3, starting on page 5, defines the generalized oracle problem; Algorithm 3, page 42, gives the clean quantum recursion; Algorithm 9, page 51, gives the classical recursion; Section 3.4, starting on page 59, gives the randomized query lower bound.",
       "content_text": "Johnson, Upper and Lower Bounds for Recursive Fourier Sampling, Ph.D. thesis, University of California, Berkeley (2008). Section 1.2.3, starting on page 5, defines the generalized oracle problem; Algorithm 3, page 42, gives the clean quantum recursion; Algorithm 9, page 51, gives the classical recursion; Section 3.4, starting on page 59, gives the randomized query lower bound.",
+      "links": [
+        {
+          "url": "https://citeseerx.ist.psu.edu/document?doi=ee55b07d326ac3cb422fa755aae4484ab3b2ad2d&repid=rep1&type=pdf",
+          "title": "Upper and Lower Bounds for Recursive Fourier Sampling",
+          "label_latex": "Johnson, \\emph{Upper and Lower Bounds for Recursive Fourier Sampling}, Ph.D. thesis, University of California, Berkeley (2008)",
+          "locator_latex": "Section 1.2.3, starting on page 5, defines the generalized oracle problem; Algorithm 3, page 42, gives the clean quantum recursion; Algorithm 9, page 51, gives the classical recursion; Section 3.4, starting on page 59, gives the randomized query lower bound."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-102-citation-002"
+        "entry-102-citation-00064"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "102.3",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0209060}{Aaronson, \\emph{Quantum Lower Bound for Recursive Fourier Sampling} (2003)}. Section 1 and Lemma 1: arbitrary-depth problem and quantum recursion; Theorem 5 and Proposition 6: quantum lower bound.",
       "content_text": "Aaronson, Quantum Lower Bound for Recursive Fourier Sampling (2003). Section 1 and Lemma 1: arbitrary-depth problem and quantum recursion; Theorem 5 and Proposition 6: quantum lower bound.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0209060",
+          "title": "Quantum Lower Bound for Recursive Fourier Sampling",
+          "label_latex": "Aaronson, \\emph{Quantum Lower Bound for Recursive Fourier Sampling} (2003)",
+          "locator_latex": "Section 1 and Lemma 1: arbitrary-depth problem and quantum recursion; Theorem 5 and Proposition 6: quantum lower bound."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-102-citation-003"
+        "entry-102-citation-00065"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-102-citation-001",
-    "entry-102-citation-002",
-    "entry-102-citation-003"
+  "algorithm_ids": [
+    "recursive-fourier"
   ],
-  "source_latex": "\\entrytitle{102}{Recursive Fourier sampling}{strengthPolynomialTime}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{101}\n\\begin{problem}[Recursive Fourier sampling]\nLet $n\\ge 6$ and $h\\ge1$ be integers. A rooted tree of height $h$ has children $vx$ indexed by $x\\in\\{0,1\\}^n$. Each internal vertex $v$ has an unknown string $s_v\\in\\{0,1\\}^n$ and a Boolean function $g_v:\\{0,1\\}^n\\to\\{0,1\\}$. Its answer bit is $b_v=g_v(s_v)$, and the promise is\n\\[\nb_{vx}=s_v\\cdot x\\pmod 2\n\\qquad\\text{for every internal vertex $v$ and every $x\\in\\{0,1\\}^n$.}\n\\]\nGiven oracle access to the leaf bits and all the functions $g_v$, output the root bit $b_{\\varnothing}$ with probability at least $2/3$. A vertex is identified by its path from the root; the oracle address length is $\\ell=nh+O(\\log h)$. This promise problem was introduced to study separations between quantum and classical computation. Complexity is measured in oracle queries, including queries to the functions $g_v$.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(2^h)$ queries, recursive Bernstein--Vazirani Fourier sampling.}\nThe exact algorithm recursively recovers $s_v$ with Hadamard transforms, queries $g_v$, and uncomputes $s_v$. Johnson's clean implementation uses $2^{h+1}-1$ queries. For the restriction in which all $g_v$ equal a fixed nonparity function $g$, Aaronson proves the lower bound $\\Omega((1-\\mu(g))^{-h/2})$, where $\\mu(g)$ is its nonparity coefficient. The function $g(s)=\\mathbf 1[|s|\\not\\equiv0\\pmod 3]$ has $\\mu(g)=3/4-O(1/n)$, yielding $2^{\\Omega(h)}$ queries and a matching $\\Theta(2^h)$ bound when $h=o(n)$. The non-oracle gate count has an additional factor polynomial in $n$ and $h$.\n\n\\complexity{Classical}{$O(n^h)$ queries, recursive classical Fourier sampling.}\nAt each vertex, recursively evaluating $n$ linearly independent children recovers $s_v$; one query to $g_v$ then determines its answer. This uses $\\sum_{j=0}^{h}n^j$ queries. For success probability $1/2+\\epsilon$, Johnson proves the lower bound $\\epsilon\\prod_{j=1}^{h}(n-j\\log_2 n)$ in the positive-factor range $h\\log_2 n<n$. For constant $\\epsilon>0$ and $h=o(n/\\log n)$, these bounds give randomized query complexity $2^{\\Theta(h\\log n)}$.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial in the strongest comparison: throughout $h=\\omega(1)$ and $h=O(\\log n)$, the quantum cost is polynomial in the oracle address length $\\ell$, while the classical cost is superpolynomial. At larger depths within the stated lower-bound range, both costs become superpolynomial and the general bounds describe an intermediate improvement. Fixed depth gives a polynomial query advantage.\n\n\\dimensionlabel{Evidence}{evidenceProved} Unconditional randomized and quantum query lower bounds for the same oracle problem family establish the separation.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The recursive circuit uses $O(nh)=O(\\ell)$ logical qubits outside the oracle implementation and $O(2^h)$ coherent oracle calls, with polynomial non-oracle gate overhead. Oracle implementation determines the additional workspace and gate cost.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{102}\n\\item \\href{https://doi.org/10.1137/S0097539796300921}{Bernstein and Vazirani, \\emph{Quantum Complexity Theory} (1997)}. Section 8.4 introduces recursive Fourier sampling and the quantum--classical oracle separation.\n\\item \\href{https://citeseerx.ist.psu.edu/document?doi=ee55b07d326ac3cb422fa755aae4484ab3b2ad2d\\&repid=rep1\\&type=pdf}{Johnson, \\emph{Upper and Lower Bounds for Recursive Fourier Sampling}, Ph.D. thesis, University of California, Berkeley (2008)}. Section 1.2.3, starting on page 5, defines the generalized oracle problem; Algorithm 3, page 42, gives the clean quantum recursion; Algorithm 9, page 51, gives the classical recursion; Section 3.4, starting on page 59, gives the randomized query lower bound.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0209060}{Aaronson, \\emph{Quantum Lower Bound for Recursive Fourier Sampling} (2003)}. Section 1 and Lemma 1: arbitrary-depth problem and quantum recursion; Theorem 5 and Proposition 6: quantum lower bound.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{102}{Recursive Fourier sampling}{strengthPolynomialTime}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{101}\n\\begin{problem}[Recursive Fourier sampling]\nLet $n\\ge 6$ and $h\\ge1$ be integers. A rooted tree of height $h$ has children $vx$ indexed by $x\\in\\{0,1\\}^n$. Each internal vertex $v$ has an unknown string $s_v\\in\\{0,1\\}^n$ and a Boolean function $g_v:\\{0,1\\}^n\\to\\{0,1\\}$. Its answer bit is $b_v=g_v(s_v)$, and the promise is\n\\[\nb_{vx}=s_v\\cdot x\\pmod 2\n\\qquad\\text{for every internal vertex $v$ and every $x\\in\\{0,1\\}^n$.}\n\\]\nGiven oracle access to the leaf bits and all the functions $g_v$, output the root bit $b_{\\varnothing}$ with probability at least $2/3$. A vertex is identified by its path from the root; the oracle address length is $\\ell=nh+O(\\log h)$. This promise problem was introduced to study separations between quantum and classical computation. Complexity is measured in oracle queries, including queries to the functions $g_v$.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(2^h)$ queries, recursive Bernstein--Vazirani Fourier sampling.}\nThe exact algorithm recursively recovers $s_v$ with Hadamard transforms, queries $g_v$, and uncomputes $s_v$. Johnson's clean implementation uses $2^{h+1}-1$ queries. For the restriction in which all $g_v$ equal a fixed nonparity function $g$, Aaronson proves the lower bound $\\Omega((1-\\mu(g))^{-h/2})$, where $\\mu(g)$ is its nonparity coefficient. The function $g(s)=\\mathbf 1[|s|\\not\\equiv0\\pmod 3]$ has $\\mu(g)=3/4-O(1/n)$, yielding $2^{\\Omega(h)}$ queries and a matching $\\Theta(2^h)$ bound when $h=o(n)$. The non-oracle gate count has an additional factor polynomial in $n$ and $h$.\n\n\\complexity{Classical}{$O(n^h)$ queries, recursive classical Fourier sampling.}\nAt each vertex, recursively evaluating $n$ linearly independent children recovers $s_v$; one query to $g_v$ then determines its answer. This uses $\\sum_{j=0}^{h}n^j$ queries. For success probability $1/2+\\epsilon$, Johnson proves the lower bound $\\epsilon\\prod_{j=1}^{h}(n-j\\log_2 n)$ in the positive-factor range $h\\log_2 n<n$. For constant $\\epsilon>0$ and $h=o(n/\\log n)$, these bounds give randomized query complexity $2^{\\Theta(h\\log n)}$.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial in the strongest comparison: throughout $h=\\omega(1)$ and $h=O(\\log n)$, the quantum cost is polynomial in the oracle address length $\\ell$, while the classical cost is superpolynomial. At larger depths within the stated lower-bound range, both costs become superpolynomial and the general bounds describe an intermediate improvement. Fixed depth gives a polynomial query advantage.\n\n\\dimensionlabel{Evidence}{evidenceProved} Unconditional randomized and quantum query lower bounds for the same oracle problem family establish the separation.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The recursive circuit uses $O(nh)=O(\\ell)$ logical qubits outside the oracle implementation and $O(2^h)$ coherent oracle calls, with polynomial non-oracle gate overhead. Oracle implementation determines the additional workspace and gate cost.\n\n\\subhead{Algorithm: Recursive Bernstein--Vazirani Fourier sampling}\n\\begin{algorithmindex}{102}\n\\item \\href{https://doi.org/10.1137/S0097539796300921}{Bernstein and Vazirani, \\emph{Quantum Complexity Theory} (1997)}. Section 8.4 introduces recursive Fourier sampling and the quantum--classical oracle separation.\n\\item \\href{https://citeseerx.ist.psu.edu/document?doi=ee55b07d326ac3cb422fa755aae4484ab3b2ad2d\\&repid=rep1\\&type=pdf}{Johnson, \\emph{Upper and Lower Bounds for Recursive Fourier Sampling}, Ph.D. thesis, University of California, Berkeley (2008)}. Section 1.2.3, starting on page 5, defines the generalized oracle problem; Algorithm 3, page 42, gives the clean quantum recursion; Algorithm 9, page 51, gives the classical recursion; Section 3.4, starting on page 59, gives the randomized query lower bound.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0209060}{Aaronson, \\emph{Quantum Lower Bound for Recursive Fourier Sampling} (2003)}. Section 1 and Lemma 1: arbitrary-depth problem and quantum recursion; Theorem 5 and Proposition 6: quantum lower bound.\n\\end{algorithmindex}",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 25,
+  "citation_ids": [
+    "entry-102-citation-00063",
+    "entry-102-citation-00064",
+    "entry-102-citation-00065"
+  ]
 }

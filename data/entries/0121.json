@@ -1,0 +1,128 @@
+{
+  "id": "entry-121",
+  "number": 121,
+  "slug": "prior-g16",
+  "title": "Bounded edit distance",
+  "title_latex": "Bounded edit distance",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g16",
+  "inventory_ids": [
+    "G16"
+  ],
+  "problem": {
+    "name": "Bounded edit distance",
+    "name_latex": "Bounded edit distance",
+    "statement_latex": "Given $A,B\\in\\Sigma^{\\le n}$ and $k\\ge1$, compute their edit distance and an optimal edit sequence if the distance is at most $k$, and otherwise report that it exceeds $k$. Insertions, deletions and substitutions have unit cost; characters are queried by index.",
+    "statement_text": "Given $A,B\\in\\Sigma^{\\le n}$ and $k\\ge1$, compute their edit distance and an optimal edit sequence if the distance is at most $k$, and otherwise report that it exceeds $k$. Insertions, deletions and substitutions have unit cost; characters are queried by index."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt{nk}+k^2)$ time and $\\widetilde O(\\sqrt{nk})$ character queries by Gibney--Jin--Kociumaka--Thankachan.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt{nk}+k^2)$ time and $\\widetilde O(\\sqrt{nk})$ character queries by Gibney–Jin–Kociumaka–Thankachan.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n+k^2)$ time by the Landau--Vishkin bounded-distance method, with $O(n)$ character queries.",
+      "details_latex": "",
+      "headline_text": "$O(n+k^2)$ time by the Landau–Vishkin bounded-distance method, with $O(n)$ character queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-bounded-edit-distance",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2311.01793}{\\emph{Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization}}. Main bounded-edit-distance theorem",
+      "content_text": "Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization. Main bounded-edit-distance theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2311.01793",
+          "title": "Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization",
+          "label_latex": "\\emph{Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization}",
+          "locator_latex": "Main bounded-edit-distance theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-121-citation-00194"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Gibney--Jin--Kociumaka--Thankachan bounded edit distance; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt{nk})",
+    "classical": "\\Theta(n)",
+    "parameter": "length bound n and distance threshold 1<=k<=n",
+    "model": "character queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt{n/k})"
+  },
+  "ordinal": 91,
+  "citation_ids": [
+    "entry-121-citation-00194"
+  ]
+}

@@ -1,9 +1,10 @@
 {
   "id": "entry-028",
   "number": 28,
-  "ordinal": 28,
+  "slug": "minimum-fill-in",
   "title_latex": "Minimum fill-in",
   "title": "Minimum fill-in",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Minimum fill-in",
@@ -14,60 +15,122 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
-      "headline_text": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
       "details_latex": "An elimination order determines a chordal completion by making each eliminated vertex's remaining neighborhood a clique. The ordering recurrence charges the newly inserted edges and optimizes the total cost. Partial preprocessing and quantum minimum finding provide the stated bound with exponential coherent memory.",
+      "headline_text": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
       "details_text": "An elimination order determines a chordal completion by making each eliminated vertex's remaining neighborhood a clique. The ordering recurrence charges the newly inserted edges and optimizes the total cost. Partial preprocessing and quantum minimum finding provide the stated bound with exponential coherent memory."
     },
     "classical": {
       "headline_latex": "$O^*(1.7347^n)$, potential-maximal-clique dynamic programming.",
-      "headline_text": "$O^*(1.7347^n)$, potential-maximal-clique dynamic programming.",
       "details_latex": "The algorithm enumerates potential maximal cliques and minimal-separator blocks, then selects compatible triangulations with minimum fill cost. Its time improves on the generic $O^*(2^n)$ elimination-order recurrence, and its space is exponential. The graph structure exploited by this method gives the smaller base in the overall comparison.",
+      "headline_text": "$O^*(1.7347^n)$, potential-maximal-clique dynamic programming.",
       "details_text": "The algorithm enumerates potential maximal cliques and minimal-separator blocks, then selects compatible triangulations with minimum fill cost. Its time improves on the generic $O^*(2^n)$ elimination-order recurrence, and its space is exponential. The graph structure exploited by this method gives the smaller base in the overall comparison."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The classical $1.7347^n$ bound is asymptotically smaller than the displayed quantum $1.817^n$ bound. The quantum result accelerates the subset-ordering recurrence.",
+      "category_id": "strength-unspecified",
       "description_text": "The classical $1.7347^n$ bound is asymptotically smaller than the displayed quantum $1.817^n$ bound. The quantum result accelerates the subset-ordering recurrence."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The ordering acceleration has a rigorous upper bound; the strongest displayed overall complexity bound is classical.",
+      "category_id": "evidence-unspecified",
       "description_text": "The ordering acceleration has a rigorous upper bound; the strongest displayed overall complexity bound is classical."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The quantum construction requires polynomial active subset and fill-cost registers with exponential QRAM. Useful depths require fault tolerance. The stronger classical structural method also uses exponential storage.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The quantum construction requires polynomial active subset and fill-cost registers with exponential QRAM. Useful depths require fault tolerance. The stronger classical structural method also uses exponential storage."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum vertex-ordering dynamic programming",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "28.1",
       "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): minimum-fill-in ordering application.",
       "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Corollary 5 and equation (3): minimum-fill-in ordering application.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1807.05209",
+          "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
+          "label_latex": "Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)",
+          "locator_latex": "Corollary 5 and equation (3): minimum-fill-in ordering application."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-028-citation-001"
+        "entry-028-citation-00061"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "28.2",
       "content_latex": "\\href{https://arxiv.org/pdf/1309.1559}{Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)}. Proposition 5 states the $1.7347^n$ potential-maximal-clique enumeration bound; the triangulation preliminaries define minimal separators, full blocks and potential maximal cliques used in minimum-fill dynamic programming.",
       "content_text": "Fomin, Todinca and Villanger, Large Induced Subgraphs via Triangulations and CMSO (SIAM Journal on Computing 2015). Proposition 5 states the $1.7347^n$ potential-maximal-clique enumeration bound; the triangulation preliminaries define minimal separators, full blocks and potential maximal cliques used in minimum-fill dynamic programming.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1309.1559",
+          "title": "Large Induced Subgraphs via Triangulations and CMSO",
+          "label_latex": "Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)",
+          "locator_latex": "Proposition 5 states the $1.7347^n$ potential-maximal-clique enumeration bound; the triangulation preliminaries define minimal separators, full blocks and potential maximal cliques used in minimum-fill dynamic programming."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-028-citation-002"
+        "entry-028-citation-00062"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-028-citation-001",
-    "entry-028-citation-002"
+  "algorithm_ids": [
+    "minimum-finding",
+    "vertex-ordering"
   ],
-  "source_latex": "\\entrytitle{28}{Minimum fill-in}{white}{white}{hardwareExponential}\n\\setcounter{problem}{27}\n\\begin{problem}[Minimum fill-in]\nGiven $G=(V,E)$, minimize $|F|$ over added-edge sets $F\\subseteq\\binom V2\\setminus E$ such that $(V,E\\cup F)$ is chordal, meaning every cycle of length at least four has a chord. Minimum fill-in controls additional nonzero entries created by sparse elimination.\nThe quantum ordering bound uses QRAM time, while the classical structural algorithm uses RAM time on the explicit graph.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.}\nAn elimination order determines a chordal completion by making each eliminated vertex's remaining neighborhood a clique. The ordering recurrence charges the newly inserted edges and optimizes the total cost. Partial preprocessing and quantum minimum finding provide the stated bound with exponential coherent memory.\n\\complexity{Classical}{$O^*(1.7347^n)$, potential-maximal-clique dynamic programming.}\nThe algorithm enumerates potential maximal cliques and minimal-separator blocks, then selects compatible triangulations with minimum fill cost. Its time improves on the generic $O^*(2^n)$ elimination-order recurrence, and its space is exponential. The graph structure exploited by this method gives the smaller base in the overall comparison.\n\\dimensionlabel{Strength}{white} The classical $1.7347^n$ bound is asymptotically smaller than the displayed quantum $1.817^n$ bound. The quantum result accelerates the subset-ordering recurrence.\n\\dimensionlabel{Evidence}{white} The ordering acceleration has a rigorous upper bound; the strongest displayed overall complexity bound is classical.\n\\dimensionlabel{Hardware}{hardwareExponential} The quantum construction requires polynomial active subset and fill-cost registers with exponential QRAM. Useful depths require fault tolerance. The stronger classical structural method also uses exponential storage.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{28}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): minimum-fill-in ordering application.\n\\item \\href{https://arxiv.org/pdf/1309.1559}{Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)}. Proposition 5 states the $1.7347^n$ potential-maximal-clique enumeration bound; the triangulation preliminaries define minimal separators, full blocks and potential maximal cliques used in minimum-fill dynamic programming.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "minimum-finding",
+      "label_latex": "D\\\"urr--H{\\o}yer minimum finding",
+      "problem_numbers": [
+        2,
+        7,
+        11,
+        14,
+        15,
+        16,
+        17,
+        29,
+        31,
+        34,
+        53,
+        59,
+        79,
+        91,
+        116,
+        118,
+        131,
+        132,
+        134
+      ]
+    },
+    {
+      "algorithm_id": "vertex-ordering",
+      "label_latex": "Quantum path finding in the Boolean hypercube",
+      "problem_numbers": [
+        12,
+        14,
+        15,
+        16,
+        29
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{28}{Minimum fill-in}{white}{white}{hardwareExponential}\n\\setcounter{problem}{27}\n\\begin{problem}[Minimum fill-in]\nGiven $G=(V,E)$, minimize $|F|$ over added-edge sets $F\\subseteq\\binom V2\\setminus E$ such that $(V,E\\cup F)$ is chordal, meaning every cycle of length at least four has a chord. Minimum fill-in controls additional nonzero entries created by sparse elimination.\nThe quantum ordering bound uses QRAM time, while the classical structural algorithm uses RAM time on the explicit graph.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.}\nAn elimination order determines a chordal completion by making each eliminated vertex's remaining neighborhood a clique. The ordering recurrence charges the newly inserted edges and optimizes the total cost. Partial preprocessing and quantum minimum finding provide the stated bound with exponential coherent memory.\n\\complexity{Classical}{$O^*(1.7347^n)$, potential-maximal-clique dynamic programming.}\nThe algorithm enumerates potential maximal cliques and minimal-separator blocks, then selects compatible triangulations with minimum fill cost. Its time improves on the generic $O^*(2^n)$ elimination-order recurrence, and its space is exponential. The graph structure exploited by this method gives the smaller base in the overall comparison.\n\\dimensionlabel{Strength}{white} The classical $1.7347^n$ bound is asymptotically smaller than the displayed quantum $1.817^n$ bound. The quantum result accelerates the subset-ordering recurrence.\n\\dimensionlabel{Evidence}{white} The ordering acceleration has a rigorous upper bound; the strongest displayed overall complexity bound is classical.\n\\dimensionlabel{Hardware}{hardwareExponential} The quantum construction requires polynomial active subset and fill-cost registers with exponential QRAM. Useful depths require fault tolerance. The stronger classical structural method also uses exponential storage.\n\\subhead{Algorithm: Quantum vertex-ordering dynamic programming}\n\\begin{algorithmindex}{28}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): minimum-fill-in ordering application.\n\\item \\href{https://arxiv.org/pdf/1309.1559}{Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)}. Proposition 5 states the $1.7347^n$ potential-maximal-clique enumeration bound; the triangulation preliminaries define minimal separators, full blocks and potential maximal cliques used in minimum-fill dynamic programming.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{minimum-finding}{D\\\"urr--H{\\o}yer minimum finding}: \\problemref{2}, \\problemref{7}, \\problemref{11}, \\problemref{14}, \\problemref{15}, \\problemref{16}, \\problemref{17}, \\problemref{29}, \\problemref{31}, \\problemref{34}, \\problemref{53}, \\problemref{59}, \\problemref{79}, \\problemref{91}.\n\\par\\algorithmref{vertex-ordering}{Quantum path finding in the Boolean hypercube}: \\problemref{12}, \\problemref{14}, \\problemref{15}, \\problemref{16}, \\problemref{29}.\n\\par\\endgroup",
+  "importance": "peripheral",
+  "origin": "manuscript",
+  "ordinal": 24,
+  "citation_ids": [
+    "entry-028-citation-00061",
+    "entry-028-citation-00062"
+  ]
 }

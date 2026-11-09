@@ -1,240 +1,1616 @@
 [
   {
-    "id": "relation-10ce50493b88",
-    "name": "Amplitude amplification",
+    "id": "algorithm-grover",
+    "name": "Grover search and amplitude amplification",
     "entry_ids": [
       "entry-001",
-      "entry-002",
       "entry-005",
-      "entry-006",
+      "entry-020",
+      "entry-053",
       "entry-078",
-      "entry-079"
+      "entry-079",
+      "entry-081",
+      "entry-090",
+      "entry-096",
+      "entry-113",
+      "entry-114",
+      "entry-117",
+      "entry-119",
+      "entry-121",
+      "entry-122",
+      "entry-123",
+      "entry-124",
+      "entry-125",
+      "entry-128",
+      "entry-129",
+      "entry-130",
+      "entry-136",
+      "entry-140",
+      "entry-211",
+      "entry-212"
     ],
-    "description_latex": "Amplify a successful classical trial or estimate its success probability; the verifier, trial cost and success probability determine the comparison.",
-    "description_text": "Amplify a successful classical trial or estimate its success probability; the verifier, trial cost and success probability determine the comparison."
+    "description_latex": "Grover search and amplitude amplification",
+    "description_text": "Grover search and amplitude amplification"
   },
   {
-    "id": "relation-b0d9f6932df2",
-    "name": "Quantum tree search",
+    "id": "algorithm-minimum-finding",
+    "name": "Dürr–Høyer minimum finding",
+    "entry_ids": [
+      "entry-002",
+      "entry-007",
+      "entry-011",
+      "entry-014",
+      "entry-015",
+      "entry-028",
+      "entry-031",
+      "entry-034",
+      "entry-053",
+      "entry-059",
+      "entry-079",
+      "entry-091",
+      "entry-116",
+      "entry-118",
+      "entry-131",
+      "entry-132",
+      "entry-134"
+    ],
+    "description_latex": "D\\\"urr--H{\\o}yer minimum finding",
+    "description_text": "Dürr–Høyer minimum finding"
+  },
+  {
+    "id": "algorithm-amplitude-estimation",
+    "name": "Quantum amplitude estimation and counting",
+    "entry_ids": [
+      "entry-006",
+      "entry-054",
+      "entry-090",
+      "entry-099",
+      "entry-112",
+      "entry-120",
+      "entry-221",
+      "entry-222",
+      "entry-223",
+      "entry-224",
+      "entry-225",
+      "entry-226",
+      "entry-227"
+    ],
+    "description_latex": "Quantum amplitude estimation and counting",
+    "description_text": "Quantum amplitude estimation and counting"
+  },
+  {
+    "id": "algorithm-backtracking",
+    "name": "Quantum backtracking and branch and bound",
     "entry_ids": [
       "entry-003",
       "entry-004",
       "entry-007",
+      "entry-019",
+      "entry-071",
       "entry-074"
     ],
-    "description_latex": "The same branching and pruning rules define the classical tree and the quantum walk. Tree size is an instance-dependent resource.",
-    "description_text": "The same branching and pruning rules define the classical tree and the quantum walk. Tree size is an instance-dependent resource."
+    "description_latex": "Quantum backtracking and branch and bound",
+    "description_text": "Quantum backtracking and branch and bound"
   },
   {
-    "id": "relation-f7f1e2eb8eff",
-    "name": "Subset dynamic programming",
+    "id": "algorithm-subset-dp",
+    "name": "Quantum subset dynamic programming",
     "entry_ids": [
       "entry-007",
       "entry-008",
-      "entry-009",
+      "entry-011"
+    ],
+    "description_latex": "Quantum subset dynamic programming",
+    "description_text": "Quantum subset dynamic programming"
+  },
+  {
+    "id": "algorithm-lattice-dp",
+    "name": "Quantum dynamic programming on lattice graphs",
+    "entry_ids": [
+      "entry-009"
+    ],
+    "description_latex": "Quantum dynamic programming on lattice graphs",
+    "description_text": "Quantum dynamic programming on lattice graphs"
+  },
+  {
+    "id": "algorithm-gaspers-li",
+    "name": "Gaspers–Li partition, cover and packing algorithms",
+    "entry_ids": [
+      "entry-008",
       "entry-010",
-      "entry-011",
+      "entry-021",
+      "entry-024",
+      "entry-025",
+      "entry-026",
+      "entry-027"
+    ],
+    "description_latex": "Gaspers--Li partition, cover and packing algorithms",
+    "description_text": "Gaspers–Li partition, cover and packing algorithms"
+  },
+  {
+    "id": "algorithm-treewidth-dp",
+    "name": "Quantum treewidth algorithms",
+    "entry_ids": [
+      "entry-013"
+    ],
+    "description_latex": "Quantum treewidth algorithms",
+    "description_text": "Quantum treewidth algorithms"
+  },
+  {
+    "id": "algorithm-vertex-ordering",
+    "name": "Quantum path finding in the Boolean hypercube",
+    "entry_ids": [
       "entry-012",
-      "entry-013",
       "entry-014",
       "entry-015",
-      "entry-016",
-      "entry-017",
+      "entry-028"
+    ],
+    "description_latex": "Quantum path finding in the Boolean hypercube",
+    "description_text": "Quantum path finding in the Boolean hypercube"
+  },
+  {
+    "id": "algorithm-arvind-schuler",
+    "name": "Arvind–Schuler binary integer-programming search",
+    "entry_ids": [
       "entry-018",
       "entry-019"
     ],
-    "description_latex": "Classical preprocessing of small subsets is combined with quantum minimum finding over decompositions; exponential table memory appears in many implementations.",
-    "description_text": "Classical preprocessing of small subsets is combined with quantum minimum finding over decompositions; exponential table memory appears in many implementations."
+    "description_latex": "Arvind--Schuler binary integer-programming search",
+    "description_text": "Arvind–Schuler binary integer-programming search"
   },
   {
-    "id": "relation-803287f0d478",
-    "name": "Quantum walks and span programs",
+    "id": "algorithm-cklm-subset-sum",
+    "name": "Chukhin–Kulikov–Levitskii–Mihajlin subset-sum algorithm",
     "entry_ids": [
-      "entry-037",
-      "entry-038",
-      "entry-039",
-      "entry-040",
-      "entry-041",
-      "entry-042",
-      "entry-043",
-      "entry-044",
-      "entry-091"
+      "entry-018"
     ],
-    "description_latex": "Marked subsets, graph witnesses and eigenphase detection yield improvements beyond a direct search over candidate certificates.",
-    "description_text": "Marked subsets, graph witnesses and eigenphase detection yield improvements beyond a direct search over candidate certificates."
+    "description_latex": "Chukhin--Kulikov--Levitskii--Mihajlin subset-sum algorithm",
+    "description_text": "Chukhin–Kulikov–Levitskii–Mihajlin subset-sum algorithm"
   },
   {
-    "id": "relation-1c715b752cfe",
-    "name": "Graph input representation",
+    "id": "algorithm-recursive-fourier",
+    "name": "Recursive Bernstein–Vazirani Fourier sampling",
     "entry_ids": [
-      "entry-031",
+      "entry-102"
+    ],
+    "description_latex": "Recursive Bernstein--Vazirani Fourier sampling",
+    "description_text": "Recursive Bernstein–Vazirani Fourier sampling"
+  },
+  {
+    "id": "algorithm-quantum-graph-exploration",
+    "name": "Quantum graph exploration",
+    "entry_ids": [
       "entry-032",
-      "entry-033",
-      "entry-034",
-      "entry-035",
-      "entry-036",
-      "entry-037",
-      "entry-038",
-      "entry-039",
-      "entry-040",
-      "entry-041",
-      "entry-042",
-      "entry-043",
-      "entry-044",
-      "entry-046",
-      "entry-059",
-      "entry-093"
+      "entry-033"
     ],
-    "description_latex": "Adjacency matrices, adjacency arrays, explicit lists and property-testing promises lead to different classical and quantum complexities.",
-    "description_text": "Adjacency matrices, adjacency arrays, explicit lists and property-testing promises lead to different classical and quantum complexities."
+    "description_latex": "Quantum graph exploration",
+    "description_text": "Quantum graph exploration"
   },
   {
-    "id": "relation-a23c4cb614b0",
-    "name": "Fourier sampling",
+    "id": "algorithm-quantum-matching",
+    "name": "Ambainis–Špalek quantum matching algorithms",
+    "entry_ids": [
+      "entry-035"
+    ],
+    "description_latex": "Ambainis--\\v Spalek quantum matching algorithms",
+    "description_text": "Ambainis–Špalek quantum matching algorithms"
+  },
+  {
+    "id": "algorithm-quantum-flow",
+    "name": "Ambainis–Špalek quantum blocking-flow algorithm",
+    "entry_ids": [
+      "entry-036"
+    ],
+    "description_latex": "Ambainis--\\v Spalek quantum blocking-flow algorithm",
+    "description_text": "Ambainis–Špalek quantum blocking-flow algorithm"
+  },
+  {
+    "id": "algorithm-triangle-walk",
+    "name": "Le Gall quantum triangle-finding algorithm",
+    "entry_ids": [
+      "entry-037"
+    ],
+    "description_latex": "Le Gall quantum triangle-finding algorithm",
+    "description_text": "Le Gall quantum triangle-finding algorithm"
+  },
+  {
+    "id": "algorithm-graph-collision",
+    "name": "Cornelissen et al. graph-collision algorithm",
+    "entry_ids": [
+      "entry-038",
+      "entry-141"
+    ],
+    "description_latex": "Cornelissen et al. graph-collision algorithm",
+    "description_text": "Cornelissen et al. graph-collision algorithm"
+  },
+  {
+    "id": "algorithm-belovs-graph-collision",
+    "name": "Belovs graph-collision span program",
+    "entry_ids": [
+      "entry-038"
+    ],
+    "description_latex": "Belovs graph-collision span program",
+    "description_text": "Belovs graph-collision span program"
+  },
+  {
+    "id": "algorithm-bipartiteness-test",
+    "name": "Ambainis–Childs–Liu bipartiteness tester",
+    "entry_ids": [
+      "entry-039"
+    ],
+    "description_latex": "Ambainis--Childs--Liu bipartiteness tester",
+    "description_text": "Ambainis–Childs–Liu bipartiteness tester"
+  },
+  {
+    "id": "algorithm-expansion-test",
+    "name": "Apers expansion tester",
+    "entry_ids": [
+      "entry-040"
+    ],
+    "description_latex": "Apers expansion tester",
+    "description_text": "Apers expansion tester"
+  },
+  {
+    "id": "algorithm-formula-evaluation",
+    "name": "Quantum formula evaluation by span programs",
+    "entry_ids": [
+      "entry-041"
+    ],
+    "description_latex": "Quantum formula evaluation by span programs",
+    "description_text": "Quantum formula evaluation by span programs"
+  },
+  {
+    "id": "algorithm-matrix-verification",
+    "name": "Buhrman–Špalek matrix-product verification",
+    "entry_ids": [
+      "entry-042"
+    ],
+    "description_latex": "Buhrman--\\v Spalek matrix-product verification",
+    "description_text": "Buhrman–Špalek matrix-product verification"
+  },
+  {
+    "id": "algorithm-boolean-matrix-verification",
+    "name": "Gilani–Le Gall–Zhou Boolean matrix-product verification",
+    "entry_ids": [
+      "entry-043"
+    ],
+    "description_latex": "Gilani--Le Gall--Zhou Boolean matrix-product verification",
+    "description_text": "Gilani–Le Gall–Zhou Boolean matrix-product verification"
+  },
+  {
+    "id": "algorithm-boolean-nested-search",
+    "name": "Buhrman–Špalek nested-search Boolean verification",
+    "entry_ids": [
+      "entry-043"
+    ],
+    "description_latex": "Buhrman--\\v Spalek nested-search Boolean verification",
+    "description_text": "Buhrman–Špalek nested-search Boolean verification"
+  },
+  {
+    "id": "algorithm-span-connectivity",
+    "name": "Belovs–Reichardt span-program connectivity",
+    "entry_ids": [
+      "entry-044",
+      "entry-137"
+    ],
+    "description_latex": "Belovs--Reichardt span-program connectivity",
+    "description_text": "Belovs–Reichardt span-program connectivity"
+  },
+  {
+    "id": "algorithm-quantum-mincut",
+    "name": "Apers–Lee quantum minimum cut",
+    "entry_ids": [
+      "entry-046"
+    ],
+    "description_latex": "Apers--Lee quantum minimum cut",
+    "description_text": "Apers–Lee quantum minimum cut"
+  },
+  {
+    "id": "algorithm-qaoa",
+    "name": "QAOA and the Quantum Alternating Operator Ansatz",
+    "entry_ids": [
+      "entry-049",
+      "entry-050",
+      "entry-051",
+      "entry-052",
+      "entry-099",
+      "entry-103",
+      "entry-104",
+      "entry-105",
+      "entry-106"
+    ],
+    "description_latex": "QAOA and the Quantum Alternating Operator Ansatz",
+    "description_text": "QAOA and the Quantum Alternating Operator Ansatz"
+  },
+  {
+    "id": "algorithm-rydberg-optimization",
+    "name": "Rydberg adiabatic and variational optimization",
+    "entry_ids": [
+      "entry-051"
+    ],
+    "description_latex": "Rydberg adiabatic and variational optimization",
+    "description_text": "Rydberg adiabatic and variational optimization"
+  },
+  {
+    "id": "algorithm-short-path",
+    "name": "Short-path quantum optimization",
+    "entry_ids": [
+      "entry-052",
+      "entry-053"
+    ],
+    "description_latex": "Short-path quantum optimization",
+    "description_text": "Short-path quantum optimization"
+  },
+  {
+    "id": "algorithm-conditioning-search",
+    "name": "Quantum conditioning-and-search",
+    "entry_ids": [
+      "entry-053"
+    ],
+    "description_latex": "Quantum conditioning-and-search",
+    "description_text": "Quantum conditioning-and-search"
+  },
+  {
+    "id": "algorithm-welded-tree-walk",
+    "name": "Continuous-time quantum walk on welded trees",
+    "entry_ids": [
+      "entry-055"
+    ],
+    "description_latex": "Continuous-time quantum walk on welded trees",
+    "description_text": "Continuous-time quantum walk on welded trees"
+  },
+  {
+    "id": "algorithm-quantum-simulated-annealing",
+    "name": "Quantum simulated annealing",
+    "entry_ids": [
+      "entry-056"
+    ],
+    "description_latex": "Quantum simulated annealing",
+    "description_text": "Quantum simulated annealing"
+  },
+  {
+    "id": "algorithm-quantum-sampling",
+    "name": "Wocjan–Abeyesinghe quantum sampling",
+    "entry_ids": [
+      "entry-054",
+      "entry-056"
+    ],
+    "description_latex": "Wocjan--Abeyesinghe quantum sampling",
+    "description_text": "Wocjan–Abeyesinghe quantum sampling"
+  },
+  {
+    "id": "algorithm-dqi",
+    "name": "Decoded Quantum Interferometry",
+    "entry_ids": [
+      "entry-060",
+      "entry-180"
+    ],
+    "description_latex": "Decoded Quantum Interferometry",
+    "description_text": "Decoded Quantum Interferometry"
+  },
+  {
+    "id": "algorithm-worst-case-opi",
+    "name": "Horinaga–Yamakawa optimal polynomial intersection algorithm",
+    "entry_ids": [
+      "entry-060"
+    ],
+    "description_latex": "Horinaga--Yamakawa optimal polynomial intersection algorithm",
+    "description_text": "Horinaga–Yamakawa optimal polynomial intersection algorithm"
+  },
+  {
+    "id": "algorithm-vqe",
+    "name": "Variational quantum eigensolver and filtering VQE",
+    "entry_ids": [
+      "entry-099",
+      "entry-105",
+      "entry-107"
+    ],
+    "description_latex": "Variational quantum eigensolver and filtering VQE",
+    "description_text": "Variational quantum eigensolver and filtering VQE"
+  },
+  {
+    "id": "algorithm-varqite",
+    "name": "Variational imaginary-time evolution (VarQITE)",
+    "entry_ids": [
+      "entry-105"
+    ],
+    "description_latex": "Variational imaginary-time evolution (VarQITE)",
+    "description_text": "Variational imaginary-time evolution (VarQITE)"
+  },
+  {
+    "id": "algorithm-shor-order",
+    "name": "Shor order finding and discrete logarithm",
     "entry_ids": [
       "entry-061",
       "entry-062",
       "entry-063",
       "entry-064",
-      "entry-065",
-      "entry-066",
-      "entry-067",
-      "entry-068"
+      "entry-146",
+      "entry-147",
+      "entry-149",
+      "entry-150",
+      "entry-152",
+      "entry-154",
+      "entry-229",
+      "entry-193"
     ],
-    "description_latex": "Periods, hidden subgroups, real periods and hidden shifts connect algebraic number theory with cryptanalysis.",
-    "description_text": "Periods, hidden subgroups, real periods and hidden shifts connect algebraic number theory with cryptanalysis."
+    "description_latex": "Shor order finding and discrete logarithm",
+    "description_text": "Shor order finding and discrete logarithm"
   },
   {
-    "id": "relation-b7411a463782",
-    "name": "Lattice algorithms as subroutines",
+    "id": "algorithm-regev-factoring",
+    "name": "Regev quantum factoring",
+    "entry_ids": [
+      "entry-061"
+    ],
+    "description_latex": "Regev quantum factoring",
+    "description_text": "Regev quantum factoring"
+  },
+  {
+    "id": "algorithm-watrous-group-order",
+    "name": "Watrous solvable-group order algorithm",
+    "entry_ids": [
+      "entry-064",
+      "entry-167"
+    ],
+    "description_latex": "Watrous solvable-group order algorithm",
+    "description_text": "Watrous solvable-group order algorithm"
+  },
+  {
+    "id": "algorithm-hallgren-regulator",
+    "name": "Hallgren real-period finding",
+    "entry_ids": [
+      "entry-065",
+      "entry-066"
+    ],
+    "description_latex": "Hallgren real-period finding",
+    "description_text": "Hallgren real-period finding"
+  },
+  {
+    "id": "algorithm-biasse-song-units",
+    "name": "Biasse–Song S-unit computation",
+    "entry_ids": [
+      "entry-066",
+      "entry-067"
+    ],
+    "description_latex": "Biasse--Song S-unit computation",
+    "description_text": "Biasse–Song S-unit computation"
+  },
+  {
+    "id": "algorithm-kuperberg",
+    "name": "Hidden-shift sieves of Kuperberg and Regev",
+    "entry_ids": [
+      "entry-068",
+      "entry-114"
+    ],
+    "description_latex": "Hidden-shift sieves of Kuperberg and Regev",
+    "description_text": "Hidden-shift sieves of Kuperberg and Regev"
+  },
+  {
+    "id": "algorithm-biasse-jao-sankar",
+    "name": "Biasse–Jao–Sankar supersingular isogeny algorithm",
+    "entry_ids": [
+      "entry-069"
+    ],
+    "description_latex": "Biasse--Jao--Sankar supersingular isogeny algorithm",
+    "description_text": "Biasse–Jao–Sankar supersingular isogeny algorithm"
+  },
+  {
+    "id": "algorithm-tani-claw",
+    "name": "Tani quantum-walk claw finding",
+    "entry_ids": [
+      "entry-070",
+      "entry-085"
+    ],
+    "description_latex": "Tani quantum-walk claw finding",
+    "description_text": "Tani quantum-walk claw finding"
+  },
+  {
+    "id": "algorithm-superlattice-svp",
+    "name": "Hhan–Kim–Kim–Laarhoven quantum SVP",
     "entry_ids": [
       "entry-071",
-      "entry-072",
-      "entry-074",
-      "entry-075",
-      "entry-076",
-      "entry-077"
+      "entry-072"
     ],
-    "description_latex": "SVP, Gaussian sampling and decoding costs feed into reduction, closest-vector, LWE and SIS algorithms.",
-    "description_text": "SVP, Gaussian sampling and decoding costs feed into reduction, closest-vector, LWE and SIS algorithms."
+    "description_latex": "Hhan--Kim--Kim--Laarhoven quantum SVP",
+    "description_text": "Hhan–Kim–Kim–Laarhoven quantum SVP"
   },
   {
-    "id": "relation-6f5c7fafc082",
-    "name": "Code decoding and list matching",
+    "id": "algorithm-reusable-collision-walks",
+    "name": "Reusable quantum walks for lattice sieving",
     "entry_ids": [
-      "entry-078",
-      "entry-079",
-      "entry-080"
+      "entry-071",
+      "entry-076"
     ],
-    "description_latex": "Information-set search, representations and nearest-neighbor methods connect code-based cryptanalysis with subset sum.",
-    "description_text": "Information-set search, representations and nearest-neighbor methods connect code-based cryptanalysis with subset sum."
+    "description_latex": "Reusable quantum walks for lattice sieving",
+    "description_text": "Reusable quantum walks for lattice sieving"
   },
   {
-    "id": "relation-1a804b4e7da1",
-    "name": "Oracle lower bounds",
+    "id": "algorithm-svp-via-bdd",
+    "name": "Aggarwal–Chen–Kumar–Shen quantum SVP via BDD",
     "entry_ids": [
-      "entry-001",
-      "entry-006",
-      "entry-091",
-      "entry-092",
-      "entry-093",
-      "entry-094",
-      "entry-095"
+      "entry-071",
+      "entry-072"
     ],
-    "description_latex": "The classical lower bound and the quantum upper bound refer to the same queried object and success requirement.",
-    "description_text": "The classical lower bound and the quantum upper bound refer to the same queried object and success requirement."
+    "description_latex": "Aggarwal--Chen--Kumar--Shen quantum SVP via BDD",
+    "description_text": "Aggarwal–Chen–Kumar–Shen quantum SVP via BDD"
   },
   {
-    "id": "relation-bb3dc2a76468",
-    "name": "Conditional lower bounds",
+    "id": "algorithm-noisy-parity",
+    "name": "Cross–Smith–Smolin noisy quantum parity learning",
     "entry_ids": [
-      "entry-008",
-      "entry-096",
-      "entry-098"
+      "entry-073"
     ],
-    "description_latex": "Set-cover hypotheses, SH/Weak ETH, representation-specific QSETH variants and Hamiltonian complexity attach consequences to hypothetical algorithmic improvements.",
-    "description_text": "Set-cover hypotheses, SH/Weak ETH, representation-specific QSETH variants and Hamiltonian complexity attach consequences to hypothetical algorithmic improvements."
+    "description_latex": "Cross--Smith--Smolin noisy quantum parity learning",
+    "description_text": "Cross–Smith–Smolin noisy quantum parity learning"
   },
   {
-    "id": "relation-bcb8db595d93",
-    "name": "Exact classical counting",
+    "id": "algorithm-eldar-hallgren",
+    "name": "Eldar–Hallgren periodic-lattice decoding",
     "entry_ids": [
-      "entry-005",
-      "entry-010",
-      "entry-020",
-      "entry-049",
-      "entry-050",
-      "entry-051",
-      "entry-052",
-      "entry-053",
-      "entry-054",
-      "entry-094"
+      "entry-075"
     ],
-    "description_latex": "Fixed-width counting algorithms yield feasibility, witness recovery and optimization through appropriately sized encodings.",
-    "description_text": "Fixed-width counting algorithms yield feasibility, witness recovery and optimization through appropriately sized encodings."
+    "description_latex": "Eldar--Hallgren periodic-lattice decoding",
+    "description_text": "Eldar–Hallgren periodic-lattice decoding"
   },
   {
-    "id": "relation-30183116853f",
-    "name": "Simulation from counting",
-    "entry_ids": [
-      "entry-049",
-      "entry-056",
-      "entry-099"
-    ],
-    "description_latex": "Feynman path counts and conditional probabilities yield subexponential classical sampling bounds for specified quantum circuit families.",
-    "description_text": "Feynman path counts and conditional probabilities yield subexponential classical sampling bounds for specified quantum circuit families."
-  },
-  {
-    "id": "relation-f600b588a11e",
-    "name": "Hamiltonian and variational optimization",
-    "entry_ids": [
-      "entry-097",
-      "entry-098",
-      "entry-099",
-      "entry-100"
-    ],
-    "description_latex": "Frustration-free structure, ground-state overlap, spectral gaps, and parameter optimization control the full cost.",
-    "description_text": "Frustration-free structure, ground-state overlap, spectral gaps, and parameter optimization control the full cost."
-  },
-  {
-    "id": "relation-3a719406f18f",
-    "name": "Constraint-preserving variational circuits",
-    "entry_ids": [
-      "entry-103",
-      "entry-104",
-      "entry-106"
-    ],
-    "description_latex": "One-hot, fixed-Hamming-weight and long/short encodings define feasible subspaces for alternating-operator mixers.",
-    "description_text": "One-hot, fixed-Hamming-weight and long/short encodings define feasible subspaces for alternating-operator mixers."
-  },
-  {
-    "id": "relation-875aa99d45f6",
-    "name": "Variational optimization of discrete objectives",
-    "entry_ids": [
-      "entry-049",
-      "entry-105",
-      "entry-107"
-    ],
-    "description_latex": "Cost estimation, parameter updates and measured classical solutions connect QAOA, VQE, filtering and local-search methods.",
-    "description_text": "Cost estimation, parameter updates and measured classical solutions connect QAOA, VQE, filtering and local-search methods."
-  },
-  {
-    "id": "relation-df78dfdabb49",
-    "name": "Quantum filtering and decoding",
+    "id": "algorithm-clz-filtering",
+    "name": "Chen–Liu–Zhandry quantum filtering",
     "entry_ids": [
       "entry-077",
       "entry-101"
     ],
-    "description_latex": "A classical decoder supplies the coherent uncomputation step in quantum algorithms for restricted short relations; the distribution and number of input vectors determine the comparison.",
-    "description_text": "A classical decoder supplies the coherent uncomputation step in quantum algorithms for restricted short relations; the distribution and number of input vectors determine the comparison."
+    "description_latex": "Chen--Liu--Zhandry quantum filtering",
+    "description_text": "Chen–Liu–Zhandry quantum filtering"
   },
   {
-    "id": "relation-e54786ee2dd0",
-    "name": "Recursive Fourier sampling",
+    "id": "algorithm-quantum-walk-isd",
+    "name": "Kachigar–Tillich and Kirshanova quantum-walk ISD",
     "entry_ids": [
-      "entry-102"
+      "entry-078",
+      "entry-079"
     ],
-    "description_latex": "Growing recursion depth gives superpolynomial quantum and classical query costs; the classical lower bound establishes a superpolynomial separation.",
-    "description_text": "Growing recursion depth gives superpolynomial quantum and classical query costs; the classical lower bound establishes a superpolynomial separation."
+    "description_latex": "Kachigar--Tillich and Kirshanova quantum-walk ISD",
+    "description_text": "Kachigar–Tillich and Kirshanova quantum-walk ISD"
+  },
+  {
+    "id": "algorithm-random-subset-sum",
+    "name": "Bonnetain–Bricout–Schrottenloher–Shen subset-sum algorithms",
+    "entry_ids": [
+      "entry-080"
+    ],
+    "description_latex": "Bonnetain--Bricout--Schrottenloher--Shen subset-sum algorithms",
+    "description_text": "Bonnetain–Bricout–Schrottenloher–Shen subset-sum algorithms"
+  },
+  {
+    "id": "algorithm-bht-collision",
+    "name": "Brassard–Høyer–Tapp collision search",
+    "entry_ids": [
+      "entry-084"
+    ],
+    "description_latex": "Brassard--H{\\o}yer--Tapp collision search",
+    "description_text": "Brassard–Høyer–Tapp collision search"
+  },
+  {
+    "id": "algorithm-quantum-kxor-merging",
+    "name": "Quantum k-XOR and k-SUM merging",
+    "entry_ids": [
+      "entry-087"
+    ],
+    "description_latex": "Quantum k-XOR and k-SUM merging",
+    "description_text": "Quantum k-XOR and k-SUM merging"
+  },
+  {
+    "id": "algorithm-simon",
+    "name": "Simon period finding and offline Simon",
+    "entry_ids": [
+      "entry-088",
+      "entry-089",
+      "entry-177",
+      "entry-178"
+    ],
+    "description_latex": "Simon period finding and offline Simon",
+    "description_text": "Simon period finding and offline Simon"
+  },
+  {
+    "id": "algorithm-symmetric-graph-tester",
+    "name": "Ben-David et al. adjacency-list graph-property tester",
+    "entry_ids": [
+      "entry-093"
+    ],
+    "description_latex": "Ben-David et al. adjacency-list graph-property tester",
+    "description_text": "Ben-David et al. adjacency-list graph-property tester"
+  },
+  {
+    "id": "algorithm-parity",
+    "name": "Pairwise quantum parity algorithm",
+    "entry_ids": [
+      "entry-094"
+    ],
+    "description_latex": "Pairwise quantum parity algorithm",
+    "description_text": "Pairwise quantum parity algorithm"
+  },
+  {
+    "id": "algorithm-stoquastic-adiabatic",
+    "name": "Stoquastic frustration-free adiabatic evolution",
+    "entry_ids": [
+      "entry-097"
+    ],
+    "description_latex": "Stoquastic frustration-free adiabatic evolution",
+    "description_text": "Stoquastic frustration-free adiabatic evolution"
+  },
+  {
+    "id": "algorithm-ground-state-filtering",
+    "name": "Lin–Tong ground-state filtering and energy estimation",
+    "entry_ids": [
+      "entry-098"
+    ],
+    "description_latex": "Lin--Tong ground-state filtering and energy estimation",
+    "description_text": "Lin–Tong ground-state filtering and energy estimation"
+  },
+  {
+    "id": "algorithm-local-adiabatic-search",
+    "name": "Roland–Cerf local adiabatic search",
+    "entry_ids": [
+      "entry-100"
+    ],
+    "description_latex": "Roland--Cerf local adiabatic search",
+    "description_text": "Roland–Cerf local adiabatic search"
+  },
+  {
+    "id": "algorithm-subset-quantum-walk",
+    "name": "Ambainis–Childs–Eisenberg subset quantum walk",
+    "entry_ids": [
+      "entry-108",
+      "entry-110"
+    ],
+    "description_latex": "Ambainis--Childs--Eisenberg subset quantum walk",
+    "description_text": "Ambainis–Childs–Eisenberg subset quantum walk"
+  },
+  {
+    "id": "algorithm-belovs-k-distinctness",
+    "name": "Belovs learning graph for k-distinctness",
+    "entry_ids": [
+      "entry-108",
+      "entry-139"
+    ],
+    "description_latex": "Belovs learning graph for k-distinctness",
+    "description_text": "Belovs learning graph for k-distinctness"
+  },
+  {
+    "id": "algorithm-optimal-ordered-search",
+    "name": "Carolan–Childs optimal ordered search",
+    "entry_ids": [
+      "entry-111"
+    ],
+    "description_latex": "Carolan--Childs optimal ordered search",
+    "description_text": "Carolan–Childs optimal ordered search"
+  },
+  {
+    "id": "algorithm-quantum-approximate-selection",
+    "name": "Nayak–Wu approximate selection",
+    "entry_ids": [
+      "entry-112"
+    ],
+    "description_latex": "Nayak--Wu approximate selection",
+    "description_text": "Nayak–Wu approximate selection"
+  },
+  {
+    "id": "algorithm-ramesh-vinay-matching",
+    "name": "Ramesh–Vinay quantum string matching",
+    "entry_ids": [
+      "entry-113"
+    ],
+    "description_latex": "Ramesh--Vinay quantum string matching",
+    "description_text": "Ramesh–Vinay quantum string matching"
+  },
+  {
+    "id": "algorithm-hidden-shift-pattern-matching",
+    "name": "Montanaro hidden-shift pattern matching",
+    "entry_ids": [
+      "entry-114"
+    ],
+    "description_latex": "Montanaro hidden-shift pattern matching",
+    "description_text": "Montanaro hidden-shift pattern matching"
+  },
+  {
+    "id": "algorithm-synchronizing-set-quantum-walk",
+    "name": "Akmal–Jin synchronizing-set quantum walk",
+    "entry_ids": [
+      "entry-115"
+    ],
+    "description_latex": "Akmal--Jin synchronizing-set quantum walk",
+    "description_text": "Akmal–Jin synchronizing-set quantum walk"
+  },
+  {
+    "id": "algorithm-akmal-jin-string-selection",
+    "name": "Akmal–Jin quantum string selection",
+    "entry_ids": [
+      "entry-116",
+      "entry-117",
+      "entry-118"
+    ],
+    "description_latex": "Akmal--Jin quantum string selection",
+    "description_text": "Akmal–Jin quantum string selection"
+  },
+  {
+    "id": "algorithm-quantum-palindrome-search",
+    "name": "Le Gall–Seddighin palindrome search",
+    "entry_ids": [
+      "entry-119"
+    ],
+    "description_latex": "Le Gall--Seddighin palindrome search",
+    "description_text": "Le Gall–Seddighin palindrome search"
+  },
+  {
+    "id": "algorithm-quantum-ulam-approximation",
+    "name": "Le Gall–Seddighin Ulam-distance approximation",
+    "entry_ids": [
+      "entry-120"
+    ],
+    "description_latex": "Le Gall--Seddighin Ulam-distance approximation",
+    "description_text": "Le Gall–Seddighin Ulam-distance approximation"
+  },
+  {
+    "id": "algorithm-quantum-bounded-edit-distance",
+    "name": "Gibney–Jin–Kociumaka–Thankachan bounded edit distance",
+    "entry_ids": [
+      "entry-121"
+    ],
+    "description_latex": "Gibney--Jin--Kociumaka--Thankachan bounded edit distance",
+    "description_text": "Gibney–Jin–Kociumaka–Thankachan bounded edit distance"
+  },
+  {
+    "id": "algorithm-quantum-approximate-pattern-matching",
+    "name": "Kociumaka–Nogler–Wellnitz approximate pattern matching",
+    "entry_ids": [
+      "entry-122",
+      "entry-123"
+    ],
+    "description_latex": "Kociumaka--Nogler--Wellnitz approximate pattern matching",
+    "description_text": "Kociumaka–Nogler–Wellnitz approximate pattern matching"
+  },
+  {
+    "id": "algorithm-quantum-lz77",
+    "name": "Gibney–Jin–Kociumaka–Thankachan LZ77 construction",
+    "entry_ids": [
+      "entry-124"
+    ],
+    "description_latex": "Gibney--Jin--Kociumaka--Thankachan LZ77 construction",
+    "description_text": "Gibney–Jin–Kociumaka–Thankachan LZ77 construction"
+  },
+  {
+    "id": "algorithm-quantum-compressed-bwt",
+    "name": "Gibney–Thankachan compressibility-aware string algorithms",
+    "entry_ids": [
+      "entry-125"
+    ],
+    "description_latex": "Gibney--Thankachan compressibility-aware string algorithms",
+    "description_text": "Gibney–Thankachan compressibility-aware string algorithms"
+  },
+  {
+    "id": "algorithm-quantum-rle-lcs",
+    "name": "Lee–Lin run-length encoded substring algorithm",
+    "entry_ids": [
+      "entry-126"
+    ],
+    "description_latex": "Lee--Lin run-length encoded substring algorithm",
+    "description_text": "Lee–Lin run-length encoded substring algorithm"
+  },
+  {
+    "id": "algorithm-star-free-language-quantum-query",
+    "name": "Aaronson–Grier–Schaeffer regular-language algorithm",
+    "entry_ids": [
+      "entry-127"
+    ],
+    "description_latex": "Aaronson--Grier--Schaeffer regular-language algorithm",
+    "description_text": "Aaronson–Grier–Schaeffer regular-language algorithm"
+  },
+  {
+    "id": "algorithm-bounded-dyck-quantum-search",
+    "name": "Khadiev–Shen bounded-height Dyck algorithm",
+    "entry_ids": [
+      "entry-128"
+    ],
+    "description_latex": "Khadiev--Shen bounded-height Dyck algorithm",
+    "description_text": "Khadiev–Shen bounded-height Dyck algorithm"
+  },
+  {
+    "id": "algorithm-quantum-divide-conquer",
+    "name": "Quantum divide and conquer",
+    "entry_ids": [
+      "entry-129",
+      "entry-130",
+      "entry-131",
+      "entry-132"
+    ],
+    "description_latex": "Quantum divide and conquer",
+    "description_text": "Quantum divide and conquer"
+  },
+  {
+    "id": "algorithm-geometric-quantum-walk",
+    "name": "Aaronson–Chia–Lin–Wang–Zhang geometric quantum walk",
+    "entry_ids": [
+      "entry-133",
+      "entry-134"
+    ],
+    "description_latex": "Aaronson--Chia--Lin--Wang--Zhang geometric quantum walk",
+    "description_text": "Aaronson–Chia–Lin–Wang–Zhang geometric quantum walk"
+  },
+  {
+    "id": "algorithm-minor-closed-property-quantum-query",
+    "name": "Childs–Kothari minor-closed graph-property algorithm",
+    "entry_ids": [
+      "entry-136"
+    ],
+    "description_latex": "Childs--Kothari minor-closed graph-property algorithm",
+    "description_text": "Childs–Kothari minor-closed graph-property algorithm"
+  },
+  {
+    "id": "algorithm-fixed-subgraph-learning-graph",
+    "name": "Lee–Magniez–Santha fixed-subgraph learning graph",
+    "entry_ids": [
+      "entry-138"
+    ],
+    "description_latex": "Lee--Magniez--Santha fixed-subgraph learning graph",
+    "description_text": "Lee–Magniez–Santha fixed-subgraph learning graph"
+  },
+  {
+    "id": "algorithm-distributed-quantum-diameter",
+    "name": "Le Gall–Magniez distributed diameter algorithm",
+    "entry_ids": [
+      "entry-140"
+    ],
+    "description_latex": "Le Gall--Magniez distributed diameter algorithm",
+    "description_text": "Le Gall–Magniez distributed diameter algorithm"
+  },
+  {
+    "id": "algorithm-output-sensitive-boolean-product",
+    "name": "Le Gall output-sensitive Boolean matrix multiplication",
+    "entry_ids": [
+      "entry-141"
+    ],
+    "description_latex": "Le Gall output-sensitive Boolean matrix multiplication",
+    "description_text": "Le Gall output-sensitive Boolean matrix multiplication"
+  },
+  {
+    "id": "algorithm-quantum-spanning-tree-sampling",
+    "name": "Apers–Gao–Ji–Liu spanning-tree sampler",
+    "entry_ids": [
+      "entry-142"
+    ],
+    "description_latex": "Apers--Gao--Ji--Liu spanning-tree sampler",
+    "description_text": "Apers–Gao–Ji–Liu spanning-tree sampler"
+  },
+  {
+    "id": "algorithm-signed-graph-clusterability-tester",
+    "name": "Chen–Apers–Hsieh clusterability tester",
+    "entry_ids": [
+      "entry-143"
+    ],
+    "description_latex": "Chen--Apers--Hsieh clusterability tester",
+    "description_text": "Chen–Apers–Hsieh clusterability tester"
+  },
+  {
+    "id": "algorithm-directed-subgraph-quantum-tester",
+    "name": "Apers–Magniez–Sen–Szabo directed graph tester",
+    "entry_ids": [
+      "entry-144"
+    ],
+    "description_latex": "Apers--Magniez--Sen--Szabo directed graph tester",
+    "description_text": "Apers–Magniez–Sen–Szabo directed graph tester"
+  },
+  {
+    "id": "algorithm-quantum-directed-path-containment",
+    "name": "Cornelissen–Gilani–Patro path-containment algorithm",
+    "entry_ids": [
+      "entry-145"
+    ],
+    "description_latex": "Cornelissen--Gilani--Patro path-containment algorithm",
+    "description_text": "Cornelissen–Gilani–Patro path-containment algorithm"
+  },
+  {
+    "id": "algorithm-abelian-group-decomposition",
+    "name": "Cheung–Mosca and Luo–Li–Le Gall abelian-group decomposition",
+    "entry_ids": [
+      "entry-146"
+    ],
+    "description_latex": "Cheung--Mosca and Luo--Li--Le Gall abelian-group decomposition",
+    "description_text": "Cheung–Mosca and Luo–Li–Le Gall abelian-group decomposition"
+  },
+  {
+    "id": "algorithm-coprime-group-isomorphism",
+    "name": "Le Gall coprime group-isomorphism algorithm",
+    "entry_ids": [
+      "entry-147"
+    ],
+    "description_latex": "Le Gall coprime group-isomorphism algorithm",
+    "description_text": "Le Gall coprime group-isomorphism algorithm"
+  },
+  {
+    "id": "algorithm-group-commutativity-quantum-walk",
+    "name": "Magniez–Nayak commutativity quantum walk",
+    "entry_ids": [
+      "entry-148"
+    ],
+    "description_latex": "Magniez--Nayak commutativity quantum walk",
+    "description_text": "Magniez–Nayak commutativity quantum walk"
+  },
+  {
+    "id": "algorithm-black-box-ring-basis",
+    "name": "Arvind–Das–Mukhopadhyay finite-ring basis algorithm",
+    "entry_ids": [
+      "entry-149"
+    ],
+    "description_latex": "Arvind--Das--Mukhopadhyay finite-ring basis algorithm",
+    "description_text": "Arvind–Das–Mukhopadhyay finite-ring basis algorithm"
+  },
+  {
+    "id": "algorithm-quantum-finite-ring-ideals",
+    "name": "Wocjan–Jordan–Ahmadi–Brennan ideal algorithms",
+    "entry_ids": [
+      "entry-150"
+    ],
+    "description_latex": "Wocjan--Jordan--Ahmadi--Brennan ideal algorithms",
+    "description_text": "Wocjan–Jordan–Ahmadi–Brennan ideal algorithms"
+  },
+  {
+    "id": "algorithm-ring-identity-quantum-walk",
+    "name": "Arvind–Mukhopadhyay multilinear identity test",
+    "entry_ids": [
+      "entry-151"
+    ],
+    "description_latex": "Arvind--Mukhopadhyay multilinear identity test",
+    "description_text": "Arvind–Mukhopadhyay multilinear identity test"
+  },
+  {
+    "id": "algorithm-semigroup-discrete-logarithm",
+    "name": "Childs–Ivanyos semigroup discrete logarithm",
+    "entry_ids": [
+      "entry-152"
+    ],
+    "description_latex": "Childs--Ivanyos semigroup discrete logarithm",
+    "description_text": "Childs–Ivanyos semigroup discrete logarithm"
+  },
+  {
+    "id": "algorithm-commutative-semigroup-membership",
+    "name": "Childs–Ivanyos commutative-semigroup membership",
+    "entry_ids": [
+      "entry-153"
+    ],
+    "description_latex": "Childs--Ivanyos commutative-semigroup membership",
+    "description_text": "Childs–Ivanyos commutative-semigroup membership"
+  },
+  {
+    "id": "algorithm-semidirect-discrete-logarithm",
+    "name": "Imran–Ivanyos semidirect discrete logarithm",
+    "entry_ids": [
+      "entry-154"
+    ],
+    "description_latex": "Imran--Ivanyos semidirect discrete logarithm",
+    "description_text": "Imran–Ivanyos semidirect discrete logarithm"
+  },
+  {
+    "id": "algorithm-doliskani-finite-field-factorization",
+    "name": "Doliskani quantum finite-field factorization",
+    "entry_ids": [
+      "entry-155"
+    ],
+    "description_latex": "Doliskani quantum finite-field factorization",
+    "description_text": "Doliskani quantum finite-field factorization"
+  },
+  {
+    "id": "algorithm-quantum-polynomial-interpolation",
+    "name": "Quantum polynomial interpolation",
+    "entry_ids": [
+      "entry-156"
+    ],
+    "description_latex": "Quantum polynomial interpolation",
+    "description_text": "Quantum polynomial interpolation"
+  },
+  {
+    "id": "algorithm-multiplicative-character-hidden-shift",
+    "name": "van Dam–Hallgren–Ip multiplicative-character hidden shift",
+    "entry_ids": [
+      "entry-158"
+    ],
+    "description_latex": "van Dam--Hallgren--Ip multiplicative-character hidden shift",
+    "description_text": "van Dam–Hallgren–Ip multiplicative-character hidden shift"
+  },
+  {
+    "id": "algorithm-bent-function-hidden-shift",
+    "name": "Rotteler bent-function hidden shift",
+    "entry_ids": [
+      "entry-159"
+    ],
+    "description_latex": "Rotteler bent-function hidden shift",
+    "description_text": "Rotteler bent-function hidden shift"
+  },
+  {
+    "id": "algorithm-boolean-hidden-shift-pgm",
+    "name": "Pretty-good measurement for Boolean hidden shift",
+    "entry_ids": [
+      "entry-160"
+    ],
+    "description_latex": "Pretty-good measurement for Boolean hidden shift",
+    "description_text": "Pretty-good measurement for Boolean hidden shift"
+  },
+  {
+    "id": "algorithm-generalized-hidden-shift-pgm",
+    "name": "Childs–van Dam generalized hidden-shift algorithm",
+    "entry_ids": [
+      "entry-161"
+    ],
+    "description_latex": "Childs--van Dam generalized hidden-shift algorithm",
+    "description_text": "Childs–van Dam generalized hidden-shift algorithm"
+  },
+  {
+    "id": "algorithm-semidirect-hsp-pgm",
+    "name": "Bacon–Childs–van Dam semidirect-product HSP algorithm",
+    "entry_ids": [
+      "entry-162"
+    ],
+    "description_latex": "Bacon--Childs--van Dam semidirect-product HSP algorithm",
+    "description_text": "Bacon–Childs–van Dam semidirect-product HSP algorithm"
+  },
+  {
+    "id": "algorithm-nilpotency-two-hsp",
+    "name": "Ivanyos–Sanselme–Santha nilpotency-two HSP algorithm",
+    "entry_ids": [
+      "entry-163"
+    ],
+    "description_latex": "Ivanyos--Sanselme--Santha nilpotency-two HSP algorithm",
+    "description_text": "Ivanyos–Sanselme–Santha nilpotency-two HSP algorithm"
+  },
+  {
+    "id": "algorithm-normal-hsp-fourier-sampling",
+    "name": "Hallgren–Russell–Ta-Shma normal-subgroup Fourier sampling",
+    "entry_ids": [
+      "entry-164"
+    ],
+    "description_latex": "Hallgren--Russell--Ta-Shma normal-subgroup Fourier sampling",
+    "description_text": "Hallgren–Russell–Ta-Shma normal-subgroup Fourier sampling"
+  },
+  {
+    "id": "algorithm-hidden-symmetry-subgroup-reduction",
+    "name": "Decker–Draisma–Ivanyos–Santha hidden-symmetry algorithm",
+    "entry_ids": [
+      "entry-165"
+    ],
+    "description_latex": "Decker--Draisma--Ivanyos--Santha hidden-symmetry algorithm",
+    "description_text": "Decker–Draisma–Ivanyos–Santha hidden-symmetry algorithm"
+  },
+  {
+    "id": "algorithm-hidden-polynomial-graph",
+    "name": "Decker–Wocjan hidden-polynomial-graph algorithm",
+    "entry_ids": [
+      "entry-166"
+    ],
+    "description_latex": "Decker--Wocjan hidden-polynomial-graph algorithm",
+    "description_text": "Decker–Wocjan hidden-polynomial-graph algorithm"
+  },
+  {
+    "id": "algorithm-kedlaya-curve-zeta",
+    "name": "Kedlaya quantum zeta-function algorithm",
+    "entry_ids": [
+      "entry-167"
+    ],
+    "description_latex": "Kedlaya quantum zeta-function algorithm",
+    "description_text": "Kedlaya quantum zeta-function algorithm"
+  },
+  {
+    "id": "algorithm-ajl-jones-approximation",
+    "name": "Aharonov–Jones–Landau Jones-polynomial approximation",
+    "entry_ids": [
+      "entry-168"
+    ],
+    "description_latex": "Aharonov--Jones--Landau Jones-polynomial approximation",
+    "description_text": "Aharonov–Jones–Landau Jones-polynomial approximation"
+  },
+  {
+    "id": "algorithm-one-clean-qubit-link-invariants",
+    "name": "One-clean-qubit Jones and HOMFLY approximation",
+    "entry_ids": [
+      "entry-168",
+      "entry-170"
+    ],
+    "description_latex": "One-clean-qubit Jones and HOMFLY approximation",
+    "description_text": "One-clean-qubit Jones and HOMFLY approximation"
+  },
+  {
+    "id": "algorithm-quantum-tutte-approximation",
+    "name": "Aharonov–Arad–Eban–Landau Tutte approximation",
+    "entry_ids": [
+      "entry-171"
+    ],
+    "description_latex": "Aharonov--Arad--Eban--Landau Tutte approximation",
+    "description_text": "Aharonov–Arad–Eban–Landau Tutte approximation"
+  },
+  {
+    "id": "algorithm-turaev-viro-quantum-estimation",
+    "name": "Alagic–Jordan–Konig–Reichardt Turaev–Viro estimator",
+    "entry_ids": [
+      "entry-172"
+    ],
+    "description_latex": "Alagic--Jordan--Konig--Reichardt Turaev--Viro estimator",
+    "description_text": "Alagic–Jordan–Konig–Reichardt Turaev–Viro estimator"
+  },
+  {
+    "id": "algorithm-wrt-quantum-recoupling",
+    "name": "Garnerone–Marzuoli–Rasetti quantum recoupling",
+    "entry_ids": [
+      "entry-173"
+    ],
+    "description_latex": "Garnerone--Marzuoli--Rasetti quantum recoupling",
+    "description_text": "Garnerone–Marzuoli–Rasetti quantum recoupling"
+  },
+  {
+    "id": "algorithm-quantum-double-link-estimation",
+    "name": "Krovi–Russell quantum-double link estimation",
+    "entry_ids": [
+      "entry-174"
+    ],
+    "description_latex": "Krovi--Russell quantum-double link estimation",
+    "description_text": "Krovi–Russell quantum-double link estimation"
+  },
+  {
+    "id": "algorithm-quadratically-signed-weight-enumerator",
+    "name": "Knill–Laflamme weight-enumerator algorithm",
+    "entry_ids": [
+      "entry-175"
+    ],
+    "description_latex": "Knill--Laflamme weight-enumerator algorithm",
+    "description_text": "Knill–Laflamme weight-enumerator algorithm"
+  },
+  {
+    "id": "algorithm-quantum-multicollision",
+    "name": "Hosoyamada–Sasaki–Tani–Xagawa multicollision algorithm",
+    "entry_ids": [
+      "entry-176"
+    ],
+    "description_latex": "Hosoyamada--Sasaki--Tani--Xagawa multicollision algorithm",
+    "description_text": "Hosoyamada–Sasaki–Tani–Xagawa multicollision algorithm"
+  },
+  {
+    "id": "algorithm-hidden-radius-fourier",
+    "name": "Childs–Schulman–Vazirani hidden-radius algorithm",
+    "entry_ids": [
+      "entry-179"
+    ],
+    "description_latex": "Childs--Schulman--Vazirani hidden-radius algorithm",
+    "description_text": "Childs–Schulman–Vazirani hidden-radius algorithm"
+  },
+  {
+    "id": "algorithm-deutsch-jozsa",
+    "name": "Deutsch–Jozsa algorithm",
+    "entry_ids": [
+      "entry-198"
+    ],
+    "description_latex": "Deutsch--Jozsa algorithm",
+    "description_text": "Deutsch–Jozsa algorithm"
+  },
+  {
+    "id": "algorithm-forrelation",
+    "name": "Forrelation Hadamard-transform algorithm",
+    "entry_ids": [
+      "entry-199"
+    ],
+    "description_latex": "Forrelation Hadamard-transform algorithm",
+    "description_text": "Forrelation Hadamard-transform algorithm"
+  },
+  {
+    "id": "algorithm-boolean-fourier-sampling",
+    "name": "Boolean Fourier sampling",
+    "entry_ids": [
+      "entry-200"
+    ],
+    "description_latex": "Boolean Fourier sampling",
+    "description_text": "Boolean Fourier sampling"
+  },
+  {
+    "id": "algorithm-van-dam-oracle-interrogation",
+    "name": "van Dam oracle interrogation",
+    "entry_ids": [
+      "entry-201"
+    ],
+    "description_latex": "van Dam oracle interrogation",
+    "description_text": "van Dam oracle interrogation"
+  },
+  {
+    "id": "algorithm-kothari-oracle-identification",
+    "name": "Kothari oracle identification",
+    "entry_ids": [
+      "entry-202"
+    ],
+    "description_latex": "Kothari oracle identification",
+    "description_text": "Kothari oracle identification"
+  },
+  {
+    "id": "algorithm-wildcard-quantum-learning",
+    "name": "Ambainis–Montanaro and Belovs wildcard learning",
+    "entry_ids": [
+      "entry-203"
+    ],
+    "description_latex": "Ambainis--Montanaro and Belovs wildcard learning",
+    "description_text": "Ambainis–Montanaro and Belovs wildcard learning"
+  },
+  {
+    "id": "algorithm-belovs-symmetric-junta-learning",
+    "name": "Belovs adversary algorithm for learning symmetric juntas",
+    "entry_ids": [
+      "entry-204",
+      "entry-219"
+    ],
+    "description_latex": "Belovs adversary algorithm for learning symmetric juntas",
+    "description_text": "Belovs adversary algorithm for learning symmetric juntas"
+  },
+  {
+    "id": "algorithm-gapped-group-testing",
+    "name": "Ambainis–Belovs–Regev–de Wolf gapped group testing",
+    "entry_ids": [
+      "entry-205"
+    ],
+    "description_latex": "Ambainis--Belovs--Regev--de Wolf gapped group testing",
+    "description_text": "Ambainis–Belovs–Regev–de Wolf gapped group testing"
+  },
+  {
+    "id": "algorithm-optimal-quantum-junta-testing",
+    "name": "Optimal quantum junta testing",
+    "entry_ids": [
+      "entry-206"
+    ],
+    "description_latex": "Optimal quantum junta testing",
+    "description_text": "Optimal quantum junta testing"
+  },
+  {
+    "id": "algorithm-quantum-fourier-junta-learning",
+    "name": "Atici–Servedio Fourier junta learning and testing",
+    "entry_ids": [
+      "entry-206",
+      "entry-207"
+    ],
+    "description_latex": "Atici--Servedio Fourier junta learning and testing",
+    "description_text": "Atici–Servedio Fourier junta learning and testing"
+  },
+  {
+    "id": "algorithm-distribution-free-quantum-junta-testing",
+    "name": "Belovs distribution-free quantum junta tester",
+    "entry_ids": [
+      "entry-206"
+    ],
+    "description_latex": "Belovs distribution-free quantum junta tester",
+    "description_text": "Belovs distribution-free quantum junta tester"
+  },
+  {
+    "id": "algorithm-quantum-dnf-fourier-learning",
+    "name": "Quantum Fourier-sampling DNF learning",
+    "entry_ids": [
+      "entry-208"
+    ],
+    "description_latex": "Quantum Fourier-sampling DNF learning",
+    "description_text": "Quantum Fourier-sampling DNF learning"
+  },
+  {
+    "id": "algorithm-fourier-sparse-quantum-learning",
+    "name": "Fourier-sparse Boolean-function learning",
+    "entry_ids": [
+      "entry-209"
+    ],
+    "description_latex": "Fourier-sparse Boolean-function learning",
+    "description_text": "Fourier-sparse Boolean-function learning"
+  },
+  {
+    "id": "algorithm-quantum-agnostic-decision-tree-learning",
+    "name": "Chatterjee–SAPV–Bera quantum agnostic learner",
+    "entry_ids": [
+      "entry-210"
+    ],
+    "description_latex": "Chatterjee--SAPV--Bera quantum agnostic learner",
+    "description_text": "Chatterjee–SAPV–Bera quantum agnostic learner"
+  },
+  {
+    "id": "algorithm-quantum-boolean-property-tests",
+    "name": "Quantum linearity and symmetry testing",
+    "entry_ids": [
+      "entry-211",
+      "entry-212"
+    ],
+    "description_latex": "Quantum linearity and symmetry testing",
+    "description_text": "Quantum linearity and symmetry testing"
+  },
+  {
+    "id": "algorithm-quantum-data-property-testing",
+    "name": "Caro–Naik–Slote property testing from quantum data",
+    "entry_ids": [
+      "entry-212",
+      "entry-213",
+      "entry-214"
+    ],
+    "description_latex": "Caro--Naik--Slote property testing from quantum data",
+    "description_text": "Caro–Naik–Slote property testing from quantum data"
+  },
+  {
+    "id": "algorithm-quantum-monotonicity-tester",
+    "name": "Belovs–Blais quantum monotonicity tester",
+    "entry_ids": [
+      "entry-213"
+    ],
+    "description_latex": "Belovs--Blais quantum monotonicity tester",
+    "description_text": "Belovs–Blais quantum monotonicity tester"
+  },
+  {
+    "id": "algorithm-sequential-measurement-property-testing",
+    "name": "Harrow–Lin–Montanaro sequential-measurement tester",
+    "entry_ids": [
+      "entry-215"
+    ],
+    "description_latex": "Harrow--Lin--Montanaro sequential-measurement tester",
+    "description_text": "Harrow–Lin–Montanaro sequential-measurement tester"
+  },
+  {
+    "id": "algorithm-quantum-coupon-collector",
+    "name": "Quantum coupon-collector algorithm",
+    "entry_ids": [
+      "entry-216"
+    ],
+    "description_latex": "Quantum coupon-collector algorithm",
+    "description_text": "Quantum coupon-collector algorithm"
+  },
+  {
+    "id": "algorithm-quantum-hidden-graph-learning",
+    "name": "Montanaro–Shao hidden-graph learning",
+    "entry_ids": [
+      "entry-217",
+      "entry-218"
+    ],
+    "description_latex": "Montanaro--Shao hidden-graph learning",
+    "description_text": "Montanaro–Shao hidden-graph learning"
+  },
+  {
+    "id": "algorithm-quantum-distribution-identity-testing",
+    "name": "Quantum finite-distribution identity and uniformity testing",
+    "entry_ids": [
+      "entry-220"
+    ],
+    "description_latex": "Quantum finite-distribution identity and uniformity testing",
+    "description_text": "Quantum finite-distribution identity and uniformity testing"
+  },
+  {
+    "id": "algorithm-purified-distribution-testing",
+    "name": "Gilyen–Li and Luo–Wang–Li distribution testing",
+    "entry_ids": [
+      "entry-221",
+      "entry-222",
+      "entry-223",
+      "entry-224"
+    ],
+    "description_latex": "Gilyen--Li and Luo--Wang--Li distribution testing",
+    "description_text": "Gilyen–Li and Luo–Wang–Li distribution testing"
+  },
+  {
+    "id": "algorithm-quantum-finite-entropy-estimation",
+    "name": "Quantum Shannon-entropy estimation",
+    "entry_ids": [
+      "entry-225"
+    ],
+    "description_latex": "Quantum Shannon-entropy estimation",
+    "description_text": "Quantum Shannon-entropy estimation"
+  },
+  {
+    "id": "algorithm-quantum-support-estimation",
+    "name": "Li–Wu support-size and support-coverage estimation",
+    "entry_ids": [
+      "entry-226",
+      "entry-227"
+    ],
+    "description_latex": "Li--Wu support-size and support-coverage estimation",
+    "description_text": "Li–Wu support-size and support-coverage estimation"
+  },
+  {
+    "id": "algorithm-quantum-distribution-orthogonality",
+    "name": "Bravyi–Harrow–Hassidim orthogonality tester",
+    "entry_ids": [
+      "entry-228"
+    ],
+    "description_latex": "Bravyi--Harrow--Hassidim orthogonality tester",
+    "description_text": "Bravyi–Harrow–Hassidim orthogonality tester"
+  },
+  {
+    "id": "algorithm-one-to-one-periodicity-testing",
+    "name": "Quantum one-to-one periodicity tester",
+    "entry_ids": [
+      "entry-229"
+    ],
+    "description_latex": "Quantum one-to-one periodicity tester",
+    "description_text": "Quantum one-to-one periodicity tester"
+  },
+  {
+    "id": "algorithm-correlation-biased-quadratic-learning",
+    "name": "Oliveira correlation-biased quadratic-hypothesis learner",
+    "entry_ids": [
+      "entry-230"
+    ],
+    "description_latex": "Oliveira correlation-biased quadratic-hypothesis learner",
+    "description_text": "Oliveira correlation-biased quadratic-hypothesis learner"
+  },
+  {
+    "id": "algorithm-bcmvv_protocol",
+    "name": "BCMVV test of quantumness",
+    "entry_ids": [
+      "entry-181"
+    ],
+    "description_latex": "BCMVV test of quantumness",
+    "description_text": "BCMVV test of quantumness"
+  },
+  {
+    "id": "algorithm-computational_bell_test",
+    "name": "Computational Bell-test protocol",
+    "entry_ids": [
+      "entry-181"
+    ],
+    "description_latex": "Computational Bell-test protocol",
+    "description_text": "Computational Bell-test protocol"
+  },
+  {
+    "id": "algorithm-mahadev_verification",
+    "name": "Mahadev verification protocol",
+    "entry_ids": [
+      "entry-182"
+    ],
+    "description_latex": "Mahadev verification protocol",
+    "description_text": "Mahadev verification protocol"
+  },
+  {
+    "id": "algorithm-bcmvv_randomness",
+    "name": "BCMVV certified-randomness protocol",
+    "entry_ids": [
+      "entry-183"
+    ],
+    "description_latex": "BCMVV certified-randomness protocol",
+    "description_text": "BCMVV certified-randomness protocol"
+  },
+  {
+    "id": "algorithm-rcs_certified_randomness",
+    "name": "Random-circuit certified-randomness protocol",
+    "entry_ids": [
+      "entry-183"
+    ],
+    "description_latex": "Random-circuit certified-randomness protocol",
+    "description_text": "Random-circuit certified-randomness protocol"
+  },
+  {
+    "id": "algorithm-random_circuit_execution",
+    "name": "Random-circuit execution",
+    "entry_ids": [
+      "entry-184"
+    ],
+    "description_latex": "Random-circuit execution",
+    "description_text": "Random-circuit execution"
+  },
+  {
+    "id": "algorithm-linear_optical_boson_sampling",
+    "name": "Linear-optical boson sampling",
+    "entry_ids": [
+      "entry-185"
+    ],
+    "description_latex": "Linear-optical boson sampling",
+    "description_text": "Linear-optical boson sampling"
+  },
+  {
+    "id": "algorithm-gaussian_boson_sampling",
+    "name": "Gaussian boson sampling",
+    "entry_ids": [
+      "entry-186"
+    ],
+    "description_latex": "Gaussian boson sampling",
+    "description_text": "Gaussian boson sampling"
+  },
+  {
+    "id": "algorithm-iqp_circuit_sampling",
+    "name": "IQP circuit sampling",
+    "entry_ids": [
+      "entry-187"
+    ],
+    "description_latex": "IQP circuit sampling",
+    "description_text": "IQP circuit sampling"
+  },
+  {
+    "id": "algorithm-knill_laflamme_trace",
+    "name": "Knill–Laflamme normalized-trace algorithm",
+    "entry_ids": [
+      "entry-188"
+    ],
+    "description_latex": "Knill--Laflamme normalized-trace algorithm",
+    "description_text": "Knill–Laflamme normalized-trace algorithm"
+  },
+  {
+    "id": "algorithm-bravyi_gosset_koenig",
+    "name": "Bravyi–Gosset–König shallow-circuit algorithm",
+    "entry_ids": [
+      "entry-189"
+    ],
+    "description_latex": "Bravyi--Gosset--K\\\"onig shallow-circuit algorithm",
+    "description_text": "Bravyi–Gosset–König shallow-circuit algorithm"
+  },
+  {
+    "id": "algorithm-quantum_fingerprinting",
+    "name": "Quantum fingerprinting",
+    "entry_ids": [
+      "entry-190"
+    ],
+    "description_latex": "Quantum fingerprinting",
+    "description_text": "Quantum fingerprinting"
+  },
+  {
+    "id": "algorithm-hidden_matching_protocol",
+    "name": "Hidden Matching quantum communication protocol",
+    "entry_ids": [
+      "entry-191"
+    ],
+    "description_latex": "Hidden Matching quantum communication protocol",
+    "description_text": "Hidden Matching quantum communication protocol"
+  },
+  {
+    "id": "algorithm-aaronson_ambainis_disjointness",
+    "name": "Aaronson–Ambainis disjointness protocol",
+    "entry_ids": [
+      "entry-192"
+    ],
+    "description_latex": "Aaronson--Ambainis disjointness protocol",
+    "description_text": "Aaronson–Ambainis disjointness protocol"
+  },
+  {
+    "id": "algorithm-svm_quantum_kernel",
+    "name": "Support-vector classification with quantum kernel estimation",
+    "entry_ids": [
+      "entry-193"
+    ],
+    "description_latex": "Support-vector classification with quantum kernel estimation",
+    "description_text": "Support-vector classification with quantum kernel estimation"
+  },
+  {
+    "id": "algorithm-tulsi_spatial_search",
+    "name": "Tulsi ancilla-controlled spatial search",
+    "entry_ids": [
+      "entry-194"
+    ],
+    "description_latex": "Tulsi ancilla-controlled spatial search",
+    "description_text": "Tulsi ancilla-controlled spatial search"
+  },
+  {
+    "id": "algorithm-aaronson_ambainis_spatial_search",
+    "name": "Aaronson–Ambainis spatial search",
+    "entry_ids": [
+      "entry-194"
+    ],
+    "description_latex": "Aaronson--Ambainis spatial search",
+    "description_text": "Aaronson–Ambainis spatial search"
+  },
+  {
+    "id": "algorithm-ettinger_hoyer_knill",
+    "name": "Ettinger–Høyer–Knill subgroup identification",
+    "entry_ids": [
+      "entry-195"
+    ],
+    "description_latex": "Ettinger--H{\\o}yer--Knill subgroup identification",
+    "description_text": "Ettinger–Høyer–Knill subgroup identification"
+  },
+  {
+    "id": "algorithm-quantum_anonymous_leader_election",
+    "name": "Kobayashi–Matsumoto–Tani leader election",
+    "entry_ids": [
+      "entry-196"
+    ],
+    "description_latex": "Kobayashi--Matsumoto--Tani leader election",
+    "description_text": "Kobayashi–Matsumoto–Tani leader election"
+  },
+  {
+    "id": "algorithm-magic_square_strategy",
+    "name": "Mermin–Peres magic-square strategy",
+    "entry_ids": [
+      "entry-197"
+    ],
+    "description_latex": "Mermin--Peres magic-square strategy",
+    "description_text": "Mermin–Peres magic-square strategy"
   }
 ]

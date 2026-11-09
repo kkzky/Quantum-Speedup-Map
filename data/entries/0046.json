@@ -1,9 +1,10 @@
 {
   "id": "entry-046",
   "number": 46,
-  "ordinal": 46,
+  "slug": "global-minimum-cut",
   "title_latex": "Global minimum cut",
   "title": "Global minimum cut",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Global minimum cut",
@@ -14,50 +15,66 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\widetilde O(n^{3/2}\\sqrt\\tau)$ matrix time and queries, quantum minimum cut.",
-      "headline_text": "$\\widetilde O(n^{3/2}\\sqrt\\tau)$ matrix time and queries, quantum minimum cut.",
       "details_latex": "Here $\\tau$ is the ratio of the largest to smallest positive weight; reading the matrix caps the bound at $O(n^2)$. In the adjacency-array model, the query bound is $\\widetilde O(\\sqrt{mn\\tau})$ and the time bound is $\\widetilde O(\\sqrt{mn\\tau}+n^{3/2})$. The algorithm returns the minimum-cut weight and shores. Approximate cuts can instead use quantum cut sparsification.",
+      "headline_text": "$\\widetilde O(n^{3/2}\\sqrt\\tau)$ matrix time and queries, quantum minimum cut.",
       "details_text": "Here $\\tau$ is the ratio of the largest to smallest positive weight; reading the matrix caps the bound at $O(n^2)$. In the adjacency-array model, the query bound is $\\widetilde O(\\sqrt{mn\\tau})$ and the time bound is $\\widetilde O(\\sqrt{mn\\tau}+n^{3/2})$. The algorithm returns the minimum-cut weight and shores. Approximate cuts can instead use quantum cut sparsification."
     },
     "classical": {
       "headline_latex": "$\\widetilde O(m)$ expected time, randomized classical minimum cut; $\\Theta(n^2)$ matrix queries.",
-      "headline_text": "$\\widetilde O(m)$ expected time, randomized classical minimum cut; $\\Theta(n^2)$ matrix queries.",
       "details_latex": "The explicit-input comparison includes randomized contraction and near-linear cut algorithms. The matrix quantum lower bound is $\\Omega(n^{3/2}\\sqrt\\tau)$ in the nontrivial range $1\\le\\tau\\le n$, up to the precision and logarithmic conventions of the theorem.",
+      "headline_text": "$\\widetilde O(m)$ expected time, randomized classical minimum cut; $\\Theta(n^2)$ matrix queries.",
       "details_text": "The explicit-input comparison includes randomized contraction and near-linear cut algorithms. The matrix quantum lower bound is $\\Omega(n^{3/2}\\sqrt\\tau)$ in the nontrivial range $1\\le\\tau\\le n$, up to the precision and logarithmic conventions of the theorem."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial oracle improvement; for bounded weight ratio and dense graphs it is $n^2\\to\\widetilde O(n^{3/2})$.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial oracle improvement; for bounded weight ratio and dense graphs it is $n^2\\to\\widetilde O(n^{3/2})$."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous matrix-query separation with nearly matching quantum bounds.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous matrix-query separation with nearly matching quantum bounds."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Fault-tolerant search and sparsification require logarithmic vertex registers, weight registers and coherent graph-access workspace. A classical sparse graph and contracted partitions are stored during the computation.",
+      "category_id": "hardware-polynomial",
       "description_text": "Fault-tolerant search and sparsification require logarithmic vertex registers, weight registers and coherent graph-access workspace. A classical sparse graph and contracted partitions are stored during the computation."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Apers--Lee quantum minimum cut",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "46.1",
       "content_latex": "\\href{https://arxiv.org/pdf/2011.09823}{Apers and Lee, \\emph{Quantum Complexity of Minimum Cut} (2021)}. Theorems 3 and 5 for the matrix and adjacency-array algorithms; the named routines FindMinStar, Cut-Sparsifier, LearnCutAtoms and LearnContraction.",
       "content_text": "Apers and Lee, Quantum Complexity of Minimum Cut (2021). Theorems 3 and 5 for the matrix and adjacency-array algorithms; the named routines FindMinStar, Cut-Sparsifier, LearnCutAtoms and LearnContraction.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2011.09823",
+          "title": "Quantum Complexity of Minimum Cut",
+          "label_latex": "Apers and Lee, \\emph{Quantum Complexity of Minimum Cut} (2021)",
+          "locator_latex": "Theorems 3 and 5 for the matrix and adjacency-array algorithms; the named routines FindMinStar, Cut-Sparsifier, LearnCutAtoms and LearnContraction."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-046-citation-001"
+        "entry-046-citation-00126"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-046-citation-001"
+  "algorithm_ids": [
+    "quantum-mincut"
   ],
-  "source_latex": "\\entrytitle{46}{Global minimum cut}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{45}\n\\begin{problem}[Global minimum cut]\nIn a weighted undirected graph, output a nonempty proper subset $S\\subset V$ minimizing $w(\\delta(S))=\\sum_{u\\in S,v\\notin S}w_{uv}$. This identifies the cheapest edge failure that disconnects a network.\nThe quantum comparison counts weighted adjacency queries and running time; classical bounds refer to explicit weighted graphs.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{3/2}\\sqrt\\tau)$ matrix time and queries, quantum minimum cut.}\nHere $\\tau$ is the ratio of the largest to smallest positive weight; reading the matrix caps the bound at $O(n^2)$. In the adjacency-array model, the query bound is $\\widetilde O(\\sqrt{mn\\tau})$ and the time bound is $\\widetilde O(\\sqrt{mn\\tau}+n^{3/2})$. The algorithm returns the minimum-cut weight and shores. Approximate cuts can instead use quantum cut sparsification.\n\n\\complexity{Classical}{$\\widetilde O(m)$ expected time, randomized classical minimum cut; $\\Theta(n^2)$ matrix queries.}\nThe explicit-input comparison includes randomized contraction and near-linear cut algorithms. The matrix quantum lower bound is $\\Omega(n^{3/2}\\sqrt\\tau)$ in the nontrivial range $1\\le\\tau\\le n$, up to the precision and logarithmic conventions of the theorem.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial oracle improvement; for bounded weight ratio and dense graphs it is $n^2\\to\\widetilde O(n^{3/2})$.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous matrix-query separation with nearly matching quantum bounds.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant search and sparsification require logarithmic vertex registers, weight registers and coherent graph-access workspace. A classical sparse graph and contracted partitions are stored during the computation.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{46}\n\\item \\href{https://arxiv.org/pdf/2011.09823}{Apers and Lee, \\emph{Quantum Complexity of Minimum Cut} (2021)}. Theorems 3 and 5 for the matrix and adjacency-array algorithms; the named routines FindMinStar, Cut-Sparsifier, LearnCutAtoms and LearnContraction.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{46}{Global minimum cut}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{45}\n\\begin{problem}[Global minimum cut]\nIn a weighted undirected graph, output a nonempty proper subset $S\\subset V$ minimizing $w(\\delta(S))=\\sum_{u\\in S,v\\notin S}w_{uv}$. This identifies the cheapest edge failure that disconnects a network.\nThe quantum comparison counts weighted adjacency queries and running time; classical bounds refer to explicit weighted graphs.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{3/2}\\sqrt\\tau)$ matrix time and queries, quantum minimum cut.}\nHere $\\tau$ is the ratio of the largest to smallest positive weight; reading the matrix caps the bound at $O(n^2)$. In the adjacency-array model, the query bound is $\\widetilde O(\\sqrt{mn\\tau})$ and the time bound is $\\widetilde O(\\sqrt{mn\\tau}+n^{3/2})$. The algorithm returns the minimum-cut weight and shores. Approximate cuts can instead use quantum cut sparsification.\n\n\\complexity{Classical}{$\\widetilde O(m)$ expected time, randomized classical minimum cut; $\\Theta(n^2)$ matrix queries.}\nThe explicit-input comparison includes randomized contraction and near-linear cut algorithms. The matrix quantum lower bound is $\\Omega(n^{3/2}\\sqrt\\tau)$ in the nontrivial range $1\\le\\tau\\le n$, up to the precision and logarithmic conventions of the theorem.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial oracle improvement; for bounded weight ratio and dense graphs it is $n^2\\to\\widetilde O(n^{3/2})$.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous matrix-query separation with nearly matching quantum bounds.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant search and sparsification require logarithmic vertex registers, weight registers and coherent graph-access workspace. A classical sparse graph and contracted partitions are stored during the computation.\n\n\\subhead{Algorithm: Apers--Lee quantum minimum cut}\n\\begin{algorithmindex}{46}\n\\item \\href{https://arxiv.org/pdf/2011.09823}{Apers and Lee, \\emph{Quantum Complexity of Minimum Cut} (2021)}. Theorems 3 and 5 for the matrix and adjacency-array algorithms; the named routines FindMinStar, Cut-Sparsifier, LearnCutAtoms and LearnContraction.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 63,
+  "citation_ids": [
+    "entry-046-citation-00126"
+  ]
 }

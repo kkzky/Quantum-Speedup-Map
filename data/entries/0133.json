@@ -1,0 +1,103 @@
+{
+  "id": "entry-133",
+  "number": 133,
+  "slug": "prior-g32",
+  "title": "Euclidean closest pair",
+  "title_latex": "Euclidean closest pair",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g32",
+  "inventory_ids": [
+    "G32"
+  ],
+  "problem": {
+    "name": "Euclidean closest pair",
+    "name_latex": "Euclidean closest pair",
+    "statement_latex": "Given $n$ points in $\\mathbb Q^d$ with finite word-sized coordinates and fixed dimension $d$, output two distinct points of minimum Euclidean distance. Complexity counts coordinate queries and RAM operations.",
+    "statement_text": "Given $n$ points in $\\mathbb Q^d$ with finite word-sized coordinates and fixed dimension $d$, output two distinct points of minimum Euclidean distance. Complexity counts coordinate queries and RAM operations."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{2/3})$ time by the Aaronson--Chia--Lin--Wang--Zhang quantum walk with a spatial data structure.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n^{2/3})$ time by the Aaronson–Chia–Lin–Wang–Zhang quantum walk with a spatial data structure.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n)$ expected time on the randomized word-RAM with floor and hashing, or $O(n\\log n)$ in the algebraic decision-tree model.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ expected time on the randomized word-RAM with floor and hashing, or $O(n\\log n)$ in the algebraic decision-tree model.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "geometric-quantum-walk"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "geometric-quantum-walk",
+      "label_latex": "Aaronson--Chia--Lin--Wang--Zhang geometric quantum walk",
+      "problem_numbers": [
+        134
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1911.01973}{\\emph{On the Quantum Complexity of Closest Pair and Related Problems}}. Theorem1.3; geometric quantum walk",
+      "content_text": "On the Quantum Complexity of Closest Pair and Related Problems. Theorem1.3; geometric quantum walk",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1911.01973",
+          "title": "On the Quantum Complexity of Closest Pair and Related Problems",
+          "label_latex": "\\emph{On the Quantum Complexity of Closest Pair and Related Problems}",
+          "locator_latex": "Theorem1.3; geometric quantum walk"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-133-citation-00207"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Aaronson--Chia--Lin--Wang--Zhang geometric quantum walk",
+  "plot": {
+    "quantum": "\\widetilde O(n^{2/3})",
+    "classical": "\\Theta(n)",
+    "parameter": "point count n; fixed dimension d",
+    "model": "randomized word-RAM with coordinate access",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(n^{1/3})",
+    "quantum_exponent": 0.6666666666666666,
+    "classical_exponent": 1
+  },
+  "ordinal": 103,
+  "citation_ids": [
+    "entry-133-citation-00207"
+  ]
+}

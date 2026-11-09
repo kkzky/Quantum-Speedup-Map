@@ -1,0 +1,101 @@
+{
+  "id": "entry-180",
+  "number": 180,
+  "slug": "yz-codeword-hash-search",
+  "title": "Codeword search with random hash constraints",
+  "title_latex": "Codeword search with random hash constraints",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "yz_codeword_hash_search",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Codeword search with random hash constraints",
+    "name_latex": "Codeword search with random hash constraints",
+    "statement_latex": "For security parameter $\\lambda$, fix the folded Reed--Solomon code $C_\\lambda\\subseteq\\Sigma^n$ from Lemma 4.2, where $n=\\Theta(\\lambda)$ and $|\\Sigma|=2^{\\lambda^{\\Theta(1)}}$. Given oracle access to $H:\\Sigma\\to\\{0,1\\}^n$, output $c\\in C_\\lambda$ satisfying $H_i(c_i)=1$ for every coordinate $i$. This NP search relation has a publicly checkable witness. Complexity uses random-oracle queries and gates; $H_i$ denotes output bit $i$.",
+    "statement_text": "For security parameter $\\lambda$, fix the folded Reed–Solomon code $C_\\lambda\\subseteq\\Sigma^n$ from Lemma 4.2, where $n=\\Theta(\\lambda)$ and $|\\Sigma|=2^{\\lambda^{\\Theta(1)}}$. Given oracle access to $H:\\Sigma\\to\\{0,1\\}^n$, output $c\\in C_\\lambda$ satisfying $H_i(c_i)=1$ for every coordinate $i$. This NP search relation has a publicly checkable witness. Complexity uses random-oracle queries and gates; $H_i$ denotes output bit $i$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Subexponential-or-exponential classical oracle complexity to polynomial quantum queries and gates.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Subexponential-or-exponential classical oracle complexity to polynomial quantum queries and gates."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The random-oracle query separation is unconditional. Concrete-hash implementations use a separate hardness assumption.",
+      "category_id": "evidence-proved",
+      "description_text": "The random-oracle query separation is unconditional. Concrete-hash implementations use a separate hardness assumption."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "$O(n\\log|\\Sigma|)$ data qubits plus polynomial reversible-decoding and hash workspace; fault-tolerant operation is the relevant scale.",
+      "category_id": "hardware-polynomial",
+      "description_text": "$O(n\\log|\\Sigma|)$ data qubits plus polynomial reversible-decoding and hash workspace; fault-tolerant operation is the relevant scale."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\lambda)$ gates and at most $n\\lambda$ quantum queries, by Yamakawa--Zhandry, with success $1-\\operatorname{negl}(\\lambda)$ over random $H$. Prepare the code superposition and coordinate states supported on $H_i^{-1}(1)$, Fourier transform both, coherently add and decode the dual code, then inverse transform. Verification uses $n$ classical hash queries and polynomial code-membership work. A salted two-message construction handles nonuniform provers.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\lambda)$ gates and at most $n\\lambda$ quantum queries, by Yamakawa–Zhandry, with success $1-\\operatorname{negl}(\\lambda)$ over random $H$. Prepare the code superposition and coordinate states supported on $H_i^{-1}(1)$, Fourier transform both, coherently add and decode the dual code, then inverse transform. Verification uses $n$ classical hash queries and polynomial code-membership work. A salted two-message construction handles nonuniform provers.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "For fixed $0<c<c'<1$ in the code construction, every computationally unbounded classical algorithm using at most $2^{\\lambda^c}$ oracle queries succeeds with probability at most $2^{-\\Omega(\\lambda)}$ (Lemma 6.9). Random codeword trials provide an $O(n2^n)$-query exponential comparator on typical random oracles. The keyless bound concerns uniform algorithms; the keyed construction treats oracle-dependent advice. Substituting an explicit cryptographic hash makes hardness an assumption about that family.",
+      "details_latex": "",
+      "headline_text": "For fixed $0<c<c'<1$ in the code construction, every computationally unbounded classical algorithm using at most $2^{\\lambda^c}$ oracle queries succeeds with probability at most $2^{-\\Omega(\\lambda)}$ (Lemma 6.9). Random codeword trials provide an $O(n2^n)$-query exponential comparator on typical random oracles. The keyless bound concerns uniform algorithms; the keyed construction treats oracle-dependent advice. Substituting an explicit cryptographic hash makes hardness an assumption about that family.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "dqi"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "dqi",
+      "label_latex": "Decoded Quantum Interferometry",
+      "problem_numbers": [
+        60
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2204.02063v3}{\\emph{Verifiable Quantum Advantage without Structure}}. Lemma 4.2; Section 6, Theorem 6.1 and Lemmas 6.3, 6.9; Figure 1; Section 7",
+      "content_text": "Verifiable Quantum Advantage without Structure. Lemma 4.2; Section 6, Theorem 6.1 and Lemmas 6.3, 6.9; Figure 1; Section 7",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2204.02063v3",
+          "title": "Verifiable Quantum Advantage without Structure",
+          "label_latex": "\\emph{Verifiable Quantum Advantage without Structure}",
+          "locator_latex": "Lemma 4.2; Section 6, Theorem 6.1 and Lemmas 6.3, 6.9; Figure 1; Section 7"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-180-citation-00335"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Yamakawa--Zhandry Fourier-decoding algorithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\lambda)",
+    "classical": "\\Omega(2^{\\lambda^c})",
+    "parameter": "$\\lambda$ is the security parameter; $c\\in(0,1)$ is fixed by the code family.",
+    "model": "Random-oracle queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "subexponential",
+    "quantum_exponent": null,
+    "classical_exponent": null,
+    "gain": "2^{\\lambda^c}/\\operatorname{poly}(\\lambda)"
+  },
+  "ordinal": 171,
+  "citation_ids": [
+    "entry-180-citation-00335"
+  ]
+}

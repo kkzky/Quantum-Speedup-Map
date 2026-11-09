@@ -1,0 +1,112 @@
+{
+  "id": "entry-154",
+  "number": 154,
+  "slug": "prior-a10",
+  "title": "Semidirect discrete logarithm",
+  "title_latex": "Semidirect discrete logarithm",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a10",
+  "inventory_ids": [
+    "A10"
+  ],
+  "problem": {
+    "name": "Semidirect discrete logarithm",
+    "name_latex": "Semidirect discrete logarithm",
+    "statement_latex": "Given a finite group $G$, an efficiently computable automorphism $\\phi$, and $g,h\\in G$, find $a$ such that $(g,\\phi)^a=(h,\\phi^a)$ in $G\\rtimes\\langle\\phi\\rangle$. The theorem covers the solvable and matrix-group families specified by Imran--Ivanyos.",
+    "statement_text": "Given a finite group $G$, an efficiently computable automorphism $\\phi$, and $g,h\\in G$, find $a$ such that $(g,\\phi)^a=(h,\\phi^a)$ in $G\\rtimes\\langle\\phi\\rangle$. The theorem covers the solvable and matrix-group families specified by Imran–Ivanyos."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log|G|)$ quantum time for the covered platform families, through reductions to group-action orbit and discrete-logarithm problems.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log|G|)$ quantum time for the covered platform families, through reductions to group-action orbit and discrete-logarithm problems.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(\\sqrt r)$ group-action operations and storage by semidirect baby-step--giant-step, where $r$ is the orbit period; platform-specific reductions to ordinary discrete logarithms can be faster.",
+      "details_latex": "",
+      "headline_text": "$O(\\sqrt r)$ group-action operations and storage by semidirect baby-step–giant-step, where $r$ is the orbit period; platform-specific reductions to ordinary discrete logarithms can be faster.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "semidirect-discrete-logarithm",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        146,
+        147,
+        149,
+        150,
+        152,
+        229,
+        193
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2312.14028}{\\emph{Efficient quantum algorithms for some instances of the semidirect discrete logarithm problem}}. Main theorems; extensions https://eprint.iacr.org/2024/905.pdf; current classical analysis https://arxiv.org/abs/2508.05048",
+      "content_text": "Efficient quantum algorithms for some instances of the semidirect discrete logarithm problem. Main theorems; extensions https://eprint.iacr.org/2024/905.pdf; current classical analysis https://arxiv.org/abs/2508.05048",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2312.14028",
+          "title": "Efficient quantum algorithms for some instances of the semidirect discrete logarithm problem",
+          "label_latex": "\\emph{Efficient quantum algorithms for some instances of the semidirect discrete logarithm problem}",
+          "locator_latex": "Main theorems; extensions https://eprint.iacr.org/2024/905.pdf; current classical analysis https://arxiv.org/abs/2508.05048"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-154-citation-00316"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Imran--Ivanyos semidirect discrete logarithm; Shor order finding and discrete logarithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log|G|)",
+    "classical": "O(\\sqrt r)",
+    "parameter": "group size and orbit period r",
+    "model": "group-action operations in the covered platforms",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial when r is exponential in the encoding length"
+  },
+  "ordinal": 154,
+  "citation_ids": [
+    "entry-154-citation-00316"
+  ]
+}

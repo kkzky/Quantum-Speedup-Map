@@ -1,0 +1,122 @@
+{
+  "id": "entry-221",
+  "number": 221,
+  "slug": "prior-q36",
+  "title": "ℓ_1-closeness testing of finite distributions",
+  "title_latex": "$\\ell_1$-closeness testing of finite distributions",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q36",
+  "inventory_ids": [
+    "Q36"
+  ],
+  "problem": {
+    "name": "ℓ_1-closeness testing of finite distributions",
+    "name_latex": "$\\ell_1$-closeness testing of finite distributions",
+    "statement_latex": "Given coherent purified sample-preparation oracles for unknown $p,q$ on $[N]$ and their inverses, distinguish $p=q$ from $\\|p-q\\|_1\\ge\\varepsilon$. Both distributions have finite support.",
+    "statement_text": "Given coherent purified sample-preparation oracles for unknown $p,q$ on $[N]$ and their inverses, distinguish $p=q$ from $\\|p-q\\|_1\\ge\\varepsilon$. Both distributions have finite support."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\sqrt N/\\varepsilon)$ queries by Luo--Wang--Li, refining the purified-access distribution testers of Gilyen--Li.",
+      "details_latex": "",
+      "headline_text": "$O(\\sqrt N/\\varepsilon)$ queries by Luo–Wang–Li, refining the purified-access distribution testers of Gilyen–Li.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(\\max\\{N^{2/3}/\\varepsilon^{4/3},\\sqrt N/\\varepsilon^2\\})$ independent samples by optimal classical two-sample closeness testing.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\max\\{N^{2/3}/\\varepsilon^{4/3},\\sqrt N/\\varepsilon^2\\})$ independent samples by optimal classical two-sample closeness testing.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "purified-distribution-testing",
+    "amplitude-estimation"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "purified-distribution-testing",
+      "label_latex": "Gilyen--Li and Luo--Wang--Li distribution testing",
+      "problem_numbers": [
+        222,
+        223,
+        224
+      ]
+    },
+    {
+      "algorithm_id": "amplitude-estimation",
+      "label_latex": "Quantum amplitude estimation and counting",
+      "problem_numbers": [
+        6,
+        54,
+        90,
+        99,
+        112,
+        120,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2304.12916}{\\emph{Succinct quantum testers for closeness and k-wise uniformity of probability distributions}}. L1-closeness theorem; predecessor arXiv:1902.00814 Corollary17.",
+      "content_text": "Succinct quantum testers for closeness and k-wise uniformity of probability distributions. L1-closeness theorem; predecessor arXiv:1902.00814 Corollary17.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2304.12916",
+          "title": "Succinct quantum testers for closeness and k-wise uniformity of probability distributions",
+          "label_latex": "\\emph{Succinct quantum testers for closeness and k-wise uniformity of probability distributions}",
+          "locator_latex": "L1-closeness theorem; predecessor arXiv:1902.00814 Corollary17."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-221-citation-00089"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Gilyen--Li and Luo--Wang--Li distribution testing; Quantum amplitude estimation and counting",
+  "plot": {
+    "quantum": "O(\\sqrt N/\\varepsilon)",
+    "classical": "\\Theta(\\max\\{N^{2/3}/\\varepsilon^{4/3},\\sqrt N/\\varepsilon^2\\})",
+    "parameter": "domain size N and distance epsilon",
+    "model": "purified preparation queries versus independent samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Polynomial in domain size and inverse error"
+  },
+  "ordinal": 41,
+  "citation_ids": [
+    "entry-221-citation-00089"
+  ]
+}

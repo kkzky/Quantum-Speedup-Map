@@ -1,9 +1,10 @@
 {
   "id": "entry-064",
   "number": 64,
-  "ordinal": 65,
+  "slug": "order-finding-in-a-black-box-cyclic-group",
   "title_latex": "Order finding in a black-box cyclic group",
   "title": "Order finding in a black-box cyclic group",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Order finding in a black-box cyclic group",
@@ -14,60 +15,110 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\operatorname{poly}(\\log R)$ group operations, Shor order finding.",
-      "headline_text": "$\\operatorname{poly}(\\log R)$ group operations, Shor order finding.",
       "details_latex": "The auxiliary gate cost is polynomial in $\\log R$ and the group-element encoding length. An $O(\\log R)$-qubit Fourier register supplies the required precision. Classical continued-fraction and least-common-multiple computations are polynomial in these parameters. For modular multiplication, the gate bounds specialize to entry 61.",
+      "headline_text": "$\\operatorname{poly}(\\log R)$ group operations, Shor order finding.",
       "details_text": "The auxiliary gate cost is polynomial in $\\log R$ and the group-element encoding length. An $O(\\log R)$-qubit Fourier register supplies the required precision. Classical continued-fraction and least-common-multiple computations are polynomial in these parameters. For modular multiplication, the gate bounds specialize to entry 61."
     },
     "classical": {
       "headline_latex": "$\\widetilde O(\\sqrt R)$ group operations, baby-step--giant-step and collision methods.",
-      "headline_text": "$\\widetilde O(\\sqrt R)$ group operations, baby-step–giant-step and collision methods.",
       "details_latex": "Baby-step--giant-step uses $\\widetilde O(\\sqrt R)$ storage; collision methods supply low-memory alternatives in their applicable order-search settings. A tighter interval or a known factored multiple of the order can improve the bound. In explicit arithmetic groups, factorization and index calculus give additional instance-specific comparators. The displayed comparison supplies only the group-operation access and an order bound.",
+      "headline_text": "$\\widetilde O(\\sqrt R)$ group operations, baby-step–giant-step and collision methods.",
       "details_text": "Baby-step–giant-step uses $\\widetilde O(\\sqrt R)$ storage; collision methods supply low-memory alternatives in their applicable order-search settings. A tighter interval or a known factored multiple of the order can improve the bound. In explicit arithmetic groups, factorization and index calculus give additional instance-specific comparators. The displayed comparison supplies only the group-operation access and an order bound."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-exponential-subexponential-to-polynomial",
       "color_key": "strengthPolynomialTime",
       "description_latex": "Exponential to polynomial in $\\log R$ relative to generic order-search algorithms. Fourier sampling extracts global periodic information from the group operation.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
       "description_text": "Exponential to polynomial in $\\log R$ relative to generic order-search algorithms. Fourier sampling extracts global periodic information from the group operation."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "Partial evidence for a separation in this general formulation; the input promises and access model determine applicable lower bounds. The concrete cryptographic consequences occur in factoring and discrete logarithms.",
+      "category_id": "evidence-partial",
       "description_text": "Partial evidence for a separation in this general formulation; the input promises and access model determine applicable lower bounds. The concrete cryptographic consequences occur in factoring and discrete logarithms."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "The implementation needs $O(\\log R)$ control qubits plus group-element and reversible-arithmetic workspace. Explicit cryptographic groups lead to long fault-tolerant multiplication circuits; the number of logical qubits is polynomial in the input length.",
+      "category_id": "hardware-polynomial",
       "description_text": "The implementation needs $O(\\log R)$ control qubits plus group-element and reversible-arithmetic workspace. Explicit cryptographic groups lead to long fault-tolerant multiplication circuits; the number of logical qubits is polynomial in the input length."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Shor order finding; Watrous solvable-group order algorithm",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "64.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9508027}{Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)}. Section 5: the order-finding computation and continued-fraction reconstruction.",
       "content_text": "Shor, Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer (1997). Section 5: the order-finding computation and continued-fraction reconstruction.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/9508027",
+          "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+          "label_latex": "Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)",
+          "locator_latex": "Section 5: the order-finding computation and continued-fraction reconstruction."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-064-citation-001"
+        "entry-064-citation-00237"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "64.2",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0011023}{Watrous, \\emph{Quantum Algorithms for Solvable Groups} (2001)}. Theorem 1: quantum computation of group order in the black-box group model; the cyclic case provides the order-finding setting.",
       "content_text": "Watrous, Quantum Algorithms for Solvable Groups (2001). Theorem 1: quantum computation of group order in the black-box group model; the cyclic case provides the order-finding setting.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0011023",
+          "title": "Quantum Algorithms for Solvable Groups",
+          "label_latex": "Watrous, \\emph{Quantum Algorithms for Solvable Groups} (2001)",
+          "locator_latex": "Theorem 1: quantum computation of group order in the black-box group model; the cyclic case provides the order-finding setting."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-064-citation-002"
+        "entry-064-citation-00238"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-064-citation-001",
-    "entry-064-citation-002"
+  "algorithm_ids": [
+    "shor-order",
+    "watrous-group-order"
   ],
-  "source_latex": "\\entrytitle{64}{Order finding in a black-box cyclic group}{strengthPolynomialTime}{evidencePartial}{hardwarePolynomial}\n\\setcounter{problem}{63}\n\\begin{problem}[Order finding in a black-box cyclic group]\nGiven an element $g$ in a uniquely encoded finite group and an upper bound $R$ on its order, output $r=\\min\\{t>0:g^t=1\\}$. Multiplication and inversion are supplied as reversible group-operation oracles. Order finding is the algebraic primitive connecting Fourier sampling to factorization and discrete logarithms. Complexity is measured in group-oracle operations together with quantum gates and classical bit operations polynomial in the encoding length.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\operatorname{poly}(\\log R)$ group operations, Shor order finding.}\nThe auxiliary gate cost is polynomial in $\\log R$ and the group-element encoding length. An $O(\\log R)$-qubit Fourier register supplies the required precision. Classical continued-fraction and least-common-multiple computations are polynomial in these parameters. For modular multiplication, the gate bounds specialize to entry 61.\n\n\\complexity{Classical}{$\\widetilde O(\\sqrt R)$ group operations, baby-step--giant-step and collision methods.}\nBaby-step--giant-step uses $\\widetilde O(\\sqrt R)$ storage; collision methods supply low-memory alternatives in their applicable order-search settings. A tighter interval or a known factored multiple of the order can improve the bound. In explicit arithmetic groups, factorization and index calculus give additional instance-specific comparators. The displayed comparison supplies only the group-operation access and an order bound.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Exponential to polynomial in $\\log R$ relative to generic order-search algorithms. Fourier sampling extracts global periodic information from the group operation.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence for a separation in this general formulation; the input promises and access model determine applicable lower bounds. The concrete cryptographic consequences occur in factoring and discrete logarithms.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The implementation needs $O(\\log R)$ control qubits plus group-element and reversible-arithmetic workspace. Explicit cryptographic groups lead to long fault-tolerant multiplication circuits; the number of logical qubits is polynomial in the input length.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{64}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9508027}{Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)}. Section 5: the order-finding computation and continued-fraction reconstruction.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0011023}{Watrous, \\emph{Quantum Algorithms for Solvable Groups} (2001)}. Theorem 1: quantum computation of group order in the black-box group model; the cyclic case provides the order-finding setting.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        146,
+        147,
+        149,
+        150,
+        152,
+        154,
+        229,
+        193
+      ]
+    },
+    {
+      "algorithm_id": "watrous-group-order",
+      "label_latex": "Watrous solvable-group order algorithm",
+      "problem_numbers": [
+        167
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{64}{Order finding in a black-box cyclic group}{strengthPolynomialTime}{evidencePartial}{hardwarePolynomial}\n\\setcounter{problem}{63}\n\\begin{problem}[Order finding in a black-box cyclic group]\nGiven an element $g$ in a uniquely encoded finite group and an upper bound $R$ on its order, output $r=\\min\\{t>0:g^t=1\\}$. Multiplication and inversion are supplied as reversible group-operation oracles. Order finding is the algebraic primitive connecting Fourier sampling to factorization and discrete logarithms. Complexity is measured in group-oracle operations together with quantum gates and classical bit operations polynomial in the encoding length.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\operatorname{poly}(\\log R)$ group operations, Shor order finding.}\nThe auxiliary gate cost is polynomial in $\\log R$ and the group-element encoding length. An $O(\\log R)$-qubit Fourier register supplies the required precision. Classical continued-fraction and least-common-multiple computations are polynomial in these parameters. For modular multiplication, the gate bounds specialize to entry 61.\n\n\\complexity{Classical}{$\\widetilde O(\\sqrt R)$ group operations, baby-step--giant-step and collision methods.}\nBaby-step--giant-step uses $\\widetilde O(\\sqrt R)$ storage; collision methods supply low-memory alternatives in their applicable order-search settings. A tighter interval or a known factored multiple of the order can improve the bound. In explicit arithmetic groups, factorization and index calculus give additional instance-specific comparators. The displayed comparison supplies only the group-operation access and an order bound.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Exponential to polynomial in $\\log R$ relative to generic order-search algorithms. Fourier sampling extracts global periodic information from the group operation.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence for a separation in this general formulation; the input promises and access model determine applicable lower bounds. The concrete cryptographic consequences occur in factoring and discrete logarithms.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The implementation needs $O(\\log R)$ control qubits plus group-element and reversible-arithmetic workspace. Explicit cryptographic groups lead to long fault-tolerant multiplication circuits; the number of logical qubits is polynomial in the input length.\n\n\n\\subhead{Algorithm: Shor order finding; Watrous solvable-group order algorithm}\n\\begin{algorithmindex}{64}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9508027}{Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)}. Section 5: the order-finding computation and continued-fraction reconstruction.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0011023}{Watrous, \\emph{Quantum Algorithms for Solvable Groups} (2001)}. Theorem 1: quantum computation of group order in the black-box group model; the cyclic case provides the order-finding setting.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{shor-order}{Shor order finding and discrete logarithm}: \\problemref{61}, \\problemref{62}, \\problemref{63}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 121,
+  "citation_ids": [
+    "entry-064-citation-00237",
+    "entry-064-citation-00238"
+  ]
 }

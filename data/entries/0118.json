@@ -1,0 +1,130 @@
+{
+  "id": "entry-118",
+  "number": 118,
+  "slug": "prior-g12",
+  "title": "Longest Lyndon substring",
+  "title_latex": "Longest Lyndon substring",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g12",
+  "inventory_ids": [
+    "G12"
+  ],
+  "problem": {
+    "name": "Longest Lyndon substring",
+    "name_latex": "Longest Lyndon substring",
+    "statement_latex": "Given $S\\in\\Sigma^n$ over an ordered alphabet, find its longest substring that is strictly lexicographically smaller than every nontrivial cyclic rotation of itself. Complexity uses indexed characters.",
+    "statement_text": "Given $S\\in\\Sigma^n$ over an ordered alphabet, find its longest substring that is strictly lexicographically smaller than every nontrivial cyclic rotation of itself. Complexity uses indexed characters."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$n^{1/2+o(1)}$ time by Akmal--Jin's reduction to quantum minimum-rotation procedures.",
+      "details_latex": "",
+      "headline_text": "$n^{1/2+o(1)}$ time by Akmal–Jin's reduction to quantum minimum-rotation procedures.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n)$ time using Lyndon factorization and classical string preprocessing; $\\Omega(n)$ worst-case queries.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ time using Lyndon factorization and classical string preprocessing; $\\Omega(n)$ worst-case queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "akmal-jin-string-selection",
+    "minimum-finding"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "akmal-jin-string-selection",
+      "label_latex": "Akmal--Jin quantum string selection",
+      "problem_numbers": [
+        116,
+        117
+      ]
+    },
+    {
+      "algorithm_id": "minimum-finding",
+      "label_latex": "D\\\"urr--H{\\o}yer minimum finding",
+      "problem_numbers": [
+        2,
+        7,
+        11,
+        14,
+        15,
+        16,
+        17,
+        28,
+        29,
+        31,
+        34,
+        53,
+        59,
+        79,
+        91,
+        116,
+        131,
+        132,
+        134
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2110.09696}{\\emph{Near-Optimal Quantum Algorithms for String Problems}}. Theorem4.9",
+      "content_text": "Near-Optimal Quantum Algorithms for String Problems. Theorem4.9",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2110.09696",
+          "title": "Near-Optimal Quantum Algorithms for String Problems",
+          "label_latex": "\\emph{Near-Optimal Quantum Algorithms for String Problems}",
+          "locator_latex": "Theorem4.9"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-118-citation-00191"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Akmal--Jin quantum string selection; D\\\"urr--H{\\o}yer minimum finding",
+  "plot": {
+    "quantum": "n^{1/2+o(1)}",
+    "classical": "\\Theta(n)",
+    "parameter": "string length n",
+    "model": "random-access time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "n^{1/2-o(1)}",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 88,
+  "citation_ids": [
+    "entry-118-citation-00191"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "entry-217",
+  "number": 217,
+  "slug": "prior-q30",
+  "title": "Learning a graph with edge-existence queries",
+  "title_latex": "Learning a graph with edge-existence queries",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q30",
+  "inventory_ids": [
+    "Q30"
+  ],
+  "problem": {
+    "name": "Learning a graph with edge-existence queries",
+    "name_latex": "Learning a graph with edge-existence queries",
+    "statement_latex": "An unknown graph $G$ on a known vertex set $[n]$ is accessed by queries $S\\subseteq[n]\\mapsto[E(G[S])\\ne\\varnothing]$. Recover its edges, under the matching, cycle, or star promises analyzed by Montanaro--Shao.",
+    "statement_text": "An unknown graph $G$ on a known vertex set $[n]$ is accessed by queries $S\\subseteq[n]\\mapsto[E(G[S])\\ne\\varnothing]$. Recover its edges, under the matching, cycle, or star promises analyzed by Montanaro–Shao."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(m^{3/4}\\sqrt{\\log n\\log m}+\\sqrt m\\log n)$ queries for the stated matching/cycle classes; stars admit $\\Theta(\\sqrt m)$ in the corresponding promise regime.",
+      "details_latex": "",
+      "headline_text": "$O(m^{3/4}\\sqrt{\\log n\\log m}+\\sqrt m\\log n)$ queries for the stated matching/cycle classes; stars admit $\\Theta(\\sqrt m)$ in the corresponding promise regime.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(m\\log(n/m))$ binary queries for the sparse matching families by counting possible graphs, with classical adaptive group-testing reconstruction within logarithmic factors.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(m\\log(n/m))$ binary queries for the sparse matching families by counting possible graphs, with classical adaptive group-testing reconstruction within logarithmic factors.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-hidden-graph-learning"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-hidden-graph-learning",
+      "label_latex": "Montanaro--Shao hidden-graph learning",
+      "problem_numbers": [
+        218
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2011.08611}{\\emph{Quantum algorithms for learning a hidden graph and beyond}}. Table1 and OR-query section.",
+      "content_text": "Quantum algorithms for learning a hidden graph and beyond. Table1 and OR-query section.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2011.08611",
+          "title": "Quantum algorithms for learning a hidden graph and beyond",
+          "label_latex": "\\emph{Quantum algorithms for learning a hidden graph and beyond}",
+          "locator_latex": "Table1 and OR-query section."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-217-citation-00222"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Montanaro--Shao hidden-graph learning",
+  "plot": {
+    "quantum": "\\widetilde O(m^{3/4})",
+    "classical": "\\widetilde\\Theta(m)",
+    "parameter": "m edges; promised sparse matching or cycle family",
+    "model": "induced-subgraph edge-existence queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(m^{1/4})",
+    "quantum_exponent": 0.75,
+    "classical_exponent": 1
+  },
+  "ordinal": 115,
+  "citation_ids": [
+    "entry-217-citation-00222"
+  ]
+}

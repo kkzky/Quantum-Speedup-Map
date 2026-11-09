@@ -1,63 +1,80 @@
 {
   "id": "entry-097",
   "number": 97,
-  "ordinal": 99,
+  "slug": "stoquastic-frustration-free-constraint-satisfaction",
   "title_latex": "Stoquastic frustration-free constraint satisfaction",
   "title": "Stoquastic frustration-free constraint satisfaction",
+  "aliases": [],
   "chapter_id": "chapter-4",
   "problem": {
     "name_latex": "Stoquastic $k$-SAT",
-    "name": "Stoquastic $k$-SAT",
+    "name": "Stoquastic k-SAT",
     "statement_latex": "Given $H=\\sum_{a=1}^m H_a$ on $n$ qubits, with each positive semidefinite $H_a$ acting on at most $k=O(1)$ qubits and having real nonpositive off-diagonal entries, distinguish $\\lambda_{\\min}(H)=0$ from $\\lambda_{\\min}(H)\\ge1/\\operatorname{poly}(n)$. Zero energy means that the local constraints share a zero vector. Complexity is measured in classical running time and quantum evolution time or simulation gates, with the path and spectral-gap promises specified below.",
     "statement_text": "Given $H=\\sum_{a=1}^m H_a$ on $n$ qubits, with each positive semidefinite $H_a$ acting on at most $k=O(1)$ qubits and having real nonpositive off-diagonal entries, distinguish $\\lambda_{\\min}(H)=0$ from $\\lambda_{\\min}(H)\\ge1/\\operatorname{poly}(n)$. Zero energy means that the local constraints share a zero vector. Complexity is measured in classical running time and quantum evolution time or simulation gates, with the path and spectral-gap promises specified below."
   },
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "Polynomial evolution time for a suitably gapped, initialized path, stoquastic frustration-free adiabatic evolution.",
-      "headline_text": "Polynomial evolution time for a suitably gapped, initialized path, stoquastic frustration-free adiabatic evolution.",
       "details_latex": "The polynomial guarantee uses the smoothness, inverse-polynomial gap and initialization assumptions (A0)--(A3) of Bravyi--Terhal. For unrestricted instances, stoquastic 6-SAT is MA-complete: a polynomial-time quantum solution would imply $\\mathrm{MA}\\subseteq\\mathrm{BQP}$ and hence $\\mathrm{NP}\\subseteq\\mathrm{BQP}$.",
+      "headline_text": "Polynomial evolution time for a suitably gapped, initialized path, stoquastic frustration-free adiabatic evolution.",
       "details_text": "The polynomial guarantee uses the smoothness, inverse-polynomial gap and initialization assumptions (A0)–(A3) of Bravyi–Terhal. For unrestricted instances, stoquastic 6-SAT is MA-complete: a polynomial-time quantum solution would imply $\\mathrm{MA}\\subseteq\\mathrm{BQP}$ and hence $\\mathrm{NP}\\subseteq\\mathrm{BQP}$."
     },
     "classical": {
       "headline_latex": "$\\operatorname{poly}(n,\\delta^{-1})$ time, Bravyi--Terhal sampling under the same path assumptions.",
-      "headline_text": "$\\operatorname{poly}(n,\\delta^{-1})$ time, Bravyi–Terhal sampling under the same path assumptions.",
       "details_latex": "The simulator samples a distribution within total variation distance $\\delta$ of the final ground-state measurement distribution. Its nonnegative-amplitude random walks track the path. Stoquastic $k$-SAT is in MA for each fixed $k$, with a classical randomized polynomial-time witness verifier.",
+      "headline_text": "$\\operatorname{poly}(n,\\delta^{-1})$ time, Bravyi–Terhal sampling under the same path assumptions.",
       "details_text": "The simulator samples a distribution within total variation distance $\\delta$ of the final ground-state measurement distribution. Its nonnegative-amplitude random walks track the path. Stoquastic $k$-SAT is in MA for each fixed $k$, with a classical randomized polynomial-time witness verifier."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "Polynomial classical simulation in the specified adiabatic regime; MA-completeness characterizes the unrestricted decision problem.",
+      "category_id": "strength-unspecified",
       "description_text": "Polynomial classical simulation in the specified adiabatic regime; MA-completeness characterizes the unrestricted decision problem."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous simulation, containment and completeness theorems.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous simulation, containment and completeness theorems."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "The ideal analog system uses $n$ qubits; a digital realization adds Hamiltonian-simulation ancillas. Polynomial evolution requires the stated gap and initialization conditions.",
+      "category_id": "hardware-polynomial",
       "description_text": "The ideal analog system uses $n$ qubits; a digital realization adds Hamiltonian-simulation ancillas. Polynomial evolution requires the stated gap and initialization conditions."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Stoquastic frustration-free adiabatic evolution",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "97.1",
       "content_latex": "\\href{https://arxiv.org/pdf/0806.1746}{Bravyi and Terhal, \\emph{Complexity of Stoquastic Frustration-Free Hamiltonians} (2008/2009)}. Definitions 1.6--1.8 for stoquastic $k$-SAT; assumptions (A0)--(A3) and Theorem 1.4 for classical sampling; Section 5 for the sampler; Theorem 1.9 and Section 6 for MA verification and completeness.",
       "content_text": "Bravyi and Terhal, Complexity of Stoquastic Frustration-Free Hamiltonians (2008/2009). Definitions 1.6–1.8 for stoquastic $k$-SAT; assumptions (A0)–(A3) and Theorem 1.4 for classical sampling; Section 5 for the sampler; Theorem 1.9 and Section 6 for MA verification and completeness.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/0806.1746",
+          "title": "Complexity of Stoquastic Frustration-Free Hamiltonians",
+          "label_latex": "Bravyi and Terhal, \\emph{Complexity of Stoquastic Frustration-Free Hamiltonians} (2008/2009)",
+          "locator_latex": "Definitions 1.6--1.8 for stoquastic $k$-SAT; assumptions (A0)--(A3) and Theorem 1.4 for classical sampling; Section 5 for the sampler; Theorem 1.9 and Section 6 for MA verification and completeness."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-097-citation-001"
+        "entry-097-citation-00349"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-097-citation-001"
+  "algorithm_ids": [
+    "stoquastic-adiabatic"
   ],
-  "source_latex": "\\entrytitle{97}{Stoquastic frustration-free constraint satisfaction}{white}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{96}\n\\begin{problem}[Stoquastic $k$-SAT]\nGiven $H=\\sum_{a=1}^m H_a$ on $n$ qubits, with each positive semidefinite $H_a$ acting on at most $k=O(1)$ qubits and having real nonpositive off-diagonal entries, distinguish $\\lambda_{\\min}(H)=0$ from $\\lambda_{\\min}(H)\\ge1/\\operatorname{poly}(n)$. Zero energy means that the local constraints share a zero vector. Complexity is measured in classical running time and quantum evolution time or simulation gates, with the path and spectral-gap promises specified below.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{Polynomial evolution time for a suitably gapped, initialized path, stoquastic frustration-free adiabatic evolution.}\nThe polynomial guarantee uses the smoothness, inverse-polynomial gap and initialization assumptions (A0)--(A3) of Bravyi--Terhal. For unrestricted instances, stoquastic 6-SAT is MA-complete: a polynomial-time quantum solution would imply $\\mathrm{MA}\\subseteq\\mathrm{BQP}$ and hence $\\mathrm{NP}\\subseteq\\mathrm{BQP}$.\n\n\\complexity{Classical}{$\\operatorname{poly}(n,\\delta^{-1})$ time, Bravyi--Terhal sampling under the same path assumptions.}\nThe simulator samples a distribution within total variation distance $\\delta$ of the final ground-state measurement distribution. Its nonnegative-amplitude random walks track the path. Stoquastic $k$-SAT is in MA for each fixed $k$, with a classical randomized polynomial-time witness verifier.\n\n\\dimensionlabel{Strength}{white} Polynomial classical simulation in the specified adiabatic regime; MA-completeness characterizes the unrestricted decision problem.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous simulation, containment and completeness theorems.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The ideal analog system uses $n$ qubits; a digital realization adds Hamiltonian-simulation ancillas. Polynomial evolution requires the stated gap and initialization conditions.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{97}\n\\item \\href{https://arxiv.org/pdf/0806.1746}{Bravyi and Terhal, \\emph{Complexity of Stoquastic Frustration-Free Hamiltonians} (2008/2009)}. Definitions 1.6--1.8 for stoquastic $k$-SAT; assumptions (A0)--(A3) and Theorem 1.4 for classical sampling; Section 5 for the sampler; Theorem 1.9 and Section 6 for MA verification and completeness.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{97}{Stoquastic frustration-free constraint satisfaction}{white}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{96}\n\\begin{problem}[Stoquastic $k$-SAT]\nGiven $H=\\sum_{a=1}^m H_a$ on $n$ qubits, with each positive semidefinite $H_a$ acting on at most $k=O(1)$ qubits and having real nonpositive off-diagonal entries, distinguish $\\lambda_{\\min}(H)=0$ from $\\lambda_{\\min}(H)\\ge1/\\operatorname{poly}(n)$. Zero energy means that the local constraints share a zero vector. Complexity is measured in classical running time and quantum evolution time or simulation gates, with the path and spectral-gap promises specified below.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{Polynomial evolution time for a suitably gapped, initialized path, stoquastic frustration-free adiabatic evolution.}\nThe polynomial guarantee uses the smoothness, inverse-polynomial gap and initialization assumptions (A0)--(A3) of Bravyi--Terhal. For unrestricted instances, stoquastic 6-SAT is MA-complete: a polynomial-time quantum solution would imply $\\mathrm{MA}\\subseteq\\mathrm{BQP}$ and hence $\\mathrm{NP}\\subseteq\\mathrm{BQP}$.\n\n\\complexity{Classical}{$\\operatorname{poly}(n,\\delta^{-1})$ time, Bravyi--Terhal sampling under the same path assumptions.}\nThe simulator samples a distribution within total variation distance $\\delta$ of the final ground-state measurement distribution. Its nonnegative-amplitude random walks track the path. Stoquastic $k$-SAT is in MA for each fixed $k$, with a classical randomized polynomial-time witness verifier.\n\n\\dimensionlabel{Strength}{white} Polynomial classical simulation in the specified adiabatic regime; MA-completeness characterizes the unrestricted decision problem.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous simulation, containment and completeness theorems.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The ideal analog system uses $n$ qubits; a digital realization adds Hamiltonian-simulation ancillas. Polynomial evolution requires the stated gap and initialization conditions.\n\n\\subhead{Algorithm: Stoquastic frustration-free adiabatic evolution}\n\\begin{algorithmindex}{97}\n\\item \\href{https://arxiv.org/pdf/0806.1746}{Bravyi and Terhal, \\emph{Complexity of Stoquastic Frustration-Free Hamiltonians} (2008/2009)}. Definitions 1.6--1.8 for stoquastic $k$-SAT; assumptions (A0)--(A3) and Theorem 1.4 for classical sampling; Section 5 for the sampler; Theorem 1.9 and Section 6 for MA verification and completeness.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 179,
+  "citation_ids": [
+    "entry-097-citation-00349"
+  ]
 }

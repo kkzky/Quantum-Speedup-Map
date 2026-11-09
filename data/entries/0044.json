@@ -1,63 +1,88 @@
 {
   "id": "entry-044",
   "number": 44,
-  "ordinal": 45,
+  "slug": "promised-short-path-st-connectivity",
   "title_latex": "Promised short-path \\texorpdfstring{$s$--$t$}{s--t} connectivity",
   "title": "Promised short-path s–t connectivity",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Promised short-path $s$--$t$ connectivity",
-    "name": "Promised short-path $s$–$t$ connectivity",
+    "name": "Promised short-path s–t connectivity",
     "statement_latex": "Given an undirected graph and vertices $s,t$, distinguish the existence of an $s$--$t$ path of length at most $d$ from complete disconnection. The positive-instance path-length promise exposes how certificate structure affects quantum complexity.\nThe comparison counts adjacency-matrix queries and the quantum working space used between queries.",
     "statement_text": "Given an undirected graph and vertices $s,t$, distinguish the existence of an $s$–$t$ path of length at most $d$ from complete disconnection. The positive-instance path-length promise exposes how certificate structure affects quantum complexity. The comparison counts adjacency-matrix queries and the quantum working space used between queries."
   },
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(n\\sqrt d)$ queries and $\\widetilde O(n\\sqrt d)$ time, Belovs--Reichardt span-program connectivity.",
-      "headline_text": "$O(n\\sqrt d)$ queries and $\\widetilde O(n\\sqrt d)$ time, Belovs–Reichardt span-program connectivity.",
       "details_latex": "The promise is that connected terminals have a path of at most $d$ edges. The algorithm uses logarithmic quantum space. The case $d=\\Theta(n)$ gives $O(n^{3/2})$ queries. For very small $d$, direct specialized tests can improve the displayed general upper bound; for $d=1$ a single adjacency query suffices.",
+      "headline_text": "$O(n\\sqrt d)$ queries and $\\widetilde O(n\\sqrt d)$ time, Belovs–Reichardt span-program connectivity.",
       "details_text": "The promise is that connected terminals have a path of at most $d$ edges. The algorithm uses logarithmic quantum space. The case $d=\\Theta(n)$ gives $O(n^{3/2})$ queries. For very small $d$, direct specialized tests can improve the displayed general upper bound; for $d=1$ a single adjacency query suffices."
     },
     "classical": {
       "headline_latex": "$O(n^2)$ matrix time and queries, breadth-first search; $O(n+m)$ with explicit adjacency lists.",
-      "headline_text": "$O(n^2)$ matrix time and queries, breadth-first search; $O(n+m)$ with explicit adjacency lists.",
       "details_latex": "The unrestricted matrix-oracle problem has classical complexity $\\Theta(n^2)$. The promise parameter must be retained when comparing algorithms on shorter-path subclasses. A classical traversal records discovered vertices and stops once $t$ is reached or its component has been exhausted.",
+      "headline_text": "$O(n^2)$ matrix time and queries, breadth-first search; $O(n+m)$ with explicit adjacency lists.",
       "details_text": "The unrestricted matrix-oracle problem has classical complexity $\\Theta(n^2)$. The promise parameter must be retained when comparing algorithms on shorter-path subclasses. A classical traversal records discovered vertices and stops once $t$ is reached or its component has been exhausted."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial oracle speedup, including $n^2\\to n^{3/2}$ for the unrestricted path-length regime. The mechanism is a span program and quantum reflections.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial oracle speedup, including $n^2\\to n^{3/2}$ for the unrestricted path-length regime. The mechanism is a span program and quantum reflections."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous query advantage in the regime where the classical quadratic lower bound applies.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous query advantage in the regime where the classical quadratic lower bound applies."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "The algorithm uses $O(\\log n)$ logical working qubits up to precision ancillas, with coherent adjacency access. This space-efficient construction still needs fault tolerance for its long sequence of queries.",
+      "category_id": "hardware-polynomial",
       "description_text": "The algorithm uses $O(\\log n)$ logical working qubits up to precision ancillas, with coherent adjacency access. This space-efficient construction still needs fault tolerance for its long sequence of queries."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Belovs--Reichardt span-program connectivity",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "44.1",
       "content_latex": "\\href{https://arxiv.org/pdf/1203.2603}{Belovs and Reichardt, \\emph{Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection} (2012)}. Theorem 3: query bound; Theorem 9: time-efficient implementation.",
       "content_text": "Belovs and Reichardt, Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection (2012). Theorem 3: query bound; Theorem 9: time-efficient implementation.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1203.2603",
+          "title": "Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection",
+          "label_latex": "Belovs and Reichardt, \\emph{Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection} (2012)",
+          "locator_latex": "Theorem 3: query bound; Theorem 9: time-efficient implementation."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-044-citation-001"
+        "entry-044-citation-00125"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-044-citation-001"
+  "algorithm_ids": [
+    "span-connectivity"
   ],
-  "source_latex": "\\entrytitle{44}{Promised short-path \\texorpdfstring{$s$--$t$}{s--t} connectivity}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{43}\n\\begin{problem}[Promised short-path $s$--$t$ connectivity]\nGiven an undirected graph and vertices $s,t$, distinguish the existence of an $s$--$t$ path of length at most $d$ from complete disconnection. The positive-instance path-length promise exposes how certificate structure affects quantum complexity.\nThe comparison counts adjacency-matrix queries and the quantum working space used between queries.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(n\\sqrt d)$ queries and $\\widetilde O(n\\sqrt d)$ time, Belovs--Reichardt span-program connectivity.}\nThe promise is that connected terminals have a path of at most $d$ edges. The algorithm uses logarithmic quantum space. The case $d=\\Theta(n)$ gives $O(n^{3/2})$ queries. For very small $d$, direct specialized tests can improve the displayed general upper bound; for $d=1$ a single adjacency query suffices.\n\n\\complexity{Classical}{$O(n^2)$ matrix time and queries, breadth-first search; $O(n+m)$ with explicit adjacency lists.}\nThe unrestricted matrix-oracle problem has classical complexity $\\Theta(n^2)$. The promise parameter must be retained when comparing algorithms on shorter-path subclasses. A classical traversal records discovered vertices and stops once $t$ is reached or its component has been exhausted.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial oracle speedup, including $n^2\\to n^{3/2}$ for the unrestricted path-length regime. The mechanism is a span program and quantum reflections.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous query advantage in the regime where the classical quadratic lower bound applies.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The algorithm uses $O(\\log n)$ logical working qubits up to precision ancillas, with coherent adjacency access. This space-efficient construction still needs fault tolerance for its long sequence of queries.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{44}\n\\item \\href{https://arxiv.org/pdf/1203.2603}{Belovs and Reichardt, \\emph{Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection} (2012)}. Theorem 3: query bound; Theorem 9: time-efficient implementation.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "span-connectivity",
+      "label_latex": "Belovs--Reichardt span-program connectivity",
+      "problem_numbers": [
+        137
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{44}{Promised short-path \\texorpdfstring{$s$--$t$}{s--t} connectivity}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{43}\n\\begin{problem}[Promised short-path $s$--$t$ connectivity]\nGiven an undirected graph and vertices $s,t$, distinguish the existence of an $s$--$t$ path of length at most $d$ from complete disconnection. The positive-instance path-length promise exposes how certificate structure affects quantum complexity.\nThe comparison counts adjacency-matrix queries and the quantum working space used between queries.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(n\\sqrt d)$ queries and $\\widetilde O(n\\sqrt d)$ time, Belovs--Reichardt span-program connectivity.}\nThe promise is that connected terminals have a path of at most $d$ edges. The algorithm uses logarithmic quantum space. The case $d=\\Theta(n)$ gives $O(n^{3/2})$ queries. For very small $d$, direct specialized tests can improve the displayed general upper bound; for $d=1$ a single adjacency query suffices.\n\n\\complexity{Classical}{$O(n^2)$ matrix time and queries, breadth-first search; $O(n+m)$ with explicit adjacency lists.}\nThe unrestricted matrix-oracle problem has classical complexity $\\Theta(n^2)$. The promise parameter must be retained when comparing algorithms on shorter-path subclasses. A classical traversal records discovered vertices and stops once $t$ is reached or its component has been exhausted.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial oracle speedup, including $n^2\\to n^{3/2}$ for the unrestricted path-length regime. The mechanism is a span program and quantum reflections.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous query advantage in the regime where the classical quadratic lower bound applies.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The algorithm uses $O(\\log n)$ logical working qubits up to precision ancillas, with coherent adjacency access. This space-efficient construction still needs fault tolerance for its long sequence of queries.\n\n\\subhead{Algorithm: Belovs--Reichardt span-program connectivity}\n\\begin{algorithmindex}{44}\n\\item \\href{https://arxiv.org/pdf/1203.2603}{Belovs and Reichardt, \\emph{Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection} (2012)}. Theorem 3: query bound; Theorem 9: time-efficient implementation.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 62,
+  "citation_ids": [
+    "entry-044-citation-00125"
+  ]
 }

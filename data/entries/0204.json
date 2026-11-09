@@ -1,0 +1,101 @@
+{
+  "id": "entry-204",
+  "number": 204,
+  "slug": "prior-q11",
+  "title": "Combinatorial group testing",
+  "title_latex": "Combinatorial group testing",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q11",
+  "inventory_ids": [
+    "Q11"
+  ],
+  "problem": {
+    "name": "Combinatorial group testing",
+    "name_latex": "Combinatorial group testing",
+    "statement_latex": "Given an unknown defective set $S\\subseteq[n]$ of size at most $k$, a test on $T\\subseteq[n]$ returns $[T\\cap S\\ne\\varnothing]$. Recover $S$ with constant success probability; tests may be queried coherently.",
+    "statement_text": "Given an unknown defective set $S\\subseteq[n]$ of size at most $k$, a test on $T\\subseteq[n]$ returns $[T\\cap S\\ne\\varnothing]$. Recover $S$ with constant success probability; tests may be queried coherently."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(\\sqrt k)$ queries by Belovs' adversary-bound learner; efficient implementations have additional polynomial or near-linear dependence on the test description length.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\sqrt k)$ queries by Belovs' adversary-bound learner; efficient implementations have additional polynomial or near-linear dependence on the test description length.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(k\\log(n/k)+k)$ adaptive binary tests in the standard sparse-defective regime, by generalized binary splitting and information-theoretic lower bounds.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(k\\log(n/k)+k)$ adaptive binary tests in the standard sparse-defective regime, by generalized binary splitting and information-theoretic lower bounds.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "belovs-symmetric-junta-learning"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "belovs-symmetric-junta-learning",
+      "label_latex": "Belovs adversary algorithm for learning symmetric juntas",
+      "problem_numbers": [
+        219
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1311.6777}{\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}}. OR-function theorem; explicit implementation in Montanaro–Shao2011.08611",
+      "content_text": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound. OR-function theorem; explicit implementation in Montanaro–Shao2011.08611",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1311.6777",
+          "title": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound",
+          "label_latex": "\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}",
+          "locator_latex": "OR-function theorem; explicit implementation in Montanaro–Shao2011.08611"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-204-citation-00068"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Belovs adversary algorithm for learning symmetric juntas",
+  "plot": {
+    "quantum": "\\Theta(\\sqrt k)",
+    "classical": "\\Theta(k\\log(n/k)+k)",
+    "parameter": "universe size n and defect count k",
+    "model": "subset-intersection queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Theta(\\sqrt k(1+\\log(n/k)))"
+  },
+  "ordinal": 27,
+  "citation_ids": [
+    "entry-204-citation-00068"
+  ]
+}

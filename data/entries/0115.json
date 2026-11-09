@@ -1,0 +1,95 @@
+{
+  "id": "entry-115",
+  "number": 115,
+  "slug": "prior-g08",
+  "title": "Longest common substring",
+  "title_latex": "Longest common substring",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g08",
+  "inventory_ids": [
+    "G08"
+  ],
+  "problem": {
+    "name": "Longest common substring",
+    "name_latex": "Longest common substring",
+    "statement_latex": "Given $A,B\\in\\Sigma^n$, output the maximum $\\ell$ for which $A[i..i+\\ell-1]=B[j..j+\\ell-1]$ for some $i,j$. Input characters support coherent random access.",
+    "statement_text": "Given $A,B\\in\\Sigma^n$, output the maximum $\\ell$ for which $A[i..i+\\ell-1]=B[j..j+\\ell-1]$ for some $i,j$. Input characters support coherent random access."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{2/3})$ time by Akmal--Jin, combining synchronizing sets with a quantum walk.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n^{2/3})$ time by Akmal–Jin, combining synchronizing sets with a quantum walk.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n)$ time on an integer alphabet by suffix-tree or suffix-array methods, and $\\Omega(n)$ worst-case character queries.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ time on an integer alphabet by suffix-tree or suffix-array methods, and $\\Omega(n)$ worst-case character queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "synchronizing-set-quantum-walk"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2110.09696}{\\emph{Near-Optimal Quantum Algorithms for String Problems}}. Section3; main LCS theorem",
+      "content_text": "Near-Optimal Quantum Algorithms for String Problems. Section3; main LCS theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2110.09696",
+          "title": "Near-Optimal Quantum Algorithms for String Problems",
+          "label_latex": "\\emph{Near-Optimal Quantum Algorithms for String Problems}",
+          "locator_latex": "Section3; main LCS theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-115-citation-00188"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Akmal--Jin synchronizing-set quantum walk",
+  "plot": {
+    "quantum": "\\widetilde O(n^{2/3})",
+    "classical": "\\Theta(n)",
+    "parameter": "string length n",
+    "model": "character queries and random-access time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(n^{1/3})",
+    "quantum_exponent": 0.6666666666666666,
+    "classical_exponent": 1
+  },
+  "ordinal": 85,
+  "citation_ids": [
+    "entry-115-citation-00188"
+  ]
+}

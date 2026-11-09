@@ -1,9 +1,10 @@
 {
   "id": "entry-020",
   "number": 20,
-  "ordinal": 20,
+  "slug": "independent-set-clique-and-vertex-cover",
   "title_latex": "Independent set, clique and vertex cover",
   "title": "Independent set, clique and vertex cover",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Maximum independent set, maximum clique and minimum vertex cover",
@@ -14,72 +15,144 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O^*(2^{n/5})=O^*(1.1488^n)$, D\\\"orn's amplified branching algorithm.",
-      "headline_text": "$O^*(2^{n/5})=O^*(1.1488^n)$, Dörn's amplified branching algorithm.",
       "details_latex": "This bound applies to maximum independent set on an arbitrary $n$-vertex graph. Complementation transfers it to maximum clique, and taking the complementary vertex set gives minimum vertex cover. Running the classical counting algorithm below on a quantum computer also supplies its subexponential upper bound.",
+      "headline_text": "$O^*(2^{n/5})=O^*(1.1488^n)$, Dörn's amplified branching algorithm.",
       "details_text": "This bound applies to maximum independent set on an arbitrary $n$-vertex graph. Complementation transfers it to maximum clique, and taking the complementary vertex set gives minimum vertex cover. Running the classical counting algorithm below on a quantum computer also supplies its subexponential upper bound."
     },
     "classical": {
       "headline_latex": "$\\operatorname{poly}(n+|E|)2^{O(n\\log\\log n/\\sqrt{\\log n})}$, Boolean tensor contraction with cardinality constraints.",
-      "headline_text": "$\\operatorname{poly}(n+|E|)2^{O(n\\log\\log n/\\sqrt{\\log n})}$, Boolean tensor contraction with cardinality constraints.",
       "details_latex": "Use one Boolean variable per vertex and a width-two clause for each forbidden selected edge. A linear-size Boolean cardinality circuit tests the target size, so the encoding uses $O(n)$ variables and fixed-width clauses even for a dense graph. Exact counting and self-reduction recover an optimum in polynomial space. For sparse graphs, maximum independent set and minimum vertex cover have the sharper exponent $O(n/\\sqrt{\\log n})$; maximum clique has this sharper bound when its complement is sparse.",
+      "headline_text": "$\\operatorname{poly}(n+|E|)2^{O(n\\log\\log n/\\sqrt{\\log n})}$, Boolean tensor contraction with cardinality constraints.",
       "details_text": "Use one Boolean variable per vertex and a width-two clause for each forbidden selected edge. A linear-size Boolean cardinality circuit tests the target size, so the encoding uses $O(n)$ variables and fixed-width clauses even for a dense graph. Exact counting and self-reduction recover an optimum in polynomial space. For sparse graphs, maximum independent set and minimum vertex cover have the sharper exponent $O(n/\\sqrt{\\log n})$; maximum clique has this sharper bound when its complement is sparse."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The subexponential classical bound is asymptotically smaller than the displayed amplified-branching quantum bound. The classical exponent is $n^{1-o(1)}$, so its exponential-to-subexponential reduction has no power saving.",
+      "category_id": "strength-unspecified",
       "description_text": "The subexponential classical bound is asymptotically smaller than the displayed amplified-branching quantum bound. The classical exponent is $n^{1-o(1)}$, so its exponential-to-subexponential reduction has no power saving."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The stated algorithms have rigorous upper bounds. D\\\"orn's displayed bound supplies no asymptotic quantum-speedup claim against the current classical comparator.",
+      "category_id": "evidence-unspecified",
       "description_text": "The stated algorithms have rigorous upper bounds. Dörn's displayed bound supplies no asymptotic quantum-speedup claim against the current classical comparator."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The amplified branching method uses polynomial assignment and graph-evaluation workspace, with exponentially many coherent evaluations. Useful instances would require fault tolerance. The polynomial-space classical algorithm changes the relevant time comparison without adding an exponential memory requirement.\n{\\small [Before ``ETH is false'', the known general classical bound was $O^*(1.1996^n)$, and D\\\"orn's quantum algorithm claimed an improvement to $O^*(1.1488^n)$.]\\par}",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The amplified branching method uses polynomial assignment and graph-evaluation workspace, with exponentially many coherent evaluations. Useful instances would require fault tolerance. The polynomial-space classical algorithm changes the relevant time comparison without adding an exponential memory requirement. [Before “ETH is false”, the known general classical bound was $O^*(1.1996^n)$, and Dörn's quantum algorithm claimed an improvement to $O^*(1.1488^n)$.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: D\\\"orn\\textquotesingle s amplified branching algorithm",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "20.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0510084}{D\\\"orn, \\emph{Quantum Complexity Bounds for Independent Set Problems} (2005)}. Algorithm 2 and Theorem 6: maximum independent set.",
       "content_text": "Dörn, Quantum Complexity Bounds for Independent Set Problems (2005). Algorithm 2 and Theorem 6: maximum independent set.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0510084",
+          "title": "Quantum Complexity Bounds for Independent Set Problems",
+          "label_latex": "D\\\"orn, \\emph{Quantum Complexity Bounds for Independent Set Problems} (2005)",
+          "locator_latex": "Algorithm 2 and Theorem 6: maximum independent set."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-020-citation-001"
+        "entry-020-citation-00046"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "20.2",
       "content_latex": "\\href{https://arxiv.org/pdf/1312.6260}{Xiao and Nagamochi, \\emph{Exact Algorithms for Maximum Independent Set} (Information and Computation 2017)}. The main maximum-independent-set algorithm and its $1.1996^n$ running-time result.",
       "content_text": "Xiao and Nagamochi, Exact Algorithms for Maximum Independent Set (Information and Computation 2017). The main maximum-independent-set algorithm and its $1.1996^n$ running-time result.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1312.6260",
+          "title": "Exact Algorithms for Maximum Independent Set",
+          "label_latex": "Xiao and Nagamochi, \\emph{Exact Algorithms for Maximum Independent Set} (Information and Computation 2017)",
+          "locator_latex": "The main maximum-independent-set algorithm and its $1.1996^n$ running-time result."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-020-citation-002"
+        "entry-020-citation-00047"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "20.3",
       "content_latex": "\\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Corollary 7: graph cardinality applications. \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}, Theorem 1.1 and Appendix D, supplies the explicit fixed-width time and space bounds.",
       "content_text": "Claude (Anthropic), A $2^{o(n)}$ Time Algorithm for 3-SAT (2026). Corollary 7: graph cardinality applications. OpenAI, The Exponential Time Hypothesis Is False (2026), Theorem 1.1 and Appendix D, supplies the explicit fixed-width time and space bounds.",
+      "links": [
+        {
+          "url": "https://github.com/anthropics/formal-math/tree/main/eth",
+          "title": "A $2^{o(n)}$ Time Algorithm for 3-SAT",
+          "label_latex": "Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)",
+          "locator_latex": "Corollary 7: graph cardinality applications. \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}, Theorem 1.1 and Appendix D, supplies the explicit fixed-width time and space bounds."
+        },
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": ", Theorem 1.1 and Appendix D, supplies the explicit fixed-width time and space bounds."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-020-citation-003",
-        "entry-020-citation-004"
+        "entry-020-citation-00048",
+        "entry-020-citation-00049"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-020-citation-001",
-    "entry-020-citation-002",
-    "entry-020-citation-003",
-    "entry-020-citation-004"
+  "algorithm_ids": [
+    "grover"
   ],
-  "source_latex": "\\entrytitle{20}{Independent set, clique and vertex cover}{white}{white}{hardwareExponential}\n\\setcounter{problem}{19}\n\\begin{problem}[Maximum independent set, maximum clique and minimum vertex cover]\nFind $I\\subseteq V$ of maximum size with no edge inside $I$. Equivalent exact objectives are maximum clique in the complement graph and minimum vertex cover $V\\setminus I$ in the original graph. These equivalences preserve vertex count and translate witnesses directly.\nThe comparison uses quantum gate complexity and classical bit complexity on explicit graph inputs.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(2^{n/5})=O^*(1.1488^n)$, D\\\"orn's amplified branching algorithm.}\nThis bound applies to maximum independent set on an arbitrary $n$-vertex graph. Complementation transfers it to maximum clique, and taking the complementary vertex set gives minimum vertex cover. Running the classical counting algorithm below on a quantum computer also supplies its subexponential upper bound.\n\\complexity{Classical}{$\\operatorname{poly}(n+|E|)2^{O(n\\log\\log n/\\sqrt{\\log n})}$, Boolean tensor contraction with cardinality constraints.}\nUse one Boolean variable per vertex and a width-two clause for each forbidden selected edge. A linear-size Boolean cardinality circuit tests the target size, so the encoding uses $O(n)$ variables and fixed-width clauses even for a dense graph. Exact counting and self-reduction recover an optimum in polynomial space. For sparse graphs, maximum independent set and minimum vertex cover have the sharper exponent $O(n/\\sqrt{\\log n})$; maximum clique has this sharper bound when its complement is sparse.\n\\dimensionlabel{Strength}{white} The subexponential classical bound is asymptotically smaller than the displayed amplified-branching quantum bound. The classical exponent is $n^{1-o(1)}$, so its exponential-to-subexponential reduction has no power saving.\n\\dimensionlabel{Evidence}{white} The stated algorithms have rigorous upper bounds. D\\\"orn's displayed bound supplies no asymptotic quantum-speedup claim against the current classical comparator.\n\\dimensionlabel{Hardware}{hardwareExponential} The amplified branching method uses polynomial assignment and graph-evaluation workspace, with exponentially many coherent evaluations. Useful instances would require fault tolerance. The polynomial-space classical algorithm changes the relevant time comparison without adding an exponential memory requirement.\n{\\small [Before ``ETH is false'', the known general classical bound was $O^*(1.1996^n)$, and D\\\"orn's quantum algorithm claimed an improvement to $O^*(1.1488^n)$.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{20}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0510084}{D\\\"orn, \\emph{Quantum Complexity Bounds for Independent Set Problems} (2005)}. Algorithm 2 and Theorem 6: maximum independent set.\n\\item \\href{https://arxiv.org/pdf/1312.6260}{Xiao and Nagamochi, \\emph{Exact Algorithms for Maximum Independent Set} (Information and Computation 2017)}. The main maximum-independent-set algorithm and its $1.1996^n$ running-time result.\n\\item \\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Corollary 7: graph cardinality applications. \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}, Theorem 1.1 and Appendix D, supplies the explicit fixed-width time and space bounds.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{20}{Independent set, clique and vertex cover}{white}{white}{hardwareExponential}\n\\setcounter{problem}{19}\n\\begin{problem}[Maximum independent set, maximum clique and minimum vertex cover]\nFind $I\\subseteq V$ of maximum size with no edge inside $I$. Equivalent exact objectives are maximum clique in the complement graph and minimum vertex cover $V\\setminus I$ in the original graph. These equivalences preserve vertex count and translate witnesses directly.\nThe comparison uses quantum gate complexity and classical bit complexity on explicit graph inputs.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(2^{n/5})=O^*(1.1488^n)$, D\\\"orn's amplified branching algorithm.}\nThis bound applies to maximum independent set on an arbitrary $n$-vertex graph. Complementation transfers it to maximum clique, and taking the complementary vertex set gives minimum vertex cover. Running the classical counting algorithm below on a quantum computer also supplies its subexponential upper bound.\n\\complexity{Classical}{$\\operatorname{poly}(n+|E|)2^{O(n\\log\\log n/\\sqrt{\\log n})}$, Boolean tensor contraction with cardinality constraints.}\nUse one Boolean variable per vertex and a width-two clause for each forbidden selected edge. A linear-size Boolean cardinality circuit tests the target size, so the encoding uses $O(n)$ variables and fixed-width clauses even for a dense graph. Exact counting and self-reduction recover an optimum in polynomial space. For sparse graphs, maximum independent set and minimum vertex cover have the sharper exponent $O(n/\\sqrt{\\log n})$; maximum clique has this sharper bound when its complement is sparse.\n\\dimensionlabel{Strength}{white} The subexponential classical bound is asymptotically smaller than the displayed amplified-branching quantum bound. The classical exponent is $n^{1-o(1)}$, so its exponential-to-subexponential reduction has no power saving.\n\\dimensionlabel{Evidence}{white} The stated algorithms have rigorous upper bounds. D\\\"orn's displayed bound supplies no asymptotic quantum-speedup claim against the current classical comparator.\n\\dimensionlabel{Hardware}{hardwareExponential} The amplified branching method uses polynomial assignment and graph-evaluation workspace, with exponentially many coherent evaluations. Useful instances would require fault tolerance. The polynomial-space classical algorithm changes the relevant time comparison without adding an exponential memory requirement.\n{\\small [Before ``ETH is false'', the known general classical bound was $O^*(1.1996^n)$, and D\\\"orn's quantum algorithm claimed an improvement to $O^*(1.1488^n)$.]\\par}\n\\subhead{Algorithm: D\\\"orn\\textquotesingle s amplified branching algorithm}\n\\begin{algorithmindex}{20}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0510084}{D\\\"orn, \\emph{Quantum Complexity Bounds for Independent Set Problems} (2005)}. Algorithm 2 and Theorem 6: maximum independent set.\n\\item \\href{https://arxiv.org/pdf/1312.6260}{Xiao and Nagamochi, \\emph{Exact Algorithms for Maximum Independent Set} (Information and Computation 2017)}. The main maximum-independent-set algorithm and its $1.1996^n$ running-time result.\n\\item \\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Corollary 7: graph cardinality applications. \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}, Theorem 1.1 and Appendix D, supplies the explicit fixed-width time and space bounds.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{grover}{Grover search and amplitude amplification}: \\problemref{1}, \\problemref{5}, \\problemref{53}, \\problemref{78}, \\problemref{79}, \\problemref{81}, \\problemref{82}, \\problemref{83}, \\problemref{90}, \\problemref{95}, \\problemref{96}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 18,
+  "citation_ids": [
+    "entry-020-citation-00046",
+    "entry-020-citation-00047",
+    "entry-020-citation-00048",
+    "entry-020-citation-00049"
+  ]
 }

@@ -31,7 +31,7 @@ def literature_item(body):
     return {'content_latex': body, 'content_text': text(body), 'links': links}
 
 
-def load_catalogue():
+def load_source_catalogue():
     source = (ROOT / 'sources/catalogue-preview.tex').read_text(encoding='utf-8')
     body_start = source.index(r'\tableofcontents')
     relation_start = source.index(r'\section*{Relations')
@@ -60,6 +60,7 @@ def load_catalogue():
             'slug': DEMO_SLUGS.get(number, slugify(text(heading[1]))),
             'title_latex': heading[1], 'title': text(heading[1]),
             'aliases': aliases,
+            'chapter_id': 'chapter-' + str(max(i for i, section in enumerate(sections, 1) if section[0] < start)),
             'problem': {'name_latex': problem.group(1), 'name': text(problem.group(1)),
                         'statement_latex': problem.group(2).strip()},
             'quantum_speedup': {}, 'labels': {},
@@ -119,6 +120,15 @@ def load_catalogue():
     output = ROOT / 'visualization/catalogue-preview.json'
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     return result
+
+
+def load_catalogue():
+    path = ROOT / 'data/full_catalogue.json'
+    if path.exists():
+        result = json.loads(path.read_text(encoding='utf-8'))
+        result['problem_links'] = {int(k): v for k, v in result['problem_links'].items()}
+        return result
+    return load_source_catalogue()
 
 
 if __name__ == '__main__':

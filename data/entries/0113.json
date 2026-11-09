@@ -1,0 +1,130 @@
+{
+  "id": "entry-113",
+  "number": 113,
+  "slug": "prior-g06",
+  "title": "Exact string matching",
+  "title_latex": "Exact string matching",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g06",
+  "inventory_ids": [
+    "G06"
+  ],
+  "problem": {
+    "name": "Exact string matching",
+    "name_latex": "Exact string matching",
+    "statement_latex": "Given a text $T\\in\\Sigma^n$ and a pattern $P\\in\\Sigma^m$, find $i$ such that $T[i..i+m-1]=P$, or report that no such position exists. The alphabet is finite and characters support indexed queries.",
+    "statement_text": "Given a text $T\\in\\Sigma^n$ and a pattern $P\\in\\Sigma^m$, find $i$ such that $T[i..i+m-1]=P$, or report that no such position exists. The alphabet is finite and characters support indexed queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt n+\\sqrt m)$ time and character queries by Ramesh--Vinay string matching, using periodicity preprocessing and quantum search.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt n+\\sqrt m)$ time and character queries by Ramesh–Vinay string matching, using periodicity preprocessing and quantum search.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n+m)$ worst-case time and queries by Knuth--Morris--Pratt or other linear-time string matching algorithms.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n+m)$ worst-case time and queries by Knuth–Morris–Pratt or other linear-time string matching algorithms.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "ramesh-vinay-matching",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0011049}{\\emph{String Matching in tilde O(sqrt(n)+sqrt(m)) Quantum Time}}. Main algorithm; deterministic-sampling construction",
+      "content_text": "String Matching in tilde O(sqrt(n)+sqrt(m)) Quantum Time. Main algorithm; deterministic-sampling construction",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0011049",
+          "title": "String Matching in tilde O(sqrt(n)+sqrt(m)) Quantum Time",
+          "label_latex": "\\emph{String Matching in tilde O(sqrt(n)+sqrt(m)) Quantum Time}",
+          "locator_latex": "Main algorithm; deterministic-sampling construction"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-113-citation-00186"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Ramesh--Vinay quantum string matching; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt n+\\sqrt m)",
+    "classical": "\\Theta(n+m)",
+    "parameter": "text length n and pattern length m",
+    "model": "character queries and random-access time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt{n+m})",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 83,
+  "citation_ids": [
+    "entry-113-citation-00186"
+  ]
+}

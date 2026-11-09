@@ -1,0 +1,93 @@
+{
+  "id": "entry-163",
+  "number": 163,
+  "slug": "prior-a20",
+  "title": "Hidden subgroups of nilpotency-class-two groups",
+  "title_latex": "Hidden subgroups of nilpotency-class-two groups",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a20",
+  "inventory_ids": [
+    "A20"
+  ],
+  "problem": {
+    "name": "Hidden subgroups of nilpotency-class-two groups",
+    "name_latex": "Hidden subgroups of nilpotency-class-two groups",
+    "statement_latex": "Given a uniquely encoded black-box group $G$ with $[G,G]\\subseteq Z(G)$ and a function constant and distinct on cosets of $H\\le G$, find generators of $H$. Complexity counts oracle queries and gates in the group encoding length.",
+    "statement_text": "Given a uniquely encoded black-box group $G$ with $[G,G]\\subseteq Z(G)$ and a function constant and distinct on cosets of $H\\le G$, find generators of $H$. Complexity counts oracle queries and gates in the group encoding length."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log|G|)$ quantum time by Ivanyos--Sanselme--Santha, using commutator structure and reductions to abelian hidden-subgroup instances.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log|G|)$ quantum time by Ivanyos–Sanselme–Santha, using commutator structure and reductions to abelian hidden-subgroup instances.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Full coset-label acquisition takes $O(|G|)$ queries. Abelian subfamilies include Simon-type instances requiring $2^{\\Omega(\\log|G|)}$ classical queries.",
+      "details_latex": "",
+      "headline_text": "Full coset-label acquisition takes $O(|G|)$ queries. Abelian subfamilies include Simon-type instances requiring $2^{\\Omega(\\log|G|)}$ classical queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "nilpotency-two-hsp"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0707.1260}{\\emph{An efficient quantum algorithm for the hidden subgroup problem in nil-2 groups}}. Main theorem; extraspecial precursor https://arxiv.org/abs/quant-ph/0701235",
+      "content_text": "An efficient quantum algorithm for the hidden subgroup problem in nil-2 groups. Main theorem; extraspecial precursor https://arxiv.org/abs/quant-ph/0701235",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0707.1260",
+          "title": "An efficient quantum algorithm for the hidden subgroup problem in nil-2 groups",
+          "label_latex": "\\emph{An efficient quantum algorithm for the hidden subgroup problem in nil-2 groups}",
+          "locator_latex": "Main theorem; extraspecial precursor https://arxiv.org/abs/quant-ph/0701235"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-163-citation-00325"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Ivanyos--Sanselme--Santha nilpotency-two HSP algorithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(\\log|G|)",
+    "classical": "|G|^{\\Omega(1)}",
+    "parameter": "group size |G|; hardest oracle subfamilies",
+    "model": "coset-oracle queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial"
+  },
+  "ordinal": 162,
+  "citation_ids": [
+    "entry-163-citation-00325"
+  ]
+}

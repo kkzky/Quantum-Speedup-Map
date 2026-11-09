@@ -1,0 +1,94 @@
+{
+  "id": "entry-138",
+  "number": 138,
+  "slug": "prior-g37",
+  "title": "Fixed-subgraph containment",
+  "title_latex": "Fixed-subgraph containment",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g37",
+  "inventory_ids": [
+    "G37"
+  ],
+  "problem": {
+    "name": "Fixed-subgraph containment",
+    "name_latex": "Fixed-subgraph containment",
+    "statement_latex": "Fix a nonempty graph $H$ with $k$ vertices, $m$ edges and a vertex of degree $d$. Given adjacency queries to an $n$-vertex graph $G$, decide whether $G$ contains a subgraph isomorphic to $H$.",
+    "statement_text": "Fix a nonempty graph $H$ with $k$ vertices, $m$ edges and a vertex of degree $d$. Given adjacency queries to an $n$-vertex graph $G$, decide whether $G$ contains a subgraph isomorphic to $H$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^{2-2/k-t})$ queries by Lee--Magniez--Santha learning graphs, where $t=\\max\\{(k^2-2(m+1))/(k(k+1)(m+1)),(2k-d-3)/(k(d+1)(m-d+2))\\}$. The pattern is constant-sized.",
+      "details_latex": "",
+      "headline_text": "$O(n^{2-2/k-t})$ queries by Lee–Magniez–Santha learning graphs, where $t=\\max\\{(k^2-2(m+1))/(k(k+1)(m+1)),(2k-d-3)/(k(d+1)(m-d+2))\\}$. The pattern is constant-sized.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n^2)$ randomized adjacency queries in the worst case; after acquiring the matrix, classical subgraph algorithms perform the computation.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n^2)$ randomized adjacency queries in the worst case; after acquiring the matrix, classical subgraph algorithms perform the computation.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "fixed-subgraph-learning-graph"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1109.5135}{\\emph{A learning graph based quantum query algorithm for finding constant-size subgraphs}}. Theorem4.4",
+      "content_text": "A learning graph based quantum query algorithm for finding constant-size subgraphs. Theorem4.4",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1109.5135",
+          "title": "A learning graph based quantum query algorithm for finding constant-size subgraphs",
+          "label_latex": "\\emph{A learning graph based quantum query algorithm for finding constant-size subgraphs}",
+          "locator_latex": "Theorem4.4"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-138-citation-00212"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Lee--Magniez--Santha fixed-subgraph learning graph",
+  "plot": {
+    "quantum": "O(n^{2-2/k-t})",
+    "classical": "\\Theta(n^2)",
+    "parameter": "n host vertices; fixed pattern parameters k,m,d and t as defined",
+    "model": "adjacency-matrix queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Omega(n^{2/k+t})",
+    "classical_exponent": 2
+  },
+  "ordinal": 107,
+  "citation_ids": [
+    "entry-138-citation-00212"
+  ]
+}

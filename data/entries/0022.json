@@ -1,73 +1,7 @@
 {
   "id": "entry-022",
-  "number": 22,
-  "ordinal": 22,
+  "type": "redirect",
+  "canonical_id": "entry-008",
   "title_latex": "Set packing",
-  "title": "Set packing",
-  "chapter_id": "chapter-1",
-  "problem": {
-    "name_latex": "Set packing",
-    "name": "Set packing",
-    "statement_latex": "Given $U$, $|U|=n$, a family $\\mathcal F$ of nonempty subsets, and $k$, decide whether there exist $S_1,\\ldots,S_k\\in\\mathcal F$ with $S_i\\cap S_j=\\varnothing$ for $i\\neq j$. Maximizing $k$ selects the largest collection of mutually compatible objects. The family may be implicit, for example objects defined by graph properties.\nThe quantum framework uses QRAM time and its supplied enumeration routine, while explicit-family classical bounds use RAM or Boolean bit complexity.",
-    "statement_text": "Given $U$, $|U|=n$, a family $\\mathcal F$ of nonempty subsets, and $k$, decide whether there exist $S_1,\\ldots,S_k\\in\\mathcal F$ with $S_i\\cap S_j=\\varnothing$ for $i\\neq j$. Maximizing $k$ selects the largest collection of mutually compatible objects. The family may be implicit, for example objects defined by graph properties. The quantum framework uses QRAM time and its supplied enumeration routine, while explicit-family classical bounds use RAM or Boolean bit complexity."
-  },
-  "quantum_speedup": {
-    "quantum": {
-      "headline_latex": "$O^*((2+c)^{n/2})$ for eligible enumeration base $c<2$, Gaspers--Li packing framework.",
-      "headline_text": "$O^*((2+c)^{n/2})$ for eligible enumeration base $c<2$, Gaspers–Li packing framework.",
-      "details_latex": "The hypothesis is a simple branching algorithm that, for every restricted universe $X$, enumerates a representative family in $O^*(c^{|X|})$ time and preserves a nonstraddling feasible packing as specified in Theorem 4. Refined bounds apply when $c\\le1.147899$; near $c=1$ the base approaches $1.7274$. These conditions concern the representation and enumeration of the set family, not just the number of its members.",
-      "details_text": "The hypothesis is a simple branching algorithm that, for every restricted universe $X$, enumerates a representative family in $O^*(c^{|X|})$ time and preserves a nonstraddling feasible packing as specified in Theorem 4. Refined bounds apply when $c\\le1.147899$; near $c=1$ the base approaches $1.7274$. These conditions concern the representation and enumeration of the set family, not just the number of its members."
-    },
-    "classical": {
-      "headline_latex": "$O^*(2^n)$, subset methods for an efficiently represented family.",
-      "headline_text": "$O^*(2^n)$, subset methods for an efficiently represented family.",
-      "details_latex": "The bound includes the required family counting or membership costs. For an explicit family of $m$ sets, construct its conflict graph, with one vertex per set and an edge for each intersecting pair. Maximum independent set gives the stronger bound $\\operatorname{poly}(n,m)2^{O(m\\log\\log m/\\sqrt{\\log m})}$. Thus $m=O(n)$ yields a subexponential comparator in universe size, while a large implicit family retains the stated enumeration-dependent framework comparison.",
-      "details_text": "The bound includes the required family counting or membership costs. For an explicit family of $m$ sets, construct its conflict graph, with one vertex per set and an edge for each intersecting pair. Maximum independent set gives the stronger bound $\\operatorname{poly}(n,m)2^{O(m\\log\\log m/\\sqrt{\\log m})}$. Thus $m=O(n)$ yields a subexponential comparator in universe size, while a large implicit family retains the stated enumeration-dependent framework comparison."
-    }
-  },
-  "labels": {
-    "strength": {
-      "category_id": "strength-polynomial",
-      "color_key": "strengthPolynomial",
-      "description_latex": "Polynomial speedup through a smaller exponential constant when the representative-family hypothesis holds in the unrestricted-family regime. The quantum mechanism is amplitude amplification over partial packings.",
-      "description_text": "Polynomial speedup through a smaller exponential constant when the representative-family hypothesis holds in the unrestricted-family regime. The quantum mechanism is amplitude amplification over partial packings."
-    },
-    "evidence": {
-      "category_id": "evidence-partial",
-      "color_key": "evidencePartial",
-      "description_latex": "Rigorous conditional-on-enumeration upper bound, with partial evidence against the classical universe-size algorithm. Explicit small families have the stronger conflict-graph comparator.",
-      "description_text": "Rigorous conditional-on-enumeration upper bound, with partial evidence against the classical universe-size algorithm. Explicit small families have the stronger conflict-graph comparator."
-    },
-    "hardware": {
-      "category_id": "hardware-superpolynomial",
-      "color_key": "hardwareExponential",
-      "description_latex": "Polynomial subset and feasibility registers require exponential coherently accessible preprocessing data. The reversible implementation of the enumeration and compatibility tests contributes to the gate cost.",
-      "description_text": "Polynomial subset and feasibility registers require exponential coherently accessible preprocessing data. The reversible implementation of the enumeration and compatibility tests contributes to the gate cost."
-    }
-  },
-  "algorithm_items": [
-    {
-      "item_number": 1,
-      "index_label": "22.1",
-      "content_latex": "\\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 4 states the representative-family conditions and the general algorithm; Theorems 5--6 and Corollary 1 give the refined small-$c$ bounds.",
-      "content_text": "Gaspers and Li, Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems (ICALP 2024). Theorem 4 states the representative-family conditions and the general algorithm; Theorems 5–6 and Corollary 1 give the refined small-$c$ bounds.",
-      "citation_ids": [
-        "entry-022-citation-001"
-      ]
-    },
-    {
-      "item_number": 2,
-      "index_label": "22.2",
-      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D, composed with the conflict-graph and cardinality encoding of maximum independent set.",
-      "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and Appendix D, composed with the conflict-graph and cardinality encoding of maximum independent set.",
-      "citation_ids": [
-        "entry-022-citation-002"
-      ]
-    }
-  ],
-  "citation_ids": [
-    "entry-022-citation-001",
-    "entry-022-citation-002"
-  ],
-  "source_latex": "\\entrytitle{22}{Set packing}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{21}\n\\begin{problem}[Set packing]\nGiven $U$, $|U|=n$, a family $\\mathcal F$ of nonempty subsets, and $k$, decide whether there exist $S_1,\\ldots,S_k\\in\\mathcal F$ with $S_i\\cap S_j=\\varnothing$ for $i\\neq j$. Maximizing $k$ selects the largest collection of mutually compatible objects. The family may be implicit, for example objects defined by graph properties.\nThe quantum framework uses QRAM time and its supplied enumeration routine, while explicit-family classical bounds use RAM or Boolean bit complexity.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*((2+c)^{n/2})$ for eligible enumeration base $c<2$, Gaspers--Li packing framework.}\nThe hypothesis is a simple branching algorithm that, for every restricted universe $X$, enumerates a representative family in $O^*(c^{|X|})$ time and preserves a nonstraddling feasible packing as specified in Theorem 4. Refined bounds apply when $c\\le1.147899$; near $c=1$ the base approaches $1.7274$. These conditions concern the representation and enumeration of the set family, not just the number of its members.\n\\complexity{Classical}{$O^*(2^n)$, subset methods for an efficiently represented family.}\nThe bound includes the required family counting or membership costs. For an explicit family of $m$ sets, construct its conflict graph, with one vertex per set and an edge for each intersecting pair. Maximum independent set gives the stronger bound $\\operatorname{poly}(n,m)2^{O(m\\log\\log m/\\sqrt{\\log m})}$. Thus $m=O(n)$ yields a subexponential comparator in universe size, while a large implicit family retains the stated enumeration-dependent framework comparison.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant when the representative-family hypothesis holds in the unrestricted-family regime. The quantum mechanism is amplitude amplification over partial packings.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous conditional-on-enumeration upper bound, with partial evidence against the classical universe-size algorithm. Explicit small families have the stronger conflict-graph comparator.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial subset and feasibility registers require exponential coherently accessible preprocessing data. The reversible implementation of the enumeration and compatibility tests contributes to the gate cost.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{22}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 4 states the representative-family conditions and the general algorithm; Theorems 5--6 and Corollary 1 give the refined small-$c$ bounds.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendix D, composed with the conflict-graph and cardinality encoding of maximum independent set.\n\\end{algorithmindex}"
+  "anchor": "set-packing"
 }

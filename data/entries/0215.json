@@ -1,0 +1,95 @@
+{
+  "id": "entry-215",
+  "number": 215,
+  "slug": "prior-q26",
+  "title": "Boolean-function isomorphism under coordinate permutations",
+  "title_latex": "Boolean-function isomorphism under coordinate permutations",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q26",
+  "inventory_ids": [
+    "Q26"
+  ],
+  "problem": {
+    "name": "Boolean-function isomorphism under coordinate permutations",
+    "name_latex": "Boolean-function isomorphism under coordinate permutations",
+    "statement_latex": "Given oracle access to $f,g:\\{0,1\\}^n\\to\\{0,1\\}$, distinguish whether $g(x)=f(x_{\\pi(1)},\\ldots,x_{\\pi(n)})$ for some permutation $\\pi\\in S_n$ from the case where every such permutation leaves disagreement at least $\\varepsilon$.",
+    "statement_text": "Given oracle access to $f,g:\\{0,1\\}^n\\to\\{0,1\\}$, distinguish whether $g(x)=f(x_{\\pi(1)},\\ldots,x_{\\pi(n)})$ for some permutation $\\pi\\in S_n$ from the case where every such permutation leaves disagreement at least $\\varepsilon$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n\\log n/\\varepsilon)$ queries by Harrow--Lin--Montanaro's sequential-measurement property test.",
+      "details_latex": "",
+      "headline_text": "$O(n\\log n/\\varepsilon)$ queries by Harrow–Lin–Montanaro's sequential-measurement property test.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(2^{n/2}/n^{1/4})$ randomized queries are necessary, and $O(2^{n/2}\\sqrt{n\\log n})$ suffice at constant distance.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(2^{n/2}/n^{1/4})$ randomized queries are necessary, and $O(2^{n/2}\\sqrt{n\\log n})$ suffice at constant distance.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "sequential-measurement-property-testing"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1607.03236}{\\emph{Sequential measurements, disturbance and property testing}}. Theorem2; Boolean-function-isomorphism application.",
+      "content_text": "Sequential measurements, disturbance and property testing. Theorem2; Boolean-function-isomorphism application.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1607.03236",
+          "title": "Sequential measurements, disturbance and property testing",
+          "label_latex": "\\emph{Sequential measurements, disturbance and property testing}",
+          "locator_latex": "Theorem2; Boolean-function-isomorphism application."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-215-citation-00380"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Harrow--Lin--Montanaro sequential-measurement tester",
+  "plot": {
+    "quantum": "O(n\\log n)",
+    "classical": "\\widetilde\\Theta(2^{n/2})",
+    "parameter": "Boolean dimension n; fixed distance epsilon",
+    "model": "function-oracle queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "2^{n/2}/\\operatorname{poly}(n)",
+    "quantum_exponent": 1,
+    "classical_exponent": 0.5
+  },
+  "ordinal": 195,
+  "citation_ids": [
+    "entry-215-citation-00380"
+  ]
+}

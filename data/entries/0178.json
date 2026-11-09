@@ -1,0 +1,104 @@
+{
+  "id": "entry-178",
+  "number": 178,
+  "slug": "prior-a41",
+  "title": "CBC-MAC forgery under superposition access",
+  "title_latex": "CBC-MAC forgery under superposition access",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a41",
+  "inventory_ids": [
+    "A41"
+  ],
+  "problem": {
+    "name": "CBC-MAC forgery under superposition access",
+    "name_latex": "CBC-MAC forgery under superposition access",
+    "statement_latex": "For the fixed-length CBC-MAC construction attacked by Santoli--Schaffner, given coherent access to the tag function, output a fresh message and a valid tag. The block length is $n$ and the underlying block cipher is modeled as an ideal permutation.",
+    "statement_text": "For the fixed-length CBC-MAC construction attacked by Santoli–Schaffner, given coherent access to the tag function, output a fresh message and a valid tag. The block length is $n$ and the underlying block cipher is modeled as an ideal permutation."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "The stated complexity or cryptographic implication provides strong evidence for the separation.",
+      "category_id": "evidence-strong",
+      "description_text": "The stated complexity or cryptographic implication provides strong evidence for the separation."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(n)$ coherent tag queries by the Simon-based forgery, which finds an XOR relation between message blocks.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n)$ coherent tag queries by the Simon-based forgery, which finds an XOR relation between message blocks.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Classical fixed-length CBC-MAC has birthday-scale generic forgery attacks and security bounds, with $O(2^{n/2})$ tag queries for the relevant collision attacks. The bound concerns the specified secure fixed-length construction and message-query model.",
+      "details_latex": "",
+      "headline_text": "Classical fixed-length CBC-MAC has birthday-scale generic forgery attacks and security bounds, with $O(2^{n/2})$ tag queries for the relevant collision attacks. The bound concerns the specified secure fixed-length construction and message-query model.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "simon"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "simon",
+      "label_latex": "Simon period finding and offline Simon",
+      "problem_numbers": [
+        88,
+        89,
+        177
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1603.07856}{\\emph{Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives}}. CBC-MAC forgery section.",
+      "content_text": "Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives. CBC-MAC forgery section.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1603.07856",
+          "title": "Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives",
+          "label_latex": "\\emph{Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives}",
+          "locator_latex": "CBC-MAC forgery section."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-178-citation-00333"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Simon period finding and offline Simon",
+  "plot": {
+    "quantum": "\\operatorname{poly}(n)",
+    "classical": "O(2^{n/2})",
+    "parameter": "block length n; fixed message length",
+    "model": "chosen-message tag queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial in the superposition-query attack model",
+    "classical_exponent": 0.5
+  },
+  "ordinal": 169,
+  "citation_ids": [
+    "entry-178-citation-00333"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "entry-151",
+  "number": 151,
+  "slug": "prior-a07",
+  "title": "Multilinear identity testing over a finite ring",
+  "title_latex": "Multilinear identity testing over a finite ring",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-a07",
+  "inventory_ids": [
+    "A07"
+  ],
+  "problem": {
+    "name": "Multilinear identity testing over a finite ring",
+    "name_latex": "Multilinear identity testing over a finite ring",
+    "statement_latex": "Given a finite ring $R$, an ideal $I$ generated additively by $k$ elements, and oracle access to a multilinear polynomial map $f:R^m\\to R$, decide whether $f$ vanishes on $I^m$. Complexity counts ring and evaluation queries.",
+    "statement_text": "Given a finite ring $R$, an ideal $I$ generated additively by $k$ elements, and oracle access to a multilinear polynomial map $f:R^m\\to R$, decide whether $f$ vanishes on $I^m$. Complexity counts ring and evaluation queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(m(1+\\alpha)^{m/2}k^{m/(m+1)})$ queries by Arvind--Mukhopadhyay when $k\\ge(1+1/\\alpha)^{m+1}$. The quantum walk searches tuples of generating-set combinations.",
+      "details_latex": "",
+      "headline_text": "$O(m(1+\\alpha)^{m/2}k^{m/(m+1)})$ queries by Arvind–Mukhopadhyay when $k\\ge(1+1/\\alpha)^{m+1}$. The quantum walk searches tuples of generating-set combinations.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(4^m m k)$ randomized queries via ring identity testing; direct testing of generator tuples uses $O(k^m)$ evaluations. For fixed $m$, the former is linear in $k$.",
+      "details_latex": "",
+      "headline_text": "$O(4^m m k)$ randomized queries via ring identity testing; direct testing of generator tuples uses $O(k^m)$ evaluations. For fixed $m$, the former is linear in $k$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "ring-identity-quantum-walk"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0807.1412}{\\emph{Quantum Query Complexity of Multilinear Identity Testing}}. Main algorithm theorem; ECCC https://eccc.weizmann.ac.il/report/2008/086/",
+      "content_text": "Quantum Query Complexity of Multilinear Identity Testing. Main algorithm theorem; ECCC https://eccc.weizmann.ac.il/report/2008/086/",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0807.1412",
+          "title": "Quantum Query Complexity of Multilinear Identity Testing",
+          "label_latex": "\\emph{Quantum Query Complexity of Multilinear Identity Testing}",
+          "locator_latex": "Main algorithm theorem; ECCC https://eccc.weizmann.ac.il/report/2008/086/"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-151-citation-00313"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Arvind--Mukhopadhyay multilinear identity test",
+  "plot": {
+    "quantum": "O(m(1+\\alpha)^{m/2}k^{m/(m+1)})",
+    "classical": "O(4^m m k)",
+    "parameter": "k ideal generators; m variables; alpha satisfying the theorem",
+    "model": "ring and evaluation queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Polynomial in k for fixed m and alpha"
+  },
+  "ordinal": 151,
+  "citation_ids": [
+    "entry-151-citation-00313"
+  ]
+}

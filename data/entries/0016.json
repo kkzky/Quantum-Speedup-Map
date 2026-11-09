@@ -1,73 +1,7 @@
 {
   "id": "entry-016",
-  "number": 16,
-  "ordinal": 16,
+  "type": "redirect",
+  "canonical_id": "entry-015",
   "title_latex": "Minimum linear arrangement",
-  "title": "Minimum linear arrangement",
-  "chapter_id": "chapter-1",
-  "problem": {
-    "name_latex": "Minimum linear arrangement",
-    "name": "Minimum linear arrangement",
-    "statement_latex": "For $G=(V,E)$, compute $\\min_\\pi\\sum_{uv\\in E}|\\pi(u)-\\pi(v)|$ over bijections $\\pi:V\\to[n]$. The sum measures total edge length in a linear layout and models total wiring length or aggregate communication distance.\nThe quantum comparison uses QRAM time and the classical comparison uses RAM operations on the graph.",
-    "statement_text": "For $G=(V,E)$, compute $\\min_\\pi\\sum_{uv\\in E}|\\pi(u)-\\pi(v)|$ over bijections $\\pi:V\\to[n]$. The sum measures total edge length in a linear layout and models total wiring length or aggregate communication distance. The quantum comparison uses QRAM time and the classical comparison uses RAM operations on the graph."
-  },
-  "quantum_speedup": {
-    "quantum": {
-      "headline_latex": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
-      "headline_text": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
-      "details_latex": "The sum of edge lengths equals the sum of cut sizes over the prefixes of the ordering. This additive objective fits the ordering recurrence, with polynomial-time evaluation of each transition. The quantum algorithm uses nested minimum finding and coherent access to partially precomputed subset values.",
-      "details_text": "The sum of edge lengths equals the sum of cut sizes over the prefixes of the ordering. This additive objective fits the ordering recurrence, with polynomial-time evaluation of each transition. The quantum algorithm uses nested minimum finding and coherent access to partially precomputed subset values."
-    },
-    "classical": {
-      "headline_latex": "$O^*(2^n)$, subset dynamic programming.",
-      "headline_text": "$O^*(2^n)$, subset dynamic programming.",
-      "details_latex": "For each subset, the recurrence minimizes its accumulated prefix-cut cost over choices of the last vertex. Straightforward implementations include an $O(m2^n)$ bound, with polynomial factors depending on the graph representation, and use exponential memory. Specialized graph classes, including trees, admit faster classical algorithms and are separate input regimes.",
-      "details_text": "For each subset, the recurrence minimizes its accumulated prefix-cut cost over choices of the last vertex. Straightforward implementations include an $O(m2^n)$ bound, with polynomial factors depending on the graph representation, and use exponential memory. Specialized graph classes, including trees, admit faster classical algorithms and are separate input regimes."
-    }
-  },
-  "labels": {
-    "strength": {
-      "category_id": "strength-polynomial",
-      "color_key": "strengthPolynomial",
-      "description_latex": "Polynomial speedup through a smaller exponential constant, obtained from amplitude amplification and quantum minimum finding.",
-      "description_text": "Polynomial speedup through a smaller exponential constant, obtained from amplitude amplification and quantum minimum finding."
-    },
-    "evidence": {
-      "category_id": "evidence-partial",
-      "color_key": "evidencePartial",
-      "description_latex": "Rigorous QRAM upper bound; partial evidence relative to the best general classical exact-algorithm comparison.",
-      "description_text": "Rigorous QRAM upper bound; partial evidence relative to the best general classical exact-algorithm comparison."
-    },
-    "hardware": {
-      "category_id": "hardware-superpolynomial",
-      "color_key": "hardwareExponential",
-      "description_latex": "A subset needs $n$ active qubits and the objective needs $O(\\log(nm))$ bits, with reversible workspace and exponential coherent table storage. Fault tolerance is needed for useful depths.",
-      "description_text": "A subset needs $n$ active qubits and the objective needs $O(\\log(nm))$ bits, with reversible workspace and exponential coherent table storage. Fault tolerance is needed for useful depths."
-    }
-  },
-  "algorithm_items": [
-    {
-      "item_number": 1,
-      "index_label": "16.1",
-      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): additive vertex-ordering recurrence and minimum-linear-arrangement application.",
-      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Corollary 5 and equation (3): additive vertex-ordering recurrence and minimum-linear-arrangement application.",
-      "citation_ids": [
-        "entry-016-citation-001"
-      ]
-    },
-    {
-      "item_number": 2,
-      "index_label": "16.2",
-      "content_latex": "\\href{https://doi.org/10.1007/s00224-011-9312-0}{Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)}. The subset dynamic-programming construction for additive ordering objectives.",
-      "content_text": "Bodlaender et al., A Note on Exact Algorithms for Vertex Ordering Problems on Graphs (2012). The subset dynamic-programming construction for additive ordering objectives.",
-      "citation_ids": [
-        "entry-016-citation-002"
-      ]
-    }
-  ],
-  "citation_ids": [
-    "entry-016-citation-001",
-    "entry-016-citation-002"
-  ],
-  "source_latex": "\\entrytitle{16}{Minimum linear arrangement}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{15}\n\\begin{problem}[Minimum linear arrangement]\nFor $G=(V,E)$, compute $\\min_\\pi\\sum_{uv\\in E}|\\pi(u)-\\pi(v)|$ over bijections $\\pi:V\\to[n]$. The sum measures total edge length in a linear layout and models total wiring length or aggregate communication distance.\nThe quantum comparison uses QRAM time and the classical comparison uses RAM operations on the graph.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.}\nThe sum of edge lengths equals the sum of cut sizes over the prefixes of the ordering. This additive objective fits the ordering recurrence, with polynomial-time evaluation of each transition. The quantum algorithm uses nested minimum finding and coherent access to partially precomputed subset values.\n\\complexity{Classical}{$O^*(2^n)$, subset dynamic programming.}\nFor each subset, the recurrence minimizes its accumulated prefix-cut cost over choices of the last vertex. Straightforward implementations include an $O(m2^n)$ bound, with polynomial factors depending on the graph representation, and use exponential memory. Specialized graph classes, including trees, admit faster classical algorithms and are separate input regimes.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant, obtained from amplitude amplification and quantum minimum finding.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous QRAM upper bound; partial evidence relative to the best general classical exact-algorithm comparison.\n\\dimensionlabel{Hardware}{hardwareExponential} A subset needs $n$ active qubits and the objective needs $O(\\log(nm))$ bits, with reversible workspace and exponential coherent table storage. Fault tolerance is needed for useful depths.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{16}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): additive vertex-ordering recurrence and minimum-linear-arrangement application.\n\\item \\href{https://doi.org/10.1007/s00224-011-9312-0}{Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)}. The subset dynamic-programming construction for additive ordering objectives.\n\\end{algorithmindex}"
+  "anchor": "minimum-linear-arrangement"
 }

@@ -1,0 +1,154 @@
+{
+  "id": "entry-184",
+  "number": 184,
+  "slug": "random-circuit-sampling",
+  "title": "Random circuit sampling",
+  "title_latex": "Random circuit sampling",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "random_circuit_sampling",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Random circuit sampling",
+    "name_latex": "Random circuit sampling",
+    "statement_latex": "Given an $n$-qubit circuit $U$ with $g$ gates from a specified ensemble, sample $x\\in\\{0,1\\}^n$ from $p_U(x)=|\\langle x|U|0^n\\rangle|^2$, exactly or within total variation distance $\\varepsilon$. Geometry, gate distribution, and noise define the instance family. Complexity uses gates and classical sampling time.",
+    "statement_text": "Given an $n$-qubit circuit $U$ with $g$ gates from a specified ensemble, sample $x\\in\\{0,1\\}^n$ from $p_U(x)=|\\langle x|U|0^n\\rangle|^2$, exactly or within total variation distance $\\varepsilon$. Geometry, gate distribution, and noise define the instance family. Complexity uses gates and classical sampling time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Ideal sampling compares polynomial quantum cost with the best applicable exponential or subexponential generic classical simulator.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Ideal sampling compares polynomial quantum cost with the best applicable exponential or subexponential generic classical simulator."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "Polynomial approximate classical sampling implies a polynomial-hierarchy collapse under the corresponding average-case hardness and anticoncentration assumptions.",
+      "category_id": "evidence-strong",
+      "description_text": "Polynomial approximate classical sampling implies a polynomial-hierarchy collapse under the corresponding average-case hardness and anticoncentration assumptions."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "Implemented on superconducting processors, including 53-qubit Sycamore; asymptotic comparisons specify target noise and accuracy.",
+      "category_id": "hardware-small",
+      "description_text": "Implemented on superconducting processors, including 53-qubit Sycamore; asymptotic comparisons specify target noise and accuracy."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(g+n)$ operations per ideal sample by direct circuit execution and measurement. Finite-gate-set compilation adds its precision overhead.",
+      "details_latex": "",
+      "headline_text": "$O(g+n)$ operations per ideal sample by direct circuit execution and measurement. Finite-gate-set compilation adds its precision overhead.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Use the minimum of state-vector simulation $O(g2^n)$, tensor contraction $\\operatorname{poly}(g)2^{O(w)}$ at contraction width $w$, and fixed-algebraic-gate path counting $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ for a sparse Boolean encoding of size $s$ of the required marginal. Sequential conditional probabilities give samples with polynomial overhead. Constant-rate noisy random circuits in the anticoncentration regime admit polynomial-time approximate classical sampling.",
+      "details_latex": "",
+      "headline_text": "Use the minimum of state-vector simulation $O(g2^n)$, tensor contraction $\\operatorname{poly}(g)2^{O(w)}$ at contraction width $w$, and fixed-algebraic-gate path counting $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ for a sparse Boolean encoding of size $s$ of the required marginal. Sequential conditional probabilities give samples with polynomial overhead. Constant-rate noisy random circuits in the anticoncentration regime admit polynomial-time approximate classical sampling.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "random_circuit_execution"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1803.04402}{\\emph{On the complexity and verification of quantum random circuit sampling}}. RCS definition; average-case hardness theorem; verification discussion",
+      "content_text": "On the complexity and verification of quantum random circuit sampling. RCS definition; average-case hardness theorem; verification discussion",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1803.04402",
+          "title": "On the complexity and verification of quantum random circuit sampling",
+          "label_latex": "\\emph{On the complexity and verification of quantum random circuit sampling}",
+          "locator_latex": "RCS definition; average-case hardness theorem; verification discussion"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-184-citation-00386"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://www.nature.com/articles/s41586-019-1666-5}{\\emph{Quantum supremacy using a programmable superconducting processor}}. 53-qubit experiment; supplementary simulation methods",
+      "content_text": "Quantum supremacy using a programmable superconducting processor. 53-qubit experiment; supplementary simulation methods",
+      "links": [
+        {
+          "url": "https://www.nature.com/articles/s41586-019-1666-5",
+          "title": "Quantum supremacy using a programmable superconducting processor",
+          "label_latex": "\\emph{Quantum supremacy using a programmable superconducting processor}",
+          "locator_latex": "53-qubit experiment; supplementary simulation methods"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-184-citation-00387"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0511069}{\\emph{Simulating quantum computation by contracting tensor networks}}. Main circuit-treewidth simulation theorem",
+      "content_text": "Simulating quantum computation by contracting tensor networks. Main circuit-treewidth simulation theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0511069",
+          "title": "Simulating quantum computation by contracting tensor networks",
+          "label_latex": "\\emph{Simulating quantum computation by contracting tensor networks}",
+          "locator_latex": "Main circuit-treewidth simulation theorem"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-184-citation-00388"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1; Appendix D; sparse fixed-width counting",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1; Appendix D; sparse fixed-width counting",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1; Appendix D; sparse fixed-width counting"
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
+      "citation_ids": [
+        "entry-184-citation-00389"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2211.03999}{\\emph{A polynomial-time classical algorithm for noisy random circuit sampling}}. Main theorem for constant-rate noise in the anticoncentration regime",
+      "content_text": "A polynomial-time classical algorithm for noisy random circuit sampling. Main theorem for constant-rate noise in the anticoncentration regime",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2211.03999",
+          "title": "A polynomial-time classical algorithm for noisy random circuit sampling",
+          "label_latex": "\\emph{A polynomial-time classical algorithm for noisy random circuit sampling}",
+          "locator_latex": "Main theorem for constant-rate noise in the anticoncentration regime"
+        }
+      ],
+      "item_number": 5,
+      "index_label": "",
+      "citation_ids": [
+        "entry-184-citation-00390"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Random-circuit execution",
+  "ordinal": 200,
+  "citation_ids": [
+    "entry-184-citation-00386",
+    "entry-184-citation-00387",
+    "entry-184-citation-00388",
+    "entry-184-citation-00389",
+    "entry-184-citation-00390"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "entry-190",
+  "number": 190,
+  "slug": "equality-quantum-fingerprinting",
+  "title": "Equality in simultaneous-message communication",
+  "title_latex": "Equality in simultaneous-message communication",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "equality_quantum_fingerprinting",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Equality in simultaneous-message communication",
+    "name_latex": "Equality in simultaneous-message communication",
+    "statement_latex": "Alice receives $x\\in\\{0,1\\}^n$ and Bob receives $y\\in\\{0,1\\}^n$. Each sends one message to a referee deciding $x=y$ with error at most $1/3$. The senders have independent private randomness and no shared random key or prior entanglement. Complexity counts transmitted bits or qubits.",
+    "statement_text": "Alice receives $x\\in\\{0,1\\}^n$ and Bob receives $y\\in\\{0,1\\}^n$. Each sends one message to a referee deciding $x=y$ with error at most $1/3$. The senders have independent private randomness and no shared random key or prior entanglement. Complexity counts transmitted bits or qubits."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "$\\Theta(\\sqrt n/\\log n)$ reduction in communication, conventionally called an exponential separation in message length.",
+      "category_id": "strength-polynomial",
+      "description_text": "$\\Theta(\\sqrt n/\\log n)$ reduction in communication, conventionally called an exponential separation in message length."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "Matching classical and quantum communication bounds hold without shared randomness or entanglement.",
+      "category_id": "evidence-proved",
+      "description_text": "Matching classical and quantum communication bounds hold without shared randomness or entanglement."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "$O(\\log n)$ transmitted qubits; preparation reads the classical input. Optical protocols implement related encodings.",
+      "category_id": "hardware-small",
+      "description_text": "$O(\\log n)$ transmitted qubits; preparation reads the classical input. Optical protocols implement related encodings."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(\\log n)$ qubits by quantum fingerprinting. An error-correcting code maps inputs to quantum states; the referee uses a SWAP test. Error $\\delta$ costs $O(\\log n\\log(1/\\delta))$ qubits.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\log n)$ qubits by quantum fingerprinting. An error-correcting code maps inputs to quantum states; the referee uses a SWAP test. Error $\\delta$ costs $O(\\log n\\log(1/\\delta))$ qubits.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(\\sqrt n)$ bits for bounded-error private-coin simultaneous-message protocols. Classical fingerprints sample codeword positions; matching lower bounds apply in the same model.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\sqrt n)$ bits for bounded-error private-coin simultaneous-message protocols. Classical fingerprints sample codeword positions; matching lower bounds apply in the same model.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum_fingerprinting"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0102001}{\\emph{Quantum fingerprinting}}. Fingerprint states, SWAP test, and simultaneous-message equality bounds",
+      "content_text": "Quantum fingerprinting. Fingerprint states, SWAP test, and simultaneous-message equality bounds",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0102001",
+          "title": "Quantum fingerprinting",
+          "label_latex": "\\emph{Quantum fingerprinting}",
+          "locator_latex": "Fingerprint states, SWAP test, and simultaneous-message equality bounds"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-190-citation-00410"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum fingerprinting",
+  "plot": {
+    "quantum": "\\Theta(\\log n)",
+    "classical": "\\Theta(\\sqrt n)",
+    "parameter": "$n$ is each party's input length.",
+    "model": "Private-coin simultaneous messages",
+    "quantum_kind": "logarithmic",
+    "classical_kind": "polynomial",
+    "quantum_exponent": null,
+    "classical_exponent": 0.5,
+    "gain": "\\Theta(\\sqrt n/\\log n)"
+  },
+  "ordinal": 206,
+  "citation_ids": [
+    "entry-190-citation-00410"
+  ]
+}

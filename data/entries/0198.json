@@ -1,0 +1,95 @@
+{
+  "id": "entry-198",
+  "number": 198,
+  "slug": "prior-q01",
+  "title": "Deutsch–Jozsa promise problem",
+  "title_latex": "Deutsch--Jozsa promise problem",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q01",
+  "inventory_ids": [
+    "Q01"
+  ],
+  "problem": {
+    "name": "Deutsch–Jozsa promise problem",
+    "name_latex": "Deutsch--Jozsa promise problem",
+    "statement_latex": "Given oracle access to $f:\\{0,1\\}^n\\to\\{0,1\\}$, promised to be constant or balanced, decide which case holds. The exact and bounded-error query models give different comparisons.",
+    "statement_text": "Given oracle access to $f:\\{0,1\\}^n\\to\\{0,1\\}$, promised to be constant or balanced, decide which case holds. The exact and bounded-error query models give different comparisons."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential to polynomial for exact worst-case decision; constant-error randomized testing has constant query complexity.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential to polynomial for exact worst-case decision; constant-error randomized testing has constant query complexity."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "The transform circuit uses $O(n)$ logical qubits and $O(n)$ elementary gates around its oracle calls; implementing the oracle determines the full device cost. Small circuit demonstrations are feasible.",
+      "category_id": "hardware-small",
+      "description_text": "The transform circuit uses $O(n)$ logical qubits and $O(n)$ elementary gates around its oracle calls; implementing the oracle determines the full device cost. Small circuit demonstrations are feasible."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "One exact oracle query and $O(n)$ additional gates by the Deutsch--Jozsa Hadamard-transform circuit.",
+      "details_latex": "",
+      "headline_text": "One exact oracle query and $O(n)$ additional gates by the Deutsch–Jozsa Hadamard-transform circuit.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$2^{n-1}+1$ worst-case queries for exact classical decision; bounded-error randomized testing uses $O(1)$ samples at constant confidence.",
+      "details_latex": "",
+      "headline_text": "$2^{n-1}+1$ worst-case queries for exact classical decision; bounded-error randomized testing uses $O(1)$ samples at constant confidence.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "deutsch-jozsa"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://doi.org/10.1098/rspa.1992.0167}{\\emph{Rapid solution of problems by quantum computation}}. Main algorithm, pp.553–558",
+      "content_text": "Rapid solution of problems by quantum computation. Main algorithm, pp.553–558",
+      "links": [
+        {
+          "url": "https://doi.org/10.1098/rspa.1992.0167",
+          "title": "Rapid solution of problems by quantum computation",
+          "label_latex": "\\emph{Rapid solution of problems by quantum computation}",
+          "locator_latex": "Main algorithm, pp.553–558"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-198-citation-00375"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Deutsch--Jozsa algorithm",
+  "plot": {
+    "quantum": "1",
+    "classical": "2^{n-1}+1",
+    "parameter": "n input bits; exact decision",
+    "model": "worst-case exact function queries",
+    "quantum_kind": "constant",
+    "classical_kind": "exponential",
+    "gain": "2^{\\Theta(n)}\\text{ for exact decision}",
+    "quantum_exponent": 0,
+    "classical_exponent": 1
+  },
+  "ordinal": 190,
+  "citation_ids": [
+    "entry-198-citation-00375"
+  ]
+}

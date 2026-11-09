@@ -1,0 +1,113 @@
+{
+  "id": "entry-203",
+  "number": 203,
+  "slug": "prior-q10",
+  "title": "Search with wildcards",
+  "title_latex": "Search with wildcards",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q10",
+  "inventory_ids": [
+    "Q10"
+  ],
+  "problem": {
+    "name": "Search with wildcards",
+    "name_latex": "Search with wildcards",
+    "statement_latex": "An unknown string $x\\in\\{0,1\\}^n$ is accessed through queries $(S,y)$, where $S\\subseteq[n]$ and $y\\in\\{0,1\\}^{S}$, returning whether $x|_S=y$. Recover $x$ exactly with bounded error.",
+    "statement_text": "An unknown string $x\\in\\{0,1\\}^n$ is accessed through queries $(S,y)$, where $S\\subseteq[n]$ and $y\\in\\{0,1\\}^{S}$, returning whether $x|_S=y$. Recover $x$ exactly with bounded error."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(\\sqrt n)$ queries by the adversary-bound learning method; Ambainis--Montanaro give the earlier constructive $O(\\sqrt n\\log n)$ algorithm.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\sqrt n)$ queries by the adversary-bound learning method; Ambainis–Montanaro give the earlier constructive $O(\\sqrt n\\log n)$ algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ wildcard queries in the worst case; singleton queries recover all bits.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n)$ wildcard queries in the worst case; singleton queries recover all bits.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "wildcard-quantum-learning"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1210.1148}{\\emph{Quantum algorithms for search with wildcards and combinatorial group testing}}. Wildcard algorithm; tight improvement summarized in TQC2026.3",
+      "content_text": "Quantum algorithms for search with wildcards and combinatorial group testing. Wildcard algorithm; tight improvement summarized in TQC2026.3",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1210.1148",
+          "title": "Quantum algorithms for search with wildcards and combinatorial group testing",
+          "label_latex": "\\emph{Quantum algorithms for search with wildcards and combinatorial group testing}",
+          "locator_latex": "Wildcard algorithm; tight improvement summarized in TQC2026.3"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-203-citation-00066"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1311.6777}{\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}}. Wildcard-search consequence of the adversary algorithm",
+      "content_text": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound. Wildcard-search consequence of the adversary algorithm",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1311.6777",
+          "title": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound",
+          "label_latex": "\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}",
+          "locator_latex": "Wildcard-search consequence of the adversary algorithm"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-203-citation-00067"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Ambainis--Montanaro and Belovs wildcard learning",
+  "plot": {
+    "quantum": "\\Theta(\\sqrt n)",
+    "classical": "\\Theta(n)",
+    "parameter": "hidden-string length n",
+    "model": "wildcard-equality queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Theta(\\sqrt n)",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 26,
+  "citation_ids": [
+    "entry-203-citation-00066",
+    "entry-203-citation-00067"
+  ]
+}

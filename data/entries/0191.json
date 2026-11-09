@@ -1,0 +1,111 @@
+{
+  "id": "entry-191",
+  "number": 191,
+  "slug": "hidden-matching-communication",
+  "title": "Hidden matching in one-way communication",
+  "title_latex": "Hidden matching in one-way communication",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "hidden_matching_communication",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Hidden matching in one-way communication",
+    "name_latex": "Hidden matching in one-way communication",
+    "statement_latex": "Alice holds $x\\in\\{0,1\\}^n$ and Bob a perfect matching $M$ on $[n]$. After one message from Alice, Bob outputs an edge $(i,j)\\in M$ and the bit $x_i\\oplus x_j$, with success at least $2/3$. Complexity counts one-way communicated bits or qubits.",
+    "statement_text": "Alice holds $x\\in\\{0,1\\}^n$ and Bob a perfect matching $M$ on $[n]$. After one message from Alice, Bob outputs an edge $(i,j)\\in M$ and the bit $x_i\\oplus x_j$, with success at least $2/3$. Complexity counts one-way communicated bits or qubits."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "$\\Theta(\\sqrt n/\\log n)$ communication reduction against the public-coin classical optimum.",
+      "category_id": "strength-polynomial",
+      "description_text": "$\\Theta(\\sqrt n/\\log n)$ communication reduction against the public-coin classical optimum."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The classical lower bound holds even with shared randomness.",
+      "category_id": "evidence-proved",
+      "description_text": "The classical lower bound holds even with shared randomness."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "$\\log_2n$ transmitted qubits ideally; coherent-state optical variants have experimental demonstrations.",
+      "category_id": "hardware-small",
+      "description_text": "$\\log_2n$ transmitted qubits ideally; coherent-state optical variants have experimental demonstrations."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\lceil\\log_2n\\rceil$ qubits with exact success. Alice sends $n^{-1/2}\\sum_i(-1)^{x_i}|i\\rangle$; Bob measures in the basis $(|i\\rangle\\pm|j\\rangle)/\\sqrt2$ for edges in $M$.",
+      "details_latex": "",
+      "headline_text": "$\\lceil\\log_2n\\rceil$ qubits with exact success. Alice sends $n^{-1/2}\\sum_i(-1)^{x_i}|i\\rangle$; Bob measures in the basis $(|i\\rangle\\pm|j\\rangle)/\\sqrt2$ for edges in $M$.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(\\sqrt n)$ randomized classical bits are necessary. Shared randomness enables a matching $O(\\sqrt n)$ birthday-paradox protocol; sending sampled indices explicitly costs $O(\\sqrt n\\log n)$ with private randomness.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(\\sqrt n)$ randomized classical bits are necessary. Shared randomness enables a matching $O(\\sqrt n)$ birthday-paradox protocol; sending sampled indices explicitly costs $O(\\sqrt n\\log n)$ with private randomness.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "hidden_matching_protocol"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://webee.technion.ac.il/people/zivby/papers/qcc/qcc.journal.pdf}{\\emph{Exponential Separation of Quantum and Classical One-Way Communication Complexity}}. Hidden Matching relation; quantum protocol; randomized classical lower bound",
+      "content_text": "Exponential Separation of Quantum and Classical One-Way Communication Complexity. Hidden Matching relation; quantum protocol; randomized classical lower bound",
+      "links": [
+        {
+          "url": "https://webee.technion.ac.il/people/zivby/papers/qcc/qcc.journal.pdf",
+          "title": "Exponential Separation of Quantum and Classical One-Way Communication Complexity",
+          "label_latex": "\\emph{Exponential Separation of Quantum and Classical One-Way Communication Complexity}",
+          "locator_latex": "Hidden Matching relation; quantum protocol; randomized classical lower bound"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-191-citation-00411"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://www.nature.com/articles/s41467-019-12139-z}{\\emph{Experimental demonstration of quantum advantage for one-way communication complexity surpassing best-known classical protocol}}. Hidden Matching and Sampling Matching protocols; optical experiment",
+      "content_text": "Experimental demonstration of quantum advantage for one-way communication complexity surpassing best-known classical protocol. Hidden Matching and Sampling Matching protocols; optical experiment",
+      "links": [
+        {
+          "url": "https://www.nature.com/articles/s41467-019-12139-z",
+          "title": "Experimental demonstration of quantum advantage for one-way communication complexity surpassing best-known classical protocol",
+          "label_latex": "\\emph{Experimental demonstration of quantum advantage for one-way communication complexity surpassing best-known classical protocol}",
+          "locator_latex": "Hidden Matching and Sampling Matching protocols; optical experiment"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-191-citation-00412"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Hidden Matching quantum communication protocol",
+  "plot": {
+    "quantum": "O(\\log n)",
+    "classical": "\\Theta(\\sqrt n)",
+    "parameter": "$n$ is the input length and matching vertex count.",
+    "model": "One-way communication",
+    "quantum_kind": "logarithmic",
+    "classical_kind": "polynomial",
+    "quantum_exponent": null,
+    "classical_exponent": 0.5,
+    "gain": "\\Theta(\\sqrt n/\\log n)"
+  },
+  "ordinal": 207,
+  "citation_ids": [
+    "entry-191-citation-00411",
+    "entry-191-citation-00412"
+  ]
+}

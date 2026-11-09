@@ -1,0 +1,84 @@
+{
+  "id": "entry-162",
+  "number": 162,
+  "slug": "prior-a19",
+  "title": "Hidden subgroups of selected semidirect-product groups",
+  "title_latex": "Hidden subgroups of selected semidirect-product groups",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a19",
+  "inventory_ids": [
+    "A19"
+  ],
+  "problem": {
+    "name": "Hidden subgroups of selected semidirect-product groups",
+    "name_latex": "Hidden subgroups of selected semidirect-product groups",
+    "statement_latex": "Given a known finite group $G=A\\rtimes B$ from the families in Bacon--Childs--van Dam and an oracle constant and distinct on left cosets of a hidden subgroup $H$, output generators of $H$. Families include specified metacyclic groups and $(\\mathbb Z_p)^r\\rtimes\\mathbb Z_p$ for fixed $r$.",
+    "statement_text": "Given a known finite group $G=A\\rtimes B$ from the families in Bacon–Childs–van Dam and an oracle constant and distinct on left cosets of a hidden subgroup $H$, output generators of $H$. Families include specified metacyclic groups and $(\\mathbb Z_p)^r\\rtimes\\mathbb Z_p$ for fixed $r$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log|G|)$ time when the associated matrix-sum problem has the efficient solution proved for the selected family; the algorithm implements the optimal coset-state measurement.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(\\log|G|)$ time when the associated matrix-sum problem has the efficient solution proved for the selected family; the algorithm implements the optimal coset-state measurement.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Generic coset-label sampling and collision search use polynomially many operations in $|G|$; the included abelian hidden-subgroup cases have exponential classical query lower bounds in $\\log|G|$.",
+      "details_latex": "",
+      "headline_text": "Generic coset-label sampling and collision search use polynomially many operations in $|G|$; the included abelian hidden-subgroup cases have exponential classical query lower bounds in $\\log|G|$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "semidirect-hsp-pgm"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0504083}{\\emph{From optimal measurement to efficient quantum algorithms for the hidden subgroup problem over semidirect product groups}}. Main metacyclic and fixed-r semidirect-product results.",
+      "content_text": "From optimal measurement to efficient quantum algorithms for the hidden subgroup problem over semidirect product groups. Main metacyclic and fixed-r semidirect-product results.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0504083",
+          "title": "From optimal measurement to efficient quantum algorithms for the hidden subgroup problem over semidirect product groups",
+          "label_latex": "\\emph{From optimal measurement to efficient quantum algorithms for the hidden subgroup problem over semidirect product groups}",
+          "locator_latex": "Main metacyclic and fixed-r semidirect-product results."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-162-citation-00324"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Bacon--Childs--van Dam semidirect-product HSP algorithm",
+  "ordinal": 161,
+  "citation_ids": [
+    "entry-162-citation-00324"
+  ]
+}

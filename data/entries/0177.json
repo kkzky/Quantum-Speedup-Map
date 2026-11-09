@@ -1,0 +1,105 @@
+{
+  "id": "entry-177",
+  "number": 177,
+  "slug": "prior-a40",
+  "title": "Distinguishing three-round Feistel networks",
+  "title_latex": "Distinguishing three-round Feistel networks",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a40",
+  "inventory_ids": [
+    "A40"
+  ],
+  "problem": {
+    "name": "Distinguishing three-round Feistel networks",
+    "name_latex": "Distinguishing three-round Feistel networks",
+    "statement_latex": "Given coherent chosen-plaintext access to a $2n$-bit permutation, distinguish a three-round Feistel network built from independent random round functions from a uniformly random permutation. Complexity counts superposition oracle calls.",
+    "statement_text": "Given coherent chosen-plaintext access to a $2n$-bit permutation, distinguish a three-round Feistel network built from independent random round functions from a uniformly random permutation. Complexity counts superposition oracle calls."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n)$ calls by Santoli--Schaffner, who derive a periodic Boolean-vector function and apply Simon's algorithm.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ calls by Santoli–Schaffner, who derive a periodic Boolean-vector function and apply Simon's algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(2^{n/2})$ classical queries in the birthday regime for distinguishing three-round random Feistel from a random permutation.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(2^{n/2})$ classical queries in the birthday regime for distinguishing three-round random Feistel from a random permutation.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "simon"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "simon",
+      "label_latex": "Simon period finding and offline Simon",
+      "problem_numbers": [
+        88,
+        89,
+        178
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1603.07856}{\\emph{Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives}}. Three-round Feistel distinguisher section.",
+      "content_text": "Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives. Three-round Feistel distinguisher section.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1603.07856",
+          "title": "Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives",
+          "label_latex": "\\emph{Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives}",
+          "locator_latex": "Three-round Feistel distinguisher section."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-177-citation-00332"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Simon period finding and offline Simon",
+  "plot": {
+    "quantum": "O(n)",
+    "classical": "\\Theta(2^{n/2})",
+    "parameter": "half-block length n",
+    "model": "chosen-plaintext oracle queries; coherent on the quantum side",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "2^{n/2}/n",
+    "quantum_exponent": 1,
+    "classical_exponent": 0.5
+  },
+  "ordinal": 168,
+  "citation_ids": [
+    "entry-177-citation-00332"
+  ]
+}

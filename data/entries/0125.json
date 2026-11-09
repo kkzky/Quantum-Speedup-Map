@@ -1,0 +1,128 @@
+{
+  "id": "entry-125",
+  "number": 125,
+  "slug": "prior-g20",
+  "title": "Run-length Burrows–Wheeler transform",
+  "title_latex": "Run-length Burrows--Wheeler transform",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g20",
+  "inventory_ids": [
+    "G20"
+  ],
+  "problem": {
+    "name": "Run-length Burrows–Wheeler transform",
+    "name_latex": "Run-length Burrows--Wheeler transform",
+    "statement_latex": "Given a string $S\\in\\Sigma^n$ with a unique end marker, output the run-length encoding of its Burrows--Wheeler transform, containing $r$ runs. Complexity counts indexed character queries and time.",
+    "statement_text": "Given a string $S\\in\\Sigma^n$ with a unique end marker, output the run-length encoding of its Burrows–Wheeler transform, containing $r$ runs. Complexity counts indexed character queries and time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt{nr})$ time by the Gibney--Thankachan compressibility-aware quantum construction.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt{nr})$ time by the Gibney–Thankachan compressibility-aware quantum construction.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde O(n)$ time by classical suffix sorting and Burrows--Wheeler construction; reading all characters takes $\\Theta(n)$ queries.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n)$ time by classical suffix sorting and Burrows–Wheeler construction; reading all characters takes $\\Theta(n)$ queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-compressed-bwt",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2302.07235}{\\emph{Compressibility-Aware Quantum Algorithms on Strings}}. RL-BWT construction result",
+      "content_text": "Compressibility-Aware Quantum Algorithms on Strings. RL-BWT construction result",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2302.07235",
+          "title": "Compressibility-Aware Quantum Algorithms on Strings",
+          "label_latex": "\\emph{Compressibility-Aware Quantum Algorithms on Strings}",
+          "locator_latex": "RL-BWT construction result"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-125-citation-00198"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Gibney--Thankachan compressibility-aware string algorithms; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt{nr})",
+    "classical": "\\widetilde\\Theta(n)",
+    "parameter": "length n and BWT run count r",
+    "model": "random-access time and character queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt{n/r})"
+  },
+  "ordinal": 95,
+  "citation_ids": [
+    "entry-125-citation-00198"
+  ]
+}

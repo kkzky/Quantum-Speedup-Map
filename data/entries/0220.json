@@ -1,0 +1,114 @@
+{
+  "id": "entry-220",
+  "number": 220,
+  "slug": "prior-q34",
+  "title": "Identity and uniformity testing of finite distributions",
+  "title_latex": "Identity and uniformity testing of finite distributions",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q34",
+  "inventory_ids": [
+    "Q34",
+    "Q35"
+  ],
+  "problem": {
+    "name": "Identity and uniformity testing of finite distributions",
+    "name_latex": "Identity and uniformity testing of finite distributions",
+    "statement_latex": "\\textbf{Uniformity testing of a finite distribution.} Given coherent access to a classical sampler for $p$ on $[N]$, distinguish $p=u_N$ from $\\|p-u_N\\|_1\\ge\\varepsilon$, where $u_N(i)=1/N$. Classical access uses ordinary independent samples.\n\n\\textbf{Identity testing of a finite distribution.} Given a known distribution $q$ on $[N]$ and coherent sampler access to $p$, distinguish $p=q$ from $\\|p-q\\|_1\\ge\\varepsilon$. The known probabilities of $q$ can be evaluated as required by the reduction.",
+    "statement_text": "Uniformity testing of a finite distribution. Given coherent access to a classical sampler for $p$ on $[N]$, distinguish $p=u_N$ from $\\|p-u_N\\|_1\\ge\\varepsilon$, where $u_N(i)=1/N$. Classical access uses ordinary independent samples. Identity testing of a finite distribution. Given a known distribution $q$ on $[N]$ and coherent sampler access to $p$, distinguish $p=q$ from $\\|p-q\\|_1\\ge\\varepsilon$. The known probabilities of $q$ can be evaluated as required by the reduction."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "\\textbf{Uniformity testing of a finite distribution.} $O(N^{1/3}/\\varepsilon^2)$ coherent sampler queries by Bravyi--Harrow--Hassidim and Chakraborty--Fischer--Matsliah--de Wolf; the $N^{1/3}$ dependence is optimal at constant distance.",
+      "details_latex": "\\textbf{Identity testing of a finite distribution.} $O(N^{1/3}\\log^2N\\log\\log N/\\varepsilon^5)$ queries by Chakraborty--Fischer--Matsliah--de Wolf via reduction to uniformity testing.",
+      "headline_text": "Uniformity testing of a finite distribution. $O(N^{1/3}/\\varepsilon^2)$ coherent sampler queries by Bravyi–Harrow–Hassidim and Chakraborty–Fischer–Matsliah–de Wolf; the $N^{1/3}$ dependence is optimal at constant distance.",
+      "details_text": "Identity testing of a finite distribution. $O(N^{1/3}\\log^2N\\log\\log N/\\varepsilon^5)$ queries by Chakraborty–Fischer–Matsliah–de Wolf via reduction to uniformity testing."
+    },
+    "classical": {
+      "headline_latex": "\\textbf{Uniformity testing of a finite distribution.} $\\Theta(\\sqrt N/\\varepsilon^2)$ samples by collision or chi-square uniformity testers in the standard nondegenerate range.",
+      "details_latex": "\\textbf{Identity testing of a finite distribution.} $\\Theta(\\sqrt N/\\varepsilon^2)$ samples in the worst case over known reference distributions, with sharper instance-dependent bounds for a specified $q$.",
+      "headline_text": "Uniformity testing of a finite distribution. $\\Theta(\\sqrt N/\\varepsilon^2)$ samples by collision or chi-square uniformity testers in the standard nondegenerate range.",
+      "details_text": "Identity testing of a finite distribution. $\\Theta(\\sqrt N/\\varepsilon^2)$ samples in the worst case over known reference distributions, with sharper instance-dependent bounds for a specified $q$."
+    }
+  },
+  "algorithm_ids": [
+    "quantum-distribution-identity-testing"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0907.3920}{\\emph{Quantum algorithms for testing properties of distributions}}. Uniformity algorithm; improved precision in arXiv:1005.0523 Section3.1.",
+      "content_text": "Quantum algorithms for testing properties of distributions. Uniformity algorithm; improved precision in arXiv:1005.0523 Section3.1.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0907.3920",
+          "title": "Quantum algorithms for testing properties of distributions",
+          "label_latex": "\\emph{Quantum algorithms for testing properties of distributions}",
+          "locator_latex": "Uniformity algorithm; improved precision in arXiv:1005.0523 Section3.1."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-220-citation-00087"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1005.0523}{\\emph{New Results on Quantum Property Testing}}. Theorem1.1, Section3.2.",
+      "content_text": "New Results on Quantum Property Testing. Theorem1.1, Section3.2.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1005.0523",
+          "title": "New Results on Quantum Property Testing",
+          "label_latex": "\\emph{New Results on Quantum Property Testing}",
+          "locator_latex": "Theorem1.1, Section3.2."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-220-citation-00088"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum finite-distribution identity and uniformity testing",
+  "plot": {
+    "quantum": "\\Theta(N^{1/3})",
+    "classical": "\\Theta(N^{1/2})",
+    "parameter": "domain size N; fixed distance epsilon",
+    "model": "coherent sampler queries versus independent samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Theta(N^{1/6})",
+    "quantum_exponent": 0.3333333333333333,
+    "classical_exponent": 0.5
+  },
+  "ordinal": 40,
+  "citation_ids": [
+    "entry-220-citation-00087",
+    "entry-220-citation-00088"
+  ]
+}

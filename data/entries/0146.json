@@ -1,0 +1,149 @@
+{
+  "id": "entry-146",
+  "number": 146,
+  "slug": "prior-a01",
+  "title": "Finite abelian-group decomposition",
+  "title_latex": "Finite abelian-group decomposition",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a01",
+  "inventory_ids": [
+    "A01"
+  ],
+  "problem": {
+    "name": "Finite abelian-group decomposition",
+    "name_latex": "Finite abelian-group decomposition",
+    "statement_latex": "Given generators and uniquely encoded reversible group operations for a finite abelian group $G$, output elements $g_1,\\ldots,g_r$ and orders $d_1,\\ldots,d_r$ with $G=\\langle g_1\\rangle\\times\\cdots\\times\\langle g_r\\rangle$ and $|g_i|=d_i$. Let $n$ bound the encoding length and $\\log_2|G|$.",
+    "statement_text": "Given generators and uniquely encoded reversible group operations for a finite abelian group $G$, output elements $g_1,\\ldots,g_r$ and orders $d_1,\\ldots,d_r$ with $G=\\langle g_1\\rangle\\times\\cdots\\times\\langle g_r\\rangle$ and $|g_i|=d_i$. Let $n$ bound the encoding length and $\\log_2|G|$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The Luo--Li--Le Gall implementation uses $O(n)$ logical qubits and $\\widetilde O(n^{5/2}T_{\\rm op})$ total quantum gates, with the circuit repetitions specified above.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The Luo–Li–Le Gall implementation uses $O(n)$ logical qubits and $\\widetilde O(n^{5/2}T_{\\rm op})$ total quantum gates, with the circuit repetitions specified above."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(n)$ time by Cheung--Mosca. Luo--Li--Le Gall improve the implementation: for operation cost $T_{\\rm op}=\\Omega(\\sqrt n)$, at most $O(\\sqrt n)$ distinct circuits of size $\\widetilde O(nT_{\\rm op})$, each repeated $O(n)$ times, with $O(n)$ qubits and polynomial classical postprocessing.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n)$ time by Cheung–Mosca. Luo–Li–Le Gall improve the implementation: for operation cost $T_{\\rm op}=\\Omega(\\sqrt n)$, at most $O(\\sqrt n)$ distinct circuits of size $\\widetilde O(nT_{\\rm op})$, each repeated $O(n)$ times, with $O(n)$ qubits and polynomial classical postprocessing.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(|G|^{1/2})$ generic group operations by Sutherland's Monte Carlo structure algorithm, with representation-dependent bit costs. Groups supplied with an explicit decomposition admit faster classical processing.",
+      "details_latex": "",
+      "headline_text": "$O(|G|^{1/2})$ generic group operations by Sutherland's Monte Carlo structure algorithm, with representation-dependent bit costs. Groups supplied with an explicit decomposition admit faster classical processing.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "abelian-group-decomposition",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        147,
+        149,
+        150,
+        152,
+        154,
+        229,
+        193
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2609.36480}{\\emph{Decomposing Finite Abelian Groups; Improved Quantum Algorithms for Black-Box Abelian Group Decomposition}}. 2026 Theorem 1.1 and Section 5; original: https://arxiv.org/abs/cs/0101004",
+      "content_text": "Decomposing Finite Abelian Groups; Improved Quantum Algorithms for Black-Box Abelian Group Decomposition. 2026 Theorem 1.1 and Section 5; original: https://arxiv.org/abs/cs/0101004",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2609.36480",
+          "title": "Decomposing Finite Abelian Groups; Improved Quantum Algorithms for Black-Box Abelian Group Decomposition",
+          "label_latex": "\\emph{Decomposing Finite Abelian Groups; Improved Quantum Algorithms for Black-Box Abelian Group Decomposition}",
+          "locator_latex": "2026 Theorem 1.1 and Section 5; original: https://arxiv.org/abs/cs/0101004"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-146-citation-00305"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0809.3413}{\\emph{Structure computation and discrete logarithms in finite abelian p-groups}}. Monte Carlo structure-computation theorem",
+      "content_text": "Structure computation and discrete logarithms in finite abelian p-groups. Monte Carlo structure-computation theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0809.3413",
+          "title": "Structure computation and discrete logarithms in finite abelian p-groups",
+          "label_latex": "\\emph{Structure computation and discrete logarithms in finite abelian p-groups}",
+          "locator_latex": "Monte Carlo structure-computation theorem"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-146-citation-00306"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/cs/0101004}{\\emph{Decomposing finite abelian groups}}. Decomposition algorithm",
+      "content_text": "Decomposing finite abelian groups. Decomposition algorithm",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/cs/0101004",
+          "title": "Decomposing finite abelian groups",
+          "label_latex": "\\emph{Decomposing finite abelian groups}",
+          "locator_latex": "Decomposition algorithm"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-146-citation-00307"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Cheung--Mosca and Luo--Li--Le Gall abelian-group decomposition; Shor order finding and discrete logarithm",
+  "plot": {
+    "quantum": "\\operatorname{poly}(n)",
+    "classical": "O(2^{n/2})",
+    "parameter": "n=log_2|G|, with comparable encoding length",
+    "model": "generic group operations and polynomial-cost reversible implementations",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial in the generic representation",
+    "classical_exponent": 0.5
+  },
+  "ordinal": 146,
+  "citation_ids": [
+    "entry-146-citation-00305",
+    "entry-146-citation-00306",
+    "entry-146-citation-00307"
+  ]
+}

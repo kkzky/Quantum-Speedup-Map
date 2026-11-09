@@ -1,0 +1,139 @@
+{
+  "id": "entry-130",
+  "number": 130,
+  "slug": "prior-g26",
+  "title": "Increasing subsequence of length k",
+  "title_latex": "Increasing subsequence of length $k$",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g26",
+  "inventory_ids": [
+    "G26"
+  ],
+  "problem": {
+    "name": "Increasing subsequence of length k",
+    "name_latex": "Increasing subsequence of length $k$",
+    "statement_latex": "Given an indexed sequence $x_1,\\ldots,x_n$ from a totally ordered finite domain and fixed $k$, decide whether $i_1<\\cdots<i_k$ with $x_{i_1}<\\cdots<x_{i_k}$ exist. Complexity counts random-access time.",
+    "statement_text": "Given an indexed sequence $x_1,\\ldots,x_n$ from a totally ordered finite domain and fixed $k$, decide whether $i_1<\\cdots<i_k$ with $x_{i_1}<\\cdots<x_{i_k}$ exist. Complexity counts random-access time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\sqrt n\\log^{k+1}n(\\log\\log n)^{k-1})$ time by Allcock and collaborators' divide-and-conquer algorithm.",
+      "details_latex": "",
+      "headline_text": "$O(\\sqrt n\\log^{k+1}n(\\log\\log n)^{k-1})$ time by Allcock and collaborators' divide-and-conquer algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n)$ time for fixed $k$ by maintaining the smallest possible last element of each subsequence length; general patience sorting takes $O(n\\log k)$.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ time for fixed $k$ by maintaining the smallest possible last element of each subsequence length; general patience sorting takes $O(n\\log k)$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-divide-conquer",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-divide-conquer",
+      "label_latex": "Quantum divide and conquer",
+      "problem_numbers": [
+        129,
+        131,
+        132
+      ]
+    },
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2311.16401}{\\emph{On the quantum time complexity of divide and conquer}}. Theorem19; ICALP Theorem3",
+      "content_text": "On the quantum time complexity of divide and conquer. Theorem19; ICALP Theorem3",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2311.16401",
+          "title": "On the quantum time complexity of divide and conquer",
+          "label_latex": "\\emph{On the quantum time complexity of divide and conquer}",
+          "locator_latex": "Theorem19; ICALP Theorem3"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-130-citation-00203"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum divide and conquer; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt n)",
+    "classical": "\\Theta(n)",
+    "parameter": "sequence length n; fixed k",
+    "model": "random-access time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt n)",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 100,
+  "citation_ids": [
+    "entry-130-citation-00203"
+  ]
+}

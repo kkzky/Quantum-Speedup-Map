@@ -1,0 +1,111 @@
+{
+  "id": "entry-171",
+  "number": 171,
+  "slug": "prior-a34",
+  "title": "Additive approximation of the planar Tutte polynomial",
+  "title_latex": "Additive approximation of the planar Tutte polynomial",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a34",
+  "inventory_ids": [
+    "A34"
+  ],
+  "problem": {
+    "name": "Additive approximation of the planar Tutte polynomial",
+    "name_latex": "Additive approximation of the planar Tutte polynomial",
+    "statement_latex": "Given a planar graph $G=(V,E)$ with specified edge weights, estimate its multivariate Tutte polynomial $Z_G(q,\\{v_e\\})=\\sum_{A\\subseteq E}q^{k(A)}\\prod_{e\\in A}v_e$ to additive $\\varepsilon$ times the tensor-network operator-norm scale of Aharonov--Arad--Eban--Landau.",
+    "statement_text": "Given a planar graph $G=(V,E)$ with specified edge weights, estimate its multivariate Tutte polynomial $Z_G(q,\\{v_e\\})=\\sum_{A\\subseteq E}q^{k(A)}\\prod_{e\\in A}v_e$ to additive $\\varepsilon$ times the tensor-network operator-norm scale of Aharonov–Arad–Eban–Landau."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "The stated complexity or cryptographic implication provides strong evidence for the separation.",
+      "category_id": "evidence-strong",
+      "description_text": "The stated complexity or cryptographic implication provides strong evidence for the separation."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(|V|+|E|,1/\\varepsilon)$ quantum time for the efficiently representable parameter regimes, using a Temperley--Lieb representation and an overlap-estimation circuit.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(|V|+|E|,1/\\varepsilon)$ quantum time for the efficiently representable parameter regimes, using a Temperley–Lieb representation and an overlap-estimation circuit.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(2^{|E|}\\operatorname{poly}(|V|))$ state-sum evaluation, or width-based tensor contraction, applies generally. The specified complete approximation regimes are $\\mathsf{BQP}$-complete. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_latex": "",
+      "headline_text": "$O(2^{|E|}\\operatorname{poly}(|V|))$ state-sum evaluation, or width-based tensor contraction, applies generally. The specified complete approximation regimes are $\\mathsf{BQP}$-complete. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-tutte-approximation"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0702008}{\\emph{Polynomial Quantum algorithms for additive approximations of the Potts model and other points of the Tutte plane}}. Definition 2.1; algorithm section and BQP-hardness results.",
+      "content_text": "Polynomial Quantum algorithms for additive approximations of the Potts model and other points of the Tutte plane. Definition 2.1; algorithm section and BQP-hardness results.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0702008",
+          "title": "Polynomial Quantum algorithms for additive approximations of the Potts model and other points of the Tutte plane",
+          "label_latex": "\\emph{Polynomial Quantum algorithms for additive approximations of the Potts model and other points of the Tutte plane}",
+          "locator_latex": "Definition 2.1; algorithm section and BQP-hardness results."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-171-citation-00365"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-171-citation-00366"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Aharonov--Arad--Eban--Landau Tutte approximation",
+  "plot": {
+    "quantum": "\\operatorname{poly}(L,1/\\varepsilon)",
+    "classical": "\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}",
+    "parameter": "finite input length L, implemented qubits q and gates g, width w, encoding size s, additive error epsilon",
+    "model": "gate/time complexity at the stated normalization and precision",
+    "quantum_kind": "polynomial",
+    "classical_kind": "unknown",
+    "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
+  },
+  "ordinal": 185,
+  "citation_ids": [
+    "entry-171-citation-00365",
+    "entry-171-citation-00366"
+  ]
+}

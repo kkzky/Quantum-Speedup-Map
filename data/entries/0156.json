@@ -1,0 +1,112 @@
+{
+  "id": "entry-156",
+  "number": 156,
+  "slug": "prior-a12",
+  "title": "Polynomial interpolation over finite fields",
+  "title_latex": "Polynomial interpolation over finite fields",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a12",
+  "inventory_ids": [
+    "A12",
+    "A13"
+  ],
+  "problem": {
+    "name": "Polynomial interpolation over finite fields",
+    "name_latex": "Polynomial interpolation over finite fields",
+    "statement_latex": "\\textbf{Univariate polynomial interpolation over finite fields.} Given evaluation-oracle access to an unknown polynomial $f\\in\\mathbb F_q[x]$ with $\\deg f\\le d<q$, output its coefficients. Complexity counts oracle evaluations; success probabilities depend on the field-size regime.\n\n\\textbf{Multivariate polynomial interpolation over finite fields.} Given an oracle for $f\\in\\mathbb F_q[x_1,\\ldots,x_n]$ of total degree at most $d$, output its $M=\\binom{n+d}{d}$ coefficients. Complexity counts oracle evaluations in the sufficiently large-field regime.",
+    "statement_text": "Univariate polynomial interpolation over finite fields. Given evaluation-oracle access to an unknown polynomial $f\\in\\mathbb F_q[x]$ with $\\deg f\\le d<q$, output its coefficients. Complexity counts oracle evaluations; success probabilities depend on the field-size regime. Multivariate polynomial interpolation over finite fields. Given an oracle for $f\\in\\mathbb F_q[x_1,\\ldots,x_n]$ of total degree at most $d$, output its $M=\\binom{n+d}{d}$ coefficients. Complexity counts oracle evaluations in the sufficiently large-field regime."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "\\textbf{Univariate polynomial interpolation over finite fields.} $\\lceil(d+1)/2\\rceil$ queries with the success probability in Childs--van Dam--Hung--Shparlinski; $\\lceil d/2+1\\rceil$ queries achieve success approaching one as $q\\to\\infty$.",
+      "details_latex": "\\textbf{Multivariate polynomial interpolation over finite fields.} $\\lceil dM/(n+d)\\rceil$ queries by Chen--Childs--Hung, with success $1-o(1)$ as $q\\to\\infty$ under the paper's interpolation conditions.",
+      "headline_text": "Univariate polynomial interpolation over finite fields. $\\lceil(d+1)/2\\rceil$ queries with the success probability in Childs–van Dam–Hung–Shparlinski; $\\lceil d/2+1\\rceil$ queries achieve success approaching one as $q\\to\\infty$.",
+      "details_text": "Multivariate polynomial interpolation over finite fields. $\\lceil dM/(n+d)\\rceil$ queries by Chen–Childs–Hung, with success $1-o(1)$ as $q\\to\\infty$ under the paper's interpolation conditions."
+    },
+    "classical": {
+      "headline_latex": "\\textbf{Univariate polynomial interpolation over finite fields.} $d+1$ evaluations are necessary and sufficient for exact interpolation by Lagrange or fast interpolation. The gain is a factor approaching two in queries.",
+      "details_latex": "\\textbf{Multivariate polynomial interpolation over finite fields.} $M$ evaluations suffice by multivariate interpolation and are information-theoretically necessary for exact reconstruction. The query ratio is approximately $(n+d)/d$.",
+      "headline_text": "Univariate polynomial interpolation over finite fields. $d+1$ evaluations are necessary and sufficient for exact interpolation by Lagrange or fast interpolation. The gain is a factor approaching two in queries.",
+      "details_text": "Multivariate polynomial interpolation over finite fields. $M$ evaluations suffice by multivariate interpolation and are information-theoretically necessary for exact reconstruction. The query ratio is approximately $(n+d)/d$."
+    }
+  },
+  "algorithm_ids": [
+    "quantum-polynomial-interpolation"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1509.09271}{\\emph{Optimal quantum algorithm for polynomial interpolation}}. Main interpolation theorem; ICALP https://doi.org/10.4230/LIPIcs.ICALP.2016.16",
+      "content_text": "Optimal quantum algorithm for polynomial interpolation. Main interpolation theorem; ICALP https://doi.org/10.4230/LIPIcs.ICALP.2016.16",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1509.09271",
+          "title": "Optimal quantum algorithm for polynomial interpolation",
+          "label_latex": "\\emph{Optimal quantum algorithm for polynomial interpolation}",
+          "locator_latex": "Main interpolation theorem; ICALP https://doi.org/10.4230/LIPIcs.ICALP.2016.16"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-156-citation-00318"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1701.03990}{\\emph{Quantum algorithm for multivariate polynomial interpolation}}. Finite-field theorem; full text https://pmc.ncbi.nlm.nih.gov/articles/PMC5806014/",
+      "content_text": "Quantum algorithm for multivariate polynomial interpolation. Finite-field theorem; full text https://pmc.ncbi.nlm.nih.gov/articles/PMC5806014/",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1701.03990",
+          "title": "Quantum algorithm for multivariate polynomial interpolation",
+          "label_latex": "\\emph{Quantum algorithm for multivariate polynomial interpolation}",
+          "locator_latex": "Finite-field theorem; full text https://pmc.ncbi.nlm.nih.gov/articles/PMC5806014/"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-156-citation-00319"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum polynomial interpolation",
+  "plot": {
+    "quantum": "\\lceil\\frac{d}{n+d}\\binom{n+d}{d}\\rceil",
+    "classical": "\\binom{n+d}{d}",
+    "parameter": "variable count n and total degree d; q sufficiently large",
+    "model": "evaluation queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "(n+d)/d"
+  },
+  "ordinal": 156,
+  "citation_ids": [
+    "entry-156-citation-00318",
+    "entry-156-citation-00319"
+  ]
+}

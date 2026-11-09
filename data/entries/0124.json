@@ -1,0 +1,128 @@
+{
+  "id": "entry-124",
+  "number": 124,
+  "slug": "prior-g19",
+  "title": "Lempel–Ziv factorization",
+  "title_latex": "Lempel--Ziv factorization",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g19",
+  "inventory_ids": [
+    "G19"
+  ],
+  "problem": {
+    "name": "Lempel–Ziv factorization",
+    "name_latex": "Lempel--Ziv factorization",
+    "statement_latex": "Given indexed access to $S\\in\\Sigma^n$, output its LZ77 factorization into $z$ phrases, each extending the longest previously occurring prefix under the chosen LZ77 convention. The resource is character queries and random-access time.",
+    "statement_text": "Given indexed access to $S\\in\\Sigma^n$, output its LZ77 factorization into $z$ phrases, each extending the longest previously occurring prefix under the chosen LZ77 convention. The resource is character queries and random-access time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt{nz})$ time and queries by Gibney--Jin--Kociumaka--Thankachan's quantum Lempel--Ziv construction.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt{nz})$ time and queries by Gibney–Jin–Kociumaka–Thankachan's quantum Lempel–Ziv construction.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n)$ word-RAM time using suffix structures, with $\\Theta(n)$ worst-case queries.",
+      "details_latex": "",
+      "headline_text": "$O(n)$ word-RAM time using suffix structures, with $\\Theta(n)$ worst-case queries.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-lz77",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2311.01793}{\\emph{Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization}}. Main Lempel--Ziv theorem",
+      "content_text": "Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization. Main Lempel–Ziv theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2311.01793",
+          "title": "Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization",
+          "label_latex": "\\emph{Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv Factorization}",
+          "locator_latex": "Main Lempel--Ziv theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-124-citation-00197"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Gibney--Jin--Kociumaka--Thankachan LZ77 construction; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt{nz})",
+    "classical": "\\Theta(n)",
+    "parameter": "length n and number z of LZ77 phrases",
+    "model": "random-access time and character queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt{n/z})"
+  },
+  "ordinal": 94,
+  "citation_ids": [
+    "entry-124-citation-00197"
+  ]
+}

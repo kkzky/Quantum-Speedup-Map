@@ -1,73 +1,153 @@
 {
   "id": "entry-015",
   "number": 15,
-  "ordinal": 15,
-  "title_latex": "Cutwidth",
-  "title": "Cutwidth",
+  "slug": "minimum-linear-arrangement",
+  "title_latex": "Minimum linear arrangement",
+  "title": "Minimum linear arrangement",
+  "aliases": [
+    16,
+    29
+  ],
   "chapter_id": "chapter-1",
   "problem": {
-    "name_latex": "Cutwidth",
-    "name": "Cutwidth",
-    "statement_latex": "Find a vertex order $\\pi$ minimizing\n\\[\\max_{1\\leq i<n}|\\{uv\\in E:\\pi(u)\\leq i<\\pi(v)\\text{ or }\\pi(v)\\leq i<\\pi(u)\\}|.\\]\nThe objective is the largest number of edges crossing a prefix cut. It represents the largest simultaneous communication or wiring requirement along a linear layout.\nThe comparison uses quantum QRAM time and classical RAM time on an explicit graph.",
-    "statement_text": "Find a vertex order $\\pi$ minimizing \\[\\max_{1\\leq i<n}|\\{uv\\in E:\\pi(u)\\leq i<\\pi(v)\\text{ or }\\pi(v)\\leq i<\\pi(u)\\}|.\\] The objective is the largest number of edges crossing a prefix cut. It represents the largest simultaneous communication or wiring requirement along a linear layout. The comparison uses quantum QRAM time and classical RAM time on an explicit graph."
+    "name_latex": "Cutwidth, minimum linear arrangement and interval completion",
+    "name": "Cutwidth, minimum linear arrangement and interval completion",
+    "statement_latex": "Let $G=(V,E)$ be an undirected graph on $n$ vertices and let $\\pi:V\\to[n]$ be a bijection.\n\n\\textbf{Cutwidth.} Minimize\n\\[\n\\max_{1\\le i<n}|\\{uv\\in E:\\pi(u)\\le i<\\pi(v)\\text{ or }\\pi(v)\\le i<\\pi(u)\\}|.\n\\]\nThe objective measures the largest number of edges crossing a prefix cut, as in simultaneous communication or wiring requirements.\n\n\\entryalias{16}\\textbf{Minimum linear arrangement.} Minimize $\\sum_{uv\\in E}|\\pi(u)-\\pi(v)|$, the total edge length in a linear layout.\n\n\\entryalias{29}\\textbf{Minimum interval completion.} Minimize $|F|$ over sets of missing edges such that $(V,E\\cup F)$ is an interval graph: there exist intervals $I_v$ with $uv\\in E\\cup F$ exactly when $I_u\\cap I_v\\ne\\varnothing$. The objective adds as few missing overlaps as possible.\n\nThe quantum comparisons use QRAM time; classical exact and parameterized comparisons use RAM time on the explicit graph.",
+    "statement_text": "Let $G=(V,E)$ be an undirected graph on $n$ vertices and let $\\pi:V\\to[n]$ be a bijection. Cutwidth. Minimize \\[ \\max_{1\\le i<n}|\\{uv\\in E:\\pi(u)\\le i<\\pi(v)\\text{ or }\\pi(v)\\le i<\\pi(u)\\}|. \\] The objective measures the largest number of edges crossing a prefix cut, as in simultaneous communication or wiring requirements. 16Minimum linear arrangement. Minimize $\\sum_{uv\\in E}|\\pi(u)-\\pi(v)|$, the total edge length in a linear layout. 29Minimum interval completion. Minimize $|F|$ over sets of missing edges such that $(V,E\\cup F)$ is an interval graph: there exist intervals $I_v$ with $uv\\in E\\cup F$ exactly when $I_u\\cap I_v\\ne\\varnothing$. The objective adds as few missing overlaps as possible. The quantum comparisons use QRAM time; classical exact and parameterized comparisons use RAM time on the explicit graph."
   },
   "quantum_speedup": {
     "quantum": {
-      "headline_latex": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
-      "headline_text": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
-      "details_latex": "A prefix subset determines the number of crossing edges. The recurrence minimizes the maximum of this local cut size and the value of the preceding prefix. Its quantum implementation uses partial subset preprocessing and recursive minimum finding, with exponential coherent memory.",
-      "details_text": "A prefix subset determines the number of crossing edges. The recurrence minimizes the maximum of this local cut size and the value of the preceding prefix. Its quantum implementation uses partial subset preprocessing and recursive minimum finding, with exponential coherent memory."
+      "headline_latex": "$O^*(1.817^n)$ for all three problems, quantum vertex-ordering dynamic programming.",
+      "details_latex": "For cutwidth, the recurrence minimizes the maximum cut size over the prefixes of an ordering. Minimum linear arrangement uses the sum of the same prefix-cut sizes, which equals total edge length. Interval completion uses the local completion cost of appending a vertex to a prefix. Partial subset preprocessing and recursive minimum finding solve these ordering recurrences with exponential coherent memory; reconstruction returns the ordering or completion.",
+      "headline_text": "$O^*(1.817^n)$ for all three problems, quantum vertex-ordering dynamic programming.",
+      "details_text": "For cutwidth, the recurrence minimizes the maximum cut size over the prefixes of an ordering. Minimum linear arrangement uses the sum of the same prefix-cut sizes, which equals total edge length. Interval completion uses the local completion cost of appending a vertex to a prefix. Partial subset preprocessing and recursive minimum finding solve these ordering recurrences with exponential coherent memory; reconstruction returns the ordering or completion."
     },
     "classical": {
-      "headline_latex": "$O^*(2^n)$ time and space, subset dynamic programming; $O^*(4^n)$ time with polynomial space, divide and conquer.",
-      "headline_text": "$O^*(2^n)$ time and space, subset dynamic programming; $O^*(4^n)$ time with polynomial space, divide and conquer.",
-      "details_latex": "The subset algorithm processes prefixes in order of their cardinality and retains the best maximum-cut value for each prefix. These bounds concern arbitrary cutwidth as a function of vertex count. Algorithms parameterized by a small target cutwidth can instead be used on instances in that regime.",
-      "details_text": "The subset algorithm processes prefixes in order of their cardinality and retains the best maximum-cut value for each prefix. These bounds concern arbitrary cutwidth as a function of vertex count. Algorithms parameterized by a small target cutwidth can instead be used on instances in that regime."
+      "headline_latex": "$O^*(2^n)$ for all three problems, subset dynamic programming; $k^{O(\\sqrt k)}n^{O(1)}$ for interval completion with fill parameter $k$.",
+      "details_latex": "The subset recurrence processes prefixes by cardinality and stores the best accumulated value for each prefix. Its polynomial factors include objective evaluation; minimum linear arrangement admits an $O(m2^n)$ implementation for $m=|E|$. The cutwidth divide-and-conquer alternative uses $O^*(4^n)$ time and polynomial space. For interval completion, the parameterized algorithm decides and reconstructs a completion using at most $k$ added edges; threshold search obtains the optimum. Small-cutwidth instances and restricted graph classes, including trees for linear arrangement, have their corresponding specialized classical algorithms.",
+      "headline_text": "$O^*(2^n)$ for all three problems, subset dynamic programming; $k^{O(\\sqrt k)}n^{O(1)}$ for interval completion with fill parameter $k$.",
+      "details_text": "The subset recurrence processes prefixes by cardinality and stores the best accumulated value for each prefix. Its polynomial factors include objective evaluation; minimum linear arrangement admits an $O(m2^n)$ implementation for $m=|E|$. The cutwidth divide-and-conquer alternative uses $O^*(4^n)$ time and polynomial space. For interval completion, the parameterized algorithm decides and reconstructs a completion using at most $k$ added edges; threshold search obtains the optimum. Small-cutwidth instances and restricted graph classes, including trees for linear arrangement, have their corresponding specialized classical algorithms."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
-      "description_latex": "Polynomial speedup from $2^n$ to $1.817^n$ in the exponential-memory comparison, based on amplitude amplification.",
-      "description_text": "Polynomial speedup from $2^n$ to $1.817^n$ in the exponential-memory comparison, based on amplitude amplification."
+      "description_latex": "The common unrestricted vertex-count comparison is $O^*(2^n)$ versus $O^*(1.817^n)$, a polynomial speedup obtained from amplitude amplification and quantum minimum finding. Small-fill interval completion uses the stated parameterized comparator.",
+      "category_id": "strength-polynomial",
+      "description_text": "The common unrestricted vertex-count comparison is $O^*(2^n)$ versus $O^*(1.817^n)$, a polynomial speedup obtained from amplitude amplification and quantum minimum finding. Small-fill interval completion uses the stated parameterized comparator."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
-      "description_latex": "Rigorous template and problem upper bounds, with partial evidence against the displayed general classical bound.",
-      "description_text": "Rigorous template and problem upper bounds, with partial evidence against the displayed general classical bound."
+      "description_latex": "Rigorous quantum ordering bounds and partial evidence relative to the general classical subset algorithms.",
+      "category_id": "evidence-partial",
+      "description_text": "Rigorous quantum ordering bounds and partial evidence relative to the general classical subset algorithms."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
-      "description_latex": "Polynomial active registers represent a subset and its cut size. Exponentially many stored dynamic-programming values must be coherently accessible, and useful searches require fault tolerance.",
-      "description_text": "Polynomial active registers represent a subset and its cut size. Exponentially many stored dynamic-programming values must be coherently accessible, and useful searches require fault tolerance."
+      "description_latex": "Polynomial active subset, objective and reconstruction registers require exponential coherently accessible tables. Linear arrangement needs $O(\\log(nm))$ objective bits in addition to the subset register and workspace. Useful coherent searches require fault tolerance.",
+      "category_id": "hardware-superpolynomial",
+      "description_text": "Polynomial active subset, objective and reconstruction registers require exponential coherently accessible tables. Linear arrangement needs $O(\\log(nm))$ objective bits in addition to the subset register and workspace. Useful coherent searches require fault tolerance."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum vertex-ordering dynamic programming",
   "algorithm_items": [
     {
+      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): the common vertex-ordering recurrence for cutwidth, minimum linear arrangement and interval completion.",
+      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Corollary 5 and equation (3): the common vertex-ordering recurrence for cutwidth, minimum linear arrangement and interval completion.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1807.05209",
+          "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
+          "label_latex": "Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)",
+          "locator_latex": "Corollary 5 and equation (3): the common vertex-ordering recurrence for cutwidth, minimum linear arrangement and interval completion."
+        }
+      ],
       "item_number": 1,
-      "index_label": "15.1",
-      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): quantum ordering recurrence and cutwidth application.",
-      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Corollary 5 and equation (3): quantum ordering recurrence and cutwidth application.",
+      "index_label": "",
       "citation_ids": [
-        "entry-015-citation-001"
+        "entry-015-citation-00036"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "15.2",
       "content_latex": "\\href{https://doi.org/10.1007/s00224-011-9312-0}{Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)}. The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives.",
       "content_text": "Bodlaender et al., A Note on Exact Algorithms for Vertex Ordering Problems on Graphs (2012). The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives.",
+      "links": [
+        {
+          "url": "https://doi.org/10.1007/s00224-011-9312-0",
+          "title": "A Note on Exact Algorithms for Vertex Ordering Problems on Graphs",
+          "label_latex": "Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)",
+          "locator_latex": "The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-015-citation-002"
+        "entry-015-citation-00037"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/pdf/1402.3473}{Bliznets et al., \\emph{A Subexponential Parameterized Algorithm for Interval Completion}}. Theorem 1.1 states the $k^{O(\\sqrt k)}n^{O(1)}$ result; the algorithmic construction combines the structural enumeration and dynamic-programming sections.",
+      "content_text": "Bliznets et al., A Subexponential Parameterized Algorithm for Interval Completion. Theorem 1.1 states the $k^{O(\\sqrt k)}n^{O(1)}$ result; the algorithmic construction combines the structural enumeration and dynamic-programming sections.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1402.3473",
+          "title": "A Subexponential Parameterized Algorithm for Interval Completion",
+          "label_latex": "Bliznets et al., \\emph{A Subexponential Parameterized Algorithm for Interval Completion}",
+          "locator_latex": "Theorem 1.1 states the $k^{O(\\sqrt k)}n^{O(1)}$ result; the algorithmic construction combines the structural enumeration and dynamic-programming sections."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-015-citation-00038"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-015-citation-001",
-    "entry-015-citation-002"
+  "algorithm_ids": [
+    "minimum-finding",
+    "vertex-ordering"
   ],
-  "source_latex": "\\entrytitle{15}{Cutwidth}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{14}\n\\begin{problem}[Cutwidth]\nFind a vertex order $\\pi$ minimizing\n\\[\\max_{1\\leq i<n}|\\{uv\\in E:\\pi(u)\\leq i<\\pi(v)\\text{ or }\\pi(v)\\leq i<\\pi(u)\\}|.\\]\nThe objective is the largest number of edges crossing a prefix cut. It represents the largest simultaneous communication or wiring requirement along a linear layout.\nThe comparison uses quantum QRAM time and classical RAM time on an explicit graph.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.}\nA prefix subset determines the number of crossing edges. The recurrence minimizes the maximum of this local cut size and the value of the preceding prefix. Its quantum implementation uses partial subset preprocessing and recursive minimum finding, with exponential coherent memory.\n\\complexity{Classical}{$O^*(2^n)$ time and space, subset dynamic programming; $O^*(4^n)$ time with polynomial space, divide and conquer.}\nThe subset algorithm processes prefixes in order of their cardinality and retains the best maximum-cut value for each prefix. These bounds concern arbitrary cutwidth as a function of vertex count. Algorithms parameterized by a small target cutwidth can instead be used on instances in that regime.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup from $2^n$ to $1.817^n$ in the exponential-memory comparison, based on amplitude amplification.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous template and problem upper bounds, with partial evidence against the displayed general classical bound.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active registers represent a subset and its cut size. Exponentially many stored dynamic-programming values must be coherently accessible, and useful searches require fault tolerance.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{15}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): quantum ordering recurrence and cutwidth application.\n\\item \\href{https://doi.org/10.1007/s00224-011-9312-0}{Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)}. The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "minimum-finding",
+      "label_latex": "D\\\"urr--H{\\o}yer minimum finding",
+      "problem_numbers": [
+        2,
+        7,
+        11,
+        14,
+        17,
+        28,
+        31,
+        34,
+        53,
+        59,
+        79,
+        91,
+        116,
+        118,
+        131,
+        132,
+        134
+      ]
+    },
+    {
+      "algorithm_id": "vertex-ordering",
+      "label_latex": "Quantum path finding in the Boolean hypercube",
+      "problem_numbers": [
+        12,
+        14,
+        28
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{15}{Minimum linear arrangement}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\begin{problem}[Cutwidth, minimum linear arrangement and interval completion]\nLet $G=(V,E)$ be an undirected graph on $n$ vertices and let $\\pi:V\\to[n]$ be a bijection.\n\n\\textbf{Cutwidth.} Minimize\n\\[\n\\max_{1\\le i<n}|\\{uv\\in E:\\pi(u)\\le i<\\pi(v)\\text{ or }\\pi(v)\\le i<\\pi(u)\\}|.\n\\]\nThe objective measures the largest number of edges crossing a prefix cut, as in simultaneous communication or wiring requirements.\n\n\\entryalias{16}\\textbf{Minimum linear arrangement.} Minimize $\\sum_{uv\\in E}|\\pi(u)-\\pi(v)|$, the total edge length in a linear layout.\n\n\\entryalias{29}\\textbf{Minimum interval completion.} Minimize $|F|$ over sets of missing edges such that $(V,E\\cup F)$ is an interval graph: there exist intervals $I_v$ with $uv\\in E\\cup F$ exactly when $I_u\\cap I_v\\ne\\varnothing$. The objective adds as few missing overlaps as possible.\n\nThe quantum comparisons use QRAM time; classical exact and parameterized comparisons use RAM time on the explicit graph.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.817^n)$ for all three problems, quantum vertex-ordering dynamic programming.}\nFor cutwidth, the recurrence minimizes the maximum cut size over the prefixes of an ordering. Minimum linear arrangement uses the sum of the same prefix-cut sizes, which equals total edge length. Interval completion uses the local completion cost of appending a vertex to a prefix. Partial subset preprocessing and recursive minimum finding solve these ordering recurrences with exponential coherent memory; reconstruction returns the ordering or completion.\n\n\\complexity{Classical}{$O^*(2^n)$ for all three problems, subset dynamic programming; $k^{O(\\sqrt k)}n^{O(1)}$ for interval completion with fill parameter $k$.}\nThe subset recurrence processes prefixes by cardinality and stores the best accumulated value for each prefix. Its polynomial factors include objective evaluation; minimum linear arrangement admits an $O(m2^n)$ implementation for $m=|E|$. The cutwidth divide-and-conquer alternative uses $O^*(4^n)$ time and polynomial space. For interval completion, the parameterized algorithm decides and reconstructs a completion using at most $k$ added edges; threshold search obtains the optimum. Small-cutwidth instances and restricted graph classes, including trees for linear arrangement, have their corresponding specialized classical algorithms.\n\n\\dimensionlabel{Strength}{strengthPolynomial} The common unrestricted vertex-count comparison is $O^*(2^n)$ versus $O^*(1.817^n)$, a polynomial speedup obtained from amplitude amplification and quantum minimum finding. Small-fill interval completion uses the stated parameterized comparator.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum ordering bounds and partial evidence relative to the general classical subset algorithms.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset, objective and reconstruction registers require exponential coherently accessible tables. Linear arrangement needs $O(\\log(nm))$ objective bits in addition to the subset register and workspace. Useful coherent searches require fault tolerance.\n\\subhead{Algorithm: Quantum vertex-ordering dynamic programming}\n\\begin{algorithmindex}{15}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): the common vertex-ordering recurrence for cutwidth, minimum linear arrangement and interval completion.\n\\item \\href{https://doi.org/10.1007/s00224-011-9312-0}{Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)}. The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives.\n\\item \\href{https://arxiv.org/pdf/1402.3473}{Bliznets et al., \\emph{A Subexponential Parameterized Algorithm for Interval Completion}}. Theorem 1.1 states the $k^{O(\\sqrt k)}n^{O(1)}$ result; the algorithmic construction combines the structural enumeration and dynamic-programming sections.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{minimum-finding}{D\\\"urr--H{\\o}yer minimum finding}: \\problemref{2}, \\problemref{7}, \\problemref{11}, \\problemref{14}, \\problemref{17}, \\problemref{28}, \\problemref{31}, \\problemref{34}, \\problemref{53}, \\problemref{59}, \\problemref{79}, \\problemref{91}.\n\\par\\algorithmref{vertex-ordering}{Quantum path finding in the Boolean hypercube}: \\problemref{12}, \\problemref{14}, \\problemref{28}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 15,
+  "citation_ids": [
+    "entry-015-citation-00036",
+    "entry-015-citation-00037",
+    "entry-015-citation-00038"
+  ]
 }

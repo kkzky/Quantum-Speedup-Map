@@ -1,0 +1,136 @@
+{
+  "id": "entry-114",
+  "number": 114,
+  "slug": "prior-g07",
+  "title": "Average-case multidimensional pattern matching",
+  "title_latex": "Average-case multidimensional pattern matching",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g07",
+  "inventory_ids": [
+    "G07"
+  ],
+  "problem": {
+    "name": "Average-case multidimensional pattern matching",
+    "name_latex": "Average-case multidimensional pattern matching",
+    "statement_latex": "Given arrays $T:[n]^d\\to\\Sigma$ and $P:[m]^d\\to\\Sigma$, find an offset $s$ with $T(s+x)=P(x)$ for every $x\\in[m]^d$. The theorem assumes the paper's random-input distribution and fixed dimension $d$; complexity counts queries and time.",
+    "statement_text": "Given arrays $T:[n]^d\\to\\Sigma$ and $P:[m]^d\\to\\Sigma$, find an offset $s$ with $T(s+x)=P(x)$ for every $x\\in[m]^d$. The theorem assumes the paper's random-input distribution and fixed dimension $d$; complexity counts queries and time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthExpToSubexp",
+      "description_latex": "Exponential to subexponential in the strongest stated regime; the general parameter dependence is retained above.",
+      "category_id": "strength-exponential-to-subexponential",
+      "description_text": "Exponential to subexponential in the strongest stated regime; the general parameter dependence is retained above."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O((n/m)^{d/2}2^{O(d^{3/2}\\sqrt{\\log m})})$ time by Montanaro's reduction to hidden shift, for the promised random arrays.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O((n/m)^{d/2}2^{O(d^{3/2}\\sqrt{\\log m})})$ time by Montanaro's reduction to hidden shift, for the promised random arrays.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde\\Theta((n/m)^d+n^{d/2})$ in the corresponding average-case classical model.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde\\Theta((n/m)^d+n^{d/2})$ in the corresponding average-case classical model.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "hidden-shift-pattern-matching",
+    "kuperberg",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "kuperberg",
+      "label_latex": "Hidden-shift sieves of Kuperberg and Regev",
+      "problem_numbers": [
+        68
+      ]
+    },
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1408.1816}{\\emph{Quantum pattern matching fast on average}}. Theorems1--2; Sections4--5",
+      "content_text": "Quantum pattern matching fast on average. Theorems1–2; Sections4–5",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1408.1816",
+          "title": "Quantum pattern matching fast on average",
+          "label_latex": "\\emph{Quantum pattern matching fast on average}",
+          "locator_latex": "Theorems1--2; Sections4--5"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-114-citation-00187"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Montanaro hidden-shift pattern matching; Hidden-shift sieves of Kuperberg and Regev; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O((n/m)^{d/2}2^{O(d^{3/2}\\sqrt{\\log m})})",
+    "classical": "\\widetilde\\Theta((n/m)^d+n^{d/2})",
+    "parameter": "side lengths n,m and dimension d",
+    "model": "random-input oracle time",
+    "quantum_kind": "unknown",
+    "classical_kind": "polynomial",
+    "gain": "Strongest regime: exponential to subexponential in log n when m is comparable to n"
+  },
+  "ordinal": 84,
+  "citation_ids": [
+    "entry-114-citation-00187"
+  ]
+}

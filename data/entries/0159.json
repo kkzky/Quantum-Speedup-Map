@@ -1,0 +1,93 @@
+{
+  "id": "entry-159",
+  "number": 159,
+  "slug": "prior-a16",
+  "title": "Hidden shifts of bent Boolean functions",
+  "title_latex": "Hidden shifts of bent Boolean functions",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a16",
+  "inventory_ids": [
+    "A16"
+  ],
+  "problem": {
+    "name": "Hidden shifts of bent Boolean functions",
+    "name_latex": "Hidden shifts of bent Boolean functions",
+    "statement_latex": "Given Boolean phase oracles for a bent function $f:\\mathbb F_2^n\\to\\{0,1\\}$ and $g(x)=f(x+s)$, recover $s\\in\\mathbb F_2^n$. Bent means $|\\widehat{(-1)^f}(y)|=2^{-n/2}$ for every $y$; $n$ is even.",
+    "statement_text": "Given Boolean phase oracles for a bent function $f:\\mathbb F_2^n\\to\\{0,1\\}$ and $g(x)=f(x+s)$, recover $s\\in\\mathbb F_2^n$. Bent means $|\\widehat{(-1)^f}(y)|=2^{-n/2}$ for every $y$; $n$ is even."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "Constantly many queries with access to the dual bent-function oracle, or $O(n)$ queries in the corresponding ordinary-oracle formulation, by Rotteler's Fourier hidden-shift algorithms.",
+      "details_latex": "",
+      "headline_text": "Constantly many queries with access to the dual bent-function oracle, or $O(n)$ queries in the corresponding ordinary-oracle formulation, by Rotteler's Fourier hidden-shift algorithms.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Exponential classical query lower bounds hold for the oracle families constructed in the paper; querying the full truth tables uses $O(2^n)$ calls. Explicit formulas for $f$ may give additional classical structure.",
+      "details_latex": "",
+      "headline_text": "Exponential classical query lower bounds hold for the oracle families constructed in the paper; querying the full truth tables uses $O(2^n)$ calls. Explicit formulas for $f$ may give additional classical structure.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "bent-function-hidden-shift"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0811.3208}{\\emph{Quantum algorithms for highly non-linear Boolean functions}}. Main bent-function algorithms; Theorems 7 and lower-bound section.",
+      "content_text": "Quantum algorithms for highly non-linear Boolean functions. Main bent-function algorithms; Theorems 7 and lower-bound section.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0811.3208",
+          "title": "Quantum algorithms for highly non-linear Boolean functions",
+          "label_latex": "\\emph{Quantum algorithms for highly non-linear Boolean functions}",
+          "locator_latex": "Main bent-function algorithms; Theorems 7 and lower-bound section."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-159-citation-00321"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Rotteler bent-function hidden shift",
+  "plot": {
+    "quantum": "O(n)",
+    "classical": "2^{\\Omega(n)}",
+    "parameter": "n-bit domain; hard bent-function oracle families",
+    "model": "function-oracle queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "exponential",
+    "gain": "Exponential to polynomial query separation"
+  },
+  "ordinal": 158,
+  "citation_ids": [
+    "entry-159-citation-00321"
+  ]
+}

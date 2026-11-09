@@ -1,9 +1,10 @@
 {
   "id": "entry-106",
   "number": 106,
-  "ordinal": 60,
+  "slug": "discrete-portfolio-rebalancing-with-constrained-mixers",
   "title_latex": "Discrete portfolio rebalancing with constrained mixers",
   "title": "Discrete portfolio rebalancing with constrained mixers",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Discrete portfolio rebalancing",
@@ -14,70 +15,117 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(KSpn^2)$ gates for dense covariance, the quantum alternating operator ansatz with paired parity mixers.",
-      "headline_text": "$O(KSpn^2)$ gates for dense covariance, the quantum alternating operator ansatz with paired parity mixers.",
       "details_latex": "The two-spin encoding writes $z_i=x_i^+-x_i^-$ using $2n$ data qubits. An entangled initial state has the required difference between long and short occupations. Separate $XY$ parity-ring mixers preserve their respective occupations and hence the investment constraint. A cost layer implements the risk, return and trading-cost phases; sampling and decoding return discrete portfolios. The parameters $p$, $K$ and $S$ count alternating layers, evaluated parameter settings and shots per setting. Classical optimizer work and cost evaluation of the sampled portfolios add to the displayed gate count.",
+      "headline_text": "$O(KSpn^2)$ gates for dense covariance, the quantum alternating operator ansatz with paired parity mixers.",
       "details_text": "The two-spin encoding writes $z_i=x_i^+-x_i^-$ using $2n$ data qubits. An entangled initial state has the required difference between long and short occupations. Separate $XY$ parity-ring mixers preserve their respective occupations and hence the investment constraint. A cost layer implements the risk, return and trading-cost phases; sampling and decoding return discrete portfolios. The parameters $p$, $K$ and $S$ count alternating layers, evaluated parameter settings and shots per setting. Classical optimizer work and cost evaluation of the sampled portfolios add to the displayed gate count."
     },
     "classical": {
       "headline_latex": "$\\min\\{O^*(3^n),\\operatorname{poly}(n,W)3^{\\omega n/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.",
-      "headline_text": "$\\min\\{O^*(3^n),\\operatorname{poly}(n,W)3^{\\omega n/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.",
       "details_latex": "The investment equality can be imposed by a sufficiently large quadratic penalty. Unary transaction costs and pairwise risk terms then form a three-state 2-CSP. Here $W$ includes the scaled integer coefficient and penalty ranges; the polynomial dependence on $W$ makes the matrix-multiplication bound pseudopolynomial in coefficient bit length. The threshold-circuit bound instead uses the binary encoding size $L$ of feasibility and objective evaluation. Mixed-integer quadratic programming with branch-and-bound supplies the practical classical solver; covariance structure and valid bounds determine its instance-specific search.",
+      "headline_text": "$\\min\\{O^*(3^n),\\operatorname{poly}(n,W)3^{\\omega n/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.",
       "details_text": "The investment equality can be imposed by a sufficiently large quadratic penalty. Unary transaction costs and pairwise risk terms then form a three-state 2-CSP. Here $W$ includes the scaled integer coefficient and penalty ranges; the polynomial dependence on $W$ makes the matrix-multiplication bound pseudopolynomial in coefficient bit length. The threshold-circuit bound instead uses the binary encoding size $L$ of feasibility and objective evaluation. Mixed-integer quadratic programming with branch-and-bound supplies the practical classical solver; covariance structure and valid bounds determine its instance-specific search."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The algorithm preserves the investment constraint and produces sampled discrete portfolios. The established resource formula is a circuit-evaluation cost, with optimization effort specified by $K$ and $S$.",
+      "category_id": "strength-unspecified",
       "description_text": "The algorithm preserves the investment constraint and produces sampled discrete portfolios. The established resource formula is a circuit-evaluation cost, with optimization effort specified by $K$ and $S$."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The reported solution-quality results concern small simulated portfolios. A complexity separation for this rebalancing problem remains open.",
+      "category_id": "evidence-unspecified",
       "description_text": "The reported solution-quality results concern small simulated portfolios. A complexity separation for this rebalancing problem remains open."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "The encoding requires $2n$ logical data qubits plus compilation workspace. The cited eight-asset study uses an ideal simulator. Dense covariance gives $\\Theta(n^2)$ interactions per cost layer, and routing, angle accuracy and repeated sampling dominate scaling on physical devices.",
+      "category_id": "hardware-polynomial",
       "description_text": "The encoding requires $2n$ logical data qubits plus compilation workspace. The cited eight-asset study uses an ideal simulator. Dense covariance gives $\\Theta(n^2)$ interactions per cost layer, and routing, angle accuracy and repeated sampling dominate scaling on physical devices."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum Alternating Operator Ansatz with paired parity mixers",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "106.1",
       "content_latex": "\\href{https://arxiv.org/abs/1911.05296}{Hodson et al., \\emph{Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz} (2019)}. Equations (9)--(12): optimization problem; Section IV and Equations (13)--(24): encoding, constraints, initial state and paired parity mixers; Section V: simulated experiments.",
       "content_text": "Hodson et al., Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz (2019). Equations (9)–(12): optimization problem; Section IV and Equations (13)–(24): encoding, constraints, initial state and paired parity mixers; Section V: simulated experiments.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1911.05296",
+          "title": "Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz",
+          "label_latex": "Hodson et al., \\emph{Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz} (2019)",
+          "locator_latex": "Equations (9)--(12): optimization problem; Section IV and Equations (13)--(24): encoding, constraints, initial state and paired parity mixers; Section V: simulated experiments."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-106-citation-001"
+        "entry-106-citation-00173"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "106.2",
       "content_latex": "\\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4, specialized to a three-element variable domain.",
       "content_text": "Koivisto, Optimal 2-Constraint Satisfaction via Sum-Product Algorithms (2006). Sections 2–4, specialized to a three-element variable domain.",
+      "links": [
+        {
+          "url": "https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf",
+          "title": "Optimal 2-Constraint Satisfaction via Sum-Product Algorithms",
+          "label_latex": "Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)",
+          "locator_latex": "Sections 2--4, specialized to a three-element variable domain."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-106-citation-002"
+        "entry-106-citation-00174"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "106.3",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; binary threshold-circuit encoding and witness recovery.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1; binary threshold-circuit encoding and witness recovery.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1; binary threshold-circuit encoding and witness recovery."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-106-citation-003"
+        "entry-106-citation-00175"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-106-citation-001",
-    "entry-106-citation-002",
-    "entry-106-citation-003"
+  "algorithm_ids": [
+    "qaoa"
   ],
-  "source_latex": "\\entrytitle{106}{Discrete portfolio rebalancing with constrained mixers}{white}{white}{hardwarePolynomial}\n\\setcounter{problem}{105}\n\\begin{problem}[Discrete portfolio rebalancing]\nGiven $n$ assets, a positive-semidefinite rational covariance matrix $\\Sigma$, expected returns $\\mu$, previous positions $y\\in\\{-1,0,1\\}^n$, a net investment $D$, $0\\le\\lambda\\le1$ and transaction cost $T\\ge0$, find $z\\in\\{-1,0,1\\}^n$ satisfying $\\sum_i z_i=D$ and minimizing\n\\[\n\\lambda z^T\\Sigma z-(1-\\lambda)\\mu^Tz+T\\sum_i\\mathbf1[z_i\\ne y_i].\n\\]\nThe positions represent short, absent and long holdings in discrete lots. Complexity counts circuit gates and samples, with classical bit complexity depending on the coefficient precision.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(KSpn^2)$ gates for dense covariance, the quantum alternating operator ansatz with paired parity mixers.}\nThe two-spin encoding writes $z_i=x_i^+-x_i^-$ using $2n$ data qubits. An entangled initial state has the required difference between long and short occupations. Separate $XY$ parity-ring mixers preserve their respective occupations and hence the investment constraint. A cost layer implements the risk, return and trading-cost phases; sampling and decoding return discrete portfolios. The parameters $p$, $K$ and $S$ count alternating layers, evaluated parameter settings and shots per setting. Classical optimizer work and cost evaluation of the sampled portfolios add to the displayed gate count.\n\n\\complexity{Classical}{$\\min\\{O^*(3^n),\\operatorname{poly}(n,W)3^{\\omega n/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.}\nThe investment equality can be imposed by a sufficiently large quadratic penalty. Unary transaction costs and pairwise risk terms then form a three-state 2-CSP. Here $W$ includes the scaled integer coefficient and penalty ranges; the polynomial dependence on $W$ makes the matrix-multiplication bound pseudopolynomial in coefficient bit length. The threshold-circuit bound instead uses the binary encoding size $L$ of feasibility and objective evaluation. Mixed-integer quadratic programming with branch-and-bound supplies the practical classical solver; covariance structure and valid bounds determine its instance-specific search.\n\n\\dimensionlabel{Strength}{white} The algorithm preserves the investment constraint and produces sampled discrete portfolios. The established resource formula is a circuit-evaluation cost, with optimization effort specified by $K$ and $S$.\n\\dimensionlabel{Evidence}{white} The reported solution-quality results concern small simulated portfolios. A complexity separation for this rebalancing problem remains open.\n\\dimensionlabel{Hardware}{hardwarePolynomial} The encoding requires $2n$ logical data qubits plus compilation workspace. The cited eight-asset study uses an ideal simulator. Dense covariance gives $\\Theta(n^2)$ interactions per cost layer, and routing, angle accuracy and repeated sampling dominate scaling on physical devices.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{106}\n\\item \\href{https://arxiv.org/abs/1911.05296}{Hodson et al., \\emph{Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz} (2019)}. Equations (9)--(12): optimization problem; Section IV and Equations (13)--(24): encoding, constraints, initial state and paired parity mixers; Section V: simulated experiments.\n\\item \\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4, specialized to a three-element variable domain.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; binary threshold-circuit encoding and witness recovery.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "qaoa",
+      "label_latex": "QAOA and the Quantum Alternating Operator Ansatz",
+      "problem_numbers": [
+        49,
+        50,
+        51,
+        52,
+        99,
+        103,
+        104,
+        105
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{106}{Discrete portfolio rebalancing with constrained mixers}{white}{white}{hardwarePolynomial}\n\\setcounter{problem}{105}\n\\begin{problem}[Discrete portfolio rebalancing]\nGiven $n$ assets, a positive-semidefinite rational covariance matrix $\\Sigma$, expected returns $\\mu$, previous positions $y\\in\\{-1,0,1\\}^n$, a net investment $D$, $0\\le\\lambda\\le1$ and transaction cost $T\\ge0$, find $z\\in\\{-1,0,1\\}^n$ satisfying $\\sum_i z_i=D$ and minimizing\n\\[\n\\lambda z^T\\Sigma z-(1-\\lambda)\\mu^Tz+T\\sum_i\\mathbf1[z_i\\ne y_i].\n\\]\nThe positions represent short, absent and long holdings in discrete lots. Complexity counts circuit gates and samples, with classical bit complexity depending on the coefficient precision.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(KSpn^2)$ gates for dense covariance, the quantum alternating operator ansatz with paired parity mixers.}\nThe two-spin encoding writes $z_i=x_i^+-x_i^-$ using $2n$ data qubits. An entangled initial state has the required difference between long and short occupations. Separate $XY$ parity-ring mixers preserve their respective occupations and hence the investment constraint. A cost layer implements the risk, return and trading-cost phases; sampling and decoding return discrete portfolios. The parameters $p$, $K$ and $S$ count alternating layers, evaluated parameter settings and shots per setting. Classical optimizer work and cost evaluation of the sampled portfolios add to the displayed gate count.\n\n\\complexity{Classical}{$\\min\\{O^*(3^n),\\operatorname{poly}(n,W)3^{\\omega n/3},\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}\\}$, enumeration, weighted 2-CSP and exact threshold counting.}\nThe investment equality can be imposed by a sufficiently large quadratic penalty. Unary transaction costs and pairwise risk terms then form a three-state 2-CSP. Here $W$ includes the scaled integer coefficient and penalty ranges; the polynomial dependence on $W$ makes the matrix-multiplication bound pseudopolynomial in coefficient bit length. The threshold-circuit bound instead uses the binary encoding size $L$ of feasibility and objective evaluation. Mixed-integer quadratic programming with branch-and-bound supplies the practical classical solver; covariance structure and valid bounds determine its instance-specific search.\n\n\\dimensionlabel{Strength}{white} The algorithm preserves the investment constraint and produces sampled discrete portfolios. The established resource formula is a circuit-evaluation cost, with optimization effort specified by $K$ and $S$.\n\\dimensionlabel{Evidence}{white} The reported solution-quality results concern small simulated portfolios. A complexity separation for this rebalancing problem remains open.\n\\dimensionlabel{Hardware}{hardwarePolynomial} The encoding requires $2n$ logical data qubits plus compilation workspace. The cited eight-asset study uses an ideal simulator. Dense covariance gives $\\Theta(n^2)$ interactions per cost layer, and routing, angle accuracy and repeated sampling dominate scaling on physical devices.\n\\subhead{Algorithm: Quantum Alternating Operator Ansatz with paired parity mixers}\n\\begin{algorithmindex}{106}\n\\item \\href{https://arxiv.org/abs/1911.05296}{Hodson et al., \\emph{Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz} (2019)}. Equations (9)--(12): optimization problem; Section IV and Equations (13)--(24): encoding, constraints, initial state and paired parity mixers; Section V: simulated experiments.\n\\item \\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4, specialized to a three-element variable domain.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; binary threshold-circuit encoding and witness recovery.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{qaoa}{QAOA and the Quantum Alternating Operator Ansatz}: \\problemref{49}, \\problemref{50}, \\problemref{51}, \\problemref{52}, \\problemref{99}, \\problemref{103}, \\problemref{104}, \\problemref{105}.\n\\par\\endgroup",
+  "importance": "peripheral",
+  "origin": "manuscript",
+  "ordinal": 77,
+  "citation_ids": [
+    "entry-106-citation-00173",
+    "entry-106-citation-00174",
+    "entry-106-citation-00175"
+  ]
 }

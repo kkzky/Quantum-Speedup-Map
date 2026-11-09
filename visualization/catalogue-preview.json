@@ -13,6 +13,7 @@
         83,
         95
       ],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Unstructured search",
         "name": "Unstructured search",
@@ -145,6 +146,7 @@
       "title_latex": "Black-box discrete minimization",
       "title": "Black-box discrete minimization",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Black-box minimum finding",
         "name": "Black-box minimum finding",
@@ -223,6 +225,7 @@
       "title_latex": "Constraint satisfaction by backtracking",
       "title": "Constraint satisfaction by backtracking",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Constraint satisfaction",
         "name": "Constraint satisfaction",
@@ -304,6 +307,7 @@
       "title_latex": "Discrete optimization by branch and bound",
       "title": "Discrete optimization by branch and bound",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Branch-and-bound optimization",
         "name": "Branch-and-bound optimization",
@@ -385,6 +389,7 @@
       "title_latex": "Fixed-width Boolean satisfiability",
       "title": "Fixed-width Boolean satisfiability",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "$k$-SAT",
         "name": "$k$-SAT",
@@ -490,6 +495,7 @@
       "title_latex": "Approximate counting of feasible assignments",
       "title": "Approximate counting of feasible assignments",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Approximate counting",
         "name": "Approximate counting",
@@ -571,6 +577,7 @@
       "aliases": [
         17
       ],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Travelling salesman",
         "name": "Travelling salesman",
@@ -696,6 +703,7 @@
         22,
         23
       ],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Set cover, set packing and exact set partition",
         "name": "Set cover, set packing and exact set partition",
@@ -812,6 +820,7 @@
       "title_latex": "Set multicover with repeated sets",
       "title": "Set multicover with repeated sets",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Set multicover with repeated sets",
         "name": "Set multicover with repeated sets",
@@ -881,6 +890,7 @@
       "title_latex": "Chromatic number",
       "title": "Chromatic number",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Graph coloring and chromatic number",
         "name": "Graph coloring and chromatic number",
@@ -965,6 +975,7 @@
       "title_latex": "Minimum Steiner tree",
       "title": "Minimum Steiner tree",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Minimum Steiner tree",
         "name": "Minimum Steiner tree",
@@ -1065,6 +1076,7 @@
       "title_latex": "Graph bandwidth",
       "title": "Graph bandwidth",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Graph bandwidth",
         "name": "Graph bandwidth",
@@ -1134,6 +1146,7 @@
       "title_latex": "Exact treewidth",
       "title": "Exact treewidth",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Treewidth",
         "name": "Treewidth",
@@ -1203,6 +1216,7 @@
       "title_latex": "Pathwidth and vertex separation",
       "title": "Pathwidth and vertex separation",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Pathwidth",
         "name": "Pathwidth",
@@ -1308,6 +1322,7 @@
         16,
         29
       ],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Cutwidth, minimum linear arrangement and interval completion",
         "name": "Cutwidth, minimum linear arrangement and interval completion",
@@ -1418,6 +1433,7 @@
       "title_latex": "Worst-case subset sum",
       "title": "Worst-case subset sum",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Subset sum",
         "name": "Subset sum",
@@ -1523,6 +1539,7 @@
       "aliases": [
         30
       ],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Knapsack and binary integer programming",
         "name": "Knapsack and binary integer programming",
@@ -1624,6 +1641,7 @@
       "title_latex": "Independent set, clique and vertex cover",
       "title": "Independent set, clique and vertex cover",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Maximum independent set, maximum clique and minimum vertex cover",
         "name": "Maximum independent set, maximum clique and minimum vertex cover",
@@ -1729,6 +1747,7 @@
       "title_latex": "Domatic number",
       "title": "Domatic number",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Domatic number",
         "name": "Domatic number",
@@ -1819,6 +1838,7 @@
       "title_latex": "Covering by maximal induced bicliques",
       "title": "Covering by maximal induced bicliques",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Vertex covering by maximal induced bicliques",
         "name": "Vertex covering by maximal induced bicliques",
@@ -1903,6 +1923,7 @@
       "title_latex": "Packing maximal induced matchings",
       "title": "Packing maximal induced matchings",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Packing and partitioning maximal induced matchings",
         "name": "Packing and partitioning maximal induced matchings",
@@ -1993,6 +2014,7 @@
       "title_latex": "Vertex arboricity",
       "title": "Vertex arboricity",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Vertex arboricity",
         "name": "Vertex arboricity",
@@ -2065,6 +2087,7 @@
       "title_latex": "Partition into hereditary graph classes",
       "title": "Partition into hereditary graph classes",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Partition into a hereditary graph class",
         "name": "Partition into a hereditary graph class",
@@ -2149,6 +2172,7 @@
       "title_latex": "Minimum fill-in",
       "title": "Minimum fill-in",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Minimum fill-in",
         "name": "Minimum fill-in",
@@ -2251,6 +2275,7 @@
       "title_latex": "Recursive Fourier sampling",
       "title": "Recursive Fourier sampling",
       "aliases": [],
+      "chapter_id": "chapter-1",
       "problem": {
         "name_latex": "Recursive Fourier sampling",
         "name": "Recursive Fourier sampling",
@@ -2332,6 +2357,7 @@
       "title_latex": "Minimum spanning tree",
       "title": "Minimum spanning tree",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Minimum spanning tree",
         "name": "Minimum spanning tree",
@@ -2422,6 +2448,7 @@
       "title_latex": "Undirected graph connectivity",
       "title": "Undirected graph connectivity",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Undirected graph connectivity",
         "name": "Undirected graph connectivity",
@@ -2487,6 +2514,7 @@
       "title_latex": "Strong connectivity of directed graphs",
       "title": "Strong connectivity of directed graphs",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Strong connectivity of directed graphs",
         "name": "Strong connectivity of directed graphs",
@@ -2564,6 +2592,7 @@
       "title_latex": "Single-source shortest paths",
       "title": "Single-source shortest paths",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Single-source shortest paths",
         "name": "Single-source shortest paths",
@@ -2654,6 +2683,7 @@
       "title_latex": "Maximum-cardinality matching",
       "title": "Maximum-cardinality matching",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Maximum-cardinality matching",
         "name": "Maximum-cardinality matching",
@@ -2741,6 +2771,7 @@
       "title_latex": "Integral maximum flow",
       "title": "Integral maximum flow",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Integral maximum flow",
         "name": "Integral maximum flow",
@@ -2822,6 +2853,7 @@
       "title_latex": "Unweighted triangle finding",
       "title": "Unweighted triangle finding",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Unweighted triangle finding",
         "name": "Unweighted triangle finding",
@@ -2891,6 +2923,7 @@
       "title_latex": "Graph collision",
       "title": "Graph collision",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Graph collision",
         "name": "Graph collision",
@@ -2961,6 +2994,7 @@
       "title_latex": "Testing bipartiteness in bounded-degree graphs",
       "title": "Testing bipartiteness in bounded-degree graphs",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Testing bipartiteness in bounded-degree graphs",
         "name": "Testing bipartiteness in bounded-degree graphs",
@@ -3030,6 +3064,7 @@
       "title_latex": "Testing graph expansion",
       "title": "Testing graph expansion",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Testing graph expansion",
         "name": "Testing graph expansion",
@@ -3087,6 +3122,7 @@
       "title_latex": "AND--OR formula and game-tree evaluation",
       "title": "AND–OR formula and game-tree evaluation",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "AND--OR formula and game-tree evaluation",
         "name": "AND–OR formula and game-tree evaluation",
@@ -3156,6 +3192,7 @@
       "title_latex": "Matrix-product verification over a field",
       "title": "Matrix-product verification over a field",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Matrix-product verification over a field",
         "name": "Matrix-product verification over a field",
@@ -3225,6 +3262,7 @@
       "title_latex": "Boolean matrix-product verification",
       "title": "Boolean matrix-product verification",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Boolean matrix-product verification",
         "name": "Boolean matrix-product verification",
@@ -3295,6 +3333,7 @@
       "title_latex": "Promised short-path \\texorpdfstring{$s$--$t$}{s--t} connectivity",
       "title": "Promised short-path s–t connectivity",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Promised short-path $s$--$t$ connectivity",
         "name": "Promised short-path $s$–$t$ connectivity",
@@ -3352,6 +3391,7 @@
       "title_latex": "Global minimum cut",
       "title": "Global minimum cut",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Global minimum cut",
         "name": "Global minimum cut",
@@ -3409,6 +3449,7 @@
       "title_latex": "MaxCut approximation with QAOA",
       "title": "MaxCut approximation with QAOA",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Maximum cut",
         "name": "Maximum cut",
@@ -3529,6 +3570,7 @@
       "title_latex": "Bounded-occurrence Max-E3LIN2",
       "title": "Bounded-occurrence Max-E3LIN2",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Bounded-occurrence Max-E3LIN2",
         "name": "Bounded-occurrence Max-E3LIN2",
@@ -3625,6 +3667,7 @@
       "title_latex": "Maximum independent set in Rydberg geometric graphs",
       "title": "Maximum independent set in Rydberg geometric graphs",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Maximum independent set in unit-disk graphs",
         "name": "Maximum independent set in unit-disk graphs",
@@ -3710,6 +3753,7 @@
       "title_latex": "Sherrington--Kirkpatrick spin-glass optimization",
       "title": "Sherrington–Kirkpatrick spin-glass optimization",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Sherrington--Kirkpatrick spin-glass optimization",
         "name": "Sherrington–Kirkpatrick spin-glass optimization",
@@ -3826,6 +3870,7 @@
       "title_latex": "Exact bounded-locality spin optimization by short paths",
       "title": "Exact bounded-locality spin optimization by short paths",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Exact fixed-arity spin optimization",
         "name": "Exact fixed-arity spin optimization",
@@ -3967,6 +4012,7 @@
       "title_latex": "Partition functions and approximate combinatorial counting",
       "title": "Partition functions and approximate combinatorial counting",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Partition-function estimation",
         "name": "Partition-function estimation",
@@ -4066,6 +4112,7 @@
       "title_latex": "Traversing a randomly welded pair of trees",
       "title": "Traversing a randomly welded pair of trees",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Welded-tree traversal",
         "name": "Welded-tree traversal",
@@ -4123,6 +4170,7 @@
       "title_latex": "Gibbs sampling and quantum simulated annealing",
       "title": "Gibbs sampling and quantum simulated annealing",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Gibbs sampling",
         "name": "Gibbs sampling",
@@ -4213,6 +4261,7 @@
       "title_latex": "All-pairs shortest paths",
       "title": "All-pairs shortest paths",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "All-pairs shortest paths",
         "name": "All-pairs shortest paths",
@@ -4315,6 +4364,7 @@
       "title_latex": "Optimal polynomial intersection by decoded quantum interferometry",
       "title": "Optimal polynomial intersection by decoded quantum interferometry",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Optimal polynomial intersection",
         "name": "Optimal polynomial intersection",
@@ -4409,6 +4459,7 @@
       "title_latex": "Maximum \\texorpdfstring{$k$}{k}-cut with variational quantum circuits",
       "title": "Maximum k-cut with variational quantum circuits",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Maximum $k$-cut",
         "name": "Maximum $k$-cut",
@@ -4541,6 +4592,7 @@
       "title_latex": "Maximum bisection with constraint-preserving QAOA",
       "title": "Maximum bisection with constraint-preserving QAOA",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Maximum bisection",
         "name": "Maximum bisection",
@@ -4649,6 +4701,7 @@
       "title_latex": "Job-shop scheduling with delivery and changeover costs",
       "title": "Job-shop scheduling with delivery and changeover costs",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Discrete production scheduling",
         "name": "Discrete production scheduling",
@@ -4767,6 +4820,7 @@
       "title_latex": "Discrete portfolio rebalancing with constrained mixers",
       "title": "Discrete portfolio rebalancing with constrained mixers",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Discrete portfolio rebalancing",
         "name": "Discrete portfolio rebalancing",
@@ -4863,6 +4917,7 @@
       "title_latex": "Two-community modularity maximization by variational local search",
       "title": "Two-community modularity maximization by variational local search",
       "aliases": [],
+      "chapter_id": "chapter-2",
       "problem": {
         "name_latex": "Two-community modularity maximization",
         "name": "Two-community modularity maximization",
@@ -4965,6 +5020,7 @@
       "title_latex": "Integer factorization",
       "title": "Integer factorization",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Integer factorization",
         "name": "Integer factorization",
@@ -5081,6 +5137,7 @@
       "title_latex": "Discrete logarithms in finite fields",
       "title": "Discrete logarithms in finite fields",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Discrete logarithms in finite fields",
         "name": "Discrete logarithms in finite fields",
@@ -5160,6 +5217,7 @@
       "title_latex": "Elliptic-curve discrete logarithm",
       "title": "Elliptic-curve discrete logarithm",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Elliptic-curve discrete logarithm",
         "name": "Elliptic-curve discrete logarithm",
@@ -5251,6 +5309,7 @@
       "title_latex": "Order finding in a black-box cyclic group",
       "title": "Order finding in a black-box cyclic group",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Order finding in a black-box cyclic group",
         "name": "Order finding in a black-box cyclic group",
@@ -5331,6 +5390,7 @@
       "title_latex": "Pell's equation and the real quadratic regulator",
       "title": "Pell's equation and the real quadratic regulator",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Pell's equation and the real quadratic regulator",
         "name": "Pell's equation and the real quadratic regulator",
@@ -5396,6 +5456,7 @@
       "title_latex": "The principal ideal problem",
       "title": "The principal ideal problem",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "The principal ideal problem",
         "name": "The principal ideal problem",
@@ -5481,6 +5542,7 @@
       "title_latex": "Computing ideal class groups",
       "title": "Computing ideal class groups",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Computing ideal class groups",
         "name": "Computing ideal class groups",
@@ -5546,6 +5608,7 @@
       "title_latex": "Vectorization for commutative isogeny actions",
       "title": "Vectorization for commutative isogeny actions",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Vectorization for commutative isogeny group actions",
         "name": "Vectorization for commutative isogeny group actions",
@@ -5639,6 +5702,7 @@
       "title_latex": "Supersingular isogeny path finding",
       "title": "Supersingular isogeny path finding",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Supersingular isogeny path finding",
         "name": "Supersingular isogeny path finding",
@@ -5708,6 +5772,7 @@
       "title_latex": "SIDH secret-isogeny recovery",
       "title": "SIDH secret-isogeny recovery",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "SIDH secret-isogeny recovery with torsion images",
         "name": "SIDH secret-isogeny recovery with torsion images",
@@ -5798,6 +5863,7 @@
       "title_latex": "The Euclidean shortest vector problem",
       "title": "The Euclidean shortest vector problem",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "The Euclidean shortest vector problem",
         "name": "The Euclidean shortest vector problem",
@@ -5927,6 +5993,7 @@
       "title_latex": "Isomorphism to the standard integer lattice",
       "title": "Isomorphism to the standard integer lattice",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Isomorphism to the standard integer lattice",
         "name": "Isomorphism to the standard integer lattice",
@@ -6012,6 +6079,7 @@
       "title_latex": "Learning parity with noisy quantum examples",
       "title": "Learning parity with noisy quantum examples",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Learning parity with noisy quantum examples",
         "name": "Learning parity with noisy quantum examples",
@@ -6081,6 +6149,7 @@
       "title_latex": "The Euclidean closest vector problem",
       "title": "The Euclidean closest vector problem",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "The Euclidean closest vector problem",
         "name": "The Euclidean closest vector problem",
@@ -6174,6 +6243,7 @@
       "title_latex": "Bounded distance decoding on periodic lattices",
       "title": "Bounded distance decoding on periodic lattices",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Bounded distance decoding on periodic integer lattices",
         "name": "Bounded distance decoding on periodic integer lattices",
@@ -6243,6 +6313,7 @@
       "title_latex": "Learning with errors with classical samples",
       "title": "Learning with errors with classical samples",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Learning with errors with classical samples",
         "name": "Learning with errors with classical samples",
@@ -6344,6 +6415,7 @@
       "title_latex": "Short integer solutions with a wide public matrix",
       "title": "Short integer solutions with a wide public matrix",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Short integer solutions with a wide public matrix",
         "name": "Short integer solutions with a wide public matrix",
@@ -6421,6 +6493,7 @@
       "title_latex": "Binary syndrome decoding",
       "title": "Binary syndrome decoding",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Binary syndrome decoding",
         "name": "Binary syndrome decoding",
@@ -6540,6 +6613,7 @@
       "title_latex": "Minimum-weight nonzero codewords",
       "title": "Minimum-weight nonzero codewords",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Minimum-weight nonzero codewords",
         "name": "Minimum-weight nonzero codewords",
@@ -6680,6 +6754,7 @@
       "title_latex": "Random subset sum at cryptographic density",
       "title": "Random subset sum at cryptographic density",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Random subset sum at cryptographic density",
         "name": "Random subset sum at cryptographic density",
@@ -6749,6 +6824,7 @@
       "title_latex": "Boolean multivariate quadratic equations",
       "title": "Boolean multivariate quadratic equations",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Boolean multivariate quadratic equations",
         "name": "Boolean multivariate quadratic equations",
@@ -6860,6 +6936,7 @@
       "title_latex": "Hash collisions",
       "title": "Hash collisions",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Hash collisions",
         "name": "Hash collisions",
@@ -6943,6 +7020,7 @@
       "aliases": [
         86
       ],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Claw finding and double-encryption key recovery",
         "name": "Claw finding and double-encryption key recovery",
@@ -7032,6 +7110,7 @@
       "title_latex": "Generalized birthday search: random \\texorpdfstring{$k$}{k}-XOR",
       "title": "Generalized birthday search: random k-XOR",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Generalized birthday search: random $k$-XOR",
         "name": "Generalized birthday search: random $k$-XOR",
@@ -7113,6 +7192,7 @@
       "title_latex": "Even--Mansour recovery with quantum queries",
       "title": "Even–Mansour recovery with quantum queries",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Even--Mansour key recovery with quantum chosen plaintexts",
         "name": "Even–Mansour key recovery with quantum chosen plaintexts",
@@ -7190,6 +7270,7 @@
       "title_latex": "Even--Mansour recovery with classical queries",
       "title": "Even–Mansour recovery with classical queries",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Even--Mansour key recovery with classical queries",
         "name": "Even–Mansour key recovery with classical queries",
@@ -7267,6 +7348,7 @@
       "title_latex": "Differential and linear cryptanalysis",
       "title": "Differential and linear cryptanalysis",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Differential and linear cryptanalysis",
         "name": "Differential and linear cryptanalysis",
@@ -7376,6 +7458,7 @@
       "title_latex": "Vector subset sum over \\texorpdfstring{$\\mathbb F_3$}{F3}",
       "title": "Vector subset sum over F3",
       "aliases": [],
+      "chapter_id": "chapter-3",
       "problem": {
         "name_latex": "Average-case $\\mathbb F_3^n$-Subset-Sum",
         "name": "Average-case $\\mathbb F_3^n$-Subset-Sum",
@@ -7477,6 +7560,7 @@
       "title_latex": "Local minima on the Boolean hypercube",
       "title": "Local minima on the Boolean hypercube",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Local search on the Boolean hypercube",
         "name": "Local search on the Boolean hypercube",
@@ -7567,6 +7651,7 @@
       "title_latex": "Total Boolean decision problems: a fourth-power bound",
       "title": "Total Boolean decision problems: a fourth-power bound",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Total Boolean function evaluation",
         "name": "Total Boolean function evaluation",
@@ -7622,6 +7707,7 @@
       "title_latex": "Symmetric promise problems and graph properties",
       "title": "Symmetric promise problems and graph properties",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Symmetric decision problems and graph property testing",
         "name": "Symmetric decision problems and graph property testing",
@@ -7691,6 +7777,7 @@
       "title_latex": "Exact counting and parity of feasible solutions",
       "title": "Exact counting and parity of feasible solutions",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Exact counting and parity-SAT",
         "name": "Exact counting and parity-SAT",
@@ -7760,6 +7847,7 @@
       "title_latex": "Fine-grained complexity of satisfiability and string problems",
       "title": "Fine-grained complexity of satisfiability and string problems",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Succinct truth-table properties",
         "name": "Succinct truth-table properties",
@@ -7859,6 +7947,7 @@
       "title_latex": "Stoquastic frustration-free constraint satisfaction",
       "title": "Stoquastic frustration-free constraint satisfaction",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Stoquastic $k$-SAT",
         "name": "Stoquastic $k$-SAT",
@@ -7916,6 +8005,7 @@
       "title_latex": "Local Hamiltonian ground-energy optimization",
       "title": "Local Hamiltonian ground-energy optimization",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Local Hamiltonian",
         "name": "Local Hamiltonian",
@@ -8009,6 +8099,7 @@
       "title_latex": "Global optimization of variational-circuit parameters",
       "title": "Global optimization of variational-circuit parameters",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Variational quantum circuit optimization",
         "name": "Variational quantum circuit optimization",
@@ -8124,6 +8215,7 @@
       "title_latex": "Adiabatic optimization: spectral-gap costs and oracle bounds",
       "title": "Adiabatic optimization: spectral-gap costs and oracle bounds",
       "aliases": [],
+      "chapter_id": "chapter-4",
       "problem": {
         "name_latex": "Adiabatic ground-state optimization",
         "name": "Adiabatic ground-state optimization",

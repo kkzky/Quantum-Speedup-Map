@@ -1,0 +1,95 @@
+{
+  "id": "entry-200",
+  "number": 200,
+  "slug": "prior-q05",
+  "title": "Fourier sampling of a Boolean function",
+  "title_latex": "Fourier sampling of a Boolean function",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q05",
+  "inventory_ids": [
+    "Q05"
+  ],
+  "problem": {
+    "name": "Fourier sampling of a Boolean function",
+    "name_latex": "Fourier sampling of a Boolean function",
+    "statement_latex": "Given $f:\\{0,1\\}^n\\to\\{-1,1\\}$ by a phase oracle, sample $y\\in\\{0,1\\}^n$ from a distribution within constant total-variation distance of $p(y)=\\widehat f(y)^2$, where $\\widehat f(y)=2^{-n}\\sum_xf(x)(-1)^{x\\cdot y}$.",
+    "statement_text": "Given $f:\\{0,1\\}^n\\to\\{-1,1\\}$ by a phase oracle, sample $y\\in\\{0,1\\}^n$ from a distribution within constant total-variation distance of $p(y)=\\widehat f(y)^2$, where $\\widehat f(y)=2^{-n}\\sum_xf(x)(-1)^{x\\cdot y}$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "The transform circuit uses $O(n)$ logical qubits and $O(n)$ elementary gates around its oracle calls; implementing the oracle determines the full device cost. Small circuit demonstrations are feasible.",
+      "category_id": "hardware-small",
+      "description_text": "The transform circuit uses $O(n)$ logical qubits and $O(n)$ elementary gates around its oracle calls; implementing the oracle determines the full device cost. Small circuit demonstrations are feasible."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "One oracle call and $O(n)$ Hadamard gates prepare and measure the Fourier-sampling distribution.",
+      "details_latex": "",
+      "headline_text": "One oracle call and $O(n)$ Hadamard gates prepare and measure the Fourier-sampling distribution.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(2^n)$ randomized queries in the worst case at the specified constant total-variation accuracy, by the Fourier-sampling lower bound of Aaronson--Chen.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(2^n)$ randomized queries in the worst case at the specified constant total-variation accuracy, by the Fourier-sampling lower bound of Aaronson–Chen.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "boolean-fourier-sampling"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1612.05903}{\\emph{Complexity-Theoretic Foundations of Quantum Supremacy Experiments}}. Fourier Sampling lower bound; Section7.4 for succinct-oracle implications",
+      "content_text": "Complexity-Theoretic Foundations of Quantum Supremacy Experiments. Fourier Sampling lower bound; Section7.4 for succinct-oracle implications",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1612.05903",
+          "title": "Complexity-Theoretic Foundations of Quantum Supremacy Experiments",
+          "label_latex": "\\emph{Complexity-Theoretic Foundations of Quantum Supremacy Experiments}",
+          "locator_latex": "Fourier Sampling lower bound; Section7.4 for succinct-oracle implications"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-200-citation-00377"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Boolean Fourier sampling",
+  "plot": {
+    "quantum": "1",
+    "classical": "\\Theta(2^n)",
+    "parameter": "oracle address length n",
+    "model": "queries for approximate sampling",
+    "quantum_kind": "constant",
+    "classical_kind": "exponential",
+    "gain": "\\Theta(2^n)",
+    "quantum_exponent": 0,
+    "classical_exponent": 1
+  },
+  "ordinal": 192,
+  "citation_ids": [
+    "entry-200-citation-00377"
+  ]
+}

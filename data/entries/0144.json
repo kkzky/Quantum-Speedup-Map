@@ -1,0 +1,93 @@
+{
+  "id": "entry-144",
+  "number": 144,
+  "slug": "prior-g46",
+  "title": "Directed subgraph-freeness testing",
+  "title_latex": "Directed subgraph-freeness testing",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g46",
+  "inventory_ids": [
+    "G46"
+  ],
+  "problem": {
+    "name": "Directed subgraph-freeness testing",
+    "name_latex": "Directed subgraph-freeness testing",
+    "statement_latex": "Fix a directed pattern $H$ with $k$ source strongly connected components. Given outgoing-neighbor access to a bounded-outdegree $n$-vertex digraph, distinguish $H$-free graphs from graphs requiring at least $\\varepsilon dn$ edge changes to become $H$-free.",
+    "statement_text": "Fix a directed pattern $H$ with $k$ source strongly connected components. Given outgoing-neighbor access to a bounded-outdegree $n$-vertex digraph, distinguish $H$-free graphs from graphs requiring at least $\\varepsilon dn$ edge changes to become $H$-free."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^{(1-1/(2^k-1))/2})$ queries by Apers--Magniez--Sen--Szabo for fixed $H$, degree and $\\varepsilon$.",
+      "details_latex": "",
+      "headline_text": "$O(n^{(1-1/(2^k-1))/2})$ queries by Apers–Magniez–Sen–Szabo for fixed $H$, degree and $\\varepsilon$.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n^{1-1/k})$ queries by the classical unidirectional tester; this exponent is necessary for the $k$-star subfamily.",
+      "details_latex": "",
+      "headline_text": "$O(n^{1-1/k})$ queries by the classical unidirectional tester; this exponent is necessary for the $k$-star subfamily.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "directed-subgraph-quantum-tester"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2410.05001}{\\emph{Quantum property testing in sparse directed graphs}}. Theorem13 in conference version (Theorem1 restatement)",
+      "content_text": "Quantum property testing in sparse directed graphs. Theorem13 in conference version (Theorem1 restatement)",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2410.05001",
+          "title": "Quantum property testing in sparse directed graphs",
+          "label_latex": "\\emph{Quantum property testing in sparse directed graphs}",
+          "locator_latex": "Theorem13 in conference version (Theorem1 restatement)"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-144-citation-00220"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Apers--Magniez--Sen--Szabo directed graph tester",
+  "plot": {
+    "quantum": "O(n^{(1-1/(2^k-1))/2})",
+    "classical": "\\Theta(n^{1-1/k})",
+    "parameter": "n vertices; fixed k-source star pattern",
+    "model": "outgoing-neighbor queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "n^{1/2-1/k+1/(2(2^k-1))}"
+  },
+  "ordinal": 113,
+  "citation_ids": [
+    "entry-144-citation-00220"
+  ]
+}

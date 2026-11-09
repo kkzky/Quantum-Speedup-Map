@@ -1,0 +1,93 @@
+{
+  "id": "entry-176",
+  "number": 176,
+  "slug": "prior-a39",
+  "title": "Multicollisions in a random function",
+  "title_latex": "Multicollisions in a random function",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-a39",
+  "inventory_ids": [
+    "A39"
+  ],
+  "problem": {
+    "name": "Multicollisions in a random function",
+    "name_latex": "Multicollisions in a random function",
+    "statement_latex": "Given a random function $f:[D]\\to[N]$ with sufficiently large domain and fixed $\\ell\\ge2$, find distinct $x_1,\\ldots,x_\\ell$ satisfying $f(x_1)=\\cdots=f(x_\\ell)$. Complexity counts random-oracle queries.",
+    "statement_text": "Given a random function $f:[D]\\to[N]$ with sufficiently large domain and fixed $\\ell\\ge2$, find distinct $x_1,\\ldots,x_\\ell$ satisfying $f(x_1)=\\cdots=f(x_\\ell)$. Complexity counts random-oracle queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(N^{(2^{\\ell-1}-1)/(2^\\ell-1)})$ queries, from the Hosoyamada--Sasaki--Tani--Xagawa recursive algorithm and Liu--Zhandry lower bound.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(N^{(2^{\\ell-1}-1)/(2^\\ell-1)})$ queries, from the Hosoyamada–Sasaki–Tani–Xagawa recursive algorithm and Liu–Zhandry lower bound.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N^{(\\ell-1)/\\ell})$ classical random-function queries by generalized birthday sampling.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(N^{(\\ell-1)/\\ell})$ classical random-function queries by generalized birthday sampling.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-multicollision"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1811.08097}{\\emph{Improved Quantum Multicollision-Finding Algorithm; On Finding Quantum Multi-collisions}}. Main multicollision theorem; matching lower bound https://eprint.iacr.org/2018/1096.pdf",
+      "content_text": "Improved Quantum Multicollision-Finding Algorithm; On Finding Quantum Multi-collisions. Main multicollision theorem; matching lower bound https://eprint.iacr.org/2018/1096.pdf",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1811.08097",
+          "title": "Improved Quantum Multicollision-Finding Algorithm; On Finding Quantum Multi-collisions",
+          "label_latex": "\\emph{Improved Quantum Multicollision-Finding Algorithm; On Finding Quantum Multi-collisions}",
+          "locator_latex": "Main multicollision theorem; matching lower bound https://eprint.iacr.org/2018/1096.pdf"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-176-citation-00331"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Hosoyamada--Sasaki--Tani--Xagawa multicollision algorithm",
+  "plot": {
+    "quantum": "\\Theta(N^{(2^{\\ell-1}-1)/(2^\\ell-1)})",
+    "classical": "\\Theta(N^{(\\ell-1)/\\ell})",
+    "parameter": "range size N; fixed collision multiplicity ell",
+    "model": "random-oracle queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "N^{(\\ell-1)/\\ell-(2^{\\ell-1}-1)/(2^\\ell-1)}"
+  },
+  "ordinal": 167,
+  "citation_ids": [
+    "entry-176-citation-00331"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "entry-153",
+  "number": 153,
+  "slug": "prior-a09",
+  "title": "Constructive membership in a commutative semigroup",
+  "title_latex": "Constructive membership in a commutative semigroup",
+  "aliases": [],
+  "chapter_id": "chapter-3",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-a09",
+  "inventory_ids": [
+    "A09"
+  ],
+  "problem": {
+    "name": "Constructive membership in a commutative semigroup",
+    "name_latex": "Constructive membership in a commutative semigroup",
+    "statement_latex": "Given commuting elements $g_1,\\ldots,g_k$ of a finite semigroup $S$ and $x\\in S$, find nonnegative exponents $a_1,\\ldots,a_k$ with $x=\\prod_i g_i^{a_i}$, or report failure. Let $N=|S|$ and fix $k$.",
+    "statement_text": "Given commuting elements $g_1,\\ldots,g_k$ of a finite semigroup $S$ and $x\\in S$, find nonnegative exponents $a_1,\\ldots,a_k$ with $x=\\prod_i g_i^{a_i}$, or report failure. Let $N=|S|$ and fix $k$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(N^{1/2-1/(2k)})$ semigroup queries by Childs--Ivanyos; the paper proves a matching quantum lower bound up to logarithmic factors.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(N^{1/2-1/(2k)})$ semigroup queries by Childs–Ivanyos; the paper proves a matching quantum lower bound up to logarithmic factors.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(kN)$ operations by exploring the generated subsemigroup and recording predecessor products. Classical baby-step--giant-step techniques improve special cancellative or group instances.",
+      "details_latex": "",
+      "headline_text": "$O(kN)$ operations by exploring the generated subsemigroup and recording predecessor products. Classical baby-step–giant-step techniques improve special cancellative or group instances.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "commutative-semigroup-membership"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1310.6238}{\\emph{Quantum computation of discrete logarithms in semigroups}}. Section 5.",
+      "content_text": "Quantum computation of discrete logarithms in semigroups. Section 5.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1310.6238",
+          "title": "Quantum computation of discrete logarithms in semigroups",
+          "label_latex": "\\emph{Quantum computation of discrete logarithms in semigroups}",
+          "locator_latex": "Section 5."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-153-citation-00315"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Childs--Ivanyos commutative-semigroup membership",
+  "plot": {
+    "quantum": "\\widetilde O(N^{1/2-1/(2k)})",
+    "classical": "O(kN)",
+    "parameter": "semigroup size N and fixed generator count k",
+    "model": "semigroup queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Polynomial query improvement over generic closure enumeration",
+    "classical_exponent": 1
+  },
+  "ordinal": 153,
+  "citation_ids": [
+    "entry-153-citation-00315"
+  ]
+}

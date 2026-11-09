@@ -1,0 +1,93 @@
+{
+  "id": "entry-210",
+  "number": 210,
+  "slug": "prior-q19",
+  "title": "Agnostic learning of decision trees",
+  "title_latex": "Agnostic learning of decision trees",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q19",
+  "inventory_ids": [
+    "Q19"
+  ],
+  "problem": {
+    "name": "Agnostic learning of decision trees",
+    "name_latex": "Agnostic learning of decision trees",
+    "statement_latex": "Given quantum examples of a distribution over $(x,y)\\in\\{0,1\\}^n\\times\\{0,1\\}$ with uniform marginal on $x$, output a classical hypothesis with error at most $\\operatorname{opt}_t+\\varepsilon$, where $\\operatorname{opt}_t$ is the best error of a size-$t$ decision tree.",
+    "statement_text": "Given quantum examples of a distribution over $(x,y)\\in\\{0,1\\}^n\\times\\{0,1\\}$ with uniform marginal on $x$, output a classical hypothesis with error at most $\\operatorname{opt}_t+\\varepsilon$, where $\\operatorname{opt}_t$ is the best error of a size-$t$ decision tree."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(n,t,1/\\varepsilon)$ time by Chatterjee--SAPV--Bera, using a quantum Goldreich--Levin weak learner and agnostic boosting.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n,t,1/\\varepsilon)$ time by Chatterjee–SAPV–Bera, using a quantum Goldreich–Levin weak learner and agnostic boosting.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\operatorname{poly}(n^{\\log t},1/\\varepsilon)$ time by classical agnostic decision-tree learning from examples, as in Blanc--Lange--Tan. Membership-query agnostic learners have polynomial running time with their stronger access.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(n^{\\log t},1/\\varepsilon)$ time by classical agnostic decision-tree learning from examples, as in Blanc–Lange–Tan. Membership-query agnostic learners have polynomial running time with their stronger access.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-agnostic-decision-tree-learning"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://proceedings.mlr.press/v238/chatterjee24a/chatterjee24a.pdf}{\\emph{Efficient Quantum Agnostic Improper Learning of Decision Trees}}. Algorithms1–3; Theorems3–4",
+      "content_text": "Efficient Quantum Agnostic Improper Learning of Decision Trees. Algorithms1–3; Theorems3–4",
+      "links": [
+        {
+          "url": "https://proceedings.mlr.press/v238/chatterjee24a/chatterjee24a.pdf",
+          "title": "Efficient Quantum Agnostic Improper Learning of Decision Trees",
+          "label_latex": "\\emph{Efficient Quantum Agnostic Improper Learning of Decision Trees}",
+          "locator_latex": "Algorithms1–3; Theorems3–4"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-210-citation-00077"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Chatterjee--SAPV--Bera quantum agnostic learner",
+  "plot": {
+    "quantum": "\\operatorname{poly}(n,t,1/\\varepsilon)",
+    "classical": "\\operatorname{poly}(n^{\\log t},1/\\varepsilon)",
+    "parameter": "input dimension n and tree size t",
+    "model": "uniform-example agnostic learning time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "subexponential",
+    "gain": "Quasipolynomial to polynomial for polynomial t"
+  },
+  "ordinal": 33,
+  "citation_ids": [
+    "entry-210-citation-00077"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "inventory_total": 112,
+  "included_inventory_count": 112,
+  "problem_records": 101,
+  "pending_inventory_ids": [],
+  "excluded": [],
+  "grouping": [
+    {
+      "inventory_ids": [
+        "G01",
+        "G02"
+      ],
+      "title": "Element distinctness and k-distinctness",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "G33",
+        "G34"
+      ],
+      "title": "Bichromatic closest pair",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "A12",
+        "A13"
+      ],
+      "title": "Polynomial interpolation over finite fields",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "A31",
+        "A32"
+      ],
+      "title": "Jones polynomial approximation",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "Q13",
+        "Q14",
+        "Q44"
+      ],
+      "title": "Junta testing",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "Q16",
+        "Q17"
+      ],
+      "title": "Learning DNF from quantum examples",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "Q21",
+        "Q24"
+      ],
+      "title": "Symmetry testing of Boolean functions",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "Q22",
+        "Q23"
+      ],
+      "title": "Monotonicity testing of Boolean functions",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "Q32",
+        "Q33"
+      ],
+      "title": "Learning symmetric juntas",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    },
+    {
+      "inventory_ids": [
+        "Q34",
+        "Q35"
+      ],
+      "title": "Identity and uniformity testing of finite distributions",
+      "reason": "Algorithm variants solve the same parameterized problem or the same property under explicitly different access models."
+    }
+  ],
+  "scope": "All 112 consolidated inventory records concern finite discrete inputs/outputs or finite-description complexity problems. Continuous optimization, numerical linear algebra, differential equations and Hamiltonian simulation are outside these additions.",
+  "research_notes": [
+    "Complexities retain oracle, coherent sample, time, communication-round, exact-versus-bounded-error, and width/precision parameters explicitly.",
+    "New preprint claims are attributed to their primary source; publication maturity differs from the mathematical evidence category.",
+    "The quantum-double fluxon subfamily has a polynomial classical algorithm in the same primary paper.",
+    "Topological approximation comparisons include the size-qualified sparse Boolean path-counting upper bound, with encoding size kept separate from input width."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "entry-209",
+  "number": 209,
+  "slug": "prior-q18",
+  "title": "Exact learning of Fourier-sparse Boolean functions",
+  "title_latex": "Exact learning of Fourier-sparse Boolean functions",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q18",
+  "inventory_ids": [
+    "Q18"
+  ],
+  "problem": {
+    "name": "Exact learning of Fourier-sparse Boolean functions",
+    "name_latex": "Exact learning of Fourier-sparse Boolean functions",
+    "statement_latex": "Given uniform quantum examples of $f:\\{0,1\\}^n\\to\\{-1,1\\}$ with at most $k$ nonzero Fourier coefficients, recover $f$ exactly with constant success probability. The resource is copies of examples, with processing counted separately.",
+    "statement_text": "Given uniform quantum examples of $f:\\{0,1\\}^n\\to\\{-1,1\\}$ with at most $k$ nonzero Fourier coefficients, recover $f$ exactly with constant success probability. The resource is copies of examples, with processing counted separately."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(k)$ quantum examples by Ye's 2026 support-covering and exact-recovery learner, using separate measurements; the earlier bound is $O(k^{3/2}\\log^2 k)$.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(k)$ quantum examples by Ye's 2026 support-covering and exact-recovery learner, using separate measurements; the earlier bound is $O(k^{3/2}\\log^2 k)$.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(nk)$ uniform labeled samples in the admissible sparsity range, by sparse recovery and matching classical sample lower bounds.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(nk)$ uniform labeled samples in the admissible sparsity range, by sparse recovery and matching classical sample lower bounds.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "fourier-sparse-quantum-learning"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2610.17648}{\\emph{Nearly Optimal Quantum Sample Complexity of Learning Fourier-Sparse Boolean Functions}}. Main learning theorem and classical sample-complexity section",
+      "content_text": "Nearly Optimal Quantum Sample Complexity of Learning Fourier-Sparse Boolean Functions. Main learning theorem and classical sample-complexity section",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2610.17648",
+          "title": "Nearly Optimal Quantum Sample Complexity of Learning Fourier-Sparse Boolean Functions",
+          "label_latex": "\\emph{Nearly Optimal Quantum Sample Complexity of Learning Fourier-Sparse Boolean Functions}",
+          "locator_latex": "Main learning theorem and classical sample-complexity section"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-209-citation-00076"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Fourier-sparse Boolean-function learning",
+  "plot": {
+    "quantum": "\\widetilde O(k)",
+    "classical": "\\Theta(nk)",
+    "parameter": "dimension n and Fourier sparsity k",
+    "model": "uniform quantum examples versus classical labeled samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(n)"
+  },
+  "ordinal": 32,
+  "citation_ids": [
+    "entry-209-citation-00076"
+  ]
+}

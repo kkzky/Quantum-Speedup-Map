@@ -1,9 +1,10 @@
 {
   "id": "entry-053",
   "number": 53,
-  "ordinal": 51,
+  "slug": "exact-bounded-locality-spin-optimization-by-short-paths",
   "title_latex": "Exact bounded-locality spin optimization by short paths",
   "title": "Exact bounded-locality spin optimization by short paths",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Exact fixed-arity spin optimization",
@@ -14,80 +15,189 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$2^{(1-c_{\\rm cl})n/2+o(n)}$, Le Gall--Tamaki quantum conditioning-and-search under the low-energy-density promise.",
-      "headline_text": "$2^{(1-c_{\\rm cl})n/2+o(n)}$, Le Gall–Tamaki quantum conditioning-and-search under the low-energy-density promise.",
       "details_latex": "For a centered homogeneous degree-$k$ objective, let $H_{\\min}=\\min_z H(z)<0$ and suppose\n\\[\n\\bigl|\\{z:H(z)\\le(1-\\eta)H_{\\min}\\}\\bigr|\\le2^{(1-\\gamma)n}.\n\\]\nFor fixed $k$, $0<\\eta<1$ and $\\gamma>0$, the exponent is\n\\[\nc_{\\rm cl}=\\min\\!\\left\\{\\gamma,\\ h\\!\\left(\\frac{1-(1-\\eta)^{1/k}}{2}\\right)\\right\\},\n\\]\nwhere $h$ is binary entropy. The algorithm combines amplitude amplification with minimum finding; the weighted formulation removes the known-optimum assumption with a $2^{o(n)}$ overhead. Dalzell et al.'s short-path bound under the corresponding promise has exponent $(1-c_{\\rm q})n/2$, where $c_{\\rm q}=\\gamma\\eta/[2(2+\\ln2)k]$, for $k\\le n/6$ and $\\gamma\\ge(1+4\\log_2n)/n$. The generalized short-path framework gives $O^*(T(n)^{1/2-c(n)})$ for its specified Markov-chain-search cost $T(n)$ under its overlap and spectral hypotheses. The subexponential factors in the conditioning-and-search bounds are displayed explicitly.",
+      "headline_text": "$2^{(1-c_{\\rm cl})n/2+o(n)}$, Le Gall–Tamaki quantum conditioning-and-search under the low-energy-density promise.",
       "details_text": "For a centered homogeneous degree-$k$ objective, let $H_{\\min}=\\min_z H(z)<0$ and suppose \\[ \\bigl|\\{z:H(z)\\le(1-\\eta)H_{\\min}\\}\\bigr|\\le2^{(1-\\gamma)n}. \\] For fixed $k$, $0<\\eta<1$ and $\\gamma>0$, the exponent is \\[ c_{\\rm cl}=\\min\\!\\left\\{\\gamma,\\ h\\!\\left(\\frac{1-(1-\\eta)^{1/k}}{2}\\right)\\right\\}, \\] where $h$ is binary entropy. The algorithm combines amplitude amplification with minimum finding; the weighted formulation removes the known-optimum assumption with a $2^{o(n)}$ overhead. Dalzell et al.'s short-path bound under the corresponding promise has exponent $(1-c_{\\rm q})n/2$, where $c_{\\rm q}=\\gamma\\eta/[2(2+\\ln2)k]$, for $k\\le n/6$ and $\\gamma\\ge(1+4\\log_2n)/n$. The generalized short-path framework gives $O^*(T(n)^{1/2-c(n)})$ for its specified Markov-chain-search cost $T(n)$ under its overlap and spectral hypotheses. The subexponential factors in the conditioning-and-search bounds are displayed explicitly."
     },
     "classical": {
       "headline_latex": "$2^{(1-c_{\\rm cl})n+o(n)}$ under the same density promise, Le Gall--Tamaki; $\\operatorname{poly}(N)2^{O_k(N/\\sqrt{\\log N})}$ with $N=O_k(n+mb)$, exact threshold counting.",
-      "headline_text": "$2^{(1-c_{\\rm cl})n+o(n)}$ under the same density promise, Le Gall–Tamaki; $\\operatorname{poly}(N)2^{O_k(N/\\sqrt{\\log N})}$ with $N=O_k(n+mb)$, exact threshold counting.",
       "details_latex": "The first bound uses the same centered homogeneous objective and parameters as the quantum conditioning-and-search algorithm. For an objective with $m$ integer terms and coefficients of at most $b$ bits, a threshold circuit and its Boolean encoding have $O_k(n+mb)$ variables and gates. Binary search and conditional counting recover an optimum at the displayed counting cost. The classical comparison takes the minimum of the applicable bounds, $\\operatorname{poly}(n,m,b)2^n$ enumeration and specialized exact solvers. The density promise, term count and coefficient precision determine which bound is smallest.",
+      "headline_text": "$2^{(1-c_{\\rm cl})n+o(n)}$ under the same density promise, Le Gall–Tamaki; $\\operatorname{poly}(N)2^{O_k(N/\\sqrt{\\log N})}$ with $N=O_k(n+mb)$, exact threshold counting.",
       "details_text": "The first bound uses the same centered homogeneous objective and parameters as the quantum conditioning-and-search algorithm. For an objective with $m$ integer terms and coefficients of at most $b$ bits, a threshold circuit and its Boolean encoding have $O_k(n+mb)$ variables and gates. Binary search and conditional counting recover an optimum at the displayed counting cost. The classical comparison takes the minimum of the applicable bounds, $\\operatorname{poly}(n,m,b)2^n$ enumeration and specialized exact solvers. The density promise, term count and coefficient precision determine which bound is smallest."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The paired conditioning-and-search bounds have a quadratic time relationship up to subexponential factors. The overall comparison uses the smallest applicable classical bound. Generalized short paths give a stronger-than-quadratic improvement over their specified Markov-chain-search cost $T(n)$.",
+      "category_id": "strength-unspecified",
       "description_text": "The paired conditioning-and-search bounds have a quadratic time relationship up to subexponential factors. The overall comparison uses the smallest applicable classical bound. Generalized short paths give a stronger-than-quadratic improvement over their specified Markov-chain-search cost $T(n)$."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The low-energy-density, short-path and exact-counting theorems give rigorous parameter-dependent upper bounds. The paired algorithmic comparison has the same objective and density promise on both sides.",
+      "category_id": "evidence-unspecified",
       "description_text": "The low-energy-density, short-path and exact-counting theorems give rigorous parameter-dependent upper bounds. The paired algorithmic comparison has the same objective and density promise on both sides."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "Fault-tolerant implementation needs $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent operations for the displayed fixed-positive-exponent bound. Cost precision and spectral resolution contribute to depth.\n\n{\\small [Before ``ETH is false'', the cited CSP comparisons had classical bounds $2^{(1-c\\prime)n}$ and quantum bounds $2^{(1-c)n/2}$ for problem-dependent constants, and claimed an improvement in the exponential constant.]\\par}",
+      "category_id": "hardware-superpolynomial",
       "description_text": "Fault-tolerant implementation needs $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent operations for the displayed fixed-positive-exponent bound. Cost precision and spectral resolution contribute to depth. [Before “ETH is false”, the cited CSP comparisons had classical bounds $2^{(1-c\\prime)n}$ and quantum bounds $2^{(1-c)n/2}$ for problem-dependent constants, and claimed an improvement in the exponential constant.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: Short-path algorithms; Le Gall--Tamaki quantum conditioning-and-search",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "53.1",
       "content_latex": "\\href{https://arxiv.org/pdf/2212.01513}{Dalzell et al., \\emph{Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End} (2023/2026)}. Algorithm 1 and Theorems 1, 4, 6--8.",
       "content_text": "Dalzell et al., Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End (2023/2026). Algorithm 1 and Theorems 1, 4, 6–8.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2212.01513",
+          "title": "Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End",
+          "label_latex": "Dalzell et al., \\emph{Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End} (2023/2026)",
+          "locator_latex": "Algorithm 1 and Theorems 1, 4, 6--8."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-053-citation-001"
+        "entry-053-citation-00141"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "53.2",
       "content_latex": "\\href{https://arxiv.org/pdf/2410.23270}{Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)}. Algorithm 2, Theorems 3.3--3.5, and Table 1.",
       "content_text": "Chakrabarti et al., Generalized Short Path Algorithms (2024/2025). Algorithm 2, Theorems 3.3–3.5, and Table 1.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2410.23270",
+          "title": "Generalized Short Path Algorithms",
+          "label_latex": "Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)",
+          "locator_latex": "Algorithm 2, Theorems 3.3--3.5, and Table 1."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-053-citation-002"
+        "entry-053-citation-00142"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "53.3",
       "content_latex": "\\href{https://arxiv.org/pdf/2604.12131}{Le Gall and Tamaki, \\emph{Dequantizing Short-Path Quantum Algorithms} (2026)}. Theorems 1.1--1.4 and 4.1: matched classical and quantum bounds; Section 4.3: amplitude amplification and minimum finding; Appendices A--B: removing the known-optimum assumption.",
       "content_text": "Le Gall and Tamaki, Dequantizing Short-Path Quantum Algorithms (2026). Theorems 1.1–1.4 and 4.1: matched classical and quantum bounds; Section 4.3: amplitude amplification and minimum finding; Appendices A–B: removing the known-optimum assumption.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2604.12131",
+          "title": "Dequantizing Short-Path Quantum Algorithms",
+          "label_latex": "Le Gall and Tamaki, \\emph{Dequantizing Short-Path Quantum Algorithms} (2026)",
+          "locator_latex": "Theorems 1.1--1.4 and 4.1: matched classical and quantum bounds; Section 4.3: amplitude amplification and minimum finding; Appendices A--B: removing the known-optimum assumption."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-053-citation-003"
+        "entry-053-citation-00143"
       ]
     },
     {
-      "item_number": 4,
-      "index_label": "53.4",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (25 October 2026). Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)",
+          "locator_latex": "Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting."
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
       "citation_ids": [
-        "entry-053-citation-004"
+        "entry-053-citation-00144"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-053-citation-001",
-    "entry-053-citation-002",
-    "entry-053-citation-003",
-    "entry-053-citation-004"
+  "algorithm_ids": [
+    "grover",
+    "minimum-finding",
+    "short-path",
+    "conditioning-search"
   ],
-  "source_latex": "\\entrytitle{53}{Exact bounded-locality spin optimization by short paths}{white}{white}{hardwareExponential}\n\\setcounter{problem}{52}\n\\begin{problem}[Exact fixed-arity spin optimization]\nGiven $H(z)=\\sum_{S:|S|\\le k}J_S\\prod_{i\\in S}z_i$, output $z^*\\in\\arg\\min H$; $k$ is fixed and coefficients are efficiently represented. QUBO is the case $k=2$ after changing binary variables to spins.\nComplexity compares quantum gate time with classical bit time for explicitly represented fixed-arity objective functions.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$2^{(1-c_{\\rm cl})n/2+o(n)}$, Le Gall--Tamaki quantum conditioning-and-search under the low-energy-density promise.}\nFor a centered homogeneous degree-$k$ objective, let $H_{\\min}=\\min_z H(z)<0$ and suppose\n\\[\n\\bigl|\\{z:H(z)\\le(1-\\eta)H_{\\min}\\}\\bigr|\\le2^{(1-\\gamma)n}.\n\\]\nFor fixed $k$, $0<\\eta<1$ and $\\gamma>0$, the exponent is\n\\[\nc_{\\rm cl}=\\min\\!\\left\\{\\gamma,\\ h\\!\\left(\\frac{1-(1-\\eta)^{1/k}}{2}\\right)\\right\\},\n\\]\nwhere $h$ is binary entropy. The algorithm combines amplitude amplification with minimum finding; the weighted formulation removes the known-optimum assumption with a $2^{o(n)}$ overhead. Dalzell et al.'s short-path bound under the corresponding promise has exponent $(1-c_{\\rm q})n/2$, where $c_{\\rm q}=\\gamma\\eta/[2(2+\\ln2)k]$, for $k\\le n/6$ and $\\gamma\\ge(1+4\\log_2n)/n$. The generalized short-path framework gives $O^*(T(n)^{1/2-c(n)})$ for its specified Markov-chain-search cost $T(n)$ under its overlap and spectral hypotheses. The subexponential factors in the conditioning-and-search bounds are displayed explicitly.\n\n\\complexity{Classical}{$2^{(1-c_{\\rm cl})n+o(n)}$ under the same density promise, Le Gall--Tamaki; $\\operatorname{poly}(N)2^{O_k(N/\\sqrt{\\log N})}$ with $N=O_k(n+mb)$, exact threshold counting.}\nThe first bound uses the same centered homogeneous objective and parameters as the quantum conditioning-and-search algorithm. For an objective with $m$ integer terms and coefficients of at most $b$ bits, a threshold circuit and its Boolean encoding have $O_k(n+mb)$ variables and gates. Binary search and conditional counting recover an optimum at the displayed counting cost. The classical comparison takes the minimum of the applicable bounds, $\\operatorname{poly}(n,m,b)2^n$ enumeration and specialized exact solvers. The density promise, term count and coefficient precision determine which bound is smallest.\n\n\\dimensionlabel{Strength}{white} The paired conditioning-and-search bounds have a quadratic time relationship up to subexponential factors. The overall comparison uses the smallest applicable classical bound. Generalized short paths give a stronger-than-quadratic improvement over their specified Markov-chain-search cost $T(n)$.\n\n\\dimensionlabel{Evidence}{white} The low-energy-density, short-path and exact-counting theorems give rigorous parameter-dependent upper bounds. The paired algorithmic comparison has the same objective and density promise on both sides.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Fault-tolerant implementation needs $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent operations for the displayed fixed-positive-exponent bound. Cost precision and spectral resolution contribute to depth.\n\n{\\small [Before ``ETH is false'', the cited CSP comparisons had classical bounds $2^{(1-c\\prime)n}$ and quantum bounds $2^{(1-c)n/2}$ for problem-dependent constants, and claimed an improvement in the exponential constant.]\\par}\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{53}\n\\item \\href{https://arxiv.org/pdf/2212.01513}{Dalzell et al., \\emph{Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End} (2023/2026)}. Algorithm 1 and Theorems 1, 4, 6--8.\n\\item \\href{https://arxiv.org/pdf/2410.23270}{Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)}. Algorithm 2, Theorems 3.3--3.5, and Table 1.\n\\item \\href{https://arxiv.org/pdf/2604.12131}{Le Gall and Tamaki, \\emph{Dequantizing Short-Path Quantum Algorithms} (2026)}. Theorems 1.1--1.4 and 4.1: matched classical and quantum bounds; Section 4.3: amplitude amplification and minimum finding; Appendices A--B: removing the known-optimum assumption.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    },
+    {
+      "algorithm_id": "minimum-finding",
+      "label_latex": "D\\\"urr--H{\\o}yer minimum finding",
+      "problem_numbers": [
+        2,
+        7,
+        11,
+        14,
+        15,
+        16,
+        17,
+        28,
+        29,
+        31,
+        34,
+        59,
+        79,
+        91,
+        116,
+        118,
+        131,
+        132,
+        134
+      ]
+    },
+    {
+      "algorithm_id": "short-path",
+      "label_latex": "Short-path quantum optimization",
+      "problem_numbers": [
+        52
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{53}{Exact bounded-locality spin optimization by short paths}{white}{white}{hardwareExponential}\n\\setcounter{problem}{52}\n\\begin{problem}[Exact fixed-arity spin optimization]\nGiven $H(z)=\\sum_{S:|S|\\le k}J_S\\prod_{i\\in S}z_i$, output $z^*\\in\\arg\\min H$; $k$ is fixed and coefficients are efficiently represented. QUBO is the case $k=2$ after changing binary variables to spins.\nComplexity compares quantum gate time with classical bit time for explicitly represented fixed-arity objective functions.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$2^{(1-c_{\\rm cl})n/2+o(n)}$, Le Gall--Tamaki quantum conditioning-and-search under the low-energy-density promise.}\nFor a centered homogeneous degree-$k$ objective, let $H_{\\min}=\\min_z H(z)<0$ and suppose\n\\[\n\\bigl|\\{z:H(z)\\le(1-\\eta)H_{\\min}\\}\\bigr|\\le2^{(1-\\gamma)n}.\n\\]\nFor fixed $k$, $0<\\eta<1$ and $\\gamma>0$, the exponent is\n\\[\nc_{\\rm cl}=\\min\\!\\left\\{\\gamma,\\ h\\!\\left(\\frac{1-(1-\\eta)^{1/k}}{2}\\right)\\right\\},\n\\]\nwhere $h$ is binary entropy. The algorithm combines amplitude amplification with minimum finding; the weighted formulation removes the known-optimum assumption with a $2^{o(n)}$ overhead. Dalzell et al.'s short-path bound under the corresponding promise has exponent $(1-c_{\\rm q})n/2$, where $c_{\\rm q}=\\gamma\\eta/[2(2+\\ln2)k]$, for $k\\le n/6$ and $\\gamma\\ge(1+4\\log_2n)/n$. The generalized short-path framework gives $O^*(T(n)^{1/2-c(n)})$ for its specified Markov-chain-search cost $T(n)$ under its overlap and spectral hypotheses. The subexponential factors in the conditioning-and-search bounds are displayed explicitly.\n\n\\complexity{Classical}{$2^{(1-c_{\\rm cl})n+o(n)}$ under the same density promise, Le Gall--Tamaki; $\\operatorname{poly}(N)2^{O_k(N/\\sqrt{\\log N})}$ with $N=O_k(n+mb)$, exact threshold counting.}\nThe first bound uses the same centered homogeneous objective and parameters as the quantum conditioning-and-search algorithm. For an objective with $m$ integer terms and coefficients of at most $b$ bits, a threshold circuit and its Boolean encoding have $O_k(n+mb)$ variables and gates. Binary search and conditional counting recover an optimum at the displayed counting cost. The classical comparison takes the minimum of the applicable bounds, $\\operatorname{poly}(n,m,b)2^n$ enumeration and specialized exact solvers. The density promise, term count and coefficient precision determine which bound is smallest.\n\n\\dimensionlabel{Strength}{white} The paired conditioning-and-search bounds have a quadratic time relationship up to subexponential factors. The overall comparison uses the smallest applicable classical bound. Generalized short paths give a stronger-than-quadratic improvement over their specified Markov-chain-search cost $T(n)$.\n\n\\dimensionlabel{Evidence}{white} The low-energy-density, short-path and exact-counting theorems give rigorous parameter-dependent upper bounds. The paired algorithmic comparison has the same objective and density promise on both sides.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Fault-tolerant implementation needs $n$ assignment qubits, polynomial reversible workspace and exponentially many coherent operations for the displayed fixed-positive-exponent bound. Cost precision and spectral resolution contribute to depth.\n\n{\\small [Before ``ETH is false'', the cited CSP comparisons had classical bounds $2^{(1-c\\prime)n}$ and quantum bounds $2^{(1-c)n/2}$ for problem-dependent constants, and claimed an improvement in the exponential constant.]\\par}\n\n\\subhead{Algorithm: Short-path algorithms; Le Gall--Tamaki quantum conditioning-and-search}\n\\begin{algorithmindex}{53}\n\\item \\href{https://arxiv.org/pdf/2212.01513}{Dalzell et al., \\emph{Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End} (2023/2026)}. Algorithm 1 and Theorems 1, 4, 6--8.\n\\item \\href{https://arxiv.org/pdf/2410.23270}{Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)}. Algorithm 2, Theorems 3.3--3.5, and Table 1.\n\\item \\href{https://arxiv.org/pdf/2604.12131}{Le Gall and Tamaki, \\emph{Dequantizing Short-Path Quantum Algorithms} (2026)}. Theorems 1.1--1.4 and 4.1: matched classical and quantum bounds; Section 4.3: amplitude amplification and minimum finding; Appendices A--B: removing the known-optimum assumption.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{grover}{Grover search and amplitude amplification}: \\problemref{1}, \\problemref{5}, \\problemref{20}, \\problemref{78}, \\problemref{79}, \\problemref{81}, \\problemref{82}, \\problemref{83}, \\problemref{90}, \\problemref{95}, \\problemref{96}.\n\\par\\algorithmref{minimum-finding}{D\\\"urr--H{\\o}yer minimum finding}: \\problemref{2}, \\problemref{7}, \\problemref{11}, \\problemref{14}, \\problemref{15}, \\problemref{16}, \\problemref{17}, \\problemref{28}, \\problemref{29}, \\problemref{31}, \\problemref{34}, \\problemref{59}, \\problemref{79}, \\problemref{91}.\n\\par\\algorithmref{short-path}{Short-path quantum optimization}: \\problemref{52}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 68,
+  "citation_ids": [
+    "entry-053-citation-00141",
+    "entry-053-citation-00142",
+    "entry-053-citation-00143",
+    "entry-053-citation-00144"
+  ]
 }

@@ -1,9 +1,10 @@
 {
   "id": "entry-052",
   "number": 52,
-  "ordinal": 50,
+  "slug": "sherringtonkirkpatrick-spin-glass-optimization",
   "title_latex": "Sherrington--Kirkpatrick spin-glass optimization",
   "title": "Sherrington–Kirkpatrick spin-glass optimization",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Sherrington--Kirkpatrick spin-glass optimization",
@@ -14,80 +15,143 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(pn^2)$ gates per sample, depth-$p$ QAOA for the SK Hamiltonian.",
-      "headline_text": "$O(pn^2)$ gates per sample, depth-$p$ QAOA for the SK Hamiltonian.",
       "details_latex": "The infinite-size expected-energy analysis can be evaluated classically in $O(16^p)$ time for fixed parameters. It predicts the achieved energy density and guides angle selection. Exact optimization by generalized short-path algorithms uses additional overlap, spectral and landscape hypotheses, with runtime relative to an associated classical Markov-chain search.",
+      "headline_text": "$O(pn^2)$ gates per sample, depth-$p$ QAOA for the SK Hamiltonian.",
       "details_text": "The infinite-size expected-energy analysis can be evaluated classically in $O(16^p)$ time for fixed parameters. It predicts the achieved energy density and guides angle selection. Exact optimization by generalized short-path algorithms uses additional overlap, spectral and landscape hypotheses, with runtime relative to an associated classical Markov-chain search."
     },
     "classical": {
       "headline_latex": "$C(\\varepsilon)n^2$ arithmetic operations for an $\\varepsilon n$-near optimum, Montanari\\textquotesingle s incremental approximate message passing.",
-      "headline_text": "$C(\\varepsilon)n^2$ arithmetic operations for an $\\varepsilon n$-near optimum, Montanari's incremental approximate message passing.",
       "details_latex": "The guarantee assumes full replica symmetry breaking and holds with high probability over Gaussian couplings. For exact optimization, enumeration supplies $O(n^2 2^n)$ arithmetic time, with instance-specific branch-and-bound improvements. Discretizing dense couplings to $b$ bits gives an energy-threshold circuit of size $O(n^2b)$; sparse exact counting on that circuit costs $\\operatorname{poly}(n,b)2^{O(n^2b/\\sqrt{\\log(n^2b)})}$. The smaller exact bound is chosen for the represented instance.",
+      "headline_text": "$C(\\varepsilon)n^2$ arithmetic operations for an $\\varepsilon n$-near optimum, Montanari's incremental approximate message passing.",
       "details_text": "The guarantee assumes full replica symmetry breaking and holds with high probability over Gaussian couplings. For exact optimization, enumeration supplies $O(n^2 2^n)$ arithmetic time, with instance-specific branch-and-bound improvements. Discretizing dense couplings to $b$ bits gives an energy-threshold circuit of size $O(n^2b)$; sparse exact counting on that circuit costs $\\operatorname{poly}(n,b)2^{O(n^2b/\\sqrt{\\log(n^2b)})}$. The smaller exact bound is chosen for the represented instance."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The QAOA energy-density results have a polynomial-time classical near-optimal comparator. A general asymptotic QAOA advantage is unestablished.",
+      "category_id": "strength-unspecified",
       "description_text": "The QAOA energy-density results have a polynomial-time classical near-optimal comparator. A general asymptotic QAOA advantage is unestablished."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The limiting QAOA formulas and conditional classical approximation theorem are analytical results; empirical comparisons concern fixed depths and finite instances.",
+      "category_id": "evidence-unspecified",
       "description_text": "The limiting QAOA formulas and conditional classical approximation theorem are analytical results; empirical comparisons concern fixed depths and finite instances."
     },
     "hardware": {
-      "category_id": "hardware-small",
       "color_key": "hardwareSmall",
       "description_latex": "QAOA uses $n$ data qubits but $\\Theta(n^2)$ interactions per layer before compilation. Small processor experiments exist; dense routing, two-qubit errors and repeated shots determine practical cost.",
+      "category_id": "hardware-small",
       "description_text": "QAOA uses $n$ data qubits but $\\Theta(n^2)$ interactions per layer before compilation. Small processor experiments exist; dense routing, two-qubit errors and repeated shots determine practical cost."
     }
   },
+  "algorithm_heading_latex": "Algorithm: QAOA; generalized short-path algorithms",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "52.1",
       "content_latex": "\\href{https://arxiv.org/pdf/1910.08187}{Farhi et al., \\emph{The Quantum Approximate Optimization Algorithm and the Sherrington--Kirkpatrick Model at Infinite Size} (2022)}. Section 2 defines QAOA; Section 4 states the limiting-energy result; Section 6 gives the general-$p$ calculation.",
       "content_text": "Farhi et al., The Quantum Approximate Optimization Algorithm and the Sherrington–Kirkpatrick Model at Infinite Size (2022). Section 2 defines QAOA; Section 4 states the limiting-energy result; Section 6 gives the general-$p$ calculation.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1910.08187",
+          "title": "The Quantum Approximate Optimization Algorithm and the Sherrington–Kirkpatrick Model at Infinite Size",
+          "label_latex": "Farhi et al., \\emph{The Quantum Approximate Optimization Algorithm and the Sherrington--Kirkpatrick Model at Infinite Size} (2022)",
+          "locator_latex": "Section 2 defines QAOA; Section 4 states the limiting-energy result; Section 6 gives the general-$p$ calculation."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-052-citation-001"
+        "entry-052-citation-00137"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "52.2",
       "content_latex": "\\href{https://arxiv.org/pdf/1812.10897}{Montanari, \\emph{Optimization of the Sherrington--Kirkpatrick Hamiltonian} (2021)}. Assumption 1, Theorem 2, and Algorithm 1, ``IAMP Algorithm to Optimize SK Hamiltonian''.",
       "content_text": "Montanari, Optimization of the Sherrington–Kirkpatrick Hamiltonian (2021). Assumption 1, Theorem 2, and Algorithm 1, “IAMP Algorithm to Optimize SK Hamiltonian”.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1812.10897",
+          "title": "Optimization of the Sherrington–Kirkpatrick Hamiltonian",
+          "label_latex": "Montanari, \\emph{Optimization of the Sherrington--Kirkpatrick Hamiltonian} (2021)",
+          "locator_latex": "Assumption 1, Theorem 2, and Algorithm 1, ``IAMP Algorithm to Optimize SK Hamiltonian''."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-052-citation-002"
+        "entry-052-citation-00138"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "52.3",
       "content_latex": "\\href{https://arxiv.org/pdf/2410.23270}{Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)}. Algorithms 1--2 and Theorem 3.5.",
       "content_text": "Chakrabarti et al., Generalized Short Path Algorithms (2024/2025). Algorithms 1–2 and Theorem 3.5.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2410.23270",
+          "title": "Generalized Short Path Algorithms",
+          "label_latex": "Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)",
+          "locator_latex": "Algorithms 1--2 and Theorem 3.5."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-052-citation-003"
+        "entry-052-citation-00139"
       ]
     },
     {
-      "item_number": 4,
-      "index_label": "52.4",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (25 October 2026). Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)",
+          "locator_latex": "Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting."
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
       "citation_ids": [
-        "entry-052-citation-004"
+        "entry-052-citation-00140"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-052-citation-001",
-    "entry-052-citation-002",
-    "entry-052-citation-003",
-    "entry-052-citation-004"
+  "algorithm_ids": [
+    "qaoa",
+    "short-path"
   ],
-  "source_latex": "\\entrytitle{52}{Sherrington--Kirkpatrick spin-glass optimization}{white}{white}{hardwareSmall}\n\\setcounter{problem}{51}\n\\begin{problem}[Sherrington--Kirkpatrick spin-glass optimization]\nFor independent standard Gaussian couplings $J_{ij}$, minimize $H(z)=n^{-1/2}\\sum_{i<j}J_{ij}z_i z_j$ over $z\\in\\{-1,1\\}^n$. One may request the exact ground state or an energy within $\\varepsilon n$ of it. Random fully connected spin glasses are an average-case optimization benchmark.\nQuantum circuits are measured in gates and samples; the Gaussian classical approximation theorem counts real-arithmetic operations, while exact discretized instances use bit complexity.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(pn^2)$ gates per sample, depth-$p$ QAOA for the SK Hamiltonian.}\nThe infinite-size expected-energy analysis can be evaluated classically in $O(16^p)$ time for fixed parameters. It predicts the achieved energy density and guides angle selection. Exact optimization by generalized short-path algorithms uses additional overlap, spectral and landscape hypotheses, with runtime relative to an associated classical Markov-chain search.\n\n\\complexity{Classical}{$C(\\varepsilon)n^2$ arithmetic operations for an $\\varepsilon n$-near optimum, Montanari\\textquotesingle s incremental approximate message passing.}\nThe guarantee assumes full replica symmetry breaking and holds with high probability over Gaussian couplings. For exact optimization, enumeration supplies $O(n^2 2^n)$ arithmetic time, with instance-specific branch-and-bound improvements. Discretizing dense couplings to $b$ bits gives an energy-threshold circuit of size $O(n^2b)$; sparse exact counting on that circuit costs $\\operatorname{poly}(n,b)2^{O(n^2b/\\sqrt{\\log(n^2b)})}$. The smaller exact bound is chosen for the represented instance.\n\n\\dimensionlabel{Strength}{white} The QAOA energy-density results have a polynomial-time classical near-optimal comparator. A general asymptotic QAOA advantage is unestablished.\n\n\\dimensionlabel{Evidence}{white} The limiting QAOA formulas and conditional classical approximation theorem are analytical results; empirical comparisons concern fixed depths and finite instances.\n\n\\dimensionlabel{Hardware}{hardwareSmall} QAOA uses $n$ data qubits but $\\Theta(n^2)$ interactions per layer before compilation. Small processor experiments exist; dense routing, two-qubit errors and repeated shots determine practical cost.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{52}\n\\item \\href{https://arxiv.org/pdf/1910.08187}{Farhi et al., \\emph{The Quantum Approximate Optimization Algorithm and the Sherrington--Kirkpatrick Model at Infinite Size} (2022)}. Section 2 defines QAOA; Section 4 states the limiting-energy result; Section 6 gives the general-$p$ calculation.\n\\item \\href{https://arxiv.org/pdf/1812.10897}{Montanari, \\emph{Optimization of the Sherrington--Kirkpatrick Hamiltonian} (2021)}. Assumption 1, Theorem 2, and Algorithm 1, ``IAMP Algorithm to Optimize SK Hamiltonian''.\n\\item \\href{https://arxiv.org/pdf/2410.23270}{Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)}. Algorithms 1--2 and Theorem 3.5.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "qaoa",
+      "label_latex": "QAOA and the Quantum Alternating Operator Ansatz",
+      "problem_numbers": [
+        49,
+        50,
+        51,
+        99,
+        103,
+        104,
+        105,
+        106
+      ]
+    },
+    {
+      "algorithm_id": "short-path",
+      "label_latex": "Short-path quantum optimization",
+      "problem_numbers": [
+        53
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{52}{Sherrington--Kirkpatrick spin-glass optimization}{white}{white}{hardwareSmall}\n\\setcounter{problem}{51}\n\\begin{problem}[Sherrington--Kirkpatrick spin-glass optimization]\nFor independent standard Gaussian couplings $J_{ij}$, minimize $H(z)=n^{-1/2}\\sum_{i<j}J_{ij}z_i z_j$ over $z\\in\\{-1,1\\}^n$. One may request the exact ground state or an energy within $\\varepsilon n$ of it. Random fully connected spin glasses are an average-case optimization benchmark.\nQuantum circuits are measured in gates and samples; the Gaussian classical approximation theorem counts real-arithmetic operations, while exact discretized instances use bit complexity.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(pn^2)$ gates per sample, depth-$p$ QAOA for the SK Hamiltonian.}\nThe infinite-size expected-energy analysis can be evaluated classically in $O(16^p)$ time for fixed parameters. It predicts the achieved energy density and guides angle selection. Exact optimization by generalized short-path algorithms uses additional overlap, spectral and landscape hypotheses, with runtime relative to an associated classical Markov-chain search.\n\n\\complexity{Classical}{$C(\\varepsilon)n^2$ arithmetic operations for an $\\varepsilon n$-near optimum, Montanari\\textquotesingle s incremental approximate message passing.}\nThe guarantee assumes full replica symmetry breaking and holds with high probability over Gaussian couplings. For exact optimization, enumeration supplies $O(n^2 2^n)$ arithmetic time, with instance-specific branch-and-bound improvements. Discretizing dense couplings to $b$ bits gives an energy-threshold circuit of size $O(n^2b)$; sparse exact counting on that circuit costs $\\operatorname{poly}(n,b)2^{O(n^2b/\\sqrt{\\log(n^2b)})}$. The smaller exact bound is chosen for the represented instance.\n\n\\dimensionlabel{Strength}{white} The QAOA energy-density results have a polynomial-time classical near-optimal comparator. A general asymptotic QAOA advantage is unestablished.\n\n\\dimensionlabel{Evidence}{white} The limiting QAOA formulas and conditional classical approximation theorem are analytical results; empirical comparisons concern fixed depths and finite instances.\n\n\\dimensionlabel{Hardware}{hardwareSmall} QAOA uses $n$ data qubits but $\\Theta(n^2)$ interactions per layer before compilation. Small processor experiments exist; dense routing, two-qubit errors and repeated shots determine practical cost.\n\n\\subhead{Algorithm: QAOA; generalized short-path algorithms}\n\\begin{algorithmindex}{52}\n\\item \\href{https://arxiv.org/pdf/1910.08187}{Farhi et al., \\emph{The Quantum Approximate Optimization Algorithm and the Sherrington--Kirkpatrick Model at Infinite Size} (2022)}. Section 2 defines QAOA; Section 4 states the limiting-energy result; Section 6 gives the general-$p$ calculation.\n\\item \\href{https://arxiv.org/pdf/1812.10897}{Montanari, \\emph{Optimization of the Sherrington--Kirkpatrick Hamiltonian} (2021)}. Assumption 1, Theorem 2, and Algorithm 1, ``IAMP Algorithm to Optimize SK Hamiltonian''.\n\\item \\href{https://arxiv.org/pdf/2410.23270}{Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)}. Algorithms 1--2 and Theorem 3.5.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{qaoa}{QAOA and the Quantum Alternating Operator Ansatz}: \\problemref{49}, \\problemref{50}, \\problemref{51}, \\problemref{99}, \\problemref{103}, \\problemref{104}, \\problemref{105}, \\problemref{106}.\n\\par\\algorithmref{short-path}{Short-path quantum optimization}: \\problemref{53}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 67,
+  "citation_ids": [
+    "entry-052-citation-00137",
+    "entry-052-citation-00138",
+    "entry-052-citation-00139",
+    "entry-052-citation-00140"
+  ]
 }

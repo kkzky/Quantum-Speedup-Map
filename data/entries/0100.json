@@ -1,9 +1,10 @@
 {
   "id": "entry-100",
   "number": 100,
-  "ordinal": 102,
+  "slug": "adiabatic-optimization-spectral-gap-costs-and-oracle-bounds",
   "title_latex": "Adiabatic optimization: spectral-gap costs and oracle bounds",
   "title": "Adiabatic optimization: spectral-gap costs and oracle bounds",
+  "aliases": [],
   "chapter_id": "chapter-4",
   "problem": {
     "name_latex": "Adiabatic ground-state optimization",
@@ -14,70 +15,102 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\Theta(\\sqrt N)$ evolution time for unstructured marked-item search, locally adiabatic search; gap-dependent time for a general path.",
-      "headline_text": "$\\Theta(\\sqrt N)$ evolution time for unstructured marked-item search, locally adiabatic search; gap-dependent time for a general path.",
       "details_latex": "For a nondegenerate ground state, a rigorous adiabatic error bound is proportional to\n\\[\n\\frac1T\\left[\n\\frac{\\|H'(0)\\|}{\\Delta(0)^2}+\\frac{\\|H'(1)\\|}{\\Delta(1)^2}\n+\\int_0^1\\left(\\frac{\\|H''(s)\\|}{\\Delta(s)^2}\n+\\frac{\\|H'(s)\\|^2}{\\Delta(s)^3}\\right)ds\\right].\n\\]\nDerivative and gap bounds therefore determine a sufficient evolution time $T$. Roland--Cerf's locally adjusted schedule attains the square-root bound for a marked item among $N$ configurations, with constant success probability and fixed energy normalization.",
+      "headline_text": "$\\Theta(\\sqrt N)$ evolution time for unstructured marked-item search, locally adiabatic search; gap-dependent time for a general path.",
       "details_text": "For a nondegenerate ground state, a rigorous adiabatic error bound is proportional to \\[ \\frac1T\\left[ \\frac{\\|H'(0)\\|}{\\Delta(0)^2}+\\frac{\\|H'(1)\\|}{\\Delta(1)^2} +\\int_0^1\\left(\\frac{\\|H''(s)\\|}{\\Delta(s)^2} +\\frac{\\|H'(s)\\|^2}{\\Delta(s)^3}\\right)ds\\right]. \\] Derivative and gap bounds therefore determine a sufficient evolution time $T$. Roland–Cerf's locally adjusted schedule attains the square-root bound for a marked item among $N$ configurations, with constant success probability and fixed energy normalization."
     },
     "classical": {
       "headline_latex": "$\\Theta(N)$ cost queries, exhaustive minimum finding or unstructured search.",
-      "headline_text": "$\\Theta(N)$ cost queries, exhaustive minimum finding or unstructured search.",
       "details_latex": "The classical procedure evaluates the costs and retains the smallest value. Structured cost functions have the problem-specific classical bounds given in the corresponding catalogue entries. Continuous-time oracle lower bounds of $\\Omega(\\sqrt N)$ match quantum unstructured search and apply to scrambled-cost constructions in adiabatic optimization.",
+      "headline_text": "$\\Theta(N)$ cost queries, exhaustive minimum finding or unstructured search.",
       "details_text": "The classical procedure evaluates the costs and retains the smallest value. Structured cost functions have the problem-specific classical bounds given in the corresponding catalogue entries. Continuous-time oracle lower bounds of $\\Omega(\\sqrt N)$ match quantum unstructured search and apply to scrambled-cost constructions in adiabatic optimization."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Tight square-root oracle improvement for unstructured search; the general-path runtime depends on the gap and derivatives. The search schedule realizes the adiabatic form of Grover's improvement.",
+      "category_id": "strength-polynomial",
       "description_text": "Tight square-root oracle improvement for unstructured search; the general-path runtime depends on the gap and derivatives. The search schedule realizes the adiabatic form of Grover's improvement."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous adiabatic error bounds and unstructured oracle lower bounds establish the stated comparisons.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous adiabatic error bounds and unstructured oracle lower bounds establish the stated comparisons."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The system register has $\\lceil\\log_2N\\rceil$ qubits, with simulation ancillas in a digital implementation. Search takes exponential evolution time in the register size; coherent control and precision contribute to implementation cost.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The system register has $\\lceil\\log_2N\\rceil$ qubits, with simulation ancillas in a digital implementation. Search takes exponential evolution time in the register size; coherent control and precision contribute to implementation cost."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Roland--Cerf local adiabatic search",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "100.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0107015}{Roland and Cerf, \\emph{Quantum Search by Local Adiabatic Evolution} (2002)}. Equations (16)--(20), especially the schedule in (17)--(18).",
       "content_text": "Roland and Cerf, Quantum Search by Local Adiabatic Evolution (2002). Equations (16)–(20), especially the schedule in (17)–(18).",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0107015",
+          "title": "Quantum Search by Local Adiabatic Evolution",
+          "label_latex": "Roland and Cerf, \\emph{Quantum Search by Local Adiabatic Evolution} (2002)",
+          "locator_latex": "Equations (16)--(20), especially the schedule in (17)--(18)."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-100-citation-001"
+        "entry-100-citation-00357"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "100.2",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0603175}{Jansen, Ruskai and Seiler, \\emph{Bounds for the Adiabatic Approximation with Applications to Quantum Computation} (2007)}. Section II, Theorem 3, for the explicit derivative/gap error bound.",
       "content_text": "Jansen, Ruskai and Seiler, Bounds for the Adiabatic Approximation with Applications to Quantum Computation (2007). Section II, Theorem 3, for the explicit derivative/gap error bound.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0603175",
+          "title": "Bounds for the Adiabatic Approximation with Applications to Quantum Computation",
+          "label_latex": "Jansen, Ruskai and Seiler, \\emph{Bounds for the Adiabatic Approximation with Applications to Quantum Computation} (2007)",
+          "locator_latex": "Section II, Theorem 3, for the explicit derivative/gap error bound."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-100-citation-002"
+        "entry-100-citation-00358"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "100.3",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0512159}{Farhi et al., \\emph{How to Make the Quantum Adiabatic Algorithm Fail} (2005/2008)}. Section III, Theorem 2, for the scrambled-cost construction and oracle runtime bound.",
       "content_text": "Farhi et al., How to Make the Quantum Adiabatic Algorithm Fail (2005/2008). Section III, Theorem 2, for the scrambled-cost construction and oracle runtime bound.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0512159",
+          "title": "How to Make the Quantum Adiabatic Algorithm Fail",
+          "label_latex": "Farhi et al., \\emph{How to Make the Quantum Adiabatic Algorithm Fail} (2005/2008)",
+          "locator_latex": "Section III, Theorem 2, for the scrambled-cost construction and oracle runtime bound."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-100-citation-003"
+        "entry-100-citation-00359"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-100-citation-001",
-    "entry-100-citation-002",
-    "entry-100-citation-003"
+  "algorithm_ids": [
+    "local-adiabatic-search"
   ],
-  "source_latex": "\\entrytitle{100}{Adiabatic optimization: spectral-gap costs and oracle bounds}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{99}\n\\begin{problem}[Adiabatic ground-state optimization]\nGiven a smooth Hamiltonian path $H(s)$, $0\\le s\\le1$, with known initial ground state and final diagonal Hamiltonian $H(1)|x\\rangle=C(x)|x\\rangle$, prepare a final ground state and measure a minimizer of $C$. Write $\\Delta(s)$ for the ground-state spectral gap. Complexity is measured in continuous evolution time with a fixed oracle energy scale; digital realizations additionally count Hamiltonian-simulation gates, and the classical comparison counts cost-oracle queries.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(\\sqrt N)$ evolution time for unstructured marked-item search, locally adiabatic search; gap-dependent time for a general path.}\nFor a nondegenerate ground state, a rigorous adiabatic error bound is proportional to\n\\[\n\\frac1T\\left[\n\\frac{\\|H'(0)\\|}{\\Delta(0)^2}+\\frac{\\|H'(1)\\|}{\\Delta(1)^2}\n+\\int_0^1\\left(\\frac{\\|H''(s)\\|}{\\Delta(s)^2}\n+\\frac{\\|H'(s)\\|^2}{\\Delta(s)^3}\\right)ds\\right].\n\\]\nDerivative and gap bounds therefore determine a sufficient evolution time $T$. Roland--Cerf's locally adjusted schedule attains the square-root bound for a marked item among $N$ configurations, with constant success probability and fixed energy normalization.\n\n\\complexity{Classical}{$\\Theta(N)$ cost queries, exhaustive minimum finding or unstructured search.}\nThe classical procedure evaluates the costs and retains the smallest value. Structured cost functions have the problem-specific classical bounds given in the corresponding catalogue entries. Continuous-time oracle lower bounds of $\\Omega(\\sqrt N)$ match quantum unstructured search and apply to scrambled-cost constructions in adiabatic optimization.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Tight square-root oracle improvement for unstructured search; the general-path runtime depends on the gap and derivatives. The search schedule realizes the adiabatic form of Grover's improvement.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous adiabatic error bounds and unstructured oracle lower bounds establish the stated comparisons.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The system register has $\\lceil\\log_2N\\rceil$ qubits, with simulation ancillas in a digital implementation. Search takes exponential evolution time in the register size; coherent control and precision contribute to implementation cost.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{100}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0107015}{Roland and Cerf, \\emph{Quantum Search by Local Adiabatic Evolution} (2002)}. Equations (16)--(20), especially the schedule in (17)--(18).\n\\item \\href{https://arxiv.org/pdf/quant-ph/0603175}{Jansen, Ruskai and Seiler, \\emph{Bounds for the Adiabatic Approximation with Applications to Quantum Computation} (2007)}. Section II, Theorem 3, for the explicit derivative/gap error bound.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0512159}{Farhi et al., \\emph{How to Make the Quantum Adiabatic Algorithm Fail} (2005/2008)}. Section III, Theorem 2, for the scrambled-cost construction and oracle runtime bound.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{100}{Adiabatic optimization: spectral-gap costs and oracle bounds}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{99}\n\\begin{problem}[Adiabatic ground-state optimization]\nGiven a smooth Hamiltonian path $H(s)$, $0\\le s\\le1$, with known initial ground state and final diagonal Hamiltonian $H(1)|x\\rangle=C(x)|x\\rangle$, prepare a final ground state and measure a minimizer of $C$. Write $\\Delta(s)$ for the ground-state spectral gap. Complexity is measured in continuous evolution time with a fixed oracle energy scale; digital realizations additionally count Hamiltonian-simulation gates, and the classical comparison counts cost-oracle queries.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(\\sqrt N)$ evolution time for unstructured marked-item search, locally adiabatic search; gap-dependent time for a general path.}\nFor a nondegenerate ground state, a rigorous adiabatic error bound is proportional to\n\\[\n\\frac1T\\left[\n\\frac{\\|H'(0)\\|}{\\Delta(0)^2}+\\frac{\\|H'(1)\\|}{\\Delta(1)^2}\n+\\int_0^1\\left(\\frac{\\|H''(s)\\|}{\\Delta(s)^2}\n+\\frac{\\|H'(s)\\|^2}{\\Delta(s)^3}\\right)ds\\right].\n\\]\nDerivative and gap bounds therefore determine a sufficient evolution time $T$. Roland--Cerf's locally adjusted schedule attains the square-root bound for a marked item among $N$ configurations, with constant success probability and fixed energy normalization.\n\n\\complexity{Classical}{$\\Theta(N)$ cost queries, exhaustive minimum finding or unstructured search.}\nThe classical procedure evaluates the costs and retains the smallest value. Structured cost functions have the problem-specific classical bounds given in the corresponding catalogue entries. Continuous-time oracle lower bounds of $\\Omega(\\sqrt N)$ match quantum unstructured search and apply to scrambled-cost constructions in adiabatic optimization.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Tight square-root oracle improvement for unstructured search; the general-path runtime depends on the gap and derivatives. The search schedule realizes the adiabatic form of Grover's improvement.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous adiabatic error bounds and unstructured oracle lower bounds establish the stated comparisons.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The system register has $\\lceil\\log_2N\\rceil$ qubits, with simulation ancillas in a digital implementation. Search takes exponential evolution time in the register size; coherent control and precision contribute to implementation cost.\n\n\\subhead{Algorithm: Roland--Cerf local adiabatic search}\n\\begin{algorithmindex}{100}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0107015}{Roland and Cerf, \\emph{Quantum Search by Local Adiabatic Evolution} (2002)}. Equations (16)--(20), especially the schedule in (17)--(18).\n\\item \\href{https://arxiv.org/pdf/quant-ph/0603175}{Jansen, Ruskai and Seiler, \\emph{Bounds for the Adiabatic Approximation with Applications to Quantum Computation} (2007)}. Section II, Theorem 3, for the explicit derivative/gap error bound.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0512159}{Farhi et al., \\emph{How to Make the Quantum Adiabatic Algorithm Fail} (2005/2008)}. Section III, Theorem 2, for the scrambled-cost construction and oracle runtime bound.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 182,
+  "citation_ids": [
+    "entry-100-citation-00357",
+    "entry-100-citation-00358",
+    "entry-100-citation-00359"
+  ]
 }

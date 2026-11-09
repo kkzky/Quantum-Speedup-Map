@@ -1,0 +1,136 @@
+{
+  "id": "entry-188",
+  "number": 188,
+  "slug": "dqc1-trace-estimation",
+  "title": "Normalized trace estimation for a quantum circuit",
+  "title_latex": "Normalized trace estimation for a quantum circuit",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "dqc1_trace_estimation",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Normalized trace estimation for a quantum circuit",
+    "name_latex": "Normalized trace estimation for a quantum circuit",
+    "statement_latex": "Given an $n$-qubit unitary circuit $U$ of size $g$, estimate both components of $2^{-n}\\operatorname{Tr}(U)$ to additive error $\\varepsilon$ with failure probability $\\delta$. The input is a succinct circuit. Complexity uses gates and classical time; the problem characterizes DQC1.",
+    "statement_text": "Given an $n$-qubit unitary circuit $U$ of size $g$, estimate both components of $2^{-n}\\operatorname{Tr}(U)$ to additive error $\\varepsilon$ with failure probability $\\delta$. The input is a succinct circuit. Complexity uses gates and classical time; the problem characterizes DQC1."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Polynomial quantum gates versus the best applicable exponential or subexponential generic classical trace computation.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Polynomial quantum gates versus the best applicable exponential or subexponential generic classical trace computation."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "Inverse-polynomial-accuracy trace estimation is DQC1-complete; efficient classical estimation would simulate DQC1.",
+      "category_id": "evidence-partial",
+      "description_text": "Inverse-polynomial-accuracy trace estimation is DQC1-complete; efficient classical estimation would simulate DQC1."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "One clean and $n$ maximally mixed qubits plus controlled-circuit workspace; repetitions scale as $\\varepsilon^{-2}$.",
+      "category_id": "hardware-polynomial",
+      "description_text": "One clean and $n$ maximally mixed qubits plus controlled-circuit workspace; repetitions scale as $\\varepsilon^{-2}$."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(g\\varepsilon^{-2}\\log(1/\\delta))$ gates by Knill--Laflamme. A clean control applies controlled-$U$ to $I/2^n$; its $X$ and $Y$ expectations give the trace.",
+      "details_latex": "",
+      "headline_text": "$O(g\\varepsilon^{-2}\\log(1/\\delta))$ gates by Knill–Laflamme. A clean control applies controlled-$U$ to $I/2^n$; its $X$ and $Y$ expectations give the trace.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Random-vector trace estimation with state-vector circuit application costs $O(g2^n\\varepsilon^{-2}\\log(1/\\delta))$. Tensor contraction provides width-dependent alternatives. For fixed finite algebraic gates, trace path counting also costs $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ in the size $s$ of its sparse Boolean encoding.",
+      "details_latex": "",
+      "headline_text": "Random-vector trace estimation with state-vector circuit application costs $O(g2^n\\varepsilon^{-2}\\log(1/\\delta))$. Tensor contraction provides width-dependent alternatives. For fixed finite algebraic gates, trace path counting also costs $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ in the size $s$ of its sparse Boolean encoding.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "knill_laflamme_trace"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/9802037}{\\emph{On the Power of One Bit of Quantum Information}}. One-clean-qubit model and normalized-trace circuit",
+      "content_text": "On the Power of One Bit of Quantum Information. One-clean-qubit model and normalized-trace circuit",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/9802037",
+          "title": "On the Power of One Bit of Quantum Information",
+          "label_latex": "\\emph{On the Power of One Bit of Quantum Information}",
+          "locator_latex": "One-clean-qubit model and normalized-trace circuit"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-188-citation-00404"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0608132}{\\emph{Computation with Unitaries and One Pure Qubit}}. Normalized trace estimation and completeness for the one-pure-qubit complexity class",
+      "content_text": "Computation with Unitaries and One Pure Qubit. Normalized trace estimation and completeness for the one-pure-qubit complexity class",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0608132",
+          "title": "Computation with Unitaries and One Pure Qubit",
+          "label_latex": "\\emph{Computation with Unitaries and One Pure Qubit}",
+          "locator_latex": "Normalized trace estimation and completeness for the one-pure-qubit complexity class"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-188-citation-00405"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0511069}{\\emph{Simulating quantum computation by contracting tensor networks}}. Main circuit-treewidth simulation theorem",
+      "content_text": "Simulating quantum computation by contracting tensor networks. Main circuit-treewidth simulation theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0511069",
+          "title": "Simulating quantum computation by contracting tensor networks",
+          "label_latex": "\\emph{Simulating quantum computation by contracting tensor networks}",
+          "locator_latex": "Main circuit-treewidth simulation theorem"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-188-citation-00406"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1; Appendix D; sparse fixed-width counting",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1; Appendix D; sparse fixed-width counting",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1; Appendix D; sparse fixed-width counting"
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
+      "citation_ids": [
+        "entry-188-citation-00407"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Knill--Laflamme normalized-trace algorithm",
+  "ordinal": 204,
+  "citation_ids": [
+    "entry-188-citation-00404",
+    "entry-188-citation-00405",
+    "entry-188-citation-00406",
+    "entry-188-citation-00407"
+  ]
+}

@@ -1,9 +1,10 @@
 {
   "id": "entry-037",
   "number": 37,
-  "ordinal": 38,
+  "slug": "unweighted-triangle-finding",
   "title_latex": "Unweighted triangle finding",
   "title": "Unweighted triangle finding",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Unweighted triangle finding",
@@ -14,60 +15,84 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\widetilde O(n^{5/4})$ queries, Le Gall\\textquotesingle s combinatorial quantum-walk algorithm.",
-      "headline_text": "$\\widetilde O(n^{5/4})$ queries, Le Gall's combinatorial quantum-walk algorithm.",
       "details_latex": "The algorithm outputs a triangle with bounded error whenever one exists. The query count includes sampled neighborhoods and nested quantum walks. A circuit implementation additionally pays for updating and querying the stored subsets and neighborhoods.",
+      "headline_text": "$\\widetilde O(n^{5/4})$ queries, Le Gall's combinatorial quantum-walk algorithm.",
       "details_text": "The algorithm outputs a triangle with bounded error whenever one exists. The query count includes sampled neighborhoods and nested quantum walks. A circuit implementation additionally pays for updating and querying the stored subsets and neighborhoods."
     },
     "classical": {
       "headline_latex": "$\\Theta(n^2)$ entry queries; $O(n^{9/4+\\varepsilon})$ arithmetic operations, algebraic triangle detection.",
-      "headline_text": "$\\Theta(n^2)$ entry queries; $O(n^{9/4+\\varepsilon})$ arithmetic operations, algebraic triangle detection.",
       "details_latex": "Reading the matrix attains the classical query upper bound, and a hidden isolated triangle gives a quadratic worst-case query lower bound. Explicit-input triangle detection uses fast matrix multiplication with exponent $\\omega\\le9/4$, for every fixed $\\varepsilon>0$; sparse inputs permit additional combinatorial refinements.",
+      "headline_text": "$\\Theta(n^2)$ entry queries; $O(n^{9/4+\\varepsilon})$ arithmetic operations, algebraic triangle detection.",
       "details_text": "Reading the matrix attains the classical query upper bound, and a hidden isolated triangle gives a quadratic worst-case query lower bound. Explicit-input triangle detection uses fast matrix multiplication with exponent $\\omega\\le9/4$, for every fixed $\\varepsilon>0$; sparse inputs permit additional combinatorial refinements."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial query improvement, $n^2\\to\\widetilde O(n^{5/4})$. The mechanism combines quantum walks and combinatorial preprocessing.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial query improvement, $n^2\\to\\widetilde O(n^{5/4})$. The mechanism combines quantum walks and combinatorial preprocessing."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous separation from optimal classical entry-query complexity.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous separation from optimal classical entry-query complexity."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Fault-tolerant quantum walks require coherent subset registers and neighborhood data of polynomial size. A logical-qubit estimate depends on the stored-data representation and graph oracle; the query theorem itself fixes their query count.",
+      "category_id": "hardware-polynomial",
       "description_text": "Fault-tolerant quantum walks require coherent subset registers and neighborhood data of polynomial size. A logical-qubit estimate depends on the stored-data representation and graph oracle; the query theorem itself fixes their query count."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Le Gall quantum triangle finding",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "37.1",
       "content_latex": "\\href{https://arxiv.org/pdf/1407.0085}{Le Gall, \\emph{Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments} (2014)}. Theorem 1.1 and the algorithm in Sections 3--4.",
       "content_text": "Le Gall, Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments (2014). Theorem 1.1 and the algorithm in Sections 3–4.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1407.0085",
+          "title": "Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments",
+          "label_latex": "Le Gall, \\emph{Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments} (2014)",
+          "locator_latex": "Theorem 1.1 and the algorithm in Sections 3--4."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-037-citation-001"
+        "entry-037-citation-00112"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "37.2",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf}{OpenAI, \\emph{An Upper Bound of $9/4$ for the Matrix Multiplication Exponent} (2026)}. Main matrix-multiplication theorem.",
       "content_text": "OpenAI, An Upper Bound of $9/4$ for the Matrix Multiplication Exponent (2026). Main matrix-multiplication theorem.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf",
+          "title": "An Upper Bound of $9/4$ for the Matrix Multiplication Exponent",
+          "label_latex": "OpenAI, \\emph{An Upper Bound of $9/4$ for the Matrix Multiplication Exponent} (2026)",
+          "locator_latex": "Main matrix-multiplication theorem."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-037-citation-002"
+        "entry-037-citation-00113"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-037-citation-001",
-    "entry-037-citation-002"
+  "algorithm_ids": [
+    "triangle-walk"
   ],
-  "source_latex": "\\entrytitle{37}{Unweighted triangle finding}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{36}\n\\begin{problem}[Unweighted triangle finding]\nGiven oracle access to $A\\in\\{0,1\\}^{n\\times n}$ for a simple undirected graph, find distinct $u,v,w$ with $A_{uv}A_{vw}A_{wu}=1$, or report that none exist. Triangles encode local clustering and small constraint witnesses.\nThe primary comparison counts adjacency-oracle queries; the explicit-input classical comparator counts arithmetic operations.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{5/4})$ queries, Le Gall\\textquotesingle s combinatorial quantum-walk algorithm.}\nThe algorithm outputs a triangle with bounded error whenever one exists. The query count includes sampled neighborhoods and nested quantum walks. A circuit implementation additionally pays for updating and querying the stored subsets and neighborhoods.\n\n\\complexity{Classical}{$\\Theta(n^2)$ entry queries; $O(n^{9/4+\\varepsilon})$ arithmetic operations, algebraic triangle detection.}\nReading the matrix attains the classical query upper bound, and a hidden isolated triangle gives a quadratic worst-case query lower bound. Explicit-input triangle detection uses fast matrix multiplication with exponent $\\omega\\le9/4$, for every fixed $\\varepsilon>0$; sparse inputs permit additional combinatorial refinements.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial query improvement, $n^2\\to\\widetilde O(n^{5/4})$. The mechanism combines quantum walks and combinatorial preprocessing.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous separation from optimal classical entry-query complexity.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant quantum walks require coherent subset registers and neighborhood data of polynomial size. A logical-qubit estimate depends on the stored-data representation and graph oracle; the query theorem itself fixes their query count.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{37}\n\\item \\href{https://arxiv.org/pdf/1407.0085}{Le Gall, \\emph{Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments} (2014)}. Theorem 1.1 and the algorithm in Sections 3--4.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf}{OpenAI, \\emph{An Upper Bound of $9/4$ for the Matrix Multiplication Exponent} (2026)}. Main matrix-multiplication theorem.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{37}{Unweighted triangle finding}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{36}\n\\begin{problem}[Unweighted triangle finding]\nGiven oracle access to $A\\in\\{0,1\\}^{n\\times n}$ for a simple undirected graph, find distinct $u,v,w$ with $A_{uv}A_{vw}A_{wu}=1$, or report that none exist. Triangles encode local clustering and small constraint witnesses.\nThe primary comparison counts adjacency-oracle queries; the explicit-input classical comparator counts arithmetic operations.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{5/4})$ queries, Le Gall\\textquotesingle s combinatorial quantum-walk algorithm.}\nThe algorithm outputs a triangle with bounded error whenever one exists. The query count includes sampled neighborhoods and nested quantum walks. A circuit implementation additionally pays for updating and querying the stored subsets and neighborhoods.\n\n\\complexity{Classical}{$\\Theta(n^2)$ entry queries; $O(n^{9/4+\\varepsilon})$ arithmetic operations, algebraic triangle detection.}\nReading the matrix attains the classical query upper bound, and a hidden isolated triangle gives a quadratic worst-case query lower bound. Explicit-input triangle detection uses fast matrix multiplication with exponent $\\omega\\le9/4$, for every fixed $\\varepsilon>0$; sparse inputs permit additional combinatorial refinements.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial query improvement, $n^2\\to\\widetilde O(n^{5/4})$. The mechanism combines quantum walks and combinatorial preprocessing.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous separation from optimal classical entry-query complexity.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant quantum walks require coherent subset registers and neighborhood data of polynomial size. A logical-qubit estimate depends on the stored-data representation and graph oracle; the query theorem itself fixes their query count.\n\n\\subhead{Algorithm: Le Gall quantum triangle finding}\n\\begin{algorithmindex}{37}\n\\item \\href{https://arxiv.org/pdf/1407.0085}{Le Gall, \\emph{Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments} (2014)}. Theorem 1.1 and the algorithm in Sections 3--4.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf}{OpenAI, \\emph{An Upper Bound of $9/4$ for the Matrix Multiplication Exponent} (2026)}. Main matrix-multiplication theorem.\n\\end{algorithmindex}",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 55,
+  "citation_ids": [
+    "entry-037-citation-00112",
+    "entry-037-citation-00113"
+  ]
 }

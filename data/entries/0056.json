@@ -1,9 +1,10 @@
 {
   "id": "entry-056",
   "number": 56,
-  "ordinal": 54,
+  "slug": "gibbs-sampling-and-quantum-simulated-annealing",
   "title_latex": "Gibbs sampling and quantum simulated annealing",
   "title": "Gibbs sampling and quantum simulated annealing",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Gibbs sampling",
@@ -14,70 +15,111 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\widetilde O(L/\\sqrt\\delta)$ coherent walk steps, quantum simulated annealing and quantum sampling.",
-      "headline_text": "$\\widetilde O(L/\\sqrt\\delta)$ coherent walk steps, quantum simulated annealing and quantum sampling.",
       "details_latex": "The theorem assumes a supplied sequence of $L$ reversible chains with gap at least $\\delta$, an efficiently prepared initial distribution and suitable overlap between adjacent stationary states. Accuracy and overlap parameters contribute logarithmic or explicit factors. Measuring the final coherent Gibbs state produces a sample.",
+      "headline_text": "$\\widetilde O(L/\\sqrt\\delta)$ coherent walk steps, quantum simulated annealing and quantum sampling.",
       "details_text": "The theorem assumes a supplied sequence of $L$ reversible chains with gap at least $\\delta$, an efficiently prepared initial distribution and suitable overlap between adjacent stationary states. Accuracy and overlap parameters contribute logarithmic or explicit factors. Measuring the final coherent Gibbs state produces a sample."
     },
     "classical": {
       "headline_latex": "$\\widetilde O(L/\\delta)$ transition steps, sequential classical mixing; subexponential conditional counting for sparse explicit models.",
-      "headline_text": "$\\widetilde O(L/\\delta)$ transition steps, sequential classical mixing; subexponential conditional counting for sparse explicit models.",
       "details_latex": "Warm starts and the smallest relevant stationary probability enter the mixing bound. Sparse fixed-width hard constraints admit exact uniform sampling in expected $\\operatorname{poly}(n)2^{O(n/\\sqrt{\\log n})}$ time by conditional counts. For sparse constant-arity, constant-bit integer energies, conditional counts at the $O(n)$ possible energies yield Gibbs samples to total-variation error $\\varepsilon$ with the same exponent and polynomial numerical overhead. The smaller applicable sampler determines the explicit-instance comparison.",
+      "headline_text": "$\\widetilde O(L/\\delta)$ transition steps, sequential classical mixing; subexponential conditional counting for sparse explicit models.",
       "details_text": "Warm starts and the smallest relevant stationary probability enter the mixing bound. Sparse fixed-width hard constraints admit exact uniform sampling in expected $\\operatorname{poly}(n)2^{O(n/\\sqrt{\\log n})}$ time by conditional counts. For sparse constant-arity, constant-bit integer energies, conditional counts at the $O(n)$ possible energies yield Gibbs samples to total-variation error $\\varepsilon$ with the same exponent and polynomial numerical overhead. The smaller applicable sampler determines the explicit-instance comparison."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Quadratic improvement in inverse spectral gap for the specified chain sequence, from quantum-walk phase detection and state transformations. An exponentially small gap gives an improvement in the exponential constant of that chain-based bound.",
+      "category_id": "strength-polynomial",
       "description_text": "Quadratic improvement in inverse spectral gap for the specified chain sequence, from quantum-walk phase detection and state transformations. An exponentially small gap gives an improvement in the exponential constant of that chain-based bound."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "Rigorous relative-to-chain algorithmic speedup. Explicit-instance comparisons also include samplers obtained from counting.",
+      "category_id": "evidence-partial",
       "description_text": "Rigorous relative-to-chain algorithmic speedup. Explicit-instance comparisons also include samplers obtained from counting."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "A configuration requires $\\log_2|\\Omega|$ logical data qubits plus reversible transition, energy and phase-estimation workspace. Fault-tolerant depth scales with $L/\\sqrt\\delta$ and can remain exponential for slowly mixing chains.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "A configuration requires $\\log_2|\\Omega|$ logical data qubits plus reversible transition, energy and phase-estimation workspace. Fault-tolerant depth scales with $L/\\sqrt\\delta$ and can remain exponential for slowly mixing chains."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum simulated annealing; Wocjan--Abeyesinghe quantum sampling",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "56.1",
       "content_latex": "\\href{https://arxiv.org/pdf/0804.1571}{Somma, Boixo, Barnum and Knill, \\emph{Quantum Simulations of Classical Annealing Processes} (2008)}. The quantum simulated annealing construction and its spectral-gap runtime analysis.",
       "content_text": "Somma, Boixo, Barnum and Knill, Quantum Simulations of Classical Annealing Processes (2008). The quantum simulated annealing construction and its spectral-gap runtime analysis.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/0804.1571",
+          "title": "Quantum Simulations of Classical Annealing Processes",
+          "label_latex": "Somma, Boixo, Barnum and Knill, \\emph{Quantum Simulations of Classical Annealing Processes} (2008)",
+          "locator_latex": "The quantum simulated annealing construction and its spectral-gap runtime analysis."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-056-citation-001"
+        "entry-056-citation-00149"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "56.2",
       "content_latex": "\\href{https://arxiv.org/pdf/0804.4259}{Wocjan and Abeyesinghe, \\emph{Speedup via Quantum Sampling} (2008)}. Theorem 2: preparation along a sequence of reversible Markov chains.",
       "content_text": "Wocjan and Abeyesinghe, Speedup via Quantum Sampling (2008). Theorem 2: preparation along a sequence of reversible Markov chains.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/0804.4259",
+          "title": "Speedup via Quantum Sampling",
+          "label_latex": "Wocjan and Abeyesinghe, \\emph{Speedup via Quantum Sampling} (2008)",
+          "locator_latex": "Theorem 2: preparation along a sequence of reversible Markov chains."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-056-citation-002"
+        "entry-056-citation-00150"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "56.3",
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (25 October 2026). Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)",
+          "locator_latex": "Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-056-citation-003"
+        "entry-056-citation-00151"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-056-citation-001",
-    "entry-056-citation-002",
-    "entry-056-citation-003"
+  "algorithm_ids": [
+    "quantum-simulated-annealing",
+    "quantum-sampling"
   ],
-  "source_latex": "\\entrytitle{56}{Gibbs sampling and quantum simulated annealing}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{55}\n\\begin{problem}[Gibbs sampling]\nGiven $H:\\Omega\\to\\mathbb R$ and $\\beta$, generate a sample within total-variation error $\\varepsilon$ of $\\pi_\\beta(x)=e^{-\\beta H(x)}/Z(\\beta)$. For an integer-valued objective with unit gap, choosing $\\beta\\ge\\log(|\\Omega|/\\eta)$ makes an optimum occur with probability at least $1-\\eta$. Thus sampling can yield discrete optimization.\nThe chain-based comparison counts coherent or classical transition steps; explicit constraint-model sampling also has a classical bit-time bound.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(L/\\sqrt\\delta)$ coherent walk steps, quantum simulated annealing and quantum sampling.}\nThe theorem assumes a supplied sequence of $L$ reversible chains with gap at least $\\delta$, an efficiently prepared initial distribution and suitable overlap between adjacent stationary states. Accuracy and overlap parameters contribute logarithmic or explicit factors. Measuring the final coherent Gibbs state produces a sample.\n\n\\complexity{Classical}{$\\widetilde O(L/\\delta)$ transition steps, sequential classical mixing; subexponential conditional counting for sparse explicit models.}\nWarm starts and the smallest relevant stationary probability enter the mixing bound. Sparse fixed-width hard constraints admit exact uniform sampling in expected $\\operatorname{poly}(n)2^{O(n/\\sqrt{\\log n})}$ time by conditional counts. For sparse constant-arity, constant-bit integer energies, conditional counts at the $O(n)$ possible energies yield Gibbs samples to total-variation error $\\varepsilon$ with the same exponent and polynomial numerical overhead. The smaller applicable sampler determines the explicit-instance comparison.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic improvement in inverse spectral gap for the specified chain sequence, from quantum-walk phase detection and state transformations. An exponentially small gap gives an improvement in the exponential constant of that chain-based bound.\n\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous relative-to-chain algorithmic speedup. Explicit-instance comparisons also include samplers obtained from counting.\n\n\\dimensionlabel{Hardware}{hardwareExponential} A configuration requires $\\log_2|\\Omega|$ logical data qubits plus reversible transition, energy and phase-estimation workspace. Fault-tolerant depth scales with $L/\\sqrt\\delta$ and can remain exponential for slowly mixing chains.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{56}\n\\item \\href{https://arxiv.org/pdf/0804.1571}{Somma, Boixo, Barnum and Knill, \\emph{Quantum Simulations of Classical Annealing Processes} (2008)}. The quantum simulated annealing construction and its spectral-gap runtime analysis.\n\\item \\href{https://arxiv.org/pdf/0804.4259}{Wocjan and Abeyesinghe, \\emph{Speedup via Quantum Sampling} (2008)}. Theorem 2: preparation along a sequence of reversible Markov chains.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-sampling",
+      "label_latex": "Wocjan--Abeyesinghe quantum sampling",
+      "problem_numbers": [
+        54
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{56}{Gibbs sampling and quantum simulated annealing}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{55}\n\\begin{problem}[Gibbs sampling]\nGiven $H:\\Omega\\to\\mathbb R$ and $\\beta$, generate a sample within total-variation error $\\varepsilon$ of $\\pi_\\beta(x)=e^{-\\beta H(x)}/Z(\\beta)$. For an integer-valued objective with unit gap, choosing $\\beta\\ge\\log(|\\Omega|/\\eta)$ makes an optimum occur with probability at least $1-\\eta$. Thus sampling can yield discrete optimization.\nThe chain-based comparison counts coherent or classical transition steps; explicit constraint-model sampling also has a classical bit-time bound.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(L/\\sqrt\\delta)$ coherent walk steps, quantum simulated annealing and quantum sampling.}\nThe theorem assumes a supplied sequence of $L$ reversible chains with gap at least $\\delta$, an efficiently prepared initial distribution and suitable overlap between adjacent stationary states. Accuracy and overlap parameters contribute logarithmic or explicit factors. Measuring the final coherent Gibbs state produces a sample.\n\n\\complexity{Classical}{$\\widetilde O(L/\\delta)$ transition steps, sequential classical mixing; subexponential conditional counting for sparse explicit models.}\nWarm starts and the smallest relevant stationary probability enter the mixing bound. Sparse fixed-width hard constraints admit exact uniform sampling in expected $\\operatorname{poly}(n)2^{O(n/\\sqrt{\\log n})}$ time by conditional counts. For sparse constant-arity, constant-bit integer energies, conditional counts at the $O(n)$ possible energies yield Gibbs samples to total-variation error $\\varepsilon$ with the same exponent and polynomial numerical overhead. The smaller applicable sampler determines the explicit-instance comparison.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic improvement in inverse spectral gap for the specified chain sequence, from quantum-walk phase detection and state transformations. An exponentially small gap gives an improvement in the exponential constant of that chain-based bound.\n\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous relative-to-chain algorithmic speedup. Explicit-instance comparisons also include samplers obtained from counting.\n\n\\dimensionlabel{Hardware}{hardwareExponential} A configuration requires $\\log_2|\\Omega|$ logical data qubits plus reversible transition, energy and phase-estimation workspace. Fault-tolerant depth scales with $L/\\sqrt\\delta$ and can remain exponential for slowly mixing chains.\n\n\\subhead{Algorithm: Quantum simulated annealing; Wocjan--Abeyesinghe quantum sampling}\n\\begin{algorithmindex}{56}\n\\item \\href{https://arxiv.org/pdf/0804.1571}{Somma, Boixo, Barnum and Knill, \\emph{Quantum Simulations of Classical Annealing Processes} (2008)}. The quantum simulated annealing construction and its spectral-gap runtime analysis.\n\\item \\href{https://arxiv.org/pdf/0804.4259}{Wocjan and Abeyesinghe, \\emph{Speedup via Quantum Sampling} (2008)}. Theorem 2: preparation along a sequence of reversible Markov chains.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)}. Theorem 1.1 and the sparse-instance bound; witness recovery by conditional counting.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{quantum-sampling}{Wocjan--Abeyesinghe quantum sampling}: \\problemref{54}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 71,
+  "citation_ids": [
+    "entry-056-citation-00149",
+    "entry-056-citation-00150",
+    "entry-056-citation-00151"
+  ]
 }

@@ -1,0 +1,122 @@
+{
+  "id": "entry-219",
+  "number": 219,
+  "slug": "prior-q32",
+  "title": "Learning symmetric juntas",
+  "title_latex": "Learning symmetric juntas",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q32",
+  "inventory_ids": [
+    "Q32",
+    "Q33"
+  ],
+  "problem": {
+    "name": "Learning symmetric juntas",
+    "name_latex": "Learning symmetric juntas",
+    "statement_latex": "\\textbf{Learning an exact-half junta.} An unknown $S\\subseteq[n]$ has known even size $k$. Query access is to $f_S(x)=[\\sum_{i\\in S}x_i=k/2]$. Recover $S$ with bounded error; each query can specify a superposition of $n$-bit inputs.\n\n\\textbf{Learning a majority junta.} An unknown $S\\subseteq[n]$ of known size $k$ defines $f_S(x)=[\\sum_{i\\in S}x_i\\ge k/2]$, with the paper's tie convention. Given membership queries, recover $S$.",
+    "statement_text": "Learning an exact-half junta. An unknown $S\\subseteq[n]$ has known even size $k$. Query access is to $f_S(x)=[\\sum_{i\\in S}x_i=k/2]$. Recover $S$ with bounded error; each query can specify a superposition of $n$-bit inputs. Learning a majority junta. An unknown $S\\subseteq[n]$ of known size $k$ defines $f_S(x)=[\\sum_{i\\in S}x_i\\ge k/2]$, with the paper's tie convention. Given membership queries, recover $S$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "\\textbf{Learning an exact-half junta.} $\\Theta(k^{1/4})$ queries by Belovs' adversary-bound algorithm, with efficient implementations described in the subsequent symmetric-junta learning work.",
+      "details_latex": "\\textbf{Learning a majority junta.} $O(k^{1/4})$ queries by Belovs' symmetric-junta adversary algorithm; time-efficient variants incur additional logarithmic and input-description factors.",
+      "headline_text": "Learning an exact-half junta. $\\Theta(k^{1/4})$ queries by Belovs' adversary-bound algorithm, with efficient implementations described in the subsequent symmetric-junta learning work.",
+      "details_text": "Learning a majority junta. $O(k^{1/4})$ queries by Belovs' symmetric-junta adversary algorithm; time-efficient variants incur additional logarithmic and input-description factors."
+    },
+    "classical": {
+      "headline_latex": "\\textbf{Learning an exact-half junta.} $\\Omega(k\\log(n/k))$ classical binary queries by information theory for $k\\le n/2$; finite-class elimination provides a general upper bound and active learning exploits the symmetric predicate.",
+      "details_latex": "\\textbf{Learning a majority junta.} $\\Omega(k\\log(n/k))$ classical binary queries for $k\\le n/2$, by distinguishing the $\\binom nk$ candidate supports.",
+      "headline_text": "Learning an exact-half junta. $\\Omega(k\\log(n/k))$ classical binary queries by information theory for $k\\le n/2$; finite-class elimination provides a general upper bound and active learning exploits the symmetric predicate.",
+      "details_text": "Learning a majority junta. $\\Omega(k\\log(n/k))$ classical binary queries for $k\\le n/2$, by distinguishing the $\\binom nk$ candidate supports."
+    }
+  },
+  "algorithm_ids": [
+    "belovs-symmetric-junta-learning"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "belovs-symmetric-junta-learning",
+      "label_latex": "Belovs adversary algorithm for learning symmetric juntas",
+      "problem_numbers": [
+        204
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1311.6777}{\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}}. Exact-half application; implementation in arXiv:2011.08611.",
+      "content_text": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound. Exact-half application; implementation in arXiv:2011.08611.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1311.6777",
+          "title": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound",
+          "label_latex": "\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}",
+          "locator_latex": "Exact-half application; implementation in arXiv:2011.08611."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-219-citation-00085"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1311.6777}{\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}}. Majority application; implementation in arXiv:2011.08611.",
+      "content_text": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound. Majority application; implementation in arXiv:2011.08611.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1311.6777",
+          "title": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound",
+          "label_latex": "\\emph{Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound}",
+          "locator_latex": "Majority application; implementation in arXiv:2011.08611."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-219-citation-00086"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Belovs adversary algorithm for learning symmetric juntas",
+  "plot": {
+    "quantum": "\\Theta(k^{1/4})",
+    "classical": "\\Omega(k\\log(n/k))",
+    "parameter": "hidden support size k<=n/2",
+    "model": "membership queries to the exact-half predicate",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Omega(k^{3/4}\\log(n/k))",
+    "quantum_exponent": 0.25,
+    "classical_exponent": 1
+  },
+  "ordinal": 39,
+  "citation_ids": [
+    "entry-219-citation-00085",
+    "entry-219-citation-00086"
+  ]
+}

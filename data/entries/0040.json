@@ -1,9 +1,10 @@
 {
   "id": "entry-040",
   "number": 40,
-  "ordinal": 41,
+  "slug": "testing-graph-expansion",
   "title_latex": "Testing graph expansion",
   "title": "Testing graph expansion",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Testing graph expansion",
@@ -14,50 +15,66 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\widetilde O(n^{1/3}/\\Phi)$, Apers\\textquotesingle s fast-forwarding and seed-set tester.",
-      "headline_text": "$\\widetilde O(n^{1/3}/\\Phi)$, Apers's fast-forwarding and seed-set tester.",
       "details_latex": "The proximity parameter and degree are fixed. The promise relates the accepting expansion threshold $\\Phi$ to the smaller rejecting threshold as specified in the tester theorem. The bound combines an evolving-set construction with quantum fast-forwarding and estimates of the resulting walk distribution.",
+      "headline_text": "$\\widetilde O(n^{1/3}/\\Phi)$, Apers's fast-forwarding and seed-set tester.",
       "details_text": "The proximity parameter and degree are fixed. The promise relates the accepting expansion threshold $\\Phi$ to the smaller rejecting threshold as specified in the tester theorem. The bound combines an evolving-set construction with quantum fast-forwarding and estimates of the resulting walk distribution."
     },
     "classical": {
       "headline_latex": "$\\widetilde O(\\sqrt n/\\Phi^2)$, classical random-walk expansion testing; $\\Omega(\\sqrt n)$ queries at fixed parameters.",
-      "headline_text": "$\\widetilde O(\\sqrt n/\\Phi^2)$, classical random-walk expansion testing; $\\Omega(\\sqrt n)$ queries at fixed parameters.",
       "details_latex": "The classical algorithm checks whether sampled walk endpoints exhibit the concentration expected in poorly expanding regions. Upper and lower bounds refer to bounded-degree oracle access with the stated gap between the two expansion thresholds.",
+      "headline_text": "$\\widetilde O(\\sqrt n/\\Phi^2)$, classical random-walk expansion testing; $\\Omega(\\sqrt n)$ queries at fixed parameters.",
       "details_text": "The classical algorithm checks whether sampled walk endpoints exhibit the concentration expected in poorly expanding regions. Upper and lower bounds refer to bounded-degree oracle access with the stated gap between the two expansion thresholds."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial in $n$, and quadratic improvement in the walk-time dependence $\\Phi^{-2}\\to\\Phi^{-1}$. The mechanism is quantum fast-forwarding and amplitude estimation.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial in $n$, and quadratic improvement in the walk-time dependence $\\Phi^{-2}\\to\\Phi^{-1}$. The mechanism is quantum fast-forwarding and amplitude estimation."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "Rigorous oracle advantage for the testing promise.",
+      "category_id": "evidence-proved",
       "description_text": "Rigorous oracle advantage for the testing promise."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Fault-tolerant coherent walk steps require logarithmic vertex registers, seed-set storage and estimation ancillas. The seed-set data structure supports coherent access; total depth depends on $\\Phi^{-1}$ and the target confidence.",
+      "category_id": "hardware-polynomial",
       "description_text": "Fault-tolerant coherent walk steps require logarithmic vertex registers, seed-set storage and estimation ancillas. The seed-set data structure supports coherent access; total depth depends on $\\Phi^{-1}$ and the target confidence."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Apers expansion testing",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "40.1",
       "content_latex": "\\href{https://arxiv.org/pdf/1907.02369}{Apers, \\emph{Expansion Testing Using Quantum Fast-Forwarding and Seed Sets} (2019)}. Algorithm 2 and Theorem 5; Theorem 1 states the main complexity bound.",
       "content_text": "Apers, Expansion Testing Using Quantum Fast-Forwarding and Seed Sets (2019). Algorithm 2 and Theorem 5; Theorem 1 states the main complexity bound.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1907.02369",
+          "title": "Expansion Testing Using Quantum Fast-Forwarding and Seed Sets",
+          "label_latex": "Apers, \\emph{Expansion Testing Using Quantum Fast-Forwarding and Seed Sets} (2019)",
+          "locator_latex": "Algorithm 2 and Theorem 5; Theorem 1 states the main complexity bound."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-040-citation-001"
+        "entry-040-citation-00118"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-040-citation-001"
+  "algorithm_ids": [
+    "expansion-test"
   ],
-  "source_latex": "\\entrytitle{40}{Testing graph expansion}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{39}\n\\begin{problem}[Testing graph expansion]\nFor a bounded-degree graph, distinguish expansion at least $\\Phi$ from being $\\varepsilon$-far from every graph with expansion at least a specified smaller threshold $\\Phi'$. The gap between $\\Phi$ and $\\Phi'$ is part of the testing promise. Expansion controls mixing and the robustness of cuts.\nComplexity counts neighbor queries and quantum or classical operations implementing the prescribed random-walk tester.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{1/3}/\\Phi)$, Apers\\textquotesingle s fast-forwarding and seed-set tester.}\nThe proximity parameter and degree are fixed. The promise relates the accepting expansion threshold $\\Phi$ to the smaller rejecting threshold as specified in the tester theorem. The bound combines an evolving-set construction with quantum fast-forwarding and estimates of the resulting walk distribution.\n\n\\complexity{Classical}{$\\widetilde O(\\sqrt n/\\Phi^2)$, classical random-walk expansion testing; $\\Omega(\\sqrt n)$ queries at fixed parameters.}\nThe classical algorithm checks whether sampled walk endpoints exhibit the concentration expected in poorly expanding regions. Upper and lower bounds refer to bounded-degree oracle access with the stated gap between the two expansion thresholds.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial in $n$, and quadratic improvement in the walk-time dependence $\\Phi^{-2}\\to\\Phi^{-1}$. The mechanism is quantum fast-forwarding and amplitude estimation.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous oracle advantage for the testing promise.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant coherent walk steps require logarithmic vertex registers, seed-set storage and estimation ancillas. The seed-set data structure supports coherent access; total depth depends on $\\Phi^{-1}$ and the target confidence.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{40}\n\\item \\href{https://arxiv.org/pdf/1907.02369}{Apers, \\emph{Expansion Testing Using Quantum Fast-Forwarding and Seed Sets} (2019)}. Algorithm 2 and Theorem 5; Theorem 1 states the main complexity bound.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{40}{Testing graph expansion}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{39}\n\\begin{problem}[Testing graph expansion]\nFor a bounded-degree graph, distinguish expansion at least $\\Phi$ from being $\\varepsilon$-far from every graph with expansion at least a specified smaller threshold $\\Phi'$. The gap between $\\Phi$ and $\\Phi'$ is part of the testing promise. Expansion controls mixing and the robustness of cuts.\nComplexity counts neighbor queries and quantum or classical operations implementing the prescribed random-walk tester.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{1/3}/\\Phi)$, Apers\\textquotesingle s fast-forwarding and seed-set tester.}\nThe proximity parameter and degree are fixed. The promise relates the accepting expansion threshold $\\Phi$ to the smaller rejecting threshold as specified in the tester theorem. The bound combines an evolving-set construction with quantum fast-forwarding and estimates of the resulting walk distribution.\n\n\\complexity{Classical}{$\\widetilde O(\\sqrt n/\\Phi^2)$, classical random-walk expansion testing; $\\Omega(\\sqrt n)$ queries at fixed parameters.}\nThe classical algorithm checks whether sampled walk endpoints exhibit the concentration expected in poorly expanding regions. Upper and lower bounds refer to bounded-degree oracle access with the stated gap between the two expansion thresholds.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial in $n$, and quadratic improvement in the walk-time dependence $\\Phi^{-2}\\to\\Phi^{-1}$. The mechanism is quantum fast-forwarding and amplitude estimation.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous oracle advantage for the testing promise.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant coherent walk steps require logarithmic vertex registers, seed-set storage and estimation ancillas. The seed-set data structure supports coherent access; total depth depends on $\\Phi^{-1}$ and the target confidence.\n\n\\subhead{Algorithm: Apers expansion testing}\n\\begin{algorithmindex}{40}\n\\item \\href{https://arxiv.org/pdf/1907.02369}{Apers, \\emph{Expansion Testing Using Quantum Fast-Forwarding and Seed Sets} (2019)}. Algorithm 2 and Theorem 5; Theorem 1 states the main complexity bound.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 58,
+  "citation_ids": [
+    "entry-040-citation-00118"
+  ]
 }

@@ -1,0 +1,135 @@
+{
+  "id": "entry-122",
+  "number": 122,
+  "slug": "prior-g17",
+  "title": "Pattern matching with mismatches",
+  "title_latex": "Pattern matching with mismatches",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g17",
+  "inventory_ids": [
+    "G17"
+  ],
+  "problem": {
+    "name": "Pattern matching with mismatches",
+    "name_latex": "Pattern matching with mismatches",
+    "statement_latex": "Given $P\\in\\Sigma^m$, $T\\in\\Sigma^n$ and threshold $k$, identify occurrences whose Hamming distance from $P$ is at most $k$, using the paper's compact representation of occurrence sets. Complexity counts character queries separately from processing and output.",
+    "statement_text": "Given $P\\in\\Sigma^m$, $T\\in\\Sigma^n$ and threshold $k$, identify occurrences whose Hamming distance from $P$ is at most $k$, using the paper's compact representation of occurrence sets. Complexity counts character queries separately from processing and output."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widehat O(\\sqrt{nk})$ queries and $\\widetilde O(\\sqrt{nk}+\\sqrt{n/m}\\,k^2)$ time by Kociumaka--Nogler--Wellnitz. The query notation suppresses subpolynomial factors.",
+      "details_latex": "",
+      "headline_text": "$\\widehat O(\\sqrt{nk})$ queries and $\\widetilde O(\\sqrt{nk}+\\sqrt{n/m}\\,k^2)$ time by Kociumaka–Nogler–Wellnitz. The query notation suppresses subpolynomial factors.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ worst-case character queries by reading both strings. Classical time can then use convolution and periodicity algorithms; the displayed separation is in the query model.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n)$ worst-case character queries by reading both strings. Classical time can then use convolution and periodicity algorithms; the displayed separation is in the query model.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-approximate-pattern-matching",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-approximate-pattern-matching",
+      "label_latex": "Kociumaka--Nogler--Wellnitz approximate pattern matching",
+      "problem_numbers": [
+        123
+      ]
+    },
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2410.06808}{\\emph{Near-Optimal-Time Quantum Algorithms for Approximate Pattern Matching}}. Main mismatch-matching theorem",
+      "content_text": "Near-Optimal-Time Quantum Algorithms for Approximate Pattern Matching. Main mismatch-matching theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2410.06808",
+          "title": "Near-Optimal-Time Quantum Algorithms for Approximate Pattern Matching",
+          "label_latex": "\\emph{Near-Optimal-Time Quantum Algorithms for Approximate Pattern Matching}",
+          "locator_latex": "Main mismatch-matching theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-122-citation-00195"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Kociumaka--Nogler--Wellnitz approximate pattern matching; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widehat O(\\sqrt{nk})",
+    "classical": "\\Theta(n)",
+    "parameter": "text length n, pattern length m, threshold k",
+    "model": "character queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widehat\\Omega(\\sqrt{n/k})"
+  },
+  "ordinal": 92,
+  "citation_ids": [
+    "entry-122-citation-00195"
+  ]
+}

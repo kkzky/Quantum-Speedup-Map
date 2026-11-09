@@ -1,0 +1,141 @@
+{
+  "id": "entry-206",
+  "number": 206,
+  "slug": "prior-q13",
+  "title": "Junta testing",
+  "title_latex": "Junta testing",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q13",
+  "inventory_ids": [
+    "Q13",
+    "Q14",
+    "Q44"
+  ],
+  "problem": {
+    "name": "Junta testing",
+    "name_latex": "Junta testing",
+    "statement_latex": "\\textbf{Junta testing with membership queries.} Given $f:\\{0,1\\}^n\\to\\{0,1\\}$ by a coherent membership oracle, distinguish functions depending on at most $k$ variables from functions at uniform Hamming distance at least $\\varepsilon$ from every such function.\n\n\\textbf{Junta testing from quantum examples.} Distinguish $k$-juntas from functions $\\varepsilon$-far from every $k$-junta using copies of $2^{-n/2}\\sum_x|x,f(x)\\rangle$. Classical access consists of independent uniform labeled examples.\n\n\\textbf{Distribution-free junta testing.} Given membership queries to $f:\\{0,1\\}^n\\to\\{0,1\\}$ and sampling access to an unknown distribution $D$, distinguish $k$-juntas from functions with $\\Pr_D[f(x)\\ne g(x)]\\ge\\varepsilon$ for every $k$-junta $g$. The quantum model coherently accesses the specified oracles.",
+    "statement_text": "Junta testing with membership queries. Given $f:\\{0,1\\}^n\\to\\{0,1\\}$ by a coherent membership oracle, distinguish functions depending on at most $k$ variables from functions at uniform Hamming distance at least $\\varepsilon$ from every such function. Junta testing from quantum examples. Distinguish $k$-juntas from functions $\\varepsilon$-far from every $k$-junta using copies of $2^{-n/2}\\sum_x|x,f(x)\\rangle$. Classical access consists of independent uniform labeled examples. Distribution-free junta testing. Given membership queries to $f:\\{0,1\\}^n\\to\\{0,1\\}$ and sampling access to an unknown distribution $D$, distinguish $k$-juntas from functions with $\\Pr_D[f(x)\\ne g(x)]\\ge\\varepsilon$ for every $k$-junta $g$. The quantum model coherently accesses the specified oracles."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "\\textbf{Junta testing with membership queries.} $\\Theta(\\min\\{2^{n/2},\\sqrt{\\log(2+\\varepsilon 2^k)/\\varepsilon}\\})$ queries for $n\\ge2k$ and $0<\\varepsilon\\le1/8$, by the optimal Boolean-junta tester. In the range $\\varepsilon\\ge2^{-k/16}$ this simplifies to $\\Theta(\\sqrt{k/\\varepsilon})$.",
+      "details_latex": "\\textbf{Junta testing from quantum examples.} $O(k/\\varepsilon)$ quantum examples by Atici--Servedio Fourier sampling, testing whether observed Fourier supports fit within $k$ coordinates.\n\n\\textbf{Distribution-free junta testing.} $O(k/\\varepsilon)$ queries by Belovs' distribution-free quantum junta tester.",
+      "headline_text": "Junta testing with membership queries. $\\Theta(\\min\\{2^{n/2},\\sqrt{\\log(2+\\varepsilon 2^k)/\\varepsilon}\\})$ queries for $n\\ge2k$ and $0<\\varepsilon\\le1/8$, by the optimal Boolean-junta tester. In the range $\\varepsilon\\ge2^{-k/16}$ this simplifies to $\\Theta(\\sqrt{k/\\varepsilon})$.",
+      "details_text": "Junta testing from quantum examples. $O(k/\\varepsilon)$ quantum examples by Atici–Servedio Fourier sampling, testing whether observed Fourier supports fit within $k$ coordinates. Distribution-free junta testing. $O(k/\\varepsilon)$ queries by Belovs' distribution-free quantum junta tester."
+    },
+    "classical": {
+      "headline_latex": "\\textbf{Junta testing with membership queries.} $O(\\min\\{2^n,k\\log k+k/\\varepsilon\\})$ classical queries by junta testing or truth-table acquisition, with $\\Omega(k\\log k)$ required at constant distance.",
+      "details_latex": "\\textbf{Junta testing from quantum examples.} Passive classical examples require a number growing with $n$, even for small fixed $k$; exhaustive empirical testing of all $k$-coordinate functions uses $O((k\\log n+2^k)/\\varepsilon^2)$ samples.\n\n\\textbf{Distribution-free junta testing.} $O((k/\\varepsilon)\\log(k/\\varepsilon))$ adaptive queries by classical distribution-free junta testing, with an $\\Omega(k\\log k)$ lower bound at constant distance.",
+      "headline_text": "Junta testing with membership queries. $O(\\min\\{2^n,k\\log k+k/\\varepsilon\\})$ classical queries by junta testing or truth-table acquisition, with $\\Omega(k\\log k)$ required at constant distance.",
+      "details_text": "Junta testing from quantum examples. Passive classical examples require a number growing with $n$, even for small fixed $k$; exhaustive empirical testing of all $k$-coordinate functions uses $O((k\\log n+2^k)/\\varepsilon^2)$ samples. Distribution-free junta testing. $O((k/\\varepsilon)\\log(k/\\varepsilon))$ adaptive queries by classical distribution-free junta testing, with an $\\Omega(k\\log k)$ lower bound at constant distance."
+    }
+  },
+  "algorithm_ids": [
+    "optimal-quantum-junta-testing",
+    "quantum-fourier-junta-learning",
+    "distribution-free-quantum-junta-testing"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-fourier-junta-learning",
+      "label_latex": "Atici--Servedio Fourier junta learning and testing",
+      "problem_numbers": [
+        207
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2609.37926}{\\emph{Optimal Quantum Junta Testing}}. Theorems 4.2 and 4.8: complete Boolean-junta query bound",
+      "content_text": "Optimal Quantum Junta Testing. Theorems 4.2 and 4.8: complete Boolean-junta query bound",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2609.37926",
+          "title": "Optimal Quantum Junta Testing",
+          "label_latex": "\\emph{Optimal Quantum Junta Testing}",
+          "locator_latex": "Theorems 4.2 and 4.8: complete Boolean-junta query bound"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-206-citation-00070"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0707.3479}{\\emph{Quantum Algorithms for Learning and Testing Juntas}}. Junta-testing theorem and Fourier-sampling procedure",
+      "content_text": "Quantum Algorithms for Learning and Testing Juntas. Junta-testing theorem and Fourier-sampling procedure",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0707.3479",
+          "title": "Quantum Algorithms for Learning and Testing Juntas",
+          "label_latex": "\\emph{Quantum Algorithms for Learning and Testing Juntas}",
+          "locator_latex": "Junta-testing theorem and Fourier-sampling procedure"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-206-citation-00071"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1903.08462}{\\emph{Quantum Algorithm for Distribution-Free Junta Testing}}. Main algorithm; CSR2019.",
+      "content_text": "Quantum Algorithm for Distribution-Free Junta Testing. Main algorithm; CSR2019.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1903.08462",
+          "title": "Quantum Algorithm for Distribution-Free Junta Testing",
+          "label_latex": "\\emph{Quantum Algorithm for Distribution-Free Junta Testing}",
+          "locator_latex": "Main algorithm; CSR2019."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-206-citation-00072"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Optimal quantum junta testing; Atici--Servedio Fourier junta learning and testing; Belovs distribution-free quantum junta tester",
+  "plot": {
+    "quantum": "\\Theta(\\min\\{2^{n/2},\\sqrt{\\log(2+\\varepsilon 2^k)/\\varepsilon}\\})",
+    "classical": "O(\\min\\{2^n,k\\log k+k/\\varepsilon\\})",
+    "parameter": "Boolean dimension n>=2k, junta size k, and distance 0<epsilon<=1/8",
+    "model": "membership queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Nearly quadratic in junta size at constant distance; general error dependence is shown"
+  },
+  "ordinal": 29,
+  "citation_ids": [
+    "entry-206-citation-00070",
+    "entry-206-citation-00071",
+    "entry-206-citation-00072"
+  ]
+}

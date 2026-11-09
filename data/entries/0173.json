@@ -1,0 +1,111 @@
+{
+  "id": "entry-173",
+  "number": 173,
+  "slug": "prior-a36",
+  "title": "Witten–Reshetikhin–Turaev invariant",
+  "title_latex": "Witten--Reshetikhin--Turaev invariant",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-a36",
+  "inventory_ids": [
+    "A36"
+  ],
+  "problem": {
+    "name": "Witten–Reshetikhin–Turaev invariant",
+    "name_latex": "Witten--Reshetikhin--Turaev invariant",
+    "statement_latex": "Given a 3-manifold by a genus-$g$ Heegaard splitting and mapping-class word $x$, estimate its normalized Witten--Reshetikhin--Turaev invariant, represented as the matrix element $\\langle v|\\rho(x)|v\\rangle$ after the standard $\\mathcal D^{g-1}$ prefactor. The level is fixed and admissible.",
+    "statement_text": "Given a 3-manifold by a genus-$g$ Heegaard splitting and mapping-class word $x$, estimate its normalized Witten–Reshetikhin–Turaev invariant, represented as the matrix element $\\langle v|\\rho(x)|v\\rangle$ after the standard $\\mathcal D^{g-1}$ prefactor. The level is fixed and admissible."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "Polynomial time in the word length, genus and $1/\\varepsilon$ by Garnerone--Marzuoli--Rasetti's quantum recoupling algorithm.",
+      "details_latex": "",
+      "headline_text": "Polynomial time in the word length, genus and $1/\\varepsilon$ by Garnerone–Marzuoli–Rasetti's quantum recoupling algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Classical propagation through the full conformal-block basis is exponential in genus for fixed nontrivial level; contraction methods exploit smaller presentation width when available. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_latex": "",
+      "headline_text": "Classical propagation through the full conformal-block basis is exponential in genus for fixed nontrivial level; contraction methods exploit smaller presentation width when available. For an implemented $q$-qubit, $g$-gate circuit over a fixed finite algebraic gate set, classical simulation also gives $\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$. Here $w$ is a contraction width and $s$ is the size of the sparse bounded-fan-in Boolean encoding of scalar path counts at the required precision; gate synthesis and precision contribute to $g,s$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "wrt-quantum-recoupling"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0703037}{\\emph{Efficient quantum processing of 3-manifold topological invariants}}. Quantum algorithm sections; Heegaard normalization also Eq. (3) in https://arxiv.org/abs/1003.0923",
+      "content_text": "Efficient quantum processing of 3-manifold topological invariants. Quantum algorithm sections; Heegaard normalization also Eq. (3) in https://arxiv.org/abs/1003.0923",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0703037",
+          "title": "Efficient quantum processing of 3-manifold topological invariants",
+          "label_latex": "\\emph{Efficient quantum processing of 3-manifold topological invariants}",
+          "locator_latex": "Quantum algorithm sections; Heegaard normalization also Eq. (3) in https://arxiv.org/abs/1003.0923"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-173-citation-00369"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1 and Appendix D; applied to sparse Boolean encodings of scalar path counts"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-173-citation-00370"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Garnerone--Marzuoli--Rasetti quantum recoupling",
+  "plot": {
+    "quantum": "\\operatorname{poly}(L,1/\\varepsilon)",
+    "classical": "\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}",
+    "parameter": "finite input length L, implemented qubits q and gates g, width w, encoding size s, additive error epsilon",
+    "model": "gate/time complexity at the stated normalization and precision",
+    "quantum_kind": "polynomial",
+    "classical_kind": "unknown",
+    "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
+  },
+  "ordinal": 187,
+  "citation_ids": [
+    "entry-173-citation-00369",
+    "entry-173-citation-00370"
+  ]
+}

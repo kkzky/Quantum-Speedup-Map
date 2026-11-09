@@ -1,0 +1,128 @@
+{
+  "id": "entry-140",
+  "number": 140,
+  "slug": "prior-g42",
+  "title": "Distributed graph diameter",
+  "title_latex": "Distributed graph diameter",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g42",
+  "inventory_ids": [
+    "G42"
+  ],
+  "problem": {
+    "name": "Distributed graph diameter",
+    "name_latex": "Distributed graph diameter",
+    "statement_latex": "In an unweighted connected $n$-vertex network of diameter $D$, compute $D=\\max_{u,v}\\operatorname{dist}(u,v)$, with one processor per vertex and $O(\\log n)$-qubit messages per edge per round. Complexity counts synchronous CONGEST rounds.",
+    "statement_text": "In an unweighted connected $n$-vertex network of diameter $D$, compute $D=\\max_{u,v}\\operatorname{dist}(u,v)$, with one processor per vertex and $O(\\log n)$-qubit messages per edge per round. Complexity counts synchronous CONGEST rounds."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt{nD})$ rounds by Le Gall--Magniez distributed quantum search and distance estimation.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt{nD})$ rounds by Le Gall–Magniez distributed quantum search and distance estimation.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde\\Theta(n)$ worst-case rounds for exact diameter in classical CONGEST, including networks of small diameter.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde\\Theta(n)$ worst-case rounds for exact diameter in classical CONGEST, including networks of small diameter.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "distributed-quantum-diameter",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1804.02917}{\\emph{Sublinear-Time Quantum Computation of the Diameter in CONGEST Networks}}. Theorem1; Section3.2",
+      "content_text": "Sublinear-Time Quantum Computation of the Diameter in CONGEST Networks. Theorem1; Section3.2",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1804.02917",
+          "title": "Sublinear-Time Quantum Computation of the Diameter in CONGEST Networks",
+          "label_latex": "\\emph{Sublinear-Time Quantum Computation of the Diameter in CONGEST Networks}",
+          "locator_latex": "Theorem1; Section3.2"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-140-citation-00214"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Le Gall--Magniez distributed diameter algorithm; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt{nD})",
+    "classical": "\\widetilde\\Theta(n)",
+    "parameter": "n vertices and network diameter D",
+    "model": "CONGEST communication rounds",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt{n/D})"
+  },
+  "ordinal": 109,
+  "citation_ids": [
+    "entry-140-citation-00214"
+  ]
+}

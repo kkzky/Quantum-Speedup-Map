@@ -1,73 +1,126 @@
 {
   "id": "entry-085",
   "number": 85,
-  "ordinal": 86,
-  "title_latex": "Claw finding between two functions",
-  "title": "Claw finding between two functions",
+  "slug": "claw",
+  "title_latex": "Claw finding and double-encryption key recovery",
+  "title": "Claw finding and double-encryption key recovery",
+  "aliases": [
+    86
+  ],
   "chapter_id": "chapter-3",
   "problem": {
-    "name_latex": "Claw finding between two functions",
-    "name": "Claw finding between two functions",
-    "statement_latex": "Given evaluation oracles for $f:[N]\\to Z$ and $g:[M]\\to Z$, with $N\\le M$, find $(x,y)$ with $f(x)=g(y)$ or determine that none exists. Claws arise when matching two halves of a cryptanalytic computation, including double encryption and prescribed-degree isogeny search. Complexity is measured in evaluation-oracle queries; runtime includes list-access costs, and explicit functions are additionally compared in gate and bit complexity.",
-    "statement_text": "Given evaluation oracles for $f:[N]\\to Z$ and $g:[M]\\to Z$, with $N\\le M$, find $(x,y)$ with $f(x)=g(y)$ or determine that none exists. Claws arise when matching two halves of a cryptanalytic computation, including double encryption and prescribed-degree isogeny search. Complexity is measured in evaluation-oracle queries; runtime includes list-access costs, and explicit functions are additionally compared in gate and bit complexity."
+    "name_latex": "Claw finding and double-encryption key recovery",
+    "name": "Claw finding and double-encryption key recovery",
+    "statement_latex": "Given evaluation oracles $f:[N]\\to Z$ and $g:[M]\\to Z$, with $N\\le M$, find $(x,y)$ with $f(x)=g(y)$, or determine that none exists.\n\n\\entryalias{86}\\textbf{Double-encryption key recovery.} Given sufficiently many known pairs satisfying $C_i=E_{K_2}(E_{K_1}(P_i))$ for independent $k$-bit keys, recover $(K_1,K_2)$. The functions $f(K_1)=(E_{K_1}(P_i))_i$ and $g(K_2)=(E^{-1}_{K_2}(C_i))_i$ give a balanced claw problem with $N=M=2^k$. Tuples of intermediate values isolate the intended key pair. Claws also arise when matching two halves of an isogeny computation.\n\nThe comparisons count function-evaluation queries or ideal-cipher encryption and decryption queries; explicit functions additionally use gate and bit complexity.",
+    "statement_text": "Given evaluation oracles $f:[N]\\to Z$ and $g:[M]\\to Z$, with $N\\le M$, find $(x,y)$ with $f(x)=g(y)$, or determine that none exists. 86Double-encryption key recovery. Given sufficiently many known pairs satisfying $C_i=E_{K_2}(E_{K_1}(P_i))$ for independent $k$-bit keys, recover $(K_1,K_2)$. The functions $f(K_1)=(E_{K_1}(P_i))_i$ and $g(K_2)=(E^{-1}_{K_2}(C_i))_i$ give a balanced claw problem with $N=M=2^k$. Tuples of intermediate values isolate the intended key pair. Claws also arise when matching two halves of an isogeny computation. The comparisons count function-evaluation queries or ideal-cipher encryption and decryption queries; explicit functions additionally use gate and bit complexity."
   },
   "quantum_speedup": {
     "quantum": {
-      "headline_latex": "$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, Tani quantum-walk claw finding.",
-      "headline_text": "$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, Tani quantum-walk claw finding.",
-      "details_latex": "The balanced case is $\\Theta(N^{2/3})$. The algorithm stores evaluated subsets of both domains; coherent sorting or lookup contributes to its gate cost. The stated bounded-error bounds include finding a claw or deciding that none exists, for the evaluation-oracle model. Quantum-walk spectral and marked-fraction parameters determine the two regimes.",
-      "details_text": "The balanced case is $\\Theta(N^{2/3})$. The algorithm stores evaluated subsets of both domains; coherent sorting or lookup contributes to its gate cost. The stated bounded-error bounds include finding a claw or deciding that none exists, for the evaluation-oracle model. Quantum-walk spectral and marked-fraction parameters determine the two regimes."
+      "headline_latex": "$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, quantum-walk claw finding.",
+      "details_latex": "Tani's construction handles both detection and finding. The balanced bound is $\\Theta(N^{2/3})$, giving $\\Theta(2^{2k/3})$ ideal-cipher queries for double encryption. A quantum walk maintains evaluated subsets of the two domains; coherent sorting or lookup and reversible function evaluation determine its gate cost. The time-efficient double-encryption construction uses $O(N^{2/3})$ memory.",
+      "headline_text": "$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, quantum-walk claw finding.",
+      "details_text": "Tani's construction handles both detection and finding. The balanced bound is $\\Theta(N^{2/3})$, giving $\\Theta(2^{2k/3})$ ideal-cipher queries for double encryption. A quantum walk maintains evaluated subsets of the two domains; coherent sorting or lookup and reversible function evaluation determine its gate cost. The time-efficient double-encryption construction uses $O(N^{2/3})$ memory."
     },
     "classical": {
-      "headline_latex": "$\\Theta(N+M)$ queries in the worst case, classical list matching.",
-      "headline_text": "$\\Theta(N+M)$ queries in the worst case, classical list matching.",
-      "details_latex": "Hashing both lists gives expected linear-time matching with suitable value representation; sorting gives a logarithmic time overhead. For $N=M$, the bound is $\\Theta(N)$. If $f$ and $g$ have explicit verification circuits of combined size $G$ and the combined witness length is $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$, circuit encoding gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search. In the balanced case with $G=O(\\log N)$, this becomes $N^{o(1)}$.",
-      "details_text": "Hashing both lists gives expected linear-time matching with suitable value representation; sorting gives a logarithmic time overhead. For $N=M$, the bound is $\\Theta(N)$. If $f$ and $g$ have explicit verification circuits of combined size $G$ and the combined witness length is $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$, circuit encoding gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search. In the balanced case with $G=O(\\log N)$, this becomes $N^{o(1)}$."
+      "headline_latex": "$\\Theta(N+M)$ worst-case queries, list matching; $\\widetilde O(2^k)$ time for double encryption, meet in the middle.",
+      "details_latex": "Hashing gives expected linear-time list matching with suitable value representation; sorting adds a logarithmic overhead. Double encryption uses $O(2^k)$ storage and $\\Theta(2^k)$ ideal-cipher queries. For explicit functions, let $G$ be the gate count of the complete claw-verification circuit and let $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$. Boolean tensor contraction gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search time. In double encryption, $\\ell=2k$ and $G$ includes all known-pair checks. Balanced claws with $G=O(\\log N)$ have an $N^{o(1)}$ classical bound; linear-size two-key verification gives subexponential time in $k$.",
+      "headline_text": "$\\Theta(N+M)$ worst-case queries, list matching; $\\widetilde O(2^k)$ time for double encryption, meet in the middle.",
+      "details_text": "Hashing gives expected linear-time list matching with suitable value representation; sorting adds a logarithmic overhead. Double encryption uses $O(2^k)$ storage and $\\Theta(2^k)$ ideal-cipher queries. For explicit functions, let $G$ be the gate count of the complete claw-verification circuit and let $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$. Boolean tensor contraction gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search time. In double encryption, $\\ell=2k$ and $G$ includes all known-pair checks. Balanced claws with $G=O(\\log N)$ have an $N^{o(1)}$ classical bound; linear-size two-key verification gives subexponential time in $k$."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
-      "description_latex": "Polynomial speedup, with degree $3/2$ in the balanced query comparison and quadratic search in the highly unbalanced regime. Quantum walks provide the balanced improvement.",
-      "description_text": "Polynomial speedup, with degree $3/2$ in the balanced query comparison and quadratic search in the highly unbalanced regime. Quantum walks provide the balanced improvement."
+      "description_latex": "A polynomial speedup of degree $3/2$ in the balanced query comparison and a quadratic search improvement in the highly unbalanced regime. Double encryption improves the exponential constant from $k$ to $2k/3$ through the balanced claw-finding reduction.",
+      "category_id": "strength-polynomial",
+      "description_text": "A polynomial speedup of degree $3/2$ in the balanced query comparison and a quadratic search improvement in the highly unbalanced regime. Double encryption improves the exponential constant from $k$ to $2k/3$ through the balanced claw-finding reduction."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
-      "description_latex": "Fully proved for the evaluation-oracle task and its matching query lower bounds. Explicit small circuits have the separate representation-dependent classical comparator.",
-      "description_text": "Fully proved for the evaluation-oracle task and its matching query lower bounds. Explicit small circuits have the separate representation-dependent classical comparator."
+      "description_latex": "Matching quantum upper and lower bounds hold for balanced claw queries and the stated ideal-cipher key-recovery task. The explicit-circuit comparisons include their representation-dependent classical algorithms.",
+      "category_id": "evidence-proved",
+      "description_text": "Matching quantum upper and lower bounds hold for balanced claw queries and the stated ideal-cipher key-recovery task. The explicit-circuit comparisons include their representation-dependent classical algorithms."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
-      "description_latex": "Time-efficient walks need coherent access to stored function values and exponential storage in the logarithmic domain size. Reversible function evaluation and walk updates require fault tolerance for cryptographic domains.\n\n{\\small [Before ``ETH is false'', the balanced generic comparison was $\\Theta(N)$ classical versus $\\Theta(N^{2/3})$ quantum queries, also transferred to explicit function evaluations.]\\par}",
-      "description_text": "Time-efficient walks need coherent access to stored function values and exponential storage in the logarithmic domain size. Reversible function evaluation and walk updates require fault tolerance for cryptographic domains. [Before “ETH is false”, the balanced generic comparison was $\\Theta(N)$ classical versus $\\Theta(N^{2/3})$ quantum queries, also transferred to explicit function evaluations.]"
+      "description_latex": "Time-efficient walks require coherent stored values and superpolynomial memory in logarithmic domain size. Reversible encryption, decryption and walk updates require fault tolerance at cryptographic sizes; coherent list storage and depth dominate the logical resources.\n{\\small [Before ``ETH is false'', the balanced explicit-function comparison transferred the $\\Theta(N)$ classical versus $\\Theta(N^{2/3})$ quantum query costs to function-evaluation time, including double-encryption meet in the middle.]\\par}",
+      "category_id": "hardware-superpolynomial",
+      "description_text": "Time-efficient walks require coherent stored values and superpolynomial memory in logarithmic domain size. Reversible encryption, decryption and walk updates require fault tolerance at cryptographic sizes; coherent list storage and depth dominate the logical resources. [Before “ETH is false”, the balanced explicit-function comparison transferred the $\\Theta(N)$ classical versus $\\Theta(N^{2/3})$ quantum query costs to function-evaluation time, including double-encryption meet in the middle.]"
     }
   },
+  "algorithm_heading_latex": "Algorithm: Tani quantum-walk claw finding; quantum meet in the middle",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "85.1",
       "content_latex": "\\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Section 3: claw detection; Section 4, \\textsc{ClawSearch} and Theorem 8: finding a claw and the two domain-size regimes.",
       "content_text": "Tani, Claw Finding Algorithms Using Quantum Walk (2009). Section 3: claw detection; Section 4, ClawSearch and Theorem 8: finding a claw and the two domain-size regimes.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/0708.2584",
+          "title": "Claw Finding Algorithms Using Quantum Walk",
+          "label_latex": "Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)",
+          "locator_latex": "Section 3: claw detection; Section 4, \\textsc{ClawSearch} and Theorem 8: finding a claw and the two domain-size regimes."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-085-citation-001"
+        "entry-085-citation-00288"
       ]
     },
     {
+      "content_latex": "\\href{https://arxiv.org/pdf/1410.1434}{Kaplan, \\emph{Quantum Attacks Against Iterated Block Ciphers} (2015)}. Theorem 2: double-encryption algorithm and memory; Theorem 3: matching query lower bound; Theorem 4: the related fourfold-encryption construction.",
+      "content_text": "Kaplan, Quantum Attacks Against Iterated Block Ciphers (2015). Theorem 2: double-encryption algorithm and memory; Theorem 3: matching query lower bound; Theorem 4: the related fourfold-encryption construction.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1410.1434",
+          "title": "Quantum Attacks Against Iterated Block Ciphers",
+          "label_latex": "Kaplan, \\emph{Quantum Attacks Against Iterated Block Ciphers} (2015)",
+          "locator_latex": "Theorem 2: double-encryption algorithm and memory; Theorem 3: matching query lower bound; Theorem 4: the related fourfold-encryption construction."
+        }
+      ],
       "item_number": 2,
-      "index_label": "85.2",
+      "index_label": "",
+      "citation_ids": [
+        "entry-085-citation-00289"
+      ]
+    },
+    {
       "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.",
       "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+          "locator_latex": "Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-085-citation-002"
+        "entry-085-citation-00290"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-085-citation-001",
-    "entry-085-citation-002"
+  "algorithm_ids": [
+    "tani-claw"
   ],
-  "source_latex": "\\entrytitle{85}{Claw finding between two functions}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{84}\n\\begin{problem}[Claw finding between two functions]\nGiven evaluation oracles for $f:[N]\\to Z$ and $g:[M]\\to Z$, with $N\\le M$, find $(x,y)$ with $f(x)=g(y)$ or determine that none exists. Claws arise when matching two halves of a cryptanalytic computation, including double encryption and prescribed-degree isogeny search. Complexity is measured in evaluation-oracle queries; runtime includes list-access costs, and explicit functions are additionally compared in gate and bit complexity.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, Tani quantum-walk claw finding.}\nThe balanced case is $\\Theta(N^{2/3})$. The algorithm stores evaluated subsets of both domains; coherent sorting or lookup contributes to its gate cost. The stated bounded-error bounds include finding a claw or deciding that none exists, for the evaluation-oracle model. Quantum-walk spectral and marked-fraction parameters determine the two regimes.\n\n\\complexity{Classical}{$\\Theta(N+M)$ queries in the worst case, classical list matching.}\nHashing both lists gives expected linear-time matching with suitable value representation; sorting gives a logarithmic time overhead. For $N=M$, the bound is $\\Theta(N)$. If $f$ and $g$ have explicit verification circuits of combined size $G$ and the combined witness length is $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$, circuit encoding gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search. In the balanced case with $G=O(\\log N)$, this becomes $N^{o(1)}$.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup, with degree $3/2$ in the balanced query comparison and quadratic search in the highly unbalanced regime. Quantum walks provide the balanced improvement.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully proved for the evaluation-oracle task and its matching query lower bounds. Explicit small circuits have the separate representation-dependent classical comparator.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Time-efficient walks need coherent access to stored function values and exponential storage in the logarithmic domain size. Reversible function evaluation and walk updates require fault tolerance for cryptographic domains.\n\n{\\small [Before ``ETH is false'', the balanced generic comparison was $\\Theta(N)$ classical versus $\\Theta(N^{2/3})$ quantum queries, also transferred to explicit function evaluations.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{85}\n\\item \\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Section 3: claw detection; Section 4, \\textsc{ClawSearch} and Theorem 8: finding a claw and the two domain-size regimes.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "tani-claw",
+      "label_latex": "Tani quantum-walk claw finding",
+      "problem_numbers": [
+        70
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{85}{Claw finding and double-encryption key recovery}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\begin{problem}[Claw finding and double-encryption key recovery]\nGiven evaluation oracles $f:[N]\\to Z$ and $g:[M]\\to Z$, with $N\\le M$, find $(x,y)$ with $f(x)=g(y)$, or determine that none exists.\n\n\\entryalias{86}\\textbf{Double-encryption key recovery.} Given sufficiently many known pairs satisfying $C_i=E_{K_2}(E_{K_1}(P_i))$ for independent $k$-bit keys, recover $(K_1,K_2)$. The functions $f(K_1)=(E_{K_1}(P_i))_i$ and $g(K_2)=(E^{-1}_{K_2}(C_i))_i$ give a balanced claw problem with $N=M=2^k$. Tuples of intermediate values isolate the intended key pair. Claws also arise when matching two halves of an isogeny computation.\n\nThe comparisons count function-evaluation queries or ideal-cipher encryption and decryption queries; explicit functions additionally use gate and bit complexity.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, quantum-walk claw finding.}\nTani's construction handles both detection and finding. The balanced bound is $\\Theta(N^{2/3})$, giving $\\Theta(2^{2k/3})$ ideal-cipher queries for double encryption. A quantum walk maintains evaluated subsets of the two domains; coherent sorting or lookup and reversible function evaluation determine its gate cost. The time-efficient double-encryption construction uses $O(N^{2/3})$ memory.\n\n\\complexity{Classical}{$\\Theta(N+M)$ worst-case queries, list matching; $\\widetilde O(2^k)$ time for double encryption, meet in the middle.}\nHashing gives expected linear-time list matching with suitable value representation; sorting adds a logarithmic overhead. Double encryption uses $O(2^k)$ storage and $\\Theta(2^k)$ ideal-cipher queries. For explicit functions, let $G$ be the gate count of the complete claw-verification circuit and let $\\ell=\\lceil\\log_2N\\rceil+\\lceil\\log_2M\\rceil$. Boolean tensor contraction gives $\\operatorname{poly}(\\ell+G)2^{O((\\ell+G)/\\sqrt{\\log(\\ell+G)})}$ classical search time. In double encryption, $\\ell=2k$ and $G$ includes all known-pair checks. Balanced claws with $G=O(\\log N)$ have an $N^{o(1)}$ classical bound; linear-size two-key verification gives subexponential time in $k$.\n\n\\dimensionlabel{Strength}{strengthPolynomial} A polynomial speedup of degree $3/2$ in the balanced query comparison and a quadratic search improvement in the highly unbalanced regime. Double encryption improves the exponential constant from $k$ to $2k/3$ through the balanced claw-finding reduction.\n\\dimensionlabel{Evidence}{evidenceProved} Matching quantum upper and lower bounds hold for balanced claw queries and the stated ideal-cipher key-recovery task. The explicit-circuit comparisons include their representation-dependent classical algorithms.\n\\dimensionlabel{Hardware}{hardwareExponential} Time-efficient walks require coherent stored values and superpolynomial memory in logarithmic domain size. Reversible encryption, decryption and walk updates require fault tolerance at cryptographic sizes; coherent list storage and depth dominate the logical resources.\n{\\small [Before ``ETH is false'', the balanced explicit-function comparison transferred the $\\Theta(N)$ classical versus $\\Theta(N^{2/3})$ quantum query costs to function-evaluation time, including double-encryption meet in the middle.]\\par}\n\\subhead{Algorithm: Tani quantum-walk claw finding; quantum meet in the middle}\n\\begin{algorithmindex}{85}\n\\item \\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Section 3: claw detection; Section 4, \\textsc{ClawSearch} and Theorem 8: finding a claw and the two domain-size regimes.\n\\item \\href{https://arxiv.org/pdf/1410.1434}{Kaplan, \\emph{Quantum Attacks Against Iterated Block Ciphers} (2015)}. Theorem 2: double-encryption algorithm and memory; Theorem 3: matching query lower bound; Theorem 4: the related fourfold-encryption construction.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{tani-claw}{Tani quantum-walk claw finding}: \\problemref{70}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 140,
+  "citation_ids": [
+    "entry-085-citation-00288",
+    "entry-085-citation-00289",
+    "entry-085-citation-00290"
+  ]
 }

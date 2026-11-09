@@ -1,0 +1,130 @@
+{
+  "id": "entry-194",
+  "number": 194,
+  "slug": "spatial-lattice-search",
+  "title": "Spatial search on a lattice",
+  "title_latex": "Spatial search on a lattice",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "spatial_lattice_search",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Spatial search on a lattice",
+    "name_latex": "Spatial search on a lattice",
+    "statement_latex": "A $d$-dimensional lattice of $N$ vertices has a unique marked vertex, recognized by an oracle. Find it with success at least $2/3$, using adjacent-vertex movements and queries at the walker's position. Complexity counts local movement and oracle steps.",
+    "statement_text": "A $d$-dimensional lattice of $N$ vertices has a unique marked vertex, recognized by an oracle. Find it with success at least $2/3$, using adjacent-vertex movements and queries at the walker's position. Complexity counts local movement and oracle steps."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "A quadratic speedup for $d\\geq3$, and factor $\\sqrt{N/\\log N}$ in two dimensions.",
+      "category_id": "strength-polynomial",
+      "description_text": "A quadratic speedup for $d\\geq3$, and factor $\\sqrt{N/\\log N}$ in two dimensions."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The classical lower bound is unconditional in the model charging local movement and queries.",
+      "category_id": "evidence-proved",
+      "description_text": "The classical lower bound is unconditional in the model charging local movement and queries."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Digital position register: $\\lceil\\log_2N\\rceil$ qubits plus coin and ancilla; a physical lattice encoding uses $N$ sites.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Digital position register: $\\lceil\\log_2N\\rceil$ qubits plus coin and ancilla; a physical lattice encoding uses $N$ sites."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\sqrt N)$ steps for fixed $d\\geq3$ by Aaronson--Ambainis; $O(\\sqrt{N\\log N})$ for $d=2$ by Tulsi's ancilla-controlled walk. The ancilla raises success to a constant.",
+      "details_latex": "",
+      "headline_text": "$O(\\sqrt N)$ steps for fixed $d\\geq3$ by Aaronson–Ambainis; $O(\\sqrt{N\\log N})$ for $d=2$ by Tulsi's ancilla-controlled walk. The ancilla raises success to a constant.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N)$ classical steps and queries, achieved by a systematic traversal and matched by unstructured-search query lower bounds. The 2026 electrostatic theorem gives a matching $\\Omega(\\sqrt{N\\log N})$ quantum local-step lower bound in two dimensions.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(N)$ classical steps and queries, achieved by a systematic traversal and matched by unstructured-search query lower bounds. The 2026 electrostatic theorem gives a matching $\\Omega(\\sqrt{N\\log N})$ quantum local-step lower bound in two dimensions.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "tulsi_spatial_search",
+    "aaronson_ambainis_spatial_search"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/0801.0497}{\\emph{Faster quantum walk algorithm for the two dimensional spatial search}}. Ancilla-controlled walk and O(sqrt(N log N)) theorem",
+      "content_text": "Faster quantum walk algorithm for the two dimensional spatial search. Ancilla-controlled walk and O(sqrt(N log N)) theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/0801.0497",
+          "title": "Faster quantum walk algorithm for the two dimensional spatial search",
+          "label_latex": "\\emph{Faster quantum walk algorithm for the two dimensional spatial search}",
+          "locator_latex": "Ancilla-controlled walk and O(sqrt(N log N)) theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-194-citation-00224"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://toc.ilab.sztaki.hu/articles/v001a004/index.html}{\\emph{Quantum Search of Spatial Regions}}. Section 7: O(sqrt n)-qubit disjointness protocol; spatial-search theorems",
+      "content_text": "Quantum Search of Spatial Regions. Section 7: O(sqrt n)-qubit disjointness protocol; spatial-search theorems",
+      "links": [
+        {
+          "url": "https://toc.ilab.sztaki.hu/articles/v001a004/index.html",
+          "title": "Quantum Search of Spatial Regions",
+          "label_latex": "\\emph{Quantum Search of Spatial Regions}",
+          "locator_latex": "Section 7: O(sqrt n)-qubit disjointness protocol; spatial-search theorems"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-194-citation-00225"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2610.23560}{\\emph{Electrostatic Limits on Quantum Spatial Search}}. Main local-step lower bound; October 2026 preprint",
+      "content_text": "Electrostatic Limits on Quantum Spatial Search. Main local-step lower bound; October 2026 preprint",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2610.23560",
+          "title": "Electrostatic Limits on Quantum Spatial Search",
+          "label_latex": "\\emph{Electrostatic Limits on Quantum Spatial Search}",
+          "locator_latex": "Main local-step lower bound; October 2026 preprint"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-194-citation-00226"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Tulsi ancilla-controlled spatial search; Aaronson--Ambainis spatial search",
+  "plot": {
+    "quantum": "O(\\sqrt{N\\log N})",
+    "classical": "\\Theta(N)",
+    "parameter": "$N$ vertices; displayed case $d=2$.",
+    "model": "Local movement and oracle steps",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1,
+    "gain": "\\Omega(\\sqrt{N/\\log N})"
+  },
+  "ordinal": 117,
+  "citation_ids": [
+    "entry-194-citation-00224",
+    "entry-194-citation-00225",
+    "entry-194-citation-00226"
+  ]
+}

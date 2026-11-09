@@ -1,0 +1,104 @@
+{
+  "id": "entry-214",
+  "number": 214,
+  "slug": "prior-q25",
+  "title": "Triangle-freeness of Boolean functions from examples",
+  "title_latex": "Triangle-freeness of Boolean functions from examples",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q25",
+  "inventory_ids": [
+    "Q25"
+  ],
+  "problem": {
+    "name": "Triangle-freeness of Boolean functions from examples",
+    "name_latex": "Triangle-freeness of Boolean functions from examples",
+    "statement_latex": "For $f:\\mathbb F_2^n\\to\\{0,1\\}$, distinguish functions with no $x,y$ satisfying $f(x)=f(y)=f(x+y)=1$ from functions $\\varepsilon$-far from that property. Access consists of uniform quantum examples.",
+    "statement_text": "For $f:\\mathbb F_2^n\\to\\{0,1\\}$, distinguish functions with no $x,y$ satisfying $f(x)=f(y)=f(x+y)=1$ from functions $\\varepsilon$-far from that property. Access consists of uniform quantum examples."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O_\\varepsilon(1)$ quantum examples by Caro--Naik--Slote, exploiting coherent access to the additive structure of $\\mathbb F_2^n$.",
+      "details_latex": "",
+      "headline_text": "$O_\\varepsilon(1)$ quantum examples by Caro–Naik–Slote, exploiting coherent access to the additive structure of $\\mathbb F_2^n$.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(2^{n/3})$ passive labeled examples are required at constant distance in the classical model; sampling enough additive triples gives the corresponding finite-domain testing approach.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(2^{n/3})$ passive labeled examples are required at constant distance in the classical model; sampling enough additive triples gives the corresponding finite-domain testing approach.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-data-property-testing"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-data-property-testing",
+      "label_latex": "Caro--Naik--Slote property testing from quantum data",
+      "problem_numbers": [
+        212,
+        213
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/html/LIPIcs.ITCS.2026.34/LIPIcs.ITCS.2026.34.html}{\\emph{Testing classical properties from quantum data}}. Triangle-freeness application and classical sample lower bound.",
+      "content_text": "Testing classical properties from quantum data. Triangle-freeness application and classical sample lower bound.",
+      "links": [
+        {
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/html/LIPIcs.ITCS.2026.34/LIPIcs.ITCS.2026.34.html",
+          "title": "Testing classical properties from quantum data",
+          "label_latex": "\\emph{Testing classical properties from quantum data}",
+          "locator_latex": "Triangle-freeness application and classical sample lower bound."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-214-citation-00083"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Caro--Naik--Slote property testing from quantum data",
+  "plot": {
+    "quantum": "O_\\varepsilon(1)",
+    "classical": "\\Omega(2^{n/3})",
+    "parameter": "Boolean dimension n; fixed distance epsilon",
+    "model": "passive example complexity",
+    "quantum_kind": "constant",
+    "classical_kind": "exponential",
+    "gain": "2^{\\Omega(n)}",
+    "quantum_exponent": 0,
+    "classical_exponent": 0.3333333333333333
+  },
+  "ordinal": 37,
+  "citation_ids": [
+    "entry-214-citation-00083"
+  ]
+}

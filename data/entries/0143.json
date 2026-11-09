@@ -1,0 +1,95 @@
+{
+  "id": "entry-143",
+  "number": 143,
+  "slug": "prior-g45",
+  "title": "Signed graph clusterability testing",
+  "title_latex": "Signed graph clusterability testing",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g45",
+  "inventory_ids": [
+    "G45"
+  ],
+  "problem": {
+    "name": "Signed graph clusterability testing",
+    "name_latex": "Signed graph clusterability testing",
+    "statement_latex": "For a bounded-degree graph with edges labeled $+$ or $-$, distinguish graphs whose vertices can be partitioned so that positive edges lie inside parts and negative edges join distinct parts from graphs $\\varepsilon$-far from that property. Distance counts edge-label or adjacency modifications.",
+    "statement_text": "For a bounded-degree graph with edges labeled $+$ or $-$, distinguish graphs whose vertices can be partitioned so that positive edges lie inside parts and negative edges join distinct parts from graphs $\\varepsilon$-far from that property. Distance counts edge-label or adjacency modifications."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{1/3})$ neighbor queries for fixed degree and $\\varepsilon$, by Chen--Apers--Hsieh's quantum signed-graph tester.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n^{1/3})$ neighbor queries for fixed degree and $\\varepsilon$, by Chen–Apers–Hsieh's quantum signed-graph tester.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde\\Theta(\\sqrt n)$ queries for fixed degree and distance in the classical bounded-degree model.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde\\Theta(\\sqrt n)$ queries for fixed degree and distance in the classical bounded-degree model.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "signed-graph-clusterability-tester"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2311.10480}{\\emph{(Quantum) complexity of testing signed graph clusterability}}. Theorems2 and6",
+      "content_text": "(Quantum) complexity of testing signed graph clusterability. Theorems2 and6",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2311.10480",
+          "title": "(Quantum) complexity of testing signed graph clusterability",
+          "label_latex": "\\emph{(Quantum) complexity of testing signed graph clusterability}",
+          "locator_latex": "Theorems2 and6"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-143-citation-00219"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Chen--Apers--Hsieh clusterability tester",
+  "plot": {
+    "quantum": "\\widetilde O(n^{1/3})",
+    "classical": "\\widetilde\\Theta(n^{1/2})",
+    "parameter": "vertex count n; fixed degree and distance",
+    "model": "neighbor queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(n^{1/6})",
+    "quantum_exponent": 0.3333333333333333,
+    "classical_exponent": 0.5
+  },
+  "ordinal": 112,
+  "citation_ids": [
+    "entry-143-citation-00219"
+  ]
+}

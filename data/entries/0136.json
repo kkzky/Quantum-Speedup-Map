@@ -1,0 +1,130 @@
+{
+  "id": "entry-136",
+  "number": 136,
+  "slug": "prior-g35",
+  "title": "Planarity",
+  "title_latex": "Planarity",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g35",
+  "inventory_ids": [
+    "G35"
+  ],
+  "problem": {
+    "name": "Planarity",
+    "name_latex": "Planarity",
+    "statement_latex": "Given the adjacency-matrix oracle of an undirected graph $G$ on $n$ vertices, decide whether $G$ admits a planar embedding. Complexity counts adjacency queries.",
+    "statement_text": "Given the adjacency-matrix oracle of an undirected graph $G$ on $n$ vertices, decide whether $G$ admits a planar embedding. Complexity counts adjacency queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(n^{3/2})$ queries by the Childs--Kothari algorithm for minor-closed graph properties.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n^{3/2})$ queries by the Childs–Kothari algorithm for minor-closed graph properties.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n^2)$ matrix queries in the worst case. Once the edges are listed, Hopcroft--Tarjan planarity testing takes $O(n+m)$ time.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n^2)$ matrix queries in the worst case. Once the edges are listed, Hopcroft–Tarjan planarity testing takes $O(n+m)$ time.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "minor-closed-property-quantum-query",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1011.1443}{\\emph{Quantum query complexity of minor-closed graph properties}}. Minor-closed classification; planarity specialization",
+      "content_text": "Quantum query complexity of minor-closed graph properties. Minor-closed classification; planarity specialization",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1011.1443",
+          "title": "Quantum query complexity of minor-closed graph properties",
+          "label_latex": "\\emph{Quantum query complexity of minor-closed graph properties}",
+          "locator_latex": "Minor-closed classification; planarity specialization"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-136-citation-00210"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Childs--Kothari minor-closed graph-property algorithm; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\Theta(n^{3/2})",
+    "classical": "\\Theta(n^2)",
+    "parameter": "vertex count n",
+    "model": "adjacency-matrix queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "n^{1/2}",
+    "quantum_exponent": 1.5,
+    "classical_exponent": 2
+  },
+  "ordinal": 105,
+  "citation_ids": [
+    "entry-136-citation-00210"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "entry-224",
+  "number": 224,
+  "slug": "prior-q39",
+  "title": "k-wise uniformity testing",
+  "title_latex": "$k$-wise uniformity testing",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-q39",
+  "inventory_ids": [
+    "Q39"
+  ],
+  "problem": {
+    "name": "k-wise uniformity testing",
+    "name_latex": "$k$-wise uniformity testing",
+    "statement_latex": "Given purified access to a distribution $p$ on $\\{0,1\\}^n$, test whether every marginal on at most $k$ coordinates is uniform, versus being $\\varepsilon$-far in total variation from all such distributions. Here $k$ is fixed.",
+    "statement_text": "Given purified access to a distribution $p$ on $\\{0,1\\}^n$, test whether every marginal on at most $k$ coordinates is uniform, versus being $\\varepsilon$-far in total variation from all such distributions. Here $k$ is fixed."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds.",
+      "category_id": "evidence-partial",
+      "description_text": "The quantum bound improves a published classical algorithm in the stated regime; the comparison is between algorithmic upper bounds."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^{k/2}/\\varepsilon)$ queries by Luo--Wang--Li, estimating the low-degree Fourier moment condition.",
+      "details_latex": "",
+      "headline_text": "$O(n^{k/2}/\\varepsilon)$ queries by Luo–Wang–Li, estimating the low-degree Fourier moment condition.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$O(n^k/\\varepsilon^2)$ samples by the classical tester compared in that work; for $k=2$, the cited sample lower bound is $\\Omega(n/\\varepsilon^2)$.",
+      "details_latex": "",
+      "headline_text": "$O(n^k/\\varepsilon^2)$ samples by the classical tester compared in that work; for $k=2$, the cited sample lower bound is $\\Omega(n/\\varepsilon^2)$.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "purified-distribution-testing",
+    "amplitude-estimation"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "purified-distribution-testing",
+      "label_latex": "Gilyen--Li and Luo--Wang--Li distribution testing",
+      "problem_numbers": [
+        221,
+        222,
+        223
+      ]
+    },
+    {
+      "algorithm_id": "amplitude-estimation",
+      "label_latex": "Quantum amplitude estimation and counting",
+      "problem_numbers": [
+        6,
+        54,
+        90,
+        99,
+        112,
+        120,
+        221,
+        222,
+        223,
+        225,
+        226,
+        227
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2304.12916}{\\emph{Succinct quantum testers for closeness and k-wise uniformity of probability distributions}}. k-wise-uniformity theorem.",
+      "content_text": "Succinct quantum testers for closeness and k-wise uniformity of probability distributions. k-wise-uniformity theorem.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2304.12916",
+          "title": "Succinct quantum testers for closeness and k-wise uniformity of probability distributions",
+          "label_latex": "\\emph{Succinct quantum testers for closeness and k-wise uniformity of probability distributions}",
+          "locator_latex": "k-wise-uniformity theorem."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-224-citation-00092"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Gilyen--Li and Luo--Wang--Li distribution testing; Quantum amplitude estimation and counting",
+  "plot": {
+    "quantum": "O(n^{k/2}/\\varepsilon)",
+    "classical": "O(n^k/\\varepsilon^2)",
+    "parameter": "dimension n and fixed k; distance epsilon",
+    "model": "purified preparation queries versus classical samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "n^{k/2}/\\varepsilon\\text{ relative to the cited classical upper bound}"
+  },
+  "ordinal": 44,
+  "citation_ids": [
+    "entry-224-citation-00092"
+  ]
+}

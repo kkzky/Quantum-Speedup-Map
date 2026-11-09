@@ -1,0 +1,114 @@
+{
+  "id": "entry-229",
+  "number": 229,
+  "slug": "prior-q45",
+  "title": "Testing one-to-one periodicity",
+  "title_latex": "Testing one-to-one periodicity",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q45",
+  "inventory_ids": [
+    "Q45"
+  ],
+  "problem": {
+    "name": "Testing one-to-one periodicity",
+    "name_latex": "Testing one-to-one periodicity",
+    "statement_latex": "Given $f:[n]\\to[n]$, distinguish functions whose values repeat injectively with a period in $[\\sqrt n/4,\\sqrt n/2]$ from functions $\\varepsilon$-far from every such periodic function. Complexity counts value queries.",
+    "statement_text": "Given $f:[n]\\to[n]$, distinguish functions whose values repeat injectively with a period in $[\\sqrt n/4,\\sqrt n/2]$ from functions $\\varepsilon$-far from every such periodic function. Complexity counts value queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O_\\varepsilon(1)$ oracle queries and $\\operatorname{poly}(\\log n)$ additional processing by Chakraborty--Fischer--Matsliah--de Wolf, using Fourier period testing.",
+      "details_latex": "",
+      "headline_text": "$O_\\varepsilon(1)$ oracle queries and $\\operatorname{poly}(\\log n)$ additional processing by Chakraborty–Fischer–Matsliah–de Wolf, using Fourier period testing.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(n^{1/4}/\\log n)$ randomized queries are necessary; a classical tester can use collisions to infer candidate periods and verify them.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(n^{1/4}/\\log n)$ randomized queries are necessary; a classical tester can use collisions to infer candidate periods and verify them.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "one-to-one-periodicity-testing",
+    "shor-order"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "shor-order",
+      "label_latex": "Shor order finding and discrete logarithm",
+      "problem_numbers": [
+        61,
+        62,
+        63,
+        64,
+        146,
+        147,
+        149,
+        150,
+        152,
+        154,
+        193
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1005.0523}{\\emph{New Results on Quantum Property Testing}}. Theorem1.4 and Section8.",
+      "content_text": "New Results on Quantum Property Testing. Theorem1.4 and Section8.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1005.0523",
+          "title": "New Results on Quantum Property Testing",
+          "label_latex": "\\emph{New Results on Quantum Property Testing}",
+          "locator_latex": "Theorem1.4 and Section8."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-229-citation-00381"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum one-to-one periodicity tester; Shor order finding and discrete logarithm",
+  "plot": {
+    "quantum": "O_\\varepsilon(1)",
+    "classical": "\\Omega(n^{1/4}/\\log n)",
+    "parameter": "domain size n; fixed distance epsilon",
+    "model": "function-oracle queries",
+    "quantum_kind": "constant",
+    "classical_kind": "polynomial",
+    "gain": "Exponential to polynomial in the oracle address length log n",
+    "quantum_exponent": 0,
+    "classical_exponent": 0.25
+  },
+  "ordinal": 196,
+  "citation_ids": [
+    "entry-229-citation-00381"
+  ]
+}

@@ -1,9 +1,10 @@
 {
   "id": "entry-070",
   "number": 70,
-  "ordinal": 71,
+  "slug": "sidh-secret-isogeny-recovery",
   "title_latex": "SIDH secret-isogeny recovery",
   "title": "SIDH secret-isogeny recovery",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "SIDH secret-isogeny recovery with torsion images",
@@ -14,70 +15,111 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\widetilde O(p^{1/6})$ isogeny-oracle calls, Tani claw finding applied to split isogenies.",
-      "headline_text": "$\\widetilde O(p^{1/6})$ isogeny-oracle calls, Tani claw finding applied to split isogenies.",
       "details_latex": "In the balanced SIDH parameter regime, the two half-isogeny lists contain about $p^{1/4}$ candidates each. Quantum claw search identifies matching intermediate endpoints; the stated exponent counts isogeny evaluations with the required coherent list access. Arithmetic and memory-access factors enter the full gate cost.",
+      "headline_text": "$\\widetilde O(p^{1/6})$ isogeny-oracle calls, Tani claw finding applied to split isogenies.",
       "details_text": "In the balanced SIDH parameter regime, the two half-isogeny lists contain about $p^{1/4}$ candidates each. Quantum claw search identifies matching intermediate endpoints; the stated exponent counts isogeny evaluations with the required coherent list access. Arithmetic and memory-access factors enter the full gate cost."
     },
     "classical": {
       "headline_latex": "$\\operatorname{poly}(\\log p)$, Castryck--Decru and Robert SIDH key recovery.",
-      "headline_text": "$\\operatorname{poly}(\\log p)$, Castryck–Decru and Robert SIDH key recovery.",
       "details_latex": "The full public key includes torsion images, which supply the extra information used by product-isogeny attacks. Robert's higher-dimensional abelian-variety framework gives polynomial-time key recovery in the specified SIDH setting. The polynomial algorithm recovers the prescribed secret isogeny or equivalent secret-key information from the same explicit public input.",
+      "headline_text": "$\\operatorname{poly}(\\log p)$, Castryck–Decru and Robert SIDH key recovery.",
       "details_text": "The full public key includes torsion images, which supply the extra information used by product-isogeny attacks. Robert's higher-dimensional abelian-variety framework gives polynomial-time key recovery in the specified SIDH setting. The polynomial algorithm recovers the prescribed secret isogeny or equivalent secret-key information from the same explicit public input."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The problem has a polynomial-time classical solution; the exponential quantum claw bound has no speedup over this comparator.",
+      "category_id": "strength-unspecified",
       "description_text": "The problem has a polynomial-time classical solution; the exponential quantum claw bound has no speedup over this comparator."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "The classical key-recovery theorem determines the comparison for SIDH public keys with their auxiliary torsion data.",
+      "category_id": "evidence-unspecified",
       "description_text": "The classical key-recovery theorem determines the comparison for SIDH public keys with their auxiliary torsion data."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "The quantum claw approach requires exponentially large coherent data structures and deep reversible isogeny arithmetic. The polynomial-time attack uses classical computation. For the quantum construction, both coherent memory and total circuit depth determine the required fault-tolerant resources.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "The quantum claw approach requires exponentially large coherent data structures and deep reversible isogeny arithmetic. The polynomial-time attack uses classical computation. For the quantum construction, both coherent memory and total circuit depth determine the required fault-tolerant resources."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Tani quantum-walk claw finding",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "70.1",
       "content_latex": "\\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Theorem 8 and the \\textsc{ClawSearch} procedure: balanced claw-finding bound used for the split-isogeny search.",
       "content_text": "Tani, Claw Finding Algorithms Using Quantum Walk (2009). Theorem 8 and the ClawSearch procedure: balanced claw-finding bound used for the split-isogeny search.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/0708.2584",
+          "title": "Claw Finding Algorithms Using Quantum Walk",
+          "label_latex": "Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)",
+          "locator_latex": "Theorem 8 and the \\textsc{ClawSearch} procedure: balanced claw-finding bound used for the split-isogeny search."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-070-citation-001"
+        "entry-070-citation-00249"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "70.2",
       "content_latex": "\\href{https://eprint.iacr.org/2022/975}{Castryck and Decru, \\emph{An Efficient Key Recovery Attack on SIDH} (2022)}. Main key-recovery construction using auxiliary torsion images.",
       "content_text": "Castryck and Decru, An Efficient Key Recovery Attack on SIDH (2022). Main key-recovery construction using auxiliary torsion images.",
+      "links": [
+        {
+          "url": "https://eprint.iacr.org/2022/975",
+          "title": "An Efficient Key Recovery Attack on SIDH",
+          "label_latex": "Castryck and Decru, \\emph{An Efficient Key Recovery Attack on SIDH} (2022)",
+          "locator_latex": "Main key-recovery construction using auxiliary torsion images."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-070-citation-002"
+        "entry-070-citation-00250"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "70.3",
       "content_latex": "\\href{https://www.math.u-bordeaux.fr/~damienrobert/pro/publications/articles/breaking_sidh.pdf}{Robert, \\emph{Breaking SIDH in Polynomial Time} (EUROCRYPT 2023)}. Theorem 1.1: polynomial-time recovery through higher-dimensional isogenies.",
       "content_text": "Robert, Breaking SIDH in Polynomial Time (EUROCRYPT 2023). Theorem 1.1: polynomial-time recovery through higher-dimensional isogenies.",
+      "links": [
+        {
+          "url": "https://www.math.u-bordeaux.fr/~damienrobert/pro/publications/articles/breaking_sidh.pdf",
+          "title": "Breaking SIDH in Polynomial Time",
+          "label_latex": "Robert, \\emph{Breaking SIDH in Polynomial Time} (EUROCRYPT 2023)",
+          "locator_latex": "Theorem 1.1: polynomial-time recovery through higher-dimensional isogenies."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-070-citation-003"
+        "entry-070-citation-00251"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-070-citation-001",
-    "entry-070-citation-002",
-    "entry-070-citation-003"
+  "algorithm_ids": [
+    "tani-claw"
   ],
-  "source_latex": "\\entrytitle{70}{SIDH secret-isogeny recovery}{white}{white}{hardwareExponential}\n\\setcounter{problem}{69}\n\\begin{problem}[SIDH secret-isogeny recovery with torsion images]\nGiven a supersingular starting curve $E_0$, a secret isogeny image $E_A$, and the published images $\\phi_A(P_B),\\phi_A(Q_B)$ of a basis of coprime torsion, recover the kernel of the secret isogeny $\\phi_A$ of prescribed smooth degree. This input is the public-key recovery problem of SIDH and SIKE. The comparison uses quantum isogeny-oracle calls and the resulting gate cost, and classical bit complexity on the full SIDH public key.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(p^{1/6})$ isogeny-oracle calls, Tani claw finding applied to split isogenies.}\nIn the balanced SIDH parameter regime, the two half-isogeny lists contain about $p^{1/4}$ candidates each. Quantum claw search identifies matching intermediate endpoints; the stated exponent counts isogeny evaluations with the required coherent list access. Arithmetic and memory-access factors enter the full gate cost.\n\n\\complexity{Classical}{$\\operatorname{poly}(\\log p)$, Castryck--Decru and Robert SIDH key recovery.}\nThe full public key includes torsion images, which supply the extra information used by product-isogeny attacks. Robert's higher-dimensional abelian-variety framework gives polynomial-time key recovery in the specified SIDH setting. The polynomial algorithm recovers the prescribed secret isogeny or equivalent secret-key information from the same explicit public input.\n\n\\dimensionlabel{Strength}{white} The problem has a polynomial-time classical solution; the exponential quantum claw bound has no speedup over this comparator.\n\n\\dimensionlabel{Evidence}{white} The classical key-recovery theorem determines the comparison for SIDH public keys with their auxiliary torsion data.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The quantum claw approach requires exponentially large coherent data structures and deep reversible isogeny arithmetic. The polynomial-time attack uses classical computation. For the quantum construction, both coherent memory and total circuit depth determine the required fault-tolerant resources.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{70}\n\\item \\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Theorem 8 and the \\textsc{ClawSearch} procedure: balanced claw-finding bound used for the split-isogeny search.\n\\item \\href{https://eprint.iacr.org/2022/975}{Castryck and Decru, \\emph{An Efficient Key Recovery Attack on SIDH} (2022)}. Main key-recovery construction using auxiliary torsion images.\n\\item \\href{https://www.math.u-bordeaux.fr/~damienrobert/pro/publications/articles/breaking_sidh.pdf}{Robert, \\emph{Breaking SIDH in Polynomial Time} (EUROCRYPT 2023)}. Theorem 1.1: polynomial-time recovery through higher-dimensional isogenies.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "tani-claw",
+      "label_latex": "Tani quantum-walk claw finding",
+      "problem_numbers": [
+        85,
+        86
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{70}{SIDH secret-isogeny recovery}{white}{white}{hardwareExponential}\n\\setcounter{problem}{69}\n\\begin{problem}[SIDH secret-isogeny recovery with torsion images]\nGiven a supersingular starting curve $E_0$, a secret isogeny image $E_A$, and the published images $\\phi_A(P_B),\\phi_A(Q_B)$ of a basis of coprime torsion, recover the kernel of the secret isogeny $\\phi_A$ of prescribed smooth degree. This input is the public-key recovery problem of SIDH and SIKE. The comparison uses quantum isogeny-oracle calls and the resulting gate cost, and classical bit complexity on the full SIDH public key.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(p^{1/6})$ isogeny-oracle calls, Tani claw finding applied to split isogenies.}\nIn the balanced SIDH parameter regime, the two half-isogeny lists contain about $p^{1/4}$ candidates each. Quantum claw search identifies matching intermediate endpoints; the stated exponent counts isogeny evaluations with the required coherent list access. Arithmetic and memory-access factors enter the full gate cost.\n\n\\complexity{Classical}{$\\operatorname{poly}(\\log p)$, Castryck--Decru and Robert SIDH key recovery.}\nThe full public key includes torsion images, which supply the extra information used by product-isogeny attacks. Robert's higher-dimensional abelian-variety framework gives polynomial-time key recovery in the specified SIDH setting. The polynomial algorithm recovers the prescribed secret isogeny or equivalent secret-key information from the same explicit public input.\n\n\\dimensionlabel{Strength}{white} The problem has a polynomial-time classical solution; the exponential quantum claw bound has no speedup over this comparator.\n\n\\dimensionlabel{Evidence}{white} The classical key-recovery theorem determines the comparison for SIDH public keys with their auxiliary torsion data.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The quantum claw approach requires exponentially large coherent data structures and deep reversible isogeny arithmetic. The polynomial-time attack uses classical computation. For the quantum construction, both coherent memory and total circuit depth determine the required fault-tolerant resources.\n\n\n\\subhead{Algorithm: Tani quantum-walk claw finding}\n\\begin{algorithmindex}{70}\n\\item \\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Theorem 8 and the \\textsc{ClawSearch} procedure: balanced claw-finding bound used for the split-isogeny search.\n\\item \\href{https://eprint.iacr.org/2022/975}{Castryck and Decru, \\emph{An Efficient Key Recovery Attack on SIDH} (2022)}. Main key-recovery construction using auxiliary torsion images.\n\\item \\href{https://www.math.u-bordeaux.fr/~damienrobert/pro/publications/articles/breaking_sidh.pdf}{Robert, \\emph{Breaking SIDH in Polynomial Time} (EUROCRYPT 2023)}. Theorem 1.1: polynomial-time recovery through higher-dimensional isogenies.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{tani-claw}{Tani quantum-walk claw finding}: \\problemref{85}, \\problemref{86}.\n\\par\\endgroup",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 127,
+  "citation_ids": [
+    "entry-070-citation-00249",
+    "entry-070-citation-00250",
+    "entry-070-citation-00251"
+  ]
 }

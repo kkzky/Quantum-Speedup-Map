@@ -1,0 +1,122 @@
+{
+  "id": "entry-223",
+  "number": 223,
+  "slug": "prior-q38",
+  "title": "Independence testing of a finite joint distribution",
+  "title_latex": "Independence testing of a finite joint distribution",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q38",
+  "inventory_ids": [
+    "Q38"
+  ],
+  "problem": {
+    "name": "Independence testing of a finite joint distribution",
+    "name_latex": "Independence testing of a finite joint distribution",
+    "statement_latex": "For an unknown $p$ on $[n]\\times[m]$, distinguish $p=p_Xp_Y$ from $\\|p-p_Xp_Y\\|_1\\ge\\varepsilon$, using purified coherent sample preparation and its inverse. Assume $n\\ge m$.",
+    "statement_text": "For an unknown $p$ on $[n]\\times[m]$, distinguish $p=p_Xp_Y$ from $\\|p-p_Xp_Y\\|_1\\ge\\varepsilon$, using purified coherent sample preparation and its inverse. Assume $n\\ge m$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt{nm}/\\varepsilon)$ queries by Gilyen--Li, reducing to coherent closeness testing against the product of marginals.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt{nm}/\\varepsilon)$ queries by Gilyen–Li, reducing to coherent closeness testing against the product of marginals.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(\\max\\{n^{2/3}m^{1/3}/\\varepsilon^{4/3},\\sqrt{nm}/\\varepsilon^2\\})$ samples by optimal classical independence testing.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\max\\{n^{2/3}m^{1/3}/\\varepsilon^{4/3},\\sqrt{nm}/\\varepsilon^2\\})$ samples by optimal classical independence testing.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "purified-distribution-testing",
+    "amplitude-estimation"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "purified-distribution-testing",
+      "label_latex": "Gilyen--Li and Luo--Wang--Li distribution testing",
+      "problem_numbers": [
+        221,
+        222,
+        224
+      ]
+    },
+    {
+      "algorithm_id": "amplitude-estimation",
+      "label_latex": "Quantum amplitude estimation and counting",
+      "problem_numbers": [
+        6,
+        54,
+        90,
+        99,
+        112,
+        120,
+        221,
+        222,
+        224,
+        225,
+        226,
+        227
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1902.00814}{\\emph{Distributional property testing in a quantum world}}. Definition6; Corollary18; AppendixC.2.",
+      "content_text": "Distributional property testing in a quantum world. Definition6; Corollary18; AppendixC.2.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1902.00814",
+          "title": "Distributional property testing in a quantum world",
+          "label_latex": "\\emph{Distributional property testing in a quantum world}",
+          "locator_latex": "Definition6; Corollary18; AppendixC.2."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-223-citation-00091"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Gilyen--Li and Luo--Wang--Li distribution testing; Quantum amplitude estimation and counting",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt{nm}/\\varepsilon)",
+    "classical": "\\Theta(\\max\\{n^{2/3}m^{1/3}/\\varepsilon^{4/3},\\sqrt{nm}/\\varepsilon^2\\})",
+    "parameter": "alphabet sizes n>=m and distance epsilon",
+    "model": "purified preparation queries versus independent samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Parameter-dependent polynomial improvement"
+  },
+  "ordinal": 43,
+  "citation_ids": [
+    "entry-223-citation-00091"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "entry-187",
+  "number": 187,
+  "slug": "iqp-sampling",
+  "title": "Sampling commuting quantum circuits",
+  "title_latex": "Sampling commuting quantum circuits",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "iqp_sampling",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Sampling commuting quantum circuits",
+    "name_latex": "Sampling commuting quantum circuits",
+    "statement_latex": "Given a circuit $U$ of $g$ gates diagonal in the Pauli-$X$ basis, sample $x$ with probability $|\\langle x|U|0^n\\rangle|^2$. Standard IQP families use a fixed finite gate set; approximation error is total variation distance. Complexity uses gates and classical sampling time.",
+    "statement_text": "Given a circuit $U$ of $g$ gates diagonal in the Pauli-$X$ basis, sample $x$ with probability $|\\langle x|U|0^n\\rangle|^2$. Standard IQP families use a fixed finite gate set; approximation error is total variation distance. Complexity uses gates and classical sampling time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Polynomial quantum sampling versus the best applicable exponential or subexponential classical simulator.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Polynomial quantum sampling versus the best applicable exponential or subexponential classical simulator."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "Polynomial classical sampling within $1/192$ in $\\ell_1$ distance gives a third-level polynomial-hierarchy collapse under either average-case conjecture in Bremner--Montanaro--Shepherd.",
+      "category_id": "evidence-strong",
+      "description_text": "Polynomial classical sampling within $1/192$ in $\\ell_1$ distance gives a third-level polynomial-hierarchy collapse under either average-case conjecture in Bremner–Montanaro–Shepherd."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "$n$ qubits and $g$ commuting gates; non-Clifford operations and approximation accuracy determine implementation demands.",
+      "category_id": "hardware-polynomial",
+      "description_text": "$n$ qubits and $g$ commuting gates; non-Clifford operations and approximation accuracy determine implementation demands."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(g+n)$ gates and measurements. Equivalently, apply Hadamards, commuting diagonal phase gates, Hadamards, then computational-basis measurement.",
+      "details_latex": "",
+      "headline_text": "$O(g+n)$ gates and measurements. Equivalently, apply Hadamards, commuting diagonal phase gates, Hadamards, then computational-basis measurement.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Take the best of $O(g2^n)$ state-vector simulation, $\\operatorname{poly}(g)2^{O(w)}$ contraction at width $w$, and $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ sparse-Boolean-encoding path counting for finite-algebraic-gate marginals. Clifford-only circuits admit polynomial stabilizer simulation.",
+      "details_latex": "",
+      "headline_text": "Take the best of $O(g2^n)$ state-vector simulation, $\\operatorname{poly}(g)2^{O(w)}$ contraction at width $w$, and $\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}$ sparse-Boolean-encoding path counting for finite-algebraic-gate marginals. Clifford-only circuits admit polynomial stabilizer simulation.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "iqp_circuit_sampling"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1504.07999}{\\emph{Average-case complexity versus approximate simulation of commuting quantum computations}}. Theorem 1; Conjectures 2 and 3; IQP definition",
+      "content_text": "Average-case complexity versus approximate simulation of commuting quantum computations. Theorem 1; Conjectures 2 and 3; IQP definition",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1504.07999",
+          "title": "Average-case complexity versus approximate simulation of commuting quantum computations",
+          "label_latex": "\\emph{Average-case complexity versus approximate simulation of commuting quantum computations}",
+          "locator_latex": "Theorem 1; Conjectures 2 and 3; IQP definition"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-187-citation-00400"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1005.1407}{\\emph{Classical simulation of commuting quantum computations implies collapse of the polynomial hierarchy}}. Postselection argument and weak-simulation hardness",
+      "content_text": "Classical simulation of commuting quantum computations implies collapse of the polynomial hierarchy. Postselection argument and weak-simulation hardness",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1005.1407",
+          "title": "Classical simulation of commuting quantum computations implies collapse of the polynomial hierarchy",
+          "label_latex": "\\emph{Classical simulation of commuting quantum computations implies collapse of the polynomial hierarchy}",
+          "locator_latex": "Postselection argument and weak-simulation hardness"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-187-citation-00401"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/quant-ph/0511069}{\\emph{Simulating quantum computation by contracting tensor networks}}. Main circuit-treewidth simulation theorem",
+      "content_text": "Simulating quantum computation by contracting tensor networks. Main circuit-treewidth simulation theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/quant-ph/0511069",
+          "title": "Simulating quantum computation by contracting tensor networks",
+          "label_latex": "\\emph{Simulating quantum computation by contracting tensor networks}",
+          "locator_latex": "Main circuit-treewidth simulation theorem"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-187-citation-00402"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{\\emph{The Exponential Time Hypothesis Is False}}. Theorem 1.1; Appendix D; sparse fixed-width counting",
+      "content_text": "The Exponential Time Hypothesis Is False. Theorem 1.1; Appendix D; sparse fixed-width counting",
+      "links": [
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "\\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": "Theorem 1.1; Appendix D; sparse fixed-width counting"
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
+      "citation_ids": [
+        "entry-187-citation-00403"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: IQP circuit sampling",
+  "ordinal": 203,
+  "citation_ids": [
+    "entry-187-citation-00400",
+    "entry-187-citation-00401",
+    "entry-187-citation-00402",
+    "entry-187-citation-00403"
+  ]
+}

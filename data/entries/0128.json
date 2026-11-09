@@ -1,0 +1,128 @@
+{
+  "id": "entry-128",
+  "number": 128,
+  "slug": "prior-g24",
+  "title": "Bounded-height Dyck language",
+  "title_latex": "Bounded-height Dyck language",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g24",
+  "inventory_ids": [
+    "G24"
+  ],
+  "problem": {
+    "name": "Bounded-height Dyck language",
+    "name_latex": "Bounded-height Dyck language",
+    "statement_latex": "Given $x\\in\\{(,)\\}^n$ and height bound $h$, decide whether every prefix has balance in $[0,h]$ and the final balance is zero. Complexity counts queries to parenthesis symbols.",
+    "statement_text": "Given $x\\in\\{(,)\\}^n$ and height bound $h$, decide whether every prefix has balance in $[0,h]$ and the final balance is zero. Complexity counts queries to parenthesis symbols."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\min\\{n,\\sqrt n\\log^{h/2}n\\})$ queries by Khadiev--Shen's recursive minimal-unbalanced-substring search.",
+      "details_latex": "",
+      "headline_text": "$O(\\min\\{n,\\sqrt n\\log^{h/2}n\\})$ queries by Khadiev–Shen's recursive minimal-unbalanced-substring search.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ queries and $O(n)$ time by a running balance counter for nontrivial heights.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n)$ queries and $O(n)$ time by a running balance counter for nontrivial heights.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "bounded-dyck-quantum-search",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1912.02176}{\\emph{Quantum Query Complexity of Dyck Languages with Bounded Height}}. Main algorithm and query upper bound",
+      "content_text": "Quantum Query Complexity of Dyck Languages with Bounded Height. Main algorithm and query upper bound",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1912.02176",
+          "title": "Quantum Query Complexity of Dyck Languages with Bounded Height",
+          "label_latex": "\\emph{Quantum Query Complexity of Dyck Languages with Bounded Height}",
+          "locator_latex": "Main algorithm and query upper bound"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-128-citation-00201"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Khadiev--Shen bounded-height Dyck algorithm; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "O(\\min\\{n,\\sqrt n\\log^{h/2}n\\})",
+    "classical": "\\Theta(n)",
+    "parameter": "length n and height h",
+    "model": "character queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Omega(\\max\\{1,\\sqrt n/\\log^{h/2}n\\})"
+  },
+  "ordinal": 98,
+  "citation_ids": [
+    "entry-128-citation-00201"
+  ]
+}

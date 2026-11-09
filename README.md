@@ -2,7 +2,7 @@
 
 A structured catalogue of quantum speedups for discrete computational problems, with a separate chapter on complexity bounds and implications.
 
-The dataset contains **102 entries**, **162 literature records**, **264 citation occurrences** and **17 named relations** from the English catalogue dated **9 November 2026**. Each entry includes its formal problem statement, quantum and classical complexity comparisons, strength/evidence/hardware labels, and literature references with definition or theorem locations.
+The catalogue contains **211 problem entries**, **165 shared algorithm records** and **296 literature records**. Each problem includes its formal statement, quantum and classical complexity comparisons, strength/evidence/hardware labels, and primary literature with definition or theorem locations. Dataset counts are recorded in [`data/catalogue.json`](data/catalogue.json).
 
 ## Scope
 
@@ -15,9 +15,11 @@ The four chapters are:
 
 The first three chapters concern discrete objects and configurations, including integers, finite fields and groups, and lattices. They include real-valued weights, approximate outputs and continuous or simulation subroutines used to solve discrete target problems. The fourth chapter also covers continuous and quantum-state problems that inform quantum complexity classes.
 
-## Interactive demo
+## Interactive map
 
-The [eight-problem visualization](visualization/quantum-speedup-demo.html) is a self-contained HTML file: download it and open it in a browser. It links a rotatable 3D plot of asymptotic speedup, evidence and qualitative hardware difficulty to a triangular quantum-versus-classical complexity plot. Titles identify the problems. [Run locally](visualization/README.md).
+The complete map links a rotatable three-dimensional view of speedup, evidence and hardware requirements with a quantum-versus-classical complexity plot. Both plots support fullscreen, problem/algorithm search and reset. Problem and algorithm pages support cross-references and wiki search. Point and label sizes reflect editorial importance.
+
+[Open the interactive map](https://kkzky.github.io/Quantum-Speedup-Map/). The [standalone visualization](visualization/quantum-speedup-demo.html) also opens directly in a browser. [Run locally](visualization/README.md).
 
 ![Quantum speedup visualization preview](visualization/demo-preview.png)
 
@@ -26,13 +28,16 @@ The [eight-problem visualization](visualization/quantum-speedup-demo.html) is a 
 | Location | Contents |
 | --- | --- |
 | [`data/catalogue.json`](data/catalogue.json) | Catalogue metadata, chapter definitions, classification categories, conventions and entry order. |
-| [`data/entries/`](data/entries/) | One structured JSON record per problem. |
+| [`data/entries/`](data/entries/) | One structured JSON record per problem, with redirects for merged entries. |
+| [`data/full_catalogue.json`](data/full_catalogue.json) | Complete problem and algorithm graph, including cross-references. |
+| [`data/algorithms.json`](data/algorithms.json) | Independent algorithm records, literature and problem applications. |
+| [`data/additions/`](data/additions/) | Research additions and their originating candidate records. |
 | [`data/references.json`](data/references.json) | Shared literature records and access links. |
 | [`data/citations.json`](data/citations.json) | Individual citations, linked to an entry, section and literature record, with the original URL and local locator. |
 | [`data/reference_access.json`](data/reference_access.json) | Additional full-text access routes and their provenance. |
-| [`data/relations.json`](data/relations.json) | Named relationships connecting entries through methods, assumptions and computational models. |
+| [`data/relations.json`](data/relations.json) | Problem groups connected through shared algorithms. |
 | [`data/quantum_speedups.sqlite`](data/quantum_speedups.sqlite) | Queryable relational database, including full-text search. |
-| [`sources/catalogue.tex`](sources/catalogue.tex) | The English TeX source snapshot used for the import. |
+| [`sources/catalogue-preview.tex`](sources/catalogue-preview.tex) | English TeX source snapshot supplying the manuscript entries and algorithm appendix. |
 | [`docs/data-model.md`](docs/data-model.md) | Field definitions, identifiers, links and maintenance conventions. |
 
 JSON records preserve mathematical expressions in LaTeX. Derived text fields remove prose formatting while retaining formulas in LaTeX for search. Citation records keep literature links at the section or algorithm-index item where they occur, including theorem, section, equation and page locators supplied in the catalogue.
@@ -45,11 +50,10 @@ From the repository root:
 
 ```sh
 python -m pip install -r requirements.txt
-python scripts/import_catalogue.py --source sources/catalogue.tex
-python scripts/build_database.py
+python scripts/build_all.py
 ```
 
-The importer reconstructs the structured records from the TeX snapshot and incorporates `reference_access.json`. For changes made directly to entry, reference, citation or relation records, run only the database builder to refresh SQLite.
+The build combines the manuscript snapshot and research additions, exports JSON and SQLite, and renders every problem and algorithm page. The browser files and standalone HTML are generated from the same catalogue.
 
 ## Query examples
 
@@ -83,6 +87,24 @@ FROM entry_search
 JOIN entries AS e ON e.id = entry_search.id
 WHERE entry_search MATCH '"subset sum" OR lattice'
 ORDER BY bm25(entry_search), e.ordinal;
+```
+
+Find all applications of a shared algorithm:
+
+```sql
+SELECT e.title, a.usage_latex
+FROM algorithm_applications AS a
+JOIN entries AS e ON e.id = a.entry_id
+WHERE a.algorithm_id = 'grover'
+ORDER BY e.ordinal;
+```
+
+Search both problem and algorithm names:
+
+```sql
+SELECT id, kind, title
+FROM entity_search
+WHERE entity_search MATCH '"hidden subgroup"';
 ```
 
 ## Classification

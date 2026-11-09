@@ -1,0 +1,101 @@
+{
+  "id": "entry-183",
+  "number": 183,
+  "slug": "certified-randomness",
+  "title": "Certified randomness from an untrusted quantum device",
+  "title_latex": "Certified randomness from an untrusted quantum device",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "certified_randomness",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Certified randomness from an untrusted quantum device",
+    "name_latex": "Certified randomness from an untrusted quantum device",
+    "statement_latex": "A classical verifier interacts with an untrusted device and outputs $Z$ with conditional smooth min-entropy $H_{\\min}^{\\varepsilon}(Z\\mid E,\\mathrm{transcript})\\geq k$, for the side information $E$ admitted by the protocol. A seeded extractor gives nearly uniform bits. Complexity counts prover gates, communication, verification, and certified entropy.",
+    "statement_text": "A classical verifier interacts with an untrusted device and outputs $Z$ with conditional smooth min-entropy $H_{\\min}^{\\varepsilon}(Z\\mid E,\\mathrm{transcript})\\geq k$, for the side information $E$ admitted by the protocol. A seeded extractor gives nearly uniform bits. Complexity counts prover gates, communication, verification, and certified entropy."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "white",
+      "description_latex": "Certifiable entropy under an explicit adversarial model; verification work enters the resource tradeoff.",
+      "category_id": "strength-unspecified",
+      "description_text": "Certifiable entropy under an explicit adversarial model; verification work enters the resource tradeoff."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "LWE-based certification has a cryptographic proof; the circuit experiment has a security analysis for its restricted adversary.",
+      "category_id": "evidence-strong",
+      "description_text": "LWE-based certification has a cryptographic proof; the circuit experiment has a security analysis for its restricted adversary."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "The circuit protocol was demonstrated on 56 trapped-ion qubits; trapdoor-function protocols require coherent cryptographic circuits.",
+      "category_id": "hardware-small",
+      "description_text": "The circuit protocol was demonstrated on 56 trapped-ion qubits; trapdoor-function protocols require coherent cryptographic circuits."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "BCMVV uses polynomially many cryptographic rounds to certify entropy under LWE-based assumptions. A separate random-circuit protocol executes challenged circuits and classically checks selected probabilities. Its 2025 experiment certified $71{,}313$ entropy bits with 56 trapped-ion qubits under a restricted-adversary model.",
+      "details_latex": "",
+      "headline_text": "BCMVV uses polynomially many cryptographic rounds to certify entropy under LWE-based assumptions. A separate random-circuit protocol executes challenged circuits and classically checks selected probabilities. Its 2025 experiment certified $71{,}313$ entropy bits with 56 trapped-ion qubits under a restricted-adversary model.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "A classical device can retain every output, yielding zero conditional entropy against its own side information. The circuit-based protocol bounds the number of samples obtainable by a time-limited classical adversary; its verification used combined sustained performance $1.1\\times10^{18}$ floating-point operations per second.",
+      "details_latex": "",
+      "headline_text": "A classical device can retain every output, yielding zero conditional entropy against its own side information. The circuit-based protocol bounds the number of samples obtainable by a time-limited classical adversary; its verification used combined sustained performance $1.1\\times10^{18}$ floating-point operations per second.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "bcmvv_randomness",
+    "rcs_certified_randomness"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1804.00640}{\\emph{A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device}}. Test-of-quantumness and randomness-generation protocols; noisy trapdoor claw-free functions; LWE construction",
+      "content_text": "A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device. Test-of-quantumness and randomness-generation protocols; noisy trapdoor claw-free functions; LWE construction",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1804.00640",
+          "title": "A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device",
+          "label_latex": "\\emph{A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device}",
+          "locator_latex": "Test-of-quantumness and randomness-generation protocols; noisy trapdoor claw-free functions; LWE construction"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-183-citation-00384"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2503.20498}{\\emph{Certified randomness using a trapped-ion quantum processor}}. Protocol, restricted-adversary security model, entropy certification, and 56-qubit experiment",
+      "content_text": "Certified randomness using a trapped-ion quantum processor. Protocol, restricted-adversary security model, entropy certification, and 56-qubit experiment",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2503.20498",
+          "title": "Certified randomness using a trapped-ion quantum processor",
+          "label_latex": "\\emph{Certified randomness using a trapped-ion quantum processor}",
+          "locator_latex": "Protocol, restricted-adversary security model, entropy certification, and 56-qubit experiment"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-183-citation-00385"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: BCMVV certified-randomness protocol; Random-circuit certified-randomness protocol",
+  "ordinal": 199,
+  "citation_ids": [
+    "entry-183-citation-00384",
+    "entry-183-citation-00385"
+  ]
+}

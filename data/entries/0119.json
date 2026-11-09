@@ -1,0 +1,130 @@
+{
+  "id": "entry-119",
+  "number": 119,
+  "slug": "prior-g14",
+  "title": "Longest palindromic substring",
+  "title_latex": "Longest palindromic substring",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g14",
+  "inventory_ids": [
+    "G14"
+  ],
+  "problem": {
+    "name": "Longest palindromic substring",
+    "name_latex": "Longest palindromic substring",
+    "statement_latex": "Given $S\\in\\Sigma^n$, find a longest interval $[i,j]$ satisfying $S[i+t]=S[j-t]$ for every admissible $t$. Complexity counts character queries and random-access time.",
+    "statement_text": "Given $S\\in\\Sigma^n$, find a longest interval $[i,j]$ satisfying $S[i+t]=S[j-t]$ for every admissible $t$. Complexity counts character queries and random-access time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt n)$ time by Le Gall--Seddighin, using periodicity and amplitude amplification.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt n)$ time by Le Gall–Seddighin, using periodicity and amplitude amplification.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ time by Manacher's algorithm, matching the worst-case character-query lower bound.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n)$ time by Manacher's algorithm, matching the worst-case character-query lower bound.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-palindrome-search",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2010.12122}{\\emph{Quantum Meets Fine-grained Complexity: Sublinear Time Quantum Algorithms for String Problems}}. Theorem2; palindrome section",
+      "content_text": "Quantum Meets Fine-grained Complexity: Sublinear Time Quantum Algorithms for String Problems. Theorem2; palindrome section",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2010.12122",
+          "title": "Quantum Meets Fine-grained Complexity: Sublinear Time Quantum Algorithms for String Problems",
+          "label_latex": "\\emph{Quantum Meets Fine-grained Complexity: Sublinear Time Quantum Algorithms for String Problems}",
+          "locator_latex": "Theorem2; palindrome section"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-119-citation-00192"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Le Gall--Seddighin palindrome search; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt n)",
+    "classical": "\\Theta(n)",
+    "parameter": "string length n",
+    "model": "random-access time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(\\sqrt n)",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 89,
+  "citation_ids": [
+    "entry-119-citation-00192"
+  ]
+}

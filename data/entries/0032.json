@@ -1,9 +1,10 @@
 {
   "id": "entry-032",
   "number": 32,
-  "ordinal": 33,
+  "slug": "undirected-graph-connectivity",
   "title_latex": "Undirected graph connectivity",
   "title": "Undirected graph connectivity",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Undirected graph connectivity",
@@ -14,50 +15,74 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(n)$ array queries, quantum graph exploration.",
-      "headline_text": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(n)$ array queries, quantum graph exploration.",
       "details_latex": "The array model includes the vertex degrees and indexed coherent access to each neighbor list. The algorithm can also output connected components and a spanning forest with the same asymptotic query bound. The forest has $O(n)$ edges.",
+      "headline_text": "$\\Theta(n^{3/2})$ matrix queries or $\\Theta(n)$ array queries, quantum graph exploration.",
       "details_text": "The array model includes the vertex degrees and indexed coherent access to each neighbor list. The algorithm can also output connected components and a spanning forest with the same asymptotic query bound. The forest has $O(n)$ edges."
     },
     "classical": {
       "headline_latex": "$\\Theta(n^2)$ matrix queries; $O(n+m)$ explicit-input time, breadth-first or depth-first search.",
-      "headline_text": "$\\Theta(n^2)$ matrix queries; $O(n+m)$ explicit-input time, breadth-first or depth-first search.",
       "details_latex": "The matrix lower bound follows from distinguishing two disconnected components from a graph with one hidden connecting edge. Array traversal visits every discovered vertex and its incident edges. The quantum linear-query result uses the symmetry of undirected neighbor access and the supplied degrees.",
+      "headline_text": "$\\Theta(n^2)$ matrix queries; $O(n+m)$ explicit-input time, breadth-first or depth-first search.",
       "details_text": "The matrix lower bound follows from distinguishing two disconnected components from a graph with one hidden connecting edge. Array traversal visits every discovered vertex and its incident edges. The quantum linear-query result uses the symmetry of undirected neighbor access and the supplied degrees."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial: $n^2\\to n^{3/2}$ in the matrix model and $n+m\\to n$ in the array comparison. Quantum search accelerates structured graph exploration.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial: $n^2\\to n^{3/2}$ in the matrix model and $n+m\\to n$ in the array comparison. Quantum search accelerates structured graph exploration."
     },
     "evidence": {
-      "category_id": "evidence-proved",
       "color_key": "evidenceProved",
       "description_latex": "A rigorous query separation, with matching quantum upper and lower bounds.",
+      "category_id": "evidence-proved",
       "description_text": "A rigorous query separation, with matching quantum upper and lower bounds."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Fault-tolerant implementation uses $O(\\log n)$ active vertex registers, coherent neighbor-oracle workspace and $O(n\\log n)$ classical forest records. Constructing or accessing the graph oracle contributes to the gate count.",
+      "category_id": "hardware-polynomial",
       "description_text": "Fault-tolerant implementation uses $O(\\log n)$ active vertex registers, coherent neighbor-oracle workspace and $O(n\\log n)$ classical forest records. Constructing or accessing the graph oracle contributes to the gate count."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Quantum graph exploration",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "32.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 5, ``Connectivity'', Theorems 9 and 11; Section 8, Theorem 23, for the matrix lower bound.",
       "content_text": "Dürr, Heiligman, Høyer and Mhalla, Quantum Query Complexity of Some Graph Problems (2004/2006). Section 5, “Connectivity”, Theorems 9 and 11; Section 8, Theorem 23, for the matrix lower bound.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0401091",
+          "title": "Quantum Query Complexity of Some Graph Problems",
+          "label_latex": "D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)",
+          "locator_latex": "Section 5, ``Connectivity'', Theorems 9 and 11; Section 8, Theorem 23, for the matrix lower bound."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-032-citation-001"
+        "entry-032-citation-00100"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-032-citation-001"
+  "algorithm_ids": [
+    "quantum-graph-exploration"
   ],
-  "source_latex": "\\entrytitle{32}{Undirected graph connectivity}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{31}\n\\begin{problem}[Undirected graph connectivity]\nGiven an undirected graph $G$, decide whether $\\forall u,v\\in V$ there is a path from $u$ to $v$; optionally return its connected components and a spanning forest. Connectivity is a feasibility condition in network design.\nThe quantum and classical bounds count adjacency-matrix or neighbor-array queries; explicit graph traversal time is also stated.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(n^{3/2})$ matrix queries or $\\Theta(n)$ array queries, quantum graph exploration.}\nThe array model includes the vertex degrees and indexed coherent access to each neighbor list. The algorithm can also output connected components and a spanning forest with the same asymptotic query bound. The forest has $O(n)$ edges.\n\n\\complexity{Classical}{$\\Theta(n^2)$ matrix queries; $O(n+m)$ explicit-input time, breadth-first or depth-first search.}\nThe matrix lower bound follows from distinguishing two disconnected components from a graph with one hidden connecting edge. Array traversal visits every discovered vertex and its incident edges. The quantum linear-query result uses the symmetry of undirected neighbor access and the supplied degrees.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial: $n^2\\to n^{3/2}$ in the matrix model and $n+m\\to n$ in the array comparison. Quantum search accelerates structured graph exploration.\n\n\\dimensionlabel{Evidence}{evidenceProved} A rigorous query separation, with matching quantum upper and lower bounds.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant implementation uses $O(\\log n)$ active vertex registers, coherent neighbor-oracle workspace and $O(n\\log n)$ classical forest records. Constructing or accessing the graph oracle contributes to the gate count.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{32}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 5, ``Connectivity'', Theorems 9 and 11; Section 8, Theorem 23, for the matrix lower bound.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-graph-exploration",
+      "label_latex": "Quantum graph exploration",
+      "problem_numbers": [
+        33
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{32}{Undirected graph connectivity}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{31}\n\\begin{problem}[Undirected graph connectivity]\nGiven an undirected graph $G$, decide whether $\\forall u,v\\in V$ there is a path from $u$ to $v$; optionally return its connected components and a spanning forest. Connectivity is a feasibility condition in network design.\nThe quantum and classical bounds count adjacency-matrix or neighbor-array queries; explicit graph traversal time is also stated.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(n^{3/2})$ matrix queries or $\\Theta(n)$ array queries, quantum graph exploration.}\nThe array model includes the vertex degrees and indexed coherent access to each neighbor list. The algorithm can also output connected components and a spanning forest with the same asymptotic query bound. The forest has $O(n)$ edges.\n\n\\complexity{Classical}{$\\Theta(n^2)$ matrix queries; $O(n+m)$ explicit-input time, breadth-first or depth-first search.}\nThe matrix lower bound follows from distinguishing two disconnected components from a graph with one hidden connecting edge. Array traversal visits every discovered vertex and its incident edges. The quantum linear-query result uses the symmetry of undirected neighbor access and the supplied degrees.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial: $n^2\\to n^{3/2}$ in the matrix model and $n+m\\to n$ in the array comparison. Quantum search accelerates structured graph exploration.\n\n\\dimensionlabel{Evidence}{evidenceProved} A rigorous query separation, with matching quantum upper and lower bounds.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant implementation uses $O(\\log n)$ active vertex registers, coherent neighbor-oracle workspace and $O(n\\log n)$ classical forest records. Constructing or accessing the graph oracle contributes to the gate count.\n\n\\subhead{Algorithm: Quantum graph exploration}\n\\begin{algorithmindex}{32}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0401091}{D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)}. Section 5, ``Connectivity'', Theorems 9 and 11; Section 8, Theorem 23, for the matrix lower bound.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{quantum-graph-exploration}{Quantum graph exploration}: \\problemref{33}.\n\\par\\endgroup",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 50,
+  "citation_ids": [
+    "entry-032-citation-00100"
+  ]
 }

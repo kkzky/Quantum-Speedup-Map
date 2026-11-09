@@ -1,0 +1,95 @@
+{
+  "id": "entry-202",
+  "number": 202,
+  "slug": "prior-q09",
+  "title": "Oracle identification",
+  "title_latex": "Oracle identification",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q09",
+  "inventory_ids": [
+    "Q09"
+  ],
+  "problem": {
+    "name": "Oracle identification",
+    "name_latex": "Oracle identification",
+    "statement_latex": "A known concept set $C\\subseteq\\{0,1\\}^N$ has size $M$. Given bit queries to an unknown $x\\in C$, identify $x$. Complexity is worst case over concept sets with the given $N,M$, allowing unrestricted processing of $C$.",
+    "statement_text": "A known concept set $C\\subseteq\\{0,1\\}^N$ has size $M$. Given bit queries to an unknown $x\\in C$, identify $x$. Complexity is worst case over concept sets with the given $N,M$, allowing unrestricted processing of $C$."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(\\sqrt M)$ queries for $M\\le N$, and $\\Theta(\\sqrt{N\\log M/(\\log(N/\\log M)+1)})$ for $N<M\\le2^N$, by Kothari's optimal identification algorithm.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\sqrt M)$ queries for $M\\le N$, and $\\Theta(\\sqrt{N\\log M/(\\log(N/\\log M)+1)})$ for $N<M\\le2^N$, by Kothari's optimal identification algorithm.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(\\min\\{N,M\\})$ randomized queries in the worst case over concept sets, by classical elimination and the corresponding hard classes.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(\\min\\{N,M\\})$ randomized queries in the worst case over concept sets, by classical elimination and the corresponding hard classes.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "kothari-oracle-identification"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1311.7685}{\\emph{An optimal quantum algorithm for the oracle identification problem}}. Proposition2 and Theorem2; learning algorithm and composition theorem",
+      "content_text": "An optimal quantum algorithm for the oracle identification problem. Proposition2 and Theorem2; learning algorithm and composition theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1311.7685",
+          "title": "An optimal quantum algorithm for the oracle identification problem",
+          "label_latex": "\\emph{An optimal quantum algorithm for the oracle identification problem}",
+          "locator_latex": "Proposition2 and Theorem2; learning algorithm and composition theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-202-citation-00379"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Kothari oracle identification",
+  "plot": {
+    "quantum": "\\Theta(\\sqrt M)",
+    "classical": "\\Theta(M)",
+    "parameter": "concept count M<=N; larger-M formula retained in the entry",
+    "model": "bit queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\Theta(\\sqrt M)",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 194,
+  "citation_ids": [
+    "entry-202-citation-00379"
+  ]
+}

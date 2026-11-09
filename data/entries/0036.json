@@ -1,9 +1,10 @@
 {
   "id": "entry-036",
   "number": 36,
-  "ordinal": 37,
+  "slug": "integral-maximum-flow",
   "title_latex": "Integral maximum flow",
   "title": "Integral maximum flow",
+  "aliases": [],
   "chapter_id": "chapter-2",
   "problem": {
     "name_latex": "Integral maximum flow",
@@ -14,70 +15,102 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$\\widetilde O(\\min\\{n^{7/6}\\sqrt m\\,U^{1/3},m\\sqrt{nU}\\})$, Ambainis--\\v Spalek.",
-      "headline_text": "$\\widetilde O(\\min\\{n^{7/6}\\sqrt m\\,U^{1/3},m\\sqrt{nU}\\})$, Ambainis–Špalek.",
       "details_latex": "This bound assumes $U\\le n^{1/4}$. The flow is returned as an explicit classical edge array. Residual-capacity updates and subsequent coherent queries are part of the implementation.",
+      "headline_text": "$\\widetilde O(\\min\\{n^{7/6}\\sqrt m\\,U^{1/3},m\\sqrt{nU}\\})$, Ambainis–Špalek.",
       "details_text": "This bound assumes $U\\le n^{1/4}$. The flow is returned as an explicit classical edge array. Residual-capacity updates and subsequent coherent queries are part of the implementation."
     },
     "classical": {
       "headline_latex": "$m^{1+o(1)}$, Chen--Kyng--Liu--Peng--Probst Gutenberg--Sachdeva and deterministic van den Brand et al.",
-      "headline_text": "$m^{1+o(1)}$, Chen–Kyng–Liu–Peng–Probst Gutenberg–Sachdeva and deterministic van den Brand et al.",
       "details_latex": "The almost-linear bound applies to polynomially bounded integer capacities. Interior-point optimization is combined with dynamic graph data structures for finding improving flow directions. This bound is asymptotically stronger than the displayed quantum blocking-flow bound for the same capacity regime.",
+      "headline_text": "$m^{1+o(1)}$, Chen–Kyng–Liu–Peng–Probst Gutenberg–Sachdeva and deterministic van den Brand et al.",
       "details_text": "The almost-linear bound applies to polynomially bounded integer capacities. Interior-point optimization is combined with dynamic graph data structures for finding improving flow directions. This bound is asymptotically stronger than the displayed quantum blocking-flow bound for the same capacity regime."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-unspecified",
       "color_key": "white",
       "description_latex": "The current comparison supplies no general quantum time advantage.",
+      "category_id": "strength-unspecified",
       "description_text": "The current comparison supplies no general quantum time advantage."
     },
     "evidence": {
-      "category_id": "evidence-unspecified",
       "color_key": "white",
       "description_latex": "Both algorithmic bounds are rigorous; the quantum theorem is an upper bound for a specific flow method.",
+      "category_id": "evidence-unspecified",
       "description_text": "Both algorithmic bounds are rigorous; the quantum theorem is an upper bound for a specific flow method."
     },
     "hardware": {
-      "category_id": "hardware-polynomial",
       "color_key": "hardwarePolynomial",
       "description_latex": "Fault-tolerant implementation uses $O(\\log n+\\log U)$ search and arithmetic registers plus oracle workspace. Residual-flow data occupy $O(m\\log U)$ classical bits and must support coherent queries after updates.",
+      "category_id": "hardware-polynomial",
       "description_text": "Fault-tolerant implementation uses $O(\\log n+\\log U)$ search and arithmetic registers plus oracle workspace. Residual-flow data occupy $O(m\\log U)$ classical bits and must support coherent queries after updates."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Ambainis--\\v Spalek quantum blocking flow",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "36.1",
       "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0508205}{Ambainis and \\v Spalek, \\emph{Quantum Algorithms for Matching and Network Flows} (2005/2006)}. Theorem 6 and the blocking-flow procedure following it.",
       "content_text": "Ambainis and Špalek, Quantum Algorithms for Matching and Network Flows (2005/2006). Theorem 6 and the blocking-flow procedure following it.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/quant-ph/0508205",
+          "title": "Quantum Algorithms for Matching and Network Flows",
+          "label_latex": "Ambainis and \\v Spalek, \\emph{Quantum Algorithms for Matching and Network Flows} (2005/2006)",
+          "locator_latex": "Theorem 6 and the blocking-flow procedure following it."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-036-citation-001"
+        "entry-036-citation-00109"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "36.2",
       "content_latex": "\\href{https://arxiv.org/pdf/2203.00671}{Chen et al., \\emph{Maximum Flow and Minimum-Cost Flow in Almost-Linear Time} (2022)}. Main algorithmic theorem.",
       "content_text": "Chen et al., Maximum Flow and Minimum-Cost Flow in Almost-Linear Time (2022). Main algorithmic theorem.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2203.00671",
+          "title": "Maximum Flow and Minimum-Cost Flow in Almost-Linear Time",
+          "label_latex": "Chen et al., \\emph{Maximum Flow and Minimum-Cost Flow in Almost-Linear Time} (2022)",
+          "locator_latex": "Main algorithmic theorem."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-036-citation-002"
+        "entry-036-citation-00110"
       ]
     },
     {
-      "item_number": 3,
-      "index_label": "36.3",
       "content_latex": "\\href{https://arxiv.org/pdf/2309.16629}{van den Brand et al., \\emph{A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow} (2023)}. Main minimum-cost-flow theorem.",
       "content_text": "van den Brand et al., A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow (2023). Main minimum-cost-flow theorem.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2309.16629",
+          "title": "A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow",
+          "label_latex": "van den Brand et al., \\emph{A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow} (2023)",
+          "locator_latex": "Main minimum-cost-flow theorem."
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
       "citation_ids": [
-        "entry-036-citation-003"
+        "entry-036-citation-00111"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-036-citation-001",
-    "entry-036-citation-002",
-    "entry-036-citation-003"
+  "algorithm_ids": [
+    "quantum-flow"
   ],
-  "source_latex": "\\entrytitle{36}{Integral maximum flow}{white}{white}{hardwarePolynomial}\n\\setcounter{problem}{35}\n\\begin{problem}[Integral maximum flow]\nGiven directed capacities $c_e\\in\\{0,\\ldots,U\\}$ and terminals $s,t$, maximize the net outflow from $s$ over $0\\le f_e\\le c_e$, subject to flow conservation at $V\\setminus\\{s,t\\}$. This is a central network optimization primitive.\nComplexity counts quantum time with coherent residual-graph access and classical RAM time for polynomially bounded integral capacities.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(\\min\\{n^{7/6}\\sqrt m\\,U^{1/3},m\\sqrt{nU}\\})$, Ambainis--\\v Spalek.}\nThis bound assumes $U\\le n^{1/4}$. The flow is returned as an explicit classical edge array. Residual-capacity updates and subsequent coherent queries are part of the implementation.\n\n\\complexity{Classical}{$m^{1+o(1)}$, Chen--Kyng--Liu--Peng--Probst Gutenberg--Sachdeva and deterministic van den Brand et al.}\nThe almost-linear bound applies to polynomially bounded integer capacities. Interior-point optimization is combined with dynamic graph data structures for finding improving flow directions. This bound is asymptotically stronger than the displayed quantum blocking-flow bound for the same capacity regime.\n\n\\dimensionlabel{Strength}{white} The current comparison supplies no general quantum time advantage.\n\n\\dimensionlabel{Evidence}{white} Both algorithmic bounds are rigorous; the quantum theorem is an upper bound for a specific flow method.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant implementation uses $O(\\log n+\\log U)$ search and arithmetic registers plus oracle workspace. Residual-flow data occupy $O(m\\log U)$ classical bits and must support coherent queries after updates.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{36}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0508205}{Ambainis and \\v Spalek, \\emph{Quantum Algorithms for Matching and Network Flows} (2005/2006)}. Theorem 6 and the blocking-flow procedure following it.\n\\item \\href{https://arxiv.org/pdf/2203.00671}{Chen et al., \\emph{Maximum Flow and Minimum-Cost Flow in Almost-Linear Time} (2022)}. Main algorithmic theorem.\n\\item \\href{https://arxiv.org/pdf/2309.16629}{van den Brand et al., \\emph{A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow} (2023)}. Main minimum-cost-flow theorem.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{36}{Integral maximum flow}{white}{white}{hardwarePolynomial}\n\\setcounter{problem}{35}\n\\begin{problem}[Integral maximum flow]\nGiven directed capacities $c_e\\in\\{0,\\ldots,U\\}$ and terminals $s,t$, maximize the net outflow from $s$ over $0\\le f_e\\le c_e$, subject to flow conservation at $V\\setminus\\{s,t\\}$. This is a central network optimization primitive.\nComplexity counts quantum time with coherent residual-graph access and classical RAM time for polynomially bounded integral capacities.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(\\min\\{n^{7/6}\\sqrt m\\,U^{1/3},m\\sqrt{nU}\\})$, Ambainis--\\v Spalek.}\nThis bound assumes $U\\le n^{1/4}$. The flow is returned as an explicit classical edge array. Residual-capacity updates and subsequent coherent queries are part of the implementation.\n\n\\complexity{Classical}{$m^{1+o(1)}$, Chen--Kyng--Liu--Peng--Probst Gutenberg--Sachdeva and deterministic van den Brand et al.}\nThe almost-linear bound applies to polynomially bounded integer capacities. Interior-point optimization is combined with dynamic graph data structures for finding improving flow directions. This bound is asymptotically stronger than the displayed quantum blocking-flow bound for the same capacity regime.\n\n\\dimensionlabel{Strength}{white} The current comparison supplies no general quantum time advantage.\n\n\\dimensionlabel{Evidence}{white} Both algorithmic bounds are rigorous; the quantum theorem is an upper bound for a specific flow method.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant implementation uses $O(\\log n+\\log U)$ search and arithmetic registers plus oracle workspace. Residual-flow data occupy $O(m\\log U)$ classical bits and must support coherent queries after updates.\n\n\\subhead{Algorithm: Ambainis--\\v Spalek quantum blocking flow}\n\\begin{algorithmindex}{36}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0508205}{Ambainis and \\v Spalek, \\emph{Quantum Algorithms for Matching and Network Flows} (2005/2006)}. Theorem 6 and the blocking-flow procedure following it.\n\\item \\href{https://arxiv.org/pdf/2203.00671}{Chen et al., \\emph{Maximum Flow and Minimum-Cost Flow in Almost-Linear Time} (2022)}. Main algorithmic theorem.\n\\item \\href{https://arxiv.org/pdf/2309.16629}{van den Brand et al., \\emph{A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow} (2023)}. Main minimum-cost-flow theorem.\n\\end{algorithmindex}",
+  "importance": "medium",
+  "origin": "manuscript",
+  "ordinal": 54,
+  "citation_ids": [
+    "entry-036-citation-00109",
+    "entry-036-citation-00110",
+    "entry-036-citation-00111"
+  ]
 }

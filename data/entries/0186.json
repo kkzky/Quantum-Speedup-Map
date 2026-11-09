@@ -1,0 +1,154 @@
+{
+  "id": "entry-186",
+  "number": 186,
+  "slug": "gaussian-boson-sampling",
+  "title": "Gaussian boson sampling",
+  "title_latex": "Gaussian boson sampling",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "gaussian_boson_sampling",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Gaussian boson sampling",
+    "name_latex": "Gaussian boson sampling",
+    "statement_latex": "Given a complex symmetric $B$ with singular values below one, sample $s\\in\\mathbb N^m$ with $p(s)=\\sqrt{\\det(I-BB^\\dagger)}|\\operatorname{Haf}(B_s)|^2/\\prod_i s_i!$, where $B_s$ repeats row and column $i$ exactly $s_i$ times. This is discrete photon-number sampling from a pure zero-mean Gaussian state. Complexity uses optical operations and classical sampling time.",
+    "statement_text": "Given a complex symmetric $B$ with singular values below one, sample $s\\in\\mathbb N^m$ with $p(s)=\\sqrt{\\det(I-BB^\\dagger)}|\\operatorname{Haf}(B_s)|^2/\\prod_i s_i!$, where $B_s$ repeats row and column $i$ exactly $s_i$ times. This is discrete photon-number sampling from a pure zero-mean Gaussian state. Complexity uses optical operations and classical sampling time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "General ideal instances compare polynomial optical resources with exponential hafnian-based sampling time; structure and loss determine the comparator.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "General ideal instances compare polynomial optical resources with exponential hafnian-based sampling time; structure and loss determine the comparator."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "Ideal bipartite GBS has approximate-sampling hardness when the mode count is quadratic in photon count, under permanent conjectures and noncollapse of the polynomial hierarchy.",
+      "category_id": "evidence-strong",
+      "description_text": "Ideal bipartite GBS has approximate-sampling hardness when the mode count is quadratic in photon count, under permanent conjectures and noncollapse of the polynomial hierarchy."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "Squeezed-light processors and photon detectors implement this model; resources include modes, squeezing, loss, and detected photons.",
+      "category_id": "hardware-small",
+      "description_text": "Squeezed-light processors and photon detectors implement this model; resources include modes, squeezing, loss, and detected photons."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(m^2)$ optical elements, $m$ squeezed input modes, and photon counting implement a general instance. Total detected photon count $N=\\sum_i s_i$ is a random output parameter controlled by squeezing.",
+      "details_latex": "",
+      "headline_text": "$O(m^2)$ optical elements, $m$ squeezed input modes, and photon counting implement a general instance. Total detected photon count $N=\\sum_i s_i$ is a random output parameter controlled by squeezing.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "Conditional heterodyne sampling and loop-hafnian evaluation cost $O(mN^3 2^{N/2})$ for an $N$-photon output, with the numerical cutoff specified. Polynomial classical samplers cover the nonnegative graph distributions in Anand et al. Equal bounded squeezing and fixed uniform loss admit polynomial sampling with Haar-average total-variation accuracy by the 2026 loss theorem.",
+      "details_latex": "",
+      "headline_text": "Conditional heterodyne sampling and loop-hafnian evaluation cost $O(mN^3 2^{N/2})$ for an $N$-photon output, with the numerical cutoff specified. Polynomial classical samplers cover the nonnegative graph distributions in Anand et al. Equal bounded squeezing and fixed uniform loss admit polynomial sampling with Haar-average total-variation accuracy by the 2026 loss theorem.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "gaussian_boson_sampling"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1612.01199}{\\emph{Gaussian Boson Sampling}}. Photon-count probabilities and GBS protocol",
+      "content_text": "Gaussian Boson Sampling. Photon-count probabilities and GBS protocol",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1612.01199",
+          "title": "Gaussian Boson Sampling",
+          "label_latex": "\\emph{Gaussian Boson Sampling}",
+          "locator_latex": "Photon-count probabilities and GBS protocol"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-186-citation-00395"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2010.15595}{\\emph{Quadratic speedup for simulating Gaussian boson sampling}}. Section III algorithm and O(mN^3 2^(N/2)) bound",
+      "content_text": "Quadratic speedup for simulating Gaussian boson sampling. Section III algorithm and O(mN^3 2^(N/2)) bound",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2010.15595",
+          "title": "Quadratic speedup for simulating Gaussian boson sampling",
+          "label_latex": "\\emph{Quadratic speedup for simulating Gaussian boson sampling}",
+          "locator_latex": "Section III algorithm and O(mN^3 2^(N/2)) bound"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-186-citation-00396"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2110.06964}{\\emph{The Complexity of Bipartite Gaussian Boson Sampling}}. Approximate-sampling hardness under permanent conjectures",
+      "content_text": "The Complexity of Bipartite Gaussian Boson Sampling. Approximate-sampling hardness under permanent conjectures",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2110.06964",
+          "title": "The Complexity of Bipartite Gaussian Boson Sampling",
+          "label_latex": "\\emph{The Complexity of Bipartite Gaussian Boson Sampling}",
+          "locator_latex": "Approximate-sampling hardness under permanent conjectures"
+        }
+      ],
+      "item_number": 3,
+      "index_label": "",
+      "citation_ids": [
+        "entry-186-citation-00397"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2511.16558v3}{\\emph{Simulating Gaussian boson sampling on graphs in polynomial time}}. Theorem 1.1 and Section 4: graph-application distributions",
+      "content_text": "Simulating Gaussian boson sampling on graphs in polynomial time. Theorem 1.1 and Section 4: graph-application distributions",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2511.16558v3",
+          "title": "Simulating Gaussian boson sampling on graphs in polynomial time",
+          "label_latex": "\\emph{Simulating Gaussian boson sampling on graphs in polynomial time}",
+          "locator_latex": "Theorem 1.1 and Section 4: graph-application distributions"
+        }
+      ],
+      "item_number": 4,
+      "index_label": "",
+      "citation_ids": [
+        "entry-186-citation-00398"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2611.01434}{\\emph{Boson sampling is fragile to loss}}. Section IV.1; average-case total-variation sampling theorem; November 2026 preprint",
+      "content_text": "Boson sampling is fragile to loss. Section IV.1; average-case total-variation sampling theorem; November 2026 preprint",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2611.01434",
+          "title": "Boson sampling is fragile to loss",
+          "label_latex": "\\emph{Boson sampling is fragile to loss}",
+          "locator_latex": "Section IV.1; average-case total-variation sampling theorem; November 2026 preprint"
+        }
+      ],
+      "item_number": 5,
+      "index_label": "",
+      "citation_ids": [
+        "entry-186-citation-00399"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Gaussian boson sampling",
+  "ordinal": 202,
+  "citation_ids": [
+    "entry-186-citation-00395",
+    "entry-186-citation-00396",
+    "entry-186-citation-00397",
+    "entry-186-citation-00398",
+    "entry-186-citation-00399"
+  ]
+}

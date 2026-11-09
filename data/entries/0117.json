@@ -1,0 +1,138 @@
+{
+  "id": "entry-117",
+  "number": 117,
+  "slug": "prior-g10",
+  "title": "Longest square substring",
+  "title_latex": "Longest square substring",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-g10",
+  "inventory_ids": [
+    "G10"
+  ],
+  "problem": {
+    "name": "Longest square substring",
+    "name_latex": "Longest square substring",
+    "statement_latex": "Given $S\\in\\Sigma^n$, find the longest substring of the form $XX$ for a nonempty string $X$. Complexity counts character queries and random-access time.",
+    "statement_text": "Given $S\\in\\Sigma^n$, find the longest substring of the form $XX$ for a nonempty string $X$. Complexity counts character queries and random-access time."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt n)$ time by Akmal--Jin, using periodicity and quantum search over candidate scales.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt n)$ time by Akmal–Jin, using periodicity and quantum search over candidate scales.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde O(n)$ time by classical periodicity and runs algorithms; $\\Omega(n)$ queries are required in the worst case.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n)$ time by classical periodicity and runs algorithms; $\\Omega(n)$ queries are required in the worst case.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "akmal-jin-string-selection",
+    "grover"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "akmal-jin-string-selection",
+      "label_latex": "Akmal--Jin quantum string selection",
+      "problem_numbers": [
+        116,
+        118
+      ]
+    },
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211,
+        212
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2110.09696}{\\emph{Near-Optimal Quantum Algorithms for String Problems}}. Theorem5.1",
+      "content_text": "Near-Optimal Quantum Algorithms for String Problems. Theorem5.1",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2110.09696",
+          "title": "Near-Optimal Quantum Algorithms for String Problems",
+          "label_latex": "\\emph{Near-Optimal Quantum Algorithms for String Problems}",
+          "locator_latex": "Theorem5.1"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-117-citation-00190"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Akmal--Jin quantum string selection; Grover search and amplitude amplification",
+  "plot": {
+    "quantum": "\\widetilde O(n^{1/2})",
+    "classical": "\\widetilde\\Theta(n)",
+    "parameter": "string length n",
+    "model": "random-access time",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(n^{1/2})",
+    "quantum_exponent": 0.5,
+    "classical_exponent": 1
+  },
+  "ordinal": 87,
+  "citation_ids": [
+    "entry-117-citation-00190"
+  ]
+}

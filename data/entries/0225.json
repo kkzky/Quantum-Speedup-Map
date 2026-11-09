@@ -1,0 +1,131 @@
+{
+  "id": "entry-225",
+  "number": 225,
+  "slug": "prior-q40",
+  "title": "Shannon entropy of a finite distribution",
+  "title_latex": "Shannon entropy of a finite distribution",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q40",
+  "inventory_ids": [
+    "Q40"
+  ],
+  "problem": {
+    "name": "Shannon entropy of a finite distribution",
+    "name_latex": "Shannon entropy of a finite distribution",
+    "statement_latex": "For a distribution $p$ on $[N]$, estimate $H(p)=-\\sum_i p_i\\log p_i$ within additive $\\varepsilon$. The input is a coherent distribution oracle; its precise access model is part of the complexity statement.",
+    "statement_text": "For a distribution $p$ on $[N]$, estimate $H(p)=-\\sum_i p_i\\log p_i$ within additive $\\varepsilon$. The input is a coherent distribution oracle; its precise access model is part of the complexity statement."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt N/\\varepsilon^{3/2})$ purified-access queries by Li--Wu and subsequent entropy algorithms; Shin--Jeong obtain $\\widetilde O(\\sqrt N/\\varepsilon)$ in their quantum probability-oracle model.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(\\sqrt N/\\varepsilon^{3/2})$ purified-access queries by Li–Wu and subsequent entropy algorithms; Shin–Jeong obtain $\\widetilde O(\\sqrt N/\\varepsilon)$ in their quantum probability-oracle model.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N/(\\varepsilon\\log N)+\\log^2N/\\varepsilon^2)$ independent samples in the standard entropy-estimation regime, by polynomial approximation and bias-corrected estimators.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(N/(\\varepsilon\\log N)+\\log^2N/\\varepsilon^2)$ independent samples in the standard entropy-estimation regime, by polynomial approximation and bias-corrected estimators.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-finite-entropy-estimation",
+    "amplitude-estimation"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "amplitude-estimation",
+      "label_latex": "Quantum amplitude estimation and counting",
+      "problem_numbers": [
+        6,
+        54,
+        90,
+        99,
+        112,
+        120,
+        221,
+        222,
+        223,
+        224,
+        226,
+        227
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2509.07452}{\\emph{Near optimal quantum algorithm for estimating Shannon entropy}}. Main theorem; established predecessor arXiv:1902.00814 Theorem12.",
+      "content_text": "Near optimal quantum algorithm for estimating Shannon entropy. Main theorem; established predecessor arXiv:1902.00814 Theorem12.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2509.07452",
+          "title": "Near optimal quantum algorithm for estimating Shannon entropy",
+          "label_latex": "\\emph{Near optimal quantum algorithm for estimating Shannon entropy}",
+          "locator_latex": "Main theorem; established predecessor arXiv:1902.00814 Theorem12."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-225-citation-00093"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1710.06025}{\\emph{Quantum Query Complexity of Entropy Estimation}}. Shannon-entropy and support-estimation theorems",
+      "content_text": "Quantum Query Complexity of Entropy Estimation. Shannon-entropy and support-estimation theorems",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1710.06025",
+          "title": "Quantum Query Complexity of Entropy Estimation",
+          "label_latex": "\\emph{Quantum Query Complexity of Entropy Estimation}",
+          "locator_latex": "Shannon-entropy and support-estimation theorems"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-225-citation-00094"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum Shannon-entropy estimation; Quantum amplitude estimation and counting",
+  "plot": {
+    "quantum": "\\widetilde O(\\sqrt N/\\varepsilon^{3/2})",
+    "classical": "\\Theta(N/(\\varepsilon\\log N)+\\log^2N/\\varepsilon^2)",
+    "parameter": "support bound N and additive accuracy epsilon",
+    "model": "purified sample preparation versus independent samples",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Nearly quadratic dependence on support size at constant error"
+  },
+  "ordinal": 45,
+  "citation_ids": [
+    "entry-225-citation-00093",
+    "entry-225-citation-00094"
+  ]
+}

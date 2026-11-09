@@ -1,0 +1,165 @@
+{
+  "id": "entry-212",
+  "number": 212,
+  "slug": "prior-q21",
+  "title": "Symmetry testing of Boolean functions",
+  "title_latex": "Symmetry testing of Boolean functions",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "medium",
+  "origin": "research",
+  "research_key": "prior-q21",
+  "inventory_ids": [
+    "Q21",
+    "Q24"
+  ],
+  "problem": {
+    "name": "Symmetry testing of Boolean functions",
+    "name_latex": "Symmetry testing of Boolean functions",
+    "statement_latex": "\\textbf{Symmetry testing of Boolean functions.} Given $f:\\{0,1\\}^n\\to\\{0,1\\}$, distinguish functions depending only on Hamming weight from functions $\\varepsilon$-far from every such symmetric function. Here access is by coherent membership queries.\n\n\\textbf{Symmetry testing from quantum examples.} Distinguish symmetric Boolean functions from functions $\\varepsilon$-far from symmetric using copies of the uniform quantum example state; symmetry means invariance under every permutation of coordinates.",
+    "statement_text": "Symmetry testing of Boolean functions. Given $f:\\{0,1\\}^n\\to\\{0,1\\}$, distinguish functions depending only on Hamming weight from functions $\\varepsilon$-far from every such symmetric function. Here access is by coherent membership queries. Symmetry testing from quantum examples. Distinguish symmetric Boolean functions from functions $\\varepsilon$-far from symmetric using copies of the uniform quantum example state; symmetry means invariance under every permutation of coordinates."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Each example occupies $n+1$ logical qubits. The algorithm additionally needs the indicated number of coherent examples and its measurement/postprocessing workspace; preparing these examples is part of the supplied-access model."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "\\textbf{Symmetry testing of Boolean functions.} $O(\\varepsilon^{-1/2})$ queries by the quantum symmetry test, using the symmetric subspace and amplitude amplification.",
+      "details_latex": "\\textbf{Symmetry testing from quantum examples.} $O_\\varepsilon(1)$ quantum examples by Caro--Naik--Slote, independent of the Boolean dimension $n$.",
+      "headline_text": "Symmetry testing of Boolean functions. $O(\\varepsilon^{-1/2})$ queries by the quantum symmetry test, using the symmetric subspace and amplitude amplification.",
+      "details_text": "Symmetry testing from quantum examples. $O_\\varepsilon(1)$ quantum examples by Caro–Naik–Slote, independent of the Boolean dimension $n$."
+    },
+    "classical": {
+      "headline_latex": "\\textbf{Symmetry testing of Boolean functions.} $O(\\varepsilon^{-1})$ membership queries by sampling pairs of inputs with equal Hamming weight and checking their values.",
+      "details_latex": "\\textbf{Symmetry testing from quantum examples.} $\\Omega(n^{1/4})$ passive uniform labeled samples are necessary at constant distance; classical tests compare sampled inputs of equal Hamming weight.",
+      "headline_text": "Symmetry testing of Boolean functions. $O(\\varepsilon^{-1})$ membership queries by sampling pairs of inputs with equal Hamming weight and checking their values.",
+      "details_text": "Symmetry testing from quantum examples. $\\Omega(n^{1/4})$ passive uniform labeled samples are necessary at constant distance; classical tests compare sampled inputs of equal Hamming weight."
+    }
+  },
+  "algorithm_ids": [
+    "quantum-boolean-property-tests",
+    "grover",
+    "quantum-data-property-testing"
+  ],
+  "also_used_in": [
+    {
+      "algorithm_id": "quantum-boolean-property-tests",
+      "label_latex": "Quantum linearity and symmetry testing",
+      "problem_numbers": [
+        211
+      ]
+    },
+    {
+      "algorithm_id": "grover",
+      "label_latex": "Grover search and amplitude amplification",
+      "problem_numbers": [
+        1,
+        5,
+        20,
+        53,
+        78,
+        79,
+        81,
+        82,
+        83,
+        90,
+        95,
+        96,
+        113,
+        114,
+        117,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        136,
+        140,
+        211
+      ]
+    },
+    {
+      "algorithm_id": "quantum-data-property-testing",
+      "label_latex": "Caro--Naik--Slote property testing from quantum data",
+      "problem_numbers": [
+        213,
+        214
+      ]
+    }
+  ],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://eprint.iacr.org/2013/232.pdf}{\\emph{Quantum algorithms to check Resiliency, Symmetry and Linearity of a Boolean function}}. Symmetry-testing section; later extended manuscript.",
+      "content_text": "Quantum algorithms to check Resiliency, Symmetry and Linearity of a Boolean function. Symmetry-testing section; later extended manuscript.",
+      "links": [
+        {
+          "url": "https://eprint.iacr.org/2013/232.pdf",
+          "title": "Quantum algorithms to check Resiliency, Symmetry and Linearity of a Boolean function",
+          "label_latex": "\\emph{Quantum algorithms to check Resiliency, Symmetry and Linearity of a Boolean function}",
+          "locator_latex": "Symmetry-testing section; later extended manuscript."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-212-citation-00079"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/html/LIPIcs.ITCS.2026.34/LIPIcs.ITCS.2026.34.html}{\\emph{Testing classical properties from quantum data}}. Symmetry application.",
+      "content_text": "Testing classical properties from quantum data. Symmetry application.",
+      "links": [
+        {
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/html/LIPIcs.ITCS.2026.34/LIPIcs.ITCS.2026.34.html",
+          "title": "Testing classical properties from quantum data",
+          "label_latex": "\\emph{Testing classical properties from quantum data}",
+          "locator_latex": "Symmetry application."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-212-citation-00080"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Quantum linearity and symmetry testing; Grover search and amplitude amplification; Caro--Naik--Slote property testing from quantum data",
+  "plot": {
+    "quantum": "O_\\varepsilon(1)",
+    "classical": "\\Omega(n^{1/4})",
+    "parameter": "Boolean dimension n; fixed distance epsilon",
+    "model": "passive example complexity",
+    "quantum_kind": "constant",
+    "classical_kind": "polynomial",
+    "gain": "\\Omega(n^{1/4})",
+    "quantum_exponent": 0,
+    "classical_exponent": 0.25
+  },
+  "ordinal": 35,
+  "citation_ids": [
+    "entry-212-citation-00079",
+    "entry-212-citation-00080"
+  ]
+}

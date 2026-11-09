@@ -1,9 +1,10 @@
 {
   "id": "entry-025",
   "number": 25,
-  "ordinal": 25,
+  "slug": "packing-maximal-induced-matchings",
   "title_latex": "Packing maximal induced matchings",
   "title": "Packing maximal induced matchings",
+  "aliases": [],
   "chapter_id": "chapter-1",
   "problem": {
     "name_latex": "Packing and partitioning maximal induced matchings",
@@ -14,62 +15,107 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O^*(1.8934^n)$, Gaspers--Li maximal-induced-matching framework.",
-      "headline_text": "$O^*(1.8934^n)$, Gaspers–Li maximal-induced-matching framework.",
       "details_latex": "Restricted maximal-induced-matching enumeration has base $10^{1/5}$. Combining it with partial subset preprocessing and quantum search gives the bound for packing or exact partition into an unrestricted number of members. Membership includes both induced matching and maximality.",
+      "headline_text": "$O^*(1.8934^n)$, Gaspers–Li maximal-induced-matching framework.",
       "details_text": "Restricted maximal-induced-matching enumeration has base $10^{1/5}$. Combining it with partial subset preprocessing and quantum search gives the bound for packing or exact partition into an unrestricted number of members. Membership includes both induced matching and maximality."
     },
     "classical": {
       "headline_latex": "$O^*(2^n)$, inclusion--exclusion and subset transforms.",
-      "headline_text": "$O^*(2^n)$, inclusion–exclusion and subset transforms.",
       "details_latex": "For every fixed number $q$ of members, a stronger bound is $O_{q,\\epsilon}(2^{\\epsilon n}\\operatorname{poly}(n))$ for each fixed $\\epsilon>0$. Vertex-membership and neighborhood-dominance bits encode degree one inside each member and exclusion of any further compatible edge. This uses $O(qn)$ variables and $O(qn)$ long clauses, together with polynomially many fixed-width clauses. Long-clause shortening followed by tensor contraction gives the bound; disjointness and complete coverage specify packing and partition respectively.",
+      "headline_text": "$O^*(2^n)$, inclusion–exclusion and subset transforms.",
       "details_text": "For every fixed number $q$ of members, a stronger bound is $O_{q,\\epsilon}(2^{\\epsilon n}\\operatorname{poly}(n))$ for each fixed $\\epsilon>0$. Vertex-membership and neighborhood-dominance bits encode degree one inside each member and exclusion of any further compatible edge. This uses $O(qn)$ variables and $O(qn)$ long clauses, together with polynomially many fixed-width clauses. Long-clause shortening followed by tensor contraction gives the bound; disjointness and complete coverage specify packing and partition respectively."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-polynomial",
       "color_key": "strengthPolynomial",
       "description_latex": "Polynomial speedup through a smaller exponential constant for unrestricted part count, arising from amplitude amplification. A fixed part count has the stronger subexponential classical comparator.",
+      "category_id": "strength-polynomial",
       "description_text": "Polynomial speedup through a smaller exponential constant for unrestricted part count, arising from amplitude amplification. A fixed part count has the stronger subexponential classical comparator."
     },
     "evidence": {
-      "category_id": "evidence-partial",
       "color_key": "evidencePartial",
       "description_latex": "The quantum upper bound follows the framework theorem and the maximal-induced-matching enumeration bound. The classical fixed-$q$ conclusion follows the explicit Boolean encoding.",
+      "category_id": "evidence-partial",
       "description_text": "The quantum upper bound follows the framework theorem and the maximal-induced-matching enumeration bound. The classical fixed-$q$ conclusion follows the explicit Boolean encoding."
     },
     "hardware": {
-      "category_id": "hardware-superpolynomial",
       "color_key": "hardwareExponential",
       "description_latex": "Polynomial active registers represent selected endpoints, local degree and maximality conditions, with exponential coherent preprocessing memory. Large useful instances require fault tolerance and long coherent searches.",
+      "category_id": "hardware-superpolynomial",
       "description_text": "Polynomial active registers represent selected endpoints, local degree and maximality conditions, with exponential coherent preprocessing memory. Large useful instances require fault tolerance and long coherent searches."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Gaspers--Li maximal-induced-matching algorithms",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "25.1",
       "content_latex": "\\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 7, maximal-induced-matching application, using the Gupta--Raman--Saurabh enumeration bound; Theorem 4 gives the packing and partition procedures.",
       "content_text": "Gaspers and Li, Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems (ICALP 2024). Theorem 7, maximal-induced-matching application, using the Gupta–Raman–Saurabh enumeration bound; Theorem 4 gives the packing and partition procedures.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2311.08042",
+          "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
+          "label_latex": "Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)",
+          "locator_latex": "Theorem 7, maximal-induced-matching application, using the Gupta--Raman--Saurabh enumeration bound; Theorem 4 gives the packing and partition procedures."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-025-citation-001"
+        "entry-025-citation-00055"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "25.2",
       "content_latex": "\\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening; \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}}, Theorem 1.1 and Appendix D: fixed-width counting after shortening.",
       "content_text": "Claude (Anthropic), A $2^{o(n)}$ Time Algorithm for 3-SAT (2026). Long-clause shortening; OpenAI, The Exponential Time Hypothesis Is False, Theorem 1.1 and Appendix D: fixed-width counting after shortening.",
+      "links": [
+        {
+          "url": "https://github.com/anthropics/formal-math/tree/main/eth",
+          "title": "A $2^{o(n)}$ Time Algorithm for 3-SAT",
+          "label_latex": "Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)",
+          "locator_latex": "Long-clause shortening; \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}}, Theorem 1.1 and Appendix D: fixed-width counting after shortening."
+        },
+        {
+          "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+          "title": "The Exponential Time Hypothesis Is False",
+          "label_latex": "OpenAI, \\emph{The Exponential Time Hypothesis Is False}",
+          "locator_latex": ", Theorem 1.1 and Appendix D: fixed-width counting after shortening."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-025-citation-002",
-        "entry-025-citation-003"
+        "entry-025-citation-00056",
+        "entry-025-citation-00057"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-025-citation-001",
-    "entry-025-citation-002",
-    "entry-025-citation-003"
+  "algorithm_ids": [
+    "gaspers-li"
   ],
-  "source_latex": "\\entrytitle{25}{Packing maximal induced matchings}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{24}\n\\begin{problem}[Packing and partitioning maximal induced matchings]\nLet $\\mathcal F$ contain all vertex sets $S\\subseteq V$ such that every vertex of $G[S]$ has degree one and $S$ is inclusion-maximal with that property. Given $k$, find $k$ disjoint members of $\\mathcal F$, or a partition of $V$ into $k$ such members. Each member is the endpoint set of an induced matching.\nThe quantum comparison uses QRAM time and classical subset-transform time, with bit complexity for the fixed-part-count Boolean encoding.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.8934^n)$, Gaspers--Li maximal-induced-matching framework.}\nRestricted maximal-induced-matching enumeration has base $10^{1/5}$. Combining it with partial subset preprocessing and quantum search gives the bound for packing or exact partition into an unrestricted number of members. Membership includes both induced matching and maximality.\n\\complexity{Classical}{$O^*(2^n)$, inclusion--exclusion and subset transforms.}\nFor every fixed number $q$ of members, a stronger bound is $O_{q,\\epsilon}(2^{\\epsilon n}\\operatorname{poly}(n))$ for each fixed $\\epsilon>0$. Vertex-membership and neighborhood-dominance bits encode degree one inside each member and exclusion of any further compatible edge. This uses $O(qn)$ variables and $O(qn)$ long clauses, together with polynomially many fixed-width clauses. Long-clause shortening followed by tensor contraction gives the bound; disjointness and complete coverage specify packing and partition respectively.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for unrestricted part count, arising from amplitude amplification. A fixed part count has the stronger subexponential classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} The quantum upper bound follows the framework theorem and the maximal-induced-matching enumeration bound. The classical fixed-$q$ conclusion follows the explicit Boolean encoding.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active registers represent selected endpoints, local degree and maximality conditions, with exponential coherent preprocessing memory. Large useful instances require fault tolerance and long coherent searches.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{25}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 7, maximal-induced-matching application, using the Gupta--Raman--Saurabh enumeration bound; Theorem 4 gives the packing and partition procedures.\n\\item \\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening; \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}}, Theorem 1.1 and Appendix D: fixed-width counting after shortening.\n\\end{algorithmindex}"
+  "also_used_in": [
+    {
+      "algorithm_id": "gaspers-li",
+      "label_latex": "Gaspers--Li partition, cover and packing algorithms",
+      "problem_numbers": [
+        8,
+        10,
+        21,
+        22,
+        23,
+        24,
+        26,
+        27
+      ]
+    }
+  ],
+  "source_latex": "\\entrytitle{25}{Packing maximal induced matchings}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{24}\n\\begin{problem}[Packing and partitioning maximal induced matchings]\nLet $\\mathcal F$ contain all vertex sets $S\\subseteq V$ such that every vertex of $G[S]$ has degree one and $S$ is inclusion-maximal with that property. Given $k$, find $k$ disjoint members of $\\mathcal F$, or a partition of $V$ into $k$ such members. Each member is the endpoint set of an induced matching.\nThe quantum comparison uses QRAM time and classical subset-transform time, with bit complexity for the fixed-part-count Boolean encoding.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.8934^n)$, Gaspers--Li maximal-induced-matching framework.}\nRestricted maximal-induced-matching enumeration has base $10^{1/5}$. Combining it with partial subset preprocessing and quantum search gives the bound for packing or exact partition into an unrestricted number of members. Membership includes both induced matching and maximality.\n\\complexity{Classical}{$O^*(2^n)$, inclusion--exclusion and subset transforms.}\nFor every fixed number $q$ of members, a stronger bound is $O_{q,\\epsilon}(2^{\\epsilon n}\\operatorname{poly}(n))$ for each fixed $\\epsilon>0$. Vertex-membership and neighborhood-dominance bits encode degree one inside each member and exclusion of any further compatible edge. This uses $O(qn)$ variables and $O(qn)$ long clauses, together with polynomially many fixed-width clauses. Long-clause shortening followed by tensor contraction gives the bound; disjointness and complete coverage specify packing and partition respectively.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for unrestricted part count, arising from amplitude amplification. A fixed part count has the stronger subexponential classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} The quantum upper bound follows the framework theorem and the maximal-induced-matching enumeration bound. The classical fixed-$q$ conclusion follows the explicit Boolean encoding.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active registers represent selected endpoints, local degree and maximality conditions, with exponential coherent preprocessing memory. Large useful instances require fault tolerance and long coherent searches.\n\\subhead{Algorithm: Gaspers--Li maximal-induced-matching algorithms}\n\\begin{algorithmindex}{25}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 7, maximal-induced-matching application, using the Gupta--Raman--Saurabh enumeration bound; Theorem 4 gives the packing and partition procedures.\n\\item \\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening; \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}}, Theorem 1.1 and Appendix D: fixed-width counting after shortening.\n\\end{algorithmindex}\n\\par\\Needspace{3\\baselineskip}\\begingroup\\small\n\\textbf{Also used in.}\n\\par\\algorithmref{gaspers-li}{Gaspers--Li partition, cover and packing algorithms}: \\problemref{8}, \\problemref{10}, \\problemref{21}, \\problemref{22}, \\problemref{23}, \\problemref{24}, \\problemref{26}, \\problemref{27}.\n\\par\\endgroup",
+  "importance": "peripheral",
+  "origin": "manuscript",
+  "ordinal": 21,
+  "citation_ids": [
+    "entry-025-citation-00055",
+    "entry-025-citation-00056",
+    "entry-025-citation-00057"
+  ]
 }

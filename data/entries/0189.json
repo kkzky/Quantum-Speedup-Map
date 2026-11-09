@@ -1,0 +1,111 @@
+{
+  "id": "entry-189",
+  "number": 189,
+  "slug": "two-dimensional-hidden-linear-function",
+  "title": "Two-dimensional hidden linear function",
+  "title_latex": "Two-dimensional hidden linear function",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "two_dimensional_hidden_linear_function",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Two-dimensional hidden linear function",
+    "name_latex": "Two-dimensional hidden linear function",
+    "statement_latex": "On an $n$-vertex square grid, input bits $A_e,b_v$ define $q(x)=2\\sum_{e=\\{u,v\\}}A_ex_ux_v+\\sum_v b_vx_v\\pmod4$. Let $L_q=\\{x:q(x\\oplus y)=q(x)+q(y)\\ \\forall y\\}$. Output $z\\in\\mathbb F_2^n$ with $q(x)=2z^Tx$ for every $x\\in L_q$. Complexity counts bounded-fan-in circuit depth.",
+    "statement_text": "On an $n$-vertex square grid, input bits $A_e,b_v$ define $q(x)=2\\sum_{e=\\{u,v\\}}A_ex_ux_v+\\sum_v b_vx_v\\pmod4$. Let $L_q=\\{x:q(x\\oplus y)=q(x)+q(y)\\ \\forall y\\}$. Output $z\\in\\mathbb F_2^n$ with $q(x)=2z^Tx$ for every $x\\in L_q$. Complexity counts bounded-fan-in circuit depth."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Constant quantum depth versus logarithmic classical depth; this is a parallel-computation separation.",
+      "category_id": "strength-polynomial",
+      "description_text": "Constant quantum depth versus logarithmic classical depth; this is a parallel-computation separation."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The classical bounded-fan-in depth lower bound is unconditional.",
+      "category_id": "evidence-proved",
+      "description_text": "The classical bounded-fan-in depth lower bound is unconditional."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "$O(n)$ qubits and constant-depth local gates; the noisy extension uses three-dimensional encoded states.",
+      "category_id": "hardware-polynomial",
+      "description_text": "$O(n)$ qubits and constant-depth local gates; the noisy extension uses three-dimensional encoded states."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(1)$ depth and $O(n)$ gates on a nearest-neighbor grid: apply $H^{\\otimes n}$, the Clifford phase $i^{q(x)}$, and $H^{\\otimes n}$. Every measured output satisfies the relation. An encoded construction extends the separation to a related noisy three-dimensional task.",
+      "details_latex": "",
+      "headline_text": "$O(1)$ depth and $O(n)$ gates on a nearest-neighbor grid: apply $H^{\\otimes n}$, the Clifford phase $i^{q(x)}$, and $H^{\\otimes n}$. Every measured output satisfies the relation. An encoded construction extends the separation to a related noisy three-dimensional task.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(\\log n)$ depth for bounded-fan-in randomized classical circuits solving all instances with the stipulated success probability. Stabilizer simulation or finite-field linear algebra gives polynomial sequential time; parallel linear algebra gives polylogarithmic depth.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(\\log n)$ depth for bounded-fan-in randomized classical circuits solving all instances with the stipulated success probability. Stabilizer simulation or finite-field linear algebra gives polynomial sequential time; parallel linear algebra gives polylogarithmic depth.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "bravyi_gosset_koenig"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1704.00690}{\\emph{Quantum advantage with shallow circuits}}. Section 3, Eq. (14), 2D Hidden Linear Function definition; main depth-separation theorem",
+      "content_text": "Quantum advantage with shallow circuits. Section 3, Eq. (14), 2D Hidden Linear Function definition; main depth-separation theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1704.00690",
+          "title": "Quantum advantage with shallow circuits",
+          "label_latex": "\\emph{Quantum advantage with shallow circuits}",
+          "locator_latex": "Section 3, Eq. (14), 2D Hidden Linear Function definition; main depth-separation theorem"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-189-citation-00408"
+      ]
+    },
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1904.01502}{\\emph{Quantum advantage with noisy shallow circuits}}. Noisy three-dimensional relation and main theorem",
+      "content_text": "Quantum advantage with noisy shallow circuits. Noisy three-dimensional relation and main theorem",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1904.01502",
+          "title": "Quantum advantage with noisy shallow circuits",
+          "label_latex": "\\emph{Quantum advantage with noisy shallow circuits}",
+          "locator_latex": "Noisy three-dimensional relation and main theorem"
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
+      "citation_ids": [
+        "entry-189-citation-00409"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Bravyi--Gosset--K\\\"onig shallow-circuit algorithm",
+  "plot": {
+    "quantum": "O(1)",
+    "classical": "\\Omega(\\log n)",
+    "parameter": "$n$ is the grid vertex count.",
+    "model": "Bounded-fan-in circuit depth",
+    "quantum_kind": "constant",
+    "classical_kind": "logarithmic",
+    "quantum_exponent": null,
+    "classical_exponent": null,
+    "gain": "\\Omega(\\log n)"
+  },
+  "ordinal": 205,
+  "citation_ids": [
+    "entry-189-citation-00408",
+    "entry-189-citation-00409"
+  ]
+}

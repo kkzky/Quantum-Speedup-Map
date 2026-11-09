@@ -1,0 +1,93 @@
+{
+  "id": "entry-205",
+  "number": 205,
+  "slug": "prior-q12",
+  "title": "Gapped group testing",
+  "title_latex": "Gapped group testing",
+  "aliases": [],
+  "chapter_id": "chapter-1",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q12",
+  "inventory_ids": [
+    "Q12"
+  ],
+  "problem": {
+    "name": "Gapped group testing",
+    "name_latex": "Gapped group testing",
+    "statement_latex": "An unknown $S\\subseteq[n]$ is promised to have $|S|\\le k$ or $|S|\\ge k+d$. Given subset-intersection tests $T\\mapsto[T\\cap S\\ne\\varnothing]$, distinguish the cases with bounded error.",
+    "statement_text": "An unknown $S\\subseteq[n]$ is promised to have $|S|\\le k$ or $|S|\\ge k+d$. Given subset-intersection tests $T\\mapsto[T\\cap S\\ne\\varnothing]$, distinguish the cases with bounded error."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(\\sqrt{1+k/d})$ queries by Ambainis--Belovs--Regev--de Wolf, using a tailored adversary construction.",
+      "details_latex": "",
+      "headline_text": "$O(\\sqrt{1+k/d})$ queries by Ambainis–Belovs–Regev–de Wolf, using a tailored adversary construction.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde\\Theta(\\min\\{k,1+(k/d)^2\\})$ tests in the corresponding nondegenerate parameter regime, by randomized testing and the paper's lower bounds.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde\\Theta(\\min\\{k,1+(k/d)^2\\})$ tests in the corresponding nondegenerate parameter regime, by randomized testing and the paper's lower bounds.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "gapped-group-testing"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1507.03126}{\\emph{Efficient Quantum Algorithms for (Gapped) Group Testing and Junta Testing}}. Definitions3.1–3.2; Theorems3.3–3.5 and3.10",
+      "content_text": "Efficient Quantum Algorithms for (Gapped) Group Testing and Junta Testing. Definitions3.1–3.2; Theorems3.3–3.5 and3.10",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1507.03126",
+          "title": "Efficient Quantum Algorithms for (Gapped) Group Testing and Junta Testing",
+          "label_latex": "\\emph{Efficient Quantum Algorithms for (Gapped) Group Testing and Junta Testing}",
+          "locator_latex": "Definitions3.1–3.2; Theorems3.3–3.5 and3.10"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-205-citation-00069"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Ambainis--Belovs--Regev--de Wolf gapped group testing",
+  "plot": {
+    "quantum": "O(\\sqrt{1+k/d})",
+    "classical": "\\widetilde\\Theta(\\min\\{k,1+(k/d)^2\\})",
+    "parameter": "size threshold k and promise gap d",
+    "model": "subset-intersection queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "Up to a fourth-power relation in the appropriate gap regime"
+  },
+  "ordinal": 28,
+  "citation_ids": [
+    "entry-205-citation-00069"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "entry-182",
+  "number": 182,
+  "slug": "classical-verification-bqp",
+  "title": "Classical verification of quantum computation",
+  "title_latex": "Classical verification of quantum computation",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "classical_verification_bqp",
+  "inventory_ids": [],
+  "problem": {
+    "name": "Classical verification of quantum computation",
+    "name_latex": "Classical verification of quantum computation",
+    "statement_latex": "Given a quantum circuit deciding a promise problem with completeness at least $2/3$ and soundness at most $1/3$, construct an interactive protocol with a classical polynomial-time verifier and a quantum polynomial-time honest prover certifying the decision. Security is against efficient quantum cheating provers. Complexity uses gates, verifier time, and classical communication.",
+    "statement_text": "Given a quantum circuit deciding a promise problem with completeness at least $2/3$ and soundness at most $1/3$, construct an interactive protocol with a classical polynomial-time verifier and a quantum polynomial-time honest prover certifying the decision. Security is against efficient quantum cheating provers. Complexity uses gates, verifier time, and classical communication."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "white",
+      "description_latex": "Efficient classical verification of BQP computation.",
+      "category_id": "strength-unspecified",
+      "description_text": "Efficient classical verification of BQP computation."
+    },
+    "evidence": {
+      "color_key": "evidenceStrong",
+      "description_latex": "Completeness and computational soundness are proved under quantum hardness of LWE.",
+      "category_id": "evidence-strong",
+      "description_text": "Completeness and computational soundness are proved under quantum hardness of LWE."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Polynomial quantum space, coherent cryptographic evaluation, and repeated measurements; fault-tolerant implementation is the relevant regime.",
+      "category_id": "hardware-polynomial",
+      "description_text": "Polynomial quantum space, coherent cryptographic evaluation, and repeated measurements; fault-tolerant implementation is the relevant regime."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(T,\\lambda)$ gates for circuit size $T$ and security parameter $\\lambda$, using Mahadev's four-message protocol. Cryptographic commitments enforce computational- or Hadamard-basis measurements; the verifier checks a computation-verification test.",
+      "details_latex": "",
+      "headline_text": "$\\operatorname{poly}(T,\\lambda)$ gates for circuit size $T$ and security parameter $\\lambda$, using Mahadev's four-message protocol. Cryptographic commitments enforce computational- or Hadamard-basis measurements; the verifier checks a computation-verification test.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "The verifier runs in $\\operatorname{poly}(T,\\lambda)$ classical time. A classical honest prover for every BQP computation would require classical algorithms for those computations; generic simulation and problem-specific algorithms supply their respective comparators. Protocol soundness reduces to quantum hardness of LWE.",
+      "details_latex": "",
+      "headline_text": "The verifier runs in $\\operatorname{poly}(T,\\lambda)$ classical time. A classical honest prover for every BQP computation would require classical algorithms for those computations; generic simulation and problem-specific algorithms supply their respective comparators. Protocol soundness reduces to quantum hardness of LWE.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "mahadev_verification"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1804.01082}{\\emph{Classical Verification of Quantum Computations}}. Main verification theorem; measurement protocol; construction from noisy trapdoor claw-free functions",
+      "content_text": "Classical Verification of Quantum Computations. Main verification theorem; measurement protocol; construction from noisy trapdoor claw-free functions",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1804.01082",
+          "title": "Classical Verification of Quantum Computations",
+          "label_latex": "\\emph{Classical Verification of Quantum Computations}",
+          "locator_latex": "Main verification theorem; measurement protocol; construction from noisy trapdoor claw-free functions"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-182-citation-00383"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Mahadev verification protocol",
+  "ordinal": 198,
+  "citation_ids": [
+    "entry-182-citation-00383"
+  ]
+}

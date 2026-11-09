@@ -1,0 +1,94 @@
+{
+  "id": "entry-145",
+  "number": 145,
+  "slug": "prior-g47",
+  "title": "Directed fixed-length path containment",
+  "title_latex": "Directed fixed-length path containment",
+  "aliases": [],
+  "chapter_id": "chapter-2",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-g47",
+  "inventory_ids": [
+    "G47"
+  ],
+  "problem": {
+    "name": "Directed fixed-length path containment",
+    "name_latex": "Directed fixed-length path containment",
+    "statement_latex": "Fix a positive integer $k$. Given adjacency-matrix access to a directed $n$-vertex graph, decide whether it contains a simple directed path with $k$ edges. Complexity counts adjacency queries.",
+    "statement_text": "Fix a positive integer $k$. Given adjacency-matrix access to a directed $n$-vertex graph, decide whether it contains a simple directed path with $k$ edges. Complexity counts adjacency queries."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial improvement in the stated resource and parameter regime.",
+      "category_id": "strength-polynomial",
+      "description_text": "Polynomial improvement in the stated resource and parameter regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation.",
+      "category_id": "hardware-polynomial",
+      "description_text": "The algorithm requires coherent input access and fault-tolerant execution of the stated procedure; its circuit and workspace requirements depend on that access implementation."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{3/2-\\alpha_k})$ queries by Cornelissen--Gilani--Patro, where $\\alpha_k=\\Theta(c^{-k})$ and $c=\\sqrt{3+\\sqrt{17}}/2$, with the exact recurrence in their path-containment theorem.",
+      "details_latex": "",
+      "headline_text": "$\\widetilde O(n^{3/2-\\alpha_k})$ queries by Cornelissen–Gilani–Patro, where $\\alpha_k=\\Theta(c^{-k})$ and $c=\\sqrt{3+\\sqrt{17}}/2$, with the exact recurrence in their path-containment theorem.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n^2)$ worst-case adjacency queries for fixed nonempty paths; classical color coding or algebraic path detection follows input acquisition.",
+      "details_latex": "",
+      "headline_text": "$\\Theta(n^2)$ worst-case adjacency queries for fixed nonempty paths; classical color coding or algebraic path detection follows input acquisition.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "quantum-directed-path-containment"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/2605.09017}{\\emph{Quantum algorithms for path and cycle containment problems}}. Main result 1.10; Corollary 4.5; Section 4",
+      "content_text": "Quantum algorithms for path and cycle containment problems. Main result 1.10; Corollary 4.5; Section 4",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.09017",
+          "title": "Quantum algorithms for path and cycle containment problems",
+          "label_latex": "\\emph{Quantum algorithms for path and cycle containment problems}",
+          "locator_latex": "Main result 1.10; Corollary 4.5; Section 4"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-145-citation-00221"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Cornelissen--Gilani--Patro path-containment algorithm",
+  "plot": {
+    "quantum": "\\widetilde O(n^{3/2-\\alpha_k})",
+    "classical": "\\Theta(n^2)",
+    "parameter": "n vertices and fixed path length k",
+    "model": "adjacency-matrix queries",
+    "quantum_kind": "polynomial",
+    "classical_kind": "polynomial",
+    "gain": "\\widetilde\\Omega(n^{1/2+\\alpha_k})",
+    "classical_exponent": 2
+  },
+  "ordinal": 114,
+  "citation_ids": [
+    "entry-145-citation-00221"
+  ]
+}

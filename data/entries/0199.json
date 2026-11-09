@@ -1,0 +1,95 @@
+{
+  "id": "entry-199",
+  "number": 199,
+  "slug": "prior-q04",
+  "title": "Forrelation",
+  "title_latex": "Forrelation",
+  "aliases": [],
+  "chapter_id": "chapter-4",
+  "importance": "high",
+  "origin": "research",
+  "research_key": "prior-q04",
+  "inventory_ids": [
+    "Q04"
+  ],
+  "problem": {
+    "name": "Forrelation",
+    "name_latex": "Forrelation",
+    "statement_latex": "Given phase oracles $f,g:\\{0,1\\}^n\\to\\{-1,1\\}$, distinguish the promised large and small values of $\\Phi(f,g)=2^{-3n/2}\\sum_{x,y}f(x)(-1)^{x\\cdot y}g(y)$. The $k$-fold version alternates $k$ phase functions and Hadamard transforms.",
+    "statement_text": "Given phase oracles $f,g:\\{0,1\\}^n\\to\\{-1,1\\}$, distinguish the promised large and small values of $\\Phi(f,g)=2^{-3n/2}\\sum_{x,y}f(x)(-1)^{x\\cdot y}g(y)$. The $k$-fold version alternates $k$ phase functions and Hadamard transforms."
+  },
+  "labels": {
+    "strength": {
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential or subexponential to polynomial in the strongest stated regime.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "description_text": "Exponential or subexponential to polynomial in the strongest stated regime."
+    },
+    "evidence": {
+      "color_key": "evidenceProved",
+      "description_latex": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model.",
+      "category_id": "evidence-proved",
+      "description_text": "The cited results establish a classical lower bound separating the stated quantum resource bound in the specified model."
+    },
+    "hardware": {
+      "color_key": "hardwareSmall",
+      "description_latex": "The transform circuit uses $O(n)$ logical qubits and $O(n)$ elementary gates around its oracle calls; implementing the oracle determines the full device cost. Small circuit demonstrations are feasible.",
+      "category_id": "hardware-small",
+      "description_text": "The transform circuit uses $O(n)$ logical qubits and $O(n)$ elementary gates around its oracle calls; implementing the oracle determines the full device cost. Small circuit demonstrations are feasible."
+    }
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(1)$ queries and $O(n)$ gates for two-function Forrelation; $O(k)$ queries for $k$-fold Forrelation, by Aaronson--Ambainis.",
+      "details_latex": "",
+      "headline_text": "$O(1)$ queries and $O(n)$ gates for two-function Forrelation; $O(k)$ queries for $k$-fold Forrelation, by Aaronson–Ambainis.",
+      "details_text": ""
+    },
+    "classical": {
+      "headline_latex": "$\\Omega(2^{n/2}/n)$ randomized queries for the two-function promise, with an $\\widetilde O(2^{n/2})$ classical algorithm. These bounds are tight up to logarithmic factors.",
+      "details_latex": "",
+      "headline_text": "$\\Omega(2^{n/2}/n)$ randomized queries for the two-function promise, with an $\\widetilde O(2^{n/2})$ classical algorithm. These bounds are tight up to logarithmic factors.",
+      "details_text": ""
+    }
+  },
+  "algorithm_ids": [
+    "forrelation"
+  ],
+  "also_used_in": [],
+  "algorithm_items": [
+    {
+      "content_latex": "\\href{https://arxiv.org/abs/1411.5729}{\\emph{Forrelation: A Problem that Optimally Separates Quantum from Classical Computing}}. Main separation theorem and k-fold BQP-completeness construction",
+      "content_text": "Forrelation: A Problem that Optimally Separates Quantum from Classical Computing. Main separation theorem and k-fold BQP-completeness construction",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1411.5729",
+          "title": "Forrelation: A Problem that Optimally Separates Quantum from Classical Computing",
+          "label_latex": "\\emph{Forrelation: A Problem that Optimally Separates Quantum from Classical Computing}",
+          "locator_latex": "Main separation theorem and k-fold BQP-completeness construction"
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
+      "citation_ids": [
+        "entry-199-citation-00376"
+      ]
+    }
+  ],
+  "source_latex": "",
+  "algorithm_heading_latex": "Algorithm: Forrelation Hadamard-transform algorithm",
+  "plot": {
+    "quantum": "O(1)",
+    "classical": "\\widetilde\\Theta(2^{n/2})",
+    "parameter": "oracle address length n",
+    "model": "bounded-error phase-function queries",
+    "quantum_kind": "constant",
+    "classical_kind": "exponential",
+    "gain": "\\widetilde\\Theta(2^{n/2})",
+    "quantum_exponent": 0,
+    "classical_exponent": 0.5
+  },
+  "ordinal": 191,
+  "citation_ids": [
+    "entry-199-citation-00376"
+  ]
+}

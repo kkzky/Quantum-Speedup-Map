@@ -1,9 +1,10 @@
 {
   "id": "entry-073",
   "number": 73,
-  "ordinal": 74,
+  "slug": "learning-parity-with-noisy-quantum-examples",
   "title_latex": "Learning parity with noisy quantum examples",
   "title": "Learning parity with noisy quantum examples",
+  "aliases": [],
   "chapter_id": "chapter-3",
   "problem": {
     "name_latex": "Learning parity with noisy quantum examples",
@@ -14,60 +15,84 @@
   "quantum_speedup": {
     "quantum": {
       "headline_latex": "$O(\\log(n/\\delta))$ examples and $O(n\\log(n/\\delta))$ processing, Cross--Smith--Smolin noisy parity learning.",
-      "headline_text": "$O(\\log(n/\\delta))$ examples and $O(n\\log(n/\\delta))$ processing, Cross–Smith–Smolin noisy parity learning.",
       "details_latex": "These bounds hold for fixed noise rate in the analyzed noisy quantum-example models, with failure probability at most $\\delta$. Under classification noise alone, $O(\\log(1/\\delta))$ coherent examples suffice: the Hadamard-basis parity information survives a flip of the result qubit. The logarithmic dependence on $n$ covers bitwise reconstruction in the depolarizing-noise treatment. Noise parameters affect the constants.",
+      "headline_text": "$O(\\log(n/\\delta))$ examples and $O(n\\log(n/\\delta))$ processing, Cross–Smith–Smolin noisy parity learning.",
       "details_text": "These bounds hold for fixed noise rate in the analyzed noisy quantum-example models, with failure probability at most $\\delta$. Under classification noise alone, $O(\\log(1/\\delta))$ coherent examples suffice: the Hadamard-basis parity information survives a flip of the result qubit. The logarithmic dependence on $n$ covers bitwise reconstruction in the depolarizing-noise treatment. Noise parameters affect the constants."
     },
     "classical": {
       "headline_latex": "$2^{O(n/\\log n)}$ time and samples at fixed noise, BKW-type LPN algorithms.",
-      "headline_text": "$2^{O(n/\\log n)}$ time and samples at fixed noise, BKW-type LPN algorithms.",
       "details_latex": "The classical input consists of computational-basis measurements of the same examples, giving uniformly random labeled samples with independent classification noise. BKW combines samples to eliminate coordinate blocks, trading increased noise against sample count and memory. The fastest concrete attack depends on the sample budget and noise rate. These are classical noisy-sample costs for the stated access model.",
+      "headline_text": "$2^{O(n/\\log n)}$ time and samples at fixed noise, BKW-type LPN algorithms.",
       "details_text": "The classical input consists of computational-basis measurements of the same examples, giving uniformly random labeled samples with independent classification noise. BKW combines samples to eliminate coordinate blocks, trading increased noise against sample count and memory. The fastest concrete attack depends on the sample budget and noise rate. These are classical noisy-sample costs for the stated access model."
     }
   },
   "labels": {
     "strength": {
-      "category_id": "strength-exponential-subexponential-to-polynomial",
       "color_key": "strengthPolynomialTime",
       "description_latex": "Subexponential to polynomial in $n$, through Fourier interference in the quantum examples. The availability of coherent examples is part of the input model.",
+      "category_id": "strength-exponential-subexponential-to-polynomial",
       "description_text": "Subexponential to polynomial in $n$, through Fourier interference in the quantum examples. The availability of coherent examples is part of the input model."
     },
     "evidence": {
-      "category_id": "evidence-strong",
       "color_key": "evidenceStrong",
       "description_latex": "Strong conditional evidence from classical LPN hardness. The quantum learning theorem is rigorous for its noise channel; the comparison invokes the hardness of learning from measured examples.",
+      "category_id": "evidence-strong",
       "description_text": "Strong conditional evidence from classical LPN hardness. The quantum learning theorem is rigorous for its noise channel; the comparison invokes the hardness of learning from measured examples."
     },
     "hardware": {
-      "category_id": "hardware-small",
       "color_key": "hardwareSmall",
       "description_latex": "The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Rist\\`e et al. demonstrated noisy parity learning with a small superconducting processor. This supports the small-instance category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility.",
+      "category_id": "hardware-small",
       "description_text": "The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Ristè et al. demonstrated noisy parity learning with a small superconducting processor. This supports the small-instance category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility."
     }
   },
+  "algorithm_heading_latex": "Algorithm: Cross--Smith--Smolin noisy quantum parity learning",
   "algorithm_items": [
     {
-      "item_number": 1,
-      "index_label": "73.1",
       "content_latex": "\\href{https://arxiv.org/pdf/1407.5088}{Cross, Smith and Smolin, \\emph{Quantum Learning Robust Against Noise} (2015)}. Sections ``Learning from ideal queries'' and ``Learning in the presence of noise''; equations (7)--(8): transformed examples and classification noise; the depolarizing-noise subsection gives reconstruction bounds.",
       "content_text": "Cross, Smith and Smolin, Quantum Learning Robust Against Noise (2015). Sections “Learning from ideal queries” and “Learning in the presence of noise”; equations (7)–(8): transformed examples and classification noise; the depolarizing-noise subsection gives reconstruction bounds.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1407.5088",
+          "title": "Quantum Learning Robust Against Noise",
+          "label_latex": "Cross, Smith and Smolin, \\emph{Quantum Learning Robust Against Noise} (2015)",
+          "locator_latex": "Sections ``Learning from ideal queries'' and ``Learning in the presence of noise''; equations (7)--(8): transformed examples and classification noise; the depolarizing-noise subsection gives reconstruction bounds."
+        }
+      ],
+      "item_number": 1,
+      "index_label": "",
       "citation_ids": [
-        "entry-073-citation-001"
+        "entry-073-citation-00258"
       ]
     },
     {
-      "item_number": 2,
-      "index_label": "73.2",
       "content_latex": "\\href{https://arxiv.org/pdf/1512.06069}{Rist\\`e et al., \\emph{Demonstration of Quantum Advantage in Machine Learning} (2017)}. Experimental learning circuits and sample-complexity results in the main text and figures.",
       "content_text": "Ristè et al., Demonstration of Quantum Advantage in Machine Learning (2017). Experimental learning circuits and sample-complexity results in the main text and figures.",
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/1512.06069",
+          "title": "Demonstration of Quantum Advantage in Machine Learning",
+          "label_latex": "Rist\\`e et al., \\emph{Demonstration of Quantum Advantage in Machine Learning} (2017)",
+          "locator_latex": "Experimental learning circuits and sample-complexity results in the main text and figures."
+        }
+      ],
+      "item_number": 2,
+      "index_label": "",
       "citation_ids": [
-        "entry-073-citation-002"
+        "entry-073-citation-00259"
       ]
     }
   ],
-  "citation_ids": [
-    "entry-073-citation-001",
-    "entry-073-citation-002"
+  "algorithm_ids": [
+    "noisy-parity"
   ],
-  "source_latex": "\\entrytitle{73}{Learning parity with noisy quantum examples}{strengthPolynomialTime}{evidenceStrong}{hardwareSmall}\n\\setcounter{problem}{72}\n\\begin{problem}[Learning parity with noisy quantum examples]\nRecover $a\\in\\mathbb F_2^n$ from a noisy quantum example oracle preparing $2^{-n/2}\\sum_x|x,a\\cdot x\\rangle$, followed by a specified noise channel. The classical learner receives the same examples measured in the computational basis. For classification noise, the final bit is flipped independently with constant probability $\\eta<1/2$, producing ordinary learning-parity-with-noise samples $(x,a\\cdot x+e)$. The comparison measures quantum example queries and elementary gates, and classical sample complexity and bit-operation time for measured examples.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(\\log(n/\\delta))$ examples and $O(n\\log(n/\\delta))$ processing, Cross--Smith--Smolin noisy parity learning.}\nThese bounds hold for fixed noise rate in the analyzed noisy quantum-example models, with failure probability at most $\\delta$. Under classification noise alone, $O(\\log(1/\\delta))$ coherent examples suffice: the Hadamard-basis parity information survives a flip of the result qubit. The logarithmic dependence on $n$ covers bitwise reconstruction in the depolarizing-noise treatment. Noise parameters affect the constants.\n\n\\complexity{Classical}{$2^{O(n/\\log n)}$ time and samples at fixed noise, BKW-type LPN algorithms.}\nThe classical input consists of computational-basis measurements of the same examples, giving uniformly random labeled samples with independent classification noise. BKW combines samples to eliminate coordinate blocks, trading increased noise against sample count and memory. The fastest concrete attack depends on the sample budget and noise rate. These are classical noisy-sample costs for the stated access model.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial in $n$, through Fourier interference in the quantum examples. The availability of coherent examples is part of the input model.\n\n\\dimensionlabel{Evidence}{evidenceStrong} Strong conditional evidence from classical LPN hardness. The quantum learning theorem is rigorous for its noise channel; the comparison invokes the hardness of learning from measured examples.\n\n\\dimensionlabel{Hardware}{hardwareSmall} The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Rist\\`e et al. demonstrated noisy parity learning with a small superconducting processor. This supports the small-instance category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{73}\n\\item \\href{https://arxiv.org/pdf/1407.5088}{Cross, Smith and Smolin, \\emph{Quantum Learning Robust Against Noise} (2015)}. Sections ``Learning from ideal queries'' and ``Learning in the presence of noise''; equations (7)--(8): transformed examples and classification noise; the depolarizing-noise subsection gives reconstruction bounds.\n\\item \\href{https://arxiv.org/pdf/1512.06069}{Rist\\`e et al., \\emph{Demonstration of Quantum Advantage in Machine Learning} (2017)}. Experimental learning circuits and sample-complexity results in the main text and figures.\n\\end{algorithmindex}"
+  "also_used_in": [],
+  "source_latex": "\\entrytitle{73}{Learning parity with noisy quantum examples}{strengthPolynomialTime}{evidenceStrong}{hardwareSmall}\n\\setcounter{problem}{72}\n\\begin{problem}[Learning parity with noisy quantum examples]\nRecover $a\\in\\mathbb F_2^n$ from a noisy quantum example oracle preparing $2^{-n/2}\\sum_x|x,a\\cdot x\\rangle$, followed by a specified noise channel. The classical learner receives the same examples measured in the computational basis. For classification noise, the final bit is flipped independently with constant probability $\\eta<1/2$, producing ordinary learning-parity-with-noise samples $(x,a\\cdot x+e)$. The comparison measures quantum example queries and elementary gates, and classical sample complexity and bit-operation time for measured examples.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(\\log(n/\\delta))$ examples and $O(n\\log(n/\\delta))$ processing, Cross--Smith--Smolin noisy parity learning.}\nThese bounds hold for fixed noise rate in the analyzed noisy quantum-example models, with failure probability at most $\\delta$. Under classification noise alone, $O(\\log(1/\\delta))$ coherent examples suffice: the Hadamard-basis parity information survives a flip of the result qubit. The logarithmic dependence on $n$ covers bitwise reconstruction in the depolarizing-noise treatment. Noise parameters affect the constants.\n\n\\complexity{Classical}{$2^{O(n/\\log n)}$ time and samples at fixed noise, BKW-type LPN algorithms.}\nThe classical input consists of computational-basis measurements of the same examples, giving uniformly random labeled samples with independent classification noise. BKW combines samples to eliminate coordinate blocks, trading increased noise against sample count and memory. The fastest concrete attack depends on the sample budget and noise rate. These are classical noisy-sample costs for the stated access model.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial in $n$, through Fourier interference in the quantum examples. The availability of coherent examples is part of the input model.\n\n\\dimensionlabel{Evidence}{evidenceStrong} Strong conditional evidence from classical LPN hardness. The quantum learning theorem is rigorous for its noise channel; the comparison invokes the hardness of learning from measured examples.\n\n\\dimensionlabel{Hardware}{hardwareSmall} The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Rist\\`e et al. demonstrated noisy parity learning with a small superconducting processor. This supports the small-instance category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility.\n\n\n\\subhead{Algorithm: Cross--Smith--Smolin noisy quantum parity learning}\n\\begin{algorithmindex}{73}\n\\item \\href{https://arxiv.org/pdf/1407.5088}{Cross, Smith and Smolin, \\emph{Quantum Learning Robust Against Noise} (2015)}. Sections ``Learning from ideal queries'' and ``Learning in the presence of noise''; equations (7)--(8): transformed examples and classification noise; the depolarizing-noise subsection gives reconstruction bounds.\n\\item \\href{https://arxiv.org/pdf/1512.06069}{Rist\\`e et al., \\emph{Demonstration of Quantum Advantage in Machine Learning} (2017)}. Experimental learning circuits and sample-complexity results in the main text and figures.\n\\end{algorithmindex}",
+  "importance": "high",
+  "origin": "manuscript",
+  "ordinal": 130,
+  "citation_ids": [
+    "entry-073-citation-00258",
+    "entry-073-citation-00259"
+  ]
 }
