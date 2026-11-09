@@ -79,24 +79,30 @@ function update() {
   $('problemList').innerHTML = points.map(p => `<button class="problem-button ${p.slug===selected?'selected':''}" data-slug="${p.slug}" aria-pressed="${p.slug===selected}"><span class="problem-swatch" style="background:${p.color}"></span>${esc(p.name)}</button>`).join('');
   const p = points.find(p=>p.slug===selected);
   const papers = [...p.papers.slice(0,3),...p.papers.filter(r=>selected==='factoring'&&/2048|million/i.test(r.title))];
-  $('detail').innerHTML = `<div class="detail-top"><div><div class="eyebrow">${esc(p.model)}</div><h2>${esc(p.name)}</h2><p>${esc(p.parameter)}</p></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${p.Q}</div></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${p.C}</div></div></div><div class="gain-row"><span class="field-label">ASYMPTOTIC SPEEDUP, T<sub>C</sub> / T<sub>Q</sub></span><strong>${p.gain}</strong></div><div class="detail-meta"><div><i class="dot blue"></i><strong>Evidence level:</strong> ${esc(evidenceLabels[p.evidence])}</div><div><i class="dot green"></i><strong>Required hardware:</strong> ${esc(hardwareLabels[p.hardware])}</div></div><div class="papers">${papers.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div><div class="entry-navigation"><a id="entryLink" href="#entry/${p.slug}">→ ${esc(p.name)}</a></div>`;
+  const algorithmLinks = (window.PROBLEM_ALGORITHMS[p.slug] || []).map(algorithm=>`<a class="algorithm-link" href="#algorithm/${algorithm.id}">→ ${esc(algorithm.title)}</a>`).join('');
+  $('detail').innerHTML = `<div class="detail-top"><div><div class="eyebrow">${esc(p.model)}</div><h2>${esc(p.name)}</h2><p>${esc(p.parameter)}</p></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${p.Q}</div></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${p.C}</div></div></div><div class="gain-row"><span class="field-label">ASYMPTOTIC SPEEDUP, T<sub>C</sub> / T<sub>Q</sub></span><strong>${p.gain}</strong></div><div class="detail-meta"><div><i class="dot blue"></i><strong>Evidence level:</strong> ${esc(evidenceLabels[p.evidence])}</div><div><i class="dot green"></i><strong>Required hardware:</strong> ${esc(hardwareLabels[p.hardware])}</div></div><div class="papers">${papers.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div><div class="entry-navigation"><a id="entryLink" href="#entry/${p.slug}">→ ${esc(p.name)}</a>${algorithmLinks}</div>`;
   window.demoState = {points,selected};
 }
 $('problemList').addEventListener('click',event=>{const button=event.target.closest('[data-slug]');if(button)select(button.dataset.slug);});
 $('reset').addEventListener('click',()=>scene.reset());
 $('resetCost').addEventListener('click',()=>costScene.reset());
 function showPage() {
-  const slug = location.hash.startsWith('#entry/') ? location.hash.slice(7) : null;
-  const entry = window.ENTRY_PAGES[slug];
+  const [kind, slug, anchor] = location.hash.slice(1).split('/');
+  const entry = kind === 'entry' ? window.ENTRY_PAGES[slug] : kind === 'algorithm' ? window.ALGORITHM_PAGES[slug] : null;
   const wasEntry = !$('entryPage').hidden;
   $('explore').hidden = !!entry;
   $('entryPage').hidden = !entry;
   tooltip(null);
   if (entry) {
-    selected = slug;
+    if (kind === 'entry' && models[slug]) selected = slug;
     $('entryContent').innerHTML = entry.html;
+    $('entryContent').dataset.pageType = kind;
     document.title = `${entry.title}, Quantum Speedup Map`;
     window.scrollTo({top:0,behavior:'instant'});
+    if (anchor) requestAnimationFrame(()=>{
+      const target = document.getElementById(anchor);
+      if (target && $('entryContent').contains(target)) target.scrollIntoView({behavior:'instant',block:'start'});
+    });
   } else {
     document.title = 'Quantum Speedup Map, Asymptotic View';
     if (wasEntry) {

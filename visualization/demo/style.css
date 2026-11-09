@@ -43,3 +43,18 @@
 @media(max-width:850px){.detail-meta{font-size:16px;grid-template-columns:1fr;gap:12px}.entry-page{padding-top:24px}#entryContent{padding:30px}.document-heading h1{font-size:31px}}
 @media(max-width:550px){#entryContent{padding:24px 20px;font-size:16px}.document-heading{gap:14px;margin-bottom:25px}.document-heading h1{font-size:28px}#entryContent h2{font-size:24px}#entryContent .document-problem h2{font-size:20px}.entry-navigation a{font-size:15px}.entry-page{padding-bottom:30px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.entry-navigation{flex-direction:column;align-items:flex-end;gap:9px;text-align:right}
+.entry-navigation .algorithm-link{font-size:15px;font-weight:400}
+#entryContent .entry-navigation{border-top:1px solid var(--line);padding-top:22px;margin-top:30px}
+#entryContent .entry-navigation a{color:var(--ink);text-decoration:none;font-family:'Segoe UI',Arial,sans-serif}
+#entryContent .entry-navigation a:hover{text-decoration:underline}
+.related-uses{margin-top:28px;font-size:15px;line-height:1.75}
+.related-uses h3{font:600 17px/1.6 'Segoe UI',Arial,sans-serif;margin:0 0 10px}
+.related-uses ul{padding-left:22px;margin:0}
+.related-uses li{padding-left:5px;margin-bottom:12px}
+.algorithm-applications{border-top:1px solid var(--line);margin:28px 0 0;padding:26px 0 0 22px}
+.algorithm-applications li{padding-left:5px;margin-bottom:12px;overflow-wrap:anywhere}
+.problem-anchor{scroll-margin-top:24px}
+#entryContent h1,#entryContent h2{overflow-wrap:anywhere}
+@media(max-width:550px){.entry-navigation{gap:12px}.entry-navigation a{max-width:100%;overflow-wrap:anywhere}.entry-navigation .algorithm-link{font-size:14px}.related-uses{font-size:15px}}
