@@ -1,0 +1,63 @@
+{
+  "id": "entry-012",
+  "number": 12,
+  "ordinal": 12,
+  "title_latex": "Graph bandwidth",
+  "title": "Graph bandwidth",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Graph bandwidth",
+    "name": "Graph bandwidth",
+    "statement_latex": "For $G=(V,E)$ with $n$ vertices, compute\n\\[\\operatorname{bw}(G)=\\min_{\\pi:V\\overset{\\sim}{\\longrightarrow}[n]}\\max_{uv\\in E}|\\pi(u)-\\pi(v)|.\\]\nBandwidth minimizes the largest separation of adjacent vertices, equivalently the bandwidth of a symmetrically permuted adjacency matrix.\nThe quantum bound counts QRAM time and the classical bound counts RAM operations on the explicit graph.",
+    "statement_text": "For $G=(V,E)$ with $n$ vertices, compute \\[\\operatorname{bw}(G)=\\min_{\\pi:V\\overset{\\sim}{\\longrightarrow}[n]}\\max_{uv\\in E}|\\pi(u)-\\pi(v)|.\\] Bandwidth minimizes the largest separation of adjacent vertices, equivalently the bandwidth of a symmetrically permuted adjacency matrix. The quantum bound counts QRAM time and the classical bound counts RAM operations on the explicit graph."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(2.946^n)$, quantum bandwidth dynamic programming.",
+      "headline_text": "$O^*(2.946^n)$, quantum bandwidth dynamic programming.",
+      "details_latex": "A decomposition into constrained vertex-ordering instances permits variable-time quantum search and partial subset preprocessing. The quoted time includes the search over decomposition choices and assumes coherent access to stored dynamic-programming values. Polynomial factors include graph processing and the objective threshold.",
+      "details_text": "A decomposition into constrained vertex-ordering instances permits variable-time quantum search and partial subset preprocessing. The quoted time includes the search over decomposition choices and assumes coherent access to stored dynamic-programming values. Polynomial factors include graph processing and the objective threshold."
+    },
+    "classical": {
+      "headline_latex": "$O^*(4.383^n)$, Cygan--Pilipczuk exact bandwidth algorithm.",
+      "headline_text": "$O^*(4.383^n)$, Cygan–Pilipczuk exact bandwidth algorithm.",
+      "details_latex": "The algorithm uses structural restrictions on feasible layouts to reduce the search space. The quantum construction also accelerates a simpler $O^*(5^n)$ formulation, while the $4.383^n$ bound supplies the stronger overall classical comparison. Both bounds use the number of vertices as their exponential parameter.",
+      "details_text": "The algorithm uses structural restrictions on feasible layouts to reduce the search space. The quantum construction also accelerates a simpler $O^*(5^n)$ formulation, while the $4.383^n$ bound supplies the stronger overall classical comparison. Both bounds use the number of vertices as their exponential parameter."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup from $4.383^n$ to $2.946^n$; quantum minimum finding and variable-time amplitude amplification are the principal acceleration tools.",
+      "description_text": "Polynomial speedup from $4.383^n$ to $2.946^n$; quantum minimum finding and variable-time amplitude amplification are the principal acceleration tools."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "The upper bound is rigorous in the stated memory model. The best-algorithm comparison has partial evidence from the established classical exact-algorithm literature.",
+      "description_text": "The upper bound is rigorous in the stated memory model. The best-algorithm comparison has partial evidence from the established classical exact-algorithm literature."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active subset, layout and objective registers require exponential QRAM for preprocessing. The nested searches and stored table make useful large instances a fault-tolerant target.",
+      "description_text": "Polynomial active subset, layout and objective registers require exponential QRAM for preprocessing. The nested searches and stored table make useful large instances a fault-tolerant target."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "12.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Section 4, Theorem 6: bandwidth algorithm; the section specifies the classical recurrence and cites the Cygan--Pilipczuk $4.383^n$ algorithm.",
+      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Section 4, Theorem 6: bandwidth algorithm; the section specifies the classical recurrence and cites the Cygan–Pilipczuk $4.383^n$ algorithm.",
+      "citation_ids": [
+        "entry-012-citation-001"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-012-citation-001"
+  ],
+  "source_latex": "\\entrytitle{12}{Graph bandwidth}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{11}\n\\begin{problem}[Graph bandwidth]\nFor $G=(V,E)$ with $n$ vertices, compute\n\\[\\operatorname{bw}(G)=\\min_{\\pi:V\\overset{\\sim}{\\longrightarrow}[n]}\\max_{uv\\in E}|\\pi(u)-\\pi(v)|.\\]\nBandwidth minimizes the largest separation of adjacent vertices, equivalently the bandwidth of a symmetrically permuted adjacency matrix.\nThe quantum bound counts QRAM time and the classical bound counts RAM operations on the explicit graph.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(2.946^n)$, quantum bandwidth dynamic programming.}\nA decomposition into constrained vertex-ordering instances permits variable-time quantum search and partial subset preprocessing. The quoted time includes the search over decomposition choices and assumes coherent access to stored dynamic-programming values. Polynomial factors include graph processing and the objective threshold.\n\\complexity{Classical}{$O^*(4.383^n)$, Cygan--Pilipczuk exact bandwidth algorithm.}\nThe algorithm uses structural restrictions on feasible layouts to reduce the search space. The quantum construction also accelerates a simpler $O^*(5^n)$ formulation, while the $4.383^n$ bound supplies the stronger overall classical comparison. Both bounds use the number of vertices as their exponential parameter.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup from $4.383^n$ to $2.946^n$; quantum minimum finding and variable-time amplitude amplification are the principal acceleration tools.\n\\dimensionlabel{Evidence}{evidencePartial} The upper bound is rigorous in the stated memory model. The best-algorithm comparison has partial evidence from the established classical exact-algorithm literature.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset, layout and objective registers require exponential QRAM for preprocessing. The nested searches and stored table make useful large instances a fault-tolerant target.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{12}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Section 4, Theorem 6: bandwidth algorithm; the section specifies the classical recurrence and cites the Cygan--Pilipczuk $4.383^n$ algorithm.\n\\end{algorithmindex}"
+}

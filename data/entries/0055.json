@@ -1,0 +1,63 @@
+{
+  "id": "entry-055",
+  "number": 55,
+  "ordinal": 53,
+  "title_latex": "Traversing a randomly welded pair of trees",
+  "title": "Traversing a randomly welded pair of trees",
+  "chapter_id": "chapter-2",
+  "problem": {
+    "name_latex": "Welded-tree traversal",
+    "name": "Welded-tree traversal",
+    "statement_latex": "Two depth-$h$ binary trees have their leaves joined by a random alternating cycle; vertex names are random strings. Given the entrance root and an oracle returning neighbors, output the other root. The graph has $N=\\Theta(2^h)$ vertices and constant degree. This is a graph-search oracle problem exhibiting structural exponential advantage.\nComplexity counts neighbor-oracle queries and quantum gates in the random-label oracle model.",
+    "statement_text": "Two depth-$h$ binary trees have their leaves joined by a random alternating cycle; vertex names are random strings. Given the entrance root and an oracle returning neighbors, output the other root. The graph has $N=\\Theta(2^h)$ vertices and constant degree. This is a graph-search oracle problem exhibiting structural exponential advantage. Complexity counts neighbor-oracle queries and quantum gates in the random-label oracle model."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(h)$ queries and gates, the Childs et al. continuous-time quantum walk.",
+      "headline_text": "$\\operatorname{poly}(h)$ queries and gates, the Childs et al. continuous-time quantum walk.",
+      "details_latex": "The graph has $\\Theta(2^h)$ vertices, but its column symmetry confines the relevant evolution to a polynomial-dimensional effective path. The oracle implements sparse-graph evolution from the entrance, and measurement finds the exit with probability amplified to a constant.",
+      "details_text": "The graph has $\\Theta(2^h)$ vertices, but its column symmetry confines the relevant evolution to a polynomial-dimensional effective path. The oracle implements sparse-graph evolution from the entrance, and measurement finds the exit with probability amplified to a constant."
+    },
+    "classical": {
+      "headline_latex": "$2^{\\Omega(h)}$ queries in the worst case, classical randomized oracle exploration.",
+      "headline_text": "$2^{\\Omega(h)}$ queries in the worst case, classical randomized oracle exploration.",
+      "details_latex": "The original lower bound shows that an algorithm making at most $2^{h/6}$ queries has exponentially small success probability. Breadth-first exploration gives an $O(2^h)$ upper bound. Random labels and the hidden leaf welding prevent a classical query algorithm from reconstructing the useful column structure with polynomially many queries.",
+      "details_text": "The original lower bound shows that an algorithm making at most $2^{h/6}$ queries has exponentially small success probability. Breadth-first exploration gives an $O(2^h)$ upper bound. Random labels and the hidden leaf welding prevent a classical query algorithm from reconstructing the useful column structure with polynomially many queries."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential to polynomial, through continuous-time quantum transport and interference.",
+      "description_text": "Exponential to polynomial, through continuous-time quantum transport and interference."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Fully rigorous quantum--classical separation in the specified graph-oracle model.",
+      "description_text": "Fully rigorous quantum–classical separation in the specified graph-oracle model."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Fault-tolerant digital simulation uses $O(h)$ vertex-label qubits plus sparse-Hamiltonian simulation and oracle workspace. A physical analog realization with one site per graph vertex instead needs $\\Theta(2^h)$ sites, a distinct resource model.",
+      "description_text": "Fault-tolerant digital simulation uses $O(h)$ vertex-label qubits plus sparse-Hamiltonian simulation and oracle workspace. A physical analog realization with one site per graph vertex instead needs $\\Theta(2^h)$ sites, a distinct resource model."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "55.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0209131}{Childs et al., \\emph{Exponential Algorithmic Speedup by a Quantum Walk} (2003)}. Theorem 3: quantum traversal; Theorem 9: classical query lower bound.",
+      "content_text": "Childs et al., Exponential Algorithmic Speedup by a Quantum Walk (2003). Theorem 3: quantum traversal; Theorem 9: classical query lower bound.",
+      "citation_ids": [
+        "entry-055-citation-001"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-055-citation-001"
+  ],
+  "source_latex": "\\entrytitle{55}{Traversing a randomly welded pair of trees}{strengthPolynomialTime}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{54}\n\\begin{problem}[Welded-tree traversal]\nTwo depth-$h$ binary trees have their leaves joined by a random alternating cycle; vertex names are random strings. Given the entrance root and an oracle returning neighbors, output the other root. The graph has $N=\\Theta(2^h)$ vertices and constant degree. This is a graph-search oracle problem exhibiting structural exponential advantage.\nComplexity counts neighbor-oracle queries and quantum gates in the random-label oracle model.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\operatorname{poly}(h)$ queries and gates, the Childs et al. continuous-time quantum walk.}\nThe graph has $\\Theta(2^h)$ vertices, but its column symmetry confines the relevant evolution to a polynomial-dimensional effective path. The oracle implements sparse-graph evolution from the entrance, and measurement finds the exit with probability amplified to a constant.\n\n\\complexity{Classical}{$2^{\\Omega(h)}$ queries in the worst case, classical randomized oracle exploration.}\nThe original lower bound shows that an algorithm making at most $2^{h/6}$ queries has exponentially small success probability. Breadth-first exploration gives an $O(2^h)$ upper bound. Random labels and the hidden leaf welding prevent a classical query algorithm from reconstructing the useful column structure with polynomially many queries.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Exponential to polynomial, through continuous-time quantum transport and interference.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully rigorous quantum--classical separation in the specified graph-oracle model.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant digital simulation uses $O(h)$ vertex-label qubits plus sparse-Hamiltonian simulation and oracle workspace. A physical analog realization with one site per graph vertex instead needs $\\Theta(2^h)$ sites, a distinct resource model.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{55}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0209131}{Childs et al., \\emph{Exponential Algorithmic Speedup by a Quantum Walk} (2003)}. Theorem 3: quantum traversal; Theorem 9: classical query lower bound.\n\\end{algorithmindex}"
+}

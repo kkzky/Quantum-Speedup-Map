@@ -1,0 +1,63 @@
+{
+  "id": "entry-026",
+  "number": 26,
+  "ordinal": 26,
+  "title_latex": "Vertex arboricity",
+  "title": "Vertex arboricity",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Vertex arboricity",
+    "name": "Vertex arboricity",
+    "statement_latex": "Find the smallest $k$ for which $V(G)=V_1\\mathbin{\\dot\\cup}\\cdots\\mathbin{\\dot\\cup}V_k$ and every $G[V_i]$ is a forest. This invariant is vertex arboricity. Equivalently, cover the vertex set by $k$ maximal induced forests: enlarge each forest for the forward implication and assign overlapping vertices to one covering forest for the reverse implication.\nThe quantum algorithm is measured in QRAM time and the classical subset algorithm in RAM time.",
+    "statement_text": "Find the smallest $k$ for which $V(G)=V_1\\mathbin{\\dot\\cup}\\cdots\\mathbin{\\dot\\cup}V_k$ and every $G[V_i]$ is a forest. This invariant is vertex arboricity. Equivalently, cover the vertex set by $k$ maximal induced forests: enlarge each forest for the forward implication and assign overlapping vertices to one covering forest for the reverse implication. The quantum algorithm is measured in QRAM time and the classical subset algorithm in RAM time."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(1.9629^n)$, Gaspers--Li induced-forest covering algorithm.",
+      "headline_text": "$O^*(1.9629^n)$, Gaspers–Li induced-forest covering algorithm.",
+      "details_latex": "The framework uses a maximal-induced-forest enumeration procedure with base $1.8527$, combined with partial preprocessing and quantum search. Heredity permits deletion of overlaps from a forest covering to obtain a partition with the same number of parts. The input graph is explicit, and the number of parts is optimized.",
+      "details_text": "The framework uses a maximal-induced-forest enumeration procedure with base $1.8527$, combined with partial preprocessing and quantum search. Heredity permits deletion of overlaps from a forest covering to obtain a partition with the same number of parts. The input graph is explicit, and the number of parts is optimized."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^n)$, inclusion--exclusion over induced forests.",
+      "headline_text": "$O^*(2^n)$, inclusion–exclusion over induced forests.",
+      "details_latex": "Forest membership is polynomial-time decidable. Subset transforms aggregate admissible families and test covering feasibility; the covering-partition equivalence then gives the vertex-arboricity optimum. Classical memory is exponential at this time bound. Forest acyclicity is the defining global condition in this comparison.",
+      "details_text": "Forest membership is polynomial-time decidable. Subset transforms aggregate admissible families and test covering feasibility; the covering-partition equivalence then gives the vertex-arboricity optimum. Classical memory is exponential at this time bound. Forest acyclicity is the defining global condition in this comparison."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup from $2^n$ to $1.9629^n$, based on amplitude amplification.",
+      "description_text": "Polynomial speedup from $2^n$ to $1.9629^n$, based on amplitude amplification."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous quantum framework upper bound with partial evidence relative to the strongest displayed general classical subset method.",
+      "description_text": "Rigorous quantum framework upper bound with partial evidence relative to the strongest displayed general classical subset method."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active graph and subset registers require exponential coherent preprocessing storage. The modest reduction in the exponential base still leaves exponentially long coherent computation; useful implementations require fault tolerance.",
+      "description_text": "Polynomial active graph and subset registers require exponential coherent preprocessing storage. The modest reduction in the exponential base still leaves exponentially long coherent computation; useful implementations require fault tolerance."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "26.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 7, maximal-induced-forest application; the preceding applications discussion gives the enumeration base and covering-partition equivalence, and Theorem 4 gives the quantum framework.",
+      "content_text": "Gaspers and Li, Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems (ICALP 2024). Theorem 7, maximal-induced-forest application; the preceding applications discussion gives the enumeration base and covering-partition equivalence, and Theorem 4 gives the quantum framework.",
+      "citation_ids": [
+        "entry-026-citation-001"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-026-citation-001"
+  ],
+  "source_latex": "\\entrytitle{26}{Vertex arboricity}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{25}\n\\begin{problem}[Vertex arboricity]\nFind the smallest $k$ for which $V(G)=V_1\\mathbin{\\dot\\cup}\\cdots\\mathbin{\\dot\\cup}V_k$ and every $G[V_i]$ is a forest. This invariant is vertex arboricity. Equivalently, cover the vertex set by $k$ maximal induced forests: enlarge each forest for the forward implication and assign overlapping vertices to one covering forest for the reverse implication.\nThe quantum algorithm is measured in QRAM time and the classical subset algorithm in RAM time.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.9629^n)$, Gaspers--Li induced-forest covering algorithm.}\nThe framework uses a maximal-induced-forest enumeration procedure with base $1.8527$, combined with partial preprocessing and quantum search. Heredity permits deletion of overlaps from a forest covering to obtain a partition with the same number of parts. The input graph is explicit, and the number of parts is optimized.\n\\complexity{Classical}{$O^*(2^n)$, inclusion--exclusion over induced forests.}\nForest membership is polynomial-time decidable. Subset transforms aggregate admissible families and test covering feasibility; the covering-partition equivalence then gives the vertex-arboricity optimum. Classical memory is exponential at this time bound. Forest acyclicity is the defining global condition in this comparison.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup from $2^n$ to $1.9629^n$, based on amplitude amplification.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum framework upper bound with partial evidence relative to the strongest displayed general classical subset method.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active graph and subset registers require exponential coherent preprocessing storage. The modest reduction in the exponential base still leaves exponentially long coherent computation; useful implementations require fault tolerance.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{26}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 7, maximal-induced-forest application; the preceding applications discussion gives the enumeration base and covering-partition equivalence, and Theorem 4 gives the quantum framework.\n\\end{algorithmindex}"
+}

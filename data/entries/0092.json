@@ -1,0 +1,63 @@
+{
+  "id": "entry-092",
+  "number": 92,
+  "ordinal": 94,
+  "title_latex": "Total Boolean decision problems: a fourth-power bound",
+  "title": "Total Boolean decision problems: a fourth-power bound",
+  "chapter_id": "chapter-4",
+  "problem": {
+    "name_latex": "Total Boolean function evaluation",
+    "name": "Total Boolean function evaluation",
+    "statement_latex": "For a total function $f:\\{0,1\\}^N\\to\\{0,1\\}$, determine $f(x)$ by accessing individual bits of $x$. Every $N$-bit string is a valid input. Threshold decision versions of explicitly encoded optimization problems are examples. Complexity is measured in input-bit oracle queries, with deterministic classical and bounded-error quantum algorithms distinguished.",
+    "statement_text": "For a total function $f:\\{0,1\\}^N\\to\\{0,1\\}$, determine $f(x)$ by accessing individual bits of $x$. Every $N$-bit string is a valid input. Threshold decision versions of explicitly encoded optimization problems are examples. Complexity is measured in input-bit oracle queries, with deterministic classical and bounded-error quantum algorithms distinguished."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$Q(f)$ queries, an optimal bounded-error quantum decision algorithm.",
+      "headline_text": "$Q(f)$ queries, an optimal bounded-error quantum decision algorithm.",
+      "details_latex": "The theorem relates this resource to deterministic query complexity for every total Boolean function. In particular, every nonconstant monotone graph property on an $n$-vertex adjacency matrix has quantum query complexity $\\Omega(n)$.",
+      "details_text": "The theorem relates this resource to deterministic query complexity for every total Boolean function. In particular, every nonconstant monotone graph property on an $n$-vertex adjacency matrix has quantum query complexity $\\Omega(n)$."
+    },
+    "classical": {
+      "headline_latex": "$D(f)=O(Q(f)^4)$ queries, deterministic decision-tree evaluation.",
+      "headline_text": "$D(f)=O(Q(f)^4)$ queries, deterministic decision-tree evaluation.",
+      "details_latex": "A decision tree achieving this bound exists for every total $f$. Randomized query complexity satisfies $R(f)\\le D(f)$. Known total functions attain the fourth-power deterministic-versus-quantum relationship up to logarithmic factors. The resource being bounded is the number of queried input bits; computation on the answers is free in this model.",
+      "details_text": "A decision tree achieving this bound exists for every total $f$. Randomized query complexity satisfies $R(f)\\le D(f)$. Known total functions attain the fourth-power deterministic-versus-quantum relationship up to logarithmic factors. The resource being bounded is the number of queried input bits; computation on the answers is free in this model."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "A polynomial upper bound on the possible query advantage, including separations greater than quadratic. The fourth-power relationship concerns deterministic classical complexity.",
+      "description_text": "A polynomial upper bound on the possible query advantage, including separations greater than quadratic. The fourth-power relationship concerns deterministic classical complexity."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Unconditional query-complexity theorems, with the fourth-power exponent attained up to logarithmic factors.",
+      "description_text": "Unconditional query-complexity theorems, with the fourth-power exponent attained up to logarithmic factors."
+    },
+    "hardware": {
+      "category_id": "hardware-unspecified",
+      "color_key": "white",
+      "description_latex": "A complexity constraint. A concrete decision algorithm supplies its own address register, workspace and oracle circuit.",
+      "description_text": "A complexity constraint. A concrete decision algorithm supplies its own address register, workspace and oracle circuit."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "92.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2004.13231}{Aaronson, Ben-David, Kothari and Tal, \\emph{Quantum Implications of Huang's Sensitivity Theorem} (2020)}. Theorem 1 for $D(f)=O(Q(f)^4)$; Theorem 3 for monotone graph properties. Sections 3--4 give the corresponding arguments.",
+      "content_text": "Aaronson, Ben-David, Kothari and Tal, Quantum Implications of Huang's Sensitivity Theorem (2020). Theorem 1 for $D(f)=O(Q(f)^4)$; Theorem 3 for monotone graph properties. Sections 3–4 give the corresponding arguments.",
+      "citation_ids": [
+        "entry-092-citation-001"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-092-citation-001"
+  ],
+  "source_latex": "\\entrytitle{92}{Total Boolean decision problems: a fourth-power bound}{strengthPolynomial}{evidenceProved}{white}\n\\setcounter{problem}{91}\n\\begin{problem}[Total Boolean function evaluation]\nFor a total function $f:\\{0,1\\}^N\\to\\{0,1\\}$, determine $f(x)$ by accessing individual bits of $x$. Every $N$-bit string is a valid input. Threshold decision versions of explicitly encoded optimization problems are examples. Complexity is measured in input-bit oracle queries, with deterministic classical and bounded-error quantum algorithms distinguished.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$Q(f)$ queries, an optimal bounded-error quantum decision algorithm.}\nThe theorem relates this resource to deterministic query complexity for every total Boolean function. In particular, every nonconstant monotone graph property on an $n$-vertex adjacency matrix has quantum query complexity $\\Omega(n)$.\n\n\\complexity{Classical}{$D(f)=O(Q(f)^4)$ queries, deterministic decision-tree evaluation.}\nA decision tree achieving this bound exists for every total $f$. Randomized query complexity satisfies $R(f)\\le D(f)$. Known total functions attain the fourth-power deterministic-versus-quantum relationship up to logarithmic factors. The resource being bounded is the number of queried input bits; computation on the answers is free in this model.\n\n\\dimensionlabel{Strength}{strengthPolynomial} A polynomial upper bound on the possible query advantage, including separations greater than quadratic. The fourth-power relationship concerns deterministic classical complexity.\n\n\\dimensionlabel{Evidence}{evidenceProved} Unconditional query-complexity theorems, with the fourth-power exponent attained up to logarithmic factors.\n\n\\dimensionlabel{Hardware}{white} A complexity constraint. A concrete decision algorithm supplies its own address register, workspace and oracle circuit.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{92}\n\\item \\href{https://arxiv.org/pdf/2004.13231}{Aaronson, Ben-David, Kothari and Tal, \\emph{Quantum Implications of Huang's Sensitivity Theorem} (2020)}. Theorem 1 for $D(f)=O(Q(f)^4)$; Theorem 3 for monotone graph properties. Sections 3--4 give the corresponding arguments.\n\\end{algorithmindex}"
+}

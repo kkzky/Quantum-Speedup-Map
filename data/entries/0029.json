@@ -1,0 +1,73 @@
+{
+  "id": "entry-029",
+  "number": 29,
+  "ordinal": 29,
+  "title_latex": "Minimum interval completion",
+  "title": "Minimum interval completion",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Minimum interval graph completion",
+    "name": "Minimum interval graph completion",
+    "statement_latex": "Given $G=(V,E)$, minimize $|F|$ such that $(V,E\\cup F)$ is an interval graph: there must exist real intervals $I_v$ with $uv\\in E\\cup F$ exactly when $I_u\\cap I_v\\neq\\varnothing$. The objective adds as few missing overlaps as possible and occurs in interval representations and ordering problems.\nThe quantum ordering bound uses QRAM time and the classical exact and parameterized bounds use RAM time.",
+    "statement_text": "Given $G=(V,E)$, minimize $|F|$ such that $(V,E\\cup F)$ is an interval graph: there must exist real intervals $I_v$ with $uv\\in E\\cup F$ exactly when $I_u\\cap I_v\\neq\\varnothing$. The objective adds as few missing overlaps as possible and occurs in interval representations and ordering problems. The quantum ordering bound uses QRAM time and the classical exact and parameterized bounds use RAM time."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
+      "headline_text": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
+      "details_latex": "The ordering characterization assigns a local interval-completion cost to each vertex appended after a prefix. Recursive minimum finding combines partial subset values to optimize the total cost. The resulting ordering determines the completion, and the stated bound assumes exponential coherent preprocessing memory.",
+      "details_text": "The ordering characterization assigns a local interval-completion cost to each vertex appended after a prefix. Recursive minimum finding combines partial subset values to optimize the total cost. The resulting ordering determines the completion, and the stated bound assumes exponential coherent preprocessing memory."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^n)$, subset dynamic programming; $k^{O(\\sqrt k)}n^{O(1)}$, parameterized interval completion.",
+      "headline_text": "$O^*(2^n)$, subset dynamic programming; $k^{O(\\sqrt k)}n^{O(1)}$, parameterized interval completion.",
+      "details_latex": "The first bound uses vertex count $n$ as its exponential parameter. The second decides whether at most $k$ edges suffice and recovers a completion by exploiting the structure of a small fill set. For an instance with small optimum $k$, the parameterized expression supplies the stronger comparator. Threshold search can be used to obtain the exact optimum.",
+      "details_text": "The first bound uses vertex count $n$ as its exponential parameter. The second decides whether at most $k$ edges suffice and recovers a completion by exploiting the structure of a small fill set. For an instance with small optimum $k$, the parameterized expression supplies the stronger comparator. Threshold search can be used to obtain the exact optimum."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant in the unrestricted vertex-count comparison, based on amplitude amplification. Small-fill instances have the stated classical parameterized alternative.",
+      "description_text": "Polynomial speedup through a smaller exponential constant in the unrestricted vertex-count comparison, based on amplitude amplification. Small-fill instances have the stated classical parameterized alternative."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous QRAM upper bound and partial evidence relative to the best displayed general classical bound.",
+      "description_text": "Rigorous QRAM upper bound and partial evidence relative to the best displayed general classical bound."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active subset, objective and reconstruction registers accompany exponential coherent storage. Large-instance quantum computation requires fault tolerance; the fill parameter changes which classical bound should be used.",
+      "description_text": "Polynomial active subset, objective and reconstruction registers accompany exponential coherent storage. Large-instance quantum computation requires fault tolerance; the fill parameter changes which classical bound should be used."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "29.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): interval-completion ordering application.",
+      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Corollary 5 and equation (3): interval-completion ordering application.",
+      "citation_ids": [
+        "entry-029-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "29.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/1402.3473}{Bliznets et al., \\emph{A Subexponential Parameterized Algorithm for Interval Completion}}. Theorem 1.1 states the $k^{O(\\sqrt k)}n^{O(1)}$ result; the algorithmic construction combines the structural enumeration and dynamic-programming sections.",
+      "content_text": "Bliznets et al., A Subexponential Parameterized Algorithm for Interval Completion. Theorem 1.1 states the $k^{O(\\sqrt k)}n^{O(1)}$ result; the algorithmic construction combines the structural enumeration and dynamic-programming sections.",
+      "citation_ids": [
+        "entry-029-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-029-citation-001",
+    "entry-029-citation-002"
+  ],
+  "source_latex": "\\entrytitle{29}{Minimum interval completion}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{28}\n\\begin{problem}[Minimum interval graph completion]\nGiven $G=(V,E)$, minimize $|F|$ such that $(V,E\\cup F)$ is an interval graph: there must exist real intervals $I_v$ with $uv\\in E\\cup F$ exactly when $I_u\\cap I_v\\neq\\varnothing$. The objective adds as few missing overlaps as possible and occurs in interval representations and ordering problems.\nThe quantum ordering bound uses QRAM time and the classical exact and parameterized bounds use RAM time.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.}\nThe ordering characterization assigns a local interval-completion cost to each vertex appended after a prefix. Recursive minimum finding combines partial subset values to optimize the total cost. The resulting ordering determines the completion, and the stated bound assumes exponential coherent preprocessing memory.\n\\complexity{Classical}{$O^*(2^n)$, subset dynamic programming; $k^{O(\\sqrt k)}n^{O(1)}$, parameterized interval completion.}\nThe first bound uses vertex count $n$ as its exponential parameter. The second decides whether at most $k$ edges suffice and recovers a completion by exploiting the structure of a small fill set. For an instance with small optimum $k$, the parameterized expression supplies the stronger comparator. Threshold search can be used to obtain the exact optimum.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant in the unrestricted vertex-count comparison, based on amplitude amplification. Small-fill instances have the stated classical parameterized alternative.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous QRAM upper bound and partial evidence relative to the best displayed general classical bound.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset, objective and reconstruction registers accompany exponential coherent storage. Large-instance quantum computation requires fault tolerance; the fill parameter changes which classical bound should be used.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{29}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): interval-completion ordering application.\n\\item \\href{https://arxiv.org/pdf/1402.3473}{Bliznets et al., \\emph{A Subexponential Parameterized Algorithm for Interval Completion}}. Theorem 1.1 states the $k^{O(\\sqrt k)}n^{O(1)}$ result; the algorithmic construction combines the structural enumeration and dynamic-programming sections.\n\\end{algorithmindex}"
+}

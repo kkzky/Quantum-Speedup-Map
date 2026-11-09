@@ -1,0 +1,73 @@
+{
+  "id": "entry-093",
+  "number": 93,
+  "ordinal": 95,
+  "title_latex": "Symmetric promise problems and graph properties",
+  "title": "Symmetric promise problems and graph properties",
+  "chapter_id": "chapter-4",
+  "problem": {
+    "name_latex": "Symmetric decision problems and graph property testing",
+    "name": "Symmetric decision problems and graph property testing",
+    "statement_latex": "Let $P\\subseteq\\Sigma^N$ and $f:P\\to\\{0,1\\}$ be invariant under every permutation of the $N$ input positions. Given oracle access to $x\\in P$, determine $f(x)$. For graph properties, require invariance under vertex relabeling and specify either adjacency-matrix or adjacency-list access. In the latter model, let $\\mathcal P_k$ be the graph family of maximum degree five defined by Ben-David et al., Section 6, with tree-depth parameter $k\\ge 1$. Given $0<\\varepsilon<1$ and a neighbor oracle $[N]\\times[5]\\to[N]\\cup\\{\\bot\\}$ for an undirected multigraph $G=(V,E)$, $|V|=N$, distinguish\n\\[\nG\\in\\mathcal P_k\n\\quad\\text{from}\\quad\n|E\\mathbin{\\triangle}E'|\\ge\\varepsilon N\n\\ \\text{for every }G'=(V,E')\\in\\mathcal P_k,\n\\]\nwith error at most $1/3$. Edge edits count multiplicity; self-loops and parallel edges are allowed. These models describe the role of symmetry and input access in quantum speedups. Complexity is measured in the corresponding input-symbol, adjacency-matrix, or neighbor-oracle queries.",
+    "statement_text": "Let $P\\subseteq\\Sigma^N$ and $f:P\\to\\{0,1\\}$ be invariant under every permutation of the $N$ input positions. Given oracle access to $x\\in P$, determine $f(x)$. For graph properties, require invariance under vertex relabeling and specify either adjacency-matrix or adjacency-list access. In the latter model, let $\\mathcal P_k$ be the graph family of maximum degree five defined by Ben-David et al., Section 6, with tree-depth parameter $k\\ge 1$. Given $0<\\varepsilon<1$ and a neighbor oracle $[N]\\times[5]\\to[N]\\cup\\{\\bot\\}$ for an undirected multigraph $G=(V,E)$, $|V|=N$, distinguish \\[ G\\in\\mathcal P_k \\quad\\text{from}\\quad |E\\mathbin{\\triangle}E'|\\ge\\varepsilon N \\ \\text{for every }G'=(V,E')\\in\\mathcal P_k, \\] with error at most $1/3$. Edge edits count multiplicity; self-loops and parallel edges are allowed. These models describe the role of symmetry and input access in quantum speedups. Complexity is measured in the corresponding input-symbol, adjacency-matrix, or neighbor-oracle queries."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$(k/\\varepsilon)^{O(1)}$ queries for $\\mathcal P_k$, quantum-walk property testing; $Q(f)$ for the symmetric decision problems.",
+      "headline_text": "$(k/\\varepsilon)^{O(1)}$ queries for $\\mathcal P_k$, quantum-walk property testing; $Q(f)$ for the symmetric decision problems.",
+      "details_latex": "The tester identifies weld vertices by quantum walks and checks the graph structure locally. It has perfect completeness and rejects $\\varepsilon$-far inputs with probability at least $2/3$. Here $Q(f)$ and $R(f)$ denote bounded-error quantum and randomized query complexity; each comparison uses the same promise and oracle representation.",
+      "details_text": "The tester identifies weld vertices by quantum walks and checks the graph structure locally. It has perfect completeness and rejects $\\varepsilon$-far inputs with probability at least $2/3$. Here $Q(f)$ and $R(f)$ denote bounded-error quantum and randomized query complexity; each comparison uses the same promise and oracle representation."
+    },
+    "classical": {
+      "headline_latex": "$\\exp(\\Omega(k))$ queries required for $\\mathcal P_k$ at a fixed constant $\\varepsilon>0$, and $O(N)$ sufficient by reading the graph; $O(Q(f)^3)$ for full permutation symmetry, Chailloux's simulation.",
+      "headline_text": "$\\exp(\\Omega(k))$ queries required for $\\mathcal P_k$ at a fixed constant $\\varepsilon>0$, and $O(N)$ sufficient by reading the graph; $O(Q(f)^3)$ for full permutation symmetry, Chailloux's simulation.",
+      "details_latex": "The lower bound holds for every bounded-error randomized tester. Reading the adjacency lists permits exact membership testing with unrestricted offline computation. For adjacency-matrix graph properties, $R(f)=O(Q(f)^6)$; for fixed $r$-uniform hypergraphs, $R(f)=O(Q(f)^{3r})$.",
+      "details_text": "The lower bound holds for every bounded-error randomized tester. Reading the adjacency lists permits exact membership testing with unrestricted offline computation. For adjacency-matrix graph properties, $R(f)=O(Q(f)^6)$; for fixed $r$-uniform hypergraphs, $R(f)=O(Q(f)^{3r})$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential to polynomial query complexity in $k$ for adjacency-list testing of $\\mathcal P_k$. Full permutation symmetry and adjacency-matrix graph symmetry impose the stated polynomial limits.",
+      "description_text": "Exponential to polynomial query complexity in $k$ for adjacency-list testing of $\\mathcal P_k$. Full permutation symmetry and adjacency-matrix graph symmetry impose the stated polynomial limits."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Unconditional classical query lower bounds establish the adjacency-list separation; classical simulation theorems establish the limits in the other models.",
+      "description_text": "Unconditional classical query lower bounds establish the adjacency-list separation; classical simulation theorems establish the limits in the other models."
+    },
+    "hardware": {
+      "category_id": "hardware-unspecified",
+      "color_key": "white",
+      "description_latex": "Each vertex-label register uses $\\lceil\\log_2N\\rceil$ qubits. Further resources depend on the neighbor oracle and quantum-walk implementation; the simulation theorems specify query complexity.",
+      "description_text": "Each vertex-label register uses $\\lceil\\log_2N\\rceil$ qubits. Further resources depend on the neighbor oracle and quantum-walk implementation; the simulation theorems specify query complexity."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "93.1",
+      "content_latex": "\\href{https://doi.org/10.4230/LIPIcs.ITCS.2019.19}{Chailloux, \\emph{A Note on the Quantum Query Complexity of Permutation Symmetric Functions} (2019)}. Theorem 3; Section 3, especially Section 3.1, for the classical simulation.",
+      "content_text": "Chailloux, A Note on the Quantum Query Complexity of Permutation Symmetric Functions (2019). Theorem 3; Section 3, especially Section 3.1, for the classical simulation.",
+      "citation_ids": [
+        "entry-093-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "93.2",
+      "content_latex": "\\href{https://doi.org/10.1137/23M1573975}{Ben-David et al., \\emph{Symmetries, Graph Properties, and Quantum Speedups} (2024)}. Theorem 1.2 and Corollary 4.14: matrix-model limits. Section 6, pp.~FOCS20-393--394: formal definition of $\\mathcal P_k$ and edge-edit distance. Theorem 6.1 and Sections 6.1--6.3: quantum tester and classical lower bound.",
+      "content_text": "Ben-David et al., Symmetries, Graph Properties, and Quantum Speedups (2024). Theorem 1.2 and Corollary 4.14: matrix-model limits. Section 6, pp. FOCS20-393–394: formal definition of $\\mathcal P_k$ and edge-edit distance. Theorem 6.1 and Sections 6.1–6.3: quantum tester and classical lower bound.",
+      "citation_ids": [
+        "entry-093-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-093-citation-001",
+    "entry-093-citation-002"
+  ],
+  "source_latex": "\\entrytitle{93}{Symmetric promise problems and graph properties}{strengthPolynomialTime}{evidenceProved}{white}\n\\setcounter{problem}{92}\n\\begin{problem}[Symmetric decision problems and graph property testing]\nLet $P\\subseteq\\Sigma^N$ and $f:P\\to\\{0,1\\}$ be invariant under every permutation of the $N$ input positions. Given oracle access to $x\\in P$, determine $f(x)$. For graph properties, require invariance under vertex relabeling and specify either adjacency-matrix or adjacency-list access. In the latter model, let $\\mathcal P_k$ be the graph family of maximum degree five defined by Ben-David et al., Section 6, with tree-depth parameter $k\\ge 1$. Given $0<\\varepsilon<1$ and a neighbor oracle $[N]\\times[5]\\to[N]\\cup\\{\\bot\\}$ for an undirected multigraph $G=(V,E)$, $|V|=N$, distinguish\n\\[\nG\\in\\mathcal P_k\n\\quad\\text{from}\\quad\n|E\\mathbin{\\triangle}E'|\\ge\\varepsilon N\n\\ \\text{for every }G'=(V,E')\\in\\mathcal P_k,\n\\]\nwith error at most $1/3$. Edge edits count multiplicity; self-loops and parallel edges are allowed. These models describe the role of symmetry and input access in quantum speedups. Complexity is measured in the corresponding input-symbol, adjacency-matrix, or neighbor-oracle queries.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$(k/\\varepsilon)^{O(1)}$ queries for $\\mathcal P_k$, quantum-walk property testing; $Q(f)$ for the symmetric decision problems.}\nThe tester identifies weld vertices by quantum walks and checks the graph structure locally. It has perfect completeness and rejects $\\varepsilon$-far inputs with probability at least $2/3$. Here $Q(f)$ and $R(f)$ denote bounded-error quantum and randomized query complexity; each comparison uses the same promise and oracle representation.\n\n\\complexity{Classical}{$\\exp(\\Omega(k))$ queries required for $\\mathcal P_k$ at a fixed constant $\\varepsilon>0$, and $O(N)$ sufficient by reading the graph; $O(Q(f)^3)$ for full permutation symmetry, Chailloux's simulation.}\nThe lower bound holds for every bounded-error randomized tester. Reading the adjacency lists permits exact membership testing with unrestricted offline computation. For adjacency-matrix graph properties, $R(f)=O(Q(f)^6)$; for fixed $r$-uniform hypergraphs, $R(f)=O(Q(f)^{3r})$.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Exponential to polynomial query complexity in $k$ for adjacency-list testing of $\\mathcal P_k$. Full permutation symmetry and adjacency-matrix graph symmetry impose the stated polynomial limits.\n\n\\dimensionlabel{Evidence}{evidenceProved} Unconditional classical query lower bounds establish the adjacency-list separation; classical simulation theorems establish the limits in the other models.\n\n\\dimensionlabel{Hardware}{white} Each vertex-label register uses $\\lceil\\log_2N\\rceil$ qubits. Further resources depend on the neighbor oracle and quantum-walk implementation; the simulation theorems specify query complexity.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{93}\n\\item \\href{https://doi.org/10.4230/LIPIcs.ITCS.2019.19}{Chailloux, \\emph{A Note on the Quantum Query Complexity of Permutation Symmetric Functions} (2019)}. Theorem 3; Section 3, especially Section 3.1, for the classical simulation.\n\\item \\href{https://doi.org/10.1137/23M1573975}{Ben-David et al., \\emph{Symmetries, Graph Properties, and Quantum Speedups} (2024)}. Theorem 1.2 and Corollary 4.14: matrix-model limits. Section 6, pp.~FOCS20-393--394: formal definition of $\\mathcal P_k$ and edge-edit distance. Theorem 6.1 and Sections 6.1--6.3: quantum tester and classical lower bound.\n\\end{algorithmindex}"
+}

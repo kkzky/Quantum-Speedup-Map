@@ -1,0 +1,73 @@
+{
+  "id": "entry-011",
+  "number": 11,
+  "ordinal": 11,
+  "title_latex": "Minimum Steiner tree",
+  "title": "Minimum Steiner tree",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Minimum Steiner tree",
+    "name": "Minimum Steiner tree",
+    "statement_latex": "Given an undirected graph $G=(V,E)$, nonnegative edge weights $w$, and terminals $R\\subseteq V$, $|R|=k$, find a connected subgraph containing $R$ of minimum total weight. An optimum may be chosen as a tree. Steiner vertices permit cheaper network connections than restricting the tree to terminals.\nThe quantum bound uses QRAM time, while classical bounds count RAM operations with the stated weight-arithmetic costs.",
+    "statement_text": "Given an undirected graph $G=(V,E)$, nonnegative edge weights $w$, and terminals $R\\subseteq V$, $|R|=k$, find a connected subgraph containing $R$ of minimum total weight. An optimum may be chosen as a tree. Steiner vertices permit cheaper network connections than restricting the tree to terminals. The quantum bound uses QRAM time, while classical bounds count RAM operations with the stated weight-arithmetic costs."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(1.812^k)$, quantum Steiner-tree dynamic programming.",
+      "headline_text": "$O^*(1.812^k)$, quantum Steiner-tree dynamic programming.",
+      "details_latex": "The exponential parameter is the number $k$ of terminals, while polynomial factors include graph size and weight arithmetic. The construction uses a recurrence based on splitting a Steiner tree, together with partial preprocessing and nested quantum minimum finding. Its table values must be coherently accessible.",
+      "details_text": "The exponential parameter is the number $k$ of terminals, while polynomial factors include graph size and weight arithmetic. The construction uses a recurrence based on splitting a Steiner tree, together with partial preprocessing and nested quantum minimum finding. Its table values must be coherently accessible."
+    },
+    "classical": {
+      "headline_latex": "$(2+\\delta)^k n^{f(1/\\delta)}$ for fixed $\\delta>0$, M\\\"olle--Richter--Rossmanith; $O^*(2^k)$ for bounded integer weights, subset convolution.",
+      "headline_text": "$(2+\\delta)^k n^{f(1/\\delta)}$ for fixed $\\delta>0$, Mölle–Richter–Rossmanith; $O^*(2^k)$ for bounded integer weights, subset convolution.",
+      "details_latex": "The subset-convolution bound includes the dependence on the weight range. These improve the $O^*(3^k)$ Dreyfus--Wagner recurrence and the $O^*(2.684^k)$ splitting algorithm. For unit-weight sparse graphs, Gaspers' path-decomposition methods give vertex-parameter bounds $O^*(1.1661^n)$ on degree-three graphs and $O^*(1.3100^n)$ on degree-four graphs, using exponential memory. On such inputs the appropriate comparator is the minimum of the applicable terminal- and vertex-parameter bounds.",
+      "details_text": "The subset-convolution bound includes the dependence on the weight range. These improve the $O^*(3^k)$ Dreyfus–Wagner recurrence and the $O^*(2.684^k)$ splitting algorithm. For unit-weight sparse graphs, Gaspers' path-decomposition methods give vertex-parameter bounds $O^*(1.1661^n)$ on degree-three graphs and $O^*(1.3100^n)$ on degree-four graphs, using exponential memory. On such inputs the appropriate comparator is the minimum of the applicable terminal- and vertex-parameter bounds."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant in terminal count in the general comparison, using amplitude amplification. Sparse unit-weight regimes also have the stated classical vertex-parameter bounds.",
+      "description_text": "Polynomial speedup through a smaller exponential constant in terminal count in the general comparison, using amplitude amplification. Sparse unit-weight regimes also have the stated classical vertex-parameter bounds."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous QRAM upper bound and partial evidence against the strongest displayed classical algorithms in the relevant weight and graph regimes.",
+      "description_text": "Rigorous QRAM upper bound and partial evidence against the strongest displayed classical algorithms in the relevant weight and graph regimes."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active registers encode terminal subsets, vertices, costs and reconstruction data, together with exponential coherent preprocessing memory. Useful terminal counts require fault tolerance; graph and weight parameters affect the polynomial register and arithmetic costs.",
+      "description_text": "Polynomial active registers encode terminal subsets, vertices, costs and reconstruction data, together with exponential coherent preprocessing memory. Useful terminal counts require fault tolerance; graph and weight parameters affect the polynomial register and arithmetic costs."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "11.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1904.03581}{Miyamoto, Iwamura, Kise and Le Gall, \\emph{Quantum Speedup for the Minimum Steiner Tree Problem} (2019/2020)}. Theorem 1; Section 3.1 defines Dreyfus--Wagner, Section 3.2 gives the splitting recurrence, and Section 4 gives the quantum algorithm. Table 1 and its cited classical papers specify the weight-dependent comparisons.",
+      "content_text": "Miyamoto, Iwamura, Kise and Le Gall, Quantum Speedup for the Minimum Steiner Tree Problem (2019/2020). Theorem 1; Section 3.1 defines Dreyfus–Wagner, Section 3.2 gives the splitting recurrence, and Section 4 gives the quantum algorithm. Table 1 and its cited classical papers specify the weight-dependent comparisons.",
+      "citation_ids": [
+        "entry-011-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "11.2",
+      "content_latex": "\\href{https://serggasp.github.io/pathwidth-site/papers/sparse-pathwidth/14-apps-connectivity.html}{Gaspers, \\emph{Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms} (2026)}. Theorem 14.1(a): sparse unit-weight Steiner tree.",
+      "content_text": "Gaspers, Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms (2026). Theorem 14.1(a): sparse unit-weight Steiner tree.",
+      "citation_ids": [
+        "entry-011-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-011-citation-001",
+    "entry-011-citation-002"
+  ],
+  "source_latex": "\\entrytitle{11}{Minimum Steiner tree}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{10}\n\\begin{problem}[Minimum Steiner tree]\nGiven an undirected graph $G=(V,E)$, nonnegative edge weights $w$, and terminals $R\\subseteq V$, $|R|=k$, find a connected subgraph containing $R$ of minimum total weight. An optimum may be chosen as a tree. Steiner vertices permit cheaper network connections than restricting the tree to terminals.\nThe quantum bound uses QRAM time, while classical bounds count RAM operations with the stated weight-arithmetic costs.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.812^k)$, quantum Steiner-tree dynamic programming.}\nThe exponential parameter is the number $k$ of terminals, while polynomial factors include graph size and weight arithmetic. The construction uses a recurrence based on splitting a Steiner tree, together with partial preprocessing and nested quantum minimum finding. Its table values must be coherently accessible.\n\\complexity{Classical}{$(2+\\delta)^k n^{f(1/\\delta)}$ for fixed $\\delta>0$, M\\\"olle--Richter--Rossmanith; $O^*(2^k)$ for bounded integer weights, subset convolution.}\nThe subset-convolution bound includes the dependence on the weight range. These improve the $O^*(3^k)$ Dreyfus--Wagner recurrence and the $O^*(2.684^k)$ splitting algorithm. For unit-weight sparse graphs, Gaspers' path-decomposition methods give vertex-parameter bounds $O^*(1.1661^n)$ on degree-three graphs and $O^*(1.3100^n)$ on degree-four graphs, using exponential memory. On such inputs the appropriate comparator is the minimum of the applicable terminal- and vertex-parameter bounds.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant in terminal count in the general comparison, using amplitude amplification. Sparse unit-weight regimes also have the stated classical vertex-parameter bounds.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous QRAM upper bound and partial evidence against the strongest displayed classical algorithms in the relevant weight and graph regimes.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active registers encode terminal subsets, vertices, costs and reconstruction data, together with exponential coherent preprocessing memory. Useful terminal counts require fault tolerance; graph and weight parameters affect the polynomial register and arithmetic costs.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{11}\n\\item \\href{https://arxiv.org/pdf/1904.03581}{Miyamoto, Iwamura, Kise and Le Gall, \\emph{Quantum Speedup for the Minimum Steiner Tree Problem} (2019/2020)}. Theorem 1; Section 3.1 defines Dreyfus--Wagner, Section 3.2 gives the splitting recurrence, and Section 4 gives the quantum algorithm. Table 1 and its cited classical papers specify the weight-dependent comparisons.\n\\item \\href{https://serggasp.github.io/pathwidth-site/papers/sparse-pathwidth/14-apps-connectivity.html}{Gaspers, \\emph{Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms} (2026)}. Theorem 14.1(a): sparse unit-weight Steiner tree.\n\\end{algorithmindex}"
+}

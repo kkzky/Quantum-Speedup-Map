@@ -1,0 +1,63 @@
+{
+  "id": "entry-065",
+  "number": 65,
+  "ordinal": 66,
+  "title_latex": "Pell's equation and the real quadratic regulator",
+  "title": "Pell's equation and the real quadratic regulator",
+  "chapter_id": "chapter-3",
+  "problem": {
+    "name_latex": "Pell's equation and the real quadratic regulator",
+    "name": "Pell's equation and the real quadratic regulator",
+    "statement_latex": "Given a nonsquare positive integer $d$, let $\\varepsilon=x+y\\sqrt d>1$ be the least positive unit with $x^2-dy^2=1$. Compute the regulator $R=\\log\\varepsilon$ to prescribed polynomial-bit precision, or a compact representation of the fundamental solution. Compact output is the natural representation because $x,y$ can have exponentially many bits in $\\log d$. Complexity is measured in quantum gates and classical bit operations, including the required output precision.",
+    "statement_text": "Given a nonsquare positive integer $d$, let $\\varepsilon=x+y\\sqrt d>1$ be the least positive unit with $x^2-dy^2=1$. Compute the regulator $R=\\log\\varepsilon$ to prescribed polynomial-bit precision, or a compact representation of the fundamental solution. Compact output is the natural representation because $x,y$ can have exponentially many bits in $\\log d$. Complexity is measured in quantum gates and classical bit operations, including the required output precision."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log d,\\text{precision})$, Hallgren regulator and Pell algorithms.",
+      "headline_text": "$\\operatorname{poly}(\\log d,\\text{precision})$, Hallgren regulator and Pell algorithms.",
+      "details_latex": "The bound uses compact output and includes ideal arithmetic, discretization of the real-periodic function and Fourier precision. A polynomial number of Fourier samples suffices to reconstruct the regulator to the specified accuracy. The compact representation describes the fundamental solution even when its fully expanded integers are exponentially long in $\\log d$.",
+      "details_text": "The bound uses compact output and includes ideal arithmetic, discretization of the real-periodic function and Fourier precision. A polynomial number of Fourier samples suffices to reconstruct the regulator to the specified accuracy. The compact representation describes the fundamental solution even when its fully expanded integers are exponentially long in $\\log d$."
+    },
+    "classical": {
+      "headline_latex": "$L_d[1/2,O(1)]$ heuristic time, Buchmann infrastructure and index calculus.",
+      "headline_text": "$L_d[1/2,O(1)]$ heuristic time, Buchmann infrastructure and index calculus.",
+      "details_latex": "The comparison uses the same discriminant-scale parameter and compact-output convention. Smooth relations among small prime ideals and integer linear algebra determine the regulator. The complexity assumes the standard smoothness and relation-generation hypotheses. Continued-fraction enumeration provides an alternative whose time depends on the length of the period of $\\sqrt d$.",
+      "details_text": "The comparison uses the same discriminant-scale parameter and compact-output convention. Smooth relations among small prime ideals and integer linear algebra determine the regulator. The complexity assumes the standard smoothness and relation-generation hypotheses. Continued-fraction enumeration provides an alternative whose time depends on the length of the period of $\\sqrt d$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Subexponential to polynomial in $\\log d$, through Fourier sampling of a periodic function over the reals.",
+      "description_text": "Subexponential to polynomial in $\\log d$, through Fourier sampling of a periodic function over the reals."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Partial evidence from sustained study of classical regulator algorithms and real-quadratic cryptosystems. The quantum polynomial-time bound is rigorous with its precision and output conventions.",
+      "description_text": "Partial evidence from sustained study of classical regulator algorithms and real-quadratic cryptosystems. The quantum polynomial-time bound is rigorous with its precision and output conventions."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Polynomially many logical qubits in the input and precision lengths suffice. Reduced-ideal arithmetic, coherent function evaluation and Fourier precision require fault tolerance at cryptographic scale. The asymptotic algorithm supplies a polynomial-space bound; concrete counts depend on the arithmetic implementation.",
+      "description_text": "Polynomially many logical qubits in the input and precision lengths suffice. Reduced-ideal arithmetic, coherent function evaluation and Fourier precision require fault tolerance at cryptographic scale. The asymptotic algorithm supplies a polynomial-space bound; concrete counts depend on the arithmetic implementation."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "65.1",
+      "content_latex": "\\href{https://www.cse.psu.edu/~sjh26/pell.pdf}{Hallgren, \\emph{Polynomial-Time Quantum Algorithms for Pell's Equation and the Principal Ideal Problem} (JACM 2007)}. Algorithm 2.1: reduced-ideal evaluation; Algorithm 3.1: approximate period finding for the regulator. The introduction gives the classical subexponential comparison.",
+      "content_text": "Hallgren, Polynomial-Time Quantum Algorithms for Pell's Equation and the Principal Ideal Problem (JACM 2007). Algorithm 2.1: reduced-ideal evaluation; Algorithm 3.1: approximate period finding for the regulator. The introduction gives the classical subexponential comparison.",
+      "citation_ids": [
+        "entry-065-citation-001"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-065-citation-001"
+  ],
+  "source_latex": "\\entrytitle{65}{Pell's equation and the real quadratic regulator}{strengthPolynomialTime}{evidencePartial}{hardwarePolynomial}\n\\setcounter{problem}{64}\n\\begin{problem}[Pell's equation and the real quadratic regulator]\nGiven a nonsquare positive integer $d$, let $\\varepsilon=x+y\\sqrt d>1$ be the least positive unit with $x^2-dy^2=1$. Compute the regulator $R=\\log\\varepsilon$ to prescribed polynomial-bit precision, or a compact representation of the fundamental solution. Compact output is the natural representation because $x,y$ can have exponentially many bits in $\\log d$. Complexity is measured in quantum gates and classical bit operations, including the required output precision.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\operatorname{poly}(\\log d,\\text{precision})$, Hallgren regulator and Pell algorithms.}\nThe bound uses compact output and includes ideal arithmetic, discretization of the real-periodic function and Fourier precision. A polynomial number of Fourier samples suffices to reconstruct the regulator to the specified accuracy. The compact representation describes the fundamental solution even when its fully expanded integers are exponentially long in $\\log d$.\n\n\\complexity{Classical}{$L_d[1/2,O(1)]$ heuristic time, Buchmann infrastructure and index calculus.}\nThe comparison uses the same discriminant-scale parameter and compact-output convention. Smooth relations among small prime ideals and integer linear algebra determine the regulator. The complexity assumes the standard smoothness and relation-generation hypotheses. Continued-fraction enumeration provides an alternative whose time depends on the length of the period of $\\sqrt d$.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial in $\\log d$, through Fourier sampling of a periodic function over the reals.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence from sustained study of classical regulator algorithms and real-quadratic cryptosystems. The quantum polynomial-time bound is rigorous with its precision and output conventions.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Polynomially many logical qubits in the input and precision lengths suffice. Reduced-ideal arithmetic, coherent function evaluation and Fourier precision require fault tolerance at cryptographic scale. The asymptotic algorithm supplies a polynomial-space bound; concrete counts depend on the arithmetic implementation.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{65}\n\\item \\href{https://www.cse.psu.edu/~sjh26/pell.pdf}{Hallgren, \\emph{Polynomial-Time Quantum Algorithms for Pell's Equation and the Principal Ideal Problem} (JACM 2007)}. Algorithm 2.1: reduced-ideal evaluation; Algorithm 3.1: approximate period finding for the regulator. The introduction gives the classical subexponential comparison.\n\\end{algorithmindex}"
+}

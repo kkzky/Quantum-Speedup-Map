@@ -1,0 +1,73 @@
+{
+  "id": "entry-042",
+  "number": 42,
+  "ordinal": 43,
+  "title_latex": "Matrix-product verification over a field",
+  "title": "Matrix-product verification over a field",
+  "chapter_id": "chapter-2",
+  "problem": {
+    "name_latex": "Matrix-product verification over a field",
+    "name": "Matrix-product verification over a field",
+    "statement_latex": "Given $A,B,C\\in\\mathbb F^{n\\times n}$ through entry oracles, decide whether $AB=C$, with field operations charged explicitly or treated as unit-cost operations. Matrix products encode path counts and algebraic certificates used throughout combinatorial algorithms.\nThe comparison counts matrix-entry queries and field operations; bit and gate costs also charge the representation and implementation of field arithmetic.",
+    "statement_text": "Given $A,B,C\\in\\mathbb F^{n\\times n}$ through entry oracles, decide whether $AB=C$, with field operations charged explicitly or treated as unit-cost operations. Matrix products encode path counts and algebraic certificates used throughout combinatorial algorithms. The comparison counts matrix-entry queries and field operations; bit and gate costs also charge the representation and implementation of field arithmetic."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(n^{5/3})$ queries and field-arithmetic time, Buhrman--\\v Spalek quantum verification.",
+      "headline_text": "$O(n^{5/3})$ queries and field-arithmetic time, Buhrman–Špalek quantum verification.",
+      "details_latex": "The quantum walk combines selected-row and selected-column subproblems with randomized field checks. It accepts correct products and detects incorrect products with bounded error. The known quantum query lower bound is $\\Omega(n^{3/2})$.",
+      "details_text": "The quantum walk combines selected-row and selected-column subproblems with randomized field checks. It accepts correct products and detects incorrect products with bounded error. The known quantum query lower bound is $\\Omega(n^{3/2})$."
+    },
+    "classical": {
+      "headline_latex": "$O(n^2)$ field operations and $\\Theta(n^2)$ entry queries, Freivalds verification.",
+      "headline_text": "$O(n^2)$ field operations and $\\Theta(n^2)$ entry queries, Freivalds verification.",
+      "details_latex": "A random vector $r$ tests the identity $A(Br)=Cr$. Repetition reduces the error probability logarithmically. The quadratic entry-query bound is optimal. For $b$-bit field elements, both algorithms incur the corresponding classical or reversible arithmetic cost.",
+      "details_text": "A random vector $r$ tests the identity $A(Br)=Cr$. Repetition reduces the error probability logarithmically. The quadratic entry-query bound is optimal. For $b$-bit field elements, both algorithms incur the corresponding classical or reversible arithmetic cost."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial: $n^2\\to n^{5/3}$, using quantum walks and randomized algebraic checks.",
+      "description_text": "Polynomial: $n^2\\to n^{5/3}$, using quantum walks and randomized algebraic checks."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Rigorous separation from the tight classical entry-query bound.",
+      "description_text": "Rigorous separation from the tight classical entry-query bound."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The published quantum algorithm uses $O(n)$ stored field elements, or $O(nb)$ logical data qubits for $b$-bit elements, plus arithmetic and oracle workspace. Fault-tolerant coherent arithmetic is required at useful scale.",
+      "description_text": "The published quantum algorithm uses $O(n)$ stored field elements, or $O(nb)$ logical data qubits for $b$-bit elements, plus arithmetic and oracle workspace. Fault-tolerant coherent arithmetic is required at useful scale."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "42.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0409035}{Buhrman and \\v Spalek, \\emph{Quantum Verification of Matrix Products} (2006)}. Figure 1, ``Product Verification'' and ``Verify Once''; Theorem 6 gives time and space; Theorem 11 gives the lower bound.",
+      "content_text": "Buhrman and Špalek, Quantum Verification of Matrix Products (2006). Figure 1, “Product Verification” and “Verify Once”; Theorem 6 gives time and space; Theorem 11 gives the lower bound.",
+      "citation_ids": [
+        "entry-042-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "42.2",
+      "content_latex": "\\href{https://www.math.uwaterloo.ca/~anayak/papers/Nayak08.pdf}{Nayak, \\emph{Checking Matrix Identities} (2008)}. The exposition of Freivalds\\textquotesingle s identity test.",
+      "content_text": "Nayak, Checking Matrix Identities (2008). The exposition of Freivalds's identity test.",
+      "citation_ids": [
+        "entry-042-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-042-citation-001",
+    "entry-042-citation-002"
+  ],
+  "source_latex": "\\entrytitle{42}{Matrix-product verification over a field}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{41}\n\\begin{problem}[Matrix-product verification over a field]\nGiven $A,B,C\\in\\mathbb F^{n\\times n}$ through entry oracles, decide whether $AB=C$, with field operations charged explicitly or treated as unit-cost operations. Matrix products encode path counts and algebraic certificates used throughout combinatorial algorithms.\nThe comparison counts matrix-entry queries and field operations; bit and gate costs also charge the representation and implementation of field arithmetic.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(n^{5/3})$ queries and field-arithmetic time, Buhrman--\\v Spalek quantum verification.}\nThe quantum walk combines selected-row and selected-column subproblems with randomized field checks. It accepts correct products and detects incorrect products with bounded error. The known quantum query lower bound is $\\Omega(n^{3/2})$.\n\n\\complexity{Classical}{$O(n^2)$ field operations and $\\Theta(n^2)$ entry queries, Freivalds verification.}\nA random vector $r$ tests the identity $A(Br)=Cr$. Repetition reduces the error probability logarithmically. The quadratic entry-query bound is optimal. For $b$-bit field elements, both algorithms incur the corresponding classical or reversible arithmetic cost.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial: $n^2\\to n^{5/3}$, using quantum walks and randomized algebraic checks.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous separation from the tight classical entry-query bound.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The published quantum algorithm uses $O(n)$ stored field elements, or $O(nb)$ logical data qubits for $b$-bit elements, plus arithmetic and oracle workspace. Fault-tolerant coherent arithmetic is required at useful scale.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{42}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0409035}{Buhrman and \\v Spalek, \\emph{Quantum Verification of Matrix Products} (2006)}. Figure 1, ``Product Verification'' and ``Verify Once''; Theorem 6 gives time and space; Theorem 11 gives the lower bound.\n\\item \\href{https://www.math.uwaterloo.ca/~anayak/papers/Nayak08.pdf}{Nayak, \\emph{Checking Matrix Identities} (2008)}. The exposition of Freivalds\\textquotesingle s identity test.\n\\end{algorithmindex}"
+}

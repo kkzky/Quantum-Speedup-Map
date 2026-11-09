@@ -1,0 +1,83 @@
+{
+  "id": "entry-095",
+  "number": 95,
+  "ordinal": 97,
+  "title_latex": "NP search relative to an oracle",
+  "title": "NP search relative to an oracle",
+  "chapter_id": "chapter-4",
+  "problem": {
+    "name_latex": "Oracle-verifier search",
+    "name": "Oracle-verifier search",
+    "statement_latex": "Given oracle access to a predicate $V(x,w)$ with $w\\in\\{0,1\\}^n$, decide whether $\\exists w\\,V(x,w)=1$ and return such a witness when one exists, with probability at least $2/3$. This abstracts verifier access in SAT, exact cover and NP optimization decision problems. Complexity is measured in verifier-oracle queries; the explicit-circuit variant additionally uses classical bit-operation time.",
+    "statement_text": "Given oracle access to a predicate $V(x,w)$ with $w\\in\\{0,1\\}^n$, decide whether $\\exists w\\,V(x,w)=1$ and return such a witness when one exists, with probability at least $2/3$. This abstracts verifier access in SAT, exact cover and NP optimization decision problems. Complexity is measured in verifier-oracle queries; the explicit-circuit variant additionally uses classical bit-operation time."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(2^{n/2})$ verifier queries, amplitude amplification.",
+      "headline_text": "$\\Theta(2^{n/2})$ verifier queries, amplitude amplification.",
+      "details_latex": "This is the optimal worst-case bound for arbitrary verifier access. Bennett, Bernstein, Brassard and Vazirani prove that, relative to a random oracle with probability one, quantum time $o(2^{n/2})$ cannot contain NP in their oracle formulation.",
+      "details_text": "This is the optimal worst-case bound for arbitrary verifier access. Bennett, Bernstein, Brassard and Vazirani prove that, relative to a random oracle with probability one, quantum time $o(2^{n/2})$ cannot contain NP in their oracle formulation."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(2^n)$ verifier queries, exhaustive or randomized witness search.",
+      "headline_text": "$\\Theta(2^n)$ verifier queries, exhaustive or randomized witness search.",
+      "details_latex": "For an explicitly given bounded-fan-in verifier with $g$ gates, a count-preserving Tseitin encoding has $O(n+g)$ variables and clauses. Sparse fixed-width counting then gives witness search in\n\\[\n\\operatorname{poly}(n+g)2^{O((n+g)/\\sqrt{\\log(n+g)})}.\n\\]\nA linear-size verifier therefore has a subexponential classical search algorithm. In the ordinary circuit model, a polynomial-time quantum algorithm for an NP-complete problem would imply $\\mathrm{NP}\\subseteq\\mathrm{BQP}$.",
+      "details_text": "For an explicitly given bounded-fan-in verifier with $g$ gates, a count-preserving Tseitin encoding has $O(n+g)$ variables and clauses. Sparse fixed-width counting then gives witness search in \\[ \\operatorname{poly}(n+g)2^{O((n+g)/\\sqrt{\\log(n+g)})}. \\] A linear-size verifier therefore has a subexponential classical search algorithm. In the ordinary circuit model, a polynomial-time quantum algorithm for an NP-complete problem would imply $\\mathrm{NP}\\subseteq\\mathrm{BQP}$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Tight square-root improvement in the number of candidate witnesses. In witness length $n$, the oracle comparison improves the exponential constant without power saving.",
+      "description_text": "Tight square-root improvement in the number of candidate witnesses. In witness length $n$, the oracle comparison improves the exponential constant without power saving."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Fully rigorous for oracle-verifier access; the explicit-circuit upper bound uses the supplied circuit structure.",
+      "description_text": "Fully rigorous for oracle-verifier access; the explicit-circuit upper bound uses the supplied circuit structure."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "The search kernel needs $n$ witness qubits plus a reversible verifier's ancillas. Exponentially many coherent iterations require fault-tolerant execution at large instance sizes.",
+      "description_text": "The search kernel needs $n$ witness qubits plus a reversible verifier's ancillas. Exponentially many coherent iterations require fault-tolerant execution at large instance sizes."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "95.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard et al., \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 2, Theorems 2--3 and \\textsc{QSearch}.",
+      "content_text": "Brassard et al., Quantum Amplitude Amplification and Estimation (2002). Section 2, Theorems 2–3 and QSearch.",
+      "citation_ids": [
+        "entry-095-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "95.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9701001}{Bennett et al., \\emph{Strengths and Weaknesses of Quantum Computing} (1997)}. Section 3, Theorem 3.5, for the random-oracle separation.",
+      "content_text": "Bennett et al., Strengths and Weaknesses of Quantum Computing (1997). Section 3, Theorem 3.5, for the random-oracle separation.",
+      "citation_ids": [
+        "entry-095-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "95.3",
+      "content_latex": "\\href{https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026}{OpenAI (2026)}. Theorem 1.1 and Appendix C for counting and circuit encodings.",
+      "content_text": "OpenAI (2026). Theorem 1.1 and Appendix C for counting and circuit encodings.",
+      "citation_ids": [
+        "entry-095-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-095-citation-001",
+    "entry-095-citation-002",
+    "entry-095-citation-003"
+  ],
+  "source_latex": "\\entrytitle{95}{NP search relative to an oracle}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{94}\n\\begin{problem}[Oracle-verifier search]\nGiven oracle access to a predicate $V(x,w)$ with $w\\in\\{0,1\\}^n$, decide whether $\\exists w\\,V(x,w)=1$ and return such a witness when one exists, with probability at least $2/3$. This abstracts verifier access in SAT, exact cover and NP optimization decision problems. Complexity is measured in verifier-oracle queries; the explicit-circuit variant additionally uses classical bit-operation time.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(2^{n/2})$ verifier queries, amplitude amplification.}\nThis is the optimal worst-case bound for arbitrary verifier access. Bennett, Bernstein, Brassard and Vazirani prove that, relative to a random oracle with probability one, quantum time $o(2^{n/2})$ cannot contain NP in their oracle formulation.\n\n\\complexity{Classical}{$\\Theta(2^n)$ verifier queries, exhaustive or randomized witness search.}\nFor an explicitly given bounded-fan-in verifier with $g$ gates, a count-preserving Tseitin encoding has $O(n+g)$ variables and clauses. Sparse fixed-width counting then gives witness search in\n\\[\n\\operatorname{poly}(n+g)2^{O((n+g)/\\sqrt{\\log(n+g)})}.\n\\]\nA linear-size verifier therefore has a subexponential classical search algorithm. In the ordinary circuit model, a polynomial-time quantum algorithm for an NP-complete problem would imply $\\mathrm{NP}\\subseteq\\mathrm{BQP}$.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Tight square-root improvement in the number of candidate witnesses. In witness length $n$, the oracle comparison improves the exponential constant without power saving.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully rigorous for oracle-verifier access; the explicit-circuit upper bound uses the supplied circuit structure.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The search kernel needs $n$ witness qubits plus a reversible verifier's ancillas. Exponentially many coherent iterations require fault-tolerant execution at large instance sizes.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{95}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard et al., \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 2, Theorems 2--3 and \\textsc{QSearch}.\n\\item \\href{https://arxiv.org/pdf/quant-ph/9701001}{Bennett et al., \\emph{Strengths and Weaknesses of Quantum Computing} (1997)}. Section 3, Theorem 3.5, for the random-oracle separation.\n\\item \\href{https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026}{OpenAI (2026)}. Theorem 1.1 and Appendix C for counting and circuit encodings.\n\\end{algorithmindex}"
+}

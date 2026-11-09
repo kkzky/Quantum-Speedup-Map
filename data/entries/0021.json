@@ -1,0 +1,75 @@
+{
+  "id": "entry-021",
+  "number": 21,
+  "ordinal": 21,
+  "title_latex": "Domatic number",
+  "title": "Domatic number",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Domatic number",
+    "name": "Domatic number",
+    "statement_latex": "Given $G=(V,E)$, maximize $k$ such that $V$ can be partitioned into $D_1,\\ldots,D_k$ with $N[D_i]=V$ for every $i$. Each class is a dominating set. The problem models disjoint teams of resources, each capable of providing coverage to the entire network.\nQuantum complexity is measured in QRAM time, classical inclusion--exclusion in RAM time, and the fixed-part-count Boolean algorithms in bit operations.",
+    "statement_text": "Given $G=(V,E)$, maximize $k$ such that $V$ can be partitioned into $D_1,\\ldots,D_k$ with $N[D_i]=V$ for every $i$. Each class is a dominating set. The problem models disjoint teams of resources, each capable of providing coverage to the entire network. Quantum complexity is measured in QRAM time, classical inclusion–exclusion in RAM time, and the fixed-part-count Boolean algorithms in bit operations."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*((2-\\epsilon)^n)$ for some constant $\\epsilon>0$, Gaspers--Li domatic-number algorithm.",
+      "headline_text": "$O^*((2-\\epsilon)^n)$ for some constant $\\epsilon>0$, Gaspers–Li domatic-number algorithm.",
+      "details_latex": "The theorem obtains a strict improvement below base two through restricted enumeration of minimal dominating sets and the covering framework. The analysis establishes the existence of $\\epsilon$ rather than an optimized numerical base. The number of parts is optimized as part of the input problem, and preprocessing values are coherently accessible.",
+      "details_text": "The theorem obtains a strict improvement below base two through restricted enumeration of minimal dominating sets and the covering framework. The analysis establishes the existence of $\\epsilon$ rather than an optimized numerical base. The number of parts is optimized as part of the input problem, and preprocessing values are coherently accessible."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^n)$, inclusion--exclusion over dominating sets.",
+      "headline_text": "$O^*(2^n)$, inclusion–exclusion over dominating sets.",
+      "details_latex": "For any fixed target $q$, the stronger bound is $O_{q,\\eta}(2^{\\eta n}\\operatorname{poly}(n))$ for every fixed $\\eta>0$. One-hot membership variables and closed-neighborhood domination clauses produce $O(qn)$ variables and $O(qn)$ possibly long clauses; long-clause shortening followed by fixed-width counting gives this bound. For fixed maximum degree, the same encoding has bounded width and linear size, yielding $\\operatorname{poly}(n)2^{O_q(n/\\sqrt{\\log n})}$. These fixed-$q$ bounds do not treat an unbounded number of parts as a constant.",
+      "details_text": "For any fixed target $q$, the stronger bound is $O_{q,\\eta}(2^{\\eta n}\\operatorname{poly}(n))$ for every fixed $\\eta>0$. One-hot membership variables and closed-neighborhood domination clauses produce $O(qn)$ variables and $O(qn)$ possibly long clauses; long-clause shortening followed by fixed-width counting gives this bound. For fixed maximum degree, the same encoding has bounded width and linear size, yielding $\\operatorname{poly}(n)2^{O_q(n/\\sqrt{\\log n})}$. These fixed-$q$ bounds do not treat an unbounded number of parts as a constant."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant for unrestricted domatic number, based on amplitude amplification. Fixed-$q$ decision has the subexponential classical comparison above.",
+      "description_text": "Polynomial speedup through a smaller exponential constant for unrestricted domatic number, based on amplitude amplification. Fixed-$q$ decision has the subexponential classical comparison above."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "A rigorous quantum upper bound with partial evidence against the general classical exact algorithm. The fixed-$q$ classical conclusion follows the explicit domination encoding.",
+      "description_text": "A rigorous quantum upper bound with partial evidence against the general classical exact algorithm. The fixed-$q$ classical conclusion follows the explicit domination encoding."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active subset and part-count registers accompany exponential coherent preprocessing memory. The small unspecified base improvement still entails exponentially long coherent searches on large graphs.",
+      "description_text": "Polynomial active subset and part-count registers accompany exponential coherent preprocessing memory. The small unspecified base improvement still entails exponentially long coherent searches on large graphs."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "21.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 9: restricted minimal-dominating-set enumeration; Corollary 2: domatic number; Theorem 4 defines the quantum covering routine.",
+      "content_text": "Gaspers and Li, Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems (ICALP 2024). Theorem 9: restricted minimal-dominating-set enumeration; Corollary 2: domatic number; Theorem 4 defines the quantum covering routine.",
+      "citation_ids": [
+        "entry-021-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "21.2",
+      "content_latex": "\\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening; together with \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}, Theorem 1.1 and Appendix D}, applied to the domination clauses above.",
+      "content_text": "Claude (Anthropic), A $2^{o(n)}$ Time Algorithm for 3-SAT (2026). Long-clause shortening; together with OpenAI, The Exponential Time Hypothesis Is False, Theorem 1.1 and Appendix D, applied to the domination clauses above.",
+      "citation_ids": [
+        "entry-021-citation-002",
+        "entry-021-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-021-citation-001",
+    "entry-021-citation-002",
+    "entry-021-citation-003"
+  ],
+  "source_latex": "\\entrytitle{21}{Domatic number}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{20}\n\\begin{problem}[Domatic number]\nGiven $G=(V,E)$, maximize $k$ such that $V$ can be partitioned into $D_1,\\ldots,D_k$ with $N[D_i]=V$ for every $i$. Each class is a dominating set. The problem models disjoint teams of resources, each capable of providing coverage to the entire network.\nQuantum complexity is measured in QRAM time, classical inclusion--exclusion in RAM time, and the fixed-part-count Boolean algorithms in bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*((2-\\epsilon)^n)$ for some constant $\\epsilon>0$, Gaspers--Li domatic-number algorithm.}\nThe theorem obtains a strict improvement below base two through restricted enumeration of minimal dominating sets and the covering framework. The analysis establishes the existence of $\\epsilon$ rather than an optimized numerical base. The number of parts is optimized as part of the input problem, and preprocessing values are coherently accessible.\n\\complexity{Classical}{$O^*(2^n)$, inclusion--exclusion over dominating sets.}\nFor any fixed target $q$, the stronger bound is $O_{q,\\eta}(2^{\\eta n}\\operatorname{poly}(n))$ for every fixed $\\eta>0$. One-hot membership variables and closed-neighborhood domination clauses produce $O(qn)$ variables and $O(qn)$ possibly long clauses; long-clause shortening followed by fixed-width counting gives this bound. For fixed maximum degree, the same encoding has bounded width and linear size, yielding $\\operatorname{poly}(n)2^{O_q(n/\\sqrt{\\log n})}$. These fixed-$q$ bounds do not treat an unbounded number of parts as a constant.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for unrestricted domatic number, based on amplitude amplification. Fixed-$q$ decision has the subexponential classical comparison above.\n\\dimensionlabel{Evidence}{evidencePartial} A rigorous quantum upper bound with partial evidence against the general classical exact algorithm. The fixed-$q$ classical conclusion follows the explicit domination encoding.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset and part-count registers accompany exponential coherent preprocessing memory. The small unspecified base improvement still entails exponentially long coherent searches on large graphs.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{21}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 9: restricted minimal-dominating-set enumeration; Corollary 2: domatic number; Theorem 4 defines the quantum covering routine.\n\\item \\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening; together with \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}, Theorem 1.1 and Appendix D}, applied to the domination clauses above.\n\\end{algorithmindex}"
+}

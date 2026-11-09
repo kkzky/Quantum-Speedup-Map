@@ -1,0 +1,73 @@
+{
+  "id": "entry-004",
+  "number": 4,
+  "ordinal": 4,
+  "title_latex": "Discrete optimization by branch and bound",
+  "title": "Discrete optimization by branch and bound",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Branch-and-bound optimization",
+    "name": "Branch-and-bound optimization",
+    "statement_latex": "Minimize $F(x)$ over a finite feasible set represented by a rooted branching tree. Each node represents a subset of candidates and carries a computable lower bound on their objective values. Return an optimal feasible leaf and its value. Integer programming and scheduling commonly use this representation.\nComplexity is measured in branching, bounding and heuristic-oracle queries; quantum gate complexity additionally includes their reversible implementation costs.",
+    "statement_text": "Minimize $F(x)$ over a finite feasible set represented by a rooted branching tree. Each node represents a subset of candidates and carries a computable lower bound on their objective values. Return an optimal feasible leaf and its value. Integer programming and scheduling commonly use this representation. Complexity is measured in branching, bounding and heuristic-oracle queries; quantum gate complexity additionally includes their reversible implementation costs."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt Q\\,D)$ queries, Incremental Quantum Branch and Bound.",
+      "headline_text": "$\\widetilde O(\\sqrt Q\\,D)$ queries, Incremental Quantum Branch and Bound.",
+      "details_latex": "Here $Q$ is the number of queries used by the specified classical branch-and-bound algorithm, $D$ is the tree depth, and the heuristic satisfies the branch-local conditions of the theorem. Logarithmic factors include the objective range, heuristic range and failure probability. Montanaro's construction gives an earlier near-quadratic bound in the truncated optimal-cost tree size. The incremental construction follows the portion of the tree explored by the chosen heuristic and returns an optimal leaf, or a leaf within a prescribed additive tolerance when that stopping criterion is supplied.",
+      "details_text": "Here $Q$ is the number of queries used by the specified classical branch-and-bound algorithm, $D$ is the tree depth, and the heuristic satisfies the branch-local conditions of the theorem. Logarithmic factors include the objective range, heuristic range and failure probability. Montanaro's construction gives an earlier near-quadratic bound in the truncated optimal-cost tree size. The incremental construction follows the portion of the tree explored by the chosen heuristic and returns an optimal leaf, or a leaf within a prescribed additive tolerance when that stopping criterion is supplied."
+    },
+    "classical": {
+      "headline_latex": "$O(Q)$ queries, the specified branch-and-bound procedure.",
+      "headline_text": "$O(Q)$ queries, the specified branch-and-bound procedure.",
+      "details_latex": "The comparator uses the same branching rule, objective bounds and search heuristic. Its work can be far smaller than the size of the full search tree. For a concrete integer-programming or scheduling formulation, specialized algorithms and branch-and-cut methods supply additional classical comparisons; their costs depend on the input representation and bounding rules.",
+      "details_text": "The comparator uses the same branching rule, objective bounds and search heuristic. Its work can be far smaller than the size of the full search tree. For a concrete integer-programming or scheduling formulation, specialized algorithms and branch-and-cut methods supply additional classical comparisons; their costs depend on the input representation and bounding rules."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Nearly quadratic polynomial speedup in the work of the selected classical tree-search procedure, based on quantum tree search and subtree estimation.",
+      "description_text": "Nearly quadratic polynomial speedup in the work of the selected classical tree-search procedure, based on quantum tree search and subtree estimation."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "The query acceleration is rigorous under the stated heuristic conditions. Its significance relative to all classical algorithms is problem- and instance-dependent.",
+      "description_text": "The query acceleration is rigorous under the stated heuristic conditions. Its significance relative to all classical algorithms is problem- and instance-dependent."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "A path, objective registers and reversible bounding workspace use polynomially many logical qubits. Long coherent tree searches require fault tolerance; an exponential $Q$ leaves an exponential coherent running time. The implementation cost of the bound and heuristic is part of the resource estimate.",
+      "description_text": "A path, objective registers and reversible bounding workspace use polynomially many logical qubits. Long coherent tree searches require fault tolerance; an exponential $Q$ leaves an exponential coherent running time. The implementation cost of the bound and heuristic is part of the resource estimate."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "4.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1906.10375}{Montanaro, \\emph{Quantum Speedup of Branch-and-Bound Algorithms} (Physical Review Research 2020)}. Algorithm 2 and Theorem 1.",
+      "content_text": "Montanaro, Quantum Speedup of Branch-and-Bound Algorithms (Physical Review Research 2020). Algorithm 2 and Theorem 1.",
+      "citation_ids": [
+        "entry-004-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "4.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/2210.03210}{Chakrabarti, Minssen, Yalovetzky and Pistoia, \\emph{Universal Quantum Speedup for Branch-and-Bound, Branch-and-Cut, and Tree-Search Algorithms} (2022)}. Theorem 1.3 and Section 2.4, Algorithm 2, ``Incremental-Quantum-Branch-and-Bound''; Section 1 defines the classical heuristic conditions.",
+      "content_text": "Chakrabarti, Minssen, Yalovetzky and Pistoia, Universal Quantum Speedup for Branch-and-Bound, Branch-and-Cut, and Tree-Search Algorithms (2022). Theorem 1.3 and Section 2.4, Algorithm 2, “Incremental-Quantum-Branch-and-Bound”; Section 1 defines the classical heuristic conditions.",
+      "citation_ids": [
+        "entry-004-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-004-citation-001",
+    "entry-004-citation-002"
+  ],
+  "source_latex": "\\entrytitle{4}{Discrete optimization by branch and bound}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{3}\n\\begin{problem}[Branch-and-bound optimization]\nMinimize $F(x)$ over a finite feasible set represented by a rooted branching tree. Each node represents a subset of candidates and carries a computable lower bound on their objective values. Return an optimal feasible leaf and its value. Integer programming and scheduling commonly use this representation.\nComplexity is measured in branching, bounding and heuristic-oracle queries; quantum gate complexity additionally includes their reversible implementation costs.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(\\sqrt Q\\,D)$ queries, Incremental Quantum Branch and Bound.}\nHere $Q$ is the number of queries used by the specified classical branch-and-bound algorithm, $D$ is the tree depth, and the heuristic satisfies the branch-local conditions of the theorem. Logarithmic factors include the objective range, heuristic range and failure probability. Montanaro's construction gives an earlier near-quadratic bound in the truncated optimal-cost tree size. The incremental construction follows the portion of the tree explored by the chosen heuristic and returns an optimal leaf, or a leaf within a prescribed additive tolerance when that stopping criterion is supplied.\n\\complexity{Classical}{$O(Q)$ queries, the specified branch-and-bound procedure.}\nThe comparator uses the same branching rule, objective bounds and search heuristic. Its work can be far smaller than the size of the full search tree. For a concrete integer-programming or scheduling formulation, specialized algorithms and branch-and-cut methods supply additional classical comparisons; their costs depend on the input representation and bounding rules.\n\\dimensionlabel{Strength}{strengthPolynomial} Nearly quadratic polynomial speedup in the work of the selected classical tree-search procedure, based on quantum tree search and subtree estimation.\n\\dimensionlabel{Evidence}{evidencePartial} The query acceleration is rigorous under the stated heuristic conditions. Its significance relative to all classical algorithms is problem- and instance-dependent.\n\\dimensionlabel{Hardware}{hardwareExponential} A path, objective registers and reversible bounding workspace use polynomially many logical qubits. Long coherent tree searches require fault tolerance; an exponential $Q$ leaves an exponential coherent running time. The implementation cost of the bound and heuristic is part of the resource estimate.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{4}\n\\item \\href{https://arxiv.org/pdf/1906.10375}{Montanaro, \\emph{Quantum Speedup of Branch-and-Bound Algorithms} (Physical Review Research 2020)}. Algorithm 2 and Theorem 1.\n\\item \\href{https://arxiv.org/pdf/2210.03210}{Chakrabarti, Minssen, Yalovetzky and Pistoia, \\emph{Universal Quantum Speedup for Branch-and-Bound, Branch-and-Cut, and Tree-Search Algorithms} (2022)}. Theorem 1.3 and Section 2.4, Algorithm 2, ``Incremental-Quantum-Branch-and-Bound''; Section 1 defines the classical heuristic conditions.\n\\end{algorithmindex}"
+}

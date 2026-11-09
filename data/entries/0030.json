@@ -1,0 +1,73 @@
+{
+  "id": "entry-030",
+  "number": 30,
+  "ordinal": 30,
+  "title_latex": "Binary integer programming with few inequalities",
+  "title": "Binary integer programming with few inequalities",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Binary integer programming",
+    "name": "Binary integer programming",
+    "statement_latex": "Given $A\\in\\mathbb Z^{d\\times n}$ and $b\\in\\mathbb Z^d$, find $x\\in\\{0,1\\}^n$ satisfying $Ax\\leq b$, or decide infeasibility. An additional profit threshold converts a linear optimization problem into this form. The regime of interest has fixed or slowly growing $d$ and binary-encoded coefficients.\nThe few-inequality quantum bound uses coherent-memory time with bit-arithmetic costs, classical meet in the middle uses RAM time, and bounded-row-arity encodings use bit complexity.",
+    "statement_text": "Given $A\\in\\mathbb Z^{d\\times n}$ and $b\\in\\mathbb Z^d$, find $x\\in\\{0,1\\}^n$ satisfying $Ax\\leq b$, or decide infeasibility. An additional profit threshold converts a linear optimization problem into this form. The regime of interest has fixed or slowly growing $d$ and binary-encoded coefficients. The few-inequality quantum bound uses coherent-memory time with bit-arithmetic costs, classical meet in the middle uses RAM time, and bounded-row-arity encodings use bit complexity."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(2^{n/3}n^d)$, Arvind--Schuler integer-programming algorithm.",
+      "headline_text": "$\\widetilde O(2^{n/3}n^d)$, Arvind–Schuler integer-programming algorithm.",
+      "details_latex": "The polynomial arithmetic factors depend on coefficient bit length. For $d=o(n/\\log n)$, the time is $2^{(1/3+o(1))n}$. Precomputed partial-sum vectors support coherent multidimensional range queries; both preprocessing and searching are included in the bound. With $B$-bit coefficients, direct arithmetic and comparisons have reversible cost polynomial in $dn(B+\\log n)$.",
+      "details_text": "The polynomial arithmetic factors depend on coefficient bit length. For $d=o(n/\\log n)$, the time is $2^{(1/3+o(1))n}$. Precomputed partial-sum vectors support coherent multidimensional range queries; both preprocessing and searching are included in the bound. With $B$-bit coefficients, direct arithmetic and comparisons have reversible cost polynomial in $dn(B+\\log n)$."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^{n/2})$ for fixed $d$, meet in the middle with dominance searching.",
+      "headline_text": "$O^*(2^{n/2})$ for fixed $d$, meet in the middle with dominance searching.",
+      "details_latex": "The two lists of partial-sum vectors are combined by coordinatewise inequalities and use exponential memory. For a different regime in which every row has support at most a fixed $r$, encode each forbidden local assignment as a clause using the original $n$ Boolean variables. Polynomially many rows then give $\\operatorname{poly}(\\text{input size})2^{O_r(n\\log\\log n/\\sqrt{\\log n})}$ deterministic time and polynomial space; linearly many rows improve the exponent to $O_r(n/\\sqrt{\\log n})$. A fixed number of dense, large-coefficient inequalities retains the few-constraint meet-in-the-middle comparison.",
+      "details_text": "The two lists of partial-sum vectors are combined by coordinatewise inequalities and use exponential memory. For a different regime in which every row has support at most a fixed $r$, encode each forbidden local assignment as a clause using the original $n$ Boolean variables. Polynomially many rows then give $\\operatorname{poly}(\\text{input size})2^{O_r(n\\log\\log n/\\sqrt{\\log n})}$ deterministic time and polynomial space; linearly many rows improve the exponent to $O_r(n/\\sqrt{\\log n})$. A fixed number of dense, large-coefficient inequalities retains the few-constraint meet-in-the-middle comparison."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant for fixed $d$ and unrestricted row support, using Grover search and amplitude amplification. Bounded-row-arity instances have the stronger subexponential classical comparator.",
+      "description_text": "Polynomial speedup through a smaller exponential constant for fixed $d$ and unrestricted row support, using Grover search and amplitude amplification. Bounded-row-arity instances have the stronger subexponential classical comparator."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous quantum upper bounds in the specified access model, with partial evidence against the best displayed classical algorithms in the few-dense-inequality regime.",
+      "description_text": "Rigorous quantum upper bounds in the specified access model, with partial evidence against the best displayed classical algorithms in the few-dense-inequality regime."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "The active assignment register has $n$ qubits; $d$ arithmetic accumulators require input-dependent bit width. Exponential coherent range-search data and long searches dominate large-instance implementation. Increasing $d$ raises both the $n^d$ factor and arithmetic cost.",
+      "description_text": "The active assignment register has $n$ qubits; $d$ arithmetic accumulators require input-dependent bit width. Exponential coherent range-search data and long searches dominate large-instance implementation. Increasing $d$ raises both the $n^d$ factor and arithmetic cost."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "30.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0212048}{Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)}. Section 2, Theorem 1 and steps 1--6, pp.~3--4: partial-sum preprocessing, range-tree queries and quantum search; Corollary 2 gives threshold optimization.",
+      "content_text": "Arvind and Schuler, The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems (ISAAC 2003). Section 2, Theorem 1 and steps 1–6, pp. 3–4: partial-sum preprocessing, range-tree queries and quantum search; Corollary 2 gives threshold optimization.",
+      "citation_ids": [
+        "entry-030-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "30.2",
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendices D.1--D.4, applied to the bounded-row-arity clauses.",
+      "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and Appendices D.1–D.4, applied to the bounded-row-arity clauses.",
+      "citation_ids": [
+        "entry-030-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-030-citation-001",
+    "entry-030-citation-002"
+  ],
+  "source_latex": "\\entrytitle{30}{Binary integer programming with few inequalities}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{29}\n\\begin{problem}[Binary integer programming]\nGiven $A\\in\\mathbb Z^{d\\times n}$ and $b\\in\\mathbb Z^d$, find $x\\in\\{0,1\\}^n$ satisfying $Ax\\leq b$, or decide infeasibility. An additional profit threshold converts a linear optimization problem into this form. The regime of interest has fixed or slowly growing $d$ and binary-encoded coefficients.\nThe few-inequality quantum bound uses coherent-memory time with bit-arithmetic costs, classical meet in the middle uses RAM time, and bounded-row-arity encodings use bit complexity.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(2^{n/3}n^d)$, Arvind--Schuler integer-programming algorithm.}\nThe polynomial arithmetic factors depend on coefficient bit length. For $d=o(n/\\log n)$, the time is $2^{(1/3+o(1))n}$. Precomputed partial-sum vectors support coherent multidimensional range queries; both preprocessing and searching are included in the bound. With $B$-bit coefficients, direct arithmetic and comparisons have reversible cost polynomial in $dn(B+\\log n)$.\n\\complexity{Classical}{$O^*(2^{n/2})$ for fixed $d$, meet in the middle with dominance searching.}\nThe two lists of partial-sum vectors are combined by coordinatewise inequalities and use exponential memory. For a different regime in which every row has support at most a fixed $r$, encode each forbidden local assignment as a clause using the original $n$ Boolean variables. Polynomially many rows then give $\\operatorname{poly}(\\text{input size})2^{O_r(n\\log\\log n/\\sqrt{\\log n})}$ deterministic time and polynomial space; linearly many rows improve the exponent to $O_r(n/\\sqrt{\\log n})$. A fixed number of dense, large-coefficient inequalities retains the few-constraint meet-in-the-middle comparison.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for fixed $d$ and unrestricted row support, using Grover search and amplitude amplification. Bounded-row-arity instances have the stronger subexponential classical comparator.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum upper bounds in the specified access model, with partial evidence against the best displayed classical algorithms in the few-dense-inequality regime.\n\\dimensionlabel{Hardware}{hardwareExponential} The active assignment register has $n$ qubits; $d$ arithmetic accumulators require input-dependent bit width. Exponential coherent range-search data and long searches dominate large-instance implementation. Increasing $d$ raises both the $n^d$ factor and arithmetic cost.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{30}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0212048}{Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)}. Section 2, Theorem 1 and steps 1--6, pp.~3--4: partial-sum preprocessing, range-tree queries and quantum search; Corollary 2 gives threshold optimization.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and Appendices D.1--D.4, applied to the bounded-row-arity clauses.\n\\end{algorithmindex}"
+}

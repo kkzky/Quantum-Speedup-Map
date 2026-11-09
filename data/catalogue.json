@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Quantum Speedups for Discrete Computational Problems",
+  "language": "en",
+  "as_of_date": "2026-11-09",
+  "source": "sources/catalogue.tex",
+  "entry_count": 102,
+  "reference_count": 162,
+  "citation_count": 264,
+  "entry_order": [
+    "entry-001",
+    "entry-002",
+    "entry-003",
+    "entry-004",
+    "entry-005",
+    "entry-006",
+    "entry-007",
+    "entry-008",
+    "entry-009",
+    "entry-010",
+    "entry-011",
+    "entry-012",
+    "entry-013",
+    "entry-014",
+    "entry-015",
+    "entry-016",
+    "entry-017",
+    "entry-018",
+    "entry-019",
+    "entry-020",
+    "entry-021",
+    "entry-022",
+    "entry-023",
+    "entry-024",
+    "entry-025",
+    "entry-026",
+    "entry-027",
+    "entry-028",
+    "entry-029",
+    "entry-030",
+    "entry-102",
+    "entry-031",
+    "entry-032",
+    "entry-033",
+    "entry-034",
+    "entry-035",
+    "entry-036",
+    "entry-037",
+    "entry-038",
+    "entry-039",
+    "entry-040",
+    "entry-041",
+    "entry-042",
+    "entry-043",
+    "entry-044",
+    "entry-046",
+    "entry-049",
+    "entry-050",
+    "entry-051",
+    "entry-052",
+    "entry-053",
+    "entry-054",
+    "entry-055",
+    "entry-056",
+    "entry-059",
+    "entry-060",
+    "entry-103",
+    "entry-104",
+    "entry-105",
+    "entry-106",
+    "entry-107",
+    "entry-061",
+    "entry-062",
+    "entry-063",
+    "entry-064",
+    "entry-065",
+    "entry-066",
+    "entry-067",
+    "entry-068",
+    "entry-069",
+    "entry-070",
+    "entry-071",
+    "entry-072",
+    "entry-073",
+    "entry-074",
+    "entry-075",
+    "entry-076",
+    "entry-077",
+    "entry-078",
+    "entry-079",
+    "entry-080",
+    "entry-081",
+    "entry-082",
+    "entry-083",
+    "entry-084",
+    "entry-085",
+    "entry-086",
+    "entry-087",
+    "entry-088",
+    "entry-089",
+    "entry-090",
+    "entry-101",
+    "entry-091",
+    "entry-092",
+    "entry-093",
+    "entry-094",
+    "entry-095",
+    "entry-096",
+    "entry-097",
+    "entry-098",
+    "entry-099",
+    "entry-100"
+  ],
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "number": 1,
+      "title": "Exact combinatorial optimization and search",
+      "title_latex": "Exact combinatorial optimization and search",
+      "introduction_latex": "",
+      "entry_ids": [
+        "entry-001",
+        "entry-002",
+        "entry-003",
+        "entry-004",
+        "entry-005",
+        "entry-006",
+        "entry-007",
+        "entry-008",
+        "entry-009",
+        "entry-010",
+        "entry-011",
+        "entry-012",
+        "entry-013",
+        "entry-014",
+        "entry-015",
+        "entry-016",
+        "entry-017",
+        "entry-018",
+        "entry-019",
+        "entry-020",
+        "entry-021",
+        "entry-022",
+        "entry-023",
+        "entry-024",
+        "entry-025",
+        "entry-026",
+        "entry-027",
+        "entry-028",
+        "entry-029",
+        "entry-030",
+        "entry-102"
+      ]
+    },
+    {
+      "id": "chapter-2",
+      "number": 2,
+      "title": "Graph algorithms and discrete optimization",
+      "title_latex": "Graph algorithms and discrete optimization",
+      "introduction_latex": "",
+      "entry_ids": [
+        "entry-031",
+        "entry-032",
+        "entry-033",
+        "entry-034",
+        "entry-035",
+        "entry-036",
+        "entry-037",
+        "entry-038",
+        "entry-039",
+        "entry-040",
+        "entry-041",
+        "entry-042",
+        "entry-043",
+        "entry-044",
+        "entry-046",
+        "entry-049",
+        "entry-050",
+        "entry-051",
+        "entry-052",
+        "entry-053",
+        "entry-054",
+        "entry-055",
+        "entry-056",
+        "entry-059",
+        "entry-060",
+        "entry-103",
+        "entry-104",
+        "entry-105",
+        "entry-106",
+        "entry-107"
+      ]
+    },
+    {
+      "id": "chapter-3",
+      "number": 3,
+      "title": "Cryptanalysis and post-quantum problems",
+      "title_latex": "Cryptanalysis and post-quantum problems",
+      "introduction_latex": "",
+      "entry_ids": [
+        "entry-061",
+        "entry-062",
+        "entry-063",
+        "entry-064",
+        "entry-065",
+        "entry-066",
+        "entry-067",
+        "entry-068",
+        "entry-069",
+        "entry-070",
+        "entry-071",
+        "entry-072",
+        "entry-073",
+        "entry-074",
+        "entry-075",
+        "entry-076",
+        "entry-077",
+        "entry-078",
+        "entry-079",
+        "entry-080",
+        "entry-081",
+        "entry-082",
+        "entry-083",
+        "entry-084",
+        "entry-085",
+        "entry-086",
+        "entry-087",
+        "entry-088",
+        "entry-089",
+        "entry-090",
+        "entry-101"
+      ]
+    },
+    {
+      "id": "chapter-4",
+      "number": 4,
+      "title": "Complexity bounds and implications",
+      "title_latex": "Complexity bounds and implications",
+      "introduction_latex": "The problems in this chapter are selected for their significance to quantum complexity classes. Query lower bounds, completeness results and classical simulation theorems clarify the power of $\\mathsf{BQP}$ and the relationships among $\\mathsf{NP}$, $\\mathsf{MA}$ and $\\mathsf{QMA}$. This scope includes continuous optimization and quantum-state problems, whose complexity also constrains the power of quantum computation.",
+      "entry_ids": [
+        "entry-091",
+        "entry-092",
+        "entry-093",
+        "entry-094",
+        "entry-095",
+        "entry-096",
+        "entry-097",
+        "entry-098",
+        "entry-099",
+        "entry-100"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "strength-polynomial",
+      "dimension": "strength",
+      "label": "Polynomial speedup",
+      "color_key": "strengthPolynomial",
+      "rgb": [
+        255,
+        224,
+        224
+      ]
+    },
+    {
+      "id": "strength-improved-exponential-subexponential",
+      "dimension": "strength",
+      "label": "Improved exponential/subexponential complexity",
+      "color_key": "strengthIntermediate",
+      "rgb": [
+        255,
+        208,
+        208
+      ]
+    },
+    {
+      "id": "strength-exponential-to-subexponential",
+      "dimension": "strength",
+      "label": "Exponential to subexponential",
+      "color_key": "strengthExpToSubexp",
+      "rgb": [
+        255,
+        112,
+        112
+      ]
+    },
+    {
+      "id": "strength-exponential-subexponential-to-polynomial",
+      "dimension": "strength",
+      "label": "Exponential or subexponential to polynomial",
+      "color_key": "strengthPolynomialTime",
+      "rgb": [
+        255,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "evidence-proved",
+      "dimension": "evidence",
+      "label": "Fully rigorous: matching bounds in the same computational model",
+      "color_key": "evidenceProved",
+      "rgb": [
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "id": "evidence-strong",
+      "dimension": "evidence",
+      "label": "Strong conditional evidence from an explicit hardness assumption",
+      "color_key": "evidenceStrong",
+      "rgb": [
+        85,
+        85,
+        255
+      ]
+    },
+    {
+      "id": "evidence-partial",
+      "dimension": "evidence",
+      "label": "Partial evidence from the best known classical algorithms",
+      "color_key": "evidencePartial",
+      "rgb": [
+        170,
+        170,
+        255
+      ]
+    },
+    {
+      "id": "evidence-unspecified",
+      "dimension": "evidence",
+      "label": "No established evidence for a speedup",
+      "color_key": "white",
+      "rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "id": "hardware-demonstrated",
+      "dimension": "hardware",
+      "label": "Demonstrated advantage at a substantial problem scale",
+      "color_key": "hardwareDemonstrated",
+      "rgb": [
+        0,
+        255,
+        0
+      ]
+    },
+    {
+      "id": "hardware-small",
+      "dimension": "hardware",
+      "label": "Small-instance physical implementation or benchmark",
+      "color_key": "hardwareSmall",
+      "rgb": [
+        64,
+        255,
+        64
+      ]
+    },
+    {
+      "id": "hardware-polynomial",
+      "dimension": "hardware",
+      "label": "Prospective fault-tolerant implementation with polynomial resources",
+      "color_key": "hardwarePolynomial",
+      "rgb": [
+        128,
+        255,
+        128
+      ]
+    },
+    {
+      "id": "hardware-superpolynomial",
+      "dimension": "hardware",
+      "label": "Prospective implementation with superpolynomial depth or storage",
+      "color_key": "hardwareExponential",
+      "rgb": [
+        191,
+        255,
+        191
+      ]
+    },
+    {
+      "id": "hardware-unspecified",
+      "dimension": "hardware",
+      "label": "Implementation resources unspecified or not applicable",
+      "color_key": "white",
+      "rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "id": "strength-unspecified",
+      "dimension": "strength",
+      "label": "No established speedup or not applicable",
+      "color_key": "white",
+      "rgb": [
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "introduction_latex": "\\section*{Introduction}\n\\addcontentsline{toc}{section}{Introduction}\nThe first three chapters study decision, search, optimization, counting and sampling on combinatorial structures, integers, finite fields and groups, and lattices. Numerical weights, approximate outputs and continuous or simulation subroutines are included for discrete target problems. Continuous optimization, numerical linear algebra, numerical differential equations and Hamiltonian simulation are outside their scope as independent problems. The fourth chapter, Complexity bounds and implications, also considers continuous and quantum-state problems to study quantum complexity classes.\n\nThe organizing unit is a mathematical problem with its input representation, promise or approximation conditions, and success criterion. Quantum and classical bounds are compared in the same regime. Algorithms for the same problem appear together; their formal definitions and complexity statements are located in the literature under Algorithm.\n\nEach entry carries three title cells: strength (red), evidence (blue), and hardware (green). Greater saturation indicates a higher category. The corresponding colors also appear beside Strength, Evidence and Hardware, whose text specifies the comparison and implementation resources. White denotes the lowest category or a dimension that does not apply to a complexity-theoretic constraint.\n\n\\subhead{Strength}\nRed indicates the strongest supported speedup in an entry, across its parameter regimes and input models. The four categories use nearby pale shades for the first two and progressively more saturated red for the last two. Complexity bounds retain their general parameter dependence; the accompanying text states the assumptions, evidence and hardware resources.\n\n\\begin{tabular}{@{}ll@{}}\n\\colorcell{strengthPolynomial} & Polynomial speedup\\\\[3pt]\n\\colorcell{strengthIntermediate} & Improved exponential/subexponential complexity\\\\[3pt]\n\\colorcell{strengthExpToSubexp} & Exponential to subexponential\\\\[3pt]\n\\colorcell{strengthPolynomialTime} & Exponential or subexponential to polynomial\n\\end{tabular}\n\n\\emph{Polynomial speedup} includes fixed-power relations between the classical and quantum running times. In particular, $2^{an}\\to2^{bn}$ for constants $0<b<a$ satisfies $T_Q=T_C^{b/a}$ and belongs in this category. Quadratic and higher-degree improvements are identified in the accompanying text, together with their origin in amplitude amplification, quantum walks or other methods.\n\n\\emph{Improved exponential/subexponential complexity} covers superpolynomial advantages for which both runtimes remain superpolynomial within the same exponential or subexponential regime. The quantum time is a vanishing power of the classical time, $\\log T_Q=o(\\log T_C)$. The other two categories describe the changes from exponential to subexponential time and from exponential or subexponential to polynomial time.\n\n\\emph{Power saving} remains a textual descriptor: it means a decrease in the power of the input size inside the exponent. Thus $2^{n^{2/3}}\\to2^{n^{1/3}}$ has power saving, whereas $2^{\\sqrt n\\log n}\\to2^{\\sqrt n}$ improves a logarithmic factor. Both comparisons belong to the second color category. The change $2^{\\Theta(n)}\\to2^{O(n/\\sqrt{\\log n})}$ belongs to the third category and has no power saving. A change of parameter is stated explicitly; the oracle address length and the full oracle-table size are distinct quantities.\n\n\\Needspace{8\\baselineskip}\n\\subhead{Evidence}\n\\begin{tabular}{@{}ll@{}}\n\\colorcell{evidenceProved} & Fully rigorous: matching bounds in the same computational model\\\\[3pt]\n\\colorcell{evidenceStrong} & Strong conditional evidence from an explicit hardness assumption\\\\[3pt]\n\\colorcell{evidencePartial} & Partial evidence from the best known classical algorithms\\\\[3pt]\n\\colorcell{white} & No established evidence for a speedup\n\\end{tabular}\n\nA proved quantum upper bound can coexist with partial evidence for a speedup. Strong conditional evidence identifies the assumption or implication at issue; for factoring and discrete logarithms, this includes the corresponding cryptographic hardness assumptions. Complexity-theoretic entries use blue for the status of the stated theorem or conditional implication.\n\n\\Needspace{12\\baselineskip}\n\\subhead{Hardware}\n\\begin{tabular}{@{}ll@{}}\n\\colorcell{hardwareDemonstrated} & Demonstrated advantage at a substantial problem scale\\\\[3pt]\n\\colorcell{hardwareSmall} & Small-instance physical implementation or benchmark\\\\[3pt]\n\\colorcell{hardwarePolynomial} & Prospective fault-tolerant implementation with polynomial resources\\\\[3pt]\n\\colorcell{hardwareExponential} & Prospective implementation with superpolynomial depth or storage\\\\[3pt]\n\\colorcell{white} & Implementation resources unspecified or not applicable\n\\end{tabular}\n\nThe hardware text identifies the implemented task, logical-qubit requirements, coherent memory, depth, and precision. Logical qubits encode protected quantum information; physical qubits implement the chosen error-correcting code. Analog atoms or spins and noisy circuit qubits are identified separately. A query bound determines the number of oracle calls; a circuit realization additionally specifies the oracle and its workspace.\n\n\\subhead{Complexity conventions}\nThe last sentence of each Problem states the resource being measured. Oracle or query complexity counts calls to the specified input oracle. Gate complexity counts elementary quantum gates. Classical running time may count bit operations, word-RAM operations, arithmetic operations, or real-RAM operations, with the model stated in the entry. Sampling complexity counts observations; continuous-time algorithms specify evolution time and the Hamiltonian energy normalization. Mixed comparisons explicitly identify each resource.\n\nBounded error means success probability at least $2/3$ unless another value is stated. $O^*(\\cdot)$ suppresses factors polynomial in the input length, and $\\widetilde O(\\cdot)$ suppresses polylogarithmic factors. Variables are defined locally. In cryptography, bit length and group or field cardinality are distinct parameters. The standard notation\n\\[\nL_X[\\alpha,c]=\\exp\\!\\big((c+o(1))(\\log X)^\\alpha(\\log\\log X)^{1-\\alpha}\\big)\n\\]\ndescribes subexponential number-theoretic algorithms. Quantum random-access memory (QRAM) provides coherent address access; its storage size is separate from the address-register size.\n\n\\subhead{Reading paths}\nThe catalogue has four chapters. Entries~\\ref{entry:1}--\\ref{entry:30} and~\\ref{entry:102} cover exact optimization and search, including recursive Fourier sampling. Entries~\\ref{entry:31}--\\ref{entry:44}, \\ref{entry:46}, \\ref{entry:49}--\\ref{entry:56}, \\ref{entry:59}--\\ref{entry:60} and~\\ref{entry:103}--\\ref{entry:107} cover graph algorithms and discrete optimization, including variational approaches to partitioning, scheduling, portfolios and community detection. Entries~\\ref{entry:61}--\\ref{entry:90} and~\\ref{entry:101} cover cryptanalysis and post-quantum problems. Entries~\\ref{entry:91}--\\ref{entry:100} connect the algorithms to query lower bounds, fine-grained hypotheses, Hamiltonian complexity and variational optimization. The final table lists relations for the knowledge graph.\n\\clearpage\n",
+  "conventions": [
+    {
+      "name": "Strength",
+      "content_latex": "Red indicates the strongest supported speedup in an entry, across its parameter regimes and input models. The four categories use nearby pale shades for the first two and progressively more saturated red for the last two. Complexity bounds retain their general parameter dependence; the accompanying text states the assumptions, evidence and hardware resources.\n\n\\begin{tabular}{@{}ll@{}}\n\\colorcell{strengthPolynomial} & Polynomial speedup\\\\[3pt]\n\\colorcell{strengthIntermediate} & Improved exponential/subexponential complexity\\\\[3pt]\n\\colorcell{strengthExpToSubexp} & Exponential to subexponential\\\\[3pt]\n\\colorcell{strengthPolynomialTime} & Exponential or subexponential to polynomial\n\\end{tabular}\n\n\\emph{Polynomial speedup} includes fixed-power relations between the classical and quantum running times. In particular, $2^{an}\\to2^{bn}$ for constants $0<b<a$ satisfies $T_Q=T_C^{b/a}$ and belongs in this category. Quadratic and higher-degree improvements are identified in the accompanying text, together with their origin in amplitude amplification, quantum walks or other methods.\n\n\\emph{Improved exponential/subexponential complexity} covers superpolynomial advantages for which both runtimes remain superpolynomial within the same exponential or subexponential regime. The quantum time is a vanishing power of the classical time, $\\log T_Q=o(\\log T_C)$. The other two categories describe the changes from exponential to subexponential time and from exponential or subexponential to polynomial time.\n\n\\emph{Power saving} remains a textual descriptor: it means a decrease in the power of the input size inside the exponent. Thus $2^{n^{2/3}}\\to2^{n^{1/3}}$ has power saving, whereas $2^{\\sqrt n\\log n}\\to2^{\\sqrt n}$ improves a logarithmic factor. Both comparisons belong to the second color category. The change $2^{\\Theta(n)}\\to2^{O(n/\\sqrt{\\log n})}$ belongs to the third category and has no power saving. A change of parameter is stated explicitly; the oracle address length and the full oracle-table size are distinct quantities.\n\n\\Needspace{8\\baselineskip}"
+    },
+    {
+      "name": "Evidence",
+      "content_latex": "\\begin{tabular}{@{}ll@{}}\n\\colorcell{evidenceProved} & Fully rigorous: matching bounds in the same computational model\\\\[3pt]\n\\colorcell{evidenceStrong} & Strong conditional evidence from an explicit hardness assumption\\\\[3pt]\n\\colorcell{evidencePartial} & Partial evidence from the best known classical algorithms\\\\[3pt]\n\\colorcell{white} & No established evidence for a speedup\n\\end{tabular}\n\nA proved quantum upper bound can coexist with partial evidence for a speedup. Strong conditional evidence identifies the assumption or implication at issue; for factoring and discrete logarithms, this includes the corresponding cryptographic hardness assumptions. Complexity-theoretic entries use blue for the status of the stated theorem or conditional implication.\n\n\\Needspace{12\\baselineskip}"
+    },
+    {
+      "name": "Hardware",
+      "content_latex": "\\begin{tabular}{@{}ll@{}}\n\\colorcell{hardwareDemonstrated} & Demonstrated advantage at a substantial problem scale\\\\[3pt]\n\\colorcell{hardwareSmall} & Small-instance physical implementation or benchmark\\\\[3pt]\n\\colorcell{hardwarePolynomial} & Prospective fault-tolerant implementation with polynomial resources\\\\[3pt]\n\\colorcell{hardwareExponential} & Prospective implementation with superpolynomial depth or storage\\\\[3pt]\n\\colorcell{white} & Implementation resources unspecified or not applicable\n\\end{tabular}\n\nThe hardware text identifies the implemented task, logical-qubit requirements, coherent memory, depth, and precision. Logical qubits encode protected quantum information; physical qubits implement the chosen error-correcting code. Analog atoms or spins and noisy circuit qubits are identified separately. A query bound determines the number of oracle calls; a circuit realization additionally specifies the oracle and its workspace."
+    },
+    {
+      "name": "Complexity conventions",
+      "content_latex": "The last sentence of each Problem states the resource being measured. Oracle or query complexity counts calls to the specified input oracle. Gate complexity counts elementary quantum gates. Classical running time may count bit operations, word-RAM operations, arithmetic operations, or real-RAM operations, with the model stated in the entry. Sampling complexity counts observations; continuous-time algorithms specify evolution time and the Hamiltonian energy normalization. Mixed comparisons explicitly identify each resource.\n\nBounded error means success probability at least $2/3$ unless another value is stated. $O^*(\\cdot)$ suppresses factors polynomial in the input length, and $\\widetilde O(\\cdot)$ suppresses polylogarithmic factors. Variables are defined locally. In cryptography, bit length and group or field cardinality are distinct parameters. The standard notation\n\\[\nL_X[\\alpha,c]=\\exp\\!\\big((c+o(1))(\\log X)^\\alpha(\\log\\log X)^{1-\\alpha}\\big)\n\\]\ndescribes subexponential number-theoretic algorithms. Quantum random-access memory (QRAM) provides coherent address access; its storage size is separate from the address-register size."
+    }
+  ],
+  "label_policy": "Strength records the strongest supported regime; complexity statements retain general parameter dependence."
+}

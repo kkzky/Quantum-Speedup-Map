@@ -1,0 +1,93 @@
+{
+  "id": "entry-068",
+  "number": 68,
+  "ordinal": 69,
+  "title_latex": "Vectorization for commutative isogeny actions",
+  "title": "Vectorization for commutative isogeny actions",
+  "chapter_id": "chapter-3",
+  "problem": {
+    "name_latex": "Vectorization for commutative isogeny group actions",
+    "name": "Vectorization for commutative isogeny group actions",
+    "statement_latex": "Let a finite abelian group $G$ act freely and transitively on a set $X$. Given $E,E'\\in X$, find $a\\in G$ such that $a*E=E'$. For CRS and CSIDH, $G$ is an ideal class group and $X$ consists of appropriately oriented elliptic curves. Write $N=|G|$. The group-action comparison counts action-oracle queries and auxiliary operations; the explicit-isogeny comparison includes quantum gate and classical bit costs of action evaluation.",
+    "statement_text": "Let a finite abelian group $G$ act freely and transitively on a set $X$. Given $E,E'\\in X$, find $a\\in G$ such that $a*E=E'$. For CRS and CSIDH, $G$ is an ideal class group and $X$ consists of appropriately oriented elliptic curves. Write $N=|G|$. The group-action comparison counts action-oracle queries and auxiliary operations; the explicit-isogeny comparison includes quantum gate and classical bit costs of action evaluation."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\operatorname{poly}(\\log N)\\,2^{O(\\sqrt{\\log|2^tp^kG|})}$ time, queries and QROM complexity, Castryck--Vander Meeren hidden-shift algorithm.",
+      "headline_text": "$\\operatorname{poly}(\\log N)\\,2^{O(\\sqrt{\\log|2^tp^kG|})}$ time, queries and QROM complexity, Castryck–Vander Meeren hidden-shift algorithm.",
+      "details_latex": "Here $p$ is any fixed prime, $t,k$ are fixed nonnegative integers, and $2^tp^kG=\\{2^tp^kg:g\\in G\\}$. The bound assumes efficient representations and action evaluation, and uses $\\operatorname{poly}(\\log N)$ qubits. It is polynomial when $2^tp^kG=\\{0\\}$. For general $G$, Kuperberg's collimation sieve takes $2^{O(\\sqrt{\\log N})}$ time with $O(\\log N)$ quantum space and subexponential classical space; Regev's polynomial-space variant takes $2^{O(\\sqrt{\\log N\\log\\log N})}$ time. For explicit isogenies, Childs--Jao--Soukharev include class-group action evaluation and obtain overall $L_{|\\Delta|}[1/2,O(1)]$ quantum complexity under GRH.",
+      "details_text": "Here $p$ is any fixed prime, $t,k$ are fixed nonnegative integers, and $2^tp^kG=\\{2^tp^kg:g\\in G\\}$. The bound assumes efficient representations and action evaluation, and uses $\\operatorname{poly}(\\log N)$ qubits. It is polynomial when $2^tp^kG=\\{0\\}$. For general $G$, Kuperberg's collimation sieve takes $2^{O(\\sqrt{\\log N})}$ time with $O(\\log N)$ quantum space and subexponential classical space; Regev's polynomial-space variant takes $2^{O(\\sqrt{\\log N\\log\\log N})}$ time. For explicit isogenies, Childs–Jao–Soukharev include class-group action evaluation and obtain overall $L_{|\\Delta|}[1/2,O(1)]$ quantum complexity under GRH."
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde O(\\sqrt N)$ action evaluations, baby-step--giant-step or Pollard-rho vectorization.",
+      "headline_text": "$\\widetilde O(\\sqrt N)$ action evaluations, baby-step–giant-step or Pollard-rho vectorization.",
+      "details_latex": "This is the generic freely transitive action comparison. Each action evaluation carries its implementation cost when curves and ideals are supplied explicitly. The action model represents the hidden-shift functions by $b\\mapsto b*E$ and $b\\mapsto b*E'$. Efficient classical structure specific to a curve family belongs in its full arithmetic comparison.",
+      "details_text": "This is the generic freely transitive action comparison. Each action evaluation carries its implementation cost when curves and ideals are supplied explicitly. The action model represents the hidden-shift functions by $b\\mapsto b*E$ and $b\\mapsto b*E'$. Efficient classical structure specific to a curve family belongs in its full arithmetic comparison."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Exponential to polynomial in $\\log N$ for generic actions with $2^tp^kG=\\{0\\}$ and fixed $p,t,k$. General abelian hidden shifts give exponential-to-subexponential improvement, with power saving in the exponent. These comparisons use the action-oracle model; explicit isogeny costs include arithmetic evaluation.",
+      "description_text": "Exponential to polynomial in $\\log N$ for generic actions with $2^tp^kG=\\{0\\}$ and fixed $p,t,k$. General abelian hidden shifts give exponential-to-subexponential improvement, with power saving in the exponent. These comparisons use the action-oracle model; explicit isogeny costs include arithmetic evaluation."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous quantum upper bounds and partial evidence relative to the best known classical vectorization algorithms. For explicit isogeny actions, classical arithmetic structure and action-evaluation cost enter the comparison.",
+      "description_text": "Rigorous quantum upper bounds and partial evidence relative to the best known classical vectorization algorithms. For explicit isogeny actions, classical arithmetic structure and action-evaluation cost enter the comparison."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The bounded-torsion algorithm uses polynomially many qubits and polynomial QROM when $2^tp^kG=\\{0\\}$. General-group variants include $O(\\log N)$ quantum space for collimation. Their subexponential state generation and classical storage, together with reversible isogeny arithmetic, make cryptographic-size execution a fault-tolerant workload.",
+      "description_text": "The bounded-torsion algorithm uses polynomially many qubits and polynomial QROM when $2^tp^kG=\\{0\\}$. General-group variants include $O(\\log N)$ quantum space for collimation. Their subexponential state generation and classical storage, together with reversible isogeny arithmetic, make cryptographic-size execution a fault-tolerant workload."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "68.1",
+      "content_latex": "\\href{https://eprint.iacr.org/2022/1366}{Castryck and Vander Meeren, \\emph{Two Remarks on the Vectorization Problem} (2022)}. Theorem 1: the bound in terms of $|2^tp^kG|$ and polynomial quantum storage; Section 2: vectorization and hidden shift; Section 5: bounded-torsion hidden shifts.",
+      "content_text": "Castryck and Vander Meeren, Two Remarks on the Vectorization Problem (2022). Theorem 1: the bound in terms of $|2^tp^kG|$ and polynomial quantum storage; Section 2: vectorization and hidden shift; Section 5: bounded-torsion hidden shifts.",
+      "citation_ids": [
+        "entry-068-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "68.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/1112.3333}{Kuperberg, \\emph{Another Subexponential-Time Quantum Algorithm for the Dihedral Hidden Subgroup Problem} (TQC 2013)}. Algorithms 4.1 and 4.4: collimation and the collimation sieve.",
+      "content_text": "Kuperberg, Another Subexponential-Time Quantum Algorithm for the Dihedral Hidden Subgroup Problem (TQC 2013). Algorithms 4.1 and 4.4: collimation and the collimation sieve.",
+      "citation_ids": [
+        "entry-068-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "68.3",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0406151}{Regev, \\emph{A Subexponential Time Algorithm for the Dihedral Hidden Subgroup Problem with Polynomial Space} (2004)}. Polynomial-space sieve construction and its recursive combination procedure.",
+      "content_text": "Regev, A Subexponential Time Algorithm for the Dihedral Hidden Subgroup Problem with Polynomial Space (2004). Polynomial-space sieve construction and its recursive combination procedure.",
+      "citation_ids": [
+        "entry-068-citation-003"
+      ]
+    },
+    {
+      "item_number": 4,
+      "index_label": "68.4",
+      "content_latex": "\\href{https://arxiv.org/pdf/1012.4019}{Childs, Jao and Soukharev, \\emph{Constructing Elliptic Curve Isogenies in Quantum Subexponential Time} (2014)}. Algorithm 2 and Theorem 4.6: group-action evaluation; Algorithm 3 and Theorem 5.4: full isogeny algorithm; Theorems 5.1--5.2: hidden-shift subroutines.",
+      "content_text": "Childs, Jao and Soukharev, Constructing Elliptic Curve Isogenies in Quantum Subexponential Time (2014). Algorithm 2 and Theorem 4.6: group-action evaluation; Algorithm 3 and Theorem 5.4: full isogeny algorithm; Theorems 5.1–5.2: hidden-shift subroutines.",
+      "citation_ids": [
+        "entry-068-citation-004"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-068-citation-001",
+    "entry-068-citation-002",
+    "entry-068-citation-003",
+    "entry-068-citation-004"
+  ],
+  "source_latex": "\\entrytitle{68}{Vectorization for commutative isogeny actions}{strengthPolynomialTime}{evidencePartial}{hardwarePolynomial}\n\\setcounter{problem}{67}\n\\begin{problem}[Vectorization for commutative isogeny group actions]\nLet a finite abelian group $G$ act freely and transitively on a set $X$. Given $E,E'\\in X$, find $a\\in G$ such that $a*E=E'$. For CRS and CSIDH, $G$ is an ideal class group and $X$ consists of appropriately oriented elliptic curves. Write $N=|G|$. The group-action comparison counts action-oracle queries and auxiliary operations; the explicit-isogeny comparison includes quantum gate and classical bit costs of action evaluation.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\operatorname{poly}(\\log N)\\,2^{O(\\sqrt{\\log|2^tp^kG|})}$ time, queries and QROM complexity, Castryck--Vander Meeren hidden-shift algorithm.}\nHere $p$ is any fixed prime, $t,k$ are fixed nonnegative integers, and $2^tp^kG=\\{2^tp^kg:g\\in G\\}$. The bound assumes efficient representations and action evaluation, and uses $\\operatorname{poly}(\\log N)$ qubits. It is polynomial when $2^tp^kG=\\{0\\}$. For general $G$, Kuperberg's collimation sieve takes $2^{O(\\sqrt{\\log N})}$ time with $O(\\log N)$ quantum space and subexponential classical space; Regev's polynomial-space variant takes $2^{O(\\sqrt{\\log N\\log\\log N})}$ time. For explicit isogenies, Childs--Jao--Soukharev include class-group action evaluation and obtain overall $L_{|\\Delta|}[1/2,O(1)]$ quantum complexity under GRH.\n\n\\complexity{Classical}{$\\widetilde O(\\sqrt N)$ action evaluations, baby-step--giant-step or Pollard-rho vectorization.}\nThis is the generic freely transitive action comparison. Each action evaluation carries its implementation cost when curves and ideals are supplied explicitly. The action model represents the hidden-shift functions by $b\\mapsto b*E$ and $b\\mapsto b*E'$. Efficient classical structure specific to a curve family belongs in its full arithmetic comparison.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Exponential to polynomial in $\\log N$ for generic actions with $2^tp^kG=\\{0\\}$ and fixed $p,t,k$. General abelian hidden shifts give exponential-to-subexponential improvement, with power saving in the exponent. These comparisons use the action-oracle model; explicit isogeny costs include arithmetic evaluation.\n\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum upper bounds and partial evidence relative to the best known classical vectorization algorithms. For explicit isogeny actions, classical arithmetic structure and action-evaluation cost enter the comparison.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The bounded-torsion algorithm uses polynomially many qubits and polynomial QROM when $2^tp^kG=\\{0\\}$. General-group variants include $O(\\log N)$ quantum space for collimation. Their subexponential state generation and classical storage, together with reversible isogeny arithmetic, make cryptographic-size execution a fault-tolerant workload.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{68}\n\\item \\href{https://eprint.iacr.org/2022/1366}{Castryck and Vander Meeren, \\emph{Two Remarks on the Vectorization Problem} (2022)}. Theorem 1: the bound in terms of $|2^tp^kG|$ and polynomial quantum storage; Section 2: vectorization and hidden shift; Section 5: bounded-torsion hidden shifts.\n\\item \\href{https://arxiv.org/pdf/1112.3333}{Kuperberg, \\emph{Another Subexponential-Time Quantum Algorithm for the Dihedral Hidden Subgroup Problem} (TQC 2013)}. Algorithms 4.1 and 4.4: collimation and the collimation sieve.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0406151}{Regev, \\emph{A Subexponential Time Algorithm for the Dihedral Hidden Subgroup Problem with Polynomial Space} (2004)}. Polynomial-space sieve construction and its recursive combination procedure.\n\\item \\href{https://arxiv.org/pdf/1012.4019}{Childs, Jao and Soukharev, \\emph{Constructing Elliptic Curve Isogenies in Quantum Subexponential Time} (2014)}. Algorithm 2 and Theorem 4.6: group-action evaluation; Algorithm 3 and Theorem 5.4: full isogeny algorithm; Theorems 5.1--5.2: hidden-shift subroutines.\n\\end{algorithmindex}"
+}

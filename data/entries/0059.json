@@ -1,0 +1,83 @@
+{
+  "id": "entry-059",
+  "number": 59,
+  "ordinal": 55,
+  "title_latex": "All-pairs shortest paths",
+  "title": "All-pairs shortest paths",
+  "chapter_id": "chapter-2",
+  "problem": {
+    "name_latex": "All-pairs shortest paths",
+    "name": "All-pairs shortest paths",
+    "statement_latex": "Given a directed graph with real edge weights and no negative cycle, output $D_{uv}$, the minimum path length from $u$ to $v$, for every ordered pair. This full $n\\times n$ distance table is central to routing and fine-grained complexity.\nThe general comparison uses quantum arithmetic time with coherent matrix access and classical real-RAM operations; bounded-integer and unweighted variants use their stated word-RAM models.",
+    "statement_text": "Given a directed graph with real edge weights and no negative cycle, output $D_{uv}$, the minimum path length from $u$ to $v$, for every ordered pair. This full $n\\times n$ distance table is central to routing and fine-grained complexity. The general comparison uses quantum arithmetic time with coherent matrix access and classical real-RAM operations; bounded-integer and unweighted variants use their stated word-RAM models."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{5/2})$, quantum minimum finding for min-plus products and repeated squaring.",
+      "headline_text": "$\\widetilde O(n^{5/2})$, quantum minimum finding for min-plus products and repeated squaring.",
+      "details_latex": "Each distance-product entry is a minimum over $n$ candidates, and the complete distance table is output classically. Arithmetic on real weights is treated as unit cost in this comparison; a finite-precision circuit charges the corresponding addition, comparison and access gates.",
+      "details_text": "Each distance-product entry is a minimum over $n$ candidates, and the complete distance table is output classically. Arithmetic on real weights is treated as unit cost in this comparison; a finite-precision circuit charges the corresponding addition, comparison and access gates."
+    },
+    "classical": {
+      "headline_latex": "$O(n^{2.998})$ expected time, Alman--Vassilevska Williams Las Vegas APSP.",
+      "headline_text": "$O(n^{2.998})$ expected time, Alman–Vassilevska Williams Las Vegas APSP.",
+      "details_latex": "The real-weight algorithm uses comparisons, additions and subtractions and also has a corresponding high-probability runtime guarantee. Polynomially bounded integer weights admit deterministic $O(n^{2.99942})$ word-RAM time. Directed unweighted APSP admits $n^{2.4999+o(1)}$ time via rectangular matrix multiplication. Each specialized comparator applies to its stated weight regime.",
+      "details_text": "The real-weight algorithm uses comparisons, additions and subtractions and also has a corresponding high-probability runtime guarantee. Polynomially bounded integer weights admit deterministic $O(n^{2.99942})$ word-RAM time. Directed unweighted APSP admits $n^{2.4999+o(1)}$ time via rectangular matrix multiplication. Each specialized comparator applies to its stated weight regime."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial for arbitrary real weights: approximately a factor $n^{0.498}$ between the displayed upper bounds, with quantum logarithmic factors suppressed. The mechanism is minimum finding.",
+      "description_text": "Polynomial for arbitrary real weights: approximately a factor $n^{0.498}$ between the displayed upper bounds, with quantum logarithmic factors suppressed. The mechanism is minimum finding."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Partial evidence from the gap between known general real-weight algorithms. The unweighted specialization has a stronger classical bound.",
+      "description_text": "Partial evidence from the gap between known general real-weight algorithms. The unweighted specialization has a stronger classical bound."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Fault-tolerant implementation requires coherent access to $n^2$ distance entries and reversible arithmetic. With $b$-bit distances, the direct stored matrix occupies $O(n^2b)$ bits accessible to quantum queries, plus active index and arithmetic registers.",
+      "description_text": "Fault-tolerant implementation requires coherent access to $n^2$ distance entries and reversible arithmetic. With $b$-bit distances, the direct stored matrix occupies $O(n^2b)$ bits accessible to quantum queries, plus active index and arithmetic registers."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "59.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1410.6220}{Nayebi and Vassilevska Williams, \\emph{Quantum Algorithms for Shortest Paths Problems in Structured Instances} (2014)}. Introduction: general $\\widetilde O(n^{5/2})$ APSP baseline; structured algorithms in Theorems 1--5.",
+      "content_text": "Nayebi and Vassilevska Williams, Quantum Algorithms for Shortest Paths Problems in Structured Instances (2014). Introduction: general $\\widetilde O(n^{5/2})$ APSP baseline; structured algorithms in Theorems 1–5.",
+      "citation_ids": [
+        "entry-059-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "59.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/2610.06783}{Alman and Vassilevska Williams, \\emph{Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs} (2026)}. Theorems 22 and 35: integer and real-weight APSP.",
+      "content_text": "Alman and Vassilevska Williams, Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs (2026). Theorems 22 and 35: integer and real-weight APSP.",
+      "citation_ids": [
+        "entry-059-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "59.3",
+      "content_latex": "\\href{https://arxiv.org/pdf/2610.10494v2}{Uzna\\'nski, \\emph{Rectangular Matrix Multiplication from Polynomial Products} (2026)}. Section 7: directed unweighted APSP.",
+      "content_text": "Uznański, Rectangular Matrix Multiplication from Polynomial Products (2026). Section 7: directed unweighted APSP.",
+      "citation_ids": [
+        "entry-059-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-059-citation-001",
+    "entry-059-citation-002",
+    "entry-059-citation-003"
+  ],
+  "source_latex": "\\entrytitle{59}{All-pairs shortest paths}{strengthPolynomial}{evidencePartial}{hardwarePolynomial}\n\\setcounter{problem}{58}\n\\begin{problem}[All-pairs shortest paths]\nGiven a directed graph with real edge weights and no negative cycle, output $D_{uv}$, the minimum path length from $u$ to $v$, for every ordered pair. This full $n\\times n$ distance table is central to routing and fine-grained complexity.\nThe general comparison uses quantum arithmetic time with coherent matrix access and classical real-RAM operations; bounded-integer and unweighted variants use their stated word-RAM models.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{5/2})$, quantum minimum finding for min-plus products and repeated squaring.}\nEach distance-product entry is a minimum over $n$ candidates, and the complete distance table is output classically. Arithmetic on real weights is treated as unit cost in this comparison; a finite-precision circuit charges the corresponding addition, comparison and access gates.\n\n\\complexity{Classical}{$O(n^{2.998})$ expected time, Alman--Vassilevska Williams Las Vegas APSP.}\nThe real-weight algorithm uses comparisons, additions and subtractions and also has a corresponding high-probability runtime guarantee. Polynomially bounded integer weights admit deterministic $O(n^{2.99942})$ word-RAM time. Directed unweighted APSP admits $n^{2.4999+o(1)}$ time via rectangular matrix multiplication. Each specialized comparator applies to its stated weight regime.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial for arbitrary real weights: approximately a factor $n^{0.498}$ between the displayed upper bounds, with quantum logarithmic factors suppressed. The mechanism is minimum finding.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence from the gap between known general real-weight algorithms. The unweighted specialization has a stronger classical bound.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant implementation requires coherent access to $n^2$ distance entries and reversible arithmetic. With $b$-bit distances, the direct stored matrix occupies $O(n^2b)$ bits accessible to quantum queries, plus active index and arithmetic registers.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{59}\n\\item \\href{https://arxiv.org/pdf/1410.6220}{Nayebi and Vassilevska Williams, \\emph{Quantum Algorithms for Shortest Paths Problems in Structured Instances} (2014)}. Introduction: general $\\widetilde O(n^{5/2})$ APSP baseline; structured algorithms in Theorems 1--5.\n\\item \\href{https://arxiv.org/pdf/2610.06783}{Alman and Vassilevska Williams, \\emph{Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs} (2026)}. Theorems 22 and 35: integer and real-weight APSP.\n\\item \\href{https://arxiv.org/pdf/2610.10494v2}{Uzna\\'nski, \\emph{Rectangular Matrix Multiplication from Polynomial Products} (2026)}. Section 7: directed unweighted APSP.\n\\end{algorithmindex}"
+}

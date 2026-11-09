@@ -1,0 +1,75 @@
+{
+  "id": "entry-023",
+  "number": 23,
+  "ordinal": 23,
+  "title_latex": "Exact set partition",
+  "title": "Exact set partition",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Exact set partition",
+    "name": "Exact set partition",
+    "statement_latex": "Given $U$, a nonempty-set family $\\mathcal F\\subseteq2^U$, and integer $k$, find $S_1,\\ldots,S_k\\in\\mathcal F$ such that $U=S_1\\mathbin{\\dot\\cup}\\cdots\\mathbin{\\dot\\cup}S_k$. This is exact cover with a prescribed number of selected sets, and includes many clustering and assignment formulations.\nThe general comparison uses quantum QRAM time and classical subset-transform time; the explicit-family Boolean bounds count bit operations.",
+    "statement_text": "Given $U$, a nonempty-set family $\\mathcal F\\subseteq2^U$, and integer $k$, find $S_1,\\ldots,S_k\\in\\mathcal F$ such that $U=S_1\\mathbin{\\dot\\cup}\\cdots\\mathbin{\\dot\\cup}S_k$. This is exact cover with a prescribed number of selected sets, and includes many clustering and assignment formulations. The general comparison uses quantum QRAM time and classical subset-transform time; the explicit-family Boolean bounds count bit operations."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*((2+c)^{n/2})$ for eligible enumeration base $c<2$, Gaspers--Li partition framework.",
+      "headline_text": "$O^*((2+c)^{n/2})$ for eligible enumeration base $c<2$, Gaspers–Li partition framework.",
+      "details_latex": "Here $n=|U|$. A restricted-family branching algorithm must enumerate representative members in $O^*(c^{|X|})$ time while preserving a nonstraddling feasible partition. Theorems 5--6 refine the base for small $c$. The complexity includes preprocessing and assumes coherent access to its results; polynomial factors account for membership and feasibility tests.",
+      "details_text": "Here $n=|U|$. A restricted-family branching algorithm must enumerate representative members in $O^*(c^{|X|})$ time while preserving a nonstraddling feasible partition. Theorems 5–6 refine the base for small $c$. The complexity includes preprocessing and assumes coherent access to its results; polynomial factors account for membership and feasibility tests."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^n)$, inclusion--exclusion and subset transforms.",
+      "headline_text": "$O^*(2^n)$, inclusion–exclusion and subset transforms.",
+      "details_latex": "For an explicit family of $m=\\Theta(n)$ sets, selecting exactly one covering set per element and enforcing the chosen cardinality gives a stronger $O_\\epsilon(2^{\\epsilon n}\\operatorname{poly}(n,m))$ bound for each fixed $\\epsilon>0$. Long coverage clauses coexist with pairwise incompatibility constraints and a linear-size cardinality circuit. Long-clause shortening and bounded-width counting give the stated time. If the incidence count is linear, a linear-size encoding gives $\\operatorname{poly}(n,m)2^{O(n/\\sqrt{\\log n})}$.",
+      "details_text": "For an explicit family of $m=\\Theta(n)$ sets, selecting exactly one covering set per element and enforcing the chosen cardinality gives a stronger $O_\\epsilon(2^{\\epsilon n}\\operatorname{poly}(n,m))$ bound for each fixed $\\epsilon>0$. Long coverage clauses coexist with pairwise incompatibility constraints and a linear-size cardinality circuit. Long-clause shortening and bounded-width counting give the stated time. If the incidence count is linear, a linear-size encoding gives $\\operatorname{poly}(n,m)2^{O(n/\\sqrt{\\log n})}$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant for an eligible large or implicit family, from amplitude amplification. Linear-size explicit families have a subexponential classical comparison.",
+      "description_text": "Polynomial speedup through a smaller exponential constant for an eligible large or implicit family, from amplitude amplification. Linear-size explicit families have a subexponential classical comparison."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous framework theorem under its representative-family hypothesis, with partial evidence against the general classical subset-transform bound.",
+      "description_text": "Rigorous framework theorem under its representative-family hypothesis, with partial evidence against the general classical subset-transform bound."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active subset and cardinality registers are supplemented by exponential coherent memory. Large-instance fault-tolerant costs also include checking disjointness, membership and total coverage.",
+      "description_text": "Polynomial active subset and cardinality registers are supplemented by exponential coherent memory. Large-instance fault-tolerant costs also include checking disjointness, membership and total coverage."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "23.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 4: exact-partition framework; Theorems 5--6 and Corollary 1: improved small-$c$ implementation.",
+      "content_text": "Gaspers and Li, Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems (ICALP 2024). Theorem 4: exact-partition framework; Theorems 5–6 and Corollary 1: improved small-$c$ implementation.",
+      "citation_ids": [
+        "entry-023-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "23.2",
+      "content_latex": "\\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening; \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}}, Theorem 1.1 and Appendix D, gives the fixed-width contraction routine used after shortening.",
+      "content_text": "Claude (Anthropic), A $2^{o(n)}$ Time Algorithm for 3-SAT (2026). Long-clause shortening; OpenAI, The Exponential Time Hypothesis Is False, Theorem 1.1 and Appendix D, gives the fixed-width contraction routine used after shortening.",
+      "citation_ids": [
+        "entry-023-citation-002",
+        "entry-023-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-023-citation-001",
+    "entry-023-citation-002",
+    "entry-023-citation-003"
+  ],
+  "source_latex": "\\entrytitle{23}{Exact set partition}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{22}\n\\begin{problem}[Exact set partition]\nGiven $U$, a nonempty-set family $\\mathcal F\\subseteq2^U$, and integer $k$, find $S_1,\\ldots,S_k\\in\\mathcal F$ such that $U=S_1\\mathbin{\\dot\\cup}\\cdots\\mathbin{\\dot\\cup}S_k$. This is exact cover with a prescribed number of selected sets, and includes many clustering and assignment formulations.\nThe general comparison uses quantum QRAM time and classical subset-transform time; the explicit-family Boolean bounds count bit operations.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*((2+c)^{n/2})$ for eligible enumeration base $c<2$, Gaspers--Li partition framework.}\nHere $n=|U|$. A restricted-family branching algorithm must enumerate representative members in $O^*(c^{|X|})$ time while preserving a nonstraddling feasible partition. Theorems 5--6 refine the base for small $c$. The complexity includes preprocessing and assumes coherent access to its results; polynomial factors account for membership and feasibility tests.\n\\complexity{Classical}{$O^*(2^n)$, inclusion--exclusion and subset transforms.}\nFor an explicit family of $m=\\Theta(n)$ sets, selecting exactly one covering set per element and enforcing the chosen cardinality gives a stronger $O_\\epsilon(2^{\\epsilon n}\\operatorname{poly}(n,m))$ bound for each fixed $\\epsilon>0$. Long coverage clauses coexist with pairwise incompatibility constraints and a linear-size cardinality circuit. Long-clause shortening and bounded-width counting give the stated time. If the incidence count is linear, a linear-size encoding gives $\\operatorname{poly}(n,m)2^{O(n/\\sqrt{\\log n})}$.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for an eligible large or implicit family, from amplitude amplification. Linear-size explicit families have a subexponential classical comparison.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous framework theorem under its representative-family hypothesis, with partial evidence against the general classical subset-transform bound.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset and cardinality registers are supplemented by exponential coherent memory. Large-instance fault-tolerant costs also include checking disjointness, membership and total coverage.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{23}\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorem 4: exact-partition framework; Theorems 5--6 and Corollary 1: improved small-$c$ implementation.\n\\item \\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening; \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}}, Theorem 1.1 and Appendix D, gives the fixed-width contraction routine used after shortening.\n\\end{algorithmindex}"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "entry-074",
+  "number": 74,
+  "ordinal": 75,
+  "title_latex": "The Euclidean closest vector problem",
+  "title": "The Euclidean closest vector problem",
+  "chapter_id": "chapter-3",
+  "problem": {
+    "name_latex": "The Euclidean closest vector problem",
+    "name": "The Euclidean closest vector problem",
+    "statement_latex": "Given a rank-$n$ lattice $L=B\\mathbb Z^n$ and target $t\\in\\mathbb Q^m$, output $v\\in L$ minimizing $\\|v-t\\|_2$. CVP models noisy lattice decoding and underlies attacks on lattice cryptography. The tree comparison counts quantum and classical node-oracle operations; total algorithms use quantum gates and classical bit operations including lattice arithmetic.",
+    "statement_text": "Given a rank-$n$ lattice $L=B\\mathbb Z^n$ and target $t\\in\\mathbb Q^m$, output $v\\in L$ minimizing $\\|v-t\\|_2$. CVP models noisy lattice decoding and underlies attacks on lattice cryptography. The tree comparison counts quantum and classical node-oracle operations; total algorithms use quantum gates and classical bit operations including lattice arithmetic."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(\\sqrt T\\,\\operatorname{poly}(n))$ node operations, quantum lattice enumeration.",
+      "headline_text": "$\\widetilde O(\\sqrt T\\,\\operatorname{poly}(n))$ node operations, quantum lattice enumeration.",
+      "details_latex": "Here $T$ is the size of the classical enumeration tree for the chosen basis and search radius, and its depth is $n$. Radius refinement and witness recovery introduce polynomial factors. The arithmetic cost also depends on basis bit length and precision. This bound gives a matched acceleration of the specified tree, while general exact CVP can also be solved by running the classical $2^{n+o(n)}$ algorithm on quantum hardware.",
+      "details_text": "Here $T$ is the size of the classical enumeration tree for the chosen basis and search radius, and its depth is $n$. Radius refinement and witness recovery introduce polynomial factors. The arithmetic cost also depends on basis bit length and precision. This bound gives a matched acceleration of the specified tree, while general exact CVP can also be solved by running the classical $2^{n+o(n)}$ algorithm on quantum hardware."
+    },
+    "classical": {
+      "headline_latex": "$2^{n+o(n)}$ time and space, Aggarwal--Dadush--Stephens-Davidowitz exact CVP; $T$ nodes for the matched enumeration tree.",
+      "headline_text": "$2^{n+o(n)}$ time and space, Aggarwal–Dadush–Stephens-Davidowitz exact CVP; $T$ nodes for the matched enumeration tree.",
+      "details_latex": "The general exact algorithm uses discrete-Gaussian sampling and a reduction through clusters of approximate closest vectors. For the promise $\\operatorname{dist}(t,L)\\le\\alpha\\lambda_1(L)$ with $\\alpha<1.039\\ldots$, Hhan gives $2^{n/2+o(n)}$ classical time and space. Its lattice model and distance guarantee are part of that bound. The appropriate comparator is the minimum of the general, promised-distance and enumeration bounds applicable to the input.",
+      "details_text": "The general exact algorithm uses discrete-Gaussian sampling and a reduction through clusters of approximate closest vectors. For the promise $\\operatorname{dist}(t,L)\\le\\alpha\\lambda_1(L)$ with $\\alpha<1.039\\ldots$, Hhan gives $2^{n/2+o(n)}$ classical time and space. Its lattice model and distance guarantee are part of that bound. The appropriate comparator is the minimum of the general, promised-distance and enumeration bounds applicable to the input."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Quadratic acceleration in enumeration-tree size. The total-runtime comparison with the best classical solver depends on $T$, basis quality and the target-distance promise.",
+      "description_text": "Quadratic acceleration in enumeration-tree size. The total-runtime comparison with the best classical solver depends on $T$, basis quality and the target-distance promise."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous quantum backtracking upper bounds; partial evidence for separation from optimized classical CVP algorithms on explicit lattices.",
+      "description_text": "Rigorous quantum backtracking upper bounds; partial evidence for separation from optimized classical CVP algorithms on explicit lattices."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Quantum enumeration needs polynomial logical registers for coefficient prefixes and reversible arithmetic, but potentially exponential coherent depth. Discrete-Gaussian and list-based methods use exponential storage. Large cryptanalytic instances require fault tolerance.",
+      "description_text": "Quantum enumeration needs polynomial logical registers for coefficient prefixes and reversible arithmetic, but potentially exponential coherent depth. Discrete-Gaussian and list-based methods use exponential storage. Large cryptanalytic instances require fault tolerance."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "74.1",
+      "content_latex": "\\href{https://eprint.iacr.org/2018/546}{Aono, Nguyen and Shen, \\emph{Quantum Lattice Enumeration and Tweaking Discrete Pruning} (ASIACRYPT 2018)}. Sections 3.1--3.2: close-vector enumeration; Algorithm 1 and Theorem 6: quantum tree minimization; Section 5.3, Algorithm 2: close-vector discrete pruning.",
+      "content_text": "Aono, Nguyen and Shen, Quantum Lattice Enumeration and Tweaking Discrete Pruning (ASIACRYPT 2018). Sections 3.1–3.2: close-vector enumeration; Algorithm 1 and Theorem 6: quantum tree minimization; Section 5.3, Algorithm 2: close-vector discrete pruning.",
+      "citation_ids": [
+        "entry-074-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "74.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/1504.01995}{Aggarwal, Dadush and Stephens-Davidowitz, \\emph{Solving the Closest Vector Problem in $2^n$ Time---The Discrete Gaussian Strikes Again!} (FOCS 2015)}. Theorem 5.7: exact-CVP reduction; Theorem 6.4 and the resulting exact algorithm: $2^{n+o(n)}$ time.",
+      "content_text": "Aggarwal, Dadush and Stephens-Davidowitz, Solving the Closest Vector Problem in $2^n$ Time—The Discrete Gaussian Strikes Again! (FOCS 2015). Theorem 5.7: exact-CVP reduction; Theorem 6.4 and the resulting exact algorithm: $2^{n+o(n)}$ time.",
+      "citation_ids": [
+        "entry-074-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "74.3",
+      "content_latex": "\\href{https://arxiv.org/pdf/2609.02764}{Hhan, \\emph{Finding a Shortest Vector and More in $2^{n/2+o(n)}$ Time Using $q$-ary Coset Difference Tree} (2026)}. Theorem 1.1: $2^{n/2+o(n)}$ CVP bound with a distance promise; Section 5, Algorithm 4: CVP with a distance guarantee.",
+      "content_text": "Hhan, Finding a Shortest Vector and More in $2^{n/2+o(n)}$ Time Using $q$-ary Coset Difference Tree (2026). Theorem 1.1: $2^{n/2+o(n)}$ CVP bound with a distance promise; Section 5, Algorithm 4: CVP with a distance guarantee.",
+      "citation_ids": [
+        "entry-074-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-074-citation-001",
+    "entry-074-citation-002",
+    "entry-074-citation-003"
+  ],
+  "source_latex": "\\entrytitle{74}{The Euclidean closest vector problem}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{73}\n\\begin{problem}[The Euclidean closest vector problem]\nGiven a rank-$n$ lattice $L=B\\mathbb Z^n$ and target $t\\in\\mathbb Q^m$, output $v\\in L$ minimizing $\\|v-t\\|_2$. CVP models noisy lattice decoding and underlies attacks on lattice cryptography. The tree comparison counts quantum and classical node-oracle operations; total algorithms use quantum gates and classical bit operations including lattice arithmetic.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(\\sqrt T\\,\\operatorname{poly}(n))$ node operations, quantum lattice enumeration.}\nHere $T$ is the size of the classical enumeration tree for the chosen basis and search radius, and its depth is $n$. Radius refinement and witness recovery introduce polynomial factors. The arithmetic cost also depends on basis bit length and precision. This bound gives a matched acceleration of the specified tree, while general exact CVP can also be solved by running the classical $2^{n+o(n)}$ algorithm on quantum hardware.\n\n\\complexity{Classical}{$2^{n+o(n)}$ time and space, Aggarwal--Dadush--Stephens-Davidowitz exact CVP; $T$ nodes for the matched enumeration tree.}\nThe general exact algorithm uses discrete-Gaussian sampling and a reduction through clusters of approximate closest vectors. For the promise $\\operatorname{dist}(t,L)\\le\\alpha\\lambda_1(L)$ with $\\alpha<1.039\\ldots$, Hhan gives $2^{n/2+o(n)}$ classical time and space. Its lattice model and distance guarantee are part of that bound. The appropriate comparator is the minimum of the general, promised-distance and enumeration bounds applicable to the input.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic acceleration in enumeration-tree size. The total-runtime comparison with the best classical solver depends on $T$, basis quality and the target-distance promise.\n\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous quantum backtracking upper bounds; partial evidence for separation from optimized classical CVP algorithms on explicit lattices.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Quantum enumeration needs polynomial logical registers for coefficient prefixes and reversible arithmetic, but potentially exponential coherent depth. Discrete-Gaussian and list-based methods use exponential storage. Large cryptanalytic instances require fault tolerance.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{74}\n\\item \\href{https://eprint.iacr.org/2018/546}{Aono, Nguyen and Shen, \\emph{Quantum Lattice Enumeration and Tweaking Discrete Pruning} (ASIACRYPT 2018)}. Sections 3.1--3.2: close-vector enumeration; Algorithm 1 and Theorem 6: quantum tree minimization; Section 5.3, Algorithm 2: close-vector discrete pruning.\n\\item \\href{https://arxiv.org/pdf/1504.01995}{Aggarwal, Dadush and Stephens-Davidowitz, \\emph{Solving the Closest Vector Problem in $2^n$ Time---The Discrete Gaussian Strikes Again!} (FOCS 2015)}. Theorem 5.7: exact-CVP reduction; Theorem 6.4 and the resulting exact algorithm: $2^{n+o(n)}$ time.\n\\item \\href{https://arxiv.org/pdf/2609.02764}{Hhan, \\emph{Finding a Shortest Vector and More in $2^{n/2+o(n)}$ Time Using $q$-ary Coset Difference Tree} (2026)}. Theorem 1.1: $2^{n/2+o(n)}$ CVP bound with a distance promise; Section 5, Algorithm 4: CVP with a distance guarantee.\n\\end{algorithmindex}"
+}

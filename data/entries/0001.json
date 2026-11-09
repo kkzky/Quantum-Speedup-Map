@@ -1,0 +1,74 @@
+{
+  "id": "entry-001",
+  "number": 1,
+  "ordinal": 1,
+  "title_latex": "Unstructured search",
+  "title": "Unstructured search",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Unstructured search",
+    "name": "Unstructured search",
+    "statement_latex": "Given coherent access to a Boolean oracle\n\\[\n f:\\{0,\\ldots,N-1\\}\\longrightarrow\\{0,1\\},\n\\]\noutput an $x$ with $f(x)=1$, or report that no such $x$ exists, with success probability at least $2/3$.\nLet $M=|f^{-1}(1)|$. In a combinatorial search problem, $x$ represents a candidate solution and $f$ its feasibility predicate.\nComplexity is measured in oracle queries for both models, with an additional quantum gate bound expressed in terms of the oracle implementation cost.",
+    "statement_text": "Given coherent access to a Boolean oracle \\[ f:\\{0,\\ldots,N-1\\}\\longrightarrow\\{0,1\\}, \\] output an $x$ with $f(x)=1$, or report that no such $x$ exists, with success probability at least $2/3$. Let $M=|f^{-1}(1)|$. In a combinatorial search problem, $x$ represents a candidate solution and $f$ its feasibility predicate. Complexity is measured in oracle queries for both models, with an additional quantum gate bound expressed in terms of the oracle implementation cost."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(\\sqrt N)$ oracle queries, Grover search and amplitude amplification.",
+      "headline_text": "$\\Theta(\\sqrt N)$ oracle queries, Grover search and amplitude amplification.",
+      "details_latex": "For $M\\ge1$, the expected query bound is $O(\\sqrt{N/M})$, including the case of unknown $M$.\nIf a reversible evaluation of $f$ costs $C_f$ gates, the direct implementation uses\n$O((C_f+\\log N)\\sqrt{N/M})$ gates.\nFor a general reversible trial with success probability $p$, amplitude amplification reduces the required number of trials to $O(p^{-1/2})$.",
+      "details_text": "For $M\\ge1$, the expected query bound is $O(\\sqrt{N/M})$, including the case of unknown $M$. If a reversible evaluation of $f$ costs $C_f$ gates, the direct implementation uses $O((C_f+\\log N)\\sqrt{N/M})$ gates. For a general reversible trial with success probability $p$, amplitude amplification reduces the required number of trials to $O(p^{-1/2})$."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N)$ oracle queries, exhaustive or randomized search.",
+      "headline_text": "$\\Theta(N)$ oracle queries, exhaustive or randomized search.",
+      "details_latex": "Under a promise of $M\\ge1$ marked inputs, randomized sampling requires $\\Theta(N/M)$ queries in the worst case over their locations. A general trial with success probability $p$ needs $\\Theta(p^{-1})$ independent repetitions. The upper and lower bounds concern the same Boolean-oracle access model.",
+      "details_text": "Under a promise of $M\\ge1$ marked inputs, randomized sampling requires $\\Theta(N/M)$ queries in the worst case over their locations. A general trial with success probability $p$ needs $\\Theta(p^{-1})$ independent repetitions. The upper and lower bounds concern the same Boolean-oracle access model."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Tight quadratic polynomial speedup in the search-space size, arising from Grover search and amplitude amplification. With $N=2^n$, the comparison is $2^n$ versus $2^{n/2}$, an improvement in the exponential constant without power saving.",
+      "description_text": "Tight quadratic polynomial speedup in the search-space size, arising from Grover search and amplitude amplification. With $N=2^n$, the comparison is $2^n$ versus $2^{n/2}$, an improvement in the exponential constant without power saving."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Fully rigorous: the classical and quantum query lower bounds match the stated algorithms; see \\href{https://arxiv.org/pdf/quant-ph/9701001}{Bennett--Bernstein--Brassard--Vazirani (1997)}.",
+      "description_text": "Fully rigorous: the classical and quantum query lower bounds match the stated algorithms; see Bennett–Bernstein–Brassard–Vazirani (1997)."
+    },
+    "hardware": {
+      "category_id": "hardware-small",
+      "color_key": "hardwareSmall",
+      "description_latex": "Small-instance search circuits have been implemented. A useful large search requires $\\lceil\\log_2N\\rceil$ logical candidate qubits, reversible-oracle workspace, and $\\Theta(\\sqrt N)$ coherent iterations in the worst case.",
+      "description_text": "Small-instance search circuits have been implemented. A useful large search requires $\\lceil\\log_2N\\rceil$ logical candidate qubits, reversible-oracle workspace, and $\\Theta(\\sqrt N)$ coherent iterations in the worst case."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "G.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9605043}{Grover, \\emph{A Fast Quantum Mechanical Algorithm for Database Search} (STOC 1996)}. Section 3, ``Algorithm'', preprint p.~3, steps (i)--(iii).",
+      "content_text": "Grover, A Fast Quantum Mechanical Algorithm for Database Search (STOC 1996). Section 3, “Algorithm”, preprint p. 3, steps (i)–(iii).",
+      "citation_ids": [
+        "entry-001-citation-002"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "G.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard, H{\\o}yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 2, Theorem 2 for known success probability; Theorem 3 and \\textsc{QSearch} for unknown success probability, preprint pp.~7--9.",
+      "content_text": "Brassard, Høyer, Mosca and Tapp, Quantum Amplitude Amplification and Estimation (2002). Section 2, Theorem 2 for known success probability; Theorem 3 and QSearch for unknown success probability, preprint pp. 7–9.",
+      "citation_ids": [
+        "entry-001-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-001-citation-001",
+    "entry-001-citation-002",
+    "entry-001-citation-003"
+  ],
+  "source_latex": "\\entrytitle{1}{Unstructured search}{strengthPolynomial}{evidenceProved}{hardwareSmall}\n\\setcounter{problem}{0}\n\\begin{problem}[Unstructured search]\nGiven coherent access to a Boolean oracle\n\\[\n f:\\{0,\\ldots,N-1\\}\\longrightarrow\\{0,1\\},\n\\]\noutput an $x$ with $f(x)=1$, or report that no such $x$ exists, with success probability at least $2/3$.\nLet $M=|f^{-1}(1)|$. In a combinatorial search problem, $x$ represents a candidate solution and $f$ its feasibility predicate.\nComplexity is measured in oracle queries for both models, with an additional quantum gate bound expressed in terms of the oracle implementation cost.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(\\sqrt N)$ oracle queries, Grover search and amplitude amplification.}\nFor $M\\ge1$, the expected query bound is $O(\\sqrt{N/M})$, including the case of unknown $M$.\nIf a reversible evaluation of $f$ costs $C_f$ gates, the direct implementation uses\n$O((C_f+\\log N)\\sqrt{N/M})$ gates.\nFor a general reversible trial with success probability $p$, amplitude amplification reduces the required number of trials to $O(p^{-1/2})$.\n\n\\complexity{Classical}{$\\Theta(N)$ oracle queries, exhaustive or randomized search.}\nUnder a promise of $M\\ge1$ marked inputs, randomized sampling requires $\\Theta(N/M)$ queries in the worst case over their locations. A general trial with success probability $p$ needs $\\Theta(p^{-1})$ independent repetitions. The upper and lower bounds concern the same Boolean-oracle access model.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Tight quadratic polynomial speedup in the search-space size, arising from Grover search and amplitude amplification. With $N=2^n$, the comparison is $2^n$ versus $2^{n/2}$, an improvement in the exponential constant without power saving.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully rigorous: the classical and quantum query lower bounds match the stated algorithms; see \\href{https://arxiv.org/pdf/quant-ph/9701001}{Bennett--Bernstein--Brassard--Vazirani (1997)}.\n\n\\dimensionlabel{Hardware}{hardwareSmall} Small-instance search circuits have been implemented. A useful large search requires $\\lceil\\log_2N\\rceil$ logical candidate qubits, reversible-oracle workspace, and $\\Theta(\\sqrt N)$ coherent iterations in the worst case.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{G}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9605043}{Grover, \\emph{A Fast Quantum Mechanical Algorithm for Database Search} (STOC 1996)}. Section 3, ``Algorithm'', preprint p.~3, steps (i)--(iii).\n\\item \\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard, H{\\o}yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 2, Theorem 2 for known success probability; Theorem 3 and \\textsc{QSearch} for unknown success probability, preprint pp.~7--9.\n\\end{algorithmindex}"
+}

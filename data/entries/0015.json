@@ -1,0 +1,73 @@
+{
+  "id": "entry-015",
+  "number": 15,
+  "ordinal": 15,
+  "title_latex": "Cutwidth",
+  "title": "Cutwidth",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Cutwidth",
+    "name": "Cutwidth",
+    "statement_latex": "Find a vertex order $\\pi$ minimizing\n\\[\\max_{1\\leq i<n}|\\{uv\\in E:\\pi(u)\\leq i<\\pi(v)\\text{ or }\\pi(v)\\leq i<\\pi(u)\\}|.\\]\nThe objective is the largest number of edges crossing a prefix cut. It represents the largest simultaneous communication or wiring requirement along a linear layout.\nThe comparison uses quantum QRAM time and classical RAM time on an explicit graph.",
+    "statement_text": "Find a vertex order $\\pi$ minimizing \\[\\max_{1\\leq i<n}|\\{uv\\in E:\\pi(u)\\leq i<\\pi(v)\\text{ or }\\pi(v)\\leq i<\\pi(u)\\}|.\\] The objective is the largest number of edges crossing a prefix cut. It represents the largest simultaneous communication or wiring requirement along a linear layout. The comparison uses quantum QRAM time and classical RAM time on an explicit graph."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
+      "headline_text": "$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.",
+      "details_latex": "A prefix subset determines the number of crossing edges. The recurrence minimizes the maximum of this local cut size and the value of the preceding prefix. Its quantum implementation uses partial subset preprocessing and recursive minimum finding, with exponential coherent memory.",
+      "details_text": "A prefix subset determines the number of crossing edges. The recurrence minimizes the maximum of this local cut size and the value of the preceding prefix. Its quantum implementation uses partial subset preprocessing and recursive minimum finding, with exponential coherent memory."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^n)$ time and space, subset dynamic programming; $O^*(4^n)$ time with polynomial space, divide and conquer.",
+      "headline_text": "$O^*(2^n)$ time and space, subset dynamic programming; $O^*(4^n)$ time with polynomial space, divide and conquer.",
+      "details_latex": "The subset algorithm processes prefixes in order of their cardinality and retains the best maximum-cut value for each prefix. These bounds concern arbitrary cutwidth as a function of vertex count. Algorithms parameterized by a small target cutwidth can instead be used on instances in that regime.",
+      "details_text": "The subset algorithm processes prefixes in order of their cardinality and retains the best maximum-cut value for each prefix. These bounds concern arbitrary cutwidth as a function of vertex count. Algorithms parameterized by a small target cutwidth can instead be used on instances in that regime."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup from $2^n$ to $1.817^n$ in the exponential-memory comparison, based on amplitude amplification.",
+      "description_text": "Polynomial speedup from $2^n$ to $1.817^n$ in the exponential-memory comparison, based on amplitude amplification."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous template and problem upper bounds, with partial evidence against the displayed general classical bound.",
+      "description_text": "Rigorous template and problem upper bounds, with partial evidence against the displayed general classical bound."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active registers represent a subset and its cut size. Exponentially many stored dynamic-programming values must be coherently accessible, and useful searches require fault tolerance.",
+      "description_text": "Polynomial active registers represent a subset and its cut size. Exponentially many stored dynamic-programming values must be coherently accessible, and useful searches require fault tolerance."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "15.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): quantum ordering recurrence and cutwidth application.",
+      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Corollary 5 and equation (3): quantum ordering recurrence and cutwidth application.",
+      "citation_ids": [
+        "entry-015-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "15.2",
+      "content_latex": "\\href{https://doi.org/10.1007/s00224-011-9312-0}{Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)}. The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives.",
+      "content_text": "Bodlaender et al., A Note on Exact Algorithms for Vertex Ordering Problems on Graphs (2012). The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives.",
+      "citation_ids": [
+        "entry-015-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-015-citation-001",
+    "entry-015-citation-002"
+  ],
+  "source_latex": "\\entrytitle{15}{Cutwidth}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{14}\n\\begin{problem}[Cutwidth]\nFind a vertex order $\\pi$ minimizing\n\\[\\max_{1\\leq i<n}|\\{uv\\in E:\\pi(u)\\leq i<\\pi(v)\\text{ or }\\pi(v)\\leq i<\\pi(u)\\}|.\\]\nThe objective is the largest number of edges crossing a prefix cut. It represents the largest simultaneous communication or wiring requirement along a linear layout.\nThe comparison uses quantum QRAM time and classical RAM time on an explicit graph.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.817^n)$, quantum vertex-ordering dynamic programming.}\nA prefix subset determines the number of crossing edges. The recurrence minimizes the maximum of this local cut size and the value of the preceding prefix. Its quantum implementation uses partial subset preprocessing and recursive minimum finding, with exponential coherent memory.\n\\complexity{Classical}{$O^*(2^n)$ time and space, subset dynamic programming; $O^*(4^n)$ time with polynomial space, divide and conquer.}\nThe subset algorithm processes prefixes in order of their cardinality and retains the best maximum-cut value for each prefix. These bounds concern arbitrary cutwidth as a function of vertex count. Algorithms parameterized by a small target cutwidth can instead be used on instances in that regime.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup from $2^n$ to $1.817^n$ in the exponential-memory comparison, based on amplitude amplification.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous template and problem upper bounds, with partial evidence against the displayed general classical bound.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active registers represent a subset and its cut size. Exponentially many stored dynamic-programming values must be coherently accessible, and useful searches require fault tolerance.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{15}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Corollary 5 and equation (3): quantum ordering recurrence and cutwidth application.\n\\item \\href{https://doi.org/10.1007/s00224-011-9312-0}{Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)}. The dynamic-programming and polynomial-space divide-and-conquer constructions for vertex-ordering objectives.\n\\end{algorithmindex}"
+}

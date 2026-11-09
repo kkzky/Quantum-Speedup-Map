@@ -1,0 +1,93 @@
+{
+  "id": "entry-101",
+  "number": 101,
+  "ordinal": 92,
+  "title_latex": "Vector subset sum over \\texorpdfstring{$\\mathbb F_3$}{F3}",
+  "title": "Vector subset sum over F3",
+  "chapter_id": "chapter-3",
+  "problem": {
+    "name_latex": "Average-case $\\mathbb F_3^n$-Subset-Sum",
+    "name": "Average-case $\\mathbb F_3^n$-Subset-Sum",
+    "statement_latex": "Given independent uniform vectors $h_1,\\ldots,h_m\\in\\mathbb F_3^n$, find a nonempty $S\\subseteq\\{1,\\ldots,m\\}$ such that $\\sum_{i\\in S}h_i=0$. The coefficients are restricted to $\\{0,1\\}$. This is a finite-field subset-sum problem related to restricted short integer solutions. Complexity is measured in quantum gates and classical bit operations on the explicit input.",
+    "statement_text": "Given independent uniform vectors $h_1,\\ldots,h_m\\in\\mathbb F_3^n$, find a nonempty $S\\subseteq\\{1,\\ldots,m\\}$ such that $\\sum_{i\\in S}h_i=0$. The coefficients are restricted to $\\{0,1\\}$. This is a finite-field subset-sum problem related to restricted short integer solutions. Complexity is measured in quantum gates and classical bit operations on the explicit input."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$(m/n)^{O_\\kappa(\\lceil n^2/m\\rceil)}$ time, Kothari--Metger--O'Donnell--Shutty--Wu.",
+      "headline_text": "$(m/n)^{O_\\kappa(\\lceil n^2/m\\rceil)}$ time, Kothari–Metger–O'Donnell–Shutty–Wu.",
+      "details_latex": "For every fixed $\\kappa>\\log_2 3$ and $m\\ge\\kappa n$, success probability is at least $1-2^{-\\Omega_\\kappa(m)}$. The algorithm combines quantum filtering with a deterministic binary-error LWE decoder.",
+      "details_text": "For every fixed $\\kappa>\\log_2 3$ and $m\\ge\\kappa n$, success probability is at least $1-2^{-\\Omega_\\kappa(m)}$. The algorithm combines quantum filtering with a deterministic binary-error LWE decoder."
+    },
+    "classical": {
+      "headline_latex": "$\\operatorname{poly}(n,m)2^{O(n/\\log(m/n))}$ time in the Wagner regime; polynomial time above the classical vector-count threshold.",
+      "headline_text": "$\\operatorname{poly}(n,m)2^{O(n/\\log(m/n))}$ time in the Wagner regime; polynomial time above the classical vector-count threshold.",
+      "details_latex": "For $m/n\\to\\infty$ below the known polynomial-time thresholds, Wagner-type algorithms merge lists of partial sums while imposing zero coordinates. For bounded $m/n$, known algorithms have $2^{O(n)}$ time. Kothari--O'Donnell--Wu give a deterministic polynomial-time algorithm, valid even for worst-case inputs, when $m\\ge n^2/3+Cn\\log n$ for an absolute constant $C$. Kothari--Metger--O'Donnell--Shutty--Wu further announce a polynomial-time threshold $m\\ge c_\\star n^2$, where $c_\\star=(8\\log_2 3-9)/36\\approx0.1022$; Section 1.3 presents this as an announced construction with its formal proof deferred. The classical comparison takes the fastest applicable algorithm at the given $n,m$.",
+      "details_text": "For $m/n\\to\\infty$ below the known polynomial-time thresholds, Wagner-type algorithms merge lists of partial sums while imposing zero coordinates. For bounded $m/n$, known algorithms have $2^{O(n)}$ time. Kothari–O'Donnell–Wu give a deterministic polynomial-time algorithm, valid even for worst-case inputs, when $m\\ge n^2/3+Cn\\log n$ for an absolute constant $C$. Kothari–Metger–O'Donnell–Shutty–Wu further announce a polynomial-time threshold $m\\ge c_\\star n^2$, where $c_\\star=(8\\log_2 3-9)/36\\approx0.1022$; Section 1.3 presents this as an announced construction with its formal proof deferred. The classical comparison takes the fastest applicable algorithm at the given $n,m$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-exponential-subexponential-to-polynomial",
+      "color_key": "strengthPolynomialTime",
+      "description_latex": "Subexponential to polynomial in the strongest comparison. The quantum tradeoff reaches polynomial time throughout $m=\\Omega(n^2)$, extending below the smallest reported classical polynomial-time vector-count threshold. The general bounds also describe intermediate improvements when both algorithms have superpolynomial time; their degree depends on the input density $m/n$.",
+      "description_text": "Subexponential to polynomial in the strongest comparison. The quantum tradeoff reaches polynomial time throughout $m=\\Omega(n^2)$, extending below the smallest reported classical polynomial-time vector-count threshold. The general bounds also describe intermediate improvements when both algorithms have superpolynomial time; their degree depends on the input density $m/n$."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Partial evidence from the classical frontier; the quantum running-time theorem is rigorous. The tradeoff is a September 2026 preprint.",
+      "description_text": "Partial evidence from the classical frontier; the quantum running-time theorem is rigorous. The tradeoff is a September 2026 preprint."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "The Fourier construction has $m+n$ qutrit registers, together with the workspace for a reversible decoder. The gate count and decoder workspace follow the parameter-dependent running time. The polynomial-time regime has polynomial logical resources; larger decoding costs require correspondingly longer fault-tolerant computations.",
+      "description_text": "The Fourier construction has $m+n$ qutrit registers, together with the workspace for a reversible decoder. The gate count and decoder workspace follow the parameter-dependent running time. The polynomial-time regime has polynomial logical resources; larger decoding costs require correspondingly longer fault-tolerant computations."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "101.1",
+      "content_latex": "\\href{https://arxiv.org/html/2609.40321v1}{Kothari, Metger, O'Donnell, Shutty and Wu, \\emph{Exponential Quantum Speedup for $\\mathbb F_3^n$-Subset-Sum? Or, Rigorous Classical Algorithms for Binary-Error LWE} (2026)}. Problem 1.1; Theorem 1.3 and Corollary 1.4: quantum tradeoff; Section 1.1: classical comparison; Theorem 3.1: quantum reduction; Definition 4.3 and Section 4.2: quotient decoder.",
+      "content_text": "Kothari, Metger, O'Donnell, Shutty and Wu, Exponential Quantum Speedup for $\\mathbb F_3^n$-Subset-Sum? Or, Rigorous Classical Algorithms for Binary-Error LWE (2026). Problem 1.1; Theorem 1.3 and Corollary 1.4: quantum tradeoff; Section 1.1: classical comparison; Theorem 3.1: quantum reduction; Definition 4.3 and Section 4.2: quotient decoder.",
+      "citation_ids": [
+        "entry-101-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "101.2",
+      "content_latex": "\\href{https://arxiv.org/abs/2108.11015}{Chen, Liu and Zhandry, \\emph{Quantum Algorithms for Variants of Average-Case Lattice Problems via Filtering} (EUROCRYPT 2022)}. Quantum filtering and the decoding-to-short-solution reduction underlying the quantum construction.",
+      "content_text": "Chen, Liu and Zhandry, Quantum Algorithms for Variants of Average-Case Lattice Problems via Filtering (EUROCRYPT 2022). Quantum filtering and the decoding-to-short-solution reduction underlying the quantum construction.",
+      "citation_ids": [
+        "entry-101-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "101.3",
+      "content_latex": "\\href{https://arxiv.org/html/2510.07515v3}{Kothari, O'Donnell and Wu, \\emph{No Exponential Quantum Speedup for SIS$^\\infty$ Anymore} (STOC 2026)}. Theorem 1.2 and Section 2: deterministic polynomial-time subset sum above the classical vector-count threshold.",
+      "content_text": "Kothari, O'Donnell and Wu, No Exponential Quantum Speedup for SIS$^\\infty$ Anymore (STOC 2026). Theorem 1.2 and Section 2: deterministic polynomial-time subset sum above the classical vector-count threshold.",
+      "citation_ids": [
+        "entry-101-citation-003"
+      ]
+    },
+    {
+      "item_number": 4,
+      "index_label": "101.4",
+      "content_latex": "\\href{https://people.eecs.berkeley.edu/~daw/papers/genbday.html}{Wagner, \\emph{A Generalized Birthday Problem} (CRYPTO 2002)}. Section 2 of the short version: list merging and the generalized-birthday algorithm; the finite-field subset-sum specialization is compared in Kothari et al., Section 1.1.",
+      "content_text": "Wagner, A Generalized Birthday Problem (CRYPTO 2002). Section 2 of the short version: list merging and the generalized-birthday algorithm; the finite-field subset-sum specialization is compared in Kothari et al., Section 1.1.",
+      "citation_ids": [
+        "entry-101-citation-004"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-101-citation-001",
+    "entry-101-citation-002",
+    "entry-101-citation-003",
+    "entry-101-citation-004"
+  ],
+  "source_latex": "\\entrytitle{101}{Vector subset sum over \\texorpdfstring{$\\mathbb F_3$}{F3}}{strengthPolynomialTime}{evidencePartial}{hardwarePolynomial}\n\\setcounter{problem}{100}\n\\begin{problem}[Average-case $\\mathbb F_3^n$-Subset-Sum]\nGiven independent uniform vectors $h_1,\\ldots,h_m\\in\\mathbb F_3^n$, find a nonempty $S\\subseteq\\{1,\\ldots,m\\}$ such that $\\sum_{i\\in S}h_i=0$. The coefficients are restricted to $\\{0,1\\}$. This is a finite-field subset-sum problem related to restricted short integer solutions. Complexity is measured in quantum gates and classical bit operations on the explicit input.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$(m/n)^{O_\\kappa(\\lceil n^2/m\\rceil)}$ time, Kothari--Metger--O'Donnell--Shutty--Wu.}\nFor every fixed $\\kappa>\\log_2 3$ and $m\\ge\\kappa n$, success probability is at least $1-2^{-\\Omega_\\kappa(m)}$. The algorithm combines quantum filtering with a deterministic binary-error LWE decoder.\n\n\\complexity{Classical}{$\\operatorname{poly}(n,m)2^{O(n/\\log(m/n))}$ time in the Wagner regime; polynomial time above the classical vector-count threshold.}\nFor $m/n\\to\\infty$ below the known polynomial-time thresholds, Wagner-type algorithms merge lists of partial sums while imposing zero coordinates. For bounded $m/n$, known algorithms have $2^{O(n)}$ time. Kothari--O'Donnell--Wu give a deterministic polynomial-time algorithm, valid even for worst-case inputs, when $m\\ge n^2/3+Cn\\log n$ for an absolute constant $C$. Kothari--Metger--O'Donnell--Shutty--Wu further announce a polynomial-time threshold $m\\ge c_\\star n^2$, where $c_\\star=(8\\log_2 3-9)/36\\approx0.1022$; Section 1.3 presents this as an announced construction with its formal proof deferred. The classical comparison takes the fastest applicable algorithm at the given $n,m$.\n\n\\dimensionlabel{Strength}{strengthPolynomialTime} Subexponential to polynomial in the strongest comparison. The quantum tradeoff reaches polynomial time throughout $m=\\Omega(n^2)$, extending below the smallest reported classical polynomial-time vector-count threshold. The general bounds also describe intermediate improvements when both algorithms have superpolynomial time; their degree depends on the input density $m/n$.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence from the classical frontier; the quantum running-time theorem is rigorous. The tradeoff is a September 2026 preprint.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} The Fourier construction has $m+n$ qutrit registers, together with the workspace for a reversible decoder. The gate count and decoder workspace follow the parameter-dependent running time. The polynomial-time regime has polynomial logical resources; larger decoding costs require correspondingly longer fault-tolerant computations.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{101}\n\\item \\href{https://arxiv.org/html/2609.40321v1}{Kothari, Metger, O'Donnell, Shutty and Wu, \\emph{Exponential Quantum Speedup for $\\mathbb F_3^n$-Subset-Sum? Or, Rigorous Classical Algorithms for Binary-Error LWE} (2026)}. Problem 1.1; Theorem 1.3 and Corollary 1.4: quantum tradeoff; Section 1.1: classical comparison; Theorem 3.1: quantum reduction; Definition 4.3 and Section 4.2: quotient decoder.\n\\item \\href{https://arxiv.org/abs/2108.11015}{Chen, Liu and Zhandry, \\emph{Quantum Algorithms for Variants of Average-Case Lattice Problems via Filtering} (EUROCRYPT 2022)}. Quantum filtering and the decoding-to-short-solution reduction underlying the quantum construction.\n\\item \\href{https://arxiv.org/html/2510.07515v3}{Kothari, O'Donnell and Wu, \\emph{No Exponential Quantum Speedup for SIS$^\\infty$ Anymore} (STOC 2026)}. Theorem 1.2 and Section 2: deterministic polynomial-time subset sum above the classical vector-count threshold.\n\\item \\href{https://people.eecs.berkeley.edu/~daw/papers/genbday.html}{Wagner, \\emph{A Generalized Birthday Problem} (CRYPTO 2002)}. Section 2 of the short version: list merging and the generalized-birthday algorithm; the finite-field subset-sum specialization is compared in Kothari et al., Section 1.1.\n\\end{algorithmindex}"
+}

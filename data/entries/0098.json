@@ -1,0 +1,93 @@
+{
+  "id": "entry-098",
+  "number": 98,
+  "ordinal": 100,
+  "title_latex": "Local Hamiltonian ground-energy optimization",
+  "title": "Local Hamiltonian ground-energy optimization",
+  "chapter_id": "chapter-4",
+  "problem": {
+    "name_latex": "Local Hamiltonian",
+    "name": "Local Hamiltonian",
+    "statement_latex": "Given $H=\\sum_{j=1}^m H_j$ on $n$ qubits, with constant-local terms of polynomially bounded norm, distinguish $\\lambda_{\\min}(H)\\le a$ from $\\lambda_{\\min}(H)\\ge b$, promised $b-a\\ge1/\\operatorname{poly}(n)$. Diagonal terms encode classical constraint optimization; noncommuting terms permit quantum witnesses. Complexity is measured in quantum gates or block-encoding queries and classical arithmetic operations at the required precision.",
+    "statement_text": "Given $H=\\sum_{j=1}^m H_j$ on $n$ qubits, with constant-local terms of polynomially bounded norm, distinguish $\\lambda_{\\min}(H)\\le a$ from $\\lambda_{\\min}(H)\\ge b$, promised $b-a\\ge1/\\operatorname{poly}(n)$. Diagonal terms encode classical constraint optimization; noncommuting terms permit quantum witnesses. Complexity is measured in quantum gates or block-encoding queries and classical arithmetic operations at the required precision."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(2^{n/2})$ gates, energy filtering and amplitude amplification at inverse-polynomial precision.",
+      "headline_text": "$O^*(2^{n/2})$ gates, energy filtering and amplitude amplification at inverse-polynomial precision.",
+      "details_latex": "A purification of the maximally mixed state supplies ground-subspace overlap at least $2^{-n/2}$. In a guided-state regime, a preparable state with ground-state overlap amplitude $\\gamma$, gap lower bound $\\Delta$, and block encoding of $H/\\alpha$ allows ground-state preparation in $\\widetilde O(\\alpha/(\\gamma\\Delta))$ block-encoding queries. The 2-local decision problem is QMA-complete, so a polynomial-time quantum solution would imply $\\mathrm{QMA}=\\mathrm{BQP}$.",
+      "details_text": "A purification of the maximally mixed state supplies ground-subspace overlap at least $2^{-n/2}$. In a guided-state regime, a preparable state with ground-state overlap amplitude $\\gamma$, gap lower bound $\\Delta$, and block encoding of $H/\\alpha$ allows ground-state preparation in $\\widetilde O(\\alpha/(\\gamma\\Delta))$ block-encoding queries. The 2-local decision problem is QMA-complete, so a polynomial-time quantum solution would imply $\\mathrm{QMA}=\\mathrm{BQP}$."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^n)$ arithmetic operations, randomized sparse-matrix Lanczos.",
+      "headline_text": "$O^*(2^n)$ arithmetic operations, randomized sparse-matrix Lanczos.",
+      "details_latex": "Each matrix-vector product costs $O(m2^n)$ operations; inverse-polynomial accuracy contributes polynomial overhead. State-vector memory is exponential. For the diagonal subfamily with $O(n)$ constant-arity terms and constant-bit integer weights, a linear-size threshold circuit and sparse counting instead give exact minimization in $\\operatorname{poly}(n)2^{O(n/\\sqrt{\\log n})}$ time.",
+      "details_text": "Each matrix-vector product costs $O(m2^n)$ operations; inverse-polynomial accuracy contributes polynomial overhead. State-vector memory is exponential. For the diagonal subfamily with $O(n)$ constant-arity terms and constant-bit integer weights, a linear-size threshold circuit and sparse counting instead give exact minimization in $\\operatorname{poly}(n)2^{O(n/\\sqrt{\\log n})}$ time."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant for the generic noncommuting comparison. Guided-state preparation is polynomial when its overlap, gap and block encoding have polynomial costs.",
+      "description_text": "Polynomial speedup through a smaller exponential constant for the generic noncommuting comparison. Guided-state preparation is polynomial when its overlap, gap and block encoding have polynomial costs."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Proved algorithmic upper bounds and QMA-completeness; the generic runtime advantage is a comparison with known classical algorithms.",
+      "description_text": "Proved algorithmic upper bounds and QMA-completeness; the generic runtime advantage is a comparison with known classical algorithms."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "A fault-tolerant implementation uses $2n$ qubits for the mixed-state purification, plus filtering and arithmetic ancillas. The generic method has exponential depth; guided-state resources depend on $\\gamma$, $\\Delta$ and precision.",
+      "description_text": "A fault-tolerant implementation uses $2n$ qubits for the mixed-state purification, plus filtering and arithmetic ancillas. The generic method has exponential depth; guided-state resources depend on $\\gamma$, $\\Delta$ and precision."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "98.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2002.12508}{Lin and Tong, \\emph{Near-optimal Ground State Preparation} (2020)}. Theorem 6 for preparation with a ground-energy bound; Algorithm 1 and Theorem 8 for ground-energy estimation and binary search.",
+      "content_text": "Lin and Tong, Near-optimal Ground State Preparation (2020). Theorem 6 for preparation with a ground-energy bound; Algorithm 1 and Theorem 8 for ground-energy estimation and binary search.",
+      "citation_ids": [
+        "entry-098-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "98.2",
+      "content_latex": "\\href{https://doi.org/10.1137/0613066}{Kuczy\\'nski and Wo\\'zniakowski, \\emph{Estimating the Largest Eigenvalue by the Power and Lanczos Algorithms with a Random Start} (1992)}. The Lanczos analysis for randomized extremal-eigenvalue estimation; apply it to $-H$.",
+      "content_text": "Kuczyński and Woźniakowski, Estimating the Largest Eigenvalue by the Power and Lanczos Algorithms with a Random Start (1992). The Lanczos analysis for randomized extremal-eigenvalue estimation; apply it to $-H$.",
+      "citation_ids": [
+        "entry-098-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "98.3",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0406180}{Kempe, Kitaev and Regev, \\emph{The Complexity of the Local Hamiltonian Problem} (2004/2006)}. Theorem 1 for 2-local QMA-completeness.",
+      "content_text": "Kempe, Kitaev and Regev, The Complexity of the Local Hamiltonian Problem (2004/2006). Theorem 1 for 2-local QMA-completeness.",
+      "citation_ids": [
+        "entry-098-citation-003"
+      ]
+    },
+    {
+      "item_number": 4,
+      "index_label": "98.4",
+      "content_latex": "\\href{https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026}{OpenAI (2026)}. Theorem 1.1 and Appendix C for the diagonal circuit/counting specialization.",
+      "content_text": "OpenAI (2026). Theorem 1.1 and Appendix C for the diagonal circuit/counting specialization.",
+      "citation_ids": [
+        "entry-098-citation-004"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-098-citation-001",
+    "entry-098-citation-002",
+    "entry-098-citation-003",
+    "entry-098-citation-004"
+  ],
+  "source_latex": "\\entrytitle{98}{Local Hamiltonian ground-energy optimization}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{97}\n\\begin{problem}[Local Hamiltonian]\nGiven $H=\\sum_{j=1}^m H_j$ on $n$ qubits, with constant-local terms of polynomially bounded norm, distinguish $\\lambda_{\\min}(H)\\le a$ from $\\lambda_{\\min}(H)\\ge b$, promised $b-a\\ge1/\\operatorname{poly}(n)$. Diagonal terms encode classical constraint optimization; noncommuting terms permit quantum witnesses. Complexity is measured in quantum gates or block-encoding queries and classical arithmetic operations at the required precision.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(2^{n/2})$ gates, energy filtering and amplitude amplification at inverse-polynomial precision.}\nA purification of the maximally mixed state supplies ground-subspace overlap at least $2^{-n/2}$. In a guided-state regime, a preparable state with ground-state overlap amplitude $\\gamma$, gap lower bound $\\Delta$, and block encoding of $H/\\alpha$ allows ground-state preparation in $\\widetilde O(\\alpha/(\\gamma\\Delta))$ block-encoding queries. The 2-local decision problem is QMA-complete, so a polynomial-time quantum solution would imply $\\mathrm{QMA}=\\mathrm{BQP}$.\n\n\\complexity{Classical}{$O^*(2^n)$ arithmetic operations, randomized sparse-matrix Lanczos.}\nEach matrix-vector product costs $O(m2^n)$ operations; inverse-polynomial accuracy contributes polynomial overhead. State-vector memory is exponential. For the diagonal subfamily with $O(n)$ constant-arity terms and constant-bit integer weights, a linear-size threshold circuit and sparse counting instead give exact minimization in $\\operatorname{poly}(n)2^{O(n/\\sqrt{\\log n})}$ time.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for the generic noncommuting comparison. Guided-state preparation is polynomial when its overlap, gap and block encoding have polynomial costs.\n\n\\dimensionlabel{Evidence}{evidencePartial} Proved algorithmic upper bounds and QMA-completeness; the generic runtime advantage is a comparison with known classical algorithms.\n\n\\dimensionlabel{Hardware}{hardwareExponential} A fault-tolerant implementation uses $2n$ qubits for the mixed-state purification, plus filtering and arithmetic ancillas. The generic method has exponential depth; guided-state resources depend on $\\gamma$, $\\Delta$ and precision.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{98}\n\\item \\href{https://arxiv.org/pdf/2002.12508}{Lin and Tong, \\emph{Near-optimal Ground State Preparation} (2020)}. Theorem 6 for preparation with a ground-energy bound; Algorithm 1 and Theorem 8 for ground-energy estimation and binary search.\n\\item \\href{https://doi.org/10.1137/0613066}{Kuczy\\'nski and Wo\\'zniakowski, \\emph{Estimating the Largest Eigenvalue by the Power and Lanczos Algorithms with a Random Start} (1992)}. The Lanczos analysis for randomized extremal-eigenvalue estimation; apply it to $-H$.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0406180}{Kempe, Kitaev and Regev, \\emph{The Complexity of the Local Hamiltonian Problem} (2004/2006)}. Theorem 1 for 2-local QMA-completeness.\n\\item \\href{https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026}{OpenAI (2026)}. Theorem 1.1 and Appendix C for the diagonal circuit/counting specialization.\n\\end{algorithmindex}"
+}

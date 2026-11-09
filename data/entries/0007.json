@@ -1,0 +1,83 @@
+{
+  "id": "entry-007",
+  "number": 7,
+  "ordinal": 7,
+  "title_latex": "Travelling salesman",
+  "title": "Travelling salesman",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Travelling salesman problem",
+    "name": "Travelling salesman problem",
+    "statement_latex": "Given a weighted graph $G=(V,E,w)$, $|V|=n$, find a Hamiltonian cycle $C$ minimizing $\\sum_{e\\in C}w(e)$, or report infeasibility. Integer weights have maximum magnitude $L$ and are binary encoded. The problem models routing and cyclic sequencing.\nThe general quantum bound uses QRAM time and the bounded-degree bounds use quantum gate time, while classical bounds use RAM time with polynomial weight-bit costs.",
+    "statement_text": "Given a weighted graph $G=(V,E,w)$, $|V|=n$, find a Hamiltonian cycle $C$ minimizing $\\sum_{e\\in C}w(e)$, or report infeasibility. Integer weights have maximum magnitude $L$ and are binary encoded. The problem models routing and cyclic sequencing. The general quantum bound uses QRAM time and the bounded-degree bounds use quantum gate time, while classical bounds use RAM time with polynomial weight-bit costs."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(1.728^n)$, quantum subset dynamic programming; $O^*(1.110^n)$ and $O^*(1.301^n)$ on degree-three and degree-four graphs, quantum backtracking.",
+      "headline_text": "$O^*(1.728^n)$, quantum subset dynamic programming; $O^*(1.110^n)$ and $O^*(1.301^n)$ on degree-three and degree-four graphs, quantum backtracking.",
+      "details_latex": "The general algorithm assumes coherent access to its exponentially large precomputed table. The bounded-degree algorithms use polynomial workspace and have additional factors $\\log L\\log\\log L$ for integer weights. Their graph restrictions are part of the stated comparisons.",
+      "details_text": "The general algorithm assumes coherent access to its exponentially large precomputed table. The bounded-degree algorithms use polynomial workspace and have additional factors $\\log L\\log\\log L$ for integer weights. Their graph restrictions are part of the stated comparisons."
+    },
+    "classical": {
+      "headline_latex": "$O(n^2 2^n)$, Held--Karp dynamic programming; $O^*(1.1757^n)$ and $O^*(1.4214^n)$ on degree-three and degree-four graphs, sparse-graph path-decomposition algorithms.",
+      "headline_text": "$O(n^2 2^n)$, Held–Karp dynamic programming; $O^*(1.1757^n)$ and $O^*(1.4214^n)$ on degree-three and degree-four graphs, sparse-graph path-decomposition algorithms.",
+      "details_latex": "Held--Karp uses $O(n2^n)$ words and optimizes paths indexed by a visited set and endpoint. The sparse-graph bounds use exponential memory and the weighted connectivity algorithm of Gaspers. A polynomial-space cubic-graph comparator runs in $O^*(1.232^n)$ time. Thus each quantum bound is compared with the applicable degree and memory regime, with the bit cost of objective arithmetic retained in polynomial factors.",
+      "details_text": "Held–Karp uses $O(n2^n)$ words and optimizes paths indexed by a visited set and endpoint. The sparse-graph bounds use exponential memory and the weighted connectivity algorithm of Gaspers. A polynomial-space cubic-graph comparator runs in $O^*(1.232^n)$ time. Thus each quantum bound is compared with the applicable degree and memory regime, with the bit cost of objective arithmetic retained in polynomial factors."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedups through smaller exponential constants. General subset dynamic programming uses minimum finding and amplitude amplification; the bounded-degree constructions use quantum backtracking.",
+      "description_text": "Polynomial speedups through smaller exponential constants. General subset dynamic programming uses minimum finding and amplitude amplification; the bounded-degree constructions use quantum backtracking."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous upper bounds and partial evidence relative to the strongest displayed classical algorithms in their respective graph classes.",
+      "description_text": "Rigorous upper bounds and partial evidence relative to the strongest displayed classical algorithms in their respective graph classes."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "The general algorithm needs polynomial active registers and exponential QRAM. The bounded-degree versions need polynomial logical workspace but exponentially long coherent tree searches. Both useful regimes require fault tolerance; degree restrictions reduce the exponential time base.",
+      "description_text": "The general algorithm needs polynomial active registers and exponential QRAM. The bounded-degree versions need polynomial logical workspace but exponentially long coherent tree searches. Both useful regimes require fault tolerance; degree restrictions reduce the exponential time base."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "7.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Theorem 8 and Algorithm 2; the TSP section states the classical Held--Karp recurrence.",
+      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Theorem 8 and Algorithm 2; the TSP section states the classical Held–Karp recurrence.",
+      "citation_ids": [
+        "entry-007-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "7.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/1612.06203}{Moylett, Linden and Montanaro, \\emph{Quantum Speedup of the Traveling-Salesman Problem for Bounded-Degree Graphs} (2017)}. Theorem 1; Theorems 4--5 give the degree-three and degree-four algorithms and their classical search subroutines.",
+      "content_text": "Moylett, Linden and Montanaro, Quantum Speedup of the Traveling-Salesman Problem for Bounded-Degree Graphs (2017). Theorem 1; Theorems 4–5 give the degree-three and degree-four algorithms and their classical search subroutines.",
+      "citation_ids": [
+        "entry-007-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "7.3",
+      "content_latex": "\\href{https://serggasp.github.io/pathwidth-site/papers/sparse-pathwidth/14-apps-connectivity.html}{Gaspers, \\emph{Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms} (2026)}. Theorem 14.1(d): weighted TSP applications.",
+      "content_text": "Gaspers, Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms (2026). Theorem 14.1(d): weighted TSP applications.",
+      "citation_ids": [
+        "entry-007-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-007-citation-001",
+    "entry-007-citation-002",
+    "entry-007-citation-003"
+  ],
+  "source_latex": "\\entrytitle{7}{Travelling salesman}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{6}\n\\begin{problem}[Travelling salesman problem]\nGiven a weighted graph $G=(V,E,w)$, $|V|=n$, find a Hamiltonian cycle $C$ minimizing $\\sum_{e\\in C}w(e)$, or report infeasibility. Integer weights have maximum magnitude $L$ and are binary encoded. The problem models routing and cyclic sequencing.\nThe general quantum bound uses QRAM time and the bounded-degree bounds use quantum gate time, while classical bounds use RAM time with polynomial weight-bit costs.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.728^n)$, quantum subset dynamic programming; $O^*(1.110^n)$ and $O^*(1.301^n)$ on degree-three and degree-four graphs, quantum backtracking.}\nThe general algorithm assumes coherent access to its exponentially large precomputed table. The bounded-degree algorithms use polynomial workspace and have additional factors $\\log L\\log\\log L$ for integer weights. Their graph restrictions are part of the stated comparisons.\n\\complexity{Classical}{$O(n^2 2^n)$, Held--Karp dynamic programming; $O^*(1.1757^n)$ and $O^*(1.4214^n)$ on degree-three and degree-four graphs, sparse-graph path-decomposition algorithms.}\nHeld--Karp uses $O(n2^n)$ words and optimizes paths indexed by a visited set and endpoint. The sparse-graph bounds use exponential memory and the weighted connectivity algorithm of Gaspers. A polynomial-space cubic-graph comparator runs in $O^*(1.232^n)$ time. Thus each quantum bound is compared with the applicable degree and memory regime, with the bit cost of objective arithmetic retained in polynomial factors.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedups through smaller exponential constants. General subset dynamic programming uses minimum finding and amplitude amplification; the bounded-degree constructions use quantum backtracking.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous upper bounds and partial evidence relative to the strongest displayed classical algorithms in their respective graph classes.\n\\dimensionlabel{Hardware}{hardwareExponential} The general algorithm needs polynomial active registers and exponential QRAM. The bounded-degree versions need polynomial logical workspace but exponentially long coherent tree searches. Both useful regimes require fault tolerance; degree restrictions reduce the exponential time base.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{7}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Theorem 8 and Algorithm 2; the TSP section states the classical Held--Karp recurrence.\n\\item \\href{https://arxiv.org/pdf/1612.06203}{Moylett, Linden and Montanaro, \\emph{Quantum Speedup of the Traveling-Salesman Problem for Bounded-Degree Graphs} (2017)}. Theorem 1; Theorems 4--5 give the degree-three and degree-four algorithms and their classical search subroutines.\n\\item \\href{https://serggasp.github.io/pathwidth-site/papers/sparse-pathwidth/14-apps-connectivity.html}{Gaspers, \\emph{Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms} (2026)}. Theorem 14.1(d): weighted TSP applications.\n\\end{algorithmindex}"
+}

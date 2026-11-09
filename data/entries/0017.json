@@ -1,0 +1,63 @@
+{
+  "id": "entry-017",
+  "number": 17,
+  "ordinal": 17,
+  "title_latex": "Directed minimum feedback arc set",
+  "title": "Directed minimum feedback arc set",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Directed minimum feedback arc set",
+    "name": "Directed minimum feedback arc set",
+    "statement_latex": "For a directed graph $G=(V,A)$, find a minimum-cardinality $F\\subseteq A$ such that $(V,A\\setminus F)$ is acyclic. Equivalently, choose a total order of the vertices minimizing the number of arcs directed backward. Weighted variants minimize the total deleted weight. Applications include ranking with inconsistent pairwise preferences.\nThe quantum bound counts QRAM time and the classical bound counts RAM time, including polynomial arithmetic costs for binary-encoded weights.",
+    "statement_text": "For a directed graph $G=(V,A)$, find a minimum-cardinality $F\\subseteq A$ such that $(V,A\\setminus F)$ is acyclic. Equivalently, choose a total order of the vertices minimizing the number of arcs directed backward. Weighted variants minimize the total deleted weight. Applications include ranking with inconsistent pairwise preferences. The quantum bound counts QRAM time and the classical bound counts RAM time, including polynomial arithmetic costs for binary-encoded weights."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(1.728^n)$, quantum feedback-arc-set dynamic programming.",
+      "headline_text": "$O^*(1.728^n)$, quantum feedback-arc-set dynamic programming.",
+      "details_latex": "The ordering formulation admits the stronger split recurrence used for travelling salesman. A partition of the vertices fixes the direction of every arc crossing the two ordered parts; the remaining costs are internal to the parts. Quantum minimum finding combines partially precomputed values over balanced splits.",
+      "details_text": "The ordering formulation admits the stronger split recurrence used for travelling salesman. A partition of the vertices fixes the direction of every arc crossing the two ordered parts; the remaining costs are internal to the parts. Quantum minimum finding combines partially precomputed values over balanced splits."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^n)$, subset dynamic programming.",
+      "headline_text": "$O^*(2^n)$, subset dynamic programming.",
+      "details_latex": "An ordering prefix determines the cost of appending a vertex, and the recurrence minimizes this cost over all subsets. It applies to arbitrary directed graphs and to nonnegative weighted variants. Structural restrictions such as tournament input select more specialized classical algorithms and hence a different comparison.",
+      "details_text": "An ordering prefix determines the cost of appending a vertex, and the recurrence minimizes this cost over all subsets. It applies to arbitrary directed graphs and to nonnegative weighted variants. Structural restrictions such as tournament input select more specialized classical algorithms and hence a different comparison."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant. The acceleration comes from quantum minimum finding and amplitude amplification over subset decompositions.",
+      "description_text": "Polynomial speedup through a smaller exponential constant. The acceleration comes from quantum minimum finding and amplitude amplification over subset decompositions."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous QRAM upper bound and partial evidence against the general classical subset algorithm.",
+      "description_text": "Rigorous QRAM upper bound and partial evidence against the general classical subset algorithm."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial active subset and cost registers require exponential coherently accessible preprocessing memory. Weight arithmetic and long nested searches set the fault-tolerant implementation cost.",
+      "description_text": "Polynomial active subset and cost registers require exponential coherently accessible preprocessing memory. Weight arithmetic and long nested searches set the fault-tolerant implementation cost."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "17.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Section 7 and Corollary 9: directed feedback arc set and its split recurrence; the construction uses the quantum dynamic-programming routine of Algorithm 2.",
+      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Section 7 and Corollary 9: directed feedback arc set and its split recurrence; the construction uses the quantum dynamic-programming routine of Algorithm 2.",
+      "citation_ids": [
+        "entry-017-citation-001"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-017-citation-001"
+  ],
+  "source_latex": "\\entrytitle{17}{Directed minimum feedback arc set}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{16}\n\\begin{problem}[Directed minimum feedback arc set]\nFor a directed graph $G=(V,A)$, find a minimum-cardinality $F\\subseteq A$ such that $(V,A\\setminus F)$ is acyclic. Equivalently, choose a total order of the vertices minimizing the number of arcs directed backward. Weighted variants minimize the total deleted weight. Applications include ranking with inconsistent pairwise preferences.\nThe quantum bound counts QRAM time and the classical bound counts RAM time, including polynomial arithmetic costs for binary-encoded weights.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.728^n)$, quantum feedback-arc-set dynamic programming.}\nThe ordering formulation admits the stronger split recurrence used for travelling salesman. A partition of the vertices fixes the direction of every arc crossing the two ordered parts; the remaining costs are internal to the parts. Quantum minimum finding combines partially precomputed values over balanced splits.\n\\complexity{Classical}{$O^*(2^n)$, subset dynamic programming.}\nAn ordering prefix determines the cost of appending a vertex, and the recurrence minimizes this cost over all subsets. It applies to arbitrary directed graphs and to nonnegative weighted variants. Structural restrictions such as tournament input select more specialized classical algorithms and hence a different comparison.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant. The acceleration comes from quantum minimum finding and amplitude amplification over subset decompositions.\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous QRAM upper bound and partial evidence against the general classical subset algorithm.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial active subset and cost registers require exponential coherently accessible preprocessing memory. Weight arithmetic and long nested searches set the fault-tolerant implementation cost.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{17}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Section 7 and Corollary 9: directed feedback arc set and its split recurrence; the construction uses the quantum dynamic-programming routine of Algorithm 2.\n\\end{algorithmindex}"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "entry-099",
+  "number": 99,
+  "ordinal": 101,
+  "title_latex": "Global optimization of variational-circuit parameters",
+  "title": "Global optimization of variational-circuit parameters",
+  "chapter_id": "chapter-4",
+  "problem": {
+    "name_latex": "Variational quantum circuit optimization",
+    "name": "Variational quantum circuit optimization",
+    "statement_latex": "Given a parameterized circuit $U(\\theta)$, an observable $H$, a parameter domain $\\Theta\\subseteq\\mathbb R^p$ on which the minimum is attained, and $\\varepsilon>0$, find $\\theta\\in\\Theta$ such that\n\\[\n\\langle0|U(\\theta)^\\dagger H U(\\theta)|0\\rangle\n\\le\\min_{\\phi\\in\\Theta}\\langle0|U(\\phi)^\\dagger H U(\\phi)|0\\rangle+\\varepsilon.\n\\]\nThis is the outer optimization in VQE and variational combinatorial algorithms, including QAOA. Complexity is measured in circuit samples or coherent evaluation-oracle queries for objective evaluation, together with the classical or quantum time for the outer optimization.",
+    "statement_text": "Given a parameterized circuit $U(\\theta)$, an observable $H$, a parameter domain $\\Theta\\subseteq\\mathbb R^p$ on which the minimum is attained, and $\\varepsilon>0$, find $\\theta\\in\\Theta$ such that \\[ \\langle0|U(\\theta)^\\dagger H U(\\theta)|0\\rangle \\le\\min_{\\phi\\in\\Theta}\\langle0|U(\\phi)^\\dagger H U(\\phi)|0\\rangle+\\varepsilon. \\] This is the outer optimization in VQE and variational combinatorial algorithms, including QAOA. Complexity is measured in circuit samples or coherent evaluation-oracle queries for objective evaluation, together with the classical or quantum time for the outer optimization."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(K\\delta^{-2})$ circuit samples or $O(K\\delta^{-1})$ coherent oracle uses for $K$ objective evaluations, sampling or amplitude estimation.",
+      "headline_text": "$O(K\\delta^{-2})$ circuit samples or $O(K\\delta^{-1})$ coherent oracle uses for $K$ objective evaluations, sampling or amplitude estimation.",
+      "details_latex": "The objective is normalized to a bounded observable and each evaluation has additive accuracy $\\delta$ with constant success probability. Simultaneous high confidence adds logarithmic factors. The global optimizer determines $K$. Bittel--Kliesch establish NP-hard parameter-optimization families even when the expectations are efficiently classically evaluable.",
+      "details_text": "The objective is normalized to a bounded observable and each evaluation has additive accuracy $\\delta$ with constant success probability. Simultaneous high confidence adds logarithmic factors. The global optimizer determines $K$. Bittel–Kliesch establish NP-hard parameter-optimization families even when the expectations are efficiently classically evaluable."
+    },
+    "classical": {
+      "headline_latex": "$2^{O(n/\\sqrt{\\log n})}\\operatorname{poly}(n)$ expected time per exact sample, Gheorghiu--Gupte counting-based simulation of linear-size circuits.",
+      "headline_text": "$2^{O(n/\\sqrt{\\log n})}\\operatorname{poly}(n)$ expected time per exact sample, Gheorghiu–Gupte counting-based simulation of linear-size circuits.",
+      "details_latex": "This bound holds for $n$-qubit circuits with $O(n)$ gates from a fixed finite set of bounded-arity algebraic gates. Sampling within total variation distance $\\eta$ takes worst-case time $2^{O(n/\\sqrt{\\log n})}\\operatorname{poly}(n,\\log(1/\\eta))$. Estimating a sampled observable multiplies this cost by the sample count. Gate count is measured after compilation to the specified finite set. The specialized $\\{H,Z,CZ,CCZ\\}$ method, with $h=O(n)$ Hadamards and $d\\le Cn^{11/10}$ diagonal gates, has exact worst-case time $\\operatorname{poly}(n)2^{O(n\\log(2+d/n)/\\sqrt{\\log n})}$. Classical grid search supplies a global upper bound exponential in the parameter dimension for a compact domain and a known Lipschitz bound.",
+      "details_text": "This bound holds for $n$-qubit circuits with $O(n)$ gates from a fixed finite set of bounded-arity algebraic gates. Sampling within total variation distance $\\eta$ takes worst-case time $2^{O(n/\\sqrt{\\log n})}\\operatorname{poly}(n,\\log(1/\\eta))$. Estimating a sampled observable multiplies this cost by the sample count. Gate count is measured after compilation to the specified finite set. The specialized $\\{H,Z,CZ,CCZ\\}$ method, with $h=O(n)$ Hadamards and $d\\le Cn^{11/10}$ diagonal gates, has exact worst-case time $\\operatorname{poly}(n)2^{O(n\\log(2+d/n)/\\sqrt{\\log n})}$. Classical grid search supplies a global upper bound exponential in the parameter dimension for a compact domain and a known Lipschitz bound."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-unspecified",
+      "color_key": "white",
+      "description_latex": "Coherent evaluation has a quadratic precision advantage. Global optimization complexity depends on the circuit family, landscape and outer optimizer.",
+      "description_text": "Coherent evaluation has a quadratic precision advantage. Global optimization complexity depends on the circuit family, landscape and outer optimizer."
+    },
+    "evidence": {
+      "category_id": "evidence-unspecified",
+      "color_key": "white",
+      "description_latex": "The evaluation bounds, classical sampling bounds and NP-hardness results are rigorous. A general global-optimization speedup has no established evidence.",
+      "description_text": "The evaluation bounds, classical sampling bounds and NP-hardness results are rigorous. A general global-optimization speedup has no established evidence."
+    },
+    "hardware": {
+      "category_id": "hardware-small",
+      "color_key": "hardwareSmall",
+      "description_latex": "Small noisy circuits implement the sampling loop. Coherent amplitude estimation needs controlled state preparation and its inverse, with fault-tolerant depth. Logical storage consists of the ansatz register and evaluation ancillas.\n\n[Before ``ETH is false'', generic state-vector simulation of linear-size circuits took $O^*(2^n)$ time; variational speedup claims often used this exponential evaluation baseline.]",
+      "description_text": "Small noisy circuits implement the sampling loop. Coherent amplitude estimation needs controlled state preparation and its inverse, with fault-tolerant depth. Logical storage consists of the ansatz register and evaluation ancillas. [Before “ETH is false”, generic state-vector simulation of linear-size circuits took $O^*(2^n)$ time; variational speedup claims often used this exponential evaluation baseline.]"
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "99.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2101.07267}{Bittel and Kliesch, \\emph{Training Variational Quantum Algorithms Is NP-Hard} (2021)}. Problem 4 and Theorem 1 for VQA optimization; Problem 6 and Theorem 3 for QAOA.",
+      "content_text": "Bittel and Kliesch, Training Variational Quantum Algorithms Is NP-Hard (2021). Problem 4 and Theorem 1 for VQA optimization; Problem 6 and Theorem 3 for QAOA.",
+      "citation_ids": [
+        "entry-099-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "99.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard et al., \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 4, \\textsc{Est\\_Amp} and Theorem 12.",
+      "content_text": "Brassard et al., Quantum Amplitude Amplification and Estimation (2002). Section 4, Est_Amp and Theorem 12.",
+      "citation_ids": [
+        "entry-099-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "99.3",
+      "content_latex": "\\href{https://drive.google.com/file/d/1RzhP9ZMy1xkC22oqKmMHEOh7gG1cwkfA/view}{Gheorghiu and Gupte, \\emph{Subexponential-Time Sampling of Quantum Circuits from Exact Counting} (2026 note)}. Theorems 1--2; Sections 3--5 for conditional sampling, finite algebraic gates and the Hadamard/diagonal specialization.",
+      "content_text": "Gheorghiu and Gupte, Subexponential-Time Sampling of Quantum Circuits from Exact Counting (2026 note). Theorems 1–2; Sections 3–5 for conditional sampling, finite algebraic gates and the Hadamard/diagonal specialization.",
+      "citation_ids": [
+        "entry-099-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-099-citation-001",
+    "entry-099-citation-002",
+    "entry-099-citation-003"
+  ],
+  "source_latex": "\\entrytitle{99}{Global optimization of variational-circuit parameters}{white}{white}{hardwareSmall}\n\\setcounter{problem}{98}\n\\begin{problem}[Variational quantum circuit optimization]\nGiven a parameterized circuit $U(\\theta)$, an observable $H$, a parameter domain $\\Theta\\subseteq\\mathbb R^p$ on which the minimum is attained, and $\\varepsilon>0$, find $\\theta\\in\\Theta$ such that\n\\[\n\\langle0|U(\\theta)^\\dagger H U(\\theta)|0\\rangle\n\\le\\min_{\\phi\\in\\Theta}\\langle0|U(\\phi)^\\dagger H U(\\phi)|0\\rangle+\\varepsilon.\n\\]\nThis is the outer optimization in VQE and variational combinatorial algorithms, including QAOA. Complexity is measured in circuit samples or coherent evaluation-oracle queries for objective evaluation, together with the classical or quantum time for the outer optimization.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(K\\delta^{-2})$ circuit samples or $O(K\\delta^{-1})$ coherent oracle uses for $K$ objective evaluations, sampling or amplitude estimation.}\nThe objective is normalized to a bounded observable and each evaluation has additive accuracy $\\delta$ with constant success probability. Simultaneous high confidence adds logarithmic factors. The global optimizer determines $K$. Bittel--Kliesch establish NP-hard parameter-optimization families even when the expectations are efficiently classically evaluable.\n\n\\complexity{Classical}{$2^{O(n/\\sqrt{\\log n})}\\operatorname{poly}(n)$ expected time per exact sample, Gheorghiu--Gupte counting-based simulation of linear-size circuits.}\nThis bound holds for $n$-qubit circuits with $O(n)$ gates from a fixed finite set of bounded-arity algebraic gates. Sampling within total variation distance $\\eta$ takes worst-case time $2^{O(n/\\sqrt{\\log n})}\\operatorname{poly}(n,\\log(1/\\eta))$. Estimating a sampled observable multiplies this cost by the sample count. Gate count is measured after compilation to the specified finite set. The specialized $\\{H,Z,CZ,CCZ\\}$ method, with $h=O(n)$ Hadamards and $d\\le Cn^{11/10}$ diagonal gates, has exact worst-case time $\\operatorname{poly}(n)2^{O(n\\log(2+d/n)/\\sqrt{\\log n})}$. Classical grid search supplies a global upper bound exponential in the parameter dimension for a compact domain and a known Lipschitz bound.\n\n\\dimensionlabel{Strength}{white} Coherent evaluation has a quadratic precision advantage. Global optimization complexity depends on the circuit family, landscape and outer optimizer.\n\n\\dimensionlabel{Evidence}{white} The evaluation bounds, classical sampling bounds and NP-hardness results are rigorous. A general global-optimization speedup has no established evidence.\n\n\\dimensionlabel{Hardware}{hardwareSmall} Small noisy circuits implement the sampling loop. Coherent amplitude estimation needs controlled state preparation and its inverse, with fault-tolerant depth. Logical storage consists of the ansatz register and evaluation ancillas.\n\n[Before ``ETH is false'', generic state-vector simulation of linear-size circuits took $O^*(2^n)$ time; variational speedup claims often used this exponential evaluation baseline.]\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{99}\n\\item \\href{https://arxiv.org/pdf/2101.07267}{Bittel and Kliesch, \\emph{Training Variational Quantum Algorithms Is NP-Hard} (2021)}. Problem 4 and Theorem 1 for VQA optimization; Problem 6 and Theorem 3 for QAOA.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard et al., \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 4, \\textsc{Est\\_Amp} and Theorem 12.\n\\item \\href{https://drive.google.com/file/d/1RzhP9ZMy1xkC22oqKmMHEOh7gG1cwkfA/view}{Gheorghiu and Gupte, \\emph{Subexponential-Time Sampling of Quantum Circuits from Exact Counting} (2026 note)}. Theorems 1--2; Sections 3--5 for conditional sampling, finite algebraic gates and the Hadamard/diagonal specialization.\n\\end{algorithmindex}"
+}

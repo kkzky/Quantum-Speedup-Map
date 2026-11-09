@@ -1,0 +1,63 @@
+{
+  "id": "entry-002",
+  "number": 2,
+  "ordinal": 2,
+  "title_latex": "Black-box discrete minimization",
+  "title": "Black-box discrete minimization",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Black-box minimum finding",
+    "name": "Black-box minimum finding",
+    "statement_latex": "Given an oracle evaluating $F:[N]\\to\\{0,\\ldots,2^b-1\\}$, output $x_*\\in\\operatorname*{arg\\,min}_{x\\in[N]}F(x)$. This is the optimization primitive used inside quantum dynamic programming and threshold-based exact optimization.\nComplexity is measured in value-oracle queries for both models, with a quantum gate bound parameterized by the evaluation circuit.",
+    "statement_text": "Given an oracle evaluating $F:[N]\\to\\{0,\\ldots,2^b-1\\}$, output $x_*\\in\\operatorname*{arg\\,min}_{x\\in[N]}F(x)$. This is the optimization primitive used inside quantum dynamic programming and threshold-based exact optimization. Complexity is measured in value-oracle queries for both models, with a quantum gate bound parameterized by the evaluation circuit."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(\\sqrt N)$ queries, D\\\"urr--H{\\o}yer minimum finding.",
+      "headline_text": "$\\Theta(\\sqrt N)$ queries, Dürr–Høyer minimum finding.",
+      "details_latex": "The algorithm returns a minimizing index with bounded error. Failure probability at most $\\delta$ costs $O(\\sqrt N\\log(1/\\delta))$ evaluations. If reversible evaluation costs $C_F$ gates, constant-error gate complexity is $O((C_F+b+\\log N)\\sqrt N)$. Infeasible candidates can be represented by values above the feasible objective range.",
+      "details_text": "The algorithm returns a minimizing index with bounded error. Failure probability at most $\\delta$ costs $O(\\sqrt N\\log(1/\\delta))$ evaluations. If reversible evaluation costs $C_F$ gates, constant-error gate complexity is $O((C_F+b+\\log N)\\sqrt N)$. Infeasible candidates can be represented by values above the feasible objective range."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(N)$ queries, linear scanning.",
+      "headline_text": "$\\Theta(N)$ queries, linear scanning.",
+      "details_latex": "A scan retains the smallest value and its index, using constant additional words. The matching lower bound concerns arbitrary values accessed through the same oracle. This primitive is used inside the structured optimization algorithms below, whose classical comparisons exploit their explicit input representations.",
+      "details_text": "A scan retains the smallest value and its index, using constant additional words. The matching lower bound concerns arbitrary values accessed through the same oracle. This primitive is used inside the structured optimization algorithms below, whose classical comparisons exploit their explicit input representations."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Tight quadratic polynomial speedup in $N$, obtained through repeated amplitude amplification.",
+      "description_text": "Tight quadratic polynomial speedup in $N$, obtained through repeated amplitude amplification."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Fully proved in the value-oracle model; reduction from unstructured search supplies the quantum lower bound, and an unseen table entry supplies the classical lower bound.",
+      "description_text": "Fully proved in the value-oracle model; reduction from unstructured search supplies the quantum lower bound, and an unseen table entry supplies the classical lower bound."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "The search and value registers need $\\lceil\\log_2N\\rceil+b$ logical qubits plus reversible evaluation workspace. A compact objective can be evaluated arithmetically; a table supplied through coherent memory additionally requires storage for its entries. Useful large searches require fault tolerance and $\\Theta(\\sqrt N)$ coherent evaluations.",
+      "description_text": "The search and value registers need $\\lceil\\log_2N\\rceil+b$ logical qubits plus reversible evaluation workspace. A compact objective can be evaluated arithmetically; a table supplied through coherent memory additionally requires storage for its entries. Useful large searches require fault tolerance and $\\Theta(\\sqrt N)$ coherent evaluations."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "2.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9607014}{D\\\"urr and H{\\o}yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996/1999)}. Theorem 1 and the numbered minimum-finding procedure, preprint pp.~1--2; the linear scan is the classical comparison in the introduction.",
+      "content_text": "Dürr and Høyer, A Quantum Algorithm for Finding the Minimum (1996/1999). Theorem 1 and the numbered minimum-finding procedure, preprint pp. 1–2; the linear scan is the classical comparison in the introduction.",
+      "citation_ids": [
+        "entry-002-citation-001"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-002-citation-001"
+  ],
+  "source_latex": "\\entrytitle{2}{Black-box discrete minimization}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{1}\n\\begin{problem}[Black-box minimum finding]\nGiven an oracle evaluating $F:[N]\\to\\{0,\\ldots,2^b-1\\}$, output $x_*\\in\\operatorname*{arg\\,min}_{x\\in[N]}F(x)$. This is the optimization primitive used inside quantum dynamic programming and threshold-based exact optimization.\nComplexity is measured in value-oracle queries for both models, with a quantum gate bound parameterized by the evaluation circuit.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(\\sqrt N)$ queries, D\\\"urr--H{\\o}yer minimum finding.}\nThe algorithm returns a minimizing index with bounded error. Failure probability at most $\\delta$ costs $O(\\sqrt N\\log(1/\\delta))$ evaluations. If reversible evaluation costs $C_F$ gates, constant-error gate complexity is $O((C_F+b+\\log N)\\sqrt N)$. Infeasible candidates can be represented by values above the feasible objective range.\n\\complexity{Classical}{$\\Theta(N)$ queries, linear scanning.}\nA scan retains the smallest value and its index, using constant additional words. The matching lower bound concerns arbitrary values accessed through the same oracle. This primitive is used inside the structured optimization algorithms below, whose classical comparisons exploit their explicit input representations.\n\\dimensionlabel{Strength}{strengthPolynomial} Tight quadratic polynomial speedup in $N$, obtained through repeated amplitude amplification.\n\\dimensionlabel{Evidence}{evidenceProved} Fully proved in the value-oracle model; reduction from unstructured search supplies the quantum lower bound, and an unseen table entry supplies the classical lower bound.\n\\dimensionlabel{Hardware}{hardwareExponential} The search and value registers need $\\lceil\\log_2N\\rceil+b$ logical qubits plus reversible evaluation workspace. A compact objective can be evaluated arithmetically; a table supplied through coherent memory additionally requires storage for its entries. Useful large searches require fault tolerance and $\\Theta(\\sqrt N)$ coherent evaluations.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{2}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9607014}{D\\\"urr and H{\\o}yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996/1999)}. Theorem 1 and the numbered minimum-finding procedure, preprint pp.~1--2; the linear scan is the classical comparison in the introduction.\n\\end{algorithmindex}"
+}

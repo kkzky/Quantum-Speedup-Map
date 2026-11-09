@@ -1,0 +1,83 @@
+{
+  "id": "entry-090",
+  "number": 90,
+  "ordinal": 91,
+  "title_latex": "Differential and linear cryptanalysis",
+  "title": "Differential and linear cryptanalysis",
+  "chapter_id": "chapter-3",
+  "problem": {
+    "name_latex": "Differential and linear cryptanalysis",
+    "name": "Differential and linear cryptanalysis",
+    "statement_latex": "Given a keyed permutation $E_K$, exploit either a differential $\\Pr_x[E_K(x)\\oplus E_K(x\\oplus\\Delta)=\\nabla]=p$ or a linear approximation $\\Pr_x[a\\cdot x=b\\cdot E_K(x)]=1/2+\\varepsilon$ to distinguish it from random and recover key bits. The differential probability, linear bias, queried rounds, and guessed subkey size specify the instance. Complexity is measured in classical samples or oracle calls and coherent quantum evaluations for the statistical primitives, and in gate or bit complexity for complete key recovery.",
+    "statement_text": "Given a keyed permutation $E_K$, exploit either a differential $\\Pr_x[E_K(x)\\oplus E_K(x\\oplus\\Delta)=\\nabla]=p$ or a linear approximation $\\Pr_x[a\\cdot x=b\\cdot E_K(x)]=1/2+\\varepsilon$ to distinguish it from random and recover key bits. The differential probability, linear bias, queried rounds, and guessed subkey size specify the instance. Complexity is measured in classical samples or oracle calls and coherent quantum evaluations for the statistical primitives, and in gate or bit complexity for complete key recovery."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(p^{-1/2})$ differential tests and $O(|\\varepsilon|^{-1})$ coherent bias-estimation evaluations, amplitude amplification and estimation.",
+      "headline_text": "$O(p^{-1/2})$ differential tests and $O(|\\varepsilon|^{-1})$ coherent bias-estimation evaluations, amplitude amplification and estimation.",
+      "details_latex": "A differential right-pair search with success probability $p$ has the first bound. Estimating a linear bias to constant relative precision has the second. A search over $2^s$ subkeys uses $O(2^{s/2})$ verification steps, with the data-processing cost of each step included. Kaplan--Leurent--Leverrier--Naya-Plasencia analyze how these components combine for simple and truncated differentials and for linear cryptanalysis. The query model determines whether data acquisition itself can use coherent access.",
+      "details_text": "A differential right-pair search with success probability $p$ has the first bound. Estimating a linear bias to constant relative precision has the second. A search over $2^s$ subkeys uses $O(2^{s/2})$ verification steps, with the data-processing cost of each step included. Kaplan–Leurent–Leverrier–Naya-Plasencia analyze how these components combine for simple and truncated differentials and for linear cryptanalysis. The query model determines whether data acquisition itself can use coherent access."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(p^{-1})$ differential trials, $\\Theta(\\varepsilon^{-2})$ bias-estimation samples and $O(2^s)$ exhaustive subkey checks.",
+      "headline_text": "$\\Theta(p^{-1})$ differential trials, $\\Theta(\\varepsilon^{-2})$ bias-estimation samples and $O(2^s)$ exhaustive subkey checks.",
+      "details_latex": "These are matched primitive costs. A complete classical attack minimizes over characteristics, data volume, guessed subkeys and other attacks on the same cipher and round count. If $k$ key bits are checked by a $G$-gate explicit verification circuit, Boolean tensor contraction adds $\\operatorname{poly}(k+G)2^{O((k+G)/\\sqrt{\\log(k+G)})}$ to that classical minimum. Linear-size circuit families have subexponential complete key-recovery time.",
+      "details_text": "These are matched primitive costs. A complete classical attack minimizes over characteristics, data volume, guessed subkeys and other attacks on the same cipher and round count. If $k$ key bits are checked by a $G$-gate explicit verification circuit, Boolean tensor contraction adds $\\operatorname{poly}(k+G)2^{O((k+G)/\\sqrt{\\log(k+G)})}$ to that classical minimum. Linear-size circuit families have subexponential complete key-recovery time."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Quadratic improvements in the specified sampling and search components, from amplitude amplification or estimation. The exponent of a complete attack depends on the selected characteristic and key-recovery strategy.",
+      "description_text": "Quadratic improvements in the specified sampling and search components, from amplitude amplification or estimation. The exponent of a complete attack depends on the selected characteristic and key-recovery strategy."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Rigorous primitive bounds and partial cipher-specific evidence for a total-runtime separation. The full comparison uses the strongest complete classical attack with the same data access.",
+      "description_text": "Rigorous primitive bounds and partial cipher-specific evidence for a total-runtime separation. The full comparison uses the strongest complete classical attack with the same data access."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomial registers suffice for reversible cipher rounds and subkeys. Coherent-query attacks require the specified quantum access; Q1 attacks process stored classical data. Cryptanalytic-scale coherent depth requires fault tolerance, and memory depends on the data-processing strategy.\n\n{\\small [Before ``ETH is false'', the generic complete-key-search baseline was $O(2^k)$ classical versus $O(2^{k/2})$ amplified trials; differential and linear attacks optimized their own exponential components.]\\par}",
+      "description_text": "Polynomial registers suffice for reversible cipher rounds and subkeys. Coherent-query attacks require the specified quantum access; Q1 attacks process stored classical data. Cryptanalytic-scale coherent depth requires fault tolerance, and memory depends on the data-processing strategy. [Before “ETH is false”, the generic complete-key-search baseline was $O(2^k)$ classical versus $O(2^{k/2})$ amplified trials; differential and linear attacks optimized their own exponential components.]"
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "90.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1510.05836}{Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Quantum Differential and Linear Cryptanalysis} (ToSC 2016)}. Sections 4.1--4.2: classical and quantum differential attacks; Sections 5.1--5.2: truncated differentials; Sections 7.1--7.2: linear cryptanalysis; Theorems 1--3: search and counting subroutines.",
+      "content_text": "Kaplan, Leurent, Leverrier and Naya-Plasencia, Quantum Differential and Linear Cryptanalysis (ToSC 2016). Sections 4.1–4.2: classical and quantum differential attacks; Sections 5.1–5.2: truncated differentials; Sections 7.1–7.2: linear cryptanalysis; Theorems 1–3: search and counting subroutines.",
+      "citation_ids": [
+        "entry-090-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "90.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard, H\\o yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 2: trial amplification; Theorem 12: amplitude estimation and its error bound.",
+      "content_text": "Brassard, Høyer, Mosca and Tapp, Quantum Amplitude Amplification and Estimation (2002). Section 2: trial amplification; Theorem 12: amplitude estimation and its error bound.",
+      "citation_ids": [
+        "entry-090-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "90.3",
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit.",
+      "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit.",
+      "citation_ids": [
+        "entry-090-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-090-citation-001",
+    "entry-090-citation-002",
+    "entry-090-citation-003"
+  ],
+  "source_latex": "\\entrytitle{90}{Differential and linear cryptanalysis}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{89}\n\\begin{problem}[Differential and linear cryptanalysis]\nGiven a keyed permutation $E_K$, exploit either a differential $\\Pr_x[E_K(x)\\oplus E_K(x\\oplus\\Delta)=\\nabla]=p$ or a linear approximation $\\Pr_x[a\\cdot x=b\\cdot E_K(x)]=1/2+\\varepsilon$ to distinguish it from random and recover key bits. The differential probability, linear bias, queried rounds, and guessed subkey size specify the instance. Complexity is measured in classical samples or oracle calls and coherent quantum evaluations for the statistical primitives, and in gate or bit complexity for complete key recovery.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$O(p^{-1/2})$ differential tests and $O(|\\varepsilon|^{-1})$ coherent bias-estimation evaluations, amplitude amplification and estimation.}\nA differential right-pair search with success probability $p$ has the first bound. Estimating a linear bias to constant relative precision has the second. A search over $2^s$ subkeys uses $O(2^{s/2})$ verification steps, with the data-processing cost of each step included. Kaplan--Leurent--Leverrier--Naya-Plasencia analyze how these components combine for simple and truncated differentials and for linear cryptanalysis. The query model determines whether data acquisition itself can use coherent access.\n\n\\complexity{Classical}{$\\Theta(p^{-1})$ differential trials, $\\Theta(\\varepsilon^{-2})$ bias-estimation samples and $O(2^s)$ exhaustive subkey checks.}\nThese are matched primitive costs. A complete classical attack minimizes over characteristics, data volume, guessed subkeys and other attacks on the same cipher and round count. If $k$ key bits are checked by a $G$-gate explicit verification circuit, Boolean tensor contraction adds $\\operatorname{poly}(k+G)2^{O((k+G)/\\sqrt{\\log(k+G)})}$ to that classical minimum. Linear-size circuit families have subexponential complete key-recovery time.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Quadratic improvements in the specified sampling and search components, from amplitude amplification or estimation. The exponent of a complete attack depends on the selected characteristic and key-recovery strategy.\n\n\\dimensionlabel{Evidence}{evidencePartial} Rigorous primitive bounds and partial cipher-specific evidence for a total-runtime separation. The full comparison uses the strongest complete classical attack with the same data access.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomial registers suffice for reversible cipher rounds and subkeys. Coherent-query attacks require the specified quantum access; Q1 attacks process stored classical data. Cryptanalytic-scale coherent depth requires fault tolerance, and memory depends on the data-processing strategy.\n\n{\\small [Before ``ETH is false'', the generic complete-key-search baseline was $O(2^k)$ classical versus $O(2^{k/2})$ amplified trials; differential and linear attacks optimized their own exponential components.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{90}\n\\item \\href{https://arxiv.org/pdf/1510.05836}{Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Quantum Differential and Linear Cryptanalysis} (ToSC 2016)}. Sections 4.1--4.2: classical and quantum differential attacks; Sections 5.1--5.2: truncated differentials; Sections 7.1--7.2: linear cryptanalysis; Theorems 1--3: search and counting subroutines.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0005055}{Brassard, H\\o yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)}. Section 2: trial amplification; Theorem 12: amplitude estimation and its error bound.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search on the explicit key-verification circuit.\n\\end{algorithmindex}"
+}

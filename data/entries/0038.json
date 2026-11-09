@@ -1,0 +1,73 @@
+{
+  "id": "entry-038",
+  "number": 38,
+  "ordinal": 39,
+  "title_latex": "Graph collision",
+  "title": "Graph collision",
+  "chapter_id": "chapter-2",
+  "problem": {
+    "name_latex": "Graph collision",
+    "name": "Graph collision",
+    "statement_latex": "A graph $G=([n],E)$ is known in advance; oracle bits $x_1,\\ldots,x_n$ mark vertices. Decide whether $\\exists\\{u,v\\}\\in E$ with $x_u=x_v=1$, and find such an edge. The graph structure is free input, whereas marks are queried.\nComplexity counts queries to the mark bits; the known graph is available independently of this oracle.",
+    "statement_text": "A graph $G=([n],E)$ is known in advance; oracle bits $x_1,\\ldots,x_n$ mark vertices. Decide whether $\\exists\\{u,v\\}\\in E$ with $x_u=x_v=1$, and find such an edge. The graph structure is free input, whereas marks are queried. Complexity counts queries to the mark bits; the known graph is available independently of this oracle."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{11/17})$ queries, Cornelissen et al.; $O(\\sqrt n\\,\\alpha(G)^{1/6})$ for the independence-number refinement.",
+      "headline_text": "$\\widetilde O(n^{11/17})$ queries, Cornelissen et al.; $O(\\sqrt n\\,\\alpha(G)^{1/6})$ for the independence-number refinement.",
+      "details_latex": "The November 2026 algorithm splits high- and low-degree neighborhoods and combines quantum search with sampled graph structure. Here $\\alpha(G)$ is the independence number. The earlier general quantum-walk construction uses $O(n^{2/3})$ queries. The quantum lower bound is $\\Omega(\\sqrt{n\\log n})$ over an appropriate family of known graphs.",
+      "details_text": "The November 2026 algorithm splits high- and low-degree neighborhoods and combines quantum search with sampled graph structure. Here $\\alpha(G)$ is the independence number. The earlier general quantum-walk construction uses $O(n^{2/3})$ queries. The quantum lower bound is $\\Omega(\\sqrt{n\\log n})$ over an appropriate family of known graphs."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(n)$ mark queries, exhaustive reading and randomized search.",
+      "headline_text": "$\\Theta(n)$ mark queries, exhaustive reading and randomized search.",
+      "details_latex": "Reading all marks permits direct checking of the known edge set. A star with its center marked embeds an unstructured search over the other marks, giving the linear classical lower bound. Graph preprocessing and checking a stored edge relation have additional time costs outside the mark-query measure.",
+      "details_text": "Reading all marks permits direct checking of the known edge set. A star with its center marked embeds an unstructured search over the other marks, giving the linear classical lower bound. Graph preprocessing and checking a stored edge relation have additional time costs outside the mark-query measure."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial: $n\\to\\widetilde O(n^{11/17})$ in the worst case. The algorithms use quantum search, quantum walks and graph structure.",
+      "description_text": "Polynomial: $n\\to\\widetilde O(n^{11/17})$ in the worst case. The algorithms use quantum search, quantum walks and graph structure."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "The quantum upper bound and classical lower bound give a rigorous query separation; the strongest cited bound is a November 2026 preprint.",
+      "description_text": "The quantum upper bound and classical lower bound give a rigorous query separation; the strongest cited bound is a November 2026 preprint."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Fault-tolerant coherent processing is required. The $O(n^{2/3})$ walk uses roughly $\\widetilde O(n^{2/3})$ coherent bits for stored labels and marks. The $11/17$ query exponent has its own implementation-dependent workspace costs.",
+      "description_text": "Fault-tolerant coherent processing is required. The $O(n^{2/3})$ walk uses roughly $\\widetilde O(n^{2/3})$ coherent bits for stored labels and marks. The $11/17$ query exponent has its own implementation-dependent workspace costs."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "38.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2611.05356}{Cornelissen et al., \\emph{Breaking the Quantum Barriers for Graph Collision} (2026)}. Theorems 1.1--1.2; Section 4, ``An Improved Algorithm''; Section 6 for the lower bound.",
+      "content_text": "Cornelissen et al., Breaking the Quantum Barriers for Graph Collision (2026). Theorems 1.1–1.2; Section 4, “An Improved Algorithm”; Section 6 for the lower bound.",
+      "citation_ids": [
+        "entry-038-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "38.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/1105.4024}{Belovs, \\emph{Span Programs for Functions with Constant-Sized 1-Certificates} (2012)}. The graph-collision application.",
+      "content_text": "Belovs, Span Programs for Functions with Constant-Sized 1-Certificates (2012). The graph-collision application.",
+      "citation_ids": [
+        "entry-038-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-038-citation-001",
+    "entry-038-citation-002"
+  ],
+  "source_latex": "\\entrytitle{38}{Graph collision}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{37}\n\\begin{problem}[Graph collision]\nA graph $G=([n],E)$ is known in advance; oracle bits $x_1,\\ldots,x_n$ mark vertices. Decide whether $\\exists\\{u,v\\}\\in E$ with $x_u=x_v=1$, and find such an edge. The graph structure is free input, whereas marks are queried.\nComplexity counts queries to the mark bits; the known graph is available independently of this oracle.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{11/17})$ queries, Cornelissen et al.; $O(\\sqrt n\\,\\alpha(G)^{1/6})$ for the independence-number refinement.}\nThe November 2026 algorithm splits high- and low-degree neighborhoods and combines quantum search with sampled graph structure. Here $\\alpha(G)$ is the independence number. The earlier general quantum-walk construction uses $O(n^{2/3})$ queries. The quantum lower bound is $\\Omega(\\sqrt{n\\log n})$ over an appropriate family of known graphs.\n\n\\complexity{Classical}{$\\Theta(n)$ mark queries, exhaustive reading and randomized search.}\nReading all marks permits direct checking of the known edge set. A star with its center marked embeds an unstructured search over the other marks, giving the linear classical lower bound. Graph preprocessing and checking a stored edge relation have additional time costs outside the mark-query measure.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial: $n\\to\\widetilde O(n^{11/17})$ in the worst case. The algorithms use quantum search, quantum walks and graph structure.\n\n\\dimensionlabel{Evidence}{evidenceProved} The quantum upper bound and classical lower bound give a rigorous query separation; the strongest cited bound is a November 2026 preprint.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant coherent processing is required. The $O(n^{2/3})$ walk uses roughly $\\widetilde O(n^{2/3})$ coherent bits for stored labels and marks. The $11/17$ query exponent has its own implementation-dependent workspace costs.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{38}\n\\item \\href{https://arxiv.org/pdf/2611.05356}{Cornelissen et al., \\emph{Breaking the Quantum Barriers for Graph Collision} (2026)}. Theorems 1.1--1.2; Section 4, ``An Improved Algorithm''; Section 6 for the lower bound.\n\\item \\href{https://arxiv.org/pdf/1105.4024}{Belovs, \\emph{Span Programs for Functions with Constant-Sized 1-Certificates} (2012)}. The graph-collision application.\n\\end{algorithmindex}"
+}

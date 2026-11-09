@@ -1,0 +1,73 @@
+{
+  "id": "entry-094",
+  "number": 94,
+  "ordinal": 96,
+  "title_latex": "Exact counting and parity of feasible solutions",
+  "title": "Exact counting and parity of feasible solutions",
+  "chapter_id": "chapter-4",
+  "problem": {
+    "name_latex": "Exact counting and parity-SAT",
+    "name": "Exact counting and parity-SAT",
+    "statement_latex": "Given a predicate $f:\\{0,1\\}^n\\to\\{0,1\\}$, compute $\\sum_x f(x)$ exactly, or compute this integer modulo two. The predicate is supplied either as an oracle or as an explicit CNF formula. These tasks count feasible solutions and determine the parity of their number. Complexity is measured in predicate-oracle queries for the oracle formulation and in classical bit operations for explicitly encoded formulas.",
+    "statement_text": "Given a predicate $f:\\{0,1\\}^n\\to\\{0,1\\}$, compute $\\sum_x f(x)$ exactly, or compute this integer modulo two. The predicate is supplied either as an oracle or as an explicit CNF formula. These tasks count feasible solutions and determine the parity of their number. Complexity is measured in predicate-oracle queries for the oracle formulation and in classical bit operations for explicitly encoded formulas."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\lceil N/2\\rceil$ queries for parity and $\\Theta(N)$ for exact counting, where $N=2^n$.",
+      "headline_text": "$\\lceil N/2\\rceil$ queries for parity and $\\Theta(N)$ for exact counting, where $N=2^n$.",
+      "details_latex": "The parity algorithm uses phase kickback on pairs of input bits. The query bounds apply to bounded-error computation of the exact answer. For explicit fixed-width CNF input, a quantum computer can also execute the classical counting algorithm below.",
+      "details_text": "The parity algorithm uses phase kickback on pairs of input bits. The query bounds apply to bounded-error computation of the exact answer. For explicit fixed-width CNF input, a quantum computer can also execute the classical counting algorithm below."
+    },
+    "classical": {
+      "headline_latex": "$N$ queries for oracle parity and $\\Theta(N)$ for oracle counting; $2^{o(n)}\\operatorname{poly}(n+m)$ time for explicit fixed-width CNF, tensor-contraction counting.",
+      "headline_text": "$N$ queries for oracle parity and $\\Theta(N)$ for oracle counting; $2^{o(n)}\\operatorname{poly}(n+m)$ time for explicit fixed-width CNF, tensor-contraction counting.",
+      "details_latex": "Reading and accumulating the truth-table entries attains the oracle bounds. For a fixed-width $k$-CNF with $n$ variables and $m$ clauses, exact counting takes\n\\[\n(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}.\n\\]\nFor $m\\le Dn$ with fixed $D$, the time is $(n+m)^{O_{k,D}(1)}2^{O_{k,D}(n/\\sqrt{\\log n})}$. Reducing the count modulo two gives parity-$k$-SAT at the same cost.",
+      "details_text": "Reading and accumulating the truth-table entries attains the oracle bounds. For a fixed-width $k$-CNF with $n$ variables and $m$ clauses, exact counting takes \\[ (n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}. \\] For $m\\le Dn$ with fixed $D$, the time is $(n+m)^{O_{k,D}(1)}2^{O_{k,D}(n/\\sqrt{\\log n})}$. Reducing the count modulo two gives parity-$k$-SAT at the same cost."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-unspecified",
+      "color_key": "white",
+      "description_latex": "Constant-factor oracle improvement for parity; equal asymptotic oracle complexity for exact counting. Explicit fixed-width counting has a subexponential classical upper bound without power saving.",
+      "description_text": "Constant-factor oracle improvement for parity; equal asymptotic oracle complexity for exact counting. Explicit fixed-width counting has a subexponential classical upper bound without power saving."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Matching oracle lower bounds and rigorous counting upper bounds for the explicit representation.",
+      "description_text": "Matching oracle lower bounds and rigorous counting upper bounds for the explicit representation."
+    },
+    "hardware": {
+      "category_id": "hardware-small",
+      "color_key": "hardwareSmall",
+      "description_latex": "Small parity circuits are shallow implementations. General oracle counting requires exponentially many calls and $O(n)$ address/count registers in addition to evaluator workspace.",
+      "description_text": "Small parity circuits are shallow implementations. General oracle counting requires exponentially many calls and $O(n)$ address/count registers in addition to evaluator workspace."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "94.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/9802049}{Beals et al., \\emph{Quantum Lower Bounds by Polynomials} (1998/2001)}. Section 6, Proposition 6.4 and the preceding pairwise parity algorithm; Table 1 summarizes the tight bounds.",
+      "content_text": "Beals et al., Quantum Lower Bounds by Polynomials (1998/2001). Section 6, Proposition 6.4 and the preceding pairwise parity algorithm; Table 1 summarizes the tight bounds.",
+      "citation_ids": [
+        "entry-094-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "94.2",
+      "content_latex": "\\href{https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026}{OpenAI, \\emph{The Exponential Time Hypothesis is False} (2026)}. Theorem 1.1 for fixed-density counting and Appendix D for the general fixed-width consequence.",
+      "content_text": "OpenAI, The Exponential Time Hypothesis is False (2026). Theorem 1.1 for fixed-density counting and Appendix D for the general fixed-width consequence.",
+      "citation_ids": [
+        "entry-094-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-094-citation-001",
+    "entry-094-citation-002"
+  ],
+  "source_latex": "\\entrytitle{94}{Exact counting and parity of feasible solutions}{white}{evidenceProved}{hardwareSmall}\n\\setcounter{problem}{93}\n\\begin{problem}[Exact counting and parity-SAT]\nGiven a predicate $f:\\{0,1\\}^n\\to\\{0,1\\}$, compute $\\sum_x f(x)$ exactly, or compute this integer modulo two. The predicate is supplied either as an oracle or as an explicit CNF formula. These tasks count feasible solutions and determine the parity of their number. Complexity is measured in predicate-oracle queries for the oracle formulation and in classical bit operations for explicitly encoded formulas.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\lceil N/2\\rceil$ queries for parity and $\\Theta(N)$ for exact counting, where $N=2^n$.}\nThe parity algorithm uses phase kickback on pairs of input bits. The query bounds apply to bounded-error computation of the exact answer. For explicit fixed-width CNF input, a quantum computer can also execute the classical counting algorithm below.\n\n\\complexity{Classical}{$N$ queries for oracle parity and $\\Theta(N)$ for oracle counting; $2^{o(n)}\\operatorname{poly}(n+m)$ time for explicit fixed-width CNF, tensor-contraction counting.}\nReading and accumulating the truth-table entries attains the oracle bounds. For a fixed-width $k$-CNF with $n$ variables and $m$ clauses, exact counting takes\n\\[\n(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}.\n\\]\nFor $m\\le Dn$ with fixed $D$, the time is $(n+m)^{O_{k,D}(1)}2^{O_{k,D}(n/\\sqrt{\\log n})}$. Reducing the count modulo two gives parity-$k$-SAT at the same cost.\n\n\\dimensionlabel{Strength}{white} Constant-factor oracle improvement for parity; equal asymptotic oracle complexity for exact counting. Explicit fixed-width counting has a subexponential classical upper bound without power saving.\n\n\\dimensionlabel{Evidence}{evidenceProved} Matching oracle lower bounds and rigorous counting upper bounds for the explicit representation.\n\n\\dimensionlabel{Hardware}{hardwareSmall} Small parity circuits are shallow implementations. General oracle counting requires exponentially many calls and $O(n)$ address/count registers in addition to evaluator workspace.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{94}\n\\item \\href{https://arxiv.org/pdf/quant-ph/9802049}{Beals et al., \\emph{Quantum Lower Bounds by Polynomials} (1998/2001)}. Section 6, Proposition 6.4 and the preceding pairwise parity algorithm; Table 1 summarizes the tight bounds.\n\\item \\href{https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026}{OpenAI, \\emph{The Exponential Time Hypothesis is False} (2026)}. Theorem 1.1 for fixed-density counting and Appendix D for the general fixed-width consequence.\n\\end{algorithmindex}"
+}

@@ -1,0 +1,3115 @@
+[
+  {
+    "id": "arxiv-0708.2584",
+    "external_ids": {
+      "arxiv": "0708.2584"
+    },
+    "title": "Claw Finding Algorithms Using Quantum Walk",
+    "title_latex": "Claw Finding Algorithms Using Quantum Walk",
+    "citation_labels_latex": [
+      "Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/0708.2584",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-0804.1571",
+    "external_ids": {
+      "arxiv": "0804.1571"
+    },
+    "title": "Quantum Simulations of Classical Annealing Processes",
+    "title_latex": "Quantum Simulations of Classical Annealing Processes",
+    "citation_labels_latex": [
+      "Somma, Boixo, Barnum and Knill, \\emph{Quantum Simulations of Classical Annealing Processes} (2008)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/0804.1571",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-0804.4259",
+    "external_ids": {
+      "arxiv": "0804.4259"
+    },
+    "title": "Speedup via Quantum Sampling",
+    "title_latex": "Speedup via Quantum Sampling",
+    "citation_labels_latex": [
+      "Wocjan and Abeyesinghe, \\emph{Speedup via Quantum Sampling} (2008)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/0804.4259",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-0806.1746",
+    "external_ids": {
+      "arxiv": "0806.1746"
+    },
+    "title": "Complexity of Stoquastic Frustration-Free Hamiltonians",
+    "title_latex": "Complexity of Stoquastic Frustration-Free Hamiltonians",
+    "citation_labels_latex": [
+      "Bravyi and Terhal, \\emph{Complexity of Stoquastic Frustration-Free Hamiltonians} (2008/2009)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/0806.1746",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1005.1601",
+    "external_ids": {
+      "arxiv": "1005.1601"
+    },
+    "title": "Reflections for Quantum Query Algorithms",
+    "title_latex": "Reflections for Quantum Query Algorithms",
+    "citation_labels_latex": [
+      "Reichardt, \\emph{Reflections for Quantum Query Algorithms} (2011)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1005.1601",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1012.3174",
+    "external_ids": {
+      "arxiv": "1012.3174"
+    },
+    "title": "Quantum Property Testing for Bounded-Degree Graphs",
+    "title_latex": "Quantum Property Testing for Bounded-Degree Graphs",
+    "citation_labels_latex": [
+      "Ambainis, Childs and Liu, \\emph{Quantum Property Testing for Bounded-Degree Graphs} (2011)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1012.3174",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1012.4019",
+    "external_ids": {
+      "arxiv": "1012.4019"
+    },
+    "title": "Constructing Elliptic Curve Isogenies in Quantum Subexponential Time",
+    "title_latex": "Constructing Elliptic Curve Isogenies in Quantum Subexponential Time",
+    "citation_labels_latex": [
+      "Childs, Jao and Soukharev, \\emph{Constructing Elliptic Curve Isogenies in Quantum Subexponential Time} (2014)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1012.4019",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1105.4024",
+    "external_ids": {
+      "arxiv": "1105.4024"
+    },
+    "title": "Span Programs for Functions with Constant-Sized 1-Certificates",
+    "title_latex": "Span Programs for Functions with Constant-Sized 1-Certificates",
+    "citation_labels_latex": [
+      "Belovs, \\emph{Span Programs for Functions with Constant-Sized 1-Certificates} (2012)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1105.4024",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1112.3333",
+    "external_ids": {
+      "arxiv": "1112.3333"
+    },
+    "title": "Another Subexponential-Time Quantum Algorithm for the Dihedral Hidden Subgroup Problem",
+    "title_latex": "Another Subexponential-Time Quantum Algorithm for the Dihedral Hidden Subgroup Problem",
+    "citation_labels_latex": [
+      "Kuperberg, \\emph{Another Subexponential-Time Quantum Algorithm for the Dihedral Hidden Subgroup Problem} (TQC 2013)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1112.3333",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1203.2603",
+    "external_ids": {
+      "arxiv": "1203.2603"
+    },
+    "title": "Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection",
+    "title_latex": "Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection",
+    "citation_labels_latex": [
+      "Belovs and Reichardt, \\emph{Span Programs and Quantum Algorithms for $st$-Connectivity and Claw Detection} (2012)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1203.2603",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1205.0458",
+    "external_ids": {
+      "arxiv": "1205.0458"
+    },
+    "title": "Better Balance by Being Biased: A 0.8776-Approximation for Max Bisection",
+    "title_latex": "Better Balance by Being Biased: A 0.8776-Approximation for Max Bisection",
+    "citation_labels_latex": [
+      "Austrin, Benabbas and Georgiou, \\emph{Better Balance by Being Biased: A 0.8776-Approximation for Max Bisection} (2013/2016)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/1205.0458",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1205.0458",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/1205.0458"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1306.4244",
+    "external_ids": {
+      "arxiv": "1306.4244"
+    },
+    "title": "A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic",
+    "title_latex": "A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic",
+    "citation_labels_latex": [
+      "Barbulescu, Gaudry, Joux and Thom\\'e, \\emph{A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic} (2014)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1306.4244",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1309.1559",
+    "external_ids": {
+      "arxiv": "1309.1559"
+    },
+    "title": "Large Induced Subgraphs via Triangulations and CMSO",
+    "title_latex": "Large Induced Subgraphs via Triangulations and CMSO",
+    "citation_labels_latex": [
+      "Fomin, Todinca and Villanger, \\emph{Large Induced Subgraphs via Triangulations and CMSO} (SIAM Journal on Computing 2015)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1309.1559",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1312.6260",
+    "external_ids": {
+      "arxiv": "1312.6260"
+    },
+    "title": "Exact Algorithms for Maximum Independent Set",
+    "title_latex": "Exact Algorithms for Maximum Independent Set",
+    "citation_labels_latex": [
+      "Xiao and Nagamochi, \\emph{Exact Algorithms for Maximum Independent Set} (Information and Computation 2017)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1312.6260",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1402.3473",
+    "external_ids": {
+      "arxiv": "1402.3473"
+    },
+    "title": "A Subexponential Parameterized Algorithm for Interval Completion",
+    "title_latex": "A Subexponential Parameterized Algorithm for Interval Completion",
+    "citation_labels_latex": [
+      "Bliznets et al., \\emph{A Subexponential Parameterized Algorithm for Interval Completion}"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1402.3473",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1407.0085",
+    "external_ids": {
+      "arxiv": "1407.0085"
+    },
+    "title": "Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments",
+    "title_latex": "Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments",
+    "citation_labels_latex": [
+      "Le Gall, \\emph{Improved Quantum Algorithm for Triangle Finding via Combinatorial Arguments} (2014)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1407.0085",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1407.5088",
+    "external_ids": {
+      "arxiv": "1407.5088"
+    },
+    "title": "Quantum Learning Robust Against Noise",
+    "title_latex": "Quantum Learning Robust Against Noise",
+    "citation_labels_latex": [
+      "Cross, Smith and Smolin, \\emph{Quantum Learning Robust Against Noise} (2015)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1407.5088",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1410.1434",
+    "external_ids": {
+      "arxiv": "1410.1434"
+    },
+    "title": "Quantum Attacks Against Iterated Block Ciphers",
+    "title_latex": "Quantum Attacks Against Iterated Block Ciphers",
+    "citation_labels_latex": [
+      "Kaplan, \\emph{Quantum Attacks Against Iterated Block Ciphers} (2015)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1410.1434",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1410.6220",
+    "external_ids": {
+      "arxiv": "1410.6220"
+    },
+    "title": "Quantum Algorithms for Shortest Paths Problems in Structured Instances",
+    "title_latex": "Quantum Algorithms for Shortest Paths Problems in Structured Instances",
+    "citation_labels_latex": [
+      "Nayebi and Vassilevska Williams, \\emph{Quantum Algorithms for Shortest Paths Problems in Structured Instances} (2014)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1410.6220",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1411.4028",
+    "external_ids": {
+      "arxiv": "1411.4028"
+    },
+    "title": "A Quantum Approximate Optimization Algorithm",
+    "title_latex": "A Quantum Approximate Optimization Algorithm",
+    "citation_labels_latex": [
+      "Farhi, Goldstone and Gutmann, \\emph{A Quantum Approximate Optimization Algorithm} (2014)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1411.4028",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1412.6062",
+    "external_ids": {
+      "arxiv": "1412.6062"
+    },
+    "title": "A Quantum Approximate Optimization Algorithm Applied to a Bounded Occurrence Constraint Problem",
+    "title_latex": "A Quantum Approximate Optimization Algorithm Applied to a Bounded Occurrence Constraint Problem",
+    "citation_labels_latex": [
+      "Farhi, Goldstone and Gutmann, \\emph{A Quantum Approximate Optimization Algorithm Applied to a Bounded Occurrence Constraint Problem} (2014)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1412.6062",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1504.01995",
+    "external_ids": {
+      "arxiv": "1504.01995"
+    },
+    "title": "Solving the Closest Vector Problem in $2^n$ Time—The Discrete Gaussian Strikes Again!",
+    "title_latex": "Solving the Closest Vector Problem in $2^n$ Time---The Discrete Gaussian Strikes Again!",
+    "citation_labels_latex": [
+      "Aggarwal, Dadush and Stephens-Davidowitz, \\emph{Solving the Closest Vector Problem in $2^n$ Time---The Discrete Gaussian Strikes Again!} (FOCS 2015)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1504.01995",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1505.03424",
+    "external_ids": {
+      "arxiv": "1505.03424"
+    },
+    "title": "Beating the Random Assignment on Constraint Satisfaction Problems of Bounded Degree",
+    "title_latex": "Beating the Random Assignment on Constraint Satisfaction Problems of Bounded Degree",
+    "citation_labels_latex": [
+      "Barak et al., \\emph{Beating the Random Assignment on Constraint Satisfaction Problems of Bounded Degree} (2015)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1505.03424",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1509.02374",
+    "external_ids": {
+      "arxiv": "1509.02374"
+    },
+    "title": "Quantum Walk Speedup of Backtracking Algorithms",
+    "title_latex": "Quantum Walk Speedup of Backtracking Algorithms",
+    "citation_labels_latex": [
+      "Montanaro, \\emph{Quantum Walk Speedup of Backtracking Algorithms} (Theory of Computing 2018)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1509.02374",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1510.05836",
+    "external_ids": {
+      "arxiv": "1510.05836"
+    },
+    "title": "Quantum Differential and Linear Cryptanalysis",
+    "title_latex": "Quantum Differential and Linear Cryptanalysis",
+    "citation_labels_latex": [
+      "Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Quantum Differential and Linear Cryptanalysis} (ToSC 2016)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1510.05836",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1512.04965",
+    "external_ids": {
+      "arxiv": "1512.04965"
+    },
+    "title": "Applying Grover's Algorithm to AES: Quantum Resource Estimates",
+    "title_latex": "Applying Grover's Algorithm to AES: Quantum Resource Estimates",
+    "citation_labels_latex": [
+      "Grassl, Langenberg, Roetteler and Steinwandt, \\emph{Applying Grover's Algorithm to AES: Quantum Resource Estimates} (2016)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1512.04965",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1512.06069",
+    "external_ids": {
+      "arxiv": "1512.06069"
+    },
+    "title": "Demonstration of Quantum Advantage in Machine Learning",
+    "title_latex": "Demonstration of Quantum Advantage in Machine Learning",
+    "citation_labels_latex": [
+      "Rist\\`e et al., \\emph{Demonstration of Quantum Advantage in Machine Learning} (2017)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1512.06069",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1602.05973",
+    "external_ids": {
+      "arxiv": "1602.05973"
+    },
+    "title": "Breaking Symmetric Cryptosystems Using Quantum Period Finding",
+    "title_latex": "Breaking Symmetric Cryptosystems Using Quantum Period Finding",
+    "citation_labels_latex": [
+      "Kaplan, Leurent, Leverrier and Naya-Plasencia, \\emph{Breaking Symmetric Cryptosystems Using Quantum Period Finding} (CRYPTO 2016)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1602.05973",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1612.06203",
+    "external_ids": {
+      "arxiv": "1612.06203"
+    },
+    "title": "Quantum Speedup of the Traveling-Salesman Problem for Bounded-Degree Graphs",
+    "title_latex": "Quantum Speedup of the Traveling-Salesman Problem for Bounded-Degree Graphs",
+    "citation_labels_latex": [
+      "Moylett, Linden and Montanaro, \\emph{Quantum Speedup of the Traveling-Salesman Problem for Bounded-Degree Graphs} (2017)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1612.06203",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1703.00263",
+    "external_ids": {
+      "arxiv": "1703.00263"
+    },
+    "title": "Quantum Information Set Decoding Algorithms",
+    "title_latex": "Quantum Information Set Decoding Algorithms",
+    "citation_labels_latex": [
+      "Kachigar and Tillich, \\emph{Quantum Information Set Decoding Algorithms} (2017)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1703.00263",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1706.06752",
+    "external_ids": {
+      "arxiv": "1706.06752"
+    },
+    "title": "Quantum Resource Estimates for Computing Elliptic Curve Discrete Logarithms",
+    "title_latex": "Quantum Resource Estimates for Computing Elliptic Curve Discrete Logarithms",
+    "citation_labels_latex": [
+      "Roetteler, Naehrig, Svore and Lauter, \\emph{Quantum Resource Estimates for Computing Elliptic Curve Discrete Logarithms} (ASIACRYPT 2017)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1706.06752",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1709.03489",
+    "external_ids": {
+      "arxiv": "1709.03489"
+    },
+    "title": "From the Quantum Approximate Optimization Algorithm to a Quantum Alternating Operator Ansatz",
+    "title_latex": "From the Quantum Approximate Optimization Algorithm to a Quantum Alternating Operator Ansatz",
+    "citation_labels_latex": [
+      "Hadfield et al., \\emph{From the Quantum Approximate Optimization Algorithm to a Quantum Alternating Operator Ansatz} (2019)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/1709.03489",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1709.03489",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/1709.03489"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1712.07211",
+    "external_ids": {
+      "arxiv": "1712.07211"
+    },
+    "title": "Fast Quantum Algorithm for Solving Multivariate Quadratic Equations",
+    "title_latex": "Fast Quantum Algorithm for Solving Multivariate Quadratic Equations",
+    "citation_labels_latex": [
+      "Faug\\`ere et al., \\emph{Fast Quantum Algorithm for Solving Multivariate Quadratic Equations} (2017)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1712.07211",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1803.10633",
+    "external_ids": {
+      "arxiv": "1803.10633"
+    },
+    "title": "A Framework for ETH-Tight Algorithms and Lower Bounds in Geometric Intersection Graphs",
+    "title_latex": "A Framework for ETH-Tight Algorithms and Lower Bounds in Geometric Intersection Graphs",
+    "citation_labels_latex": [
+      "de Berg et al., \\emph{A Framework for ETH-Tight Algorithms and Lower Bounds in Geometric Intersection Graphs} (2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1803.10633",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1807.05209",
+    "external_ids": {
+      "arxiv": "1807.05209"
+    },
+    "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
+    "title_latex": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
+    "citation_labels_latex": [
+      "Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1807.05209",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1808.00714",
+    "external_ids": {
+      "arxiv": "1808.00714"
+    },
+    "title": "Improved Quantum Information Set Decoding",
+    "title_latex": "Improved Quantum Information Set Decoding",
+    "citation_labels_latex": [
+      "Kirshanova, \\emph{Improved Quantum Information Set Decoding} (2018)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1808.00714",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1810.12484",
+    "external_ids": {
+      "arxiv": "1810.12484"
+    },
+    "title": "Network Community Detection on Small Quantum Computers",
+    "title_latex": "Network Community Detection on Small Quantum Computers",
+    "citation_labels_latex": [
+      "Shaydulin et al., \\emph{Network Community Detection on Small Quantum Computers} (2019)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/1810.12484",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1810.12484",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/1810.12484"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1812.10897",
+    "external_ids": {
+      "arxiv": "1812.10897"
+    },
+    "title": "Optimization of the Sherrington–Kirkpatrick Hamiltonian",
+    "title_latex": "Optimization of the Sherrington--Kirkpatrick Hamiltonian",
+    "citation_labels_latex": [
+      "Montanari, \\emph{Optimization of the Sherrington--Kirkpatrick Hamiltonian} (2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1812.10897",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1904.03581",
+    "external_ids": {
+      "arxiv": "1904.03581"
+    },
+    "title": "Quantum Speedup for the Minimum Steiner Tree Problem",
+    "title_latex": "Quantum Speedup for the Minimum Steiner Tree Problem",
+    "citation_labels_latex": [
+      "Miyamoto, Iwamura, Kise and Le Gall, \\emph{Quantum Speedup for the Minimum Steiner Tree Problem} (2019/2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1904.03581",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1906.10375",
+    "external_ids": {
+      "arxiv": "1906.10375"
+    },
+    "title": "Quantum Speedup of Branch-and-Bound Algorithms",
+    "title_latex": "Quantum Speedup of Branch-and-Bound Algorithms",
+    "citation_labels_latex": [
+      "Montanaro, \\emph{Quantum Speedup of Branch-and-Bound Algorithms} (Physical Review Research 2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1906.10375",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1907.02369",
+    "external_ids": {
+      "arxiv": "1907.02369"
+    },
+    "title": "Expansion Testing Using Quantum Fast-Forwarding and Seed Sets",
+    "title_latex": "Expansion Testing Using Quantum Fast-Forwarding and Seed Sets",
+    "citation_labels_latex": [
+      "Apers, \\emph{Expansion Testing Using Quantum Fast-Forwarding and Seed Sets} (2019)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1907.02369",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1910.08187",
+    "external_ids": {
+      "arxiv": "1910.08187"
+    },
+    "title": "The Quantum Approximate Optimization Algorithm and the Sherrington–Kirkpatrick Model at Infinite Size",
+    "title_latex": "The Quantum Approximate Optimization Algorithm and the Sherrington--Kirkpatrick Model at Infinite Size",
+    "citation_labels_latex": [
+      "Farhi et al., \\emph{The Quantum Approximate Optimization Algorithm and the Sherrington--Kirkpatrick Model at Infinite Size} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/1910.08187",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-1911.05296",
+    "external_ids": {
+      "arxiv": "1911.05296"
+    },
+    "title": "Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz",
+    "title_latex": "Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz",
+    "citation_labels_latex": [
+      "Hodson et al., \\emph{Portfolio Rebalancing Experiments Using the Quantum Alternating Operator Ansatz} (2019)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/1911.05296",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1911.05296",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/1911.05296"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2002.05276",
+    "external_ids": {
+      "arxiv": "2002.05276"
+    },
+    "title": "Improved Classical and Quantum Algorithms for Subset-Sum",
+    "title_latex": "Improved Classical and Quantum Algorithms for Subset-Sum",
+    "citation_labels_latex": [
+      "Bonnetain, Bricout, Schrottenloher and Shen, \\emph{Improved Classical and Quantum Algorithms for Subset-Sum} (ASIACRYPT 2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2002.05276",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2002.12439",
+    "external_ids": {
+      "arxiv": "2002.12439"
+    },
+    "title": "Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm",
+    "title_latex": "Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm",
+    "citation_labels_latex": [
+      "Bonnetain et al., \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)",
+      "Bonnetain, Hosoyamada, Naya-Plasencia, Sasaki and Schrottenloher, \\emph{Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm} (ASIACRYPT 2019; full version 2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2002.12439",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2002.12508",
+    "external_ids": {
+      "arxiv": "2002.12508"
+    },
+    "title": "Near-optimal Ground State Preparation",
+    "title_latex": "Near-optimal Ground State Preparation",
+    "citation_labels_latex": [
+      "Lin and Tong, \\emph{Near-optimal Ground State Preparation} (2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2002.12508",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2004.04197",
+    "external_ids": {
+      "arxiv": "2004.04197"
+    },
+    "title": "Quantum Approximate Optimization of Non-Planar Graph Problems on a Planar Superconducting Processor",
+    "title_latex": "Quantum Approximate Optimization of Non-Planar Graph Problems on a Planar Superconducting Processor",
+    "citation_labels_latex": [
+      "Harrigan et al., \\emph{Quantum Approximate Optimization of Non-Planar Graph Problems on a Planar Superconducting Processor} (2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2004.04197",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2004.13231",
+    "external_ids": {
+      "arxiv": "2004.13231"
+    },
+    "title": "Quantum Implications of Huang's Sensitivity Theorem",
+    "title_latex": "Quantum Implications of Huang's Sensitivity Theorem",
+    "citation_labels_latex": [
+      "Aaronson, Ben-David, Kothari and Tal, \\emph{Quantum Implications of Huang's Sensitivity Theorem} (2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2004.13231",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2005.04800",
+    "external_ids": {
+      "arxiv": "2005.04800"
+    },
+    "title": "Improved Algorithms for Solving Polynomial Systems over GF(2) by Multiple Parity-Counting",
+    "title_latex": "Improved Algorithms for Solving Polynomial Systems over GF(2) by Multiple Parity-Counting",
+    "citation_labels_latex": [
+      "Dinur, \\emph{Improved Algorithms for Solving Polynomial Systems over GF(2) by Multiple Parity-Counting} (2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2005.04800",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2009.01095",
+    "external_ids": {
+      "arxiv": "2009.01095"
+    },
+    "title": "Efficient Encoding of the Weighted MAX $k$-CUT on a Quantum Computer Using QAOA",
+    "title_latex": "Efficient Encoding of the Weighted MAX $k$-CUT on a Quantum Computer Using QAOA",
+    "citation_labels_latex": [
+      "Fuchs et al., \\emph{Efficient Encoding of the Weighted MAX $k$-CUT on a Quantum Computer Using QAOA} (2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/2009.01095",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2009.01095",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/2009.01095"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2011.09823",
+    "external_ids": {
+      "arxiv": "2011.09823"
+    },
+    "title": "Quantum Complexity of Minimum Cut",
+    "title_latex": "Quantum Complexity of Minimum Cut",
+    "citation_labels_latex": [
+      "Apers and Lee, \\emph{Quantum Complexity of Minimum Cut} (2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2011.09823",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2101.07267",
+    "external_ids": {
+      "arxiv": "2101.07267"
+    },
+    "title": "Training Variational Quantum Algorithms Is NP-Hard",
+    "title_latex": "Training Variational Quantum Algorithms Is NP-Hard",
+    "citation_labels_latex": [
+      "Bittel and Kliesch, \\emph{Training Variational Quantum Algorithms Is NP-Hard} (2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2101.07267",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2104.14384",
+    "external_ids": {
+      "arxiv": "2104.14384"
+    },
+    "title": "Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs",
+    "title_latex": "Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs",
+    "citation_labels_latex": [
+      "Glos, Kokainis, Mori and Vihrovs, \\emph{Quantum Speedups for Dynamic Programming on $n$-Dimensional Lattice Graphs} (MFCS 2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2104.14384",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2106.10055",
+    "external_ids": {
+      "arxiv": "2106.10055"
+    },
+    "title": "Filtering Variational Quantum Algorithms for Combinatorial Optimization",
+    "title_latex": "Filtering Variational Quantum Algorithms for Combinatorial Optimization",
+    "citation_labels_latex": [
+      "Amaro et al., \\emph{Filtering Variational Quantum Algorithms for Combinatorial Optimization} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/2106.10055",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2106.10055",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/2106.10055"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2108.11015",
+    "external_ids": {
+      "arxiv": "2108.11015"
+    },
+    "title": "Quantum Algorithms for Variants of Average-Case Lattice Problems via Filtering",
+    "title_latex": "Quantum Algorithms for Variants of Average-Case Lattice Problems via Filtering",
+    "citation_labels_latex": [
+      "Chen, Liu and Zhandry, \\emph{Quantum Algorithms for Variants of Average-Case Lattice Problems via Filtering} (EUROCRYPT 2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2108.11015",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/abs/2108.11015",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2108.11015",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/2108.11015"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2109.03745",
+    "external_ids": {
+      "arxiv": "2109.03745"
+    },
+    "title": "A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem",
+    "title_latex": "A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem",
+    "citation_labels_latex": [
+      "Amaro et al., \\emph{A Case Study of Variational Quantum Algorithms for a Job Shop Scheduling Problem} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/2109.03745",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2109.03745",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/2109.03745"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2112.06157",
+    "external_ids": {
+      "arxiv": "2112.06157"
+    },
+    "title": "An Optimized Quantum Implementation of ISD on Scalable Quantum Resources",
+    "title_latex": "An Optimized Quantum Implementation of ISD on Scalable Quantum Resources",
+    "citation_labels_latex": [
+      "Esser et al., \\emph{An Optimized Quantum Implementation of ISD on Scalable Quantum Resources} (2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2112.06157",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2201.13450",
+    "external_ids": {
+      "arxiv": "2201.13450"
+    },
+    "title": "An Efficient Quantum Algorithm for Lattice Problems Achieving Subexponential Approximation Factor",
+    "title_latex": "An Efficient Quantum Algorithm for Lattice Problems Achieving Subexponential Approximation Factor",
+    "citation_labels_latex": [
+      "Eldar and Hallgren, \\emph{An Efficient Quantum Algorithm for Lattice Problems Achieving Subexponential Approximation Factor} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2201.13450",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2202.08186",
+    "external_ids": {
+      "arxiv": "2202.08186"
+    },
+    "title": "Quantum Speedups for Treewidth",
+    "title_latex": "Quantum Speedups for Treewidth",
+    "citation_labels_latex": [
+      "K\\c{l}evickis, Pr\\=usis and Vihrovs, \\emph{Quantum Speedups for Treewidth} (TQC 2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2202.08186",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2202.09372",
+    "external_ids": {
+      "arxiv": "2202.09372"
+    },
+    "title": "Quantum Optimization of Maximum Independent Set Using Rydberg Atom Arrays",
+    "title_latex": "Quantum Optimization of Maximum Independent Set Using Rydberg Atom Arrays",
+    "citation_labels_latex": [
+      "Ebadi et al., \\emph{Quantum Optimization of Maximum Independent Set Using Rydberg Atom Arrays} (Science 2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2202.09372",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2203.00671",
+    "external_ids": {
+      "arxiv": "2203.00671"
+    },
+    "title": "Maximum Flow and Minimum-Cost Flow in Almost-Linear Time",
+    "title_latex": "Maximum Flow and Minimum-Cost Flow in Almost-Linear Time",
+    "citation_labels_latex": [
+      "Chen et al., \\emph{Maximum Flow and Minimum-Cost Flow in Almost-Linear Time} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2203.00671",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2203.05019",
+    "external_ids": {
+      "arxiv": "2203.05019"
+    },
+    "title": "Quantum and Classical Algorithms for Bounded Distance Decoding",
+    "title_latex": "Quantum and Classical Algorithms for Bounded Distance Decoding",
+    "citation_labels_latex": [
+      "Allen et al., \\emph{Quantum and Classical Algorithms for Bounded Distance Decoding} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2203.05019",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2205.14023",
+    "external_ids": {
+      "arxiv": "2205.14023"
+    },
+    "title": "Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving",
+    "title_latex": "Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving",
+    "citation_labels_latex": [
+      "Bonnetain et al., \\emph{Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving} (EUROCRYPT 2023)",
+      "Bonnetain et al., \\emph{Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving} (2023)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2205.14023",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2207.08643",
+    "external_ids": {
+      "arxiv": "2207.08643"
+    },
+    "title": "A Sublinear-Time Quantum Algorithm for Approximating Partition Functions",
+    "title_latex": "A Sublinear-Time Quantum Algorithm for Approximating Partition Functions",
+    "citation_labels_latex": [
+      "Cornelissen and Hamoudi, \\emph{A Sublinear-Time Quantum Algorithm for Approximating Partition Functions} (2023)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2207.08643",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2210.03210",
+    "external_ids": {
+      "arxiv": "2210.03210"
+    },
+    "title": "Universal Quantum Speedup for Branch-and-Bound, Branch-and-Cut, and Tree-Search Algorithms",
+    "title_latex": "Universal Quantum Speedup for Branch-and-Bound, Branch-and-Cut, and Tree-Search Algorithms",
+    "citation_labels_latex": [
+      "Chakrabarti, Minssen, Yalovetzky and Pistoia, \\emph{Universal Quantum Speedup for Branch-and-Bound, Branch-and-Cut, and Tree-Search Algorithms} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2210.03210",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2212.01513",
+    "external_ids": {
+      "arxiv": "2212.01513"
+    },
+    "title": "Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End",
+    "title_latex": "Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End",
+    "citation_labels_latex": [
+      "Dalzell et al., \\emph{Mind the Gap: Achieving a Super-Grover Quantum Speedup by Jumping to the End} (2023/2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2212.01513",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2308.06572",
+    "external_ids": {
+      "arxiv": "2308.06572"
+    },
+    "title": "An Efficient Quantum Factoring Algorithm",
+    "title_latex": "An Efficient Quantum Factoring Algorithm",
+    "citation_labels_latex": [
+      "Regev, \\emph{An Efficient Quantum Factoring Algorithm} (2023)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2308.06572",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2309.16629",
+    "external_ids": {
+      "arxiv": "2309.16629"
+    },
+    "title": "A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow",
+    "title_latex": "A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow",
+    "citation_labels_latex": [
+      "van den Brand et al., \\emph{A Deterministic Almost-Linear Time Algorithm for Minimum-Cost Flow} (2023)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2309.16629",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2311.08042",
+    "external_ids": {
+      "arxiv": "2311.08042"
+    },
+    "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
+    "title_latex": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
+    "citation_labels_latex": [
+      "Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2311.08042",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2408.08292",
+    "external_ids": {
+      "arxiv": "2408.08292"
+    },
+    "title": "Optimization by Decoded Quantum Interferometry",
+    "title_latex": "Optimization by Decoded Quantum Interferometry",
+    "citation_labels_latex": [
+      "Jordan et al., \\emph{Optimization by Decoded Quantum Interferometry} (Nature 2025)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2408.08292",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2410.23270",
+    "external_ids": {
+      "arxiv": "2410.23270"
+    },
+    "title": "Generalized Short Path Algorithms",
+    "title_latex": "Generalized Short Path Algorithms",
+    "citation_labels_latex": [
+      "Chakrabarti et al., \\emph{Generalized Short Path Algorithms} (2024/2025)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2410.23270",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2504.17033",
+    "external_ids": {
+      "arxiv": "2504.17033"
+    },
+    "title": "Breaking the Sorting Barrier for Directed Single-Source Shortest Paths",
+    "title_latex": "Breaking the Sorting Barrier for Directed Single-Source Shortest Paths",
+    "citation_labels_latex": [
+      "Duan, Mao, Mao, Shu and Yin, \\emph{Breaking the Sorting Barrier for Directed Single-Source Shortest Paths} (2025)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2504.17033",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2505.15917",
+    "external_ids": {
+      "arxiv": "2505.15917"
+    },
+    "title": "How to Factor 2048 Bit RSA Integers with Less Than a Million Noisy Qubits",
+    "title_latex": "How to Factor 2048 Bit RSA Integers with Less Than a Million Noisy Qubits",
+    "citation_labels_latex": [
+      "Gidney, \\emph{How to Factor 2048 Bit RSA Integers with Less Than a Million Noisy Qubits} (2025)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2505.15917",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2510.07515",
+    "external_ids": {
+      "arxiv": "2510.07515"
+    },
+    "title": "No Exponential Quantum Speedup for $\\mathrm{SIS}_\\infty$ Anymore",
+    "title_latex": "No Exponential Quantum Speedup for $\\mathrm{SIS}_\\infty$ Anymore",
+    "citation_labels_latex": [
+      "Kothari, O'Donnell and Wu, \\emph{No Exponential Quantum Speedup for $\\mathrm{SIS}_\\infty$ Anymore} (STOC 2026)",
+      "Kothari, O'Donnell and Wu, \\emph{No Exponential Quantum Speedup for SIS$^\\infty$ Anymore} (STOC 2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2510.07515",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/html/2510.07515v3",
+        "kind": "html",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2604.12131",
+    "external_ids": {
+      "arxiv": "2604.12131"
+    },
+    "title": "Dequantizing Short-Path Quantum Algorithms",
+    "title_latex": "Dequantizing Short-Path Quantum Algorithms",
+    "citation_labels_latex": [
+      "Le Gall and Tamaki, \\emph{Dequantizing Short-Path Quantum Algorithms} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2604.12131",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2607.14650",
+    "external_ids": {
+      "arxiv": "2607.14650"
+    },
+    "title": "Worst-Case Quantum Algorithm for Optimal Polynomial Intersection Beyond Decoded Quantum Interferometry",
+    "title_latex": "Worst-Case Quantum Algorithm for Optimal Polynomial Intersection Beyond Decoded Quantum Interferometry",
+    "citation_labels_latex": [
+      "Horinaga and Yamakawa, \\emph{Worst-Case Quantum Algorithm for Optimal Polynomial Intersection Beyond Decoded Quantum Interferometry} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2607.14650",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2608.07309",
+    "external_ids": {
+      "arxiv": "2608.07309"
+    },
+    "title": "Improved Quantum Algorithms for Subset Sum and $k$-SUM",
+    "title_latex": "Improved Quantum Algorithms for Subset Sum and $k$-SUM",
+    "citation_labels_latex": [
+      "Chukhin, Kulikov, Levitskii and Mihajlin, \\emph{Improved Quantum Algorithms for Subset Sum and $k$-SUM} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2608.07309",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2609.02764",
+    "external_ids": {
+      "arxiv": "2609.02764"
+    },
+    "title": "Finding a Shortest Vector and More in $2^{n/2+o(n)}$ Time Using $q$-ary Coset Difference Tree",
+    "title_latex": "Finding a Shortest Vector and More in $2^{n/2+o(n)}$ Time Using $q$-ary Coset Difference Tree",
+    "citation_labels_latex": [
+      "Hhan, \\emph{Finding a Shortest Vector and More in $2^{n/2+o(n)}$ Time Using $q$-ary Coset Difference Tree} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2609.02764",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2609.35453",
+    "external_ids": {
+      "arxiv": "2609.35453"
+    },
+    "title": "Hermite Brings a Laptop: Analyzing Frieze–Jerrum Rounding Yields Improved Approximations for Clustering Problems",
+    "title_latex": "Hermite Brings a Laptop: Analyzing Frieze--Jerrum Rounding Yields Improved Approximations for Clustering Problems",
+    "citation_labels_latex": [
+      "Garc\\'ia-Soriano and Miyauchi, \\emph{Hermite Brings a Laptop: Analyzing Frieze--Jerrum Rounding Yields Improved Approximations for Clustering Problems} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/2609.35453",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2609.35453",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/2609.35453"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2609.39042",
+    "external_ids": {
+      "arxiv": "2609.39042"
+    },
+    "title": "Provable Classical and Quantum Local Algorithms for Max-$k$-Cut and Quantum Advantage at Moderate Girth",
+    "title_latex": "Provable Classical and Quantum Local Algorithms for Max-$k$-Cut and Quantum Advantage at Moderate Girth",
+    "citation_labels_latex": [
+      "Apte et al., \\emph{Provable Classical and Quantum Local Algorithms for Max-$k$-Cut and Quantum Advantage at Moderate Girth} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/2609.39042",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2609.39042",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/2609.39042"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2609.40180",
+    "external_ids": {
+      "arxiv": "2609.40180"
+    },
+    "title": "Improved Quantum Query Bounds for Boolean Matrix Product Verification",
+    "title_latex": "Improved Quantum Query Bounds for Boolean Matrix Product Verification",
+    "citation_labels_latex": [
+      "Gilani, Le Gall and Zhou, \\emph{Improved Quantum Query Bounds for Boolean Matrix Product Verification} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2609.40180",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2609.40321",
+    "external_ids": {
+      "arxiv": "2609.40321"
+    },
+    "title": "Exponential Quantum Speedup for $\\mathbb F_3^n$-Subset-Sum? Or, Rigorous Classical Algorithms for Binary-Error LWE",
+    "title_latex": "Exponential Quantum Speedup for $\\mathbb F_3^n$-Subset-Sum? Or, Rigorous Classical Algorithms for Binary-Error LWE",
+    "citation_labels_latex": [
+      "Kothari, Metger, O'Donnell, Shutty and Wu, \\emph{Exponential Quantum Speedup for $\\mathbb F_3^n$-Subset-Sum? Or, Rigorous Classical Algorithms for Binary-Error LWE} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/html/2609.40321v1",
+        "kind": "html",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2610.02145",
+    "external_ids": {
+      "arxiv": "2610.02145"
+    },
+    "title": "A Provable Quantum Advantage for Approximate Optimization via Decoded Quantum Interferometry",
+    "title_latex": "A Provable Quantum Advantage for Approximate Optimization via Decoded Quantum Interferometry",
+    "citation_labels_latex": [
+      "Kramer et al., \\emph{A Provable Quantum Advantage for Approximate Optimization via Decoded Quantum Interferometry} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2610.02145",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2610.06783",
+    "external_ids": {
+      "arxiv": "2610.06783"
+    },
+    "title": "Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs",
+    "title_latex": "Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs",
+    "citation_labels_latex": [
+      "Alman and Vassilevska Williams, \\emph{Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2610.06783",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2610.10494",
+    "external_ids": {
+      "arxiv": "2610.10494"
+    },
+    "title": "Rectangular Matrix Multiplication from Polynomial Products",
+    "title_latex": "Rectangular Matrix Multiplication from Polynomial Products",
+    "citation_labels_latex": [
+      "Uzna\\'nski, \\emph{Rectangular Matrix Multiplication from Polynomial Products} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2610.10494v2",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2610.13043",
+    "external_ids": {
+      "arxiv": "2610.13043"
+    },
+    "title": "Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples",
+    "title_latex": "Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples",
+    "citation_labels_latex": [
+      "Lin and Vasudevan, \\emph{Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2610.13043",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2611.02650",
+    "external_ids": {
+      "arxiv": "2611.02650"
+    },
+    "title": "ETH is Dead, Long Live SH",
+    "title_latex": "ETH is Dead, Long Live SH",
+    "citation_labels_latex": [
+      "MIT Hardness Group et al., \\emph{ETH is Dead, Long Live SH} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/abs/2611.02650",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2611.02650",
+        "kind": "pdf",
+        "provenance": "standard_arxiv_pdf",
+        "source_url": "https://arxiv.org/abs/2611.02650"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-2611.05356",
+    "external_ids": {
+      "arxiv": "2611.05356"
+    },
+    "title": "Breaking the Quantum Barriers for Graph Collision",
+    "title_latex": "Breaking the Quantum Barriers for Graph Collision",
+    "citation_labels_latex": [
+      "Cornelissen et al., \\emph{Breaking the Quantum Barriers for Graph Collision} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/2611.05356",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0005055",
+    "external_ids": {
+      "arxiv": "quant-ph/0005055"
+    },
+    "title": "Quantum Amplitude Amplification and Estimation",
+    "title_latex": "Quantum Amplitude Amplification and Estimation",
+    "citation_labels_latex": [
+      "Brassard, H{\\o}yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)",
+      "Brassard, H\\o yer, Mosca and Tapp, \\emph{Quantum Amplitude Amplification and Estimation} (2002)",
+      "Brassard et al., \\emph{Quantum Amplitude Amplification and Estimation} (2002)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0005055",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0011023",
+    "external_ids": {
+      "arxiv": "quant-ph/0011023"
+    },
+    "title": "Quantum Algorithms for Solvable Groups",
+    "title_latex": "Quantum Algorithms for Solvable Groups",
+    "citation_labels_latex": [
+      "Watrous, \\emph{Quantum Algorithms for Solvable Groups} (2001)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0011023",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0107015",
+    "external_ids": {
+      "arxiv": "quant-ph/0107015"
+    },
+    "title": "Quantum Search by Local Adiabatic Evolution",
+    "title_latex": "Quantum Search by Local Adiabatic Evolution",
+    "citation_labels_latex": [
+      "Roland and Cerf, \\emph{Quantum Search by Local Adiabatic Evolution} (2002)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0107015",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0112086",
+    "external_ids": {
+      "arxiv": "quant-ph/0112086"
+    },
+    "title": "Quantum Lower Bounds for the Collision and the Element Distinctness Problems",
+    "title_latex": "Quantum Lower Bounds for the Collision and the Element Distinctness Problems",
+    "citation_labels_latex": [
+      "Shi, \\emph{Quantum Lower Bounds for the Collision and the Element Distinctness Problems} (FOCS 2002)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0112086",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0209060",
+    "external_ids": {
+      "arxiv": "quant-ph/0209060"
+    },
+    "title": "Quantum Lower Bound for Recursive Fourier Sampling",
+    "title_latex": "Quantum Lower Bound for Recursive Fourier Sampling",
+    "citation_labels_latex": [
+      "Aaronson, \\emph{Quantum Lower Bound for Recursive Fourier Sampling} (2003)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0209060",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0209131",
+    "external_ids": {
+      "arxiv": "quant-ph/0209131"
+    },
+    "title": "Exponential Algorithmic Speedup by a Quantum Walk",
+    "title_latex": "Exponential Algorithmic Speedup by a Quantum Walk",
+    "citation_labels_latex": [
+      "Childs et al., \\emph{Exponential Algorithmic Speedup by a Quantum Walk} (2003)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0209131",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0212048",
+    "external_ids": {
+      "arxiv": "quant-ph/0212048"
+    },
+    "title": "The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems",
+    "title_latex": "The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems",
+    "citation_labels_latex": [
+      "Arvind and Schuler, \\emph{The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems} (ISAAC 2003)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0212048",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0307149",
+    "external_ids": {
+      "arxiv": "quant-ph/0307149"
+    },
+    "title": "Lower Bounds for Local Search by Quantum Arguments",
+    "title_latex": "Lower Bounds for Local Search by Quantum Arguments",
+    "citation_labels_latex": [
+      "Aaronson, \\emph{Lower Bounds for Local Search by Quantum Arguments} (2003/2006)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0307149",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0401091",
+    "external_ids": {
+      "arxiv": "quant-ph/0401091"
+    },
+    "title": "Quantum Query Complexity of Some Graph Problems",
+    "title_latex": "Quantum Query Complexity of Some Graph Problems",
+    "citation_labels_latex": [
+      "D\\\"urr, Heiligman, H{\\o}yer and Mhalla, \\emph{Quantum Query Complexity of Some Graph Problems} (2004/2006)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0401091",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0406151",
+    "external_ids": {
+      "arxiv": "quant-ph/0406151"
+    },
+    "title": "A Subexponential Time Algorithm for the Dihedral Hidden Subgroup Problem with Polynomial Space",
+    "title_latex": "A Subexponential Time Algorithm for the Dihedral Hidden Subgroup Problem with Polynomial Space",
+    "citation_labels_latex": [
+      "Regev, \\emph{A Subexponential Time Algorithm for the Dihedral Hidden Subgroup Problem with Polynomial Space} (2004)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0406151",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0406180",
+    "external_ids": {
+      "arxiv": "quant-ph/0406180"
+    },
+    "title": "The Complexity of the Local Hamiltonian Problem",
+    "title_latex": "The Complexity of the Local Hamiltonian Problem",
+    "citation_labels_latex": [
+      "Kempe, Kitaev and Regev, \\emph{The Complexity of the Local Hamiltonian Problem} (2004/2006)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0406180",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0409035",
+    "external_ids": {
+      "arxiv": "quant-ph/0409035"
+    },
+    "title": "Quantum Verification of Matrix Products",
+    "title_latex": "Quantum Verification of Matrix Products",
+    "citation_labels_latex": [
+      "Buhrman and \\v Spalek, \\emph{Quantum Verification of Matrix Products} (2006)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0409035",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0504085",
+    "external_ids": {
+      "arxiv": "quant-ph/0504085"
+    },
+    "title": "(Almost) Tight Bounds for Randomized and Quantum Local Search on Hypercubes and Grids",
+    "title_latex": "(Almost) Tight Bounds for Randomized and Quantum Local Search on Hypercubes and Grids",
+    "citation_labels_latex": [
+      "Zhang, \\emph{(Almost) Tight Bounds for Randomized and Quantum Local Search on Hypercubes and Grids} (2005 preprint; journal version, 2009)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0504085",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0508205",
+    "external_ids": {
+      "arxiv": "quant-ph/0508205"
+    },
+    "title": "Quantum Algorithms for Matching and Network Flows",
+    "title_latex": "Quantum Algorithms for Matching and Network Flows",
+    "citation_labels_latex": [
+      "Ambainis and \\v Spalek, \\emph{Quantum Algorithms for Matching and Network Flows} (2005/2006)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0508205",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0510084",
+    "external_ids": {
+      "arxiv": "quant-ph/0510084"
+    },
+    "title": "Quantum Complexity Bounds for Independent Set Problems",
+    "title_latex": "Quantum Complexity Bounds for Independent Set Problems",
+    "citation_labels_latex": [
+      "D\\\"orn, \\emph{Quantum Complexity Bounds for Independent Set Problems} (2005)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0510084",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0512159",
+    "external_ids": {
+      "arxiv": "quant-ph/0512159"
+    },
+    "title": "How to Make the Quantum Adiabatic Algorithm Fail",
+    "title_latex": "How to Make the Quantum Adiabatic Algorithm Fail",
+    "citation_labels_latex": [
+      "Farhi et al., \\emph{How to Make the Quantum Adiabatic Algorithm Fail} (2005/2008)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0512159",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-0603175",
+    "external_ids": {
+      "arxiv": "quant-ph/0603175"
+    },
+    "title": "Bounds for the Adiabatic Approximation with Applications to Quantum Computation",
+    "title_latex": "Bounds for the Adiabatic Approximation with Applications to Quantum Computation",
+    "citation_labels_latex": [
+      "Jansen, Ruskai and Seiler, \\emph{Bounds for the Adiabatic Approximation with Applications to Quantum Computation} (2007)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/0603175",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-9508027",
+    "external_ids": {
+      "arxiv": "quant-ph/9508027"
+    },
+    "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+    "title_latex": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+    "citation_labels_latex": [
+      "Shor, \\emph{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer} (1997)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/9508027",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-9605034",
+    "external_ids": {
+      "arxiv": "quant-ph/9605034"
+    },
+    "title": "Tight Bounds on Quantum Searching",
+    "title_latex": "Tight Bounds on Quantum Searching",
+    "citation_labels_latex": [
+      "Boyer, Brassard, H\\o yer and Tapp, \\emph{Tight Bounds on Quantum Searching} (1998)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/9605034",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-9605043",
+    "external_ids": {
+      "arxiv": "quant-ph/9605043"
+    },
+    "title": "A Fast Quantum Mechanical Algorithm for Database Search",
+    "title_latex": "A Fast Quantum Mechanical Algorithm for Database Search",
+    "citation_labels_latex": [
+      "Grover, \\emph{A Fast Quantum Mechanical Algorithm for Database Search} (STOC 1996)",
+      "Grover, \\emph{A Fast Quantum Mechanical Algorithm for Database Search} (1996)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/9605043",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-9607014",
+    "external_ids": {
+      "arxiv": "quant-ph/9607014"
+    },
+    "title": "A Quantum Algorithm for Finding the Minimum",
+    "title_latex": "A Quantum Algorithm for Finding the Minimum",
+    "citation_labels_latex": [
+      "D\\\"urr and H{\\o}yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996/1999)",
+      "D\\\"urr and H\\o yer, \\emph{A Quantum Algorithm for Finding the Minimum} (1996)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/9607014",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-9701001",
+    "external_ids": {
+      "arxiv": "quant-ph/9701001"
+    },
+    "title": "Strengths and Weaknesses of Quantum Computing",
+    "title_latex": "Strengths and Weaknesses of Quantum Computing",
+    "citation_labels_latex": [
+      "Bennett--Bernstein--Brassard--Vazirani (1997)",
+      "Bennett et al., \\emph{Strengths and Weaknesses of Quantum Computing} (1997)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/9701001",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-9705002",
+    "external_ids": {
+      "arxiv": "quant-ph/9705002"
+    },
+    "title": "Quantum Algorithm for the Collision Problem",
+    "title_latex": "Quantum Algorithm for the Collision Problem",
+    "citation_labels_latex": [
+      "Brassard, H\\o yer and Tapp, \\emph{Quantum Algorithm for the Collision Problem} (1997)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/9705002",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "arxiv-quant-ph-9802049",
+    "external_ids": {
+      "arxiv": "quant-ph/9802049"
+    },
+    "title": "Quantum Lower Bounds by Polynomials",
+    "title_latex": "Quantum Lower Bounds by Polynomials",
+    "citation_labels_latex": [
+      "Beals et al., \\emph{Quantum Lower Bounds by Polynomials} (1998/2001)"
+    ],
+    "access_links": [
+      {
+        "url": "https://arxiv.org/pdf/quant-ph/9802049",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-0a3c39618ce44575",
+    "external_ids": {},
+    "title": "Quantum Complexity Theory",
+    "title_latex": "Quantum Complexity Theory",
+    "citation_labels_latex": [
+      "Bernstein and Vazirani, \\emph{Quantum Complexity Theory} (1997)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1137/S0097539796300921",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://www.cs.miami.edu/home/burt/learning/csc595.251/Bernstein-Vazirani-QTM.pdf",
+        "kind": "pdf",
+        "provenance": "observed_research_note",
+        "source_url": "https://doi.org/10.1137/S0097539796300921"
+      }
+    ]
+  },
+  {
+    "id": "ref-1478a87b2d542da9",
+    "external_ids": {},
+    "title": "Computing Directed Pathwidth in $O(1.89^n)$ Time",
+    "title_latex": "Computing Directed Pathwidth in $O(1.89^n)$ Time",
+    "citation_labels_latex": [
+      "Kitsunai et al., \\emph{Computing Directed Pathwidth in $O(1.89^n)$ Time} (Algorithmica)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1007/s00453-015-0015-9",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://ipsj.ixsq.nii.ac.jp/records/85806",
+        "kind": "landing_page",
+        "provenance": "discovered_preprint_record",
+        "note": "Author preprint record with the IPSJ-AL12141002.pdf download; published-version locators remain attached to the DOI citation."
+      },
+      {
+        "url": "http://link.springer.com/content/pdf/10.1007/s00453-015-0015-9.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_metadata_record",
+        "source_url": "https://cir.nii.ac.jp/crid/1360004231249313920"
+      }
+    ]
+  },
+  {
+    "id": "ref-169350ac8737428a",
+    "external_ids": {},
+    "title": "A New Algorithm for Optimal Constraint Satisfaction and Its Implications",
+    "title_latex": "A New Algorithm for Optimal Constraint Satisfaction and Its Implications",
+    "citation_labels_latex": [
+      "Williams, \\emph{A New Algorithm for Optimal Constraint Satisfaction and Its Implications} (2005)"
+    ],
+    "access_links": [
+      {
+        "url": "https://people.csail.mit.edu/rrw/2-csp-final.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-1840eaf841c9362e",
+    "external_ids": {},
+    "title": "An Efficient Key Recovery Attack on SIDH",
+    "title_latex": "An Efficient Key Recovery Attack on SIDH",
+    "citation_labels_latex": [
+      "Castryck and Decru, \\emph{An Efficient Key Recovery Attack on SIDH} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2022/975",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2022/975.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://eprint.iacr.org/2022/975"
+      }
+    ]
+  },
+  {
+    "id": "ref-24e2eb05a70bc9a5",
+    "external_ids": {},
+    "title": "A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees",
+    "title_latex": "A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees",
+    "citation_labels_latex": [
+      "Karger, Klein and Tarjan, \\emph{A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees} (1995)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1145/201019.201022",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://people.csail.mit.edu/karger/Papers/mst.pdf",
+        "kind": "pdf",
+        "provenance": "discovered_primary_full_text",
+        "source_url": "https://doi.org/10.1145/201019.201022"
+      }
+    ]
+  },
+  {
+    "id": "ref-28b2a985ce0d2861",
+    "external_ids": {},
+    "title": "A Note on Exact Algorithms for Vertex Ordering Problems on Graphs",
+    "title_latex": "A Note on Exact Algorithms for Vertex Ordering Problems on Graphs",
+    "citation_labels_latex": [
+      "Bodlaender et al., \\emph{A Note on Exact Algorithms for Vertex Ordering Problems on Graphs} (2012)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1007/s00224-011-9312-0",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://bora.uib.no/bora-xmlui/bitstream/handle/1956/4556/A%20Note%20on%20Exact%20Algorithms%20for%20Vertex%20Ordering%20Problems%20on%20Graphs.pdf?isAllowed=y&sequence=1",
+        "kind": "pdf",
+        "provenance": "discovered_primary_full_text",
+        "source_url": "https://doi.org/10.1007/s00224-011-9312-0"
+      }
+    ]
+  },
+  {
+    "id": "ref-2c8002ed76fed4bf",
+    "external_ids": {},
+    "title": "A Quantum Algorithm for Solving 0-1 Knapsack Problems",
+    "title_latex": "A Quantum Algorithm for Solving 0-1 Knapsack Problems",
+    "citation_labels_latex": [
+      "\\emph{A Quantum Algorithm for Solving 0-1 Knapsack Problems} (npj Quantum Information 2025)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.nature.com/articles/s41534-025-01097-8",
+        "kind": "html",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41534-025-01097-8.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://www.nature.com/articles/s41534-025-01097-8"
+      }
+    ]
+  },
+  {
+    "id": "ref-2f04de563efd474f",
+    "external_ids": {},
+    "title": "The Exponential Time Hypothesis Is False",
+    "title_latex": "The Exponential Time Hypothesis Is False",
+    "citation_labels_latex": [
+      "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)",
+      "OpenAI, \\emph{The Exponential Time Hypothesis Is False} (25 October 2026)",
+      "OpenAI, \\emph{The Exponential Time Hypothesis Is False}, Theorem 1.1 and Appendix D",
+      "OpenAI, \\emph{The Exponential Time Hypothesis Is False}"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "kind": "document_viewer",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/math/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "kind": "pdf",
+        "provenance": "standard_github_raw",
+        "source_url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ref-3189c3988844b739",
+    "external_ids": {},
+    "title": "The Exponential Time Hypothesis is False",
+    "title_latex": "The Exponential Time Hypothesis is False",
+    "citation_labels_latex": [
+      "OpenAI, \\emph{The Exponential Time Hypothesis is False} (2026)",
+      "OpenAI (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
+        "kind": "repository",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+        "kind": "document_viewer",
+        "provenance": "observed_catalogue",
+        "source_url": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026"
+      }
+    ]
+  },
+  {
+    "id": "ref-33e894414f7c23f3",
+    "external_ids": {},
+    "title": "Efficient Quantum Algorithms for Computing Class Groups and Solving the Principal Ideal Problem in Arbitrary Degree Number Fields",
+    "title_latex": "Efficient Quantum Algorithms for Computing Class Groups and Solving the Principal Ideal Problem in Arbitrary Degree Number Fields",
+    "citation_labels_latex": [
+      "Biasse and Song, \\emph{Efficient Quantum Algorithms for Computing Class Groups and Solving the Principal Ideal Problem in Arbitrary Degree Number Fields} (SODA 2016)"
+    ],
+    "access_links": [
+      {
+        "url": "https://fangsong.info/files/pubs/BS_SODA16.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-35421a6f5b357ff8",
+    "external_ids": {},
+    "title": "A $2^{o(n)}$ Time Algorithm for 3-SAT",
+    "title_latex": "A $2^{o(n)}$ Time Algorithm for 3-SAT",
+    "citation_labels_latex": [
+      "Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/anthropics/formal-math/tree/main/eth",
+        "kind": "repository",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/anthropics/formal-math/main/eth/paper.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_repository_listing",
+        "source_url": "https://github.com/anthropics/formal-math/tree/main/eth"
+      }
+    ]
+  },
+  {
+    "id": "ref-35f91b2eeecc15ea",
+    "external_ids": {},
+    "title": "A Low-Space Algorithm for Worst-Case Subset Sum",
+    "title_latex": "A Low-Space Algorithm for Worst-Case Subset Sum",
+    "citation_labels_latex": [
+      "OpenAI, \\emph{A Low-Space Algorithm for Worst-Case Subset Sum} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/openai/math/tree/main/preprints/A-Low-Space-Algorithm-for-Worst-Case-Subset-Sum-September-26-2026",
+        "kind": "repository",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/math/main/preprints/A-Low-Space-Algorithm-for-Worst-Case-Subset-Sum-September-26-2026/paper.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_repository_listing",
+        "source_url": "https://github.com/openai/math/tree/main/preprints/A-Low-Space-Algorithm-for-Worst-Case-Subset-Sum-September-26-2026"
+      }
+    ]
+  },
+  {
+    "id": "ref-360164eb6b7e2e92",
+    "external_ids": {},
+    "title": "Quantum Lattice Enumeration and Tweaking Discrete Pruning",
+    "title_latex": "Quantum Lattice Enumeration and Tweaking Discrete Pruning",
+    "citation_labels_latex": [
+      "Aono, Nguyen and Shen, \\emph{Quantum Lattice Enumeration and Tweaking Discrete Pruning} (ASIACRYPT 2018)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2018/546",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2018/546.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://eprint.iacr.org/2018/546"
+      }
+    ]
+  },
+  {
+    "id": "ref-37903cf1934b3e74",
+    "external_ids": {},
+    "title": "An Upper Bound of $9/4$ for the Matrix Multiplication Exponent",
+    "title_latex": "An Upper Bound of $9/4$ for the Matrix Multiplication Exponent",
+    "citation_labels_latex": [
+      "OpenAI, \\emph{An Upper Bound of $9/4$ for the Matrix Multiplication Exponent} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf",
+        "kind": "document_viewer",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf",
+        "kind": "pdf",
+        "provenance": "standard_github_raw",
+        "source_url": "https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ref-3d2c27b09f14d5d4",
+    "external_ids": {},
+    "title": "Span-Program-Based Quantum Algorithm for Evaluating Formulas",
+    "title_latex": "Span-Program-Based Quantum Algorithm for Evaluating Formulas",
+    "citation_labels_latex": [
+      "Reichardt and \\v Spalek, \\emph{Span-Program-Based Quantum Algorithm for Evaluating Formulas} (2012)"
+    ],
+    "access_links": [
+      {
+        "url": "https://theoryofcomputing.org/articles/v008a013/",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://theoryofcomputing.org/articles/v008a013/v008a013.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://theoryofcomputing.org/articles/v008a013/"
+      }
+    ]
+  },
+  {
+    "id": "ref-3ed27de57e0da14b",
+    "external_ids": {},
+    "title": "Unconditional Correctness of Recent Quantum Algorithms for Factoring and Computing Discrete Logarithms",
+    "title_latex": "Unconditional Correctness of Recent Quantum Algorithms for Factoring and Computing Discrete Logarithms",
+    "citation_labels_latex": [
+      "Pilatte, \\emph{Unconditional Correctness of Recent Quantum Algorithms for Factoring and Computing Discrete Logarithms} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.cambridge.org/core/journals/forum-of-mathematics-pi/article/unconditional-correctness-of-recent-quantum-algorithms-for-factoring-and-computing-discrete-logarithms/3077F5BD48D1F62000B1ED800EB86308",
+        "kind": "html",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-405fff1ae4d7c1f2",
+    "external_ids": {},
+    "title": "Estimating the Largest Eigenvalue by the Power and Lanczos Algorithms with a Random Start",
+    "title_latex": "Estimating the Largest Eigenvalue by the Power and Lanczos Algorithms with a Random Start",
+    "citation_labels_latex": [
+      "Kuczy\\'nski and Wo\\'zniakowski, \\emph{Estimating the Largest Eigenvalue by the Power and Lanczos Algorithms with a Random Start} (1992)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1137/0613066",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://mice.cs.columbia.edu/getTechreport.php?format=pdf&techreportID=1218",
+        "kind": "pdf",
+        "provenance": "discovered_primary_full_text",
+        "source_url": "https://doi.org/10.1137/0613066",
+        "note": "1989 author technical report; the catalogue cites the 1992 journal version."
+      }
+    ]
+  },
+  {
+    "id": "ref-40a7d00db30c4ca2",
+    "external_ids": {},
+    "title": "Improved Approximation Algorithms for Maximum Cut and Satisfiability Problems Using Semidefinite Programming",
+    "title_latex": "Improved Approximation Algorithms for Maximum Cut and Satisfiability Problems Using Semidefinite Programming",
+    "citation_labels_latex": [
+      "Goemans and Williamson, \\emph{Improved Approximation Algorithms for Maximum Cut and Satisfiability Problems Using Semidefinite Programming} (1995)"
+    ],
+    "access_links": [
+      {
+        "url": "https://math.mit.edu/~goemans/PAPERS/maxcut-jacm.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-6c8bd15b4dabfee7",
+    "external_ids": {},
+    "title": "Improved Quantum Algorithms for the $k$-XOR Problem",
+    "title_latex": "Improved Quantum Algorithms for the $k$-XOR Problem",
+    "citation_labels_latex": [
+      "Schrottenloher, \\emph{Improved Quantum Algorithms for the $k$-XOR Problem} (SAC 2021; proceedings 2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://ir.cwi.nl/pub/31603/31603.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-6d2e3413b6294f89",
+    "external_ids": {},
+    "title": "A Note on the Quantum Query Complexity of Permutation Symmetric Functions",
+    "title_latex": "A Note on the Quantum Query Complexity of Permutation Symmetric Functions",
+    "citation_labels_latex": [
+      "Chailloux, \\emph{A Note on the Quantum Query Complexity of Permutation Symmetric Functions} (2019)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.4230/LIPIcs.ITCS.2019.19",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol124-itcs2019/LIPIcs.ITCS.2019.19/LIPIcs.ITCS.2019.19.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://doi.org/10.4230/LIPIcs.ITCS.2019.19"
+      }
+    ]
+  },
+  {
+    "id": "ref-6f771effd02e4854",
+    "external_ids": {},
+    "title": "Deterministic Factoring in Time $N^{o(1)}$",
+    "title_latex": "Deterministic Factoring in Time $N^{o(1)}$",
+    "citation_labels_latex": [
+      "Rudich and Rousseau, \\emph{Deterministic Factoring in Time $N^{o(1)}$} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://hexagonmath.org/2610.00600v1",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://hexagonmath.org/pdf/2610.00600v1",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://hexagonmath.org/2610.00600v1"
+      }
+    ]
+  },
+  {
+    "id": "ref-72f73623c6bed22a",
+    "external_ids": {},
+    "title": "Quantum Speedup of Monte Carlo Methods",
+    "title_latex": "Quantum Speedup of Monte Carlo Methods",
+    "citation_labels_latex": [
+      "Montanaro, \\emph{Quantum Speedup of Monte Carlo Methods} (2015)"
+    ],
+    "access_links": [
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4614442/",
+        "kind": "html",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-74dd34083b22d9dd",
+    "external_ids": {},
+    "title": "Depth-First Search and Linear Graph Algorithms",
+    "title_latex": "Depth-First Search and Linear Graph Algorithms",
+    "citation_labels_latex": [
+      "Tarjan, \\emph{Depth-First Search and Linear Graph Algorithms} (1972)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1137/0201010",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://www.cs.cmu.edu/~cdm/resources/Tarjan1972-sccs.pdf",
+        "kind": "pdf",
+        "provenance": "discovered_primary_full_text",
+        "source_url": "https://doi.org/10.1137/0201010"
+      }
+    ]
+  },
+  {
+    "id": "ref-78a98e3925683857",
+    "external_ids": {},
+    "title": "PPSZ Is Better Than You Think",
+    "title_latex": "PPSZ Is Better Than You Think",
+    "citation_labels_latex": [
+      "Scheder, \\emph{PPSZ Is Better Than You Think} (TheoretiCS 2024)"
+    ],
+    "access_links": [
+      {
+        "url": "https://theoretics.episciences.org/13222/pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-7dfb12afd093c810",
+    "external_ids": {},
+    "title": "Breaking SIDH in Polynomial Time",
+    "title_latex": "Breaking SIDH in Polynomial Time",
+    "citation_labels_latex": [
+      "Robert, \\emph{Breaking SIDH in Polynomial Time} (EUROCRYPT 2023)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.math.u-bordeaux.fr/~damienrobert/pro/publications/articles/breaking_sidh.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-876f14059bd3171c",
+    "external_ids": {},
+    "title": "Improved Classical and Quantum Algorithms for the Shortest Vector Problem via Bounded Distance Decoding",
+    "title_latex": "Improved Classical and Quantum Algorithms for the Shortest Vector Problem via Bounded Distance Decoding",
+    "citation_labels_latex": [
+      "Aggarwal, Chen, Kumar and Shen, \\emph{Improved Classical and Quantum Algorithms for the Shortest Vector Problem via Bounded Distance Decoding} (SIAM J. Comput. 2025)",
+      "Aggarwal, Chen, Kumar and Shen, \\emph{Improved Classical and Quantum Algorithms for the Shortest Vector Problem via Bounded Distance Decoding} (2025)"
+    ],
+    "access_links": [
+      {
+        "url": "https://ir.cwi.nl/pub/35122/35122.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-8acc2d118b18603a",
+    "external_ids": {},
+    "title": "Symmetries, Graph Properties, and Quantum Speedups",
+    "title_latex": "Symmetries, Graph Properties, and Quantum Speedups",
+    "citation_labels_latex": [
+      "Ben-David et al., \\emph{Symmetries, Graph Properties, and Quantum Speedups} (2024)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1137/23M1573975",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://epubs.siam.org/doi/pdf/10.1137/23M1573975?download=true",
+        "kind": "pdf",
+        "provenance": "discovered_primary_full_text",
+        "source_url": "https://doi.org/10.1137/23M1573975"
+      },
+      {
+        "url": "https://epubs.siam.org/doi/full/10.1137/23M1573975",
+        "kind": "html",
+        "provenance": "discovered_primary_full_text",
+        "source_url": "https://doi.org/10.1137/23M1573975"
+      }
+    ]
+  },
+  {
+    "id": "ref-8ff3bbe1dcebfee1",
+    "external_ids": {},
+    "title": "The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$",
+    "title_latex": "The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$",
+    "citation_labels_latex": [
+      "Wesolowski, \\emph{The Supersingular Isogeny Problem in Time and Memory $p^{1/3+o(1)}$} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2026/1486",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2026/1486.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://eprint.iacr.org/2026/1486"
+      }
+    ]
+  },
+  {
+    "id": "ref-9a8d82de6f42f39c",
+    "external_ids": {},
+    "title": "A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves",
+    "title_latex": "A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves",
+    "citation_labels_latex": [
+      "Biasse, Jao and Sankar, \\emph{A Quantum Algorithm for Computing Isogenies Between Supersingular Elliptic Curves} (INDOCRYPT 2014)"
+    ],
+    "access_links": [
+      {
+        "url": "https://cacr.uwaterloo.ca/techreports/2014/cacr2014-24.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-a17bb2684637dd24",
+    "external_ids": {},
+    "title": "Two Remarks on the Vectorization Problem",
+    "title_latex": "Two Remarks on the Vectorization Problem",
+    "citation_labels_latex": [
+      "Castryck and Vander Meeren, \\emph{Two Remarks on the Vectorization Problem} (2022)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2022/1366",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2022/1366.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://eprint.iacr.org/2022/1366"
+      }
+    ]
+  },
+  {
+    "id": "ref-a3a180c9fc7ef6d5",
+    "external_ids": {},
+    "title": "On Quantum Versions of Record-Breaking Algorithms for SAT",
+    "title_latex": "On Quantum Versions of Record-Breaking Algorithms for SAT",
+    "citation_labels_latex": [
+      "Dantsin, Kreinovich and Wolpert, \\emph{On Quantum Versions of Record-Breaking Algorithms for SAT}, SIGACT News 36(4), 103--108 (2005)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.cs.utep.edu/vladik/2005/tr05-26.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-a5b0a3bcb88c0f28",
+    "external_ids": {},
+    "title": "Checking Matrix Identities",
+    "title_latex": "Checking Matrix Identities",
+    "citation_labels_latex": [
+      "Nayak, \\emph{Checking Matrix Identities} (2008)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.math.uwaterloo.ca/~anayak/papers/Nayak08.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-ab3abfaf384bce3e",
+    "external_ids": {},
+    "title": "A Subexponential Time Algorithm for Elliptic Curve Discrete Logarithm",
+    "title_latex": "A Subexponential Time Algorithm for Elliptic Curve Discrete Logarithm",
+    "citation_labels_latex": [
+      "Akshima et al., \\emph{A Subexponential Time Algorithm for Elliptic Curve Discrete Logarithm}, v0.2 (29 October 2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/bochum-crypto/subexponential-ecdl/blob/main/subexponential-ecdl.pdf",
+        "kind": "document_viewer",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/bochum-crypto/subexponential-ecdl/main/subexponential-ecdl.pdf",
+        "kind": "pdf",
+        "provenance": "standard_github_raw",
+        "source_url": "https://github.com/bochum-crypto/subexponential-ecdl/blob/main/subexponential-ecdl.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ref-ad8963911bcf8b19",
+    "external_ids": {},
+    "title": "Optimal 2-Constraint Satisfaction via Sum-Product Algorithms",
+    "title_latex": "Optimal 2-Constraint Satisfaction via Sum-Product Algorithms",
+    "citation_labels_latex": [
+      "Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-b6c38b5e1b6eb801",
+    "external_ids": {},
+    "title": "Solving Binary MQ with Grover's Algorithm",
+    "title_latex": "Solving Binary MQ with Grover's Algorithm",
+    "citation_labels_latex": [
+      "Schwabe and Westerbaan, \\emph{Solving Binary MQ with Grover's Algorithm} (SPACE 2016; full version 2017)"
+    ],
+    "access_links": [
+      {
+        "url": "https://cryptojedi.org/papers/mqgrover-20171130.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-b8fab69c3a5497e4",
+    "external_ids": {},
+    "title": "A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems",
+    "title_latex": "A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems",
+    "citation_labels_latex": [
+      "Sch\\\"oning, \\emph{A Probabilistic Algorithm for $k$-SAT and Constraint Satisfaction Problems} (FOCS 1999)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.eecs.harvard.edu/~michaelm/CS223/schoning99.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-b92da305f5a5b340",
+    "external_ids": {},
+    "title": "A Framework of Quantum Strong Exponential-Time Hypotheses",
+    "title_latex": "A Framework of Quantum Strong Exponential-Time Hypotheses",
+    "citation_labels_latex": [
+      "Buhrman, Patro and Speelman, \\emph{A Framework of Quantum Strong Exponential-Time Hypotheses} (2021)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.4230/LIPIcs.STACS.2021.19",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol187-stacs2021/LIPIcs.STACS.2021.19/LIPIcs.STACS.2021.19.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://doi.org/10.4230/LIPIcs.STACS.2021.19"
+      }
+    ]
+  },
+  {
+    "id": "ref-be417ca973487fd0",
+    "external_ids": {},
+    "title": "Upper and Lower Bounds for Recursive Fourier Sampling",
+    "title_latex": "Upper and Lower Bounds for Recursive Fourier Sampling",
+    "citation_labels_latex": [
+      "Johnson, \\emph{Upper and Lower Bounds for Recursive Fourier Sampling}, Ph.D. thesis, University of California, Berkeley (2008)"
+    ],
+    "access_links": [
+      {
+        "url": "https://citeseerx.ist.psu.edu/document?doi=ee55b07d326ac3cb422fa755aae4484ab3b2ad2d&repid=rep1&type=pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-c02fa612849abaa0",
+    "external_ids": {},
+    "title": "Subset Sum in Time $O(2^{0.49n})$",
+    "title_latex": "Subset Sum in Time $O(2^{0.49n})$",
+    "citation_labels_latex": [
+      "OpenAI, \\emph{Subset Sum in Time $O(2^{0.49n})$} (2026)",
+      "OpenAI, \\emph{Subset Sum in Time $2^{0.49n}$} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/openai/math/tree/main/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026",
+        "kind": "repository",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026/subset-sum.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_repository_listing",
+        "source_url": "https://github.com/openai/math/tree/main/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026"
+      }
+    ]
+  },
+  {
+    "id": "ref-c70730f20075b871",
+    "external_ids": {},
+    "title": "Superlattice Methods for the Shortest Vector Problem and Discrete Gaussian Sampling",
+    "title_latex": "Superlattice Methods for the Shortest Vector Problem and Discrete Gaussian Sampling",
+    "citation_labels_latex": [
+      "Hhan, Kim, Kim and Laarhoven, \\emph{Superlattice Methods for the Shortest Vector Problem and Discrete Gaussian Sampling} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2026/2761",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2026/2761.pdf",
+        "kind": "pdf",
+        "provenance": "standard_eprint_pdf",
+        "source_url": "https://eprint.iacr.org/2026/2761"
+      }
+    ]
+  },
+  {
+    "id": "ref-c8824ee5d0741b28",
+    "external_ids": {},
+    "title": "Subexponential-Time Sampling of Quantum Circuits from Exact Counting",
+    "title_latex": "Subexponential-Time Sampling of Quantum Circuits from Exact Counting",
+    "citation_labels_latex": [
+      "Gheorghiu and Gupte, \\emph{Subexponential-Time Sampling of Quantum Circuits from Exact Counting} (2026)",
+      "Gheorghiu and Gupte, \\emph{Subexponential-Time Sampling of Quantum Circuits from Exact Counting} (2026 note)"
+    ],
+    "access_links": [
+      {
+        "url": "https://drive.google.com/file/d/1RzhP9ZMy1xkC22oqKmMHEOh7gG1cwkfA/view",
+        "kind": "document_viewer",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-c9f8f10283cdb2ce",
+    "external_ids": {},
+    "title": "Optimal Merging in Quantum $k$-XOR and $k$-SUM Algorithms",
+    "title_latex": "Optimal Merging in Quantum $k$-XOR and $k$-SUM Algorithms",
+    "citation_labels_latex": [
+      "Naya-Plasencia and Schrottenloher, \\emph{Optimal Merging in Quantum $k$-XOR and $k$-SUM Algorithms} (EUROCRYPT 2020)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2019/501",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2019/501.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://eprint.iacr.org/2019/501"
+      }
+    ]
+  },
+  {
+    "id": "ref-cdd6e539120485ce",
+    "external_ids": {},
+    "title": "On the Asymptotic Complexity of Solving LWE",
+    "title_latex": "On the Asymptotic Complexity of Solving LWE",
+    "citation_labels_latex": [
+      "Albrecht et al., \\emph{On the Asymptotic Complexity of Solving LWE} (2015)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2015/1222",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2015/1222.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://eprint.iacr.org/2015/1222"
+      }
+    ]
+  },
+  {
+    "id": "ref-de1978604006de8b",
+    "external_ids": {},
+    "title": "Provable Subexponential Algorithms for Module-SIS and Module-LWE",
+    "title_latex": "Provable Subexponential Algorithms for Module-SIS and Module-LWE",
+    "citation_labels_latex": [
+      "Youmans, \\emph{Provable Subexponential Algorithms for Module-SIS and Module-LWE} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://eprint.iacr.org/2026/2420",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://eprint.iacr.org/2026/2420.pdf",
+        "kind": "pdf",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://eprint.iacr.org/2026/2420"
+      }
+    ]
+  },
+  {
+    "id": "ref-e0e7aeaf35273c67",
+    "external_ids": {},
+    "title": "A Sublinear Bipartiteness Tester for Bounded Degree Graphs",
+    "title_latex": "A Sublinear Bipartiteness Tester for Bounded Degree Graphs",
+    "citation_labels_latex": [
+      "Goldreich and Ron, \\emph{A Sublinear Bipartiteness Tester for Bounded Degree Graphs} (1999)"
+    ],
+    "access_links": [
+      {
+        "url": "https://doi.org/10.1007/s004930050059",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://www.cs.princeton.edu/courses/archive/spr04/cos598B/bib/GoldreichR-bipartTest.pdf",
+        "kind": "pdf",
+        "provenance": "discovered_primary_full_text",
+        "source_url": "https://doi.org/10.1007/s004930050059",
+        "note": "Author preprint dated February 1998; the catalogue cites the 1999 journal version."
+      }
+    ]
+  },
+  {
+    "id": "ref-e495ee78698d8e63",
+    "external_ids": {},
+    "title": "Zuiddam, extension to every field (2026)",
+    "title_latex": null,
+    "citation_labels_latex": [
+      "Zuiddam, extension to every field (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://github.com/jzuiddam/omega-nine-quarters-all-fields",
+        "kind": "repository",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/jzuiddam/omega-nine-quarters-all-fields/main/README.md",
+        "kind": "source_text",
+        "provenance": "resolved_from_repository_listing",
+        "source_url": "https://github.com/jzuiddam/omega-nine-quarters-all-fields"
+      }
+    ]
+  },
+  {
+    "id": "ref-e99b2a9347c11a27",
+    "external_ids": {},
+    "title": "Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms",
+    "title_latex": "Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms",
+    "citation_labels_latex": [
+      "Gaspers, \\emph{Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms} (2026)"
+    ],
+    "access_links": [
+      {
+        "url": "https://serggasp.github.io/pathwidth-site/papers/sparse-pathwidth/14-apps-connectivity.html",
+        "kind": "html",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-f4b78452026911cc",
+    "external_ids": {},
+    "title": "Polynomial-Time Quantum Algorithms for Pell's Equation and the Principal Ideal Problem",
+    "title_latex": "Polynomial-Time Quantum Algorithms for Pell's Equation and the Principal Ideal Problem",
+    "citation_labels_latex": [
+      "Hallgren, \\emph{Polynomial-Time Quantum Algorithms for Pell's Equation and the Principal Ideal Problem} (JACM 2007)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.cse.psu.edu/~sjh26/pell.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  },
+  {
+    "id": "ref-f78475c9114ef173",
+    "external_ids": {},
+    "title": "A Generalized Birthday Problem",
+    "title_latex": "A Generalized Birthday Problem",
+    "citation_labels_latex": [
+      "Wagner, \\emph{A Generalized Birthday Problem} (CRYPTO 2002)"
+    ],
+    "access_links": [
+      {
+        "url": "https://people.eecs.berkeley.edu/~daw/papers/genbday.html",
+        "kind": "landing_page",
+        "provenance": "observed_catalogue"
+      },
+      {
+        "url": "https://people.eecs.berkeley.edu/~daw/papers/genbday-crypto02.ps",
+        "kind": "postscript",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://people.eecs.berkeley.edu/~daw/papers/genbday.html"
+      },
+      {
+        "url": "https://people.eecs.berkeley.edu/~daw/papers/genbday-long.ps",
+        "kind": "postscript",
+        "provenance": "resolved_from_landing_page",
+        "source_url": "https://people.eecs.berkeley.edu/~daw/papers/genbday.html"
+      },
+      {
+        "url": "https://www.iacr.org/archive/crypto2002/24420288/24420288.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue",
+        "source_url": "https://people.eecs.berkeley.edu/~daw/papers/genbday.html"
+      }
+    ]
+  },
+  {
+    "id": "ref-f9e294bb0ea63b96",
+    "external_ids": {},
+    "title": "A Generalized Birthday Problem",
+    "title_latex": "A Generalized Birthday Problem",
+    "citation_labels_latex": [
+      "Wagner, \\emph{A Generalized Birthday Problem} (CRYPTO 2002)"
+    ],
+    "access_links": [
+      {
+        "url": "https://www.iacr.org/archive/crypto2002/24420288/24420288.pdf",
+        "kind": "pdf",
+        "provenance": "observed_catalogue"
+      }
+    ]
+  }
+]

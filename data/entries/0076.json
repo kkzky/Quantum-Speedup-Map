@@ -1,0 +1,93 @@
+{
+  "id": "entry-076",
+  "number": 76,
+  "ordinal": 77,
+  "title_latex": "Learning with errors with classical samples",
+  "title": "Learning with errors with classical samples",
+  "chapter_id": "chapter-3",
+  "problem": {
+    "name_latex": "Learning with errors with classical samples",
+    "name": "Learning with errors with classical samples",
+    "statement_latex": "Given $A\\in\\mathbb Z_q^{m\\times n}$ and $b=As+e\\pmod q$, where $A$ is uniform, $s$ follows a specified secret distribution, and $e$ follows a specified small-noise distribution, recover $s$. Modulus, noise width, sample count, and secret distribution are essential parameters. ML-KEM and related schemes use structured versions of this problem. The comparison uses classical bit-operation time and quantum gate time with the specified coherent-memory model; the samples themselves are classical.",
+    "statement_text": "Given $A\\in\\mathbb Z_q^{m\\times n}$ and $b=As+e\\pmod q$, where $A$ is uniform, $s$ follows a specified secret distribution, and $e$ follows a specified small-noise distribution, recover $s$. Modulus, noise width, sample count, and secret distribution are essential parameters. ML-KEM and related schemes use structured versions of this problem. The comparison uses classical bit-operation time and quantum gate time with the specified coherent-memory model; the samples themselves are classical."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$2^{0.2563\\beta+o(\\beta)}$ per heuristic SVP call, quantum sieving in lattice-reduction attacks.",
+      "headline_text": "$2^{0.2563\\beta+o(\\beta)}$ per heuristic SVP call, quantum sieving in lattice-reduction attacks.",
+      "details_latex": "The block size $\\beta$ is chosen by the primal, dual or hybrid attack for the given modulus, noise, dimension and sample count. Polynomial factors include reduction tours and matrix operations. Amplitude amplification can additionally accelerate guessed secret coordinates. The rigorous superlattice SVP alternative has $2^{0.247\\beta+o(\\beta)}$ time under the 2026 theorem; its use requires an attack reduction compatible with that subroutine.",
+      "details_text": "The block size $\\beta$ is chosen by the primal, dual or hybrid attack for the given modulus, noise, dimension and sample count. Polynomial factors include reduction tours and matrix operations. Amplitude amplification can additionally accelerate guessed secret coordinates. The rigorous superlattice SVP alternative has $2^{0.247\\beta+o(\\beta)}$ time under the 2026 theorem; its use requires an attack reduction compatible with that subroutine."
+    },
+    "classical": {
+      "headline_latex": "The minimum of optimized primal, dual, hybrid, BKW and applicable bounded-error algorithms; heuristic sieving costs $2^{0.2925\\beta+o(\\beta)}$ per SVP call.",
+      "headline_text": "The minimum of optimized primal, dual, hybrid, BKW and applicable bounded-error algorithms; heuristic sieving costs $2^{0.2925\\beta+o(\\beta)}$ per SVP call.",
+      "details_latex": "For prime $q=n^{\\kappa+o(1)}$, Lin--Vasudevan give expected time $2^{(1/2+o(1))n/\\ln\\ln q}$. One regime has errors bounded by $\\exp((\\ln n)^{o(1)})$ and at least $n+Cn/\\ln\\ln q$ samples. Another has secrets bounded by $\\exp((\\ln n)^{o(1)})$, errors $n^{o(1)}$ and at least $Cn/\\ln\\ln q$ samples, where $C>\\min\\{1,1/\\kappa\\}$. For fixed module ranks $k,\\ell$ in power-of-two cyclotomic Module-LWE, Youmans gives $2^{(1/2+\\xi)n/\\ln\\ln n}$ time and space for every fixed $\\xi>0$, when $n=kd$, $m=(k+\\ell)d$, $q=n^{\\kappa+o(1)}$, $\\kappa>1/2$, and matrix-independent errors have norm at most $\\operatorname{polylog}(n)\\sqrt m$ with probability $1-o(1)$. The algorithm uses the given $k+\\ell$ ring samples.",
+      "details_text": "For prime $q=n^{\\kappa+o(1)}$, Lin–Vasudevan give expected time $2^{(1/2+o(1))n/\\ln\\ln q}$. One regime has errors bounded by $\\exp((\\ln n)^{o(1)})$ and at least $n+Cn/\\ln\\ln q$ samples. Another has secrets bounded by $\\exp((\\ln n)^{o(1)})$, errors $n^{o(1)}$ and at least $Cn/\\ln\\ln q$ samples, where $C>\\min\\{1,1/\\kappa\\}$. For fixed module ranks $k,\\ell$ in power-of-two cyclotomic Module-LWE, Youmans gives $2^{(1/2+\\xi)n/\\ln\\ln n}$ time and space for every fixed $\\xi>0$, when $n=kd$, $m=(k+\\ell)d$, $q=n^{\\kappa+o(1)}$, $\\kappa>1/2$, and matrix-independent errors have norm at most $\\operatorname{polylog}(n)\\sqrt m$ with probability $1-o(1)$. The algorithm uses the given $k+\\ell$ ring samples."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant for the matched lattice-reduction subroutines. In the bounded-error regimes, the subexponential classical algorithms enter the minimum for the complete attack.",
+      "description_text": "Polynomial speedup through a smaller exponential constant for the matched lattice-reduction subroutines. In the bounded-error regimes, the subexponential classical algorithms enter the minimum for the complete attack."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "Partial evidence for quantum sieve speedups, with explicit random-vector and memory assumptions. The bounded-error classical statements are parameter-specific theorems; the module extension is a 2026 preprint.",
+      "description_text": "Partial evidence for quantum sieve speedups, with explicit random-vector and memory assumptions. The bounded-error classical statements are parameter-specific theorems; the module extension is a 2026 preprint."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Fast quantum sieving requires exponential coherent storage in $\\beta$ and fault-tolerant list access. Enumeration trades memory for runtime and uses polynomial logical qubits. Cryptographic resource estimates must optimize the full attack parameters and include reversible arithmetic.",
+      "description_text": "Fast quantum sieving requires exponential coherent storage in $\\beta$ and fault-tolerant list access. Enumeration trades memory for runtime and uses polynomial logical qubits. Cryptographic resource estimates must optimize the full attack parameters and include reversible arithmetic."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "76.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/2205.14023}{Bonnetain et al., \\emph{Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving} (2023)}. Section 7.1: quantum SVP subroutine used in lattice-reduction attacks.",
+      "content_text": "Bonnetain et al., Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving (2023). Section 7.1: quantum SVP subroutine used in lattice-reduction attacks.",
+      "citation_ids": [
+        "entry-076-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "76.2",
+      "content_latex": "\\href{https://eprint.iacr.org/2015/1222}{Albrecht et al., \\emph{On the Asymptotic Complexity of Solving LWE} (2015)}. Primal, dual and BKW attack analyses specify the parameter-dependent classical costs.",
+      "content_text": "Albrecht et al., On the Asymptotic Complexity of Solving LWE (2015). Primal, dual and BKW attack analyses specify the parameter-dependent classical costs.",
+      "citation_ids": [
+        "entry-076-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "76.3",
+      "content_latex": "\\href{https://arxiv.org/pdf/2610.13043}{Lin and Vasudevan, \\emph{Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples} (2026)}. Theorem 1.1: both parameter regimes; Algorithm 2 and Proposition 2.3: formal decision algorithm; Section 2.5 and Proposition 2.7: search and resource bounds.",
+      "content_text": "Lin and Vasudevan, Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples (2026). Theorem 1.1: both parameter regimes; Algorithm 2 and Proposition 2.3: formal decision algorithm; Section 2.5 and Proposition 2.7: search and resource bounds.",
+      "citation_ids": [
+        "entry-076-citation-003"
+      ]
+    },
+    {
+      "item_number": 4,
+      "index_label": "76.4",
+      "content_latex": "\\href{https://eprint.iacr.org/2026/2420}{Youmans, \\emph{Provable Subexponential Algorithms for Module-SIS and Module-LWE} (2026)}. Abstract: fixed-rank Module-LWE theorem, error promise and sample count.",
+      "content_text": "Youmans, Provable Subexponential Algorithms for Module-SIS and Module-LWE (2026). Abstract: fixed-rank Module-LWE theorem, error promise and sample count.",
+      "citation_ids": [
+        "entry-076-citation-004"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-076-citation-001",
+    "entry-076-citation-002",
+    "entry-076-citation-003",
+    "entry-076-citation-004"
+  ],
+  "source_latex": "\\entrytitle{76}{Learning with errors with classical samples}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{75}\n\\begin{problem}[Learning with errors with classical samples]\nGiven $A\\in\\mathbb Z_q^{m\\times n}$ and $b=As+e\\pmod q$, where $A$ is uniform, $s$ follows a specified secret distribution, and $e$ follows a specified small-noise distribution, recover $s$. Modulus, noise width, sample count, and secret distribution are essential parameters. ML-KEM and related schemes use structured versions of this problem. The comparison uses classical bit-operation time and quantum gate time with the specified coherent-memory model; the samples themselves are classical.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$2^{0.2563\\beta+o(\\beta)}$ per heuristic SVP call, quantum sieving in lattice-reduction attacks.}\nThe block size $\\beta$ is chosen by the primal, dual or hybrid attack for the given modulus, noise, dimension and sample count. Polynomial factors include reduction tours and matrix operations. Amplitude amplification can additionally accelerate guessed secret coordinates. The rigorous superlattice SVP alternative has $2^{0.247\\beta+o(\\beta)}$ time under the 2026 theorem; its use requires an attack reduction compatible with that subroutine.\n\n\\complexity{Classical}{The minimum of optimized primal, dual, hybrid, BKW and applicable bounded-error algorithms; heuristic sieving costs $2^{0.2925\\beta+o(\\beta)}$ per SVP call.}\nFor prime $q=n^{\\kappa+o(1)}$, Lin--Vasudevan give expected time $2^{(1/2+o(1))n/\\ln\\ln q}$. One regime has errors bounded by $\\exp((\\ln n)^{o(1)})$ and at least $n+Cn/\\ln\\ln q$ samples. Another has secrets bounded by $\\exp((\\ln n)^{o(1)})$, errors $n^{o(1)}$ and at least $Cn/\\ln\\ln q$ samples, where $C>\\min\\{1,1/\\kappa\\}$. For fixed module ranks $k,\\ell$ in power-of-two cyclotomic Module-LWE, Youmans gives $2^{(1/2+\\xi)n/\\ln\\ln n}$ time and space for every fixed $\\xi>0$, when $n=kd$, $m=(k+\\ell)d$, $q=n^{\\kappa+o(1)}$, $\\kappa>1/2$, and matrix-independent errors have norm at most $\\operatorname{polylog}(n)\\sqrt m$ with probability $1-o(1)$. The algorithm uses the given $k+\\ell$ ring samples.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant for the matched lattice-reduction subroutines. In the bounded-error regimes, the subexponential classical algorithms enter the minimum for the complete attack.\n\n\\dimensionlabel{Evidence}{evidencePartial} Partial evidence for quantum sieve speedups, with explicit random-vector and memory assumptions. The bounded-error classical statements are parameter-specific theorems; the module extension is a 2026 preprint.\n\n\\dimensionlabel{Hardware}{hardwareExponential} Fast quantum sieving requires exponential coherent storage in $\\beta$ and fault-tolerant list access. Enumeration trades memory for runtime and uses polynomial logical qubits. Cryptographic resource estimates must optimize the full attack parameters and include reversible arithmetic.\n\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{76}\n\\item \\href{https://arxiv.org/pdf/2205.14023}{Bonnetain et al., \\emph{Finding Many Collisions via Reusable Quantum Walks: Application to Lattice Sieving} (2023)}. Section 7.1: quantum SVP subroutine used in lattice-reduction attacks.\n\\item \\href{https://eprint.iacr.org/2015/1222}{Albrecht et al., \\emph{On the Asymptotic Complexity of Solving LWE} (2015)}. Primal, dual and BKW attack analyses specify the parameter-dependent classical costs.\n\\item \\href{https://arxiv.org/pdf/2610.13043}{Lin and Vasudevan, \\emph{Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples} (2026)}. Theorem 1.1: both parameter regimes; Algorithm 2 and Proposition 2.3: formal decision algorithm; Section 2.5 and Proposition 2.7: search and resource bounds.\n\\item \\href{https://eprint.iacr.org/2026/2420}{Youmans, \\emph{Provable Subexponential Algorithms for Module-SIS and Module-LWE} (2026)}. Abstract: fixed-rank Module-LWE theorem, error promise and sample count.\n\\end{algorithmindex}"
+}

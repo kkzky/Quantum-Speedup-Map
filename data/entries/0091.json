@@ -1,0 +1,73 @@
+{
+  "id": "entry-091",
+  "number": 91,
+  "ordinal": 93,
+  "title_latex": "Local minima on the Boolean hypercube",
+  "title": "Local minima on the Boolean hypercube",
+  "chapter_id": "chapter-4",
+  "problem": {
+    "name_latex": "Local search on the Boolean hypercube",
+    "name": "Local search on the Boolean hypercube",
+    "statement_latex": "Given value-oracle access to $f:\\{0,1\\}^n\\to\\mathbb R$, output $x$ such that $f(x)\\le f(x\\oplus e_i)$ for every coordinate $i$, with probability at least $2/3$. Values have a finite comparison encoding. This models single-bit local improvement in combinatorial optimization. Complexity is measured in value-oracle queries for both quantum and randomized classical algorithms.",
+    "statement_text": "Given value-oracle access to $f:\\{0,1\\}^n\\to\\mathbb R$, output $x$ such that $f(x)\\le f(x\\oplus e_i)$ for every coordinate $i$, with probability at least $2/3$. Values have a finite comparison encoding. This models single-bit local improvement in combinatorial optimization. Complexity is measured in value-oracle queries for both quantum and randomized classical algorithms."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(2^{n/3}n^{1/6})$ queries, quantum sampling and local descent.",
+      "headline_text": "$\\Theta(2^{n/3}n^{1/6})$ queries, quantum sampling and local descent.",
+      "details_latex": "Minimum finding selects a low-valued starting point, and quantum search finds improving neighbors. The bound is tight. On a fixed-dimensional grid with $N$ vertices and dimension at least six, the optimal quantum query complexity is $\\Theta(N^{1/3})$.",
+      "details_text": "Minimum finding selects a low-valued starting point, and quantum search finds improving neighbors. The bound is tight. On a fixed-dimensional grid with $N$ vertices and dimension at least six, the optimal quantum query complexity is $\\Theta(N^{1/3})$."
+    },
+    "classical": {
+      "headline_latex": "$\\Theta(2^{n/2}n^{1/2})$ queries, randomized sampling and local descent.",
+      "headline_text": "$\\Theta(2^{n/2}n^{1/2})$ queries, randomized sampling and local descent.",
+      "details_latex": "The Aldous-type algorithm samples vertices, chooses the lowest sampled value, and follows improving neighbors. For a fixed-dimensional grid of dimension at least four, the tight randomized bound is $\\Theta(N^{1/2})$.",
+      "details_text": "The Aldous-type algorithm samples vertices, chooses the lowest sampled value, and follows improving neighbors. For a fixed-dimensional grid of dimension at least four, the tight randomized bound is $\\Theta(N^{1/2})$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup in the domain size $N=2^n$, with a smaller exponential constant in $n$. Minimum finding and amplitude amplification are algorithmic components.",
+      "description_text": "Polynomial speedup in the domain size $N=2^n$, with a smaller exponential constant in $n$. Minimum finding and amplitude amplification are algorithmic components."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Matching quantum and randomized query lower bounds establish the separation.",
+      "description_text": "Matching quantum and randomized query lower bounds establish the separation."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "A fault-tolerant implementation needs an $n$-qubit vertex register, value and comparison workspace, and coherent neighborhood access. Exponentially many queries dominate the runtime; the evaluator determines the additional logical-qubit count.",
+      "description_text": "A fault-tolerant implementation needs an $n$-qubit vertex register, value and comparison workspace, and coherent neighborhood access. Exponentially many queries dominate the runtime; the evaluator determines the additional logical-qubit count."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "91.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0504085}{Zhang, \\emph{(Almost) Tight Bounds for Randomized and Quantum Local Search on Hypercubes and Grids} (2005 preprint; journal version, 2009)}. Introduction, Theorems 1--2 and the discussion of matching sampling/descent upper bounds; Section 3 for the hypercube lower bound.",
+      "content_text": "Zhang, (Almost) Tight Bounds for Randomized and Quantum Local Search on Hypercubes and Grids (2005 preprint; journal version, 2009). Introduction, Theorems 1–2 and the discussion of matching sampling/descent upper bounds; Section 3 for the hypercube lower bound.",
+      "citation_ids": [
+        "entry-091-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "91.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/quant-ph/0307149}{Aaronson, \\emph{Lower Bounds for Local Search by Quantum Arguments} (2003/2006)}. Proposition 2 for the quantum algorithm and the preceding paragraph for randomized sampling and descent.",
+      "content_text": "Aaronson, Lower Bounds for Local Search by Quantum Arguments (2003/2006). Proposition 2 for the quantum algorithm and the preceding paragraph for randomized sampling and descent.",
+      "citation_ids": [
+        "entry-091-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-091-citation-001",
+    "entry-091-citation-002"
+  ],
+  "source_latex": "\\entrytitle{91}{Local minima on the Boolean hypercube}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{90}\n\\begin{problem}[Local search on the Boolean hypercube]\nGiven value-oracle access to $f:\\{0,1\\}^n\\to\\mathbb R$, output $x$ such that $f(x)\\le f(x\\oplus e_i)$ for every coordinate $i$, with probability at least $2/3$. Values have a finite comparison encoding. This models single-bit local improvement in combinatorial optimization. Complexity is measured in value-oracle queries for both quantum and randomized classical algorithms.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(2^{n/3}n^{1/6})$ queries, quantum sampling and local descent.}\nMinimum finding selects a low-valued starting point, and quantum search finds improving neighbors. The bound is tight. On a fixed-dimensional grid with $N$ vertices and dimension at least six, the optimal quantum query complexity is $\\Theta(N^{1/3})$.\n\n\\complexity{Classical}{$\\Theta(2^{n/2}n^{1/2})$ queries, randomized sampling and local descent.}\nThe Aldous-type algorithm samples vertices, chooses the lowest sampled value, and follows improving neighbors. For a fixed-dimensional grid of dimension at least four, the tight randomized bound is $\\Theta(N^{1/2})$.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup in the domain size $N=2^n$, with a smaller exponential constant in $n$. Minimum finding and amplitude amplification are algorithmic components.\n\n\\dimensionlabel{Evidence}{evidenceProved} Matching quantum and randomized query lower bounds establish the separation.\n\n\\dimensionlabel{Hardware}{hardwareExponential} A fault-tolerant implementation needs an $n$-qubit vertex register, value and comparison workspace, and coherent neighborhood access. Exponentially many queries dominate the runtime; the evaluator determines the additional logical-qubit count.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{91}\n\\item \\href{https://arxiv.org/pdf/quant-ph/0504085}{Zhang, \\emph{(Almost) Tight Bounds for Randomized and Quantum Local Search on Hypercubes and Grids} (2005 preprint; journal version, 2009)}. Introduction, Theorems 1--2 and the discussion of matching sampling/descent upper bounds; Section 3 for the hypercube lower bound.\n\\item \\href{https://arxiv.org/pdf/quant-ph/0307149}{Aaronson, \\emph{Lower Bounds for Local Search by Quantum Arguments} (2003/2006)}. Proposition 2 for the quantum algorithm and the preceding paragraph for randomized sampling and descent.\n\\end{algorithmindex}"
+}

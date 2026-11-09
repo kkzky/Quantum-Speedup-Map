@@ -1,0 +1,240 @@
+[
+  {
+    "id": "relation-10ce50493b88",
+    "name": "Amplitude amplification",
+    "entry_ids": [
+      "entry-001",
+      "entry-002",
+      "entry-005",
+      "entry-006",
+      "entry-078",
+      "entry-079"
+    ],
+    "description_latex": "Amplify a successful classical trial or estimate its success probability; the verifier, trial cost and success probability determine the comparison.",
+    "description_text": "Amplify a successful classical trial or estimate its success probability; the verifier, trial cost and success probability determine the comparison."
+  },
+  {
+    "id": "relation-b0d9f6932df2",
+    "name": "Quantum tree search",
+    "entry_ids": [
+      "entry-003",
+      "entry-004",
+      "entry-007",
+      "entry-074"
+    ],
+    "description_latex": "The same branching and pruning rules define the classical tree and the quantum walk. Tree size is an instance-dependent resource.",
+    "description_text": "The same branching and pruning rules define the classical tree and the quantum walk. Tree size is an instance-dependent resource."
+  },
+  {
+    "id": "relation-f7f1e2eb8eff",
+    "name": "Subset dynamic programming",
+    "entry_ids": [
+      "entry-007",
+      "entry-008",
+      "entry-009",
+      "entry-010",
+      "entry-011",
+      "entry-012",
+      "entry-013",
+      "entry-014",
+      "entry-015",
+      "entry-016",
+      "entry-017",
+      "entry-018",
+      "entry-019"
+    ],
+    "description_latex": "Classical preprocessing of small subsets is combined with quantum minimum finding over decompositions; exponential table memory appears in many implementations.",
+    "description_text": "Classical preprocessing of small subsets is combined with quantum minimum finding over decompositions; exponential table memory appears in many implementations."
+  },
+  {
+    "id": "relation-803287f0d478",
+    "name": "Quantum walks and span programs",
+    "entry_ids": [
+      "entry-037",
+      "entry-038",
+      "entry-039",
+      "entry-040",
+      "entry-041",
+      "entry-042",
+      "entry-043",
+      "entry-044",
+      "entry-091"
+    ],
+    "description_latex": "Marked subsets, graph witnesses and eigenphase detection yield improvements beyond a direct search over candidate certificates.",
+    "description_text": "Marked subsets, graph witnesses and eigenphase detection yield improvements beyond a direct search over candidate certificates."
+  },
+  {
+    "id": "relation-1c715b752cfe",
+    "name": "Graph input representation",
+    "entry_ids": [
+      "entry-031",
+      "entry-032",
+      "entry-033",
+      "entry-034",
+      "entry-035",
+      "entry-036",
+      "entry-037",
+      "entry-038",
+      "entry-039",
+      "entry-040",
+      "entry-041",
+      "entry-042",
+      "entry-043",
+      "entry-044",
+      "entry-046",
+      "entry-059",
+      "entry-093"
+    ],
+    "description_latex": "Adjacency matrices, adjacency arrays, explicit lists and property-testing promises lead to different classical and quantum complexities.",
+    "description_text": "Adjacency matrices, adjacency arrays, explicit lists and property-testing promises lead to different classical and quantum complexities."
+  },
+  {
+    "id": "relation-a23c4cb614b0",
+    "name": "Fourier sampling",
+    "entry_ids": [
+      "entry-061",
+      "entry-062",
+      "entry-063",
+      "entry-064",
+      "entry-065",
+      "entry-066",
+      "entry-067",
+      "entry-068"
+    ],
+    "description_latex": "Periods, hidden subgroups, real periods and hidden shifts connect algebraic number theory with cryptanalysis.",
+    "description_text": "Periods, hidden subgroups, real periods and hidden shifts connect algebraic number theory with cryptanalysis."
+  },
+  {
+    "id": "relation-b7411a463782",
+    "name": "Lattice algorithms as subroutines",
+    "entry_ids": [
+      "entry-071",
+      "entry-072",
+      "entry-074",
+      "entry-075",
+      "entry-076",
+      "entry-077"
+    ],
+    "description_latex": "SVP, Gaussian sampling and decoding costs feed into reduction, closest-vector, LWE and SIS algorithms.",
+    "description_text": "SVP, Gaussian sampling and decoding costs feed into reduction, closest-vector, LWE and SIS algorithms."
+  },
+  {
+    "id": "relation-6f5c7fafc082",
+    "name": "Code decoding and list matching",
+    "entry_ids": [
+      "entry-078",
+      "entry-079",
+      "entry-080"
+    ],
+    "description_latex": "Information-set search, representations and nearest-neighbor methods connect code-based cryptanalysis with subset sum.",
+    "description_text": "Information-set search, representations and nearest-neighbor methods connect code-based cryptanalysis with subset sum."
+  },
+  {
+    "id": "relation-1a804b4e7da1",
+    "name": "Oracle lower bounds",
+    "entry_ids": [
+      "entry-001",
+      "entry-006",
+      "entry-091",
+      "entry-092",
+      "entry-093",
+      "entry-094",
+      "entry-095"
+    ],
+    "description_latex": "The classical lower bound and the quantum upper bound refer to the same queried object and success requirement.",
+    "description_text": "The classical lower bound and the quantum upper bound refer to the same queried object and success requirement."
+  },
+  {
+    "id": "relation-bb3dc2a76468",
+    "name": "Conditional lower bounds",
+    "entry_ids": [
+      "entry-008",
+      "entry-096",
+      "entry-098"
+    ],
+    "description_latex": "Set-cover hypotheses, SH/Weak ETH, representation-specific QSETH variants and Hamiltonian complexity attach consequences to hypothetical algorithmic improvements.",
+    "description_text": "Set-cover hypotheses, SH/Weak ETH, representation-specific QSETH variants and Hamiltonian complexity attach consequences to hypothetical algorithmic improvements."
+  },
+  {
+    "id": "relation-bcb8db595d93",
+    "name": "Exact classical counting",
+    "entry_ids": [
+      "entry-005",
+      "entry-010",
+      "entry-020",
+      "entry-049",
+      "entry-050",
+      "entry-051",
+      "entry-052",
+      "entry-053",
+      "entry-054",
+      "entry-094"
+    ],
+    "description_latex": "Fixed-width counting algorithms yield feasibility, witness recovery and optimization through appropriately sized encodings.",
+    "description_text": "Fixed-width counting algorithms yield feasibility, witness recovery and optimization through appropriately sized encodings."
+  },
+  {
+    "id": "relation-30183116853f",
+    "name": "Simulation from counting",
+    "entry_ids": [
+      "entry-049",
+      "entry-056",
+      "entry-099"
+    ],
+    "description_latex": "Feynman path counts and conditional probabilities yield subexponential classical sampling bounds for specified quantum circuit families.",
+    "description_text": "Feynman path counts and conditional probabilities yield subexponential classical sampling bounds for specified quantum circuit families."
+  },
+  {
+    "id": "relation-f600b588a11e",
+    "name": "Hamiltonian and variational optimization",
+    "entry_ids": [
+      "entry-097",
+      "entry-098",
+      "entry-099",
+      "entry-100"
+    ],
+    "description_latex": "Frustration-free structure, ground-state overlap, spectral gaps, and parameter optimization control the full cost.",
+    "description_text": "Frustration-free structure, ground-state overlap, spectral gaps, and parameter optimization control the full cost."
+  },
+  {
+    "id": "relation-3a719406f18f",
+    "name": "Constraint-preserving variational circuits",
+    "entry_ids": [
+      "entry-103",
+      "entry-104",
+      "entry-106"
+    ],
+    "description_latex": "One-hot, fixed-Hamming-weight and long/short encodings define feasible subspaces for alternating-operator mixers.",
+    "description_text": "One-hot, fixed-Hamming-weight and long/short encodings define feasible subspaces for alternating-operator mixers."
+  },
+  {
+    "id": "relation-875aa99d45f6",
+    "name": "Variational optimization of discrete objectives",
+    "entry_ids": [
+      "entry-049",
+      "entry-105",
+      "entry-107"
+    ],
+    "description_latex": "Cost estimation, parameter updates and measured classical solutions connect QAOA, VQE, filtering and local-search methods.",
+    "description_text": "Cost estimation, parameter updates and measured classical solutions connect QAOA, VQE, filtering and local-search methods."
+  },
+  {
+    "id": "relation-df78dfdabb49",
+    "name": "Quantum filtering and decoding",
+    "entry_ids": [
+      "entry-077",
+      "entry-101"
+    ],
+    "description_latex": "A classical decoder supplies the coherent uncomputation step in quantum algorithms for restricted short relations; the distribution and number of input vectors determine the comparison.",
+    "description_text": "A classical decoder supplies the coherent uncomputation step in quantum algorithms for restricted short relations; the distribution and number of input vectors determine the comparison."
+  },
+  {
+    "id": "relation-e54786ee2dd0",
+    "name": "Recursive Fourier sampling",
+    "entry_ids": [
+      "entry-102"
+    ],
+    "description_latex": "Growing recursion depth gives superpolynomial quantum and classical query costs; the classical lower bound establishes a superpolynomial separation.",
+    "description_text": "Growing recursion depth gives superpolynomial quantum and classical query costs; the classical lower bound establishes a superpolynomial separation."
+  }
+]

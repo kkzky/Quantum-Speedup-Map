@@ -1,0 +1,73 @@
+{
+  "id": "entry-039",
+  "number": 39,
+  "ordinal": 40,
+  "title_latex": "Testing bipartiteness in bounded-degree graphs",
+  "title": "Testing bipartiteness in bounded-degree graphs",
+  "chapter_id": "chapter-2",
+  "problem": {
+    "name_latex": "Testing bipartiteness in bounded-degree graphs",
+    "name": "Testing bipartiteness in bounded-degree graphs",
+    "statement_latex": "For a graph of maximum degree $d=O(1)$, distinguish a bipartite graph from one requiring more than $\\varepsilon dn$ edge changes to become bipartite. Neighbor-list queries give the $j$th neighbor of a specified vertex. The promise permits sublinear property testing.\nComplexity counts neighbor-oracle queries and running time for fixed maximum degree and fixed distance parameter.",
+    "statement_text": "For a graph of maximum degree $d=O(1)$, distinguish a bipartite graph from one requiring more than $\\varepsilon dn$ edge changes to become bipartite. Neighbor-list queries give the $j$th neighbor of a specified vertex. The promise permits sublinear property testing. Complexity counts neighbor-oracle queries and running time for fixed maximum degree and fixed distance parameter."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\widetilde O(n^{1/3})$, Ambainis--Childs--Liu bipartiteness testing.",
+      "headline_text": "$\\widetilde O(n^{1/3})$, Ambainis–Childs–Liu bipartiteness testing.",
+      "details_latex": "The theorem assumes fixed $d$ and $\\varepsilon$. Reversible random-walk generation and quantum collision finding locate opposite-parity walks with a common endpoint. The decision has bounded error, with one-sided acceptance for bipartite graphs.",
+      "details_text": "The theorem assumes fixed $d$ and $\\varepsilon$. Reversible random-walk generation and quantum collision finding locate opposite-parity walks with a common endpoint. The decision has bounded error, with one-sided acceptance for bipartite graphs."
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde\\Theta(\\sqrt n)$, Goldreich--Ron random-walk testing.",
+      "headline_text": "$\\widetilde\\Theta(\\sqrt n)$, Goldreich–Ron random-walk testing.",
+      "details_latex": "The tester samples walks from chosen starting vertices and detects an odd-cycle certificate from conflicting parities. The lower bound applies to the same bounded-degree property-testing promise. Dependence on $d$, $\\varepsilon$ and confidence is restored when these parameters vary with $n$.",
+      "details_text": "The tester samples walks from chosen starting vertices and detects an odd-cycle certificate from conflicting parities. The lower bound applies to the same bounded-degree property-testing promise. Dependence on $d$, $\\varepsilon$ and confidence is restored when these parameters vary with $n$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial: $\\sqrt n\\to\\widetilde O(n^{1/3})$, through collision-finding quantum walks.",
+      "description_text": "Polynomial: $\\sqrt n\\to\\widetilde O(n^{1/3})$, through collision-finding quantum walks."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Rigorous advantage over a classical property-testing lower bound.",
+      "description_text": "Rigorous advantage over a classical property-testing lower bound."
+    },
+    "hardware": {
+      "category_id": "hardware-polynomial",
+      "color_key": "hardwarePolynomial",
+      "description_latex": "Fault-tolerant neighbor queries and reversible walk generation are needed. A direct collision-finding implementation stores $\\widetilde O(n^{1/3})$ bits of walk seeds and endpoints in the fixed-parameter regime, in addition to oracle workspace.",
+      "description_text": "Fault-tolerant neighbor queries and reversible walk generation are needed. A direct collision-finding implementation stores $\\widetilde O(n^{1/3})$ bits of walk seeds and endpoints in the fixed-parameter regime, in addition to oracle workspace."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "39.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1012.3174}{Ambainis, Childs and Liu, \\emph{Quantum Property Testing for Bounded-Degree Graphs} (2011)}. Algorithm 2 and Theorem 10; Algorithm 1 and Theorem 7 give the classical comparator.",
+      "content_text": "Ambainis, Childs and Liu, Quantum Property Testing for Bounded-Degree Graphs (2011). Algorithm 2 and Theorem 10; Algorithm 1 and Theorem 7 give the classical comparator.",
+      "citation_ids": [
+        "entry-039-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "39.2",
+      "content_latex": "\\href{https://doi.org/10.1007/s004930050059}{Goldreich and Ron, \\emph{A Sublinear Bipartiteness Tester for Bounded Degree Graphs} (1999)}. Random-walk bipartiteness tester and lower-bound construction.",
+      "content_text": "Goldreich and Ron, A Sublinear Bipartiteness Tester for Bounded Degree Graphs (1999). Random-walk bipartiteness tester and lower-bound construction.",
+      "citation_ids": [
+        "entry-039-citation-002"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-039-citation-001",
+    "entry-039-citation-002"
+  ],
+  "source_latex": "\\entrytitle{39}{Testing bipartiteness in bounded-degree graphs}{strengthPolynomial}{evidenceProved}{hardwarePolynomial}\n\\setcounter{problem}{38}\n\\begin{problem}[Testing bipartiteness in bounded-degree graphs]\nFor a graph of maximum degree $d=O(1)$, distinguish a bipartite graph from one requiring more than $\\varepsilon dn$ edge changes to become bipartite. Neighbor-list queries give the $j$th neighbor of a specified vertex. The promise permits sublinear property testing.\nComplexity counts neighbor-oracle queries and running time for fixed maximum degree and fixed distance parameter.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\widetilde O(n^{1/3})$, Ambainis--Childs--Liu bipartiteness testing.}\nThe theorem assumes fixed $d$ and $\\varepsilon$. Reversible random-walk generation and quantum collision finding locate opposite-parity walks with a common endpoint. The decision has bounded error, with one-sided acceptance for bipartite graphs.\n\n\\complexity{Classical}{$\\widetilde\\Theta(\\sqrt n)$, Goldreich--Ron random-walk testing.}\nThe tester samples walks from chosen starting vertices and detects an odd-cycle certificate from conflicting parities. The lower bound applies to the same bounded-degree property-testing promise. Dependence on $d$, $\\varepsilon$ and confidence is restored when these parameters vary with $n$.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial: $\\sqrt n\\to\\widetilde O(n^{1/3})$, through collision-finding quantum walks.\n\n\\dimensionlabel{Evidence}{evidenceProved} Rigorous advantage over a classical property-testing lower bound.\n\n\\dimensionlabel{Hardware}{hardwarePolynomial} Fault-tolerant neighbor queries and reversible walk generation are needed. A direct collision-finding implementation stores $\\widetilde O(n^{1/3})$ bits of walk seeds and endpoints in the fixed-parameter regime, in addition to oracle workspace.\n\n\\subhead{Algorithm}\n\\begin{algorithmindex}{39}\n\\item \\href{https://arxiv.org/pdf/1012.3174}{Ambainis, Childs and Liu, \\emph{Quantum Property Testing for Bounded-Degree Graphs} (2011)}. Algorithm 2 and Theorem 10; Algorithm 1 and Theorem 7 give the classical comparator.\n\\item \\href{https://doi.org/10.1007/s004930050059}{Goldreich and Ron, \\emph{A Sublinear Bipartiteness Tester for Bounded Degree Graphs} (1999)}. Random-walk bipartiteness tester and lower-bound construction.\n\\end{algorithmindex}"
+}

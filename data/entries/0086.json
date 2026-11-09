@@ -1,0 +1,83 @@
+{
+  "id": "entry-086",
+  "number": 86,
+  "ordinal": 87,
+  "title_latex": "Double-encryption key recovery",
+  "title": "Double-encryption key recovery",
+  "chapter_id": "chapter-3",
+  "problem": {
+    "name_latex": "Double and multiple encryption key recovery",
+    "name": "Double and multiple encryption key recovery",
+    "statement_latex": "For independent $k$-bit keys $K_1,K_2$, given sufficiently many known pairs satisfying $C=E_{K_2}(E_{K_1}(P))$, recover the key pair. The ideal-cipher model provides a precise comparison for security amplification by repeated encryption. The ideal-cipher comparison counts encryption and decryption queries; explicit cipher implementations also use quantum gate and classical bit complexity.",
+    "statement_text": "For independent $k$-bit keys $K_1,K_2$, given sufficiently many known pairs satisfying $C=E_{K_2}(E_{K_1}(P))$, recover the key pair. The ideal-cipher model provides a precise comparison for security amplification by repeated encryption. The ideal-cipher comparison counts encryption and decryption queries; explicit cipher implementations also use quantum gate and classical bit complexity."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$\\Theta(2^{2k/3})$ ideal-cipher queries, quantum meet-in-the-middle through claw finding.",
+      "headline_text": "$\\Theta(2^{2k/3})$ ideal-cipher queries, quantum meet-in-the-middle through claw finding.",
+      "details_latex": "The forward and backward key domains each have size $N=2^k$, giving the optimal $\\Theta(N^{2/3})$ query bound. Tuples of intermediate values from enough known pairs isolate the intended key pair. A quantum walk maintains subsets of forward and backward evaluations; its stored-value access and reversible cipher operations determine the full gate cost. The associated time-efficient construction uses $O(N^{2/3})$ memory.",
+      "details_text": "The forward and backward key domains each have size $N=2^k$, giving the optimal $\\Theta(N^{2/3})$ query bound. Tuples of intermediate values from enough known pairs isolate the intended key pair. A quantum walk maintains subsets of forward and backward evaluations; its stored-value access and reversible cipher operations determine the full gate cost. The associated time-efficient construction uses $O(N^{2/3})$ memory."
+    },
+    "classical": {
+      "headline_latex": "$\\widetilde O(2^k)$ time and $O(2^k)$ storage, classical meet-in-the-middle.",
+      "headline_text": "$\\widetilde O(2^k)$ time and $O(2^k)$ storage, classical meet-in-the-middle.",
+      "details_latex": "Matching forward encryptions against backward decryptions recovers the two keys; the ideal-cipher query scale is $\\Theta(2^k)$. For a known explicit cipher, let $G$ be the gate count of the two-key verification circuit, including the supplied pairs. Its $2k$ witness bits give classical time $\\operatorname{poly}(k+G)2^{O((k+G)/\\sqrt{\\log(k+G)})}$ by Boolean tensor contraction. Linear-size verification circuits have a subexponential classical bound in $k$.",
+      "details_text": "Matching forward encryptions against backward decryptions recovers the two keys; the ideal-cipher query scale is $\\Theta(2^k)$. For a known explicit cipher, let $G$ be the gate count of the two-key verification circuit, including the supplied pairs. Its $2k$ witness bits give classical time $\\operatorname{poly}(k+G)2^{O((k+G)/\\sqrt{\\log(k+G)})}$ by Boolean tensor contraction. Linear-size verification circuits have a subexponential classical bound in $k$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup of degree $3/2$ in the ideal-cipher meet-in-the-middle comparison, or an exponential-constant improvement from $k$ to $2k/3$. The mechanism is quantum claw finding.",
+      "description_text": "Polynomial speedup of degree $3/2$ in the ideal-cipher meet-in-the-middle comparison, or an exponential-constant improvement from $k$ to $2k/3$. The mechanism is quantum claw finding."
+    },
+    "evidence": {
+      "category_id": "evidence-proved",
+      "color_key": "evidenceProved",
+      "description_latex": "Fully proved in the stated ideal-cipher query model through matching upper and adversary lower bounds.",
+      "description_text": "Fully proved in the stated ideal-cipher query model through matching upper and adversary lower bounds."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "The time-efficient algorithm requires exponentially large coherent lists and exponentially many reversible cipher evaluations. Logical workspace for a single encryption is polynomial in the cipher size, while coherent storage and circuit depth dominate a cryptographic-scale fault-tolerant attack.\n\n{\\small [Before ``ETH is false'', the explicit double-encryption comparison used classical $\\widetilde O(2^k)$ meet-in-the-middle versus $\\widetilde O(2^{2k/3})$ quantum claw finding.]\\par}",
+      "description_text": "The time-efficient algorithm requires exponentially large coherent lists and exponentially many reversible cipher evaluations. Logical workspace for a single encryption is polynomial in the cipher size, while coherent storage and circuit depth dominate a cryptographic-scale fault-tolerant attack. [Before “ETH is false”, the explicit double-encryption comparison used classical $\\widetilde O(2^k)$ meet-in-the-middle versus $\\widetilde O(2^{2k/3})$ quantum claw finding.]"
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "86.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1410.1434}{Kaplan, \\emph{Quantum Attacks Against Iterated Block Ciphers} (2015)}. Theorem 2: double-encryption algorithm and memory; Theorem 3: matching query lower bound; Theorem 4: the related fourfold-encryption construction.",
+      "content_text": "Kaplan, Quantum Attacks Against Iterated Block Ciphers (2015). Theorem 2: double-encryption algorithm and memory; Theorem 3: matching query lower bound; Theorem 4: the related fourfold-encryption construction.",
+      "citation_ids": [
+        "entry-086-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "86.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Section 4 and Theorem 8: the balanced claw-finding subroutine.",
+      "content_text": "Tani, Claw Finding Algorithms Using Quantum Walk (2009). Section 4 and Theorem 8: the balanced claw-finding subroutine.",
+      "citation_ids": [
+        "entry-086-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "86.3",
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.",
+      "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.",
+      "citation_ids": [
+        "entry-086-citation-003"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-086-citation-001",
+    "entry-086-citation-002",
+    "entry-086-citation-003"
+  ],
+  "source_latex": "\\entrytitle{86}{Double-encryption key recovery}{strengthPolynomial}{evidenceProved}{hardwareExponential}\n\\setcounter{problem}{85}\n\\begin{problem}[Double and multiple encryption key recovery]\nFor independent $k$-bit keys $K_1,K_2$, given sufficiently many known pairs satisfying $C=E_{K_2}(E_{K_1}(P))$, recover the key pair. The ideal-cipher model provides a precise comparison for security amplification by repeated encryption. The ideal-cipher comparison counts encryption and decryption queries; explicit cipher implementations also use quantum gate and classical bit complexity.\n\\end{problem}\n\n\\speedupheading\n\\complexity{Quantum}{$\\Theta(2^{2k/3})$ ideal-cipher queries, quantum meet-in-the-middle through claw finding.}\nThe forward and backward key domains each have size $N=2^k$, giving the optimal $\\Theta(N^{2/3})$ query bound. Tuples of intermediate values from enough known pairs isolate the intended key pair. A quantum walk maintains subsets of forward and backward evaluations; its stored-value access and reversible cipher operations determine the full gate cost. The associated time-efficient construction uses $O(N^{2/3})$ memory.\n\n\\complexity{Classical}{$\\widetilde O(2^k)$ time and $O(2^k)$ storage, classical meet-in-the-middle.}\nMatching forward encryptions against backward decryptions recovers the two keys; the ideal-cipher query scale is $\\Theta(2^k)$. For a known explicit cipher, let $G$ be the gate count of the two-key verification circuit, including the supplied pairs. Its $2k$ witness bits give classical time $\\operatorname{poly}(k+G)2^{O((k+G)/\\sqrt{\\log(k+G)})}$ by Boolean tensor contraction. Linear-size verification circuits have a subexponential classical bound in $k$.\n\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup of degree $3/2$ in the ideal-cipher meet-in-the-middle comparison, or an exponential-constant improvement from $k$ to $2k/3$. The mechanism is quantum claw finding.\n\n\\dimensionlabel{Evidence}{evidenceProved} Fully proved in the stated ideal-cipher query model through matching upper and adversary lower bounds.\n\n\\dimensionlabel{Hardware}{hardwareExponential} The time-efficient algorithm requires exponentially large coherent lists and exponentially many reversible cipher evaluations. Logical workspace for a single encryption is polynomial in the cipher size, while coherent storage and circuit depth dominate a cryptographic-scale fault-tolerant attack.\n\n{\\small [Before ``ETH is false'', the explicit double-encryption comparison used classical $\\widetilde O(2^k)$ meet-in-the-middle versus $\\widetilde O(2^{2k/3})$ quantum claw finding.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{86}\n\\item \\href{https://arxiv.org/pdf/1410.1434}{Kaplan, \\emph{Quantum Attacks Against Iterated Block Ciphers} (2015)}. Theorem 2: double-encryption algorithm and memory; Theorem 3: matching query lower bound; Theorem 4: the related fourfold-encryption construction.\n\\item \\href{https://arxiv.org/pdf/0708.2584}{Tani, \\emph{Claw Finding Algorithms Using Quantum Walk} (2009)}. Section 4 and Theorem 8: the balanced claw-finding subroutine.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1 and witness self-reduction: search for a satisfying assignment of the explicit Boolean verification circuit.\n\\end{algorithmindex}"
+}

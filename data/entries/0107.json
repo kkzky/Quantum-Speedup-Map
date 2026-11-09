@@ -1,0 +1,93 @@
+{
+  "id": "entry-107",
+  "number": 107,
+  "ordinal": 61,
+  "title_latex": "Two-community modularity maximization by variational local search",
+  "title": "Two-community modularity maximization by variational local search",
+  "chapter_id": "chapter-2",
+  "problem": {
+    "name_latex": "Two-community modularity maximization",
+    "name": "Two-community modularity maximization",
+    "statement_latex": "Given a simple undirected graph with adjacency matrix $A$, $m>0$ edges and degrees $d_i$, find $s\\in\\{-1,1\\}^n$ maximizing\n\\[\nQ(s)=\\frac{1}{4m}\\sum_{i,j=1}^n\\left(A_{ij}-\\frac{d_i d_j}{2m}\\right)s_i s_j.\n\\]\nThe signs specify at most two communities; modularity measures their excess internal connectivity relative to the degree-based null model. Complexity counts quantum gates and samples for each local subproblem and classical graph-processing and bit-operation costs for the complete search.",
+    "statement_text": "Given a simple undirected graph with adjacency matrix $A$, $m>0$ edges and degrees $d_i$, find $s\\in\\{-1,1\\}^n$ maximizing \\[ Q(s)=\\frac{1}{4m}\\sum_{i,j=1}^n\\left(A_{ij}-\\frac{d_i d_j}{2m}\\right)s_i s_j. \\] The signs specify at most two communities; modularity measures their excess internal connectivity relative to the degree-based null model. Complexity counts quantum gates and samples for each local subproblem and classical graph-processing and bit-operation costs for the complete search."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O(IKSpb^2)$ gates, variational quantum local search on $b$-vertex subproblems.",
+      "headline_text": "$O(IKSpb^2)$ gates, variational quantum local search on $b$-vertex subproblems.",
+      "details_latex": "In each of $I$ local-search rounds, a classical routine chooses $b$ vertices, fixes the remaining signs, and forms a quadratic objective with linear terms from the fixed vertices. A variational circuit samples candidate updates, and an improving update is accepted. The bound uses a dense depth-$p$ ansatz or cost circuit, $K$ parameter evaluations per round and $S$ shots per evaluation; the classical selection and update work is additional. Shaydulin et al. describe the gate-model solver as QAOA and implement an $R_yR_z$ variational ansatz with COBYLA parameter optimization. The hardware runs use angles optimized on a simulator, whose cost is part of that experiment's computation.",
+      "details_text": "In each of $I$ local-search rounds, a classical routine chooses $b$ vertices, fixes the remaining signs, and forms a quadratic objective with linear terms from the fixed vertices. A variational circuit samples candidate updates, and an improving update is accepted. The bound uses a dense depth-$p$ ansatz or cost circuit, $K$ parameter evaluations per round and $S$ shots per evaluation; the classical selection and update work is additional. Shaydulin et al. describe the gate-model solver as QAOA and implement an $R_yR_z$ variational ansatz with COBYLA parameter optimization. The hardware runs use angles optimized on a simulator, whose cost is part of that experiment's computation."
+    },
+    "classical": {
+      "headline_latex": "$O^*(2^{\\omega n/3})$ exact global optimization, weighted 2-CSP; $O^*(2^{\\omega b/3})$ per exact local subproblem.",
+      "headline_text": "$O^*(2^{\\omega n/3})$ exact global optimization, weighted 2-CSP; $O^*(2^{\\omega b/3})$ per exact local subproblem.",
+      "details_latex": "Multiplying the objective by $8m^2$ gives integer pair coefficients $2mA_{ij}-d_i d_j$ of polynomial magnitude. Shifting each pair's score to be nonnegative permits the Williams--Koivisto weighted 2-CSP algorithm, with $\\omega$ the matrix-multiplication exponent. A size-$L$ Boolean threshold circuit also supplies $\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}$ time; the smaller applicable bound is used. The published practical comparison uses Gurobi both for global optimization and for the same local subproblems. Local search with an exact subproblem solver optimizes the selected neighborhood at each round, while global search supplies an optimum certificate.",
+      "details_text": "Multiplying the objective by $8m^2$ gives integer pair coefficients $2mA_{ij}-d_i d_j$ of polynomial magnitude. Shifting each pair's score to be nonnegative permits the Williams–Koivisto weighted 2-CSP algorithm, with $\\omega$ the matrix-multiplication exponent. A size-$L$ Boolean threshold circuit also supplies $\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}$ time; the smaller applicable bound is used. The published practical comparison uses Gurobi both for global optimization and for the same local subproblems. Local search with an exact subproblem solver optimizes the selected neighborhood at each round, while global search supplies an optimum certificate."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-unspecified",
+      "color_key": "white",
+      "description_latex": "The hybrid method improves modularity by optimizing small neighborhoods. Its measured solution quality and iteration count provide an empirical comparison with classical local search.",
+      "description_text": "The hybrid method improves modularity by optimizing small neighborhoods. Its measured solution quality and iteration count provide an empirical comparison with classical local search."
+    },
+    "evidence": {
+      "category_id": "evidence-unspecified",
+      "color_key": "white",
+      "description_latex": "The study reports comparable solution quality across the tested solvers. A same-task asymptotic runtime advantage is unestablished.",
+      "description_text": "The study reports comparable solution quality across the tested solvers. A same-task asymptotic runtime advantage is unestablished."
+    },
+    "hardware": {
+      "category_id": "hardware-small",
+      "color_key": "hardwareSmall",
+      "description_latex": "The gate-model experiment uses 16 physical superconducting qubits for local subproblems inside graphs with up to 410 vertices. A logical realization uses $b$ data qubits plus circuit workspace; the full graph and current partition reside in classical memory. The number of graph vertices is therefore distinct from the quantum register size.",
+      "description_text": "The gate-model experiment uses 16 physical superconducting qubits for local subproblems inside graphs with up to 410 vertices. A logical realization uses $b$ data qubits plus circuit workspace; the full graph and current partition reside in classical memory. The number of graph vertices is therefore distinct from the quantum register size."
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "107.1",
+      "content_latex": "\\href{https://arxiv.org/abs/1810.12484}{Shaydulin et al., \\emph{Network Community Detection on Small Quantum Computers} (2019)}. Equation (1): two-community modularity; Algorithm 1 and Equation (2): quantum local search and its subproblem; Section 3.2: gate-model implementation; Section 4: experiments.",
+      "content_text": "Shaydulin et al., Network Community Detection on Small Quantum Computers (2019). Equation (1): two-community modularity; Algorithm 1 and Equation (2): quantum local search and its subproblem; Section 3.2: gate-model implementation; Section 4: experiments.",
+      "citation_ids": [
+        "entry-107-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "107.2",
+      "content_latex": "\\href{https://people.csail.mit.edu/rrw/2-csp-final.pdf}{Williams, \\emph{A New Algorithm for Optimal Constraint Satisfaction and Its Implications} (2005)}. Split-and-list reduction of 2-CSP to weighted triangles and matrix multiplication.",
+      "content_text": "Williams, A New Algorithm for Optimal Constraint Satisfaction and Its Implications (2005). Split-and-list reduction of 2-CSP to weighted triangles and matrix multiplication.",
+      "citation_ids": [
+        "entry-107-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "107.3",
+      "content_latex": "\\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4: improved weighted 2-CSP implementation.",
+      "content_text": "Koivisto, Optimal 2-Constraint Satisfaction via Sum-Product Algorithms (2006). Sections 2–4: improved weighted 2-CSP implementation.",
+      "citation_ids": [
+        "entry-107-citation-003"
+      ]
+    },
+    {
+      "item_number": 4,
+      "index_label": "107.4",
+      "content_latex": "\\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; threshold-circuit encoding and conditional counting.",
+      "content_text": "OpenAI, The Exponential Time Hypothesis Is False (2026). Theorem 1.1; threshold-circuit encoding and conditional counting.",
+      "citation_ids": [
+        "entry-107-citation-004"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-107-citation-001",
+    "entry-107-citation-002",
+    "entry-107-citation-003",
+    "entry-107-citation-004"
+  ],
+  "source_latex": "\\entrytitle{107}{Two-community modularity maximization by variational local search}{white}{white}{hardwareSmall}\n\\setcounter{problem}{106}\n\\begin{problem}[Two-community modularity maximization]\nGiven a simple undirected graph with adjacency matrix $A$, $m>0$ edges and degrees $d_i$, find $s\\in\\{-1,1\\}^n$ maximizing\n\\[\nQ(s)=\\frac{1}{4m}\\sum_{i,j=1}^n\\left(A_{ij}-\\frac{d_i d_j}{2m}\\right)s_i s_j.\n\\]\nThe signs specify at most two communities; modularity measures their excess internal connectivity relative to the degree-based null model. Complexity counts quantum gates and samples for each local subproblem and classical graph-processing and bit-operation costs for the complete search.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O(IKSpb^2)$ gates, variational quantum local search on $b$-vertex subproblems.}\nIn each of $I$ local-search rounds, a classical routine chooses $b$ vertices, fixes the remaining signs, and forms a quadratic objective with linear terms from the fixed vertices. A variational circuit samples candidate updates, and an improving update is accepted. The bound uses a dense depth-$p$ ansatz or cost circuit, $K$ parameter evaluations per round and $S$ shots per evaluation; the classical selection and update work is additional. Shaydulin et al. describe the gate-model solver as QAOA and implement an $R_yR_z$ variational ansatz with COBYLA parameter optimization. The hardware runs use angles optimized on a simulator, whose cost is part of that experiment's computation.\n\n\\complexity{Classical}{$O^*(2^{\\omega n/3})$ exact global optimization, weighted 2-CSP; $O^*(2^{\\omega b/3})$ per exact local subproblem.}\nMultiplying the objective by $8m^2$ gives integer pair coefficients $2mA_{ij}-d_i d_j$ of polynomial magnitude. Shifting each pair's score to be nonnegative permits the Williams--Koivisto weighted 2-CSP algorithm, with $\\omega$ the matrix-multiplication exponent. A size-$L$ Boolean threshold circuit also supplies $\\operatorname{poly}(L)2^{O(L/\\sqrt{\\log L})}$ time; the smaller applicable bound is used. The published practical comparison uses Gurobi both for global optimization and for the same local subproblems. Local search with an exact subproblem solver optimizes the selected neighborhood at each round, while global search supplies an optimum certificate.\n\n\\dimensionlabel{Strength}{white} The hybrid method improves modularity by optimizing small neighborhoods. Its measured solution quality and iteration count provide an empirical comparison with classical local search.\n\\dimensionlabel{Evidence}{white} The study reports comparable solution quality across the tested solvers. A same-task asymptotic runtime advantage is unestablished.\n\\dimensionlabel{Hardware}{hardwareSmall} The gate-model experiment uses 16 physical superconducting qubits for local subproblems inside graphs with up to 410 vertices. A logical realization uses $b$ data qubits plus circuit workspace; the full graph and current partition reside in classical memory. The number of graph vertices is therefore distinct from the quantum register size.\n\\subhead{Algorithm}\n\\begin{algorithmindex}{107}\n\\item \\href{https://arxiv.org/abs/1810.12484}{Shaydulin et al., \\emph{Network Community Detection on Small Quantum Computers} (2019)}. Equation (1): two-community modularity; Algorithm 1 and Equation (2): quantum local search and its subproblem; Section 3.2: gate-model implementation; Section 4: experiments.\n\\item \\href{https://people.csail.mit.edu/rrw/2-csp-final.pdf}{Williams, \\emph{A New Algorithm for Optimal Constraint Satisfaction and Its Implications} (2005)}. Split-and-list reduction of 2-CSP to weighted triangles and matrix multiplication.\n\\item \\href{https://www.cs.helsinki.fi/u/mkhkoivi/publications/ipl-2005.pdf}{Koivisto, \\emph{Optimal 2-Constraint Satisfaction via Sum-Product Algorithms} (2006)}. Sections 2--4: improved weighted 2-CSP implementation.\n\\item \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False} (2026)}. Theorem 1.1; threshold-circuit encoding and conditional counting.\n\\end{algorithmindex}"
+}

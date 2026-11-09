@@ -1,0 +1,85 @@
+{
+  "id": "entry-008",
+  "number": 8,
+  "ordinal": 8,
+  "title_latex": "Minimum set cover",
+  "title": "Minimum set cover",
+  "chapter_id": "chapter-1",
+  "problem": {
+    "name_latex": "Minimum set cover",
+    "name": "Minimum set cover",
+    "statement_latex": "Given a universe $U$, $|U|=n$, and an explicit family $\\mathcal F\\subseteq2^U$, $|\\mathcal F|=m$, minimize $|\\mathcal C|$ subject to $\\mathcal C\\subseteq\\mathcal F$ and $\\bigcup_{S\\in\\mathcal C}S=U$. Typical interpretations select facilities, tests, or resources that jointly cover all requirements.\nThe quantum bound counts QRAM time, the subset algorithms count classical RAM operations, and the CNF-based bounds count bit operations on explicit inputs.",
+    "statement_text": "Given a universe $U$, $|U|=n$, and an explicit family $\\mathcal F\\subseteq2^U$, $|\\mathcal F|=m$, minimize $|\\mathcal C|$ subject to $\\mathcal C\\subseteq\\mathcal F$ and $\\bigcup_{S\\in\\mathcal C}S=U$. Typical interpretations select facilities, tests, or resources that jointly cover all requirements. The quantum bound counts QRAM time, the subset algorithms count classical RAM operations, and the CNF-based bounds count bit operations on explicit inputs."
+  },
+  "quantum_speedup": {
+    "quantum": {
+      "headline_latex": "$O^*(1.7274^n)$, quantum set-cover dynamic programming.",
+      "headline_text": "$O^*(1.7274^n)$, quantum set-cover dynamic programming.",
+      "details_latex": "Polynomial factors include the explicit family size $m$. The method combines subset preprocessing with recursive quantum minimum finding and assumes coherent table access. Its exponential parameter is universe size $n$, allowing the family to be larger than a linear number of sets.",
+      "details_text": "Polynomial factors include the explicit family size $m$. The method combines subset preprocessing with recursive quantum minimum finding and assumes coherent table access. Its exponential parameter is universe size $n$, allowing the family to be larger than a linear number of sets."
+    },
+    "classical": {
+      "headline_latex": "$O^*(\\min\\{2^n,2^m\\})$, subset dynamic programming or family enumeration.",
+      "headline_text": "$O^*(\\min\\{2^n,2^m\\})$, subset dynamic programming or family enumeration.",
+      "details_latex": "For $m=\\Theta(n)$, a stronger bound is $O_\\epsilon(2^{\\epsilon n}\\operatorname{poly}(n,m))$ for every fixed $\\epsilon>0$, from long-clause shortening and fixed-width counting. Selection variables, element-cover clauses and a linear-size cardinality circuit give $O(n)$ variables and clauses in this regime. If element frequency is fixed and $m=O(n)$, the encoding has fixed width and linear size, giving $\\operatorname{poly}(n,m)2^{O(n/\\sqrt{\\log n})}$ time. The unrestricted-family comparison and these linear-family regimes use different relations between $n$ and $m$.",
+      "details_text": "For $m=\\Theta(n)$, a stronger bound is $O_\\epsilon(2^{\\epsilon n}\\operatorname{poly}(n,m))$ for every fixed $\\epsilon>0$, from long-clause shortening and fixed-width counting. Selection variables, element-cover clauses and a linear-size cardinality circuit give $O(n)$ variables and clauses in this regime. If element frequency is fixed and $m=O(n)$, the encoding has fixed width and linear size, giving $\\operatorname{poly}(n,m)2^{O(n/\\sqrt{\\log n})}$ time. The unrestricted-family comparison and these linear-family regimes use different relations between $n$ and $m$."
+    }
+  },
+  "labels": {
+    "strength": {
+      "category_id": "strength-polynomial",
+      "color_key": "strengthPolynomial",
+      "description_latex": "Polynomial speedup through a smaller exponential constant in the unrestricted-family, universe-size comparison, from amplitude amplification. For a linear-size explicit family, the subexponential classical bound is asymptotically smaller.",
+      "description_text": "Polynomial speedup through a smaller exponential constant in the unrestricted-family, universe-size comparison, from amplitude amplification. For a linear-size explicit family, the subexponential classical bound is asymptotically smaller."
+    },
+    "evidence": {
+      "category_id": "evidence-partial",
+      "color_key": "evidencePartial",
+      "description_latex": "The quantum upper bound is rigorous in QRAM. The broader Set Cover Conjecture concerns specified universe-size and family-size regimes; the linear-family subexponential bound must be included when selecting that comparison.",
+      "description_text": "The quantum upper bound is rigorous in QRAM. The broader Set Cover Conjecture concerns specified universe-size and family-size regimes; the linear-family subexponential bound must be included when selecting that comparison."
+    },
+    "hardware": {
+      "category_id": "hardware-superpolynomial",
+      "color_key": "hardwareExponential",
+      "description_latex": "Polynomially many active subset and objective qubits accompany exponentially large coherent preprocessing memory. The storage and long nested searches make useful instances a fault-tolerant target.\n{\\small [Before ``ETH is false'', the explicit-family comparison used $O^*(\\min\\{2^n,2^m\\})$ classically and $O^*(1.7274^n)$ quantumly, including the linear-family regime now covered by the subexponential bound.]\\par}",
+      "description_text": "Polynomially many active subset and objective qubits accompany exponentially large coherent preprocessing memory. The storage and long nested searches make useful instances a fault-tolerant target. [Before “ETH is false”, the explicit-family comparison used $O^*(\\min\\{2^n,2^m\\})$ classically and $O^*(1.7274^n)$ quantumly, including the linear-family regime now covered by the subexponential bound.]"
+    }
+  },
+  "algorithm_items": [
+    {
+      "item_number": 1,
+      "index_label": "8.1",
+      "content_latex": "\\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Theorem 10 and Algorithm 3: Set Cover.",
+      "content_text": "Ambainis et al., Quantum Speedups for Exponential-Time Dynamic Programming Algorithms (SODA 2019). Theorem 10 and Algorithm 3: Set Cover.",
+      "citation_ids": [
+        "entry-008-citation-001"
+      ]
+    },
+    {
+      "item_number": 2,
+      "index_label": "8.2",
+      "content_latex": "\\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorems 4--6 and Corollary 1: general covering framework and refined bounds.",
+      "content_text": "Gaspers and Li, Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems (ICALP 2024). Theorems 4–6 and Corollary 1: general covering framework and refined bounds.",
+      "citation_ids": [
+        "entry-008-citation-002"
+      ]
+    },
+    {
+      "item_number": 3,
+      "index_label": "8.3",
+      "content_latex": "\\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening and Corollary 7; combined with \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}, Theorem 1.1 and Appendix D}, for the explicit-family encodings above.",
+      "content_text": "Claude (Anthropic), A $2^{o(n)}$ Time Algorithm for 3-SAT (2026). Long-clause shortening and Corollary 7; combined with OpenAI, The Exponential Time Hypothesis Is False, Theorem 1.1 and Appendix D, for the explicit-family encodings above.",
+      "citation_ids": [
+        "entry-008-citation-003",
+        "entry-008-citation-004"
+      ]
+    }
+  ],
+  "citation_ids": [
+    "entry-008-citation-001",
+    "entry-008-citation-002",
+    "entry-008-citation-003",
+    "entry-008-citation-004"
+  ],
+  "source_latex": "\\entrytitle{8}{Minimum set cover}{strengthPolynomial}{evidencePartial}{hardwareExponential}\n\\setcounter{problem}{7}\n\\begin{problem}[Minimum set cover]\nGiven a universe $U$, $|U|=n$, and an explicit family $\\mathcal F\\subseteq2^U$, $|\\mathcal F|=m$, minimize $|\\mathcal C|$ subject to $\\mathcal C\\subseteq\\mathcal F$ and $\\bigcup_{S\\in\\mathcal C}S=U$. Typical interpretations select facilities, tests, or resources that jointly cover all requirements.\nThe quantum bound counts QRAM time, the subset algorithms count classical RAM operations, and the CNF-based bounds count bit operations on explicit inputs.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$O^*(1.7274^n)$, quantum set-cover dynamic programming.}\nPolynomial factors include the explicit family size $m$. The method combines subset preprocessing with recursive quantum minimum finding and assumes coherent table access. Its exponential parameter is universe size $n$, allowing the family to be larger than a linear number of sets.\n\\complexity{Classical}{$O^*(\\min\\{2^n,2^m\\})$, subset dynamic programming or family enumeration.}\nFor $m=\\Theta(n)$, a stronger bound is $O_\\epsilon(2^{\\epsilon n}\\operatorname{poly}(n,m))$ for every fixed $\\epsilon>0$, from long-clause shortening and fixed-width counting. Selection variables, element-cover clauses and a linear-size cardinality circuit give $O(n)$ variables and clauses in this regime. If element frequency is fixed and $m=O(n)$, the encoding has fixed width and linear size, giving $\\operatorname{poly}(n,m)2^{O(n/\\sqrt{\\log n})}$ time. The unrestricted-family comparison and these linear-family regimes use different relations between $n$ and $m$.\n\\dimensionlabel{Strength}{strengthPolynomial} Polynomial speedup through a smaller exponential constant in the unrestricted-family, universe-size comparison, from amplitude amplification. For a linear-size explicit family, the subexponential classical bound is asymptotically smaller.\n\\dimensionlabel{Evidence}{evidencePartial} The quantum upper bound is rigorous in QRAM. The broader Set Cover Conjecture concerns specified universe-size and family-size regimes; the linear-family subexponential bound must be included when selecting that comparison.\n\\dimensionlabel{Hardware}{hardwareExponential} Polynomially many active subset and objective qubits accompany exponentially large coherent preprocessing memory. The storage and long nested searches make useful instances a fault-tolerant target.\n{\\small [Before ``ETH is false'', the explicit-family comparison used $O^*(\\min\\{2^n,2^m\\})$ classically and $O^*(1.7274^n)$ quantumly, including the linear-family regime now covered by the subexponential bound.]\\par}\n\\subhead{Algorithm}\n\\begin{algorithmindex}{8}\n\\item \\href{https://arxiv.org/pdf/1807.05209}{Ambainis et al., \\emph{Quantum Speedups for Exponential-Time Dynamic Programming Algorithms} (SODA 2019)}. Theorem 10 and Algorithm 3: Set Cover.\n\\item \\href{https://arxiv.org/pdf/2311.08042}{Gaspers and Li, \\emph{Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems} (ICALP 2024)}. Theorems 4--6 and Corollary 1: general covering framework and refined bounds.\n\\item \\href{https://github.com/anthropics/formal-math/tree/main/eth}{Claude (Anthropic), \\emph{A $2^{o(n)}$ Time Algorithm for 3-SAT} (2026)}. Long-clause shortening and Corollary 7; combined with \\href{https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf}{OpenAI, \\emph{The Exponential Time Hypothesis Is False}, Theorem 1.1 and Appendix D}, for the explicit-family encodings above.\n\\end{algorithmindex}"
+}
