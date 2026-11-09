@@ -1,4 +1,4 @@
-# Asymptotic 3D demo
+# Asymptotic visualization demo
 
 Open `quantum-speedup-demo.html` in a browser, or serve the editable source:
 

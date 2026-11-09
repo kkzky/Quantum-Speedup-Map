@@ -4,12 +4,15 @@
 @media(max-width:550px){header{gap:18px}.brand{font-size:13px;white-space:nowrap;gap:7px}.brand-icon{width:24px;height:24px;font-size:23px;line-height:19px}nav{gap:12px}nav a{font-size:11px}nav a:last-child{display:none}}
 
 .limit-mark{font:italic 36px Georgia,serif;color:#7d8d92;padding-right:15px}.asymptotic-card .canvas-wrap{height:540px}.asymptotic-card .chart-heading h2{margin:0}.selection{margin-top:24px}.gain-row{display:flex;align-items:center;justify-content:space-between;gap:25px;border-bottom:1px solid var(--line);padding:0 0 20px;margin-bottom:18px}.gain-row strong{font:23px Georgia,serif;color:#a72830}.detail-meta{color:var(--muted);font-size:12px}.axis-guide{justify-content:center;gap:38px;font-size:11px}.intro{padding-bottom:24px}.intro h1{margin-bottom:0}.comparison .formula{font-size:21px;line-height:1.5}@media(max-width:850px){.asymptotic-card .canvas-wrap{height:465px}.axis-guide{gap:12px;font-size:9px;padding:0 9px}.gain-row{align-items:flex-start;flex-direction:column;gap:9px}.limit-mark{font-size:28px}.intro h1{font-size:28px}}@media(max-width:550px){.axis-guide{justify-content:flex-start;flex-wrap:wrap;height:auto;padding:12px;gap:9px 20px}.limit-mark{display:none}.comparison{grid-template-columns:1fr}.asymptotic-card .chart-heading h2{font-size:15px}}
+
+.charts .canvas-wrap{height:460px}.charts .axis-guide{gap:14px;font-size:9px;padding:0 14px}.cost-card .chart-heading h2{margin:0}.charts .chart-heading h2{font-size:17px}.gradient{background:linear-gradient(90deg,#fff 0%,#ffcaca 20%,#ff9b9b 40%,#ff6d6d 60%,#ff3737 80%,#f00 100%)}@media(max-width:1100px){.charts .chart-heading{padding:16px}.charts .chart-heading h2{font-size:15px}}@media(max-width:850px){.charts{grid-template-columns:1fr}.charts .canvas-wrap{height:460px}}@media(max-width:550px){.charts .axis-guide{gap:8px 15px;font-size:9px}.charts .canvas-wrap{height:440px}}
 </style></head>
 <body>
 <header><a class="brand" href="#"><span class="brand-icon">q</span>Quantum Speedup Map</a><nav><a href="#explore" class="active">Explore</a><a href="https://github.com/kkzky/Quantum-Speedup-Map" target="_blank" rel="noreferrer">Database ↗</a></nav><span class="prototype">RESEARCH DEMO</span></header>
 <main id="explore">
 <div class="intro"><div><div class="eyebrow">STRENGTH / EVIDENCE / HARDWARE</div><h1>Asymptotic quantum advantage</h1></div><div class="limit-mark">N → ∞</div></div>
-<section class="chart-card asymptotic-card"><div class="chart-heading"><h2>Strength, evidence, hardware</h2><button id="reset" class="quiet" aria-label="Reset three-dimensional view">Reset view ↺</button></div><div class="canvas-wrap"><canvas id="scene" aria-label="Rotatable three-dimensional asymptotic speedup map"></canvas><span class="plot-help">Drag to rotate · scroll to zoom · click to select</span></div><div class="axis-guide"><span><i class="dot red"></i>Strength · asymptotic T<sub>C</sub> / T<sub>Q</sub></span><span><i class="dot blue"></i>Evidence</span><span><i class="dot green"></i>Hardware · implementation difficulty</span></div></section>
+<div class="charts"><section class="chart-card asymptotic-card"><div class="chart-heading"><h2>Strength, evidence, hardware</h2><button id="reset" class="quiet" aria-label="Reset three-dimensional view">Reset view ↺</button></div><div class="canvas-wrap"><canvas id="scene" aria-label="Rotatable three-dimensional asymptotic speedup map"></canvas><span class="plot-help">Drag to rotate · scroll to zoom · click to select</span></div><div class="axis-guide"><span><i class="dot red"></i>Strength · asymptotic T<sub>C</sub> / T<sub>Q</sub></span><span><i class="dot blue"></i>Evidence</span><span><i class="dot green"></i>Hardware · implementation difficulty</span></div></section>
+<section class="chart-card cost-card"><div class="chart-heading"><h2>Quantum versus classical</h2><button id="resetCost" class="quiet">Reset view ↺</button></div><div class="canvas-wrap"><canvas id="cost" aria-label="Asymptotic quantum and classical complexity, quantum advantage region only"></canvas><span class="plot-help">Click to select · scroll to zoom</span></div><div class="gradient-guide"><span>Equal cost</span><div class="gradient"></div><span>Stronger advantage</span></div></section></div>
 <section class="selection"><aside><div class="eyebrow">PROBLEMS</div><div id="problemList" role="list" aria-label="Select a problem"></div></aside><article id="detail" aria-live="polite"></article></section>
 <footer><span>Quantum Speedup Map</span><span>Asymptotic comparisons</span></footer>
 </main><div id="tooltip" role="tooltip" hidden></div>
@@ -504,6 +507,198 @@
   }
   window.SpeedupScene = SpeedupScene;
 })();
+</script><script>/* Asymptotic complexity plane, restricted to quantum cost <= classical cost. */
+(function () {
+  'use strict';
+  class CostScene {
+    constructor(canvas, callbacks = {}) {
+      this.canvas = canvas;
+      this.ctx = canvas.getContext('2d');
+      this.callbacks = callbacks;
+      this.points = [];
+      this.options = {};
+      this.projected = [];
+      this.hovered = null;
+      canvas.setAttribute('aria-label', 'Quantum and classical complexity, with both axes descending');
+      canvas.addEventListener('pointermove', event => {
+        const rect = canvas.getBoundingClientRect();
+        const p = this.hit(event.clientX - rect.left, event.clientY - rect.top);
+        canvas.style.cursor = p ? 'pointer' : 'default';
+        if (p?.slug !== this.hovered?.slug) {
+          this.hovered = p;
+          this.callbacks.onHover?.(p || null, { x: event.clientX, y: event.clientY });
+          this.draw();
+        }
+      });
+      canvas.addEventListener('pointerleave', () => {
+        this.hovered = null;
+        this.callbacks.onHover?.(null);
+        this.draw();
+      });
+      canvas.addEventListener('click', event => {
+        const rect = canvas.getBoundingClientRect();
+        const p = this.hit(event.clientX - rect.left, event.clientY - rect.top);
+        if (p) this.callbacks.onSelect?.(p.slug, p);
+      });
+      canvas.addEventListener('wheel', event => {
+        event.preventDefault();
+        const maximum = this.options.costMax || 4.25;
+        this.viewMax = Math.max(.85,Math.min(maximum,(this.viewMax || maximum)*Math.exp(event.deltaY*.001)));
+        this.hovered = null;
+        this.callbacks.onHover?.(null);
+        this.draw();
+      }, {passive:false});
+      canvas.addEventListener('dblclick',()=>this.reset());
+      this.observer = new ResizeObserver(() => this.resize());
+      this.observer.observe(canvas);
+      this.resize();
+    }
+
+    setData(points, options = {}) {
+      const selectionChanged = options.selectedSlug !== this.options.selectedSlug;
+      this.points = points;
+      this.options = options;
+      const selected = points.find(p=>p.slug===options.selectedSlug);
+      if (selectionChanged && this.viewMax && selected && selected.costC>this.viewMax) this.viewMax=Math.min(options.costMax,selected.costC*1.08);
+      this.draw();
+    }
+
+    reset() {
+      this.hovered = null;
+      this.viewMax = this.options.costMax || 4.25;
+      this.draw();
+    }
+
+    resize() {
+      const rect = this.canvas.getBoundingClientRect();
+      this.width = rect.width || 640;
+      this.height = rect.height || 460;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      this.canvas.width = Math.round(this.width * dpr);
+      this.canvas.height = Math.round(this.height * dpr);
+      this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      this.draw();
+    }
+
+    rgb(color) {
+      if (Array.isArray(color)) return color;
+      const value = String(color || '#ffffff');
+      if (/^#[0-9a-f]{6}$/i.test(value)) return [1, 3, 5].map(i => parseInt(value.slice(i, i + 2), 16));
+      if (/^#[0-9a-f]{3}$/i.test(value)) return [1, 2, 3].map(i => parseInt(value[i] + value[i], 16));
+      const match = value.match(/rgba?\(\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)/i);
+      if (match) return match.slice(1, 4).map(Number);
+      if (!this.colorProbe) this.colorProbe = document.createElement('canvas').getContext('2d');
+      this.colorProbe.clearRect(0, 0, 1, 1);
+      this.colorProbe.fillStyle = value;
+      this.colorProbe.fillRect(0, 0, 1, 1);
+      return Array.from(this.colorProbe.getImageData(0, 0, 1, 1).data).slice(0, 3);
+    }
+
+    background(width, height, maximum) {
+      const fn = this.options.colorRGBForGap || this.options.colorForGap;
+      const key = `${Math.ceil(width)}:${Math.ceil(height)}:${maximum}`;
+      if (this.gradientKey === key && this.gradientFunction === fn) return this.gradient;
+      const image = document.createElement('canvas');
+      image.width = Math.ceil(width); image.height = Math.ceil(height);
+      const ctx = image.getContext('2d'), pixels = ctx.createImageData(image.width, image.height);
+      const palette = Array.from({ length: 513 }, (_, i) => this.rgb(fn ? fn(i / 512 * maximum) : [255, 255 * (1 - i / 512), 255 * (1 - i / 512)]));
+      for (let y = 0; y < image.height; y++) {
+        for (let x = 0; x < image.width; x++) {
+          const gap = x / image.width - y / image.height;
+          if (gap < 0) continue;
+          const rgb = palette[Math.min(512, Math.round(gap * 512))];
+          const offset = (y * image.width + x) * 4;
+          pixels.data[offset] = rgb[0]; pixels.data[offset + 1] = rgb[1]; pixels.data[offset + 2] = rgb[2]; pixels.data[offset + 3] = 255;
+        }
+      }
+      ctx.putImageData(pixels, 0, 0);
+      this.gradientKey = key; this.gradientFunction = fn; this.gradient = image;
+      return image;
+    }
+
+    hit(x, y) {
+      return this.projected.filter(p => Math.hypot(p.x - x, p.y - y) < 13)
+        .sort((a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y)
+          || this.projected.indexOf(b) - this.projected.indexOf(a))[0] || null;
+    }
+
+    draw() {
+      const c = this.ctx, width = this.width, height = this.height;
+      if (!width || !height) return;
+      c.clearRect(0, 0, width, height);
+      const compact = width < 480, maximum = this.viewMax || this.options.costMax || 4.25;
+      const L = 16, T = 78, W = Math.max(120, width - L - (compact ? 92 : 125)), H = Math.max(120, height - T - 28);
+      const mapX = value => L + W * (1 - value / maximum);
+      const mapY = value => T + H * (1 - value / maximum);
+      const triangle = () => {
+        c.beginPath(); c.moveTo(L, T); c.lineTo(L + W, T); c.lineTo(L + W, T + H); c.closePath();
+      };
+      const ticks = this.options.costTicks || [];
+      c.save(); triangle(); c.clip();
+      c.drawImage(this.background(W, H, maximum), L, T, W, H);
+      ticks.forEach(t => {
+        if (t.value < 0 || t.value > maximum) return;
+        const x = mapX(t.value), y = mapY(t.value);
+        c.beginPath(); c.moveTo(x, T); c.lineTo(x, T + H); c.moveTo(L, y); c.lineTo(L + W, y);
+        c.strokeStyle = 'rgba(255,255,255,0.48)'; c.lineWidth = 1; c.stroke();
+      });
+      this.projected = this.points.filter(p => p.costC >= p.costQ && p.costQ >= 0 && p.costC <= maximum)
+        .map(p => ({ ...p, x: mapX(p.costQ), y: mapY(p.costC) }))
+        .sort((a, b) => Number(a.slug === this.options.selectedSlug) - Number(b.slug === this.options.selectedSlug));
+      this.projected.forEach(p => {
+        const active = p.slug === this.options.selectedSlug || p.slug === this.hovered?.slug;
+        c.beginPath(); c.arc(p.x, p.y, active ? 8.5 : 6.6, 0, Math.PI * 2); c.fillStyle = '#fff'; c.fill();
+        c.beginPath(); c.arc(p.x, p.y, active ? 5.8 : 4.7, 0, Math.PI * 2); c.fillStyle = p.color || '#b93636'; c.fill();
+        c.lineWidth = 1.1; c.strokeStyle = '#8e3535'; c.stroke();
+        if (active) { c.beginPath(); c.arc(p.x, p.y, 10.3, 0, Math.PI * 2); c.strokeStyle = '#243248'; c.lineWidth = 1.3; c.stroke(); }
+      });
+      const names = [...this.projected].sort((a, b) => Number(b.slug === this.options.selectedSlug) - Number(a.slug === this.options.selectedSlug) || b.strength - a.strength).slice(0, 3);
+      const occupied = [];
+      names.forEach(p => {
+        const name = p.shortName || p.name;
+        c.font = `500 ${compact ? 10 : 11}px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
+        const tw = c.measureText(name).width;
+        for (const [dx, dy] of [[12, -16], [-tw - 12, -16], [12, 16], [-tw / 2, -29], [-tw - 12, 16]]) {
+          const box = { x: p.x + dx - 4, y: p.y + dy - 9, w: tw + 8, h: 18 };
+          if (box.x < L + 2 || box.x + box.w > L + W - 2 || box.y < T + 2 || box.y + box.h > T + H - 2) continue;
+          if ((box.x - L) / W < (box.y + box.h - T) / H) continue;
+          if (occupied.some(q => box.x < q.x + q.w && box.x + box.w > q.x && box.y < q.y + q.h && box.y + box.h > q.y)) continue;
+          occupied.push(box);
+          c.fillStyle = 'rgba(255,255,255,0.91)'; c.fillRect(box.x, box.y, box.w, box.h);
+          c.fillStyle = '#354153'; c.textAlign = 'left'; c.textBaseline = 'middle'; c.fillText(name, p.x + dx, p.y + dy);
+          break;
+        }
+      });
+      c.save();
+      c.translate(L + W * 0.47 + 10, T + H * 0.47 - 14); c.rotate(Math.atan2(H, W));
+      c.font = 'italic 11px Georgia,serif'; c.textAlign = 'center'; c.textBaseline = 'bottom'; c.fillStyle = '#7b6870'; c.fillText('TQ = TC', 0, 0);
+      c.restore();
+      c.restore();
+      triangle(); c.strokeStyle = '#d4c4c7'; c.lineWidth = 1; c.stroke();
+      c.beginPath(); c.moveTo(L, T); c.lineTo(L + W, T); c.lineTo(L + W, T + H); c.strokeStyle = '#9d7a7d'; c.lineWidth = 1.2; c.stroke();
+      c.font = `500 ${compact ? 9 : 10}px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
+      const topLabels = [];
+      ticks.forEach((t, i) => {
+        if (t.value < 0 || t.value > maximum) return;
+        const x = mapX(t.value), y = mapY(t.value), label = String(t.label || '');
+        c.beginPath(); c.moveTo(x, T); c.lineTo(x, T - 5); c.moveTo(L + W, y); c.lineTo(L + W + 5, y);
+        c.strokeStyle = '#bba6aa'; c.stroke();
+        const tw = c.measureText(label).width;
+        const labelX = Math.max(tw / 2 + 3, Math.min(width - tw / 2 - 3, x));
+        let labelY = T - 15;
+        if (topLabels.some(q => Math.abs(labelX - q.x) < (tw + q.w) / 2 + 5)) labelY -= 16;
+        topLabels.push({ x: labelX, w: tw });
+        c.fillStyle = '#74676f'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(label, labelX, labelY);
+        c.textAlign = 'left'; c.fillText(label, L + W + 10, y);
+      });
+      c.font = '600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif';
+      c.fillStyle = '#695463'; c.textAlign = 'center'; c.textBaseline = 'middle';
+      c.fillText('QUANTUM COMPLEXITY', L + W / 2, 22);
+      c.save(); c.translate(width - 13, T + H / 2); c.rotate(Math.PI / 2); c.fillText('CLASSICAL COMPLEXITY', 0, 0); c.restore();
+    }
+  }
+  window.CostScene = CostScene;
+})();
 </script><script>const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const alpha = Math.log2((1 + Math.sqrt(33)) / 4);
@@ -511,26 +706,42 @@ const alpha = Math.log2((1 + Math.sqrt(33)) / 4);
 // Coordinates embed the ordering of the displayed asymptotic growth rates.
 // Equal ratios share an x coordinate; no finite-size evaluation enters this view.
 const models = {
-  search: {strength:2.4,gain:'N<sup>1/2</sup>',gainText:'N¹ᐟ²',Q:'Θ(√N)',C:'Θ(N)',parameter:'N: candidate solutions',model:'Boolean-oracle queries',evidence:1,hardware:0},
-  mst: {strength:2.4,gain:'N<sup>1/2</sup>',gainText:'N¹ᐟ²',Q:'Θ(N<sup>3/2</sup>)',C:'Θ(N²)',parameter:'N: graph vertices',model:'Adjacency-matrix queries',evidence:1,hardware:2},
-  formula: {strength:1.4,gain:`N<sup>${(alpha-.5).toFixed(3)}…</sup>`,gainText:`N^${(alpha-.5).toFixed(3)}…`,Q:'O(√N)',C:`Θ(N<sup>${alpha.toFixed(3)}…</sup>)`,parameter:'N: leaves of a balanced binary formula',model:'Leaf-value queries',evidence:1,hardware:1},
-  collision: {strength:.7,gain:'N<sup>1/6</sup>',gainText:'N¹ᐟ⁶',Q:'O(N<sup>1/3</sup>)',C:'Θ(√N)',parameter:'N: hash range size',model:'Random-function queries',evidence:1,hardware:3},
-  claw: {strength:1.8,gain:'N<sup>1/3</sup>',gainText:'N¹ᐟ³',Q:'O(N<sup>2/3</sup>)',C:'Θ(N)',parameter:'N: size of each function domain',model:'Balanced-domain function queries',evidence:1,hardware:3},
-  local: {strength:1.05,gain:'N<sup>1/6</sup>(log N)<sup>1/3</sup>',gainText:'N¹ᐟ⁶(log N)¹ᐟ³',Q:'Θ(N<sup>1/3</sup>(log N)<sup>1/6</sup>)',C:'Θ(N<sup>1/2</sup>(log N)<sup>1/2</sup>)',parameter:'N: vertices of the Boolean hypercube',model:'Value-oracle queries',evidence:1,hardware:2},
-  factoring: {strength:3.8,gain:'exp(Θ(N<sup>1/3</sup>(log N)<sup>2/3</sup>))',gainText:'exp(Θ(N¹ᐟ³(log N)²ᐟ³))',Q:'Õ(N²)',C:'exp((c + o(1))N<sup>1/3</sup>(log N)<sup>2/3</sup>)',parameter:'N: integer bit length',model:'Quantum gates / GNFS heuristic time',evidence:.75,hardware:1},
-  even: {strength:4.9,gain:'Õ(2<sup>N/2</sup>/N)',gainText:'Õ(2ᴺᐟ²/N)',Q:'O(N)',C:'Õ(2<sup>N/2</sup>)',parameter:'N: block length in bits',model:'Coherent encryption / balanced classical queries',evidence:1,hardware:3}
+  search: {gain:'N<sup>1/2</sup>',gainText:'N¹ᐟ²',Q:'Θ(√N)',C:'Θ(N)',parameter:'N: candidate solutions',model:'Boolean-oracle queries',evidence:1,hardware:0},
+  mst: {gain:'N<sup>1/2</sup>',gainText:'N¹ᐟ²',Q:'Θ(N<sup>3/2</sup>)',C:'Θ(N²)',parameter:'N: graph vertices',model:'Adjacency-matrix queries',evidence:1,hardware:2},
+  formula: {gain:`N<sup>${(alpha-.5).toFixed(3)}…</sup>`,gainText:`N^${(alpha-.5).toFixed(3)}…`,Q:'O(√N)',C:`Θ(N<sup>${alpha.toFixed(3)}…</sup>)`,parameter:'N: leaves of a balanced binary formula',model:'Leaf-value queries',evidence:1,hardware:1},
+  collision: {gain:'N<sup>1/6</sup>',gainText:'N¹ᐟ⁶',Q:'O(N<sup>1/3</sup>)',C:'Θ(√N)',parameter:'N: hash range size',model:'Random-function queries',evidence:1,hardware:3},
+  claw: {gain:'N<sup>1/3</sup>',gainText:'N¹ᐟ³',Q:'O(N<sup>2/3</sup>)',C:'Θ(N)',parameter:'N: size of each function domain',model:'Balanced-domain function queries',evidence:1,hardware:3},
+  local: {gain:'N<sup>1/6</sup>(log N)<sup>1/3</sup>',gainText:'N¹ᐟ⁶(log N)¹ᐟ³',Q:'Θ(N<sup>1/3</sup>(log N)<sup>1/6</sup>)',C:'Θ(N<sup>1/2</sup>(log N)<sup>1/2</sup>)',parameter:'N: vertices of the Boolean hypercube',model:'Value-oracle queries',evidence:1,hardware:2},
+  factoring: {gain:'exp(Θ(N<sup>1/3</sup>(log N)<sup>2/3</sup>))',gainText:'exp(Θ(N¹ᐟ³(log N)²ᐟ³))',Q:'Õ(N²)',C:'exp((c + o(1))N<sup>1/3</sup>(log N)<sup>2/3</sup>)',parameter:'N: integer bit length',model:'Quantum gates / GNFS heuristic time',evidence:.75,hardware:1},
+  even: {gain:'Õ(2<sup>N/2</sup>/N)',gainText:'Õ(2ᴺᐟ²/N)',Q:'O(N)',C:'Õ(2<sup>N/2</sup>)',parameter:'N: block length in bits',model:'Coherent encryption / balanced classical queries',evidence:1,hardware:3}
 };
 const hardwareLabels = ['Small demonstrations','Fault-tolerant circuits','Demanding coherent access','Large or specialized coherent resources'];
 const evidenceLabels = {0:'Unestablished',.5:'Partial evidence',.75:'Conditional evidence',1:'Rigorous oracle comparison'};
-const ticks = [{value:0,label:'1'},{value:.7,label:'N¹ᐟ⁶'},{value:2.4,label:'N¹ᐟ²'},{value:3.8,label:'exp(Θ(N¹ᐟ³(log N)²ᐟ³))'},{value:4.9,label:'2ᴺᐟ²/N'}];
+const costPositions = {
+  search:[.5,1], mst:[1.5,2], formula:[.5,alpha],
+  collision:[1/3,.5], claw:[2/3,1], local:[.41,.61],
+  factoring:[2.06,3.33], even:[1,4]
+};
+const strengthFromGap = gap => Math.log1p(Math.max(0,gap)/.08);
+for (const [slug,coordinates] of Object.entries(costPositions)) {
+  Object.assign(models[slug],{costQ:coordinates[0],costC:coordinates[1],strength:strengthFromGap(coordinates[1]-coordinates[0])});
+}
+const ticks = [{value:0,label:'1'},
+  {value:models.collision.strength,label:'N¹ᐟ⁶'},
+  {value:models.search.strength,label:'N¹ᐟ²'},
+  {value:models.factoring.strength,label:'exp(Θ(N¹ᐟ³(log N)²ᐟ³))'},
+  {value:models.even.strength,label:'2ᴺᐟ²/N'}];
 let selected = 'factoring';
 let points = [];
-const color = s => {
-  const saturation = s <= 2.4 ? .11 + .07 * s / 2.4 : .18 + .82 * (s - 2.4) / 2.5;
-  const pale = Math.round(255 * (1 - Math.min(1, saturation)));
-  return `rgb(255,${pale},${pale})`;
+const colorRGB = s => {
+  const gap = .08*Math.expm1(Math.max(0,s));
+  const saturation = Math.pow(Math.min(1,-Math.expm1(-gap/2)/-Math.expm1(-3/2)),.88);
+  const pale = Math.round(255*(1-saturation));
+  return [255,pale,pale];
 };
+const color = s => `rgb(${colorRGB(s).join(',')})`;
 const scene = new SpeedupScene($('scene'), {onSelect:select,onHover:tooltip});
+const costScene = new CostScene($('cost'), {onSelect:select,onHover:tooltip});
 
 function select(slug) { selected = slug; update(); }
 function tooltip(point, position) {
@@ -544,11 +755,19 @@ function tooltip(point, position) {
 function update() {
   points = SAMPLE_DATA.map(d => ({...d,...models[d.slug],color:color(models[d.slug].strength),selected:d.slug===selected}));
   scene.setData(points, {
-    strengthMax:5.4,hardwareMax:3.4,strengthTicks:ticks,
+    strengthMax:strengthFromGap(3)*1.10,hardwareMax:3.4,strengthTicks:ticks,
     evidenceTicks:[{value:.5,label:'Partial'},{value:.75,label:'Conditional'},{value:1,label:'Proved'}],
     hardwareTicks:[{value:0,label:'Small demos'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],
     selectedSlug:selected
   });
+  costScene.setData(points,{
+    costMax:4.25, selectedSlug:selected,
+    colorForGap:gap=>color(strengthFromGap(gap)),
+    colorRGBForGap:gap=>colorRGB(strengthFromGap(gap)),
+    costTicks:[{value:.5,label:'√N'},{value:1,label:'N'},
+      {value:2,label:'N²'},{value:3.5,label:'exp(√N)'},{value:4,label:'2ᴺᐟ²'}]
+  });
+  document.querySelector('.gradient').style.background = 'linear-gradient(90deg,' + Array.from({length:9},(_,i)=>`${color(strengthFromGap(3*i/8))} ${100*i/8}%`).join(',') + ')';
   $('problemList').innerHTML = points.map(p => `<button class="problem-button ${p.slug===selected?'selected':''}" data-slug="${p.slug}" aria-pressed="${p.slug===selected}"><span class="problem-swatch" style="background:${p.color}"></span>${esc(p.name)}</button>`).join('');
   const p = points.find(p=>p.slug===selected);
   const papers = [...p.papers.slice(0,3),...p.papers.filter(r=>selected==='factoring'&&/2048|million/i.test(r.title))];
@@ -557,5 +776,6 @@ function update() {
 }
 $('problemList').addEventListener('click',event=>{const button=event.target.closest('[data-slug]');if(button)select(button.dataset.slug);});
 $('reset').addEventListener('click',()=>scene.reset());
+$('resetCost').addEventListener('click',()=>costScene.reset());
 update();
 </script></body></html>

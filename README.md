@@ -17,7 +17,7 @@ The first three chapters concern discrete objects and configurations, including 
 
 ## Interactive demo
 
-The [eight-problem visualization](visualization/quantum-speedup-demo.html) is a self-contained HTML file: download it and open it in a browser. It shows asymptotic speedup, evidence and qualitative hardware difficulty in a rotatable 3D plot. Titles identify the problems. [Run locally](visualization/README.md).
+The [eight-problem visualization](visualization/quantum-speedup-demo.html) is a self-contained HTML file: download it and open it in a browser. It links a rotatable 3D plot of asymptotic speedup, evidence and qualitative hardware difficulty to a triangular quantum-versus-classical complexity plot. Titles identify the problems. [Run locally](visualization/README.md).
 
 ![Quantum speedup visualization preview](visualization/demo-preview.png)
 
