@@ -91,13 +91,13 @@
     }
 
     project(x, y, z) {
-      const wx = (x - 0.5) * 1.9, wy = (y - 0.5) * 1.5, wz = (z - 0.5) * 1.3;
+      const wx = (x - 0.5) * (this.width > 800 ? 3 : 1.9), wy = (y - 0.5) * 1.5, wz = (z - 0.5) * 1.3;
       const xx = Math.cos(this.yaw) * wx + Math.sin(this.yaw) * wz;
       const zz = -Math.sin(this.yaw) * wx + Math.cos(this.yaw) * wz;
       const yy = Math.cos(this.pitch) * wy - Math.sin(this.pitch) * zz;
       const depth = Math.sin(this.pitch) * wy + Math.cos(this.pitch) * zz;
       const scale = Math.min(this.width / 3.30, this.height / 2.80) * this.zoom;
-      return { x: this.width * 0.53 + xx * scale, y: this.height * 0.48 - yy * scale, depth };
+      return { x: this.width * 0.53 + xx * scale, y: this.height * 0.45 - yy * scale, depth };
     }
 
     line(a, b, color = '#e5e8ed', width = 1, dashed = false) {
@@ -119,14 +119,16 @@
 
     hit(x, y) {
       return this.projected.filter(p => Math.hypot(p.x - x, p.y - y) < 13)
-        .sort((a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y))[0] || null;
+        .sort((a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y)
+          || this.projected.indexOf(b) - this.projected.indexOf(a))[0] || null;
     }
 
     draw() {
       const c = this.ctx, w = this.width, h = this.height;
       if (!w || !h) return;
       c.clearRect(0, 0, w, h);
-      const maxS = this.options.strengthMax || 8, maxH = this.options.hardwareMax || 14;
+      const maxS = this.options.strengthMax || 5.4, maxH = this.options.hardwareMax || 3.4;
+      const compact = w < 600;
       const floor = [[0, 0, 0], [1, 0, 0], [1, 0, 1], [0, 0, 1]].map(p => this.project(...p));
       c.beginPath(); floor.forEach((p, i) => i ? c.lineTo(p.x, p.y) : c.moveTo(p.x, p.y));
       c.closePath(); c.fillStyle = '#f7f8fa'; c.fill();
@@ -143,27 +145,36 @@
       this.line([0, 0, 0], [1, 0, 0], '#c84e4a', 1.6);
       this.line([0, 0, 0], [0, 1, 0], '#526fa6', 1.6);
       this.line([0, 0, 0], [0, 0, 1], '#448779', 1.6);
-      this.label('STRENGTH', this.project(0.55, 0, 0), '#ad3333', 0, 48, 'center', 11);
-      this.label('EVIDENCE', this.project(0, 0.53, 0), '#46689b', -32, -12, 'right', 11);
-      this.label('HARDWARE', this.project(0, 0, 1), '#337c6c', -8, 18, 'right', 11);
-      [0, 0.5, 0.75, 1].forEach(t => {
-        const p = this.project(0, t, 0);
-        this.label(t.toFixed(t === 0 || t === 1 ? 0 : 2).replace(/0$/, t === 0 ? '0' : ''), p, '#7e8998', -11, 0, 'right', 10);
+      this.label('ASYMPTOTIC SPEEDUP', this.project(0.55, 0, 0), '#ad3333', 0, 62, 'center', 11);
+      this.label('EVIDENCE', this.project(0, 1, 0), '#46689b', -12, -29, 'right', 11);
+      this.label('HARDWARE', this.project(0, 0, 1), '#337c6c', -12, -28, 'right', 11);
+      const evidenceTicks = this.options.evidenceTicks || [
+        { value: 0, label: 'Unestablished' }, { value: 0.5, label: 'Partial' },
+        { value: 0.75, label: 'Conditional' }, { value: 1, label: 'Proved' }
+      ];
+      evidenceTicks.forEach(t => {
+        const p = this.project(0, t.value, 0);
+        this.label(t.label || '', p, '#708098', -12, t.value === 0 ? -10 : 0, 'right', compact ? 9 : 11);
       });
-      const strengthTicks = this.options.strengthTicks || [{ value: 0 }, { value: 1 }, { value: maxS / 2 }, { value: maxS }];
-      strengthTicks.forEach(t => {
+      const strengthTicks = this.options.strengthTicks || [];
+      strengthTicks.forEach((t, i) => {
         if (t.value < 0 || t.value > maxS) return;
         const p = this.project(t.value / maxS, 0, 0);
         c.beginPath(); c.moveTo(p.x, p.y); c.lineTo(p.x, p.y + 5); c.strokeStyle = '#c8908b'; c.lineWidth = 1; c.stroke();
-        this.label(Number(t.value.toFixed(1)).toString(), p, '#8b6c70', 0, 16, 'center', 10);
-        if (t.value === 1 || t.value > 2) this.label(t.label || '', p, '#8b6c70', 0, 31, 'center', 9);
+        this.label(t.label || '', p, '#8b6c70', 0, compact ? 18 + (i % 2) * 18 : (t.label.length > 18 ? 41 : 22), 'center', compact ? 9 : 11);
       });
-      [0.5, 1].forEach(t => {
-        const p = this.project(0, 0, t);
-        this.label((t * maxH).toFixed(0), p, '#6b8b82', -9, 0, 'right', 10);
+      const hardwareTicks = this.options.hardwareTicks || [
+        { value: 0, label: 'Small demos' }, { value: 1, label: 'Fault-tolerant' },
+        { value: 2, label: 'Coherent data' }, { value: 3, label: 'Specialized resources' }
+      ];
+      hardwareTicks.forEach(t => {
+        if (t.value < 0 || t.value > maxH) return;
+        const p = this.project(0, 0, t.value / maxH);
+        this.label(t.label || '', p, '#6b8b82', -12, t.value === 0 ? 11 : 0, 'right', compact ? 9 : 11);
       });
       this.projected = this.points.map(p => ({ ...p, ...this.project(p.strength / maxS, p.evidence, p.hardware / maxH) }))
-        .sort((a, b) => b.depth - a.depth);
+        .sort((a, b) => b.depth - a.depth
+          || Number(a.slug === this.options.selectedSlug) - Number(b.slug === this.options.selectedSlug));
       const occupied = [];
       this.projected.forEach(p => {
         const selected = p.slug === this.options.selectedSlug || p.selected;
