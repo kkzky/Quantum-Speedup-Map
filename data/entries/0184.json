@@ -143,6 +143,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Random-circuit execution",
+  "featured": true,
+  "display_name": "Random circuit sampling",
   "resource_models": [
     "gate"
   ],

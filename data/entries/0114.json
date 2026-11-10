@@ -129,6 +129,8 @@
     "classical_kind": "polynomial",
     "gain": "Strongest regime: exponential to subexponential in log n when m is comparable to n"
   },
+  "featured": false,
+  "display_name": "Average-case multidimensional pattern matching",
   "resource_models": [
     "oracle",
     "gate"

@@ -97,6 +97,8 @@
     "gain": "Exponential to polynomial in the superposition-query attack model",
     "classical_exponent": 0.5
   },
+  "featured": false,
+  "display_name": "CBC-MAC forgery under superposition access",
   "resource_models": [
     "oracle"
   ],

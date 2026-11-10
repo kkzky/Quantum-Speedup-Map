@@ -6,7 +6,7 @@
   "title_latex": "Sampling commuting quantum circuits",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "iqp_sampling",
   "inventory_ids": [],
@@ -126,6 +126,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: IQP circuit sampling",
+  "featured": false,
+  "display_name": "Sampling commuting quantum circuits",
   "resource_models": [
     "gate"
   ],

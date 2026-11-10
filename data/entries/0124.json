@@ -121,6 +121,8 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Omega(\\sqrt{n/z})"
   },
+  "featured": false,
+  "display_name": "Lempel–Ziv factorization",
   "resource_models": [
     "oracle",
     "gate"

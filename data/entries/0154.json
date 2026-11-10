@@ -105,6 +105,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial when r is exponential in the encoding length"
   },
+  "featured": false,
+  "display_name": "Semidirect discrete logarithm",
   "resource_models": [
     "oracle",
     "gate"

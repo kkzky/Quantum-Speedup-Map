@@ -103,6 +103,8 @@
     "classical_kind": "polynomial",
     "gain": "No established asymptotic speedup"
   },
+  "featured": false,
+  "display_name": "Link invariants from quantum doubles of finite groups",
   "resource_models": [
     "gate"
   ],

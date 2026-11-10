@@ -107,6 +107,8 @@
     "quantum_exponent": 0,
     "classical_exponent": 0.25
   },
+  "featured": false,
+  "display_name": "Testing one-to-one periodicity",
   "resource_models": [
     "oracle"
   ],

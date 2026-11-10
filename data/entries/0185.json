@@ -126,6 +126,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Linear-optical boson sampling",
+  "featured": true,
+  "display_name": "Boson sampling",
   "resource_models": [
     "gate"
   ],

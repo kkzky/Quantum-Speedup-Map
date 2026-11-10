@@ -86,6 +86,8 @@
     "classical_kind": "polynomial",
     "gain": "n^{1/2-1/k+1/(2(2^k-1))}"
   },
+  "featured": false,
+  "display_name": "Directed subgraph-freeness testing",
   "resource_models": [
     "oracle"
   ],

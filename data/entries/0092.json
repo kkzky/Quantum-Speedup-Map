@@ -41,9 +41,9 @@
     },
     "hardware": {
       "color_key": "white",
-      "description_latex": "A complexity constraint. A concrete decision algorithm supplies its own address register, workspace and oracle circuit.",
+      "description_latex": "Not applicable: this entry is a theorem relating query-complexity measures over all total Boolean functions. Hardware resources belong to a chosen function and its decision circuit.",
       "category_id": "hardware-unspecified",
-      "description_text": "A complexity constraint. A concrete decision algorithm supplies its own address register, workspace and oracle circuit."
+      "description_text": "Not applicable: this entry is a theorem relating query-complexity measures over all total Boolean functions. Hardware resources belong to a chosen function and its decision circuit."
     }
   },
   "algorithm_heading_latex": "Algorithm: Bounded-error quantum query algorithms",
@@ -69,8 +69,25 @@
   "algorithm_ids": [],
   "also_used_in": [],
   "source_latex": "\\entrytitle{92}{Total Boolean decision problems: a fourth-power bound}{strengthPolynomial}{evidenceProved}{white}\n\\setcounter{problem}{91}\n\\begin{problem}[Total Boolean function evaluation]\nFor a total function $f:\\{0,1\\}^N\\to\\{0,1\\}$, determine $f(x)$ by accessing individual bits of $x$. Every $N$-bit string is a valid input. Threshold decision versions of explicitly encoded optimization problems are examples. Complexity is measured in input-bit oracle queries, with deterministic classical and bounded-error quantum algorithms distinguished.\n\\end{problem}\n\\speedupheading\n\\complexity{Quantum}{$Q(f)$ queries, an optimal bounded-error quantum decision algorithm.}\nThe theorem relates this resource to deterministic query complexity for every total Boolean function. In particular, every nonconstant monotone graph property on an $n$-vertex adjacency matrix has quantum query complexity $\\Omega(n)$.\n\n\\complexity{Classical}{$D(f)=O(Q(f)^4)$ queries, deterministic decision-tree evaluation.}\nA decision tree achieving this bound exists for every total $f$. Randomized query complexity satisfies $R(f)\\le D(f)$. Known total functions attain the fourth-power deterministic-versus-quantum relationship up to logarithmic factors. The resource being bounded is the number of queried input bits; computation on the answers is free in this model.\n\n\\dimensionlabel{Strength}{strengthPolynomial} A polynomial upper bound on the possible query advantage, including separations greater than quadratic. The fourth-power relationship concerns deterministic classical complexity.\n\n\\dimensionlabel{Evidence}{evidenceProved} Unconditional query-complexity theorems, with the fourth-power exponent attained up to logarithmic factors.\n\n\\dimensionlabel{Hardware}{white} A complexity constraint. A concrete decision algorithm supplies its own address register, workspace and oracle circuit.\n\n\\subhead{Algorithm: Bounded-error quantum query algorithms}\n\\begin{algorithmindex}{92}\n\\item \\href{https://arxiv.org/pdf/2004.13231}{Aaronson, Ben-David, Kothari and Tal, \\emph{Quantum Implications of Huang's Sensitivity Theorem} (2020)}. Theorem 1 for $D(f)=O(Q(f)^4)$; Theorem 3 for monotone graph properties. Sections 3--4 give the corresponding arguments.\n\\end{algorithmindex}",
-  "importance": "high",
+  "importance": "medium",
   "origin": "manuscript",
+  "featured": false,
+  "display_name": "Total Boolean decision problems: a fourth-power bound",
+  "hardware_assessment": {
+    "color_key": "white",
+    "description_latex": "Not applicable: this entry is a theorem relating query-complexity measures over all total Boolean functions. Hardware resources belong to a chosen function and its decision circuit.",
+    "visual_difficulty": null,
+    "visual_label": "Not applicable (complexity bound)",
+    "applicability": "not_applicable",
+    "assessment_basis": "Theorem 1 quantifies over every total Boolean function and the entry has no algorithm node. Q(f) is a minimum over quantum decision algorithms; a common implementation-difficulty score would require selecting a particular function and circuit.",
+    "sources": [
+      {
+        "title": "Quantum Implications of Huang's Sensitivity Theorem",
+        "url": "https://arxiv.org/html/2004.13231",
+        "locator": "Theorem 1; Section 2.1 (definitions of query-complexity measures)"
+      }
+    ]
+  },
   "resource_models": [
     "oracle"
   ],

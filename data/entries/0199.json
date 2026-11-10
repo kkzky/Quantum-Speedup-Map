@@ -88,6 +88,8 @@
     "quantum_exponent": 0,
     "classical_exponent": 0.5
   },
+  "featured": false,
+  "display_name": "Forrelation",
   "resource_models": [
     "oracle",
     "gate"

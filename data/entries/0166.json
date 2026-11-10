@@ -103,6 +103,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log q"
   },
+  "featured": false,
+  "display_name": "Hidden quadratic and cubic polynomial graphs",
   "resource_models": [
     "oracle",
     "gate"

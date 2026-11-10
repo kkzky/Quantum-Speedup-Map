@@ -6,7 +6,7 @@
   "title_latex": "Hidden matching in one-way communication",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "hidden_matching_communication",
   "inventory_ids": [],
@@ -103,6 +103,8 @@
     "classical_exponent": 0.5,
     "gain": "\\Theta(\\sqrt n/\\log n)"
   },
+  "featured": false,
+  "display_name": "Hidden matching in one-way communication",
   "resource_models": [
     "other"
   ],

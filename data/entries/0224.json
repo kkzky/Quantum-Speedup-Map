@@ -115,6 +115,8 @@
     "classical_kind": "polynomial",
     "gain": "n^{k/2}/\\varepsilon\\text{ relative to the cited classical upper bound}"
   },
+  "featured": false,
+  "display_name": "k-wise uniformity testing",
   "resource_models": [
     "oracle"
   ],

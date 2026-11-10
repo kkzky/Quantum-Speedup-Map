@@ -115,6 +115,8 @@
     "gain": "Subexponential to polynomial at constant distance",
     "quantum_exponent": 2
   },
+  "featured": false,
+  "display_name": "Monotonicity testing of Boolean functions",
   "resource_models": [
     "oracle",
     "other"

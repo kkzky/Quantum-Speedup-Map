@@ -92,6 +92,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Mermin--Peres magic-square strategy",
+  "featured": false,
+  "display_name": "Mermin–Peres magic-square game",
   "resource_models": [
     "other"
   ],

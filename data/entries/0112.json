@@ -108,6 +108,8 @@
     "quantum_exponent": 1,
     "classical_exponent": 2
   },
+  "featured": false,
+  "display_name": "Approximate median",
   "resource_models": [
     "oracle"
   ],

@@ -6,7 +6,7 @@
   "title_latex": "Longest common substring",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-g08",
   "inventory_ids": [
@@ -88,6 +88,8 @@
     "quantum_exponent": 0.6666666666666666,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Longest common substring",
   "resource_models": [
     "oracle",
     "gate"

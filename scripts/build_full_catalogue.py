@@ -107,12 +107,22 @@ def main():
     priorities = settings.get('importance', {})
     high_priority = set(priorities.get('high', []))
     medium_priority = set(priorities.get('medium', []))
+    featured = set(priorities.get('featured', []))
+    hardware_path = ROOT / 'data/hardware_assessments.json'
+    hardware_assessments = json.loads(hardware_path.read_text(encoding='utf-8')) if hardware_path.exists() else {}
     plain = LatexNodes2Text()
     for entry in records:
         entry['title'] = plain.latex_to_text(entry['title_latex'])
         entry['problem']['name'] = plain.latex_to_text(entry['problem']['name_latex'])
         if priorities:
             entry['importance'] = 'high' if entry['number'] in high_priority else 'medium' if entry['number'] in medium_priority else 'peripheral'
+        entry['featured'] = entry['number'] in featured
+        entry['display_name'] = settings.get('displayNames', {}).get(str(entry['number']), entry['title'])
+        assessment = hardware_assessments.get(str(entry['number']))
+        if assessment:
+            entry['hardware_assessment'] = assessment
+            entry['labels']['hardware'].update(color_key=assessment['color_key'],
+                description_latex=assessment['description_latex'])
         entry['resource_models'] = [name for name, members in settings.get('resources', {}).items()
                                     if entry['number'] in members]
     for algorithm in full['algorithms']:

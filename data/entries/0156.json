@@ -104,6 +104,8 @@
     "classical_kind": "polynomial",
     "gain": "(n+d)/d"
   },
+  "featured": false,
+  "display_name": "Polynomial interpolation over finite fields",
   "resource_models": [
     "oracle"
   ],

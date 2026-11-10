@@ -88,6 +88,8 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Oracle identification",
   "resource_models": [
     "oracle"
   ],

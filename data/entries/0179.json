@@ -77,6 +77,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Childs--Schulman--Vazirani hidden-radius algorithm",
+  "featured": false,
+  "display_name": "Hidden radius over a finite field",
   "resource_models": [
     "oracle",
     "gate"

@@ -86,6 +86,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial"
   },
+  "featured": false,
+  "display_name": "Hidden subgroups of nilpotency-class-two groups",
   "resource_models": [
     "oracle",
     "gate"

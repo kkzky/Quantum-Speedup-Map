@@ -88,6 +88,8 @@
     "quantum_exponent": 1,
     "classical_exponent": 0.5
   },
+  "featured": false,
+  "display_name": "Boolean-function isomorphism under coordinate permutations",
   "resource_models": [
     "oracle",
     "gate"

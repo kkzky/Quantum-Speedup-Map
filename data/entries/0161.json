@@ -6,7 +6,7 @@
   "title_latex": "Generalized hidden shift",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-a18",
   "inventory_ids": [
@@ -86,6 +86,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log N"
   },
+  "featured": false,
+  "display_name": "Generalized hidden shift",
   "resource_models": [
     "oracle",
     "gate"

@@ -77,6 +77,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Bacon--Childs--van Dam semidirect-product HSP algorithm",
+  "featured": false,
+  "display_name": "Hidden subgroups of selected semidirect-product groups",
   "resource_models": [
     "oracle",
     "gate"

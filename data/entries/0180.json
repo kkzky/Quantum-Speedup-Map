@@ -94,6 +94,8 @@
     "classical_exponent": null,
     "gain": "2^{\\lambda^c}/\\operatorname{poly}(\\lambda)"
   },
+  "featured": false,
+  "display_name": "Codeword search with random hash constraints",
   "resource_models": [
     "oracle",
     "gate"

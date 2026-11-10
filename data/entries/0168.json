@@ -6,7 +6,7 @@
   "title_latex": "Jones polynomial approximation",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-a31",
   "inventory_ids": [
@@ -130,6 +130,8 @@
     "classical_kind": "unknown",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
   },
+  "featured": false,
+  "display_name": "Jones polynomial approximation",
   "resource_models": [
     "gate"
   ],

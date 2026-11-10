@@ -93,6 +93,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: BCMVV test of quantumness; Computational Bell-test protocol",
+  "featured": false,
+  "display_name": "Interactive proofs of quantumness",
   "resource_models": [
     "gate"
   ],

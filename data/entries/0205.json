@@ -86,6 +86,8 @@
     "classical_kind": "polynomial",
     "gain": "Up to a fourth-power relation in the appropriate gap regime"
   },
+  "featured": false,
+  "display_name": "Gapped group testing",
   "resource_models": [
     "oracle"
   ],

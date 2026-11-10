@@ -6,7 +6,7 @@
   "title_latex": "Classical verification of quantum computation",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "classical_verification_bqp",
   "inventory_ids": [],
@@ -75,6 +75,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Mahadev verification protocol",
+  "featured": false,
+  "display_name": "Classical verification of quantum computation",
   "resource_models": [
     "gate"
   ],

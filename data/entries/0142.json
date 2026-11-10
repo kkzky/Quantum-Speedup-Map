@@ -86,6 +86,8 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Theta(\\sqrt{m/n})"
   },
+  "featured": false,
+  "display_name": "Random spanning-tree sampling",
   "resource_models": [
     "oracle",
     "gate"

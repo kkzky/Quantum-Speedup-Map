@@ -96,6 +96,8 @@
     "quantum_exponent": 1.5,
     "classical_exponent": 2
   },
+  "featured": false,
+  "display_name": "Cycle detection",
   "resource_models": [
     "oracle",
     "gate"

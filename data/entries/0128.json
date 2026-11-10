@@ -121,6 +121,8 @@
     "classical_kind": "polynomial",
     "gain": "\\Omega(\\max\\{1,\\sqrt n/\\log^{h/2}n\\})"
   },
+  "featured": false,
+  "display_name": "Bounded-height Dyck language",
   "resource_models": [
     "oracle"
   ],

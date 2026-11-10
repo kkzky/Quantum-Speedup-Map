@@ -94,6 +94,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Support-vector classification with quantum kernel estimation; Shor order finding and discrete logarithms",
+  "featured": false,
+  "display_name": "Learning discrete-logarithm interval concepts",
   "resource_models": [
     "gate"
   ],

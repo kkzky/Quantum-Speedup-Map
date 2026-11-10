@@ -124,6 +124,8 @@
     "quantum_exponent": 0.6666666666666666,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Longest substring with distinct characters",
   "resource_models": [
     "gate"
   ],

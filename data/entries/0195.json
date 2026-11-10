@@ -6,7 +6,7 @@
   "title_latex": "Hidden subgroup identification in a general finite group",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "general_hsp_query_identification",
   "inventory_ids": [],
@@ -120,6 +120,8 @@
     "classical_exponent": null,
     "gain": "\\Omega(2^{n/2}/n^2)"
   },
+  "featured": false,
+  "display_name": "Hidden subgroup identification in a general finite group",
   "resource_models": [
     "oracle"
   ],

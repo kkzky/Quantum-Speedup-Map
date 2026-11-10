@@ -131,6 +131,8 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Longest square substring",
   "resource_models": [
     "gate"
   ],

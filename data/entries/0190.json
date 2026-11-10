@@ -6,7 +6,7 @@
   "title_latex": "Equality in simultaneous-message communication",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "equality_quantum_fingerprinting",
   "inventory_ids": [],
@@ -86,6 +86,8 @@
     "classical_exponent": 0.5,
     "gain": "\\Theta(\\sqrt n/\\log n)"
   },
+  "featured": false,
+  "display_name": "Equality in simultaneous-message communication",
   "resource_models": [
     "other"
   ],

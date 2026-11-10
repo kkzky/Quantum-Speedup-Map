@@ -132,6 +132,8 @@
     "classical_kind": "polynomial",
     "gain": "Nearly quadratic in junta size at constant distance; general error dependence is shown"
   },
+  "featured": false,
+  "display_name": "Junta testing",
   "resource_models": [
     "oracle"
   ],

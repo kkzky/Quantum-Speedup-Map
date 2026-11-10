@@ -6,7 +6,7 @@
   "title_latex": "Two-dimensional hidden linear function",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "two_dimensional_hidden_linear_function",
   "inventory_ids": [],
@@ -103,6 +103,8 @@
     "classical_exponent": null,
     "gain": "\\Omega(\\log n)"
   },
+  "featured": false,
+  "display_name": "Two-dimensional hidden linear function",
   "resource_models": [
     "other"
   ],

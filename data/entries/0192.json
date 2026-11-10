@@ -6,7 +6,7 @@
   "title_latex": "Set disjointness in two-party communication",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "set_disjointness_communication",
   "inventory_ids": [],
@@ -103,6 +103,8 @@
     "classical_exponent": 1,
     "gain": "\\Theta(\\sqrt n)"
   },
+  "featured": false,
+  "display_name": "Set disjointness in two-party communication",
   "resource_models": [
     "other"
   ],

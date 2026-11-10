@@ -86,6 +86,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Kedlaya quantum zeta-function algorithm; Watrous solvable-group order algorithm",
+  "featured": false,
+  "display_name": "Zeta functions of curves over finite fields",
   "resource_models": [
     "gate"
   ],

@@ -6,7 +6,7 @@
   "title_latex": "Finite abelian-group decomposition",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-a01",
   "inventory_ids": [
@@ -140,6 +140,8 @@
     "gain": "Exponential to polynomial in the generic representation",
     "classical_exponent": 0.5
   },
+  "featured": false,
+  "display_name": "Finite abelian-group decomposition",
   "resource_models": [
     "oracle",
     "gate"

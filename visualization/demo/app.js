@@ -2,10 +2,10 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const categories = {
   none:{center:0,range:[0,.18],rgb:[255,255,255]},
-  polynomial:{center:1.8,range:[.55,3.05],rgb:[255,224,224]},
-  intermediate:{center:4.5,range:[4.1,4.9],rgb:[255,208,208]},
-  exp_to_subexp:{center:6,range:[5.2,6.8],rgb:[255,112,112]},
-  to_polynomial:{center:8.75,range:[8,9.5],rgb:[255,0,0]}
+  polynomial:{center:2.4,range:[.55,4.15],rgb:[255,224,224]},
+  intermediate:{center:4.78,range:[4.7,4.9],rgb:[255,208,208]},
+  exp_to_subexp:{center:5.18,range:[5.07,5.3],rgb:[255,112,112]},
+  to_polynomial:{center:7.8,range:[5.9,9.5],rgb:[255,0,0]}
 };
 // Category-local offsets separate coincident observations; they do not encode a numerical rate.
 function layoutFraction(value) {
@@ -35,12 +35,12 @@ const records = (window.CATALOGUE_POINTS || window.SAMPLE_DATA || []).map(record
 });
 const bySlug=Object.fromEntries(records.map(p=>[p.slug,p]));
 const plotConfig=window.CATALOGUE_PLOT_CONFIG||{};
-const priority=p=>p.importance==='high'?3:p.importance==='peripheral'?1:2;
+const priority=p=>p.featured?4:p.importance==='high'?3:p.importance==='peripheral'?1:2;
 const sortedRecords=[...records].sort((a,b)=>priority(b)-priority(a)||a.name.localeCompare(b.name));
 const strengthMax=10;
-const strengthBoundaries=[{value:3.55,label:'Above polynomial'},{value:7.35,label:'(Sub)exp. → polynomial'}];
-const costMax=Math.max(4.25,...records.flatMap(p=>[p.costQ,p.costC]).filter(Number.isFinite))*1.01;
-const ticks=[{value:1.8,label:'Polynomial'},{value:4.5,label:'Improved\nexp./subexp.'},{value:6,label:'Exp. →\nsubexp.'},{value:8.75,label:'(Sub)exp. →\npolynomial'}];
+const strengthBoundaries=[{value:4.6,label:'Above polynomial'},{value:5.5,label:'(Sub)exp. → polynomial'}];
+const costMax=Math.max(3.65,...records.flatMap(p=>[p.costQ,p.costC]).filter(Number.isFinite))*1.01;
+const ticks=[{category:'polynomial',value:2.4,label:'Polynomial'},{category:'intermediate',value:4.78,label:'Improved\nexp./subexp.'},{category:'exp_to_subexp',value:5.18,label:'Exp. →\nsubexp.'},{category:'to_polynomial',value:7.8,label:'(Sub)exp. →\npolynomial'}].filter(t=>records.some(p=>p.strengthCategory===t.category));
 const activeResources=new Set(['oracle','gate','other']);
 const isResourceVisible=p=>p.resourceModels.some(model=>activeResources.has(model));
 let selected=bySlug.factoring?'factoring':records[0]?.slug;
@@ -85,11 +85,11 @@ function update() {
   const visible=records.filter(isResourceVisible);
   if(!visible.some(p=>p.slug===selected))selected=visible[0]?.slug;
   points=visible.map(d=>({...d,selected:d.slug===selected}));
-  scene.setData(points,{strengthMax,strengthBoundaries,hardwareMax:3,hardwareUnspecified:3.25,strengthTicks:ticks,
+  scene.setData(points,{strengthMax,strengthBoundaries,hardwareMax:3,hardwareUnspecified:3.25,hardwareUnspecifiedLabel:'Not applicable',strengthTicks:ticks,
     evidenceTicks:[{value:0,label:'Unestablished'},{value:.5,label:'Partial'},{value:.75,label:'Conditional'},{value:1,label:'Proved'}],
     hardwareTicks:[{value:0,label:'Small demos'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],selectedSlug:selected});
-  costScene.setData(points,{costMax,selectedSlug:selected,colorForCategory,categoryColorRGB,
-    costTicks:plotConfig.costTicks||[{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:3,label:'exp(√N)'},{value:4,label:'2ᴺᐟ²'}]});
+  costScene.setData(points,{costMax,polynomialBoundary:2.5,exponentialBoundary:2.9,selectedSlug:selected,colorForCategory,categoryColorRGB,
+    costTicks:plotConfig.costTicks||[{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:2.7,label:'exp(√N)'},{value:3.4,label:'2ᴺᐟ²'}]});
   document.querySelectorAll('.model-count').forEach(el=>el.textContent=`${visible.length} / ${records.length} problems`);
   renderProblemList();
   window.demoState={points,selected,activeResources:[...activeResources],strengthBoundaries};

@@ -128,6 +128,8 @@
     "classical_kind": "polynomial",
     "gain": "\\widehat\\Omega(\\sqrt{n/k})"
   },
+  "featured": false,
+  "display_name": "Pattern matching with edits",
   "resource_models": [
     "oracle",
     "gate"

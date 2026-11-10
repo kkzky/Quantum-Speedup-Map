@@ -117,6 +117,8 @@
     "quantum_exponent": 1,
     "classical_exponent": 2
   },
+  "featured": false,
+  "display_name": "ℓ_2-closeness testing of finite distributions",
   "resource_models": [
     "oracle"
   ],

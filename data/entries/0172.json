@@ -103,6 +103,8 @@
     "classical_kind": "unknown",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
   },
+  "featured": false,
+  "display_name": "Turaev–Viro invariant",
   "resource_models": [
     "gate"
   ],

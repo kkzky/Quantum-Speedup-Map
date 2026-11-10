@@ -6,7 +6,7 @@
   "title_latex": "Normalized trace estimation for a quantum circuit",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "dqc1_trace_estimation",
   "inventory_ids": [],
@@ -126,6 +126,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Knill--Laflamme normalized-trace algorithm",
+  "featured": false,
+  "display_name": "Normalized trace estimation for a quantum circuit",
   "resource_models": [
     "gate"
   ],

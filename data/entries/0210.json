@@ -86,6 +86,8 @@
     "classical_kind": "subexponential",
     "gain": "Quasipolynomial to polynomial for polynomial t"
   },
+  "featured": false,
+  "display_name": "Agnostic learning of decision trees",
   "resource_models": [
     "gate",
     "other"

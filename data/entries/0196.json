@@ -92,6 +92,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Kobayashi--Matsumoto--Tani leader election",
+  "featured": false,
+  "display_name": "Exact leader election in anonymous networks",
   "resource_models": [
     "other"
   ],

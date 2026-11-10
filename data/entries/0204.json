@@ -94,6 +94,8 @@
     "classical_kind": "polynomial",
     "gain": "\\Theta(\\sqrt k(1+\\log(n/k)))"
   },
+  "featured": false,
+  "display_name": "Combinatorial group testing",
   "resource_models": [
     "oracle"
   ],

@@ -6,7 +6,7 @@
   "title_latex": "Identity and uniformity testing of finite distributions",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-q34",
   "inventory_ids": [
@@ -106,6 +106,8 @@
     "quantum_exponent": 0.3333333333333333,
     "classical_exponent": 0.5
   },
+  "featured": false,
+  "display_name": "Identity and uniformity testing of finite distributions",
   "resource_models": [
     "oracle"
   ],

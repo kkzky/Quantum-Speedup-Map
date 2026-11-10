@@ -2,7 +2,8 @@ window.CATALOGUE_POINTS = [
   {
     "slug": "search",
     "name": "Unstructured search",
-    "shortName": "Unstructured search",
+    "shortName": "Grover search",
+    "featured": true,
     "entryNumber": 1,
     "importance": "high",
     "resourceModels": [
@@ -54,6 +55,7 @@ window.CATALOGUE_POINTS = [
     "slug": "black-box-discrete-minimization",
     "name": "Black-box discrete minimization",
     "shortName": "Black-box discrete minimization",
+    "featured": false,
     "entryNumber": 2,
     "importance": "high",
     "resourceModels": [
@@ -85,6 +87,7 @@ window.CATALOGUE_POINTS = [
     "slug": "constraint-satisfaction-by-backtracking",
     "name": "Constraint satisfaction by backtracking",
     "shortName": "Constraint satisfaction by backtracking",
+    "featured": false,
     "entryNumber": 3,
     "importance": "high",
     "resourceModels": [
@@ -120,8 +123,9 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-optimization-by-branch-and-bound",
     "name": "Discrete optimization by branch and bound",
     "shortName": "Discrete optimization by branch and bound",
+    "featured": false,
     "entryNumber": 4,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -155,6 +159,7 @@ window.CATALOGUE_POINTS = [
     "slug": "fixed-width-boolean-satisfiability",
     "name": "Fixed-width Boolean satisfiability",
     "shortName": "Fixed-width Boolean satisfiability",
+    "featured": false,
     "entryNumber": 5,
     "importance": "high",
     "resourceModels": [
@@ -197,8 +202,9 @@ window.CATALOGUE_POINTS = [
     "slug": "approximate-counting-of-feasible-assignments",
     "name": "Approximate counting of feasible assignments",
     "shortName": "Approximate counting of feasible assignments",
+    "featured": false,
     "entryNumber": 6,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -232,6 +238,7 @@ window.CATALOGUE_POINTS = [
     "slug": "travelling-salesman",
     "name": "Travelling salesman",
     "shortName": "Travelling salesman",
+    "featured": false,
     "entryNumber": 7,
     "importance": "high",
     "resourceModels": [
@@ -248,8 +255,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.289103217501381,
-    "costC": 4.5,
+    "costQ": 3.6891032175013816,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
@@ -270,8 +277,9 @@ window.CATALOGUE_POINTS = [
     "slug": "set-cover-set-packing-and-set-partition",
     "name": "Set cover, set packing and set partition",
     "shortName": "Set cover, set packing and set partition",
+    "featured": false,
     "entryNumber": 8,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -286,8 +294,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.288602194735141,
-    "costC": 4.5,
+    "costQ": 3.6886021947351413,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
@@ -312,6 +320,7 @@ window.CATALOGUE_POINTS = [
     "slug": "set-multicover-with-repeated-sets",
     "name": "Set multicover with repeated sets",
     "shortName": "Set multicover with repeated sets",
+    "featured": false,
     "entryNumber": 9,
     "importance": "peripheral",
     "resourceModels": [
@@ -346,8 +355,9 @@ window.CATALOGUE_POINTS = [
     "slug": "chromatic-number",
     "name": "Chromatic number",
     "shortName": "Chromatic number",
+    "featured": false,
     "entryNumber": 10,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -362,8 +372,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.344466001366095,
-    "costC": 4.5,
+    "costQ": 3.7444660013660953,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
@@ -380,8 +390,9 @@ window.CATALOGUE_POINTS = [
     "slug": "minimum-steiner-tree",
     "name": "Minimum Steiner tree",
     "shortName": "Minimum Steiner tree",
+    "featured": false,
     "entryNumber": 11,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -414,6 +425,7 @@ window.CATALOGUE_POINTS = [
     "slug": "graph-bandwidth",
     "name": "Graph bandwidth",
     "shortName": "Graph bandwidth",
+    "featured": false,
     "entryNumber": 12,
     "importance": "peripheral",
     "resourceModels": [
@@ -430,8 +442,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 5.058757430373762,
-    "costC": 5.631918678862568,
+    "costQ": 4.458757430373762,
+    "costC": 5.031918678862567,
     "papers": [
       {
         "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
@@ -444,8 +456,9 @@ window.CATALOGUE_POINTS = [
     "slug": "exact-treewidth",
     "name": "Exact treewidth",
     "shortName": "Exact treewidth",
+    "featured": false,
     "entryNumber": 13,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -460,8 +473,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.12105550329974,
-    "costC": 4.294686183878358,
+    "costQ": 3.5210555032997393,
+    "costC": 3.694686183878358,
     "papers": [
       {
         "title": "Quantum Speedups for Treewidth",
@@ -478,8 +491,9 @@ window.CATALOGUE_POINTS = [
     "slug": "pathwidth-and-vertex-separation",
     "name": "Pathwidth and vertex separation",
     "shortName": "Pathwidth and vertex separation",
+    "featured": false,
     "entryNumber": 14,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -494,8 +508,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.361558419572029,
-    "costC": 4.418386234446348,
+    "costQ": 3.7615584195720286,
+    "costC": 3.818386234446348,
     "papers": [
       {
         "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
@@ -512,6 +526,7 @@ window.CATALOGUE_POINTS = [
     "slug": "minimum-linear-arrangement",
     "name": "Minimum linear arrangement",
     "shortName": "Minimum linear arrangement",
+    "featured": false,
     "entryNumber": 15,
     "importance": "peripheral",
     "resourceModels": [
@@ -528,8 +543,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.361558419572029,
-    "costC": 4.5,
+    "costQ": 3.7615584195720286,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
@@ -550,6 +565,7 @@ window.CATALOGUE_POINTS = [
     "slug": "worst-case-subset-sum",
     "name": "Worst-case subset sum",
     "shortName": "Worst-case subset sum",
+    "featured": false,
     "entryNumber": 18,
     "importance": "high",
     "resourceModels": [
@@ -592,8 +608,9 @@ window.CATALOGUE_POINTS = [
     "slug": "knapsack-and-binary-integer-programming",
     "name": "Knapsack and binary integer programming",
     "shortName": "Knapsack and binary integer programming",
+    "featured": false,
     "entryNumber": 19,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -608,8 +625,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.5,
-    "costC": 4.5,
+    "costQ": 3.9,
+    "costC": 3.9,
     "papers": [
       {
         "title": "The Quantum Query Complexity of 0-1 Knapsack and Associated Claw Problems",
@@ -629,8 +646,9 @@ window.CATALOGUE_POINTS = [
     "slug": "independent-set-clique-and-vertex-cover",
     "name": "Independent set, clique and vertex cover",
     "shortName": "Independent set, clique and vertex cover",
+    "featured": false,
     "entryNumber": 20,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -671,6 +689,7 @@ window.CATALOGUE_POINTS = [
     "slug": "domatic-number",
     "name": "Domatic number",
     "shortName": "Domatic number",
+    "featured": false,
     "entryNumber": 21,
     "importance": "peripheral",
     "resourceModels": [
@@ -709,6 +728,7 @@ window.CATALOGUE_POINTS = [
     "slug": "covering-by-maximal-induced-bicliques",
     "name": "Covering by maximal induced bicliques",
     "shortName": "Covering by maximal induced bicliques",
+    "featured": false,
     "entryNumber": 24,
     "importance": "peripheral",
     "resourceModels": [
@@ -725,8 +745,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.391730246580119,
-    "costC": 4.5,
+    "costQ": 3.7917302465801184,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
@@ -743,6 +763,7 @@ window.CATALOGUE_POINTS = [
     "slug": "packing-maximal-induced-matchings",
     "name": "Packing maximal induced matchings",
     "shortName": "Packing maximal induced matchings",
+    "featured": false,
     "entryNumber": 25,
     "importance": "peripheral",
     "resourceModels": [
@@ -759,8 +780,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.420979227235629,
-    "costC": 4.5,
+    "costQ": 3.8209792272356293,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
@@ -781,6 +802,7 @@ window.CATALOGUE_POINTS = [
     "slug": "vertex-arboricity",
     "name": "Vertex arboricity",
     "shortName": "Vertex arboricity",
+    "featured": false,
     "entryNumber": 26,
     "importance": "peripheral",
     "resourceModels": [
@@ -797,8 +819,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.472986676533614,
-    "costC": 4.5,
+    "costQ": 3.8729866765336136,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
@@ -811,6 +833,7 @@ window.CATALOGUE_POINTS = [
     "slug": "partition-into-hereditary-graph-classes",
     "name": "Partition into hereditary graph classes",
     "shortName": "Partition into hereditary graph classes",
+    "featured": false,
     "entryNumber": 27,
     "importance": "peripheral",
     "resourceModels": [
@@ -827,8 +850,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.437269053627492,
-    "costC": 4.5,
+    "costQ": 3.837269053627492,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
@@ -845,6 +868,7 @@ window.CATALOGUE_POINTS = [
     "slug": "minimum-fill-in",
     "name": "Minimum fill-in",
     "shortName": "Minimum fill-in",
+    "featured": false,
     "entryNumber": 28,
     "importance": "peripheral",
     "resourceModels": [
@@ -861,8 +885,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.294686183878358,
-    "costC": 4.294686183878358,
+    "costQ": 3.694686183878358,
+    "costC": 3.694686183878358,
     "papers": [
       {
         "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
@@ -879,8 +903,9 @@ window.CATALOGUE_POINTS = [
     "slug": "recursive-fourier-sampling",
     "name": "Recursive Fourier sampling",
     "shortName": "Recursive Fourier sampling",
+    "featured": false,
     "entryNumber": 102,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -917,6 +942,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q10",
     "name": "Search with wildcards",
     "shortName": "Search with wildcards",
+    "featured": false,
     "entryNumber": 203,
     "importance": "peripheral",
     "resourceModels": [
@@ -951,6 +977,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q11",
     "name": "Combinatorial group testing",
     "shortName": "Combinatorial group testing",
+    "featured": false,
     "entryNumber": 204,
     "importance": "peripheral",
     "resourceModels": [
@@ -981,6 +1008,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q12",
     "name": "Gapped group testing",
     "shortName": "Gapped group testing",
+    "featured": false,
     "entryNumber": 205,
     "importance": "peripheral",
     "resourceModels": [
@@ -1011,6 +1039,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q13",
     "name": "Junta testing",
     "shortName": "Junta testing",
+    "featured": false,
     "entryNumber": 206,
     "importance": "peripheral",
     "resourceModels": [
@@ -1049,6 +1078,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q15",
     "name": "Learning juntas from quantum examples",
     "shortName": "Learning juntas from quantum examples",
+    "featured": false,
     "entryNumber": 207,
     "importance": "peripheral",
     "resourceModels": [
@@ -1079,6 +1109,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q16",
     "name": "Learning DNF from quantum examples",
     "shortName": "Learning DNF from quantum examples",
+    "featured": false,
     "entryNumber": 208,
     "importance": "peripheral",
     "resourceModels": [
@@ -1114,6 +1145,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q18",
     "name": "Exact learning of Fourier-sparse Boolean functions",
     "shortName": "Exact learning of Fourier-sparse Boolean functions",
+    "featured": false,
     "entryNumber": 209,
     "importance": "peripheral",
     "resourceModels": [
@@ -1144,6 +1176,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q19",
     "name": "Agnostic learning of decision trees",
     "shortName": "Agnostic learning of decision trees",
+    "featured": false,
     "entryNumber": 210,
     "importance": "peripheral",
     "resourceModels": [
@@ -1175,6 +1208,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q20",
     "name": "Linearity testing of Boolean functions",
     "shortName": "Linearity testing of Boolean functions",
+    "featured": false,
     "entryNumber": 211,
     "importance": "peripheral",
     "resourceModels": [
@@ -1205,6 +1239,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q21",
     "name": "Symmetry testing of Boolean functions",
     "shortName": "Symmetry testing of Boolean functions",
+    "featured": false,
     "entryNumber": 212,
     "importance": "peripheral",
     "resourceModels": [
@@ -1239,6 +1274,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q22",
     "name": "Monotonicity testing of Boolean functions",
     "shortName": "Monotonicity testing of Boolean functions",
+    "featured": false,
     "entryNumber": 213,
     "importance": "peripheral",
     "resourceModels": [
@@ -1274,6 +1310,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q25",
     "name": "Triangle-freeness of Boolean functions from examples",
     "shortName": "Triangle-freeness of Boolean functions from examples",
+    "featured": false,
     "entryNumber": 214,
     "importance": "peripheral",
     "resourceModels": [
@@ -1291,7 +1328,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 1,
     "hardwareLabel": "Fault-tolerant circuits",
     "costQ": 0.05,
-    "costC": 3.8333333333333335,
+    "costC": 3.2333333333333334,
     "papers": [
       {
         "title": "Testing classical properties from quantum data",
@@ -1303,6 +1340,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q29",
     "name": "Quantum coupon collection",
     "shortName": "Quantum coupon collection",
+    "featured": false,
     "entryNumber": 216,
     "importance": "peripheral",
     "resourceModels": [
@@ -1334,6 +1372,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q32",
     "name": "Learning symmetric juntas",
     "shortName": "Learning symmetric juntas",
+    "featured": false,
     "entryNumber": 219,
     "importance": "peripheral",
     "resourceModels": [
@@ -1364,8 +1403,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q34",
     "name": "Identity and uniformity testing of finite distributions",
     "shortName": "Identity and uniformity testing of finite distributions",
+    "featured": false,
     "entryNumber": 220,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -1398,6 +1438,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q36",
     "name": "ℓ_1-closeness testing of finite distributions",
     "shortName": "ℓ_1-closeness testing of finite distributions",
+    "featured": false,
     "entryNumber": 221,
     "importance": "peripheral",
     "resourceModels": [
@@ -1428,6 +1469,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q37",
     "name": "ℓ_2-closeness testing of finite distributions",
     "shortName": "ℓ_2-closeness testing of finite distributions",
+    "featured": false,
     "entryNumber": 222,
     "importance": "peripheral",
     "resourceModels": [
@@ -1458,6 +1500,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q38",
     "name": "Independence testing of a finite joint distribution",
     "shortName": "Independence testing of a finite joint distribution",
+    "featured": false,
     "entryNumber": 223,
     "importance": "peripheral",
     "resourceModels": [
@@ -1488,6 +1531,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q39",
     "name": "k-wise uniformity testing",
     "shortName": "k-wise uniformity testing",
+    "featured": false,
     "entryNumber": 224,
     "importance": "peripheral",
     "resourceModels": [
@@ -1518,6 +1562,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q40",
     "name": "Shannon entropy of a finite distribution",
     "shortName": "Shannon entropy of a finite distribution",
+    "featured": false,
     "entryNumber": 225,
     "importance": "peripheral",
     "resourceModels": [
@@ -1552,6 +1597,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q41",
     "name": "Support-size estimation",
     "shortName": "Support-size estimation",
+    "featured": false,
     "entryNumber": 226,
     "importance": "peripheral",
     "resourceModels": [
@@ -1582,6 +1628,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q42",
     "name": "Support-coverage estimation",
     "shortName": "Support-coverage estimation",
+    "featured": false,
     "entryNumber": 227,
     "importance": "peripheral",
     "resourceModels": [
@@ -1612,6 +1659,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q43",
     "name": "Disjoint-support testing of finite distributions",
     "shortName": "Disjoint-support testing of finite distributions",
+    "featured": false,
     "entryNumber": 228,
     "importance": "peripheral",
     "resourceModels": [
@@ -1642,6 +1690,7 @@ window.CATALOGUE_POINTS = [
     "slug": "mst",
     "name": "Minimum spanning tree",
     "shortName": "Minimum spanning tree",
+    "featured": false,
     "entryNumber": 31,
     "importance": "high",
     "resourceModels": [
@@ -1676,8 +1725,9 @@ window.CATALOGUE_POINTS = [
     "slug": "undirected-graph-connectivity",
     "name": "Undirected graph connectivity",
     "shortName": "Undirected graph connectivity",
+    "featured": false,
     "entryNumber": 32,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -1706,8 +1756,9 @@ window.CATALOGUE_POINTS = [
     "slug": "strong-connectivity-of-directed-graphs",
     "name": "Strong connectivity of directed graphs",
     "shortName": "Strong connectivity of directed graphs",
+    "featured": false,
     "entryNumber": 33,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle"
     ],
@@ -1740,6 +1791,7 @@ window.CATALOGUE_POINTS = [
     "slug": "single-source-shortest-paths",
     "name": "Single-source shortest paths",
     "shortName": "Single-source shortest paths",
+    "featured": false,
     "entryNumber": 34,
     "importance": "high",
     "resourceModels": [
@@ -1774,8 +1826,9 @@ window.CATALOGUE_POINTS = [
     "slug": "maximum-cardinality-matching",
     "name": "Maximum-cardinality matching",
     "shortName": "Maximum-cardinality matching",
+    "featured": false,
     "entryNumber": 35,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -1817,8 +1870,9 @@ window.CATALOGUE_POINTS = [
     "slug": "integral-maximum-flow",
     "name": "Integral maximum flow",
     "shortName": "Integral maximum flow",
+    "featured": false,
     "entryNumber": 36,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -1856,6 +1910,7 @@ window.CATALOGUE_POINTS = [
     "slug": "unweighted-triangle-finding",
     "name": "Unweighted triangle finding",
     "shortName": "Unweighted triangle finding",
+    "featured": false,
     "entryNumber": 37,
     "importance": "high",
     "resourceModels": [
@@ -1890,8 +1945,9 @@ window.CATALOGUE_POINTS = [
     "slug": "graph-collision",
     "name": "Graph collision",
     "shortName": "Graph collision",
+    "featured": false,
     "entryNumber": 38,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle"
     ],
@@ -1924,8 +1980,9 @@ window.CATALOGUE_POINTS = [
     "slug": "testing-bipartiteness-in-bounded-degree-graphs",
     "name": "Testing bipartiteness in bounded-degree graphs",
     "shortName": "Testing bipartiteness in bounded-degree graphs",
+    "featured": false,
     "entryNumber": 39,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -1959,8 +2016,9 @@ window.CATALOGUE_POINTS = [
     "slug": "testing-graph-expansion",
     "name": "Testing graph expansion",
     "shortName": "Testing graph expansion",
+    "featured": false,
     "entryNumber": 40,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -1990,6 +2048,7 @@ window.CATALOGUE_POINTS = [
     "slug": "formula",
     "name": "AND–OR formula and game-tree evaluation",
     "shortName": "AND–OR formula and game-tree evaluation",
+    "featured": false,
     "entryNumber": 41,
     "importance": "high",
     "resourceModels": [
@@ -2024,8 +2083,9 @@ window.CATALOGUE_POINTS = [
     "slug": "matrix-product-verification-over-a-field",
     "name": "Matrix-product verification over a field",
     "shortName": "Matrix-product verification over a field",
+    "featured": false,
     "entryNumber": 42,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -2059,8 +2119,9 @@ window.CATALOGUE_POINTS = [
     "slug": "boolean-matrix-product-verification",
     "name": "Boolean matrix-product verification",
     "shortName": "Boolean matrix-product verification",
+    "featured": false,
     "entryNumber": 43,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle"
     ],
@@ -2093,8 +2154,9 @@ window.CATALOGUE_POINTS = [
     "slug": "promised-short-path-st-connectivity",
     "name": "Promised short-path s–t connectivity",
     "shortName": "Promised short-path s–t connectivity",
+    "featured": false,
     "entryNumber": 44,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle"
     ],
@@ -2123,8 +2185,9 @@ window.CATALOGUE_POINTS = [
     "slug": "global-minimum-cut",
     "name": "Global minimum cut",
     "shortName": "Global minimum cut",
+    "featured": false,
     "entryNumber": 46,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -2153,7 +2216,8 @@ window.CATALOGUE_POINTS = [
   {
     "slug": "maxcut-approximation-with-qaoa",
     "name": "MaxCut approximation with QAOA",
-    "shortName": "MaxCut approximation with QAOA",
+    "shortName": "QAOA (MaxCut)",
+    "featured": true,
     "entryNumber": 49,
     "importance": "high",
     "resourceModels": [
@@ -2200,6 +2264,7 @@ window.CATALOGUE_POINTS = [
     "slug": "bounded-occurrence-max-e3lin2",
     "name": "Bounded-occurrence Max-E3LIN2",
     "shortName": "Bounded-occurrence Max-E3LIN2",
+    "featured": false,
     "entryNumber": 50,
     "importance": "peripheral",
     "resourceModels": [
@@ -2238,6 +2303,7 @@ window.CATALOGUE_POINTS = [
     "slug": "maximum-independent-set-in-rydberg-geometric-graphs",
     "name": "Maximum independent set in Rydberg geometric graphs",
     "shortName": "Maximum independent set in Rydberg geometric graphs",
+    "featured": false,
     "entryNumber": 51,
     "importance": "high",
     "resourceModels": [
@@ -2272,8 +2338,9 @@ window.CATALOGUE_POINTS = [
     "slug": "sherringtonkirkpatrick-spin-glass-optimization",
     "name": "Sherrington–Kirkpatrick spin-glass optimization",
     "shortName": "Sherrington–Kirkpatrick spin-glass optimization",
+    "featured": false,
     "entryNumber": 52,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -2314,6 +2381,7 @@ window.CATALOGUE_POINTS = [
     "slug": "exact-bounded-locality-spin-optimization-by-short-paths",
     "name": "Exact bounded-locality spin optimization by short paths",
     "shortName": "Exact bounded-locality spin optimization by short paths",
+    "featured": false,
     "entryNumber": 53,
     "importance": "peripheral",
     "resourceModels": [
@@ -2356,6 +2424,7 @@ window.CATALOGUE_POINTS = [
     "slug": "partition-functions-and-approximate-combinatorial-counting",
     "name": "Partition functions and approximate combinatorial counting",
     "shortName": "Partition functions and approximate combinatorial counting",
+    "featured": false,
     "entryNumber": 54,
     "importance": "high",
     "resourceModels": [
@@ -2394,6 +2463,7 @@ window.CATALOGUE_POINTS = [
     "slug": "traversing-a-randomly-welded-pair-of-trees",
     "name": "Traversing a randomly welded pair of trees",
     "shortName": "Traversing a randomly welded pair of trees",
+    "featured": false,
     "entryNumber": 55,
     "importance": "high",
     "resourceModels": [
@@ -2425,8 +2495,9 @@ window.CATALOGUE_POINTS = [
     "slug": "gibbs-sampling-and-quantum-simulated-annealing",
     "name": "Gibbs sampling and quantum simulated annealing",
     "shortName": "Gibbs sampling and quantum simulated annealing",
+    "featured": false,
     "entryNumber": 56,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle"
     ],
@@ -2463,8 +2534,9 @@ window.CATALOGUE_POINTS = [
     "slug": "all-pairs-shortest-paths",
     "name": "All-pairs shortest paths",
     "shortName": "All-pairs shortest paths",
+    "featured": false,
     "entryNumber": 59,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -2500,7 +2572,8 @@ window.CATALOGUE_POINTS = [
   {
     "slug": "optimal-polynomial-intersection-by-decoded-quantum-interferometry",
     "name": "Optimal polynomial intersection by decoded quantum interferometry",
-    "shortName": "Optimal polynomial intersection by decoded quantum interferometry",
+    "shortName": "DQI",
+    "featured": true,
     "entryNumber": 60,
     "importance": "high",
     "resourceModels": [
@@ -2544,6 +2617,7 @@ window.CATALOGUE_POINTS = [
     "slug": "maximum-k-cut-with-variational-quantum-circuits",
     "name": "Maximum k-cut with variational quantum circuits",
     "shortName": "Maximum k-cut with variational quantum circuits",
+    "featured": false,
     "entryNumber": 103,
     "importance": "peripheral",
     "resourceModels": [
@@ -2594,6 +2668,7 @@ window.CATALOGUE_POINTS = [
     "slug": "maximum-bisection-with-constraint-preserving-qaoa",
     "name": "Maximum bisection with constraint-preserving QAOA",
     "shortName": "Maximum bisection with constraint-preserving QAOA",
+    "featured": false,
     "entryNumber": 104,
     "importance": "peripheral",
     "resourceModels": [
@@ -2636,6 +2711,7 @@ window.CATALOGUE_POINTS = [
     "slug": "job-shop-scheduling-with-delivery-and-changeover-costs",
     "name": "Job-shop scheduling with delivery and changeover costs",
     "shortName": "Job-shop scheduling with delivery and changeover costs",
+    "featured": false,
     "entryNumber": 105,
     "importance": "peripheral",
     "resourceModels": [
@@ -2678,6 +2754,7 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-portfolio-rebalancing-with-constrained-mixers",
     "name": "Discrete portfolio rebalancing with constrained mixers",
     "shortName": "Discrete portfolio rebalancing with constrained mixers",
+    "featured": false,
     "entryNumber": 106,
     "importance": "peripheral",
     "resourceModels": [
@@ -2716,6 +2793,7 @@ window.CATALOGUE_POINTS = [
     "slug": "two-community-modularity-maximization-by-variational-local-search",
     "name": "Two-community modularity maximization by variational local search",
     "shortName": "Two-community modularity maximization by variational local search",
+    "featured": false,
     "entryNumber": 107,
     "importance": "peripheral",
     "resourceModels": [
@@ -2757,7 +2835,8 @@ window.CATALOGUE_POINTS = [
   {
     "slug": "prior-g01",
     "name": "Element distinctness and k-distinctness",
-    "shortName": "Element distinctness and k-distinctness",
+    "shortName": "Element distinctness",
+    "featured": true,
     "entryNumber": 108,
     "importance": "high",
     "resourceModels": [
@@ -2793,8 +2872,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g03",
     "name": "k-sum",
     "shortName": "k-sum",
+    "featured": false,
     "entryNumber": 110,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -2827,8 +2907,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g04",
     "name": "Ordered search",
     "shortName": "Ordered search",
+    "featured": false,
     "entryNumber": 111,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -2857,6 +2938,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g05",
     "name": "Approximate median",
     "shortName": "Approximate median",
+    "featured": false,
     "entryNumber": 112,
     "importance": "peripheral",
     "resourceModels": [
@@ -2887,8 +2969,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g06",
     "name": "Exact string matching",
     "shortName": "Exact string matching",
+    "featured": false,
     "entryNumber": 113,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "gate"
@@ -2918,6 +3001,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g07",
     "name": "Average-case multidimensional pattern matching",
     "shortName": "Average-case multidimensional pattern matching",
+    "featured": false,
     "entryNumber": 114,
     "importance": "peripheral",
     "resourceModels": [
@@ -2949,8 +3033,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g08",
     "name": "Longest common substring",
     "shortName": "Longest common substring",
+    "featured": false,
     "entryNumber": 115,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "gate"
@@ -2980,6 +3065,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g09",
     "name": "Lexicographically minimal cyclic rotation",
     "shortName": "Lexicographically minimal cyclic rotation",
+    "featured": false,
     "entryNumber": 116,
     "importance": "peripheral",
     "resourceModels": [
@@ -3010,6 +3096,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g10",
     "name": "Longest square substring",
     "shortName": "Longest square substring",
+    "featured": false,
     "entryNumber": 117,
     "importance": "peripheral",
     "resourceModels": [
@@ -3040,6 +3127,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g12",
     "name": "Longest Lyndon substring",
     "shortName": "Longest Lyndon substring",
+    "featured": false,
     "entryNumber": 118,
     "importance": "peripheral",
     "resourceModels": [
@@ -3070,6 +3158,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g14",
     "name": "Longest palindromic substring",
     "shortName": "Longest palindromic substring",
+    "featured": false,
     "entryNumber": 119,
     "importance": "peripheral",
     "resourceModels": [
@@ -3100,6 +3189,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g15",
     "name": "Approximate Ulam distance",
     "shortName": "Approximate Ulam distance",
+    "featured": false,
     "entryNumber": 120,
     "importance": "peripheral",
     "resourceModels": [
@@ -3130,8 +3220,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g16",
     "name": "Bounded edit distance",
     "shortName": "Bounded edit distance",
+    "featured": false,
     "entryNumber": 121,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "gate"
@@ -3161,6 +3252,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g17",
     "name": "Pattern matching with mismatches",
     "shortName": "Pattern matching with mismatches",
+    "featured": false,
     "entryNumber": 122,
     "importance": "peripheral",
     "resourceModels": [
@@ -3192,6 +3284,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g18",
     "name": "Pattern matching with edits",
     "shortName": "Pattern matching with edits",
+    "featured": false,
     "entryNumber": 123,
     "importance": "peripheral",
     "resourceModels": [
@@ -3223,6 +3316,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g19",
     "name": "Lempel–Ziv factorization",
     "shortName": "Lempel–Ziv factorization",
+    "featured": false,
     "entryNumber": 124,
     "importance": "peripheral",
     "resourceModels": [
@@ -3254,6 +3348,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g20",
     "name": "Run-length Burrows–Wheeler transform",
     "shortName": "Run-length Burrows–Wheeler transform",
+    "featured": false,
     "entryNumber": 125,
     "importance": "peripheral",
     "resourceModels": [
@@ -3285,6 +3380,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g22",
     "name": "Longest common substring of run-length encoded strings",
     "shortName": "Longest common substring of run-length encoded strings",
+    "featured": false,
     "entryNumber": 126,
     "importance": "peripheral",
     "resourceModels": [
@@ -3316,6 +3412,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g23",
     "name": "Star-free regular-language membership",
     "shortName": "Star-free regular-language membership",
+    "featured": false,
     "entryNumber": 127,
     "importance": "peripheral",
     "resourceModels": [
@@ -3346,6 +3443,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g24",
     "name": "Bounded-height Dyck language",
     "shortName": "Bounded-height Dyck language",
+    "featured": false,
     "entryNumber": 128,
     "importance": "peripheral",
     "resourceModels": [
@@ -3376,6 +3474,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g25",
     "name": "Common subsequence of length k",
     "shortName": "Common subsequence of length k",
+    "featured": false,
     "entryNumber": 129,
     "importance": "peripheral",
     "resourceModels": [
@@ -3406,6 +3505,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g26",
     "name": "Increasing subsequence of length k",
     "shortName": "Increasing subsequence of length k",
+    "featured": false,
     "entryNumber": 130,
     "importance": "peripheral",
     "resourceModels": [
@@ -3436,6 +3536,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g27",
     "name": "Longest substring with distinct characters",
     "shortName": "Longest substring with distinct characters",
+    "featured": false,
     "entryNumber": 131,
     "importance": "peripheral",
     "resourceModels": [
@@ -3466,6 +3567,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g31",
     "name": "Maximum-sum submatrix",
     "shortName": "Maximum-sum submatrix",
+    "featured": false,
     "entryNumber": 132,
     "importance": "peripheral",
     "resourceModels": [
@@ -3500,6 +3602,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g32",
     "name": "Euclidean closest pair",
     "shortName": "Euclidean closest pair",
+    "featured": false,
     "entryNumber": 133,
     "importance": "peripheral",
     "resourceModels": [
@@ -3530,8 +3633,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g33",
     "name": "Bichromatic closest pair",
     "shortName": "Bichromatic closest pair",
+    "featured": false,
     "entryNumber": 134,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -3560,8 +3664,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g35",
     "name": "Planarity",
     "shortName": "Planarity",
+    "featured": false,
     "entryNumber": 136,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -3590,6 +3695,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g36",
     "name": "Cycle detection",
     "shortName": "Cycle detection",
+    "featured": false,
     "entryNumber": 137,
     "importance": "peripheral",
     "resourceModels": [
@@ -3621,6 +3727,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g37",
     "name": "Fixed-subgraph containment",
     "shortName": "Fixed-subgraph containment",
+    "featured": false,
     "entryNumber": 138,
     "importance": "peripheral",
     "resourceModels": [
@@ -3651,6 +3758,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g38",
     "name": "Cycle finding from an edge list",
     "shortName": "Cycle finding from an edge list",
+    "featured": false,
     "entryNumber": 139,
     "importance": "peripheral",
     "resourceModels": [
@@ -3681,6 +3789,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g42",
     "name": "Distributed graph diameter",
     "shortName": "Distributed graph diameter",
+    "featured": false,
     "entryNumber": 140,
     "importance": "peripheral",
     "resourceModels": [
@@ -3711,8 +3820,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g43",
     "name": "Boolean matrix multiplication",
     "shortName": "Boolean matrix multiplication",
+    "featured": false,
     "entryNumber": 141,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "gate"
@@ -3750,6 +3860,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g44",
     "name": "Random spanning-tree sampling",
     "shortName": "Random spanning-tree sampling",
+    "featured": false,
     "entryNumber": 142,
     "importance": "peripheral",
     "resourceModels": [
@@ -3781,6 +3892,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g45",
     "name": "Signed graph clusterability testing",
     "shortName": "Signed graph clusterability testing",
+    "featured": false,
     "entryNumber": 143,
     "importance": "peripheral",
     "resourceModels": [
@@ -3811,6 +3923,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g46",
     "name": "Directed subgraph-freeness testing",
     "shortName": "Directed subgraph-freeness testing",
+    "featured": false,
     "entryNumber": 144,
     "importance": "peripheral",
     "resourceModels": [
@@ -3841,6 +3954,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g47",
     "name": "Directed fixed-length path containment",
     "shortName": "Directed fixed-length path containment",
+    "featured": false,
     "entryNumber": 145,
     "importance": "peripheral",
     "resourceModels": [
@@ -3871,6 +3985,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q30",
     "name": "Learning a graph with edge-existence queries",
     "shortName": "Learning a graph with edge-existence queries",
+    "featured": false,
     "entryNumber": 217,
     "importance": "peripheral",
     "resourceModels": [
@@ -3901,6 +4016,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q31",
     "name": "Learning a graph with edge-parity queries",
     "shortName": "Learning a graph with edge-parity queries",
+    "featured": false,
     "entryNumber": 218,
     "importance": "peripheral",
     "resourceModels": [
@@ -3931,8 +4047,9 @@ window.CATALOGUE_POINTS = [
     "slug": "spatial-lattice-search",
     "name": "Spatial search on a lattice",
     "shortName": "Spatial search on a lattice",
+    "featured": false,
     "entryNumber": 194,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "other"
@@ -3969,7 +4086,8 @@ window.CATALOGUE_POINTS = [
   {
     "slug": "factoring",
     "name": "Integer factorization",
-    "shortName": "Integer factorization",
+    "shortName": "Shor factoring",
+    "featured": true,
     "entryNumber": 61,
     "importance": "high",
     "resourceModels": [
@@ -3987,7 +4105,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 1,
     "hardwareLabel": "Fault-tolerant circuits",
     "costQ": 2.06,
-    "costC": 2.87,
+    "costC": 2.648,
     "papers": [
       {
         "title": "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
@@ -4016,6 +4134,7 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-logarithms-in-finite-fields",
     "name": "Discrete logarithms in finite fields",
     "shortName": "Discrete logarithms in finite fields",
+    "featured": false,
     "entryNumber": 62,
     "importance": "high",
     "resourceModels": [
@@ -4051,6 +4170,7 @@ window.CATALOGUE_POINTS = [
     "slug": "elliptic-curve-discrete-logarithm",
     "name": "Elliptic-curve discrete logarithm",
     "shortName": "Elliptic-curve discrete logarithm",
+    "featured": false,
     "entryNumber": 63,
     "importance": "high",
     "resourceModels": [
@@ -4090,8 +4210,9 @@ window.CATALOGUE_POINTS = [
     "slug": "order-finding-in-a-black-box-cyclic-group",
     "name": "Order finding in a black-box cyclic group",
     "shortName": "Order finding in a black-box cyclic group",
+    "featured": false,
     "entryNumber": 64,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -4125,8 +4246,9 @@ window.CATALOGUE_POINTS = [
     "slug": "pell-s-equation-and-the-real-quadratic-regulator",
     "name": "Pell's equation and the real quadratic regulator",
     "shortName": "Pell's equation and the real quadratic regulator",
+    "featured": false,
     "entryNumber": 65,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -4155,8 +4277,9 @@ window.CATALOGUE_POINTS = [
     "slug": "the-principal-ideal-problem",
     "name": "The principal ideal problem",
     "shortName": "The principal ideal problem",
+    "featured": false,
     "entryNumber": 66,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -4189,8 +4312,9 @@ window.CATALOGUE_POINTS = [
     "slug": "computing-ideal-class-groups",
     "name": "Computing ideal class groups",
     "shortName": "Computing ideal class groups",
+    "featured": false,
     "entryNumber": 67,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -4219,6 +4343,7 @@ window.CATALOGUE_POINTS = [
     "slug": "vectorization-for-commutative-isogeny-actions",
     "name": "Vectorization for commutative isogeny actions",
     "shortName": "Vectorization for commutative isogeny actions",
+    "featured": false,
     "entryNumber": 68,
     "importance": "high",
     "resourceModels": [
@@ -4262,6 +4387,7 @@ window.CATALOGUE_POINTS = [
     "slug": "supersingular-isogeny-path-finding",
     "name": "Supersingular isogeny path finding",
     "shortName": "Supersingular isogeny path finding",
+    "featured": false,
     "entryNumber": 69,
     "importance": "peripheral",
     "resourceModels": [
@@ -4296,8 +4422,9 @@ window.CATALOGUE_POINTS = [
     "slug": "sidh-secret-isogeny-recovery",
     "name": "SIDH secret-isogeny recovery",
     "shortName": "SIDH secret-isogeny recovery",
+    "featured": false,
     "entryNumber": 70,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -4335,6 +4462,7 @@ window.CATALOGUE_POINTS = [
     "slug": "the-euclidean-shortest-vector-problem",
     "name": "The Euclidean shortest vector problem",
     "shortName": "The Euclidean shortest vector problem",
+    "featured": false,
     "entryNumber": 71,
     "importance": "high",
     "resourceModels": [
@@ -4352,8 +4480,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 3.747,
-    "costC": 3.909,
+    "costQ": 3.147,
+    "costC": 3.3089999999999997,
     "papers": [
       {
         "title": "Superlattice Methods for the Shortest Vector Problem and Discrete Gaussian Sampling",
@@ -4378,6 +4506,7 @@ window.CATALOGUE_POINTS = [
     "slug": "isomorphism-to-the-standard-integer-lattice",
     "name": "Isomorphism to the standard integer lattice",
     "shortName": "Isomorphism to the standard integer lattice",
+    "featured": false,
     "entryNumber": 72,
     "importance": "peripheral",
     "resourceModels": [
@@ -4394,8 +4523,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 3.6235,
-    "costC": 3.7045,
+    "costQ": 3.0235,
+    "costC": 3.1045,
     "papers": [
       {
         "title": "Improved Classical and Quantum Algorithms for the Shortest Vector Problem via Bounded Distance Decoding",
@@ -4412,8 +4541,9 @@ window.CATALOGUE_POINTS = [
     "slug": "learning-parity-with-noisy-quantum-examples",
     "name": "Learning parity with noisy quantum examples",
     "shortName": "Learning parity with noisy quantum examples",
+    "featured": false,
     "entryNumber": 73,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate",
       "other"
@@ -4447,8 +4577,9 @@ window.CATALOGUE_POINTS = [
     "slug": "the-euclidean-closest-vector-problem",
     "name": "The Euclidean closest vector problem",
     "shortName": "The Euclidean closest vector problem",
+    "featured": false,
     "entryNumber": 74,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -4486,6 +4617,7 @@ window.CATALOGUE_POINTS = [
     "slug": "bounded-distance-decoding-on-periodic-lattices",
     "name": "Bounded distance decoding on periodic lattices",
     "shortName": "Bounded distance decoding on periodic lattices",
+    "featured": false,
     "entryNumber": 75,
     "importance": "peripheral",
     "resourceModels": [
@@ -4520,6 +4652,7 @@ window.CATALOGUE_POINTS = [
     "slug": "learning-with-errors-with-classical-samples",
     "name": "Learning with errors with classical samples",
     "shortName": "Learning with errors with classical samples",
+    "featured": false,
     "entryNumber": 76,
     "importance": "high",
     "resourceModels": [
@@ -4562,6 +4695,7 @@ window.CATALOGUE_POINTS = [
     "slug": "short-integer-solutions-with-a-wide-public-matrix",
     "name": "Short integer solutions with a wide public matrix",
     "shortName": "Short integer solutions with a wide public matrix",
+    "featured": false,
     "entryNumber": 77,
     "importance": "peripheral",
     "resourceModels": [
@@ -4596,6 +4730,7 @@ window.CATALOGUE_POINTS = [
     "slug": "binary-syndrome-decoding",
     "name": "Binary syndrome decoding",
     "shortName": "Binary syndrome decoding",
+    "featured": false,
     "entryNumber": 78,
     "importance": "high",
     "resourceModels": [
@@ -4638,8 +4773,9 @@ window.CATALOGUE_POINTS = [
     "slug": "minimum-weight-nonzero-codewords",
     "name": "Minimum-weight nonzero codewords",
     "shortName": "Minimum-weight nonzero codewords",
+    "featured": false,
     "entryNumber": 79,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -4655,8 +4791,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.5,
-    "costC": 4.5,
+    "costQ": 3.9,
+    "costC": 3.9,
     "papers": [
       {
         "title": "A Quantum Algorithm for Finding the Minimum",
@@ -4680,8 +4816,9 @@ window.CATALOGUE_POINTS = [
     "slug": "random-subset-sum-at-cryptographic-density",
     "name": "Random subset sum at cryptographic density",
     "shortName": "Random subset sum at cryptographic density",
+    "featured": false,
     "entryNumber": 80,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -4696,8 +4833,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 3.7182,
-    "costC": 3.783,
+    "costQ": 3.1182,
+    "costC": 3.183,
     "papers": [
       {
         "title": "Improved Classical and Quantum Algorithms for Subset-Sum",
@@ -4714,8 +4851,9 @@ window.CATALOGUE_POINTS = [
     "slug": "boolean-multivariate-quadratic-equations",
     "name": "Boolean multivariate quadratic equations",
     "shortName": "Boolean multivariate quadratic equations",
+    "featured": false,
     "entryNumber": 81,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -4730,8 +4868,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.1943,
-    "costC": 4.1943,
+    "costQ": 3.5943,
+    "costC": 3.5943,
     "papers": [
       {
         "title": "Solving Binary MQ with Grover's Algorithm",
@@ -4755,7 +4893,8 @@ window.CATALOGUE_POINTS = [
   {
     "slug": "collision",
     "name": "Hash collisions",
-    "shortName": "Hash collisions",
+    "shortName": "Collision finding",
+    "featured": true,
     "entryNumber": 84,
     "importance": "high",
     "resourceModels": [
@@ -4795,6 +4934,7 @@ window.CATALOGUE_POINTS = [
     "slug": "claw",
     "name": "Claw finding and double-encryption key recovery",
     "shortName": "Claw finding and double-encryption key recovery",
+    "featured": false,
     "entryNumber": 85,
     "importance": "high",
     "resourceModels": [
@@ -4834,8 +4974,9 @@ window.CATALOGUE_POINTS = [
     "slug": "generalized-birthday-search-random-k-xor",
     "name": "Generalized birthday search: random k-XOR",
     "shortName": "Generalized birthday search: random k-XOR",
+    "featured": false,
     "entryNumber": 87,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -4851,8 +4992,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.5,
-    "costC": 4.5,
+    "costQ": 3.9,
+    "costC": 3.9,
     "papers": [
       {
         "title": "A Generalized Birthday Problem",
@@ -4872,6 +5013,7 @@ window.CATALOGUE_POINTS = [
     "slug": "even",
     "name": "Even–Mansour recovery with quantum queries",
     "shortName": "Even–Mansour recovery with quantum queries",
+    "featured": false,
     "entryNumber": 88,
     "importance": "high",
     "resourceModels": [
@@ -4890,7 +5032,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 1,
     "hardwareLabel": "Fault-tolerant circuits",
     "costQ": 1,
-    "costC": 4,
+    "costC": 3.4,
     "papers": [
       {
         "title": "Breaking Symmetric Cryptosystems Using Quantum Period Finding",
@@ -4906,8 +5048,9 @@ window.CATALOGUE_POINTS = [
     "slug": "evenmansour-recovery-with-classical-queries",
     "name": "Even–Mansour recovery with classical queries",
     "shortName": "Even–Mansour recovery with classical queries",
+    "featured": false,
     "entryNumber": 89,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -4923,8 +5066,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 1,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.5,
-    "costC": 4.5,
+    "costQ": 3.9,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Quantum Attacks Without Superposition Queries: The Offline Simon's Algorithm",
@@ -4940,8 +5083,9 @@ window.CATALOGUE_POINTS = [
     "slug": "differential-and-linear-cryptanalysis",
     "name": "Differential and linear cryptanalysis",
     "shortName": "Differential and linear cryptanalysis",
+    "featured": false,
     "entryNumber": 90,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "gate"
@@ -4979,8 +5123,9 @@ window.CATALOGUE_POINTS = [
     "slug": "vector-subset-sum-over-f3",
     "name": "Vector subset sum over F3",
     "shortName": "Vector subset sum over F3",
+    "featured": false,
     "entryNumber": 101,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -5021,8 +5166,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a01",
     "name": "Finite abelian-group decomposition",
     "shortName": "Finite abelian-group decomposition",
+    "featured": false,
     "entryNumber": 146,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "gate"
@@ -5060,6 +5206,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a02",
     "name": "Isomorphism of coprime abelian-by-cyclic groups",
     "shortName": "Isomorphism of coprime abelian-by-cyclic groups",
+    "featured": false,
     "entryNumber": 147,
     "importance": "peripheral",
     "resourceModels": [
@@ -5091,6 +5238,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a04",
     "name": "Group commutativity",
     "shortName": "Group commutativity",
+    "featured": false,
     "entryNumber": 148,
     "importance": "peripheral",
     "resourceModels": [
@@ -5121,6 +5269,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a05",
     "name": "Basis representation of a finite black-box ring",
     "shortName": "Basis representation of a finite black-box ring",
+    "featured": false,
     "entryNumber": 149,
     "importance": "peripheral",
     "resourceModels": [
@@ -5156,6 +5305,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a06",
     "name": "Ideal operations in finite rings",
     "shortName": "Ideal operations in finite rings",
+    "featured": false,
     "entryNumber": 150,
     "importance": "peripheral",
     "resourceModels": [
@@ -5187,6 +5337,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a07",
     "name": "Multilinear identity testing over a finite ring",
     "shortName": "Multilinear identity testing over a finite ring",
+    "featured": false,
     "entryNumber": 151,
     "importance": "peripheral",
     "resourceModels": [
@@ -5217,6 +5368,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a08",
     "name": "Discrete logarithms in finite semigroups",
     "shortName": "Discrete logarithms in finite semigroups",
+    "featured": false,
     "entryNumber": 152,
     "importance": "peripheral",
     "resourceModels": [
@@ -5248,6 +5400,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a09",
     "name": "Constructive membership in a commutative semigroup",
     "shortName": "Constructive membership in a commutative semigroup",
+    "featured": false,
     "entryNumber": 153,
     "importance": "peripheral",
     "resourceModels": [
@@ -5278,6 +5431,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a10",
     "name": "Semidirect discrete logarithm",
     "shortName": "Semidirect discrete logarithm",
+    "featured": false,
     "entryNumber": 154,
     "importance": "peripheral",
     "resourceModels": [
@@ -5309,6 +5463,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a11",
     "name": "Polynomial factorization over a finite field",
     "shortName": "Polynomial factorization over a finite field",
+    "featured": false,
     "entryNumber": 155,
     "importance": "peripheral",
     "resourceModels": [
@@ -5339,6 +5494,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a12",
     "name": "Polynomial interpolation over finite fields",
     "shortName": "Polynomial interpolation over finite fields",
+    "featured": false,
     "entryNumber": 156,
     "importance": "peripheral",
     "resourceModels": [
@@ -5373,6 +5529,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a15",
     "name": "Shifted multiplicative characters",
     "shortName": "Shifted multiplicative characters",
+    "featured": false,
     "entryNumber": 158,
     "importance": "peripheral",
     "resourceModels": [
@@ -5404,8 +5561,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a16",
     "name": "Hidden shifts of bent Boolean functions",
     "shortName": "Hidden shifts of bent Boolean functions",
+    "featured": false,
     "entryNumber": 159,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -5434,6 +5592,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a17",
     "name": "Random Boolean hidden shift",
     "shortName": "Random Boolean hidden shift",
+    "featured": false,
     "entryNumber": 160,
     "importance": "peripheral",
     "resourceModels": [
@@ -5463,8 +5622,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a18",
     "name": "Generalized hidden shift",
     "shortName": "Generalized hidden shift",
+    "featured": false,
     "entryNumber": 161,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "gate"
@@ -5494,6 +5654,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a19",
     "name": "Hidden subgroups of selected semidirect-product groups",
     "shortName": "Hidden subgroups of selected semidirect-product groups",
+    "featured": false,
     "entryNumber": 162,
     "importance": "peripheral",
     "resourceModels": [
@@ -5525,6 +5686,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a20",
     "name": "Hidden subgroups of nilpotency-class-two groups",
     "shortName": "Hidden subgroups of nilpotency-class-two groups",
+    "featured": false,
     "entryNumber": 163,
     "importance": "peripheral",
     "resourceModels": [
@@ -5556,6 +5718,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a21",
     "name": "Normal hidden subgroup",
     "shortName": "Normal hidden subgroup",
+    "featured": false,
     "entryNumber": 164,
     "importance": "peripheral",
     "resourceModels": [
@@ -5586,6 +5749,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a22",
     "name": "Hidden quadratic level sets",
     "shortName": "Hidden quadratic level sets",
+    "featured": false,
     "entryNumber": 165,
     "importance": "peripheral",
     "resourceModels": [
@@ -5617,6 +5781,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a23",
     "name": "Hidden quadratic and cubic polynomial graphs",
     "shortName": "Hidden quadratic and cubic polynomial graphs",
+    "featured": false,
     "entryNumber": 166,
     "importance": "peripheral",
     "resourceModels": [
@@ -5652,6 +5817,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a24",
     "name": "Zeta functions of curves over finite fields",
     "shortName": "Zeta functions of curves over finite fields",
+    "featured": false,
     "entryNumber": 167,
     "importance": "peripheral",
     "resourceModels": [
@@ -5682,6 +5848,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a39",
     "name": "Multicollisions in a random function",
     "shortName": "Multicollisions in a random function",
+    "featured": false,
     "entryNumber": 176,
     "importance": "peripheral",
     "resourceModels": [
@@ -5712,6 +5879,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a40",
     "name": "Distinguishing three-round Feistel networks",
     "shortName": "Distinguishing three-round Feistel networks",
+    "featured": false,
     "entryNumber": 177,
     "importance": "peripheral",
     "resourceModels": [
@@ -5729,7 +5897,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 1,
     "hardwareLabel": "Fault-tolerant circuits",
     "costQ": 1,
-    "costC": 4.0,
+    "costC": 3.4,
     "papers": [
       {
         "title": "Using Simon's Algorithm to Attack Symmetric-Key Cryptographic Primitives",
@@ -5741,6 +5909,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a41",
     "name": "CBC-MAC forgery under superposition access",
     "shortName": "CBC-MAC forgery under superposition access",
+    "featured": false,
     "entryNumber": 178,
     "importance": "peripheral",
     "resourceModels": [
@@ -5771,6 +5940,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a42",
     "name": "Hidden radius over a finite field",
     "shortName": "Hidden radius over a finite field",
+    "featured": false,
     "entryNumber": 179,
     "importance": "peripheral",
     "resourceModels": [
@@ -5802,6 +5972,7 @@ window.CATALOGUE_POINTS = [
     "slug": "yz-codeword-hash-search",
     "name": "Codeword search with random hash constraints",
     "shortName": "Codeword search with random hash constraints",
+    "featured": false,
     "entryNumber": 180,
     "importance": "high",
     "resourceModels": [
@@ -5833,6 +6004,7 @@ window.CATALOGUE_POINTS = [
     "slug": "trapdoor-claw-proof-quantumness",
     "name": "Interactive proofs of quantumness",
     "shortName": "Interactive proofs of quantumness",
+    "featured": false,
     "entryNumber": 181,
     "importance": "high",
     "resourceModels": [
@@ -5867,6 +6039,7 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-logarithm-concept-learning",
     "name": "Learning discrete-logarithm interval concepts",
     "shortName": "Learning discrete-logarithm interval concepts",
+    "featured": false,
     "entryNumber": 193,
     "importance": "peripheral",
     "resourceModels": [
@@ -5897,8 +6070,9 @@ window.CATALOGUE_POINTS = [
     "slug": "local",
     "name": "Local minima on the Boolean hypercube",
     "shortName": "Local minima on the Boolean hypercube",
+    "featured": false,
     "entryNumber": 91,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle"
     ],
@@ -5928,39 +6102,10 @@ window.CATALOGUE_POINTS = [
     "strengthOrder": 1.5
   },
   {
-    "slug": "total-boolean-decision-problems-a-fourth-power-bound",
-    "name": "Total Boolean decision problems: a fourth-power bound",
-    "shortName": "Total Boolean decision problems: a fourth-power bound",
-    "entryNumber": 92,
-    "importance": "high",
-    "resourceModels": [
-      "oracle"
-    ],
-    "strengthCategory": "polynomial",
-    "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>Q</mi><mo stretchy=\"false\">&#x00028;</mo><mi>f</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
-    "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>D</mi><mo stretchy=\"false\">&#x00028;</mo><mi>f</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>Q</mi><mo stretchy=\"false\">&#x00028;</mo><mi>f</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mn>4</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
-    "gain": "A polynomial upper bound on the possible query advantage, including separations greater than quadratic. The fourth-power relationship concerns deterministic classical complexity.",
-    "gainText": "A polynomial upper bound on the possible query advantage, including separations greater than quadratic. The fourth-power relationship concerns deterministic classical complexity.",
-    "parameter": "",
-    "parameterHtml": "",
-    "model": "Complexity is measured in input-bit oracle queries, with deterministic classical and bounded-error quantum algorithms distinguished.",
-    "evidence": 1,
-    "hardware": 3.25,
-    "hardwareLabel": "Unspecified",
-    "costQ": null,
-    "costC": null,
-    "papers": [
-      {
-        "title": "Quantum Implications of Huang's Sensitivity Theorem",
-        "url": "https://arxiv.org/pdf/2004.13231"
-      }
-    ],
-    "strength": 1.98
-  },
-  {
     "slug": "symmetric-promise-problems-and-graph-properties",
     "name": "Symmetric promise problems and graph properties",
     "shortName": "Symmetric promise problems and graph properties",
+    "featured": false,
     "entryNumber": 93,
     "importance": "peripheral",
     "resourceModels": [
@@ -5975,8 +6120,8 @@ window.CATALOGUE_POINTS = [
     "parameterHtml": "",
     "model": "Complexity is measured in the corresponding input-symbol, adjacency-matrix, or neighbor-oracle queries.",
     "evidence": 1,
-    "hardware": 3.25,
-    "hardwareLabel": "Unspecified",
+    "hardware": 2,
+    "hardwareLabel": "Demanding coherent access",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -5995,8 +6140,9 @@ window.CATALOGUE_POINTS = [
     "slug": "exact-counting-and-parity-of-feasible-solutions",
     "name": "Exact counting and parity of feasible solutions",
     "shortName": "Exact counting and parity of feasible solutions",
+    "featured": false,
     "entryNumber": 94,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle"
     ],
@@ -6029,8 +6175,9 @@ window.CATALOGUE_POINTS = [
     "slug": "fine-grained-complexity-of-satisfiability-and-string-problems",
     "name": "Fine-grained complexity of satisfiability and string problems",
     "shortName": "Fine-grained complexity of satisfiability and string problems",
+    "featured": false,
     "entryNumber": 96,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "gate"
     ],
@@ -6043,8 +6190,8 @@ window.CATALOGUE_POINTS = [
     "parameterHtml": "",
     "model": "Complexity is measured in running time on the explicit representation, using quantum gates and classical bit or word operations as specified by each reduction.",
     "evidence": 0.75,
-    "hardware": 3.25,
-    "hardwareLabel": "Unspecified",
+    "hardware": 3,
+    "hardwareLabel": "Large coherent resources",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6067,6 +6214,7 @@ window.CATALOGUE_POINTS = [
     "slug": "stoquastic-frustration-free-constraint-satisfaction",
     "name": "Stoquastic frustration-free constraint satisfaction",
     "shortName": "Stoquastic frustration-free constraint satisfaction",
+    "featured": false,
     "entryNumber": 97,
     "importance": "peripheral",
     "resourceModels": [
@@ -6098,6 +6246,7 @@ window.CATALOGUE_POINTS = [
     "slug": "local-hamiltonian-ground-energy-optimization",
     "name": "Local Hamiltonian ground-energy optimization",
     "shortName": "Local Hamiltonian ground-energy optimization",
+    "featured": false,
     "entryNumber": 98,
     "importance": "high",
     "resourceModels": [
@@ -6115,8 +6264,8 @@ window.CATALOGUE_POINTS = [
     "evidence": 0.5,
     "hardware": 3,
     "hardwareLabel": "Large coherent resources",
-    "costQ": 4.5,
-    "costC": 4.5,
+    "costQ": 3.9,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Near-optimal Ground State Preparation",
@@ -6140,6 +6289,7 @@ window.CATALOGUE_POINTS = [
     "slug": "global-optimization-of-variational-circuit-parameters",
     "name": "Global optimization of variational-circuit parameters",
     "shortName": "Global optimization of variational-circuit parameters",
+    "featured": false,
     "entryNumber": 99,
     "importance": "peripheral",
     "resourceModels": [
@@ -6179,8 +6329,9 @@ window.CATALOGUE_POINTS = [
     "slug": "adiabatic-optimization-spectral-gap-costs-and-oracle-bounds",
     "name": "Adiabatic optimization: spectral-gap costs and oracle bounds",
     "shortName": "Adiabatic optimization: spectral-gap costs and oracle bounds",
+    "featured": false,
     "entryNumber": 100,
-    "importance": "normal",
+    "importance": "peripheral",
     "resourceModels": [
       "oracle",
       "other"
@@ -6218,8 +6369,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a31",
     "name": "Jones polynomial approximation",
     "shortName": "Jones polynomial approximation",
+    "featured": false,
     "entryNumber": 168,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -6256,6 +6408,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a33",
     "name": "HOMFLY polynomial approximation",
     "shortName": "HOMFLY polynomial approximation",
+    "featured": false,
     "entryNumber": 170,
     "importance": "peripheral",
     "resourceModels": [
@@ -6290,6 +6443,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a34",
     "name": "Additive approximation of the planar Tutte polynomial",
     "shortName": "Additive approximation of the planar Tutte polynomial",
+    "featured": false,
     "entryNumber": 171,
     "importance": "peripheral",
     "resourceModels": [
@@ -6324,6 +6478,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a35",
     "name": "Turaev–Viro invariant",
     "shortName": "Turaev–Viro invariant",
+    "featured": false,
     "entryNumber": 172,
     "importance": "peripheral",
     "resourceModels": [
@@ -6358,6 +6513,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a36",
     "name": "Witten–Reshetikhin–Turaev invariant",
     "shortName": "Witten–Reshetikhin–Turaev invariant",
+    "featured": false,
     "entryNumber": 173,
     "importance": "peripheral",
     "resourceModels": [
@@ -6392,6 +6548,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a37",
     "name": "Link invariants from quantum doubles of finite groups",
     "shortName": "Link invariants from quantum doubles of finite groups",
+    "featured": false,
     "entryNumber": 174,
     "importance": "peripheral",
     "resourceModels": [
@@ -6426,6 +6583,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a38",
     "name": "Quadratically signed weight enumerators",
     "shortName": "Quadratically signed weight enumerators",
+    "featured": false,
     "entryNumber": 175,
     "importance": "peripheral",
     "resourceModels": [
@@ -6460,8 +6618,9 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q01",
     "name": "Deutsch–Jozsa promise problem",
     "shortName": "Deutsch–Jozsa promise problem",
+    "featured": false,
     "entryNumber": 198,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle",
       "gate"
@@ -6478,7 +6637,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 0,
     "hardwareLabel": "Small demonstrations",
     "costQ": 0.05,
-    "costC": 4.5,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Rapid solution of problems by quantum computation",
@@ -6490,6 +6649,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q04",
     "name": "Forrelation",
     "shortName": "Forrelation",
+    "featured": false,
     "entryNumber": 199,
     "importance": "high",
     "resourceModels": [
@@ -6508,7 +6668,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 0,
     "hardwareLabel": "Small demonstrations",
     "costQ": 0.05,
-    "costC": 4.0,
+    "costC": 3.4,
     "papers": [
       {
         "title": "Forrelation: A Problem that Optimally Separates Quantum from Classical Computing",
@@ -6520,6 +6680,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q05",
     "name": "Fourier sampling of a Boolean function",
     "shortName": "Fourier sampling of a Boolean function",
+    "featured": false,
     "entryNumber": 200,
     "importance": "peripheral",
     "resourceModels": [
@@ -6538,7 +6699,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 0,
     "hardwareLabel": "Small demonstrations",
     "costQ": 0.05,
-    "costC": 4.5,
+    "costC": 3.9,
     "papers": [
       {
         "title": "Complexity-Theoretic Foundations of Quantum Supremacy Experiments",
@@ -6550,6 +6711,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q08",
     "name": "Full oracle interrogation",
     "shortName": "Full oracle interrogation",
+    "featured": false,
     "entryNumber": 201,
     "importance": "peripheral",
     "resourceModels": [
@@ -6580,6 +6742,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q09",
     "name": "Oracle identification",
     "shortName": "Oracle identification",
+    "featured": false,
     "entryNumber": 202,
     "importance": "peripheral",
     "resourceModels": [
@@ -6610,6 +6773,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q26",
     "name": "Boolean-function isomorphism under coordinate permutations",
     "shortName": "Boolean-function isomorphism under coordinate permutations",
+    "featured": false,
     "entryNumber": 215,
     "importance": "peripheral",
     "resourceModels": [
@@ -6628,7 +6792,7 @@ window.CATALOGUE_POINTS = [
     "hardware": 1,
     "hardwareLabel": "Fault-tolerant circuits",
     "costQ": 1,
-    "costC": 4.0,
+    "costC": 3.4,
     "papers": [
       {
         "title": "Sequential measurements, disturbance and property testing",
@@ -6640,6 +6804,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q45",
     "name": "Testing one-to-one periodicity",
     "shortName": "Testing one-to-one periodicity",
+    "featured": false,
     "entryNumber": 229,
     "importance": "peripheral",
     "resourceModels": [
@@ -6669,6 +6834,7 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q46",
     "name": "PAC learning in the large-error regime",
     "shortName": "PAC learning in the large-error regime",
+    "featured": false,
     "entryNumber": 230,
     "importance": "peripheral",
     "resourceModels": [
@@ -6700,8 +6866,9 @@ window.CATALOGUE_POINTS = [
     "slug": "classical-verification-bqp",
     "name": "Classical verification of quantum computation",
     "shortName": "Classical verification of quantum computation",
+    "featured": false,
     "entryNumber": 182,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -6730,8 +6897,9 @@ window.CATALOGUE_POINTS = [
     "slug": "certified-randomness",
     "name": "Certified randomness from an untrusted quantum device",
     "shortName": "Certified randomness from an untrusted quantum device",
+    "featured": false,
     "entryNumber": 183,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -6764,6 +6932,7 @@ window.CATALOGUE_POINTS = [
     "slug": "random-circuit-sampling",
     "name": "Random circuit sampling",
     "shortName": "Random circuit sampling",
+    "featured": true,
     "entryNumber": 184,
     "importance": "high",
     "resourceModels": [
@@ -6809,7 +6978,8 @@ window.CATALOGUE_POINTS = [
   {
     "slug": "fock-boson-sampling",
     "name": "Fock-state boson sampling",
-    "shortName": "Fock-state boson sampling",
+    "shortName": "Boson sampling",
+    "featured": true,
     "entryNumber": 185,
     "importance": "high",
     "resourceModels": [
@@ -6852,8 +7022,9 @@ window.CATALOGUE_POINTS = [
     "slug": "gaussian-boson-sampling",
     "name": "Gaussian boson sampling",
     "shortName": "Gaussian boson sampling",
+    "featured": false,
     "entryNumber": 186,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -6898,8 +7069,9 @@ window.CATALOGUE_POINTS = [
     "slug": "iqp-sampling",
     "name": "Sampling commuting quantum circuits",
     "shortName": "Sampling commuting quantum circuits",
+    "featured": false,
     "entryNumber": 187,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -6940,8 +7112,9 @@ window.CATALOGUE_POINTS = [
     "slug": "dqc1-trace-estimation",
     "name": "Normalized trace estimation for a quantum circuit",
     "shortName": "Normalized trace estimation for a quantum circuit",
+    "featured": false,
     "entryNumber": 188,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "gate"
     ],
@@ -6982,8 +7155,9 @@ window.CATALOGUE_POINTS = [
     "slug": "two-dimensional-hidden-linear-function",
     "name": "Two-dimensional hidden linear function",
     "shortName": "Two-dimensional hidden linear function",
+    "featured": false,
     "entryNumber": 189,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "other"
     ],
@@ -7015,8 +7189,9 @@ window.CATALOGUE_POINTS = [
     "slug": "equality-quantum-fingerprinting",
     "name": "Equality in simultaneous-message communication",
     "shortName": "Equality in simultaneous-message communication",
+    "featured": false,
     "entryNumber": 190,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "other"
     ],
@@ -7044,8 +7219,9 @@ window.CATALOGUE_POINTS = [
     "slug": "hidden-matching-communication",
     "name": "Hidden matching in one-way communication",
     "shortName": "Hidden matching in one-way communication",
+    "featured": false,
     "entryNumber": 191,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "other"
     ],
@@ -7077,8 +7253,9 @@ window.CATALOGUE_POINTS = [
     "slug": "set-disjointness-communication",
     "name": "Set disjointness in two-party communication",
     "shortName": "Set disjointness in two-party communication",
+    "featured": false,
     "entryNumber": 192,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "other"
     ],
@@ -7111,8 +7288,9 @@ window.CATALOGUE_POINTS = [
     "slug": "general-hsp-query-identification",
     "name": "Hidden subgroup identification in a general finite group",
     "shortName": "Hidden subgroup identification in a general finite group",
+    "featured": false,
     "entryNumber": 195,
-    "importance": "high",
+    "importance": "normal",
     "resourceModels": [
       "oracle"
     ],
@@ -7149,6 +7327,7 @@ window.CATALOGUE_POINTS = [
     "slug": "anonymous-leader-election",
     "name": "Exact leader election in anonymous networks",
     "shortName": "Exact leader election in anonymous networks",
+    "featured": false,
     "entryNumber": 196,
     "importance": "peripheral",
     "resourceModels": [
@@ -7183,6 +7362,7 @@ window.CATALOGUE_POINTS = [
     "slug": "magic-square-game",
     "name": "Mermin–Peres magic-square game",
     "shortName": "Mermin–Peres magic-square game",
+    "featured": false,
     "entryNumber": 197,
     "importance": "peripheral",
     "resourceModels": [

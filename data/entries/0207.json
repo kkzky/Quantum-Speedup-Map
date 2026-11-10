@@ -85,6 +85,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Atici--Servedio Fourier junta learning and testing",
+  "featured": false,
+  "display_name": "Learning juntas from quantum examples",
   "resource_models": [
     "other"
   ],

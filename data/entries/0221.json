@@ -115,6 +115,8 @@
     "classical_kind": "polynomial",
     "gain": "Polynomial in domain size and inverse error"
   },
+  "featured": false,
+  "display_name": "ℓ_1-closeness testing of finite distributions",
   "resource_models": [
     "oracle"
   ],

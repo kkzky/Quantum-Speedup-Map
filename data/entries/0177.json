@@ -98,6 +98,8 @@
     "quantum_exponent": 1,
     "classical_exponent": 0.5
   },
+  "featured": false,
+  "display_name": "Distinguishing three-round Feistel networks",
   "resource_models": [
     "oracle"
   ],

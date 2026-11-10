@@ -6,7 +6,7 @@
   "title_latex": "Hidden shifts of bent Boolean functions",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-a16",
   "inventory_ids": [
@@ -86,6 +86,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial query separation"
   },
+  "featured": false,
+  "display_name": "Hidden shifts of bent Boolean functions",
   "resource_models": [
     "oracle"
   ],

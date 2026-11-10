@@ -105,6 +105,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log |S|"
   },
+  "featured": false,
+  "display_name": "Discrete logarithms in finite semigroups",
   "resource_models": [
     "oracle",
     "gate"

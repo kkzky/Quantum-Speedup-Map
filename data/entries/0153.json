@@ -87,6 +87,8 @@
     "gain": "Polynomial query improvement over generic closure enumeration",
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Constructive membership in a commutative semigroup",
   "resource_models": [
     "oracle"
   ],

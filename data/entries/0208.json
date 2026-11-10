@@ -104,6 +104,8 @@
     "classical_kind": "subexponential",
     "gain": "Quasipolynomial to polynomial when s is polynomial in n"
   },
+  "featured": false,
+  "display_name": "Learning DNF from quantum examples",
   "resource_models": [
     "gate",
     "other"

@@ -86,12 +86,13 @@
     }
 
     costRegion(q, classical) {
-      if (classical <= 2.5 || q >= 3.5 || Math.abs(q-classical)<1e-7) return 0;
-      return q < 2.5 ? 2 : 1;
+      const polynomial=this.options.polynomialBoundary??2.5,exponential=this.options.exponentialBoundary??2.9;
+      if (classical <= polynomial || q >= exponential || Math.abs(q-classical)<1e-7) return 0;
+      return q < polynomial ? 2 : 1;
     }
 
     background(width, height, maximum) {
-      const key = `${Math.ceil(width)}:${Math.ceil(height)}:${maximum}`;
+      const key = `${Math.ceil(width)}:${Math.ceil(height)}:${maximum}:${this.options.polynomialBoundary}:${this.options.exponentialBoundary}`;
       if (this.gradientKey === key) return this.gradient;
       const image = document.createElement('canvas');
       image.width = Math.ceil(width); image.height = Math.ceil(height);
@@ -108,6 +109,8 @@
     }
 
     hit(x, y) {
+      const label=(this.labelBoxes||[]).find(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);
+      if(label)return this.projected.find(p=>p.slug===label.slug)||null;
       return this.projected.filter(p => Math.hypot(p.x - x, p.y - y) < Math.max(7,(p.radius||5)+4))
         .sort((a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y)
           || this.projected.indexOf(b) - this.projected.indexOf(a))[0] || null;
@@ -123,14 +126,24 @@
       const categoryGroup=p=>p.strengthCategory==='to_polynomial'?2:['intermediate','exp_to_subexp'].includes(p.strengthCategory)?1:0;
       const unspecified=this.points.filter(p=>!Number.isFinite(p.costQ)||!Number.isFinite(p.costC));
       const groups=[0,1,2].map(i=>unspecified.filter(p=>categoryGroup(p)===i));
-      const stripLeft=17,stripWidth=width-34,groupEdges=[0,.355,.735,1];
+      const stripLeft=17,stripWidth=width-34,groupEdges=[0,.46,.58,1];
       const groupLayouts=groups.map((items,i)=>{
         const x=stripLeft+stripWidth*groupEdges[i],w=stripWidth*(groupEdges[i+1]-groupEdges[i]);
         const columns=Math.max(2,Math.floor((w-14)/15));
-        return{items,x,w,columns,rows:Math.ceil(items.length/columns)};
+        const featured=items.filter(p=>p.featured),ordinary=items.filter(p=>!p.featured);
+        const featureFont=compact?17:19;
+        c.font=`700 ${featureFont}px ${font}`;
+        const featuredRows=featured.map(p=>{
+          const words=(p.shortName||p.name).split(' '),lines=[];let line='';
+          for(const word of words){if(line&&c.measureText(line+' '+word).width>w-32){lines.push(line);line=word;}else line+=(line?' ':'')+word;}
+          if(line)lines.push(line);
+          return{point:p,lines,height:lines.length*(featureFont+3)+11};
+        });
+        const featuredHeight=featuredRows.reduce((sum,row)=>sum+row.height,0);
+        return{items:ordinary,featuredRows,featuredHeight,featureFont,x,w,columns,rows:Math.ceil(ordinary.length/columns)};
       });
-      const stripRows=Math.max(0,...groupLayouts.map(g=>g.rows));
-      const stripHeight=unspecified.length?100+stripRows*15:0;
+      const stripContentHeight=Math.max(0,...groupLayouts.map(g=>g.featuredHeight+g.rows*15));
+      const stripHeight=unspecified.length?117+stripContentHeight:0;
       const W=Math.max(125,width-L-20),H=Math.max(115,height-T-94-stripHeight);
       const mapX=value=>L+W*(1-value/maximum),mapY=value=>T+H*(1-value/maximum);
       const triangle=()=>{c.beginPath();c.moveTo(L,T);c.lineTo(L+W,T);c.lineTo(L+W,T+H);c.closePath();};
@@ -156,9 +169,10 @@
         c.strokeStyle='#ffffffd9';c.lineWidth=5;c.setLineDash([]);c.stroke();
         c.strokeStyle=style.color;c.lineWidth=2;c.setLineDash(style.dash);c.stroke();c.setLineDash([]);
       };
-      drawBoundary([[0,2.5],[2.5,2.5],[3.5,3.5],[3.5,maximum]],boundaryStyles[0]);
-      drawBoundary([[2.5,2.5],[2.5,maximum]],boundaryStyles[1]);
-      this.boundaries=[{name:'polynomial',vertices:[[0,2.5],[2.5,2.5],[3.5,3.5],[3.5,maximum]]},{name:'to_polynomial',vertices:[[2.5,2.5],[2.5,maximum]]}];
+      const poly=this.options.polynomialBoundary??2.5,exp=this.options.exponentialBoundary??2.9;
+      drawBoundary([[0,poly],[poly,poly],[exp,exp],[exp,maximum]],boundaryStyles[0]);
+      drawBoundary([[poly,poly],[poly,maximum]],boundaryStyles[1]);
+      this.boundaries=[{name:'polynomial',vertices:[[0,poly],[poly,poly],[exp,exp],[exp,maximum]]},{name:'to_polynomial',vertices:[[poly,poly],[poly,maximum]]}];
       this.projected=this.points.filter(p=>Number.isFinite(p.costQ)&&Number.isFinite(p.costC)&&p.costC>=p.costQ&&p.costQ>=0&&p.costC<=maximum)
         .map(p=>({...p,x:mapX(p.costQ),y:mapY(p.costC)}));
       this.projected=window.quantumPointLayout.spreadPoints(this.projected,(x,y,r,p)=>{
@@ -178,27 +192,7 @@
         if(active){c.beginPath();c.arc(p.x,p.y,radius+3,0,Math.PI*2);c.strokeStyle='#243248';c.lineWidth=1.3;c.stroke();}
       };
       this.projected.forEach(drawPoint);c.restore();
-      const names=[...this.projected].filter(p=>p.importance!=='peripheral'||p.slug===this.options.selectedSlug||p.slug===this.hovered?.slug)
-        .sort((a,b)=>Number(b.slug===this.options.selectedSlug)-Number(a.slug===this.options.selectedSlug)||window.quantumPointLayout.importance(b)-window.quantumPointLayout.importance(a));
-      const occupied=[];
-      names.forEach(p=>{
-        let name=p.shortName||p.name;if(name.length>42)name=name.slice(0,39)+'…';
-        const fontSize=p.importance==='high'?13:12;
-        c.font=`${p.importance==='high'||p.selected?600:500} ${fontSize}px ${font}`;
-        while(c.measureText(name).width>W-18&&name.length>10)name=name.slice(0,-2)+'…';
-        const tw=c.measureText(name).width;let shown=false;
-        for(const[dx,dy]of[[12,-17],[-tw-12,-17],[12,17],[-tw/2,-34],[-tw-12,17],[12,-49],[-tw-12,-49],[12,42],[-tw-12,42]]){
-          const box={x:p.x+dx-4,y:p.y+dy-9,w:tw+8,h:fontSize+7};
-          if(box.x<L+2||box.x+box.w>L+W-2||box.y<T+2||box.y+box.h>T+H-2)continue;
-          if(occupied.some(q=>box.x<q.x+q.w&&box.x+box.w>q.x&&box.y<q.y+q.h&&box.y+box.h>q.y))continue;
-          occupied.push(box);c.beginPath();c.moveTo(p.x,p.y);c.lineTo(Math.max(box.x,Math.min(box.x+box.w,p.x)),box.y+box.h/2);c.strokeStyle='#687d7855';c.lineWidth=.7;c.stroke();
-          c.fillStyle='rgba(255,255,255,.94)';c.fillRect(box.x,box.y,box.w,box.h);c.fillStyle=p.importance==='high'||p.selected?'#17242a':'#3f4b51';c.textAlign='left';c.textBaseline='middle';c.fillText(name,p.x+dx,p.y+dy);shown=true;break;
-        }
-        if(!shown&&(p.selected||p.slug===this.hovered?.slug)){
-          const x=Math.max(L+6,Math.min(L+W-tw-6,p.x-tw/2)),y=Math.max(T+14,Math.min(T+H-14,p.y-24));
-          c.fillStyle='#fff';c.fillRect(x-4,y-10,tw+8,20);c.fillStyle='#17242a';c.textAlign='left';c.textBaseline='middle';c.fillText(name,x,y);
-        }
-      });
+      this.labelBoxes=window.quantumPointLayout.drawPointLabels(c,this.projected,{bounds:{x:L+2,y:T+2,w:W-4,h:H-4},selectedSlug:this.options.selectedSlug,hoveredSlug:this.hovered?.slug,compact});
       c.save();c.translate(L+W*.32-8,T+H*.32+12);c.rotate(Math.atan2(H,W));c.font='italic 14px Georgia,serif';c.textAlign='center';c.textBaseline='top';c.fillStyle='#77656b';c.fillText('TQ = TC',0,0);c.restore();
       triangle();c.strokeStyle='#cdbfc2';c.lineWidth=1;c.stroke();
       c.beginPath();c.moveTo(L,T);c.lineTo(L,T+H);c.lineTo(L+W,T+H);c.strokeStyle='#8c7478';c.lineWidth=1.3;c.stroke();
@@ -221,19 +215,32 @@
         c.fillStyle='#f8faf9';c.fillRect(12,stripTop,width-24,stripHeight-3);
         c.font=`500 13px ${font}`;c.textAlign='left';c.textBaseline='middle';c.fillStyle='#53635e';c.fillText('Unspecified complexity',22,stripTop+15);
         const hasIntermediate=groups[1].some(p=>p.strengthCategory==='intermediate');
-        const headings=[['Polynomial'],hasIntermediate?['Improved exp. / subexp.','Exp. → subexp.']:['Exp. → subexp.'],['(Sub)exp. →','polynomial']];
+        const headings=[['Polynomial'],hasIntermediate?['Improved','exp./subexp.']:['Exp.','→','subexp.'],['(Sub)exp. →','polynomial']];
         const stripPoints=[];
         groupLayouts.forEach((g,i)=>{
-          c.font=`500 ${compact?12:13}px ${font}`;c.textAlign='center';c.fillStyle='#675758';
-          headings[i].forEach((line,j)=>c.fillText(line,g.x+g.w/2,stripTop+38+j*15,g.w-10));
+          c.font=`500 ${i===1&&compact?10:compact?12:13}px ${font}`;c.textAlign='center';c.fillStyle='#675758';
+          headings[i].forEach((line,j)=>c.fillText(line,g.x+g.w/2,stripTop+38+j*15,g.w-4));
+          let rowY=stripTop+76;
+          g.featuredRows.forEach(row=>{
+            const p={...row.point,x:g.x+13,y:rowY+row.height/2,radius:window.quantumPointLayout.pointRadius(row.point)};
+            stripPoints.push(p);drawPoint(p);
+            c.font=`700 ${g.featureFont}px ${font}`;c.textAlign='left';c.textBaseline='middle';c.fillStyle='#10232b';
+            const textX=g.x+27,box={x:textX-3,y:rowY+1,w:g.w-31,h:row.height-3};
+            c.fillStyle='#f8faf9';c.fillRect(box.x,box.y,box.w,box.h);c.fillStyle='#10232b';
+            row.lines.forEach((line,j)=>c.fillText(line,textX,rowY+8+g.featureFont/2+j*(g.featureFont+3),g.w-32));
+            this.labelBoxes.push({...box,slug:p.slug,text:row.lines.join(' '),fontSize:g.featureFont,featured:true});
+            rowY+=row.height;
+          });
           const items=[...g.items].sort((a,b)=>window.quantumPointLayout.importance(b)-window.quantumPointLayout.importance(a));
           const spacing=(g.w-14)/g.columns;
-          items.forEach((p,index)=>stripPoints.push({...p,x:g.x+7+(index%g.columns+.5)*spacing,y:stripTop+68+Math.floor(index/g.columns)*15,radius:window.quantumPointLayout.pointRadius(p)}));
+          items.forEach((p,index)=>{
+            const point={...p,x:g.x+7+(index%g.columns+.5)*spacing,y:rowY+8+Math.floor(index/g.columns)*15,radius:window.quantumPointLayout.pointRadius(p)};
+            stripPoints.push(point);drawPoint(point);
+          });
           if(i<2){c.beginPath();c.moveTo(g.x+g.w,stripTop+29);c.lineTo(g.x+g.w,stripTop+stripHeight-24);c.strokeStyle=boundaryStyles[i].color;c.lineWidth=1.8;c.setLineDash(boundaryStyles[i].dash);c.stroke();c.setLineDash([]);}
         });
-        stripPoints.forEach(drawPoint);
         const focused=stripPoints.find(p=>p.slug===this.hovered?.slug)||stripPoints.find(p=>p.slug===this.options.selectedSlug);
-        if(focused){c.font=`600 13px ${font}`;c.fillStyle='#17242a';c.textAlign='left';c.fillText(focused.shortName||focused.name,22,stripTop+stripHeight-13,width-44);}
+        if(focused&&!focused.featured){c.font=`600 13px ${font}`;c.fillStyle='#17242a';c.textAlign='left';c.fillText(focused.shortName||focused.name,22,stripTop+stripHeight-13,width-44);}
         this.projected.push(...stripPoints);
       }
     }

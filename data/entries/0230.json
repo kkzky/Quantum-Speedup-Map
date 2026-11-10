@@ -86,6 +86,8 @@
     "classical_kind": "unknown",
     "gain": "Superpolynomial separation; exponential or subexponential regimes depend on lambda"
   },
+  "featured": false,
+  "display_name": "PAC learning in the large-error regime",
   "resource_models": [
     "gate",
     "other"

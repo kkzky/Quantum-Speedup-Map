@@ -6,7 +6,7 @@
   "title_latex": "Spatial search on a lattice",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "spatial_lattice_search",
   "inventory_ids": [],
@@ -121,6 +121,8 @@
     "classical_exponent": 1,
     "gain": "\\Omega(\\sqrt{N/\\log N})"
   },
+  "featured": false,
+  "display_name": "Spatial search on a lattice",
   "resource_models": [
     "oracle",
     "other"

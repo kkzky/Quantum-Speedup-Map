@@ -141,6 +141,8 @@
     "quantum_exponent": 2,
     "classical_exponent": 3
   },
+  "featured": false,
+  "display_name": "Maximum-sum submatrix",
   "resource_models": [
     "gate"
   ],

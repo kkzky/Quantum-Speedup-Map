@@ -6,7 +6,7 @@
   "title_latex": "Gaussian boson sampling",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "gaussian_boson_sampling",
   "inventory_ids": [],
@@ -143,6 +143,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Gaussian boson sampling",
+  "featured": false,
+  "display_name": "Gaussian boson sampling",
   "resource_models": [
     "gate"
   ],

@@ -114,6 +114,8 @@
     "quantum_exponent": 0.25,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Learning symmetric juntas",
   "resource_models": [
     "oracle"
   ],

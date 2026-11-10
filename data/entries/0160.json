@@ -88,6 +88,8 @@
     "quantum_exponent": 0,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Random Boolean hidden shift",
   "resource_models": [
     "oracle"
   ],

@@ -115,6 +115,8 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Support-size estimation",
   "resource_models": [
     "oracle"
   ],

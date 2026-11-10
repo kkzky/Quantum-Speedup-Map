@@ -86,6 +86,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial relative to shift enumeration"
   },
+  "featured": false,
+  "display_name": "Shifted multiplicative characters",
   "resource_models": [
     "oracle",
     "gate"

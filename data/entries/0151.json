@@ -86,6 +86,8 @@
     "classical_kind": "polynomial",
     "gain": "Polynomial in k for fixed m and alpha"
   },
+  "featured": false,
+  "display_name": "Multilinear identity testing over a finite ring",
   "resource_models": [
     "oracle"
   ],

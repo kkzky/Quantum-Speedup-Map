@@ -6,7 +6,7 @@
   "title_latex": "Bichromatic closest pair",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g33",
   "inventory_ids": [
@@ -140,6 +140,8 @@
     "quantum_exponent": 0.6666666666666666,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Bichromatic closest pair",
   "resource_models": [
     "gate"
   ],

@@ -29,8 +29,8 @@ CORE={
     84:(1/3,.5,r'$\Theta(N^{1/3})$',r'$\Theta(N^{1/2})$','N: random-function range size','Hash-oracle queries',r'$\Theta(N^{1/6})$'),
     85:(2/3,1,r'$\Theta(N^{2/3})$',r'$\Theta(N)$','N: each function domain in the balanced case','Function-evaluation queries',r'$\Theta(N^{1/3})$'),
     91:(.41,.61,r'$\Theta(N^{1/3}(\log N)^{1/6})$',r'$\Theta(N^{1/2}(\log N)^{1/2})$','N: vertices of the Boolean hypercube','Value-oracle queries',r'$\Theta(N^{1/6}(\log N)^{1/3})$'),
-    61:(2.06,2.87,r'$\widetilde O(N^2)$',r'$\exp((c+o(1))N^{1/3}(\log N)^{2/3})$','N: integer bit length','Quantum gates / heuristic GNFS time',r'$\exp(\Theta(N^{1/3}(\log N)^{2/3}))$'),
-    88:(1,4,r'$O(N)$',r'$\widetilde O(2^{N/2})$','N: block length in bits','Coherent encryption / balanced classical queries',r'$\widetilde O(2^{N/2}/N)$'),
+    61:(2.06,2.648,r'$\widetilde O(N^2)$',r'$\exp((c+o(1))N^{1/3}(\log N)^{2/3})$','N: integer bit length','Quantum gates / heuristic GNFS time',r'$\exp(\Theta(N^{1/3}(\log N)^{2/3}))$'),
+    88:(1,3.4,r'$O(N)$',r'$\widetilde O(2^{N/2})$','N: block length in bits','Coherent encryption / balanced classical queries',r'$\widetilde O(2^{N/2}/N)$'),
 }
 
 
@@ -45,8 +45,8 @@ def coordinate(kind, exponent):
     if exponent is None or exponent<=0: return None
     if kind=='polynomial':
         return exponent if exponent<=2 else 2+.4*(1-2/exponent)
-    if kind=='subexponential': return 2.5+exponent
-    if kind=='exponential': return 3.5+exponent
+    if kind=='subexponential': return 2.5+.4*exponent
+    if kind=='exponential': return 2.9+exponent
     return None
 
 
@@ -69,6 +69,8 @@ def parse_exponential(formula):
 def main():
     full=load_catalogue(); points=[]
     for e in full['problems']:
+        if e['chapter_id']=='chapter-4' and not e['algorithm_ids']:
+            continue
         q=first_formula(e['quantum_speedup']['quantum']['headline_latex'])
         c=first_formula(e['quantum_speedup']['classical']['headline_latex'])
         strength=e['labels']['strength']['color_key']
@@ -94,7 +96,7 @@ def main():
         else:
             qp,cp=parse_exponential(q),parse_exponential(c)
             if qp and cp and qp[1]==cp[1]:
-                cq,cc=3.5+qp[0],3.5+cp[0]
+                cq,cc=2.9+qp[0],2.9+cp[0]
                 parameter=qp[1]+': the size parameter in the stated comparison'
                 model='Running time, with the entry’s input and memory assumptions'
                 gain='$2^{'+format(cp[0]-qp[0],'.4g')+qp[1]+'}$'
@@ -117,11 +119,16 @@ def main():
         hw={'hardwareDemonstrated':0,'hardwareSmall':0,'hardwarePolynomial':1,'hardwareExponential':3,'white':3.25}[e['labels']['hardware']['color_key']]
         hardware_label={'hardwareDemonstrated':'Demonstrated advantage','hardwareSmall':'Small demonstrations',
                         'hardwarePolynomial':'Fault-tolerant circuits','hardwareExponential':'Large coherent resources','white':'Unspecified'}[e['labels']['hardware']['color_key']]
+        assessment=e.get('hardware_assessment',{})
+        if assessment:
+            hw=assessment['visual_difficulty'] if assessment['visual_difficulty'] is not None else 3.25
+            hardware_label=assessment['visual_label']
         papers=[]
         for item in e['algorithm_items']:
             for link in item['links']:
                 if link['url'] not in {p['url'] for p in papers}: papers.append({'title':link['title'],'url':link['url']})
-        point={'slug':e['slug'],'name':e['title'],'shortName':e['title'],
+        point={'slug':e['slug'],'name':e['title'],'shortName':e.get('display_name',e['title']),
+               'featured':e.get('featured',False),
                'entryNumber':e['number'],
                'importance':{'medium':'normal'}.get(e['importance'],e['importance']),
                'resourceModels':e.get('resource_models',[]),

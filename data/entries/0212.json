@@ -157,6 +157,8 @@
     "quantum_exponent": 0,
     "classical_exponent": 0.25
   },
+  "featured": false,
+  "display_name": "Symmetry testing of Boolean functions",
   "resource_models": [
     "oracle",
     "other"

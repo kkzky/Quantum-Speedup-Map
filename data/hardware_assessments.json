@@ -1,0 +1,66 @@
+{
+  "92": {
+    "color_key": "white",
+    "description_latex": "Not applicable: this entry is a theorem relating query-complexity measures over all total Boolean functions. Hardware resources belong to a chosen function and its decision circuit.",
+    "visual_difficulty": null,
+    "visual_label": "Not applicable (complexity bound)",
+    "applicability": "not_applicable",
+    "assessment_basis": "Theorem 1 quantifies over every total Boolean function and the entry has no algorithm node. Q(f) is a minimum over quantum decision algorithms; a common implementation-difficulty score would require selecting a particular function and circuit.",
+    "sources": [
+      {
+        "title": "Quantum Implications of Huang's Sensitivity Theorem",
+        "url": "https://arxiv.org/html/2004.13231",
+        "locator": "Theorem 1; Section 2.1 (definitions of query-complexity measures)"
+      }
+    ]
+  },
+  "93": {
+    "color_key": "hardwarePolynomial",
+    "description_latex": "Circuit-based assessment: demanding coherent data access, comparable to the welded-tree traversal and graph-query algorithms. A vertex register uses $\\lceil\\log_2N\\rceil$ logical qubits; the bounded-degree walk uses a constant-size neighbor-index register, further vertex registers, and reversible-oracle and walk-control workspace. The $(k/\\varepsilon)^{O(1)}$ coherent neighbor-query sequence requires fault-tolerant control at useful scales. For an explicitly stored graph, coherent lookup circuitry or memory routing is the main hardware burden; a succinct reversible neighbor circuit reduces this burden.",
+    "visual_difficulty": 2,
+    "visual_label": "Demanding coherent access",
+    "applicability": "algorithm_assessment",
+    "assessment_basis": "The concrete P_k tester in Section 6 computes weld information using the Childs et al. welded-tree walk. The register widths follow from vertex labels and bounded degree. The implementation assessment uses these circuit primitives and the coherent input model.",
+    "comparison_entry_numbers": [
+      55,
+      31,
+      41
+    ],
+    "sources": [
+      {
+        "title": "Symmetries, Graph Properties, and Quantum Speedups",
+        "url": "https://epubs.siam.org/doi/full/10.1137/23M1573975",
+        "locator": "Sections 1.3.3 and 6; Theorem 6.1; Section 6.2 (quantum computation of the advice)"
+      },
+      {
+        "title": "Exponential algorithmic speedup by a quantum walk",
+        "url": "https://arxiv.org/abs/quant-ph/0209131",
+        "locator": "Quantum traversal algorithm and black-box graph access"
+      }
+    ]
+  },
+  "96": {
+    "color_key": "hardwareExponential",
+    "description_latex": "Circuit-based assessment: large coherent resources, on the same scale as amplified SAT search. For a size-$G$ Boolean verification circuit on $n$ assignment bits, straightforward reversible evaluation and uncomputation use $n+O(G)$ logical qubits and $O(G+n)$ gates per Grover iteration. A worst-case search uses $O(2^{n/2})$ coherent iterations, giving $O((G+n)2^{n/2})$ gates. The dominant difficulty is sustaining an exponentially long fault-tolerant computation with polynomial active workspace.\n\n[Before ``ETH is false'', the general classical 3-SAT bound was $O^*(1.30704^n)$, and amplified PPSZ claimed a quadratic improvement to $O^*(1.1433^n)$.]",
+    "visual_difficulty": 3,
+    "visual_label": "Large coherent resources",
+    "applicability": "algorithm_assessment",
+    "assessment_basis": "This rating applies to the explicit Grover SAT algorithm appearing in the quantum-complexity comparison. Reversible simulation gives the stated generic register and gate accounting. Its long coherent search has the same hardware rating as catalogue entry5, which also amplifies exponentially many SAT trials.",
+    "comparison_entry_numbers": [
+      5,
+      1
+    ],
+    "sources": [
+      {
+        "title": "A Framework of Quantum Strong Exponential-Time Hypotheses",
+        "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.STACS.2021.19",
+        "locator": "Sections 1–2 (Grover SAT baseline and the QSETH framework)"
+      },
+      {
+        "title": "Quantum Amplitude Amplification and Estimation",
+        "url": "https://arxiv.org/abs/quant-ph/0005055",
+        "locator": "Section 2 (amplification and coherent repetitions)"
+      }
+    ]
+  }
+}

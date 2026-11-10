@@ -123,6 +123,8 @@
     "classical_kind": "polynomial",
     "gain": "Nearly quadratic dependence on support size at constant error"
   },
+  "featured": false,
+  "display_name": "Shannon entropy of a finite distribution",
   "resource_models": [
     "oracle"
   ],

@@ -121,6 +121,8 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Omega(\\sqrt{n/r})"
   },
+  "featured": false,
+  "display_name": "Run-length Burrows–Wheeler transform",
   "resource_models": [
     "oracle",
     "gate"

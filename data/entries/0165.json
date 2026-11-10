@@ -77,6 +77,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Decker--Draisma--Ivanyos--Santha hidden-symmetry algorithm",
+  "featured": false,
+  "display_name": "Hidden quadratic level sets",
   "resource_models": [
     "oracle",
     "gate"

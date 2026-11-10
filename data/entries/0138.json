@@ -87,6 +87,8 @@
     "gain": "\\Omega(n^{2/k+t})",
     "classical_exponent": 2
   },
+  "featured": false,
+  "display_name": "Fixed-subgraph containment",
   "resource_models": [
     "oracle"
   ],

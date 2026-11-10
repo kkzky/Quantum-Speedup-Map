@@ -86,6 +86,8 @@
     "classical_kind": "polynomial",
     "gain": "\\Theta(\\log k/\\log(\\min\\{k,n-k\\}+1))"
   },
+  "featured": false,
+  "display_name": "Quantum coupon collection",
   "resource_models": [
     "oracle",
     "other"

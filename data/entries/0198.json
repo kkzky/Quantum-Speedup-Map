@@ -6,7 +6,7 @@
   "title_latex": "Deutsch--Jozsa promise problem",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-q01",
   "inventory_ids": [
@@ -88,6 +88,8 @@
     "quantum_exponent": 0,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Deutsch–Jozsa promise problem",
   "resource_models": [
     "oracle",
     "gate"

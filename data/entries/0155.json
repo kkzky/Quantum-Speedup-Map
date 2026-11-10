@@ -88,6 +88,8 @@
     "quantum_exponent": 1.3333333333333333,
     "classical_exponent": 1.5
   },
+  "featured": false,
+  "display_name": "Polynomial factorization over a finite field",
   "resource_models": [
     "gate"
   ],

@@ -105,6 +105,8 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log N"
   },
+  "featured": false,
+  "display_name": "Isomorphism of coprime abelian-by-cyclic groups",
   "resource_models": [
     "oracle",
     "gate"

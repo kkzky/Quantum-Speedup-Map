@@ -121,6 +121,8 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Omega(\\sqrt{n/D})"
   },
+  "featured": false,
+  "display_name": "Distributed graph diameter",
   "resource_models": [
     "other"
   ],

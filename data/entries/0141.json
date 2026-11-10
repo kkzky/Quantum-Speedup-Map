@@ -6,7 +6,7 @@
   "title_latex": "Boolean matrix multiplication",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "prior-g43",
   "inventory_ids": [
@@ -129,6 +129,8 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Theta(n/\\sqrt{\\ell+1})"
   },
+  "featured": false,
+  "display_name": "Boolean matrix multiplication",
   "resource_models": [
     "oracle",
     "gate"

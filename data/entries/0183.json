@@ -6,7 +6,7 @@
   "title_latex": "Certified randomness from an untrusted quantum device",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "medium",
   "origin": "research",
   "research_key": "certified_randomness",
   "inventory_ids": [],
@@ -93,6 +93,8 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: BCMVV certified-randomness protocol; Random-circuit certified-randomness protocol",
+  "featured": false,
+  "display_name": "Certified randomness from an untrusted quantum device",
   "resource_models": [
     "gate"
   ],

@@ -88,6 +88,8 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "featured": false,
+  "display_name": "Star-free regular-language membership",
   "resource_models": [
     "oracle"
   ],

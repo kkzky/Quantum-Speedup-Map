@@ -107,6 +107,8 @@
     "gain": "\\widetilde O(1+\\sqrt n/u)",
     "quantum_exponent": 0.5
   },
+  "featured": false,
+  "display_name": "Approximate Ulam distance",
   "resource_models": [
     "gate"
   ],

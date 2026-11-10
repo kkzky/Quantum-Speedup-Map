@@ -115,6 +115,8 @@
     "classical_kind": "polynomial",
     "gain": "Parameter-dependent polynomial improvement"
   },
+  "featured": false,
+  "display_name": "Independence testing of a finite joint distribution",
   "resource_models": [
     "oracle"
   ],
