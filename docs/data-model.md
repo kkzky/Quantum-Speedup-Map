@@ -104,7 +104,7 @@ python -m pip install -r requirements.txt
 python scripts/build_all.py
 ```
 
-`build_full_catalogue.py` combines the sources and resolves shared algorithm applications. `build_database.py` exports SQLite. `build_plot_data.py` prepares visual comparisons. `build_demo.py` renders problem and algorithm pages and creates the standalone HTML file.
+`build_full_catalogue.py` combines the committed sources and resolves shared algorithm applications. `build_database.py` exports SQLite. `build_plot_data.py` prepares visual comparisons in `site/sample-data.js`. `build_site.py` renders problem and algorithm pages in `site/`, reads the release version from `VERSION`, and creates `visualization/quantum-speedup-map.html`.
 
 When the parent manuscript is present, the build refreshes its source snapshot. A standalone checkout uses the committed snapshot. `data/additions/entry_ids.json` preserves the assigned problem identifiers across rebuilds.
 

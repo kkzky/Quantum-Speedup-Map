@@ -177,7 +177,7 @@ def build():
           'terms': ' '.join([algorithm['title'], *[TEXT.latex_to_text(alias) for alias in algorithm.get('aliases', [])]])}
          for key, algorithm in algorithms.items()]
 
-    output = ROOT / 'visualization/demo/entry-pages.js'
+    output = ROOT / 'site/entry-pages.js'
     output.write_text('\n'.join('window.' + name + ' = ' + json.dumps(value, ensure_ascii=False, indent=2) + ';'
                                 for name, value in [('ENTRY_PAGES', pages), ('ALGORITHM_PAGES', algorithm_pages),
                                                     ('PROBLEM_ALGORITHMS', algorithm_links),

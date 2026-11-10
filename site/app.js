@@ -225,7 +225,7 @@ function showPage() {
     window.scrollTo({top:0,behavior:'instant'});
     if(anchor)requestAnimationFrame(()=>{const target=document.getElementById(anchor);if(target&&$('entryContent').contains(target))target.scrollIntoView({behavior:'instant',block:'start'});});
   }else{
-    document.title='Quantum Speedup Map, Asymptotic View';
+    document.title='Quantum Speedups for Discrete Computational Problems';
     if(wasEntry){update();requestAnimationFrame(()=>{scene.resize();costScene.resize();$('detail').scrollIntoView({behavior:'instant',block:'start'});});}
   }
 }

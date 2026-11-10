@@ -33,16 +33,13 @@ def append_unique(items, incoming, key):
 
 
 def main():
-    manuscript = ROOT.parent / 'quantum_speedups_catalogue_en.tex'
-    if manuscript.exists():
-        (ROOT / 'sources/catalogue-preview.tex').write_text(manuscript.read_text(encoding='utf-8'), encoding='utf-8')
     full = load_source_catalogue()
     full['schema_version'] = '2.0.0'
     full['sources'] = ['sources/catalogue-preview.tex', 'data/additions/']
     records = full['problems']
     algorithms = {a['id']: a for a in full['algorithms']}
     ids_path = ROOT / 'data/additions/entry_ids.json'
-    ids = json.loads(ids_path.read_text()) if ids_path.exists() else {}
+    ids = json.loads(ids_path.read_text(encoding='utf-8')) if ids_path.exists() else {}
     for entry in records:
         entry['importance'] = 'high' if entry['number'] in IMPORTANT else 'peripheral' if entry['number'] in PERIPHERAL else 'medium'
         entry['origin'] = 'manuscript'

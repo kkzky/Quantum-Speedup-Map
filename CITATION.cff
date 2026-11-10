@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this version when using the catalogue, database or interactive map."
+type: software
+title: "Quantum Speedups for Discrete Computational Problems"
+authors:
+  - family-names: "kkzky"
+    website: "https://github.com/kkzky"
+version: 1.0.0
+date-released: 2026-11-10
+license: MIT
+repository-code: "https://github.com/kkzky/Quantum-Speedup-Map"
+url: "https://kkzky.github.io/Quantum-Speedup-Map/"
+abstract: "A literature-linked catalogue and interactive map of quantum speedups for discrete computational problems, with a separate chapter on complexity bounds and implications."
+keywords:
+  - quantum algorithms
+  - quantum speedups
+  - discrete computational problems
+  - computational complexity

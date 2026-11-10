@@ -10,10 +10,10 @@ The quantum/classical plot uses an ordered, compressed scale for asymptotic grow
 
 The comparisons are recorded in `data/cost_geometry_early.json` and `data/cost_geometry_late.json`. These files preserve the formulas, resource model, selected parameters and internal rationale for each placement. The build requires a record for every plotted entry. The axes compress polynomial degrees above two; bounds stated only as polynomial use the `poly(N)` position, and exponential bounds with unspecified constants use the exponential class position. Hardware assessments and their sources remain in `data/hardware_assessments.json`.
 
-Open `quantum-speedup-demo.html` directly for the standalone version, or serve the editable source:
+Download the [v1.0.0 offline map](https://github.com/kkzky/Quantum-Speedup-Map/releases/download/v1.0.0/quantum-speedup-map-v1.0.0.html), open the locally built `quantum-speedup-map.html`, or serve the website source from the repository root:
 
 ```sh
-python -m http.server 8765 --bind 127.0.0.1 --directory visualization/demo
+python -m http.server 8765 --bind 127.0.0.1 --directory site
 ```
 
 From the repository root, rebuild all data and pages with:
@@ -23,9 +23,13 @@ python -m pip install -r requirements.txt
 python scripts/build_all.py
 ```
 
+Then run `python scripts/package_release.py` to prepare the downloadable files in `dist/` and the deployable website in `_site/`. See [Publishing releases](../docs/releasing.md).
+
 Problem links use `#entry/<slug>`, algorithm links use `#algorithm/<slug>`, and merged applications use `#entry/<slug>/<application>`. These routes also work in the standalone file.
 
 The build combines `sources/catalogue-preview.tex` with the research records in `data/additions/`, exports the JSON and SQLite databases, and renders mathematical expressions as native MathML. `visualization/catalogue-preview.json` mirrors the full catalogue used by the pages.
+
+The website source lives in `site/`. `scripts/build_site.py` reads `VERSION`, updates asset hashes and the release link, and writes the standalone HTML. Production deployment follows published stable Releases. The previous `visualization/demo/` and `quantum-speedup-demo.html` addresses redirect to the corresponding formal entry points, preserving query parameters and page anchors.
 
 Editorial priority and resource-model assignments are stored in `data/visualization_settings.json`.
 

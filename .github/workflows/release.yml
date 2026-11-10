@@ -1,0 +1,97 @@
+name: Publish stable release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  build:
+    if: ${{ !github.event.release.prerelease && !github.event.release.draft }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    outputs:
+      is_latest: ${{ steps.latest.outputs.is_latest }}
+    env:
+      RELEASE_TAG: ${{ github.event.release.tag_name }}
+      RELEASE_ID: ${{ github.event.release.id }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13.12'
+          cache: pip
+      - name: Install pinned dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Build the release snapshot
+        run: |
+          python scripts/build_all.py
+          python scripts/package_release.py
+      - name: Attach missing release downloads
+        shell: bash
+        run: |
+          existing=$(gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets | map(.name)')
+          for asset in dist/*; do
+            name=$(basename "$asset")
+            if ! jq -e --arg name "$name" 'index($name) != null' <<< "$existing" >/dev/null; then
+              gh release upload "$RELEASE_TAG" "$asset" --repo "$GITHUB_REPOSITORY"
+            fi
+          done
+      - name: Select the current stable release
+        id: latest
+        shell: bash
+        run: |
+          latest=$(gh api "repos/$GITHUB_REPOSITORY/releases/latest" --jq '.id')
+          if [ "$latest" = "$RELEASE_ID" ]; then
+            echo 'is_latest=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'is_latest=false' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/upload-pages-artifact@v4
+        if: steps.latest.outputs.is_latest == 'true'
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.is_latest == 'true'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_ID: ${{ github.event.release.id }}
+    steps:
+      - name: Confirm the current stable release
+        id: latest
+        shell: bash
+        run: |
+          latest=$(gh api "repos/$GITHUB_REPOSITORY/releases/latest" --jq '.id')
+          if [ "$latest" = "$RELEASE_ID" ]; then
+            echo 'is_latest=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'is_latest=false' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/configure-pages@v5
+        if: steps.latest.outputs.is_latest == 'true'
+      - name: Deploy the stable website
+        id: deployment
+        if: steps.latest.outputs.is_latest == 'true'
+        uses: actions/deploy-pages@v4

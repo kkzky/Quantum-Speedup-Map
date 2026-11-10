@@ -77,7 +77,7 @@ def main():
                'hardwareLabel':hardware_label,'costQ':cq,'costC':cc,'papers':papers,
                'costComparison':comparison}
         points.append(point)
-    output=ROOT/'visualization/demo/sample-data.js'
+    output=ROOT/'site/sample-data.js'
     output.write_text('window.CATALOGUE_POINTS = '+json.dumps(points,ensure_ascii=False,indent=2)+';\nwindow.SAMPLE_DATA = window.CATALOGUE_POINTS;\n',encoding='utf-8')
     print(f'{len(points)} plotted problem records')
 

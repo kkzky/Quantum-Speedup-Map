@@ -2,6 +2,8 @@
 
 A structured catalogue of quantum speedups for discrete computational problems, with a separate chapter on complexity bounds and implications.
 
+**Version 1.0.0** · [Website](https://kkzky.github.io/Quantum-Speedup-Map/) · [Release and downloads](https://github.com/kkzky/Quantum-Speedup-Map/releases/tag/v1.0.0) · [Citation](CITATION.cff)
+
 The catalogue contains **211 problem entries**, **165 shared algorithm records** and **296 literature records**. Each problem includes its formal statement, quantum and classical complexity comparisons, strength/evidence/hardware labels, and primary literature with definition or theorem locations. Dataset counts are recorded in [`data/catalogue.json`](data/catalogue.json).
 
 ## Scope
@@ -19,9 +21,11 @@ The first three chapters concern discrete objects and configurations, including 
 
 The map plots 210 problems with quantum algorithms and links a rotatable three-dimensional view of speedup, evidence and hardware requirements with a quantum-versus-classical complexity plot. Both plots support fullscreen, problem/algorithm search, reset and shared Oracle/Gate resource-model filters. Speedup regions have explicit boundaries. Problem and algorithm pages support cross-references and wiki search. Point and label sizes reflect editorial importance.
 
-[Open the interactive map](https://kkzky.github.io/Quantum-Speedup-Map/). The [standalone visualization](visualization/quantum-speedup-demo.html) also opens directly in a browser. [Run locally](visualization/README.md).
+[Open the interactive map](https://kkzky.github.io/Quantum-Speedup-Map/). The [standalone visualization](visualization/quantum-speedup-map.html) also opens directly in a browser. [Run locally](visualization/README.md).
 
-![Quantum speedup visualization preview](visualization/demo-preview.png)
+The production website is deployed from published stable Releases. Development commits remain available in the repository; publishing a Release updates the website to that tagged version. The footer links to the deployed release.
+
+![Quantum speedup visualization preview](visualization/site-preview.png)
 
 ## Data
 
@@ -53,7 +57,19 @@ python -m pip install -r requirements.txt
 python scripts/build_all.py
 ```
 
-The build combines the manuscript snapshot and research additions, exports JSON and SQLite, and renders every problem and algorithm page. The browser files and standalone HTML are generated from the same catalogue.
+The build reads the manuscript snapshot and research additions committed to this repository, exports JSON and SQLite, and renders every problem and algorithm page. Website assets are generated in `site/`, and the standalone map is written to `visualization/quantum-speedup-map.html`. Both use the same catalogue and the version recorded in `VERSION`.
+
+To import an updated manuscript explicitly, run `python scripts/import_manuscript.py --source "path/to/catalogue.tex"`, review and commit the updated source, then rebuild.
+
+## Releases and citation
+
+The [v1.0.0 release](https://github.com/kkzky/Quantum-Speedup-Map/releases/tag/v1.0.0) includes:
+
+- [Offline HTML map](https://github.com/kkzky/Quantum-Speedup-Map/releases/download/v1.0.0/quantum-speedup-map-v1.0.0.html)
+- [JSON data archive](https://github.com/kkzky/Quantum-Speedup-Map/releases/download/v1.0.0/quantum-speedup-map-data-v1.0.0.zip)
+- [SQLite database](https://github.com/kkzky/Quantum-Speedup-Map/releases/download/v1.0.0/quantum-speedups-v1.0.0.sqlite)
+
+GitHub also provides source archives for the release tag. The [citation file](CITATION.cff) records the project author, version, release date and repository URL. After building, `python scripts/package_release.py` creates the release files in `dist/` and the deployable website in `_site/`. See [Publishing releases](docs/releasing.md) for the release workflow.
 
 ## Query examples
 
