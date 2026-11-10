@@ -30,7 +30,7 @@
       .sort((a,b)=>Number(!!b.featured)-Number(!!a.featured)||Number(b.slug===selectedSlug)-Number(a.slug===selectedSlug)||importance(b)-importance(a));
     for(const p of names){
       const selected=p.slug===selectedSlug,active=selected||p.slug===hoveredSlug;
-      const fontSize=p.featured?(compact?17:19):p.importance==='high'?13:11;
+      const fontSize=p.featured?(compact?15:16):p.importance==='high'?13:11;
       c.font=`${p.featured?700:selected||p.importance==='high'?600:500} ${fontSize}px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif`;
       let name=p.shortName||p.name;
       if(!p.featured&&name.length>44)name=name.slice(0,41)+'…';

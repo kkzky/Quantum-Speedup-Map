@@ -130,20 +130,10 @@
       const groupLayouts=groups.map((items,i)=>{
         const x=stripLeft+stripWidth*groupEdges[i],w=stripWidth*(groupEdges[i+1]-groupEdges[i]);
         const columns=Math.max(2,Math.floor((w-14)/15));
-        const featured=items.filter(p=>p.featured),ordinary=items.filter(p=>!p.featured);
-        const featureFont=compact?17:19;
-        c.font=`700 ${featureFont}px ${font}`;
-        const featuredRows=featured.map(p=>{
-          const words=(p.shortName||p.name).split(' '),lines=[];let line='';
-          for(const word of words){if(line&&c.measureText(line+' '+word).width>w-32){lines.push(line);line=word;}else line+=(line?' ':'')+word;}
-          if(line)lines.push(line);
-          return{point:p,lines,height:lines.length*(featureFont+3)+11};
-        });
-        const featuredHeight=featuredRows.reduce((sum,row)=>sum+row.height,0);
-        return{items:ordinary,featuredRows,featuredHeight,featureFont,x,w,columns,rows:Math.ceil(ordinary.length/columns)};
+        return{items,x,w,columns,rows:Math.ceil(items.length/columns)};
       });
-      const stripContentHeight=Math.max(0,...groupLayouts.map(g=>g.featuredHeight+g.rows*15));
-      const stripHeight=unspecified.length?117+stripContentHeight:0;
+      const stripContentHeight=Math.max(0,...groupLayouts.map(g=>g.rows*15));
+      const stripHeight=unspecified.length?99+stripContentHeight:0;
       const W=Math.max(125,width-L-20),H=Math.max(115,height-T-94-stripHeight);
       const mapX=value=>L+W*(1-value/maximum),mapY=value=>T+H*(1-value/maximum);
       const triangle=()=>{c.beginPath();c.moveTo(L,T);c.lineTo(L+W,T);c.lineTo(L+W,T+H);c.closePath();};
@@ -213,34 +203,23 @@
       if(unspecified.length){
         const stripTop=T+H+90;
         c.fillStyle='#f8faf9';c.fillRect(12,stripTop,width-24,stripHeight-3);
-        c.font=`500 13px ${font}`;c.textAlign='left';c.textBaseline='middle';c.fillStyle='#53635e';c.fillText('Unspecified complexity',22,stripTop+15);
         const hasIntermediate=groups[1].some(p=>p.strengthCategory==='intermediate');
         const headings=[['Polynomial'],hasIntermediate?['Improved','exp./subexp.']:['Exp.','→','subexp.'],['(Sub)exp. →','polynomial']];
         const stripPoints=[];
         groupLayouts.forEach((g,i)=>{
           c.font=`500 ${i===1&&compact?10:compact?12:13}px ${font}`;c.textAlign='center';c.fillStyle='#675758';
-          headings[i].forEach((line,j)=>c.fillText(line,g.x+g.w/2,stripTop+38+j*15,g.w-4));
-          let rowY=stripTop+76;
-          g.featuredRows.forEach(row=>{
-            const p={...row.point,x:g.x+13,y:rowY+row.height/2,radius:window.quantumPointLayout.pointRadius(row.point)};
-            stripPoints.push(p);drawPoint(p);
-            c.font=`700 ${g.featureFont}px ${font}`;c.textAlign='left';c.textBaseline='middle';c.fillStyle='#10232b';
-            const textX=g.x+27,box={x:textX-3,y:rowY+1,w:g.w-31,h:row.height-3};
-            c.fillStyle='#f8faf9';c.fillRect(box.x,box.y,box.w,box.h);c.fillStyle='#10232b';
-            row.lines.forEach((line,j)=>c.fillText(line,textX,rowY+8+g.featureFont/2+j*(g.featureFont+3),g.w-32));
-            this.labelBoxes.push({...box,slug:p.slug,text:row.lines.join(' '),fontSize:g.featureFont,featured:true});
-            rowY+=row.height;
-          });
+          headings[i].forEach((line,j)=>c.fillText(line,g.x+g.w/2,stripTop+20+j*15,g.w-4));
+          const rowY=stripTop+58;
           const items=[...g.items].sort((a,b)=>window.quantumPointLayout.importance(b)-window.quantumPointLayout.importance(a));
           const spacing=(g.w-14)/g.columns;
           items.forEach((p,index)=>{
             const point={...p,x:g.x+7+(index%g.columns+.5)*spacing,y:rowY+8+Math.floor(index/g.columns)*15,radius:window.quantumPointLayout.pointRadius(p)};
             stripPoints.push(point);drawPoint(point);
           });
-          if(i<2){c.beginPath();c.moveTo(g.x+g.w,stripTop+29);c.lineTo(g.x+g.w,stripTop+stripHeight-24);c.strokeStyle=boundaryStyles[i].color;c.lineWidth=1.8;c.setLineDash(boundaryStyles[i].dash);c.stroke();c.setLineDash([]);}
+          if(i<2){c.beginPath();c.moveTo(g.x+g.w,stripTop+11);c.lineTo(g.x+g.w,stripTop+stripHeight-24);c.strokeStyle=boundaryStyles[i].color;c.lineWidth=1.8;c.setLineDash(boundaryStyles[i].dash);c.stroke();c.setLineDash([]);}
         });
         const focused=stripPoints.find(p=>p.slug===this.hovered?.slug)||stripPoints.find(p=>p.slug===this.options.selectedSlug);
-        if(focused&&!focused.featured){c.font=`600 13px ${font}`;c.fillStyle='#17242a';c.textAlign='left';c.fillText(focused.shortName||focused.name,22,stripTop+stripHeight-13,width-44);}
+        if(focused){c.font=`600 13px ${font}`;c.fillStyle='#17242a';c.textAlign='left';c.fillText(focused.shortName||focused.name,22,stripTop+stripHeight-13,width-44);}
         this.projected.push(...stripPoints);
       }
     }
