@@ -8,11 +8,11 @@
           1
         ]
       ],
-      "quantum": "$O(\\sqrt{N/M})$",
-      "classical": "$\\Theta(N/M)$",
-      "parameter": "N: search domain; M: marked elements. The size parameter for the promised-density comparison is N/M.",
+      "quantum": "$O(\\sqrt N)$",
+      "classical": "$\\Theta(N)$",
+      "parameter": "N: search-space size; one marked item",
       "model": "Boolean-oracle queries",
-      "note": "The worst case uses M=1; replacing N by N/M gives the same square-root relation for every promised marked fraction."
+      "note": "Principal comparison in the stated regime."
     },
     "2": {
       "kind": "point",
@@ -29,94 +29,46 @@
       "note": "Worst-case bounded-error query comparison."
     },
     "3": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
           1
-        ],
-        [
-          0.65,
-          1
-        ],
-        [
-          0.875,
-          1
-        ],
-        [
-          1.25,
-          1
-        ],
-        [
-          1.625,
-          1
-        ],
-        [
-          2.0,
-          1
         ]
       ],
-      "quantum": "$O(\\sqrt{TD})\\ \\text{(detection)};\\ O(\\sqrt T D^{3/2}\\log D)\\ \\text{(witness)}$",
+      "quantum": "$\\widetilde O(\\sqrt T)$",
       "classical": "$O(T)$",
-      "parameter": "T: classical tree size; D: depth, 1≤D≤T",
+      "parameter": "T: backtracking-tree size; depth polylogarithmic in T",
       "model": "Tree-oracle queries",
-      "note": "The segment covers detection O(√(TD)) and witness O(√T D^(3/2) log D) as depth varies; it compares the same supplied tree. Explicit-input SAT algorithms are a different resource comparison."
+      "note": "The principal exponentially large tree regime has polylogarithmic depth; both detection and witness recovery suppress that overhead."
     },
     "4": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
           1
-        ],
-        [
-          0.75,
-          1
-        ],
-        [
-          1.0,
-          1
-        ],
-        [
-          1.25,
-          1
-        ],
-        [
-          1.5,
-          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt Q D)$",
+      "quantum": "$\\widetilde O(\\sqrt Q)$",
       "classical": "$O(Q)$",
-      "parameter": "Q: visited classical branch-and-bound nodes; D≤Q: depth",
+      "parameter": "Q: explored classical nodes; depth polylogarithmic in Q",
       "model": "Branch-and-bound oracle queries",
-      "note": "The curve retains the depth dependence: D=Q^d, 0≤d≤1, is a coordinate parameterization of the full stated family."
+      "note": "Principal comparison in the stated regime."
     },
     "5": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           3.09320401,
-          2.86
-        ],
-        [
-          3.4,
-          2.86
-        ],
-        [
-          3.4,
-          2.9
-        ],
-        [
-          3.09320401,
-          2.9
+          2.89
         ]
       ],
-      "quantum": "$O^*((2-2/k)^{n/2})$, quantum Sch\\\"oning; $O^*(1.1433^n)$ for 3-SAT, amplified PPSZ.",
-      "classical": "$(n+m)^{O_k(1)}2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$, exact counting by Boolean tensor contraction.",
-      "parameter": "n: variables; m: clauses; fixed clause width k",
+      "quantum": "$O^*(1.1433^n)$",
+      "classical": "$\\operatorname{poly}(n,m)2^{O(n\\log\\log n/\\sqrt{\\log n})}$",
+      "parameter": "n: variables; 3-SAT with polynomially many clauses",
       "model": "Quantum gates / classical bit operations",
-      "note": "The quantum range covers amplified 3-SAT and the fixed-k Schöning bounds. The classical band is the near-linear subexponential class 2^{O_k(n log log n/√log n)}; polynomial input-length factors remain in the formula."
+      "note": "The current classical subexponential algorithm is faster than this quantum upper bound."
     },
     "6": {
       "kind": "point",
@@ -140,63 +92,39 @@
           3.9
         ]
       ],
-      "quantum": "$O^*(1.728^n)$ for both problems, quantum subset dynamic programming; $O^*(1.110^n)$ and $O^*(1.301^n)$ for degree-three and degree-four travelling salesman, quantum backtracking.",
-      "classical": "$O(n^2 2^n)$ for travelling salesman, Held--Karp; $O^*(2^n)$ for feedback arc set, subset dynamic programming.",
-      "parameter": "n: number of vertices or ground-set elements",
+      "quantum": "$O^*(1.728^n)$",
+      "classical": "$O^*(2^n)$",
+      "parameter": "n: vertices; general travelling salesman / feedback arc set",
       "model": "Quantum running time / classical running time",
       "note": "General travelling salesman and feedback arc set. The separate bounded-degree TSP algorithms have additional input promises."
     },
     "8": {
-      "kind": "region",
+      "kind": "point",
       "points": [
-        [
-          3.4,
-          3.9
-        ],
-        [
-          3.9,
-          3.9
-        ],
         [
           3.68860219,
-          2.9
-        ],
-        [
-          3.4,
-          2.9
+          3.9
         ]
       ],
-      "quantum": "$O^*(1.7274^n)$ for explicit set cover, quantum dynamic programming; $O^*((2+c)^{n/2})$ for eligible families with $c<2$, Gaspers--Li covering, packing and partition algorithms.",
-      "classical": "$O^*(2^n)$, inclusion--exclusion; $O^*(\\min\\{2^n,2^m\\})$ for explicit set cover, subset methods or family enumeration.",
-      "parameter": "n: ground-set size; m: explicit family size; c<2: family-generation parameter",
+      "quantum": "$O^*(1.7274^n)$",
+      "classical": "$O^*(2^n)$",
+      "parameter": "n: universe size; explicit general set families with polynomial m≥n",
       "model": "Quantum time with coherent memory / classical subset-enumeration time",
-      "note": "Categorical envelope over the family-size tradeoff and eligible covering/packing/partition classes; explicit cover compares against min(2^n,2^m). The formulas specify the parameter dependence."
+      "note": "Principal comparison in the stated regime."
     },
     "9": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          2.9,
-          3.9
-        ],
-        [
-          3.9,
-          3.9
-        ],
-        [
-          5.2,
-          5.2
-        ],
-        [
-          2.9,
-          5.2
+          4.31142625,
+          4.4849625
         ]
       ],
-      "quantum": "$\\operatorname{poly}(m,n)^{\\log n}T_D^n$, quantum lattice dynamic programming.",
-      "classical": "$O(m(D+1)^n)$, demand-vector dynamic programming.",
-      "parameter": "n: universe size; m: sets; D≥1: fixed demand; T_D<D+1",
+      "quantum": "$\\operatorname{poly}(m,n)^{\\log n}2.660^n$",
+      "classical": "$O(m3^n)$",
+      "parameter": "n: universe size; demand D=2; polynomially many sets",
       "model": "QRAM time / classical RAM time",
-      "note": "Varying fixed demand changes both exponential bases. The extent represents those bases schematically, including T_2<2.660, T_3<3.529 and T_4<4.421. The quasipolynomial prefactor remains explicit; bounded-incidence instances also admit the stated stronger classical bound."
+      "note": "The principal nontrivial repeated-demand case retains the quasipolynomial prefactor; incidence is unrestricted."
     },
     "10": {
       "kind": "point",
@@ -207,28 +135,24 @@
         ]
       ],
       "quantum": "$O^*(1.7956^n)$, Gaspers--Li graph-coloring algorithm.",
-      "classical": "$O^*(2^n)$, inclusion--exclusion over independent sets; $\\operatorname{poly}(n+|E|)2^{O_q(n\\log\\log n/\\sqrt{\\log n})}$ for fixed $q$-colorability, Boolean tensor contraction.",
-      "parameter": "n: number of vertices or ground-set elements",
+      "classical": "$O^*(2^n)$",
+      "parameter": "n: vertices; computing the chromatic number",
       "model": "Quantum running time / classical running time",
       "note": "Exact chromatic number, where the number of colors is part of the problem; fixed-q colorability has a distinct classical bound."
     },
     "11": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           3.75758296,
           3.9
-        ],
-        [
-          3.75758296,
-          5.2
         ]
       ],
       "quantum": "$O^*(1.812^k)$",
-      "classical": "$\\min\\{(2+\\delta)^k n^{f(1/\\delta)},\\ O^*(2^k)\\ \\text{when applicable}\\}$",
-      "parameter": "k: terminals; n: graph vertices; δ>0: classical tradeoff parameter",
+      "classical": "$O^*(2^k)$",
+      "parameter": "k: terminals; bounded integer edge weights",
       "model": "Quantum gates / classical running time",
-      "note": "The quantum k-exponent is known. Classical bases are 2+δ with δ>0; the endpoint 2 denotes bounded integer weights or the infimum exponential rate. The upper end spans unspecified exponential constants schematically, not a bound on δ. Polynomial factors in n remain in the formulas."
+      "note": "Principal comparison in the stated regime."
     },
     "12": {
       "kind": "point",
@@ -252,9 +176,9 @@
           3.69468618
         ]
       ],
-      "quantum": "$O^*(1.538^n)$ with exponential QRAM, quantum treewidth dynamic programming.",
-      "classical": "$O^*(1.7347^n)$ with exponential space, potential-maximal-clique dynamic programming; $O^*(2.6151^n)$ with polynomial space, Fomin--Villanger.",
-      "parameter": "n: number of vertices or ground-set elements",
+      "quantum": "$O^*(1.538^n)$",
+      "classical": "$O^*(1.7347^n)$",
+      "parameter": "n: vertices; exponential-memory treewidth algorithms",
       "model": "Quantum running time / classical running time",
       "note": "Comparison permits exponential coherent/classical memory. The polynomial-space classical variant is separately stated in the entry."
     },
@@ -281,8 +205,8 @@
         ]
       ],
       "quantum": "$O^*(1.817^n)$ for all three problems, quantum vertex-ordering dynamic programming.",
-      "classical": "$O^*(2^n)$ for all three problems, subset dynamic programming; $k^{O(\\sqrt k)}n^{O(1)}$ for interval completion with fill parameter $k$.",
-      "parameter": "n: number of vertices or ground-set elements",
+      "classical": "$O^*(2^n)$",
+      "parameter": "n: vertices; general instances of the merged ordering problems",
       "model": "Quantum running time / classical running time",
       "note": "General vertex-ordering problems, parameterized by vertex count; the fill-parameter algorithm is an additional structured regime."
     },
@@ -301,56 +225,36 @@
       "note": "Leading exponential rates; polynomial factors are suppressed."
     },
     "19": {
-      "kind": "region",
+      "kind": "point",
       "points": [
-        [
-          3.23333333,
-          1
-        ],
         [
           3.23333333,
           3.4
         ]
       ],
-      "quantum": "$\\widetilde O(2^{n/3}n^d)$",
-      "classical": "$\\min\\{O^*(2^{n/2}),O(nW)\\}\\ \\text{for knapsack; fixed }d\\text{ for the MITM bound}$",
-      "parameter": "n: items/variables; fixed d: constraint count; W: knapsack capacity",
+      "quantum": "$O^*(2^{n/3})$",
+      "classical": "$O^*(2^{n/2})$",
+      "parameter": "n: variables; fixed constraint count, dense binary coefficients and large capacity",
       "model": "Quantum coherent-memory time / classical RAM time",
-      "note": "The matched fixed-d theorem includes knapsack and gives the quantum leading rate1/3. Varying W changes the classical minimum from polynomial capacity dynamic programming through subexponential to2^(n/2). The general quantum formula retains n^d; growing-d behavior is not assigned a false classical exponent. Sparse-row encodings use the entry’s stronger classical bound."
+      "note": "Principal comparison in the stated regime."
     },
     "20": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           3.1,
-          2.86
-        ],
-        [
-          3.1,
-          2.86
-        ],
-        [
-          3.1,
-          2.9
-        ],
-        [
-          3.1,
-          2.9
+          2.89
         ]
       ],
-      "quantum": "$O^*(2^{n/5})=O^*(1.1488^n)$, D\\\"orn's amplified branching algorithm.",
-      "classical": "$\\operatorname{poly}(n+|E|)2^{O(n\\log\\log n/\\sqrt{\\log n})}$, Boolean tensor contraction with cardinality constraints.",
+      "quantum": "$O^*(2^{n/5})$",
+      "classical": "$\\operatorname{poly}(n+|E|)2^{O(n\\log\\log n/\\sqrt{\\log n})}$",
       "parameter": "n: graph vertices",
       "model": "Quantum gates / classical bit operations",
-      "note": "The quantum branching algorithm remains exponential; the recorded classical optimum is near-linear subexponential."
+      "note": "The general current classical bound is subexponential."
     },
     "21": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          2.9,
-          3.9
-        ],
         [
           3.9,
           3.9
@@ -358,9 +262,9 @@
       ],
       "quantum": "$O^*((2-\\epsilon)^n)$ for some constant $\\epsilon>0$, Gaspers--Li domatic-number algorithm.",
       "classical": "$O^*(2^n)$, inclusion--exclusion over dominating sets.",
-      "parameter": "n: vertices; ε>0: algorithmic constant",
+      "parameter": "n: graph vertices; fixed algorithmic ε>0",
       "model": "Quantum time / classical time",
-      "note": "The quantum base 2−ε is proved below 2, but its numerical value is unspecified; the segment denotes that exponential-rate interval."
+      "note": "Both algorithms occupy the exponential class; the quantum base 2−ε is smaller, but its numerical constant is unspecified."
     },
     "24": {
       "kind": "point",
@@ -489,320 +393,32 @@
       "note": "Matched dense-matrix query comparison. The entry also states array-input bounds; polylogarithmic factors are retained in its formulas."
     },
     "35": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1.5,
-          1.0
-        ],
-        [
-          2.0,
-          1.5
-        ],
-        [
-          2.08,
-          2.04444444
-        ],
-        [
-          2.06315789,
-          2.04444444
-        ],
-        [
-          2.0,
-          2.0
-        ],
-        [
-          1.985,
-          1.97
-        ],
-        [
-          1.505,
-          1.01
+          2,
+          2
         ]
       ],
-      "quantum": "$\\widetilde O(n\\sqrt{m+n})$ for bipartite graphs; $\\widetilde O(n^{3/2}\\sqrt m+n^2)$ for general graphs, Ambainis--\\v Spalek.",
-      "classical": "$m^{1+o(1)}$ for bipartite graphs, almost-linear maximum flow; $\\min\\{O(m\\sqrt n),O(n^{9/4+\\varepsilon})\\}$ for general graphs.",
-      "parameter": "n: vertices; n≤m≤n²: edges",
+      "quantum": "$\\widetilde O(n^2)$",
+      "classical": "$n^{2+o(1)}$",
+      "parameter": "n: vertices; dense bipartite graphs, m=Θ(n²)",
       "model": "Quantum time with coherent adjacency access / classical time",
-      "note": "Envelope of the bipartite curve (n√m,m) and general-graph curve (n^(3/2)√m+n²,min(m√n,n^(9/4+ε))). Both are evaluated over the same edge-density range; ε may be arbitrarily small. The filled envelope includes both branches, not an assertion that every interior point is a separate algorithm."
+      "note": "Principal comparison in the stated regime."
     },
     "36": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1.5,
-          1.0
-        ],
-        [
-          1.625,
-          1.0
-        ],
-        [
-          1.875,
-          1.25
-        ],
-        [
-          1.9,
-          1.3
-        ],
-        [
-          1.97916667,
-          1.45833333
-        ],
-        [
-          2.0,
-          1.5
-        ],
-        [
-          2.0008316,
-          1.50833333
-        ],
-        [
-          2.00165975,
-          1.51666667
-        ],
-        [
-          2.00248447,
-          1.525
-        ],
-        [
-          2.00330579,
-          1.53333333
-        ],
-        [
-          2.00412371,
-          1.54166667
-        ],
-        [
-          2.00493827,
-          1.55
-        ],
-        [
-          2.00574949,
-          1.55833333
-        ],
-        [
-          2.00655738,
-          1.56666667
-        ],
-        [
-          2.00736196,
-          1.575
-        ],
-        [
-          2.00816327,
-          1.58333333
-        ],
-        [
-          2.0089613,
-          1.59166667
-        ],
-        [
-          2.0097561,
-          1.6
-        ],
-        [
-          2.01054767,
-          1.60833333
-        ],
-        [
-          2.01133603,
-          1.61666667
-        ],
-        [
-          2.01212121,
-          1.625
-        ],
-        [
-          2.01290323,
-          1.63333333
-        ],
-        [
-          2.01368209,
-          1.64166667
-        ],
-        [
-          2.01445783,
-          1.65
-        ],
-        [
-          2.01523046,
-          1.65833333
-        ],
-        [
-          2.016,
-          1.66666667
-        ],
-        [
-          2.01676647,
-          1.675
-        ],
-        [
-          2.01752988,
-          1.68333333
-        ],
-        [
-          2.01829026,
-          1.69166667
-        ],
-        [
-          2.01904762,
-          1.7
-        ],
-        [
-          2.01980198,
-          1.70833333
-        ],
-        [
-          2.02055336,
-          1.71666667
-        ],
-        [
-          2.02130178,
-          1.725
-        ],
-        [
-          2.02204724,
-          1.73333333
-        ],
-        [
-          2.02278978,
-          1.74166667
-        ],
-        [
-          2.02352941,
-          1.75
-        ],
-        [
-          2.02426614,
-          1.75833333
-        ],
-        [
-          2.025,
-          1.76666667
-        ],
-        [
-          2.02573099,
-          1.775
-        ],
-        [
-          2.02645914,
-          1.78333333
-        ],
-        [
-          2.02718447,
-          1.79166667
-        ],
-        [
-          2.02790698,
-          1.8
-        ],
-        [
-          2.02862669,
-          1.80833333
-        ],
-        [
-          2.02934363,
-          1.81666667
-        ],
-        [
-          2.0300578,
-          1.825
-        ],
-        [
           2.03076923,
-          1.83333333
-        ],
-        [
-          2.03147793,
-          1.84166667
-        ],
-        [
-          2.03218391,
-          1.85
-        ],
-        [
-          2.03288719,
-          1.85833333
-        ],
-        [
-          2.03358779,
-          1.86666667
-        ],
-        [
-          2.03428571,
-          1.875
-        ],
-        [
-          2.03498099,
-          1.88333333
-        ],
-        [
-          2.03567362,
-          1.89166667
-        ],
-        [
-          2.03636364,
-          1.9
-        ],
-        [
-          2.03705104,
-          1.90833333
-        ],
-        [
-          2.03773585,
-          1.91666667
-        ],
-        [
-          2.03841808,
-          1.925
-        ],
-        [
-          2.03909774,
-          1.93333333
-        ],
-        [
-          2.03977486,
-          1.94166667
-        ],
-        [
-          2.04044944,
-          1.95
-        ],
-        [
-          2.0411215,
-          1.95833333
-        ],
-        [
-          2.04179104,
-          1.96666667
-        ],
-        [
-          2.0424581,
-          1.975
-        ],
-        [
-          2.04312268,
-          1.98333333
-        ],
-        [
-          2.04378479,
-          1.99166667
-        ],
-        [
-          2.04444444,
-          2.0
-        ],
-        [
-          2.03076923,
-          2.0
+          2
         ]
       ],
-      "quantum": "$\\widetilde O(\\min\\{n^{7/6}\\sqrt m\\,U^{1/3},m\\sqrt{nU}\\})$, Ambainis--\\v Spalek.",
-      "classical": "$m^{1+o(1)}$, Chen--Kyng--Liu--Peng--Probst Gutenberg--Sachdeva and deterministic van den Brand et al.",
-      "parameter": "n: vertices; n≤m≤n²; 1≤U≤n^(1/4)",
+      "quantum": "$\\widetilde O(n^{13/6})$",
+      "classical": "$n^{2+o(1)}$",
+      "parameter": "n: vertices; dense unit-capacity networks, m=Θ(n²), U=1",
       "model": "Quantum coherent-graph time / classical RAM time",
-      "note": "Envelope obtained by varying m=n^a and U=n^u over1≤a≤2,0≤u≤1/4 in the stated min bound. The classical curve is m^(1+o(1)); it is not replaced by the quantum bound."
+      "note": "Principal comparison in the stated regime."
     },
     "37": {
       "kind": "point",
@@ -819,22 +435,18 @@
       "note": "Query comparison; arithmetic-time triangle algorithms are distinct."
     },
     "38": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
           1
-        ],
-        [
-          0.64705882,
-          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\min\\{n^{11/17},\\sqrt n\\,\\alpha(G)^{1/6}\\})$",
+      "quantum": "$\\widetilde O(\\sqrt n)$",
       "classical": "$\\Theta(n)$",
-      "parameter": "n: vertices; α(G): independence number",
+      "parameter": "n: vertices; bounded independence number",
       "model": "Vertex-mark queries",
-      "note": "The range covers min(n^(11/17),√n α(G)^(1/6)); α(G) varies across the graph family."
+      "note": "Principal comparison in the stated regime."
     },
     "39": {
       "kind": "point",
@@ -851,50 +463,18 @@
       "note": "The input model fixes degree and distance; polylogarithmic factors are suppressed."
     },
     "40": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.33333333,
           0.5
-        ],
-        [
-          0.43333333,
-          0.7
-        ],
-        [
-          0.58333333,
-          1.0
-        ],
-        [
-          0.83333333,
-          1.5
-        ],
-        [
-          1.33333333,
-          2.08
-        ],
-        [
-          2.05714286,
-          2.22222222
-        ],
-        [
-          2.25,
-          2.32380952
-        ],
-        [
-          2.36065574,
-          2.38024691
-        ],
-        [
-          2.39920027,
-          2.3996001
         ]
       ],
-      "quantum": "$\\widetilde O(n^{1/3}/\\Phi)$",
-      "classical": "$\\widetilde O(\\sqrt n/\\Phi^2)$",
-      "parameter": "n: vertices; Φ: expansion threshold",
+      "quantum": "$\\widetilde O(n^{1/3})$",
+      "classical": "$\\widetilde O(\\sqrt n)$",
+      "parameter": "n: vertices; constant expansion threshold",
       "model": "Graph-oracle operations",
-      "note": "The curve parameterizes Φ=n^(−a), a≥0, while retaining the full Φ dependence. Its endpoint denotes unbounded polynomial degree, not a chosen exponent."
+      "note": "Principal comparison in the stated regime."
     },
     "41": {
       "kind": "point",
@@ -939,40 +519,32 @@
       "note": "Query comparison; arithmetic-time product algorithms are separate."
     },
     "44": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           1,
           2
-        ],
-        [
-          1.5,
-          2
         ]
       ],
-      "quantum": "$O(n\\sqrt d)$",
+      "quantum": "$O(n)$",
       "classical": "$\\Theta(n^2)$",
-      "parameter": "n: vertices; 1≤d≤n: promised path length",
+      "parameter": "n: vertices; constant promised path length; adjacency-matrix queries",
       "model": "Adjacency-matrix queries",
-      "note": "The full path-length range d=n^a, 0≤a≤1, yields exponents 1+a/2 versus 2."
+      "note": "Principal comparison in the stated regime."
     },
     "46": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           1.5,
           2
-        ],
-        [
-          2,
-          2
         ]
       ],
-      "quantum": "$\\widetilde O(n^{3/2}\\sqrt\\tau)$",
+      "quantum": "$\\widetilde O(n^{3/2})$",
       "classical": "$\\Theta(n^2)$",
-      "parameter": "n: vertices; τ: minimum cut value, 1≤τ≤n in unweighted graphs",
+      "parameter": "n: vertices; constant minimum-cut value; adjacency-matrix queries",
       "model": "Adjacency-matrix queries",
-      "note": "The segment retains τ dependence for the matrix model. Classical explicit-edge time uses a different input representation."
+      "note": "Principal comparison in the stated regime."
     },
     "49": {
       "kind": "unavailable",
@@ -984,22 +556,18 @@
       "note": "QAOA supplies per-sample and optimization-loop costs, but no general depth/iteration/shot bound attaining the same approximation guarantee as the classical algorithm."
     },
     "50": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1,
-          0.05
-        ],
-        [
-          1,
+          2.4,
           2.4
         ]
       ],
-      "quantum": "$O(m+n)$",
-      "classical": "$\\operatorname{poly}(m,n)$",
-      "parameter": "N=n+m: explicit constraint-list size; D: occurrence bound",
+      "quantum": "$O(N)$",
+      "classical": "$\\operatorname{poly}(N)$",
+      "parameter": "N=n+m: input size; p=1 and bounded occurrence",
       "model": "Quantum gates / classical running time for the stated expected approximation guarantee",
-      "note": "The p=1 circuit gives the proved expected objective guarantee; the classical polynomial-time algorithm attains a stronger approximation. Its polynomial degree is not specified in the catalogue."
+      "note": "The matched algorithms are polynomial. The classical degree is unspecified, so both markers use the polynomial-class position."
     },
     "51": {
       "kind": "unavailable",
@@ -1020,92 +588,60 @@
       "note": "The p-dependent QAOA cost is per sample; the catalogue does not specify p and repetition/optimization costs attaining the classical εn-near-optimum guarantee."
     },
     "53": {
-      "kind": "region",
+      "kind": "point",
       "points": [
-        [
-          2.9,
-          2.86
-        ],
-        [
-          3.4,
-          2.86
-        ],
         [
           3.4,
           3.9
-        ],
-        [
-          2.9,
-          2.9
         ]
       ],
       "quantum": "$2^{(1-c_{\\rm cl})n/2+o(n)}$",
-      "classical": "$\\min\\{2^{(1-c_{\\rm cl})n+o(n)},\\operatorname{poly}(N)2^{O_k(N/\\sqrt{\\log N})}\\}$",
-      "parameter": "n: spins; m: terms; b: coefficient bits; c_cl: density-promise exponent",
+      "classical": "$2^{(1-c_{\\rm cl})n+o(n)}$",
+      "parameter": "N=(1−c_cl)n: effective search exponent; fixed density promise; dense objective",
       "model": "Quantum gates / classical bit operations",
-      "note": "Envelope across the density promise and input encoding: the comparator is the minimum of density-promise search and exact counting with N=O_k(n+mb). The latter can lie in the near-linear subexponential class or exceed direct search, depending on representation size."
+      "note": "The fixed-promise conditioning-and-search comparison uses N=(1−c_cl)n. Dense representation keeps the encoding-based counting bound from improving the paired exponential bound."
     },
     "54": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.5,
-          1
-        ],
-        [
-          0.75,
-          1
+          1,
+          2
         ]
       ],
-      "quantum": "$\\widetilde O((\\log|\\Omega|)^{3/4}/(\\varepsilon\\sqrt\\delta))$",
-      "classical": "$\\widetilde O(\\log|\\Omega|/(\\varepsilon^2\\delta))$",
-      "parameter": "S=(log|Ω|)/(ε²δ): classical-work scale, not input length; N=log|Ω|",
+      "quantum": "$\\widetilde O(\\varepsilon^{-1})$",
+      "classical": "$\\widetilde O(\\varepsilon^{-2})$",
+      "parameter": "1/ε: inverse relative error; fixed state-space and spectral-gap factors",
       "model": "Coherent walk operations / classical transition operations",
-      "note": "In the common classical-work scale S, the quantum cost is N^(1/4)√S. Since1≤N≤S, its power in S ranges from1/2 to3/4. This covers arbitrary accuracy/gap dependence, including exponentially small gaps; the original multivariate formulas remain explicit."
+      "note": "Principal comparison in the stated regime."
     },
     "55": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.9
-        ],
-        [
           2.4,
-          2.9
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          3.9
         ]
       ],
       "quantum": "$\\operatorname{poly}(h)$",
-      "classical": "$2^{\\Omega(h)}\\ \\text{queries required; exponential exploration suffices}$",
-      "parameter": "h: height of each welded tree",
+      "classical": "$2^{\\Omega(h)}$",
+      "parameter": "h: welded-tree height",
       "model": "Oracle queries; quantum gates are polynomial in h",
-      "note": "Polynomial quantum degree and the classical exponential constants are unspecified. The shaded extent denotes complexity classes with unspecified exponents; its edges are not numerical bounds on those exponents."
+      "note": "Unspecified polynomial degree and exponential constant use their complexity-class positions."
     },
     "56": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
           1
-        ],
-        [
-          1,
-          1
         ]
       ],
-      "quantum": "$\\widetilde O(L/\\sqrt\\delta)$",
-      "classical": "$\\widetilde O(L/\\delta)$",
-      "parameter": "S=L/δ: classical-work scale, not input length; L: schedule length; δ: spectral gap",
+      "quantum": "$\\widetilde O(\\delta^{-1/2})$",
+      "classical": "$\\widetilde O(\\delta^{-1})$",
+      "parameter": "1/δ: inverse spectral gap; fixed cooling-schedule length",
       "model": "Coherent walk steps / classical transition steps",
-      "note": "In the common classical-work scale S, the quantum cost is √(LS). Since1≤L≤S, its power in S ranges from1/2 to1. The full gap range, including exponentially small δ, is represented without fixing δ as a polynomial in L."
+      "note": "Principal comparison in the stated regime."
     },
     "59": {
       "kind": "point",
@@ -1122,30 +658,18 @@
       "note": "Leading polynomial powers in the recorded APSP algorithms; polylogarithms are suppressed."
     },
     "60": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.9
-        ],
-        [
           2.4,
-          2.9
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          3.9
         ]
       ],
       "quantum": "$\\operatorname{poly}(p)$",
-      "classical": "$\\exp(O(p))\\ \\text{for the studied interpolation-repetition comparator}$",
-      "parameter": "p: field size; n: degree bound; balanced OPI with constant n/p",
+      "classical": "$\\exp(O(p))$",
+      "parameter": "p: field size; balanced explicit OPI, fixed n/p and the DQI score target",
       "model": "Quantum gates / classical operations for the same DQI score target",
-      "note": "The explicit balanced OPI regime compares polynomial-time DQI with exponential interpolation repetition to reach its score. Degree and exponential-rate constants are not given. The shaded extent denotes complexity classes with unspecified exponents; its edges are not numerical bounds on those exponents."
+      "note": "The principal explicit random-instance comparison uses interpolation repetition; unspecified degrees and rates use complexity-class positions."
     },
     "61": {
       "kind": "point",
@@ -1176,40 +700,24 @@
       "note": "The classical L_q[1/3,c] regime uses the same bit-length variable."
     },
     "63": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           2.13333333,
-          2.86
-        ],
-        [
-          2.13333333,
-          2.9
+          2.89
         ]
       ],
       "quantum": "$\\widetilde O(n^3)$ gates and $O(n)$ logical qubits, Shor's discrete-logarithm algorithm.",
       "classical": "$2^{O(n/(\\log n)^{1/4})}$ expected time, the Akshima et al. index-calculus algorithm.",
       "parameter": "n: group-order bit length",
       "model": "Quantum gates / expected classical operations",
-      "note": "The classical n/(log n)^(1/4) exponent occupies the near-linear subexponential band; its exact logarithmic correction is retained."
+      "note": "The classical bound is near-linear subexponential in n; the exact logarithmic correction remains in the formula."
     },
     "64": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.4
-        ],
-        [
           2.4,
-          3.4
-        ],
-        [
-          2.4,
-          3.4
-        ],
-        [
-          0.05,
           3.4
         ]
       ],
@@ -1217,111 +725,63 @@
       "classical": "$\\widetilde O(2^{n/2})$",
       "parameter": "n=log₂R: bit length of the order bound",
       "model": "Black-box group operations",
-      "note": "The quantum degree is unspecified; the classical cost is 2^(n/2)."
+      "note": "The unspecified quantum polynomial degree uses the polynomial-class position."
     },
     "65": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.7
-        ],
-        [
           2.4,
-          2.7
-        ],
-        [
-          2.4,
-          2.7
-        ],
-        [
-          0.05,
           2.7
         ]
       ],
-      "quantum": "$\\operatorname{poly}(n,\\mathrm{precision})$",
-      "classical": "$L_d[1/2,O(1)]$",
-      "parameter": "n=log₂d: discriminant bit length; output precision",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\exp(O(\\sqrt{n\\log n}))$",
+      "parameter": "n: discriminant bit length; polynomial output precision",
       "model": "Quantum gates / heuristic classical bit operations",
-      "note": "The quantum polynomial degree and precision dependence are retained as a polynomial-class range; classical L_d[1/2,O(1)] has subexponential power1/2."
+      "note": "The unspecified polynomial degree uses the polynomial-class position; the classical leading exponent power is one half."
     },
     "66": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.7
-        ],
-        [
           2.4,
-          2.7
-        ],
-        [
-          2.4,
-          2.7
-        ],
-        [
-          0.05,
           2.7
         ]
       ],
-      "quantum": "Polynomial time in the input parameters, Hallgren and Biasse--Song principal-ideal algorithms.",
-      "classical": "$L_{|\\Delta_K|}[1/2,O(1)]$ under the standard index-calculus hypotheses in quadratic fields, relation-collection algorithms.",
-      "parameter": "n=log₂|Δ|: discriminant bit length; quadratic-field regime",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\exp(O(\\sqrt{n\\log n}))$",
+      "parameter": "n: discriminant bit length; quadratic fields",
       "model": "Quantum gates / heuristic classical bit operations",
-      "note": "Matched quadratic-field regime; quantum degree is unspecified and the classical subexponential power is1/2. The entry states the GRH/index-calculus assumptions."
+      "note": "Principal comparison in the stated regime."
     },
     "67": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.7
-        ],
-        [
           2.4,
-          2.7
-        ],
-        [
-          2.4,
-          2.7
-        ],
-        [
-          0.05,
           2.7
         ]
       ],
-      "quantum": "Polynomial time under GRH, Biasse--Song class-group computation.",
-      "classical": "$L_{|\\Delta|}[1/2,O(1)]$ in imaginary quadratic fields, Hafner--McCurley and Buchmann index calculus.",
-      "parameter": "n=log₂|Δ|: discriminant bit length; quadratic-field regime",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\exp(O(\\sqrt{n\\log n}))$",
+      "parameter": "n: discriminant bit length; imaginary quadratic fields; GRH for the quantum bound",
       "model": "Quantum gates / heuristic classical bit operations",
-      "note": "Matched quadratic-field regime; quantum degree is unspecified and the classical subexponential power is1/2. The entry states the GRH/index-calculus assumptions."
+      "note": "Principal comparison in the stated regime."
     },
     "68": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          0.05,
-          3.4
-        ],
         [
           2.4,
           3.4
-        ],
-        [
-          2.5,
-          3.4
-        ],
-        [
-          2.7,
-          3.4
         ]
       ],
-      "quantum": "$\\operatorname{poly}(n)2^{O(\\sqrt r)}$",
+      "quantum": "$\\operatorname{poly}(n)$",
       "classical": "$\\widetilde O(2^{n/2})$",
-      "parameter": "n=log₂|G|; r=log₂|2^t p^k G|, 0≤r≤n",
+      "parameter": "n=log₂|G|; generic actions with 2ᵗpᵏG={0} and fixed p,t,k",
       "model": "Group-action oracle operations",
-      "note": "The range retains r: the quantum bound is poly(n)2^{O(√r)}. It spans polynomial through subexponential power1/2, while generic classical action search costs2^(n/2)."
+      "note": "This is the strongest action-oracle regime identified in the manuscript, not the generic hidden-shift case."
     },
     "69": {
       "kind": "point",
@@ -1338,40 +798,32 @@
       "note": "Both bounds use field cardinality p, with o(1) in the powers retained."
     },
     "70": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.16666667,
-          0.05
-        ],
-        [
-          0.16666667,
-          0.18
+          3.06666667,
+          2.4
         ]
       ],
-      "quantum": "$\\widetilde O(p^{1/6})$",
-      "classical": "$\\operatorname{poly}(\\log p)$",
-      "parameter": "p: underlying field cardinality",
+      "quantum": "$\\widetilde O(2^{n/6})$",
+      "classical": "$\\operatorname{poly}(n)$",
+      "parameter": "n=⌈log₂p⌉: field-size bit length; SIDH key recovery",
       "model": "Quantum isogeny-query bound / classical key-recovery time",
-      "note": "The classical polynomial-in-log p attack is asymptotically faster than the historical quantum p^(1/6) bound."
+      "note": "The classical attack is polylogarithmic in p and faster than the historical quantum bound."
     },
     "71": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           3.147,
           3.309
-        ],
-        [
-          3.1563,
-          3.1925
         ]
       ],
-      "quantum": "$2^{0.247n+o(n)}$ rigorous time, Hhan--Kim--Kim--Laarhoven; $2^{0.2563n+o(n)}$ heuristic time, reusable quantum walks.",
-      "classical": "$2^{0.409n+o(n)}$ rigorous time, Hhan--Kim--Kim--Laarhoven; $2^{0.2925n+o(n)}$ heuristic time, Becker--Ducas--Gama--Laarhoven sieving.",
-      "parameter": "n: lattice dimension",
+      "quantum": "$2^{0.247n+o(n)}$",
+      "classical": "$2^{0.409n+o(n)}$",
+      "parameter": "n: lattice dimension; worst-case time guarantees",
       "model": "Quantum / classical lattice algorithm time",
-      "note": "The two endpoints are separate rigorous and heuristic comparisons, respectively; the connecting segment indicates the range of recorded regimes, not an interpolation theorem."
+      "note": "The principal rigorous comparison uses the matched rigorous classical theorem."
     },
     "72": {
       "kind": "point",
@@ -1388,82 +840,46 @@
       "note": "Matched reduction and rigorous SVP subroutine."
     },
     "73": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           1,
-          2.86
-        ],
-        [
-          1,
-          2.9
+          2.89
         ]
       ],
-      "quantum": "$O(n\\log(n/\\delta))$",
+      "quantum": "$O(n\\log n)$",
       "classical": "$2^{O(n/\\log n)}$",
-      "parameter": "n: secret bit length; fixed noise and failure probability",
+      "parameter": "n: secret length; constant noise and bounded failure probability",
       "model": "Quantum processing time / classical LPN processing time",
-      "note": "Quantum access supplies noisy quantum examples; classical access supplies classical samples. The two access models are stated explicitly. Logarithmic confidence factors remain in the formula."
+      "note": "Principal comparison in the stated regime."
     },
     "74": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          2.4
-        ],
-        [
-          2.9,
-          2.9
-        ],
-        [
-          3.4,
-          3.9
-        ],
-        [
-          5.2,
-          3.9
-        ],
-        [
-          5.2,
-          0.05
+          0.5,
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt T\\,\\operatorname{poly}(n))$",
-      "classical": "$\\min\\{T,2^{n+o(n)}\\}$",
-      "parameter": "n: dimension; T: size of the matched enumeration tree",
+      "quantum": "$\\widetilde O(\\sqrt T)$",
+      "classical": "$O(T)$",
+      "parameter": "T: enumeration-tree size; n=O(log T); T≤2ⁿ; unrestricted-distance CVP",
       "model": "Quantum / classical lattice running time",
-      "note": "The quantum bound depends on T and an unspecified polynomial in n. The classical comparator is min(T,2^{n+o(n)}). The region is an envelope over those parameters, not a fixed assumption T=2^n."
+      "note": "Use the enumeration regime where the tree is at most the general classical exact bound; dimension overhead is polylogarithmic in T."
     },
     "75": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
           2.4,
-          0.05
-        ],
-        [
-          2.4,
-          2.4
-        ],
-        [
-          0.05,
           2.4
         ]
       ],
-      "quantum": "$\\operatorname{poly}(n,\\log q)$ time, Eldar--Hallgren periodic-lattice decoding.",
-      "classical": "Deterministic polynomial time in the same radius regime, Ducas--van Woerden decoding as developed by Allen et al.",
-      "parameter": "n: dimension; q: period parameter; same decoding-radius promise",
+      "quantum": "$\\operatorname{poly}(n,\\log q)$",
+      "classical": "$\\operatorname{poly}(n,\\log q)$",
+      "parameter": "n: lattice dimension; q: period; the same decoding-radius promise",
       "model": "Quantum gates / classical running time",
-      "note": "Both matched algorithms are polynomial; their degrees are unspecified. The shaded extent denotes complexity classes with unspecified exponents; its edges are not numerical bounds on those exponents."
+      "note": "Both unspecified polynomial degrees use the polynomial-class position."
     },
     "76": {
       "kind": "unavailable",
@@ -1475,332 +891,144 @@
       "note": "The quantum headline gives a block-SVP subroutine cost; the classical headline minimizes several complete attacks. A comparable optimized total attack cost requires modulus, noise, sample/secret distributions and attack parameters not supplied by one formula in this entry."
     },
     "77": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
           2.4,
-          0.05
-        ],
-        [
-          2.4,
-          2.4
-        ],
-        [
-          0.05,
           2.4
         ]
       ],
-      "quantum": "Polynomial time in the public dimensions and $q$, Chen--Liu--Zhandry quantum filtering.",
-      "classical": "$\\operatorname{poly}(m,\\log q)$ time in a stronger regime, Kothari--O'Donnell--Wu.",
-      "parameter": "n,m,q: stated wide-matrix SIS dimensions and modulus",
+      "quantum": "$\\operatorname{poly}(n,m,q)$",
+      "classical": "$\\operatorname{poly}(m,\\log q)$",
+      "parameter": "Polynomial modulus q; wide matrices m≥Cn³",
       "model": "Quantum gates / classical bit operations",
-      "note": "The classical result covers the entire stated quantum regime. Both full algorithms are polynomial in the admitted public parameters; the degrees remain unspecified. The shaded extent denotes complexity classes with unspecified exponents; its edges are not numerical bounds on those exponents."
+      "note": "Both matched algorithms are polynomial in this principal wide-matrix regime."
     },
     "78": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          2.4
-        ],
-        [
-          3.4,
+          3.9,
           3.9
-        ],
-        [
-          2.9,
-          3.9
-        ],
-        [
-          2.9,
-          2.86
-        ],
-        [
-          0.05,
-          2.86
         ]
       ],
-      "quantum": "$\\operatorname{poly}(n)\\sqrt{\\binom nw/\\binom{n-k}w}$",
-      "classical": "$\\min\\{T_{\\rm BJMM/MO}(n,k,w),T_{\\rm sparse\\ counting},\\operatorname{poly}(n)\\binom nw/\\binom{n-k}w\\}$",
-      "parameter": "n: code length; k: dimension; w: target weight; matrix sparsity",
+      "quantum": "$2^{0.05869n+o(n)}$ quantum-walk ISD",
+      "classical": "$2^{O(n)}$ optimized BJMM / May–Ozerov information-set decoding",
+      "parameter": "n: dense random-code length; Gilbert–Varshamov weight",
       "model": "Quantum gates / classical bit operations",
-      "note": "Categorical envelope: amplified Prange depends on binomial(n,w)/binomial(n−k,w), while optimized ISD and sparse-circuit counting determine the classical minimum. Rates, weights and sparsity vary; no numerical optimum exponent is assumed."
+      "note": "The stated quantum exponent is the worst over rates in the Kachigar–Tillich comparison. The matched optimized classical rate is not specified numerically, so both markers use the exponential-class position."
     },
     "79": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          2.4
-        ],
-        [
-          3.4,
+          3.9,
           3.9
-        ],
-        [
-          3.4,
-          2.86
-        ],
-        [
-          2.9,
-          2.86
         ]
       ],
-      "quantum": "$O(2^{k/2})\\ \\text{weight evaluations}$",
-      "classical": "$\\min\\{O(2^k),T_{\\rm ISD},T_{\\rm sparse\\ counting}\\}$",
-      "parameter": "n: code length; k≤n: code dimension; matrix sparsity",
+      "quantum": "$O(2^{k/2})$",
+      "classical": "$\\min\\{O(2^k),T_{\\rm ISD}\\}$",
+      "parameter": "k: code dimension; dense generators; exact minimum distance",
       "model": "Quantum weight evaluations / classical weight evaluations or bit operations",
-      "note": "The region covers rate-dependent codeword enumeration and stronger applicable ISD/sparse-counting comparators. The endpoint (1/2,1) in the exponential-rate sector is the full rate-k enumeration comparison."
+      "note": "The quantum exhaustive bound is explicit, but optimized classical ISD has an unspecified rate in the source. Both markers therefore use the exponential-class position."
     },
     "80": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           3.1156,
           3.183
-        ],
-        [
-          3.1182,
-          3.183
         ]
       ],
-      "quantum": "$\\widetilde O(2^{0.2182n})$ time with classical list heuristics, or $\\widetilde O(2^{0.2156n})$ with an additional update heuristic, Bonnetain--Bricout--Schrottenloher--Shen quantum walks.",
-      "classical": "$\\widetilde O(2^{0.283n})$ time and space, Bonnetain--Bricout--Schrottenloher--Shen classical representations.",
-      "parameter": "n: random subset-sum items in the stated cryptographic-density regime",
+      "quantum": "$\\widetilde O(2^{0.2156n})$",
+      "classical": "$\\widetilde O(2^{0.283n})$",
+      "parameter": "n: random subset-sum items; cryptographic density; quantum update heuristic",
       "model": "Heuristic quantum / classical running time",
-      "note": "Quantum endpoints distinguish the additional update heuristic from the classical-list-only heuristic."
+      "note": "Strongest reported quantum rate under the stated additional update heuristic."
     },
     "81": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           3.362,
           3.5943
-        ],
-        [
-          3.4,
-          3.5943
-        ],
-        [
-          3.4,
-          2.86
-        ],
-        [
-          3.362,
-          2.86
         ]
       ],
-      "quantum": "$O(mn^2 2^{n/2})$ gates, Grover search with reversible quadratic-equation evaluation.",
-      "classical": "$\\operatorname{poly}(m,n)+O(2^{0.6943n})$ time, Dinur multiple parity counting; subexponential time for sparse systems, Boolean tensor contraction.",
-      "parameter": "n: variables; m: equations; semiregularity and sparsity parameters",
+      "quantum": "$O(2^{(0.462+\\varepsilon)n})$",
+      "classical": "$O(2^{0.6943n})$",
+      "parameter": "n: variables; dense m=n, 0.17-strong semiregular systems; fixed arbitrarily small ε>0",
       "model": "Quantum gates / classical bit operations",
-      "note": "Envelope of the stated dense and sparse regimes. Quantum exponents0.462/0.47 require the specified square-system semiregularity; generic Grover uses0.5. Sparse classical encodings can be near-linear subexponential."
+      "note": "The limiting quantum exponent is plotted; the arbitrarily small positive slack remains in the displayed bound."
     },
     "84": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          3.4,
-          3.4
-        ],
-        [
-          3.31666667,
-          3.4
-        ],
         [
           3.23333333,
           3.4
-        ],
-        [
-          3.4,
-          3.4
-        ],
-        [
-          3.65,
-          3.4
-        ],
-        [
-          3.9,
-          3.4
         ]
       ],
-      "quantum": "$O(r+\\sqrt{2^n/r})$",
+      "quantum": "$O(2^{n/3})$",
       "classical": "$\\Theta(2^{n/2})$",
-      "parameter": "n: output bits; r: stored values, 1≤r≤2^n",
+      "parameter": "n: hash-output bits; optimized quantum table size 2ⁿᐟ³",
       "model": "Hash-oracle queries",
-      "note": "Parameterizing r=2^(an), 0≤a≤1, gives the full memory/time tradeoff. Its optimal query point has a=1/3."
+      "note": "Principal comparison in the stated regime."
     },
     "85": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          0.5,
-          1
-        ],
         [
           0.66666667,
           1
         ]
       ],
-      "quantum": "$O((NM)^{1/3})$ queries for $N\\le M<N^2$, and $O(\\sqrt M)$ for $M\\ge N^2$, quantum-walk claw finding.",
-      "classical": "$\\Theta(N+M)$ worst-case queries, list matching; $\\widetilde O(2^k)$ time for double encryption, meet in the middle.",
-      "parameter": "M: larger list size; N≤M: smaller list size",
+      "quantum": "$O(N^{2/3})$",
+      "classical": "$\\Theta(N)$",
+      "parameter": "N: each list size; balanced claw finding",
       "model": "Function-evaluation queries",
-      "note": "Coordinates use M and vary β=log N/log M. The quantum exponent is1/2 for β≤1/2 and (1+β)/3 for β≥1/2; classical cost isΘ(M)."
+      "note": "Principal comparison in the stated regime."
     },
     "87": {
-      "kind": "curve",
+      "kind": "point",
+      "points": [
+        [
+          3.19166667,
+          3.4
+        ]
+      ],
+      "quantum": "$\\widetilde O(2^{7n/24})$",
+      "classical": "$\\widetilde O(2^{n/2})$",
+      "parameter": "n: XOR width; four prescribed lists of size 2ⁿᐟ⁴; one solution",
+      "model": "Quantum / classical running time",
+      "note": "The established prescribed-list comparison gives the strongest displayed relative exponent improvement among the concrete regimes."
+    },
+    "88": {
+      "kind": "point",
+      "points": [
+        [
+          1,
+          3.4
+        ]
+      ],
+      "quantum": "$O(n)$",
+      "classical": "$\\widetilde\\Theta(2^{n/2})$",
+      "parameter": "n: block bits; generic Q2 access; classical total work optimized over data",
+      "model": "Coherent quantum queries / total classical query and permutation work",
+      "note": "Principal comparison in the stated regime."
+    },
+    "89": {
+      "kind": "point",
       "points": [
         [
           3.23333333,
           3.4
-        ],
-        [
-          3.15,
-          3.23333333
-        ],
-        [
-          3.1,
-          3.15
-        ],
-        [
-          3.06666667,
-          3.1
-        ],
-        [
-          3.04285714,
-          3.06666667
-        ],
-        [
-          3.025,
-          3.04285714
-        ],
-        [
-          3.01111111,
-          3.025
-        ],
-        [
-          3.0,
-          3.01111111
-        ],
-        [
-          2.99090909,
-          3.0
-        ],
-        [
-          2.98333333,
-          2.99090909
-        ],
-        [
-          2.97692308,
-          2.98333333
-        ],
-        [
-          2.97142857,
-          2.97692308
-        ],
-        [
-          2.96666667,
-          2.97142857
-        ],
-        [
-          2.9625,
-          2.96666667
-        ],
-        [
-          2.95882353,
-          2.9625
-        ],
-        [
-          2.95555556,
-          2.95882353
-        ],
-        [
-          2.95263158,
-          2.95555556
-        ],
-        [
-          2.95,
-          2.95263158
-        ],
-        [
-          2.94761905,
-          2.95
-        ],
-        [
-          2.900998,
-          2.900999
         ]
       ],
-      "quantum": "$\\widetilde O(2^{n/(2+\\lfloor\\log_2k\\rfloor)})$ time for unrestricted lists, quantum generalized birthday algorithms.",
-      "classical": "$\\widetilde O(2^{n/(1+\\lfloor\\log_2k\\rfloor)})$ time with unrestricted lists, Wagner generalized birthday search.",
-      "parameter": "n: XOR bit length; k: number of lists",
-      "model": "Quantum / classical running time",
-      "note": "The curve represents the discrete family indexed by j=floor(log₂k); the endpoint is the limit of growing list count. Unrestricted list lengths and polynomial factors remain in the formulas."
-    },
-    "88": {
-      "kind": "curve",
-      "points": [
-        [
-          1,
-          3.4
-        ],
-        [
-          1,
-          3.9
-        ]
-      ],
-      "quantum": "$O(n)$",
-      "classical": "$\\widetilde\\Theta(D+2^n/D)$",
-      "parameter": "n: block bits; D: classical encryption queries, 1≤D≤2^n",
-      "model": "Coherent quantum queries / total classical query and permutation work",
-      "note": "The classical total includes data acquisition: D+2^n/D. Varying D gives exponential rates from1/2 to1, minimized at D≈2^(n/2). Quantum coherent access and classical access are the respective models."
-    },
-    "89": {
-      "kind": "curve",
-      "points": [
-        [
-          3.4,
-          3.9
-        ],
-        [
-          3.275,
-          3.65
-        ],
-        [
-          3.15,
-          3.4
-        ],
-        [
-          3.025,
-          3.15
-        ],
-        [
-          2.905,
-          2.91
-        ],
-        [
-          1,
-          1
-        ]
-      ],
-      "quantum": "$\\widetilde O(\\sqrt{2^n/D})$ offline quantum time with $D$ classical encryption queries, offline Simon.",
-      "classical": "$\\widetilde O(2^n/D)$ offline work with $D$ encryption queries, generic classical Even--Mansour attacks.",
-      "parameter": "n: block bits; D: classical encryption queries, 1≤D≤2^n",
+      "quantum": "$\\widetilde O(2^{n/3})$",
+      "classical": "$\\widetilde O(2^{n/2})$",
+      "parameter": "n: block bits; generic Q1 access; total work optimized over data",
       "model": "Offline quantum / classical work with the same classical data",
-      "note": "The full offline data/time tradeoff is shown; preprocessing/data acquisition costs are separate from both displayed offline bounds."
+      "note": "Each total-work optimum includes data acquisition: quantum D=2^(n/3), classical D=2^(n/2)."
     },
     "90": {
       "kind": "point",
@@ -1817,72 +1045,32 @@
       "note": "Each comparison has the same square-root relation; the original p and ε formulas are retained."
     },
     "101": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
           2.4,
-          0.05
-        ],
-        [
-          2.9,
-          2.86
-        ],
-        [
-          5.2,
-          2.86
-        ],
-        [
-          5.2,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          2.89
         ]
       ],
-      "quantum": "$(m/n)^{O_\\kappa(\\lceil n^2/m\\rceil)}$ time, Kothari--Metger--O'Donnell--Shutty--Wu.",
-      "classical": "$\\operatorname{poly}(n,m)2^{O(n/\\log(m/n))}$ time in the Wagner regime; polynomial time above the classical vector-count threshold.",
-      "parameter": "n: vector dimension; m≥κn: number of vectors",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$2^{O(n/\\log n)}$",
+      "parameter": "m=cn² with fixed 0<c<c⋆≈0.1022; n: vector dimension",
       "model": "Quantum gates / classical bit operations",
-      "note": "Categorical envelope over all admitted m: bounded m/n gives exponential bounds with unspecified constants on both sides; growing m/n changes subexponential powers; near quadratic width quantum time is polynomial; beyond the stated classical threshold both are polynomial. The full m-dependent formulas determine each regime. Interior points are an envelope, not claims of attainable independent rate choices."
+      "note": "This is the strongest polynomial-quantum regime below the smallest reported classical polynomial-time vector-count threshold."
     },
     "102": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          0.05,
-          2.4
-        ],
-        [
-          2.4,
-          2.5
-        ],
-        [
-          2.9,
-          2.9
-        ],
-        [
-          5.2,
-          5.2
-        ],
-        [
-          2.9,
-          5.2
+          1,
+          2.45
         ]
       ],
-      "quantum": "$O(2^h)$",
-      "classical": "$O(n^h)$",
-      "parameter": "ℓ=nh+O(log h): oracle address length; n≥6; depth h≥1",
+      "quantum": "$O(n)$",
+      "classical": "$n^{\\Theta(\\log n)}$",
+      "parameter": "n: branching parameter; depth h=⌊log₂n⌋",
       "model": "Oracle queries",
-      "note": "Envelope over the complete n,h family: constant depth gives constant quantum and polynomial classical queries; logarithmic depth yields polynomial versus quasipolynomial regimes; larger depths give subexponential/exponential regimes. The chart does not select one depth."
+      "note": "The principal recursive-Fourier-sampling separation has polynomial quantum and quasipolynomial randomized query complexity."
     },
     "91": {
       "kind": "point",
@@ -1899,30 +1087,18 @@
       "note": "The polynomial prefactors n^(1/6),n^(1/2) remain in the formulas. Equivalently, with N=2^n vertices, the powers are1/3 and1/2."
     },
     "93": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.9
-        ],
-        [
           2.4,
-          2.9
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          3.9
         ]
       ],
-      "quantum": "$(k/\\varepsilon)^{O(1)}$",
-      "classical": "$\\exp(\\Omega(k))\\ \\text{required};\\ O(N)\\ \\text{sufficient}$",
-      "parameter": "k: tree-depth parameter; ε: fixed testing distance; adjacency-list family P_k",
+      "quantum": "$\\operatorname{poly}(k)$",
+      "classical": "$\\exp(\\Omega(k))$",
+      "parameter": "k: tree-depth parameter; fixed testing distance; adjacency-list family Pₖ",
       "model": "Neighbor-oracle queries",
-      "note": "The algorithmic graph-testing family has polynomial quantum cost and an exponential classical lower bound. Polynomial degree and exponential constants are unspecified. The shaded extent denotes complexity classes with unspecified exponents; its edges are not numerical bounds on those exponents."
+      "note": "The strongest algorithmic regime is adjacency-list graph-property testing; unknown degrees and rates use complexity-class positions."
     },
     "94": {
       "kind": "point",
@@ -1939,48 +1115,32 @@
       "note": "Parity and exact counting both have linear query complexity; the parity factor1/2 is not an asymptotic speedup."
     },
     "96": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          2.86,
-          2.86
-        ],
-        [
-          2.9,
-          2.9
+          2.89,
+          2.89
         ]
       ],
       "quantum": "$\\operatorname{poly}(n,m)2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$",
       "classical": "$\\operatorname{poly}(n,m)2^{O_k(n\\log\\log n/\\sqrt{\\log n})}$",
-      "parameter": "n: variables; fixed-width CNF; m: clauses",
+      "parameter": "n: variables; fixed-width CNF with polynomially many clauses",
       "model": "Quantum / classical bit-operation time",
-      "note": "For fixed-width CNF, a quantum computer can use the same recorded subexponential classical algorithm. The diagonal band represents that shared upper bound; unrestricted-width QSETH concerns a separate regime."
+      "note": "The same current subexponential classical solver can run on either model."
     },
     "97": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
           2.4,
-          0.05
-        ],
-        [
-          2.4,
-          2.4
-        ],
-        [
-          0.05,
           2.4
         ]
       ],
-      "quantum": "Polynomial evolution time for a suitably gapped, initialized path, stoquastic frustration-free adiabatic evolution.",
-      "classical": "$\\operatorname{poly}(n,\\delta^{-1})$ time, Bravyi--Terhal sampling under the same path assumptions.",
-      "parameter": "n: qubits; δ: sampling accuracy; initialized smooth inverse-polynomial-gap path",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\operatorname{poly}(n)$",
+      "parameter": "n: qubits; initialized inverse-polynomial-gap path; inverse-polynomial sampling error",
       "model": "Quantum evolution/simulation time / classical sampling time",
-      "note": "The matched path assumptions give polynomial algorithms on both sides. The shaded extent denotes complexity classes with unspecified exponents; its edges are not numerical bounds on those exponents."
+      "note": "Both polynomial degrees are unspecified and use the polynomial-class position."
     },
     "98": {
       "kind": "point",

@@ -43,9 +43,9 @@ def main():
         comparison=geometries[str(e['number'])]
         kind=comparison['kind']
         vertices=comparison.get('points',[])
-        if kind not in {'point','curve','region','unavailable'}:
+        if kind not in {'point','unavailable'}:
             raise ValueError(f'Unknown complexity geometry for entry {e["number"]}')
-        required=0 if kind=='unavailable' else 1 if kind=='point' else 2
+        required=0 if kind=='unavailable' else 1
         if len(vertices)<required or (kind=='point' and len(vertices)!=1) or (kind=='unavailable' and vertices):
             raise ValueError(f'Invalid geometry for entry {e["number"]}')
         if not comparison.get('note') or any(len(pair)!=2 or not all(isinstance(x,(int,float)) and math.isfinite(x) and x>=0 for x in pair) for pair in vertices):
@@ -75,7 +75,7 @@ def main():
                'Q':rich(q),'C':rich(c),'gain':rich(gain),'gainText':text(gain),
                'parameter':text(parameter),'parameterHtml':rich(parameter),'model':model,'evidence':ev,'hardware':hw,
                'hardwareLabel':hardware_label,'costQ':cq,'costC':cc,'papers':papers,
-               'costComparison':{**comparison,'noteHtml':rich(comparison['note'])}}
+               'costComparison':comparison}
         points.append(point)
     output=ROOT/'visualization/demo/sample-data.js'
     output.write_text('window.CATALOGUE_POINTS = '+json.dumps(points,ensure_ascii=False,indent=2)+';\nwindow.SAMPLE_DATA = window.CATALOGUE_POINTS;\n',encoding='utf-8')

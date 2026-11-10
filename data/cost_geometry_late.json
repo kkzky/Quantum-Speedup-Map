@@ -16,78 +16,18 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "110": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.66666667,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.8,
-          1.0
-        ],
-        [
-          0.83333333,
-          1.0
-        ],
-        [
-          0.85714286,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          0.88888889,
-          1.0
-        ],
-        [
-          0.9,
-          1.0
-        ],
-        [
-          0.90909091,
-          1.0
-        ],
-        [
-          0.91666667,
-          1.0
-        ],
-        [
-          0.92307692,
-          1.0
-        ],
-        [
-          0.92857143,
-          1.0
-        ],
-        [
-          0.93333333,
-          1.0
-        ],
-        [
-          0.9375,
-          1.0
-        ],
-        [
-          0.94117647,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$O(n^{k/(k+1)})$",
+      "quantum": "$O(n^{2/3})$",
       "classical": "$\\Theta(n)$",
-      "parameter": "n items; constant k; sufficiently large group",
+      "parameter": "n items; k=2; sufficiently large group",
       "model": "indexed queries",
-      "note": "The curve joins the fixed-integer-k family and its limiting exponent; each point compares input queries."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "111": {
       "kind": "point",
@@ -104,50 +44,18 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "112": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          0.125,
-          0.25
-        ],
-        [
-          0.25,
-          0.5
-        ],
-        [
-          0.375,
-          0.75
-        ],
-        [
-          0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1,
+          2
         ]
       ],
-      "quantum": "$O(\\min\\{n,\\varepsilon^{-1}\\log(1/\\varepsilon)\\log\\log(1/\\varepsilon)\\})$",
-      "classical": "$\\Theta(\\min\\{n,\\varepsilon^{-2}\\})$",
-      "parameter": "Input length n and inverse rank tolerance 1/epsilon; horizontal and vertical powers are relative to n",
+      "quantum": "$O(\\varepsilon^{-1}\\log(1/\\varepsilon)\\log\\log(1/\\varepsilon))$",
+      "classical": "$\\Theta(\\varepsilon^{-2})$",
+      "parameter": "Inverse rank tolerance 1/epsilon; n >= epsilon^(-2)",
       "model": "input queries",
-      "note": "As inverse rank tolerance grows relative to input length, both bounds saturate at reading the input. The origin denotes bounded or subpolynomial cost."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "113": {
       "kind": "point",
@@ -164,74 +72,18 @@
       "note": "The sum of square roots has order sqrt(n+m), uniformly over both lengths, up to logarithmic factors."
     },
     "114": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          3.4,
-          3.9
-        ],
-        [
-          3.35,
-          3.8
-        ],
-        [
-          3.3,
-          3.7
-        ],
-        [
-          3.25,
-          3.6
-        ],
-        [
-          3.2,
-          3.5
-        ],
-        [
-          3.15,
-          3.4
-        ],
-        [
-          3.1,
-          3.4
-        ],
-        [
-          3.05,
-          3.4
-        ],
-        [
-          3.0,
-          3.4
-        ],
-        [
-          2.95,
-          3.4
-        ],
-        [
-          2.925,
-          3.4
-        ],
-        [
-          2.905,
-          3.4
-        ],
-        [
-          2.9,
-          3.4
-        ],
-        [
-          2.8,
-          3.4
-        ],
         [
           2.7,
           3.4
         ]
       ],
-      "quantum": "$\\widetilde O((n/m)^{d/2}2^{O(d^{3/2}\\sqrt{\\log m})})$",
-      "classical": "$\\widetilde\\Theta((n/m)^d+n^{d/2})$",
-      "parameter": "Common size d log_2 n; fixed dimension d and all pattern side lengths 1 <= m <= n",
+      "quantum": "$2^{O(\\sqrt b)}$",
+      "classical": "$\\widetilde\\Theta(2^{b/2})$",
+      "parameter": "$b=\\log_2 n$; d=1 and m=Theta(n), random arrays",
       "model": "random-input oracle time",
-      "note": "As pattern side length ranges from constant to comparable with text side length, the quantum exponential search factor decreases to the subexponential hidden-shift term. Intermediate approaches to comparable lengths fill the adjoining subexponential range."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "115": {
       "kind": "point",
@@ -304,206 +156,102 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "120": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.5,
-          0.75
-        ],
-        [
-          0.5,
-          0.5
+          1
         ]
       ],
       "quantum": "$\\widetilde O(\\sqrt n)$",
-      "classical": "$\\widetilde O(n/u+\\sqrt n)$",
-      "parameter": "Permutation length n and Ulam distance 1 <= u <= n",
+      "classical": "$\\widetilde\\Theta(n)$",
+      "parameter": "Permutation length n; constant positive Ulam distance",
       "model": "random-access time; fixed approximation error",
-      "note": "For 1 <= u <= n, the classical power decreases from 1 to 1/2 while the quantum power remains 1/2."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "121": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt{nk})$",
+      "quantum": "$\\widetilde O(\\sqrt n)$",
       "classical": "$\\Theta(n)$",
-      "parameter": "String length n and threshold 1 <= k <= n; pattern length is at most the text length",
+      "parameter": "String length n; fixed edit or mismatch threshold k",
       "model": "Character queries",
-      "note": "The distance or mismatch threshold ranges from constant to linear in n. This curve compares character queries; the separate processing-time formulas remain in the problem page."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "122": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widehat O(\\sqrt{nk})$",
+      "quantum": "$\\widehat O(\\sqrt n)$",
       "classical": "$\\Theta(n)$",
-      "parameter": "String length n and threshold 1 <= k <= n; pattern length is at most the text length",
+      "parameter": "String length n; fixed edit or mismatch threshold k",
       "model": "Character queries",
-      "note": "The distance or mismatch threshold ranges from constant to linear in n. This curve compares character queries; the separate processing-time formulas remain in the problem page."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "123": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widehat O(\\sqrt{nk})$",
+      "quantum": "$\\widehat O(\\sqrt n)$",
       "classical": "$\\Theta(n)$",
-      "parameter": "String length n and threshold 1 <= k <= n; pattern length is at most the text length",
+      "parameter": "String length n; fixed edit or mismatch threshold k",
       "model": "Character queries",
-      "note": "The distance or mismatch threshold ranges from constant to linear in n. This curve compares character queries; the separate processing-time formulas remain in the problem page."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "124": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt{nz})$",
+      "quantum": "$\\widetilde O(\\sqrt n)$",
       "classical": "$O(n)$",
-      "parameter": "String length n and LZ77 phrase count 1 <= z <= n",
+      "parameter": "String length n; polylogarithmically many LZ77 phrases",
       "model": "random-access time and character queries",
-      "note": "The curve covers the full compressibility range from a constant count to a linear count."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "125": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt{nr})$",
+      "quantum": "$\\widetilde O(\\sqrt n)$",
       "classical": "$\\widetilde O(n)$",
-      "parameter": "String length n and BWT run count 1 <= r <= n",
+      "parameter": "String length n; polylogarithmically many BWT runs",
       "model": "random-access time and character queries",
-      "note": "The curve covers the full compressibility range from a constant count to a linear count."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "126": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.66666667,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.58333333,
-          1.0
-        ],
-        [
-          0.54166667,
-          1.0
-        ],
-        [
           0.5,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(n^{2/3}d^{-1/6+o(1)}\\operatorname{polylog}N)$",
+      "quantum": "$\\widetilde O(n^{1/2+o(1)})$",
       "classical": "$O(n)$",
-      "parameter": "Encoded run count n, matched run count d, and decompressed length N",
+      "parameter": "n encoded runs; optimal match spans Theta(n) runs; N=poly(n)",
       "model": "run queries; word costs include log N",
-      "note": "The matched run count varies over 1 <= d <= n. Subpolynomial factors and word precision are retained in the formulas."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "127": {
       "kind": "point",
@@ -520,34 +268,18 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "128": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$O(\\min\\{n,\\sqrt n\\log^{h/2}n\\})$",
+      "quantum": "$\\widetilde O(\\sqrt n)$",
       "classical": "$\\Theta(n)$",
-      "parameter": "Word length n and unrestricted permitted height h",
+      "parameter": "Word length n; fixed permitted height h",
       "model": "character queries",
-      "note": "Height changes the quantum logarithmic factor until the linear-query fallback becomes best; the line covers the resulting leading powers."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "129": {
       "kind": "point",
@@ -620,110 +352,18 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "134": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.75,
-          1.0
-        ],
-        [
-          0.83333333,
-          1.33333333
-        ],
-        [
-          0.875,
-          1.33333333
-        ],
-        [
-          0.9,
-          1.5
-        ],
-        [
-          0.91666667,
-          1.5
-        ],
-        [
-          0.92857143,
-          1.6
-        ],
-        [
-          0.9375,
-          1.6
-        ],
-        [
-          0.94444444,
-          1.66666667
-        ],
-        [
-          0.95,
-          1.66666667
-        ],
-        [
-          0.95454545,
-          1.71428571
-        ],
-        [
-          0.95833333,
-          1.71428571
-        ],
-        [
-          0.96153846,
-          1.75
-        ],
-        [
-          0.96428571,
-          1.75
-        ],
-        [
-          0.96666667,
-          1.77777778
-        ],
-        [
-          0.96875,
-          1.77777778
-        ],
-        [
-          0.97058824,
-          1.8
-        ],
-        [
-          0.97222222,
-          1.8
-        ],
-        [
-          0.97368421,
-          1.81818182
-        ],
-        [
-          0.975,
-          1.81818182
-        ],
-        [
-          0.97619048,
-          1.83333333
-        ],
-        [
-          0.97727273,
-          1.83333333
-        ],
-        [
-          0.97826087,
-          1.84615385
-        ],
-        [
-          0.97916667,
-          1.84615385
-        ],
-        [
-          1.0,
-          2.0
+          0.66666667,
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(n^{1-1/(2d)+\\delta})$",
-      "classical": "$O(n^{2-2/(\\lceil d/2\\rceil+1)+\\delta})$",
-      "parameter": "Point count n; fixed dimension d >= 2 and arbitrary fixed delta > 0",
+      "quantum": "$\\widetilde O(n^{2/3})$",
+      "classical": "$\\widetilde O(n)$",
+      "parameter": "n points; fixed dimension and approximation factor",
       "model": "Random-access geometric computation time",
-      "note": "Joined fixed-dimension bounds as d varies; arbitrarily small positive exponent slack is retained in the formulas. The endpoint is the limiting exponent pair."
+      "note": "Principal approximate bichromatic closest-pair comparison from the entry."
     },
     "136": {
       "kind": "point",
@@ -754,150 +394,74 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "138": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1.0,
-          2.0
-        ],
-        [
-          2.0,
-          2.0
-        ],
-        [
-          2.0,
-          2.0
-        ],
-        [
-          1.0,
-          2.0
+          1.2962963,
+          2
         ]
       ],
-      "quantum": "$O(n^{2-2/k-t})$",
+      "quantum": "$O(n^{35/27})$",
       "classical": "$\\Theta(n^2)$",
-      "parameter": "Host vertices n; fixed pattern vertex count k, edge count m, minimum degree d; t is the maximum of the two expressions in the entry",
+      "parameter": "n host vertices; triangle pattern H=K_3",
       "model": "adjacency-matrix queries",
-      "note": "The horizontal interval is an envelope over fixed pattern parameters. The stated expression determines the exponent for each pattern."
+      "note": "Triangle specialization of the stated learning-graph theorem: k=3,m=3,d=2,t=1/27."
     },
     "139": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.71428571,
-          1.0
-        ],
-        [
-          0.73,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$O(\\min\\{m,(2d)^{(k^2+k-6)/4}2^{2dk}m^{3/4-1/(2^{k+2}-4)}\\})$",
+      "quantum": "$O(m^{5/7})$",
       "classical": "$\\Theta(m)$",
-      "parameter": "Edge count m, cycle parameter k and maximum degree d",
+      "parameter": "m edges; triangles (k=3), bounded maximum degree",
       "model": "edge-list queries under the stated degree promise",
-      "note": "Envelope over cycle length and degree promise, including the linear-query fallback; the exact parameter factors are retained in the formula."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "140": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt{nD})$",
+      "quantum": "$\\widetilde O(\\sqrt n)$",
       "classical": "$\\widetilde\\Theta(n)$",
-      "parameter": "Vertex count n and diameter 1 <= D <= n",
+      "parameter": "n vertices; bounded diameter D",
       "model": "CONGEST communication rounds",
-      "note": "The network diameter varies from constant to linear in n; both axes count communication rounds."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "141": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          1.0,
-          2.0
-        ],
-        [
-          1.25,
-          2.0
-        ],
-        [
-          1.5,
-          2.0
-        ],
-        [
-          1.75,
-          2.0
-        ],
-        [
-          2.0,
-          2.0
+          1,
+          2
         ]
       ],
-      "quantum": "$\\widetilde\\Theta(n\\sqrt{\\ell+1})$",
+      "quantum": "$\\widetilde O(n)$",
       "classical": "$\\Theta(n^2)$",
-      "parameter": "Matrix dimension n and 0 <= ell <= n squared nonzero output entries",
+      "parameter": "n-by-n matrices; constant output sparsity ell",
       "model": "Input-entry queries",
-      "note": "Output support varies from bounded size to n squared. Both axes show input-entry queries, not matrix-multiplication processing time."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "142": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          1.0,
-          1.0
-        ],
-        [
-          1.125,
-          1.25
-        ],
-        [
-          1.25,
-          1.5
-        ],
-        [
-          1.375,
-          1.75
-        ],
-        [
           1.5,
-          2.0
+          2
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt{mn}\\log(1/\\varepsilon))$",
-      "classical": "$\\widetilde O(m\\log(1/\\varepsilon))$",
-      "parameter": "Vertex count n, edge count n-1 <= m <= n squared, and sampling accuracy epsilon",
+      "quantum": "$\\widetilde O(n^{3/2})$",
+      "classical": "$\\widetilde O(n^2)$",
+      "parameter": "n vertices; dense graphs m=Theta(n^2); constant sampling error",
       "model": "weighted adjacency-list queries and coherent-RAM time",
-      "note": "Connected-graph density ranges from linear to quadratic edge count. Accuracy enters logarithmically and is retained in the formula."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "143": {
       "kind": "point",
@@ -914,148 +478,60 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "144": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          0.33333333,
-          0.5
-        ],
         [
           0.42857143,
           0.66666667
-        ],
-        [
-          0.46666667,
-          0.75
-        ],
-        [
-          0.48387097,
-          0.8
-        ],
-        [
-          0.49206349,
-          0.83333333
-        ],
-        [
-          0.49606299,
-          0.85714286
-        ],
-        [
-          0.49803922,
-          0.875
-        ],
-        [
-          0.49902153,
-          0.88888889
-        ],
-        [
-          0.49951124,
-          0.9
-        ],
-        [
-          0.49975574,
-          0.90909091
-        ],
-        [
-          0.4998779,
-          0.91666667
-        ],
-        [
-          0.49993896,
-          0.92307692
-        ],
-        [
-          0.49996948,
-          0.92857143
-        ],
-        [
-          0.5,
-          1.0
         ]
       ],
-      "quantum": "$O(n^{(1-1/(2^k-1))/2})$",
-      "classical": "$O(n^{1-1/k})$",
-      "parameter": "Vertex count n and fixed source-pattern parameter k >= 2",
+      "quantum": "$O(n^{3/7})$",
+      "classical": "$O(n^{2/3})$",
+      "parameter": "n vertices; fixed source-pattern parameter k=3",
       "model": "outgoing-neighbor queries",
-      "note": "The curve joins fixed-k star-pattern comparisons and their limiting powers; general patterns use the classical upper bound in the entry."
+      "note": "A nontrivial fixed-pattern comparison; the best limiting exponent over unbounded constant k is not an attained case."
     },
     "145": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1.0,
-          2.0
-        ],
-        [
-          1.5,
-          2.0
-        ],
-        [
-          1.5,
-          2.0
-        ],
-        [
-          1.0,
-          2.0
+          1,
+          2
         ]
       ],
-      "quantum": "$\\widetilde O(n^{3/2-\\alpha_k})$",
+      "quantum": "$O(n)$",
       "classical": "$\\Theta(n^2)$",
-      "parameter": "Host vertices n and fixed path length k; alpha_k is defined by the cited recurrence",
+      "parameter": "n vertices; one-edge directed path (k=1)",
       "model": "adjacency-matrix queries",
-      "note": "The interval covers the pattern-dependent quantum exponent below 3/2. Its exact value uses the recurrence stated in the source theorem."
+      "note": "The largest polynomial saving in the admitted path family is attained by its one-edge case."
     },
     "146": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.4
-        ],
-        [
           2.4,
-          3.4
-        ],
-        [
-          2.4,
-          3.4
-        ],
-        [
-          0.05,
           3.4
         ]
       ],
       "quantum": "$\\operatorname{poly}(n)$",
       "classical": "$O(2^{n/2})$",
-      "parameter": "n = log_2 |G| with comparable encoding length; reversible group-operation cost is retained in the entry",
+      "parameter": "n: logarithm of the group cardinality; stated black-box family",
       "model": "generic group operations and polynomial-cost reversible implementations",
-      "note": "The quantum polynomial degree depends on operation cost and implementation. The classical generic-operation exponent is one half in the group-order bit length."
+      "note": "Unspecified polynomial degree uses the polynomial class position."
     },
     "147": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.9
-        ],
-        [
           2.4,
-          3.9
-        ],
-        [
-          2.4,
-          3.9
-        ],
-        [
-          0.05,
           3.9
         ]
       ],
-      "quantum": "$\\operatorname{poly}(\\log N)$",
-      "classical": "$N^{1+o(1)}$",
-      "parameter": "Common size is log_2 N, where N is the group order",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$2^{n+o(n)}$",
+      "parameter": "n: logarithm of the group cardinality; stated black-box family",
       "model": "black-box group time",
-      "note": "Quantum degree unspecified; the classical bound is exponential in the logarithm of the group order."
+      "note": "Unspecified polynomial degree uses the polynomial class position."
     },
     "148": {
       "kind": "point",
@@ -1072,386 +548,102 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "149": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.4
-        ],
-        [
           2.4,
-          3.4
-        ],
-        [
-          2.4,
-          3.4
-        ],
-        [
-          0.05,
           3.4
         ]
       ],
-      "quantum": "$\\operatorname{poly}(\\log|R|)$",
-      "classical": "$\\widetilde O(|R|^{1/2})$",
-      "parameter": "Common size is log_2 |R|; generic black-box representation",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\widetilde O(2^{n/2})$",
+      "parameter": "n: logarithm of the ring cardinality; stated black-box family",
       "model": "generic ring operations",
-      "note": "Unknown quantum polynomial degree and the generic square-root classical bound in cardinality. The representation assumptions in the entry apply."
+      "note": "Unspecified polynomial degree uses the polynomial class position."
     },
     "150": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.4
-        ],
-        [
           2.4,
-          3.4
-        ],
-        [
-          2.4,
-          3.4
-        ],
-        [
-          0.05,
           3.4
         ]
       ],
-      "quantum": "$\\operatorname{poly}(\\log|R|)$",
-      "classical": "$\\widetilde O(|R|^{1/2})$",
-      "parameter": "Common size is log_2 |R|; generic black-box representation",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\widetilde O(2^{n/2})$",
+      "parameter": "n: logarithm of the ring cardinality; stated black-box family",
       "model": "ring operations with coordinate construction",
-      "note": "Unknown quantum polynomial degree and the generic square-root classical bound in cardinality. The representation assumptions in the entry apply."
+      "note": "Unspecified polynomial degree uses the polynomial class position."
     },
     "151": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          5.2,
-          1.0
-        ],
-        [
-          5.2,
-          5.2
-        ],
-        [
-          0.5,
-          5.2
+          1
         ]
       ],
-      "quantum": "$O(m(1+\\alpha)^{m/2}k^{m/(m+1)})$",
-      "classical": "$O(4^m m k)$",
-      "parameter": "Generator count k, variable count m and alpha with k >= (1+1/alpha)^(m+1)",
+      "quantum": "$O(\\sqrt k)$",
+      "classical": "$O(k)$",
+      "parameter": "k ideal generators; m=1 and alpha=1",
       "model": "ring and evaluation queries",
-      "note": "Envelope across variable count, generator count and admissible alpha. Fixed variable count yields the curve k^(m/(m+1)) versus k; growing variable count also changes the exponential prefactors."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "152": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.4
-        ],
-        [
           2.4,
-          3.4
-        ],
-        [
-          2.4,
-          3.4
-        ],
-        [
-          0.05,
           3.4
         ]
       ],
-      "quantum": "$\\operatorname{poly}(\\log|S|)$",
-      "classical": "$\\widetilde O(|S|^{1/2})$",
-      "parameter": "Common size is log_2 |S|; generic black-box representation",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\widetilde O(2^{n/2})$",
+      "parameter": "n: logarithm of the semigroup cardinality; stated black-box family",
       "model": "generic semigroup operations",
-      "note": "Unknown quantum polynomial degree and the generic square-root classical bound in cardinality. The representation assumptions in the entry apply."
+      "note": "Unspecified polynomial degree uses the polynomial class position."
     },
     "153": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          0.05,
-          1.0
-        ],
         [
           0.25,
-          1.0
-        ],
-        [
-          0.33333333,
-          1.0
-        ],
-        [
-          0.375,
-          1.0
-        ],
-        [
-          0.4,
-          1.0
-        ],
-        [
-          0.41666667,
-          1.0
-        ],
-        [
-          0.42857143,
-          1.0
-        ],
-        [
-          0.4375,
-          1.0
-        ],
-        [
-          0.44444444,
-          1.0
-        ],
-        [
-          0.45,
-          1.0
-        ],
-        [
-          0.45454545,
-          1.0
-        ],
-        [
-          0.45833333,
-          1.0
-        ],
-        [
-          0.46153846,
-          1.0
-        ],
-        [
-          0.46428571,
-          1.0
-        ],
-        [
-          0.46666667,
-          1.0
-        ],
-        [
-          0.46875,
-          1.0
-        ],
-        [
-          0.5,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(N^{1/2-1/(2k)})$",
-      "classical": "$O(kN)$",
-      "parameter": "Semigroup cardinality N and fixed generator count k",
+      "quantum": "$\\widetilde O(N^{1/4})$",
+      "classical": "$O(N)$",
+      "parameter": "Semigroup cardinality N; two commuting generators (k=2)",
       "model": "semigroup queries",
-      "note": "Joined fixed-generator-count family and limiting exponent; logarithmic factors are retained in the quantum bound."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "154": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
           2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          3.4
         ]
       ],
-      "quantum": "$\\operatorname{poly}(\\log|G|)$",
-      "classical": "$O(\\sqrt r)$",
-      "parameter": "Group encoding log |G| and orbit period r",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$O(2^{n/2})$",
+      "parameter": "n=log_2 |G|; full-size orbit r=Theta(|G|)",
       "model": "group-action operations in the covered platforms",
-      "note": "Orbit period and group encoding can grow independently. The region covers polynomial through exponential generic orbit search; each concrete platform supplies its period and operation costs."
+      "note": "The generic group-action comparator is used in the largest-orbit regime; polynomial degree is unspecified."
     },
     "155": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          2.0,
-          2.0
-        ],
-        [
-          2.01290323,
-          2.0097561
-        ],
-        [
-          2.025,
-          2.01904762
-        ],
-        [
-          2.03636364,
-          2.02790698
-        ],
-        [
-          2.04705882,
-          2.03636364
-        ],
-        [
-          2.05714286,
-          2.04444444
-        ],
-        [
-          2.06666667,
-          2.05217391
-        ],
-        [
-          2.07567568,
-          2.05957447
-        ],
-        [
-          2.08421053,
-          2.06666667
-        ],
-        [
-          2.09230769,
-          2.07346939
-        ],
-        [
-          2.1,
-          2.08
-        ],
-        [
-          2.10731707,
-          2.08627451
-        ],
-        [
-          2.11428571,
-          2.09230769
-        ],
-        [
-          2.12093023,
-          2.09811321
-        ],
-        [
-          2.12727273,
-          2.1037037
-        ],
-        [
-          2.13333333,
-          2.10909091
-        ],
-        [
-          2.13913043,
-          2.11428571
-        ],
-        [
-          2.14468085,
-          2.11929825
-        ],
-        [
-          2.15,
-          2.12413793
-        ],
-        [
-          2.15510204,
-          2.12881356
-        ],
-        [
-          2.16,
-          2.13333333
-        ],
-        [
-          2.15257732,
-          2.12413793
-        ],
-        [
-          2.14468085,
-          2.11428571
-        ],
-        [
-          2.13626374,
-          2.1037037
-        ],
-        [
-          2.12727273,
-          2.09230769
-        ],
-        [
-          2.11764706,
-          2.08
-        ],
-        [
-          2.10731707,
-          2.06666667
-        ],
-        [
-          2.09620253,
-          2.05217391
-        ],
-        [
-          2.08421053,
-          2.03636364
-        ],
-        [
-          2.07123288,
-          2.01904762
-        ],
-        [
-          2.05714286,
-          2.0
-        ],
-        [
-          2.04179104,
-          1.95
-        ],
-        [
-          2.025,
-          1.9
-        ],
-        [
-          2.00655738,
-          1.85
-        ],
-        [
-          1.93333333,
-          1.8
-        ],
-        [
-          1.83333333,
-          1.75
-        ],
-        [
-          1.73333333,
-          1.7
-        ],
-        [
-          1.63333333,
-          1.65
-        ],
-        [
-          1.53333333,
-          1.6
-        ],
-        [
-          1.43333333,
-          1.55
-        ],
         [
           1.33333333,
           1.5
         ]
       ],
-      "quantum": "$O(n^{4/3+o(1)}\\log^{2+o(1)}q)$",
-      "classical": "$O(n^{3/2+o(1)}\\log^{1+o(1)}q+n^{1+o(1)}\\log^{2+o(1)}q)$",
-      "parameter": "Scale is max(n, log q); n is polynomial degree and q is field size. Subpolynomial factors remain in the formulas.",
+      "quantum": "$n^{4/3+o(1)}$",
+      "classical": "$n^{3/2+o(1)}$",
+      "parameter": "Polynomial degree n; fixed finite field",
       "model": "bit operations",
-      "note": "The curve varies the relative growth of polynomial degree and field bit length. It includes parameter ranges where the recorded classical upper bound is smaller."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "156": {
       "kind": "point",
@@ -1468,56 +660,32 @@
       "note": "Both exact interpolation costs are linear in degree; the query gain is a constant factor."
     },
     "158": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.9
-        ],
-        [
           2.4,
-          3.9
-        ],
-        [
-          2.4,
-          3.9
-        ],
-        [
-          0.05,
           3.9
         ]
       ],
-      "quantum": "$\\operatorname{poly}(\\log q)$",
-      "classical": "$\\widetilde O(q)$",
-      "parameter": "Common size is log_2 q for field size q",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\widetilde O(2^n)$",
+      "parameter": "Field bit length n=log_2 q",
       "model": "gate/time comparison with character evaluation",
-      "note": "The polynomial quantum exponent is unspecified; the classical comparison is shift enumeration."
+      "note": "Unspecified polynomial degree uses the polynomial class position."
     },
     "159": {
-      "kind": "region",
+      "kind": "point",
       "points": [
-        [
-          0.05,
-          2.9
-        ],
-        [
-          1.0,
-          2.9
-        ],
-        [
-          1.0,
-          3.9
-        ],
         [
           0.05,
           3.9
         ]
       ],
-      "quantum": "$O(1)\\text{ with the dual oracle};\\ O(n)\\text{ in the ordinary-oracle formulation}$",
-      "classical": "$2^{\\Omega(n)}\\text{ to }O(2^n)$",
-      "parameter": "Hidden-shift length n; the two quantum access models are identified in the entry",
+      "quantum": "$O(1)$",
+      "classical": "$2^{\\Theta(n)}$",
+      "parameter": "n hidden-shift bits; dual-oracle formulation",
       "model": "function-oracle queries",
-      "note": "Quantum access ranges from a constant number of dual-oracle queries to O(n) ordinary queries. The classical band represents the stated exponential lower and upper bounds for hard oracle families."
+      "note": "The quantum model supplies the known bent function and its dual; classical exponential constants are unspecified."
     },
     "160": {
       "kind": "point",
@@ -1534,442 +702,214 @@
       "note": "Two quantum oracle calls versus linear classical queries; computation over the known function is free on both sides."
     },
     "161": {
-      "kind": "region",
+      "kind": "point",
       "points": [
-        [
-          0.05,
-          3.4
-        ],
         [
           2.4,
           3.4
-        ],
-        [
-          2.4,
-          3.4
-        ],
-        [
-          0.05,
-          3.4
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(\\log N)$",
-      "classical": "$\\widetilde O(\\sqrt N)$",
-      "parameter": "Common size log_2 N; generalized-shift parameter M > N^epsilon for fixed epsilon > 0",
-      "model": "hidden-shift queries and efficient quantum gates",
-      "note": "Unknown quantum polynomial degree, under the full M > N^epsilon promise; the classical query exponent is one half in log N."
-    },
-    "162": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          2.9
-        ],
-        [
-          2.4,
-          2.9
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(\\log|G|)$",
-      "classical": "$\\operatorname{poly}(|G|)$",
-      "parameter": "Group encoding length log |G| and selected semidirect-product family",
-      "model": "Hidden-label oracle queries and the efficient quantum implementation in the stated family",
-      "note": "The region represents unspecified polynomial quantum degrees and the exponential classical range stated for the hard oracle families. Group, field and dimension promises remain part of the comparison."
-    },
-    "163": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          2.9
-        ],
-        [
-          2.4,
-          2.9
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(\\log|G|)$",
-      "classical": "$O(|G|)$",
-      "parameter": "Group encoding length log |G|; nilpotency class two",
-      "model": "Hidden-label oracle queries and the efficient quantum implementation in the stated family",
-      "note": "The region represents unspecified polynomial quantum degrees and the exponential classical range stated for the hard oracle families. Group, field and dimension promises remain part of the comparison."
-    },
-    "164": {
-      "kind": "region",
-      "points": [
-        [
-          1.0,
-          2.9
-        ],
-        [
-          1.0,
-          2.9
-        ],
-        [
-          1.0,
-          3.9
-        ],
-        [
-          1.0,
-          3.9
-        ]
-      ],
-      "quantum": "$O(\\log|G|)$",
-      "classical": "$|G|^{\\Omega(1)}\\text{ to }O(|G|)$",
-      "parameter": "Common size log_2 |G|",
-      "model": "Coset-oracle queries",
-      "note": "Quantum sample cost is linear in the group-order bit length. The classical band lies between a positive exponential lower bound on hard families and full oracle acquisition."
-    },
-    "165": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(n,\\log q)$",
-      "classical": "$q^{O(n^2)}$",
-      "parameter": "Dimension n and field bit length log q; constant characteristic",
-      "model": "The matched resource in the problem statement",
-      "note": "Envelope over dimension and field bit length for the stated polynomial quantum algorithm and coefficient-space enumeration. The unknown classical exponent and dimension dependence are retained in the formula."
-    },
-    "166": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          2.9
-        ],
-        [
-          2.4,
-          2.9
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(\\log q)$",
-      "classical": "$\\Omega(\\sqrt q)$",
-      "parameter": "Field encoding length log q; fixed degree and number of variables",
-      "model": "Hidden-label oracle queries and the efficient quantum implementation in the stated family",
-      "note": "The region represents unspecified polynomial quantum degrees and the exponential classical range stated for the hard oracle families. Group, field and dimension promises remain part of the comparison."
-    },
-    "167": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(g,\\log q)$",
-      "classical": "$(\\log q)^{O_g(1)}$; polynomial dependence on genus and extension degree in the stated small-characteristic regimes",
-      "parameter": "Genus g, q = p^a, characteristic p and extension degree a",
-      "model": "Bit operations",
-      "note": "Both polynomial fixed-genus regimes and the parameter-dependent higher-genus regimes are included. The region encodes unspecified degrees and dependence on genus and characteristic."
-    },
-    "168": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(n,m,k,1/\\varepsilon)$",
-      "classical": "$\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Input parameters, accuracy epsilon, implemented qubits q, gates g, contraction width w and Boolean encoding size s",
-      "model": "Gate/time complexity for the specified normalized additive approximation",
-      "note": "Envelope over precision, representation width and the size of the Boolean path-count encoding. Small-width polynomial regimes and the larger classical simulation costs share the same approximation task; the minimum of the recorded algorithms is used."
-    },
-    "170": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(n,m,1/\\varepsilon)$",
-      "classical": "$\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Input parameters, accuracy epsilon, implemented qubits q, gates g, contraction width w and Boolean encoding size s",
-      "model": "Gate/time complexity for the specified normalized additive approximation",
-      "note": "Envelope over precision, representation width and the size of the Boolean path-count encoding. Small-width polynomial regimes and the larger classical simulation costs share the same approximation task; the minimum of the recorded algorithms is used."
-    },
-    "171": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(|V|+|E|,1/\\varepsilon)$",
-      "classical": "$\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Input parameters, accuracy epsilon, implemented qubits q, gates g, contraction width w and Boolean encoding size s",
-      "model": "Gate/time complexity for the specified normalized additive approximation",
-      "note": "Envelope over precision, representation width and the size of the Boolean path-count encoding. Small-width polynomial regimes and the larger classical simulation costs share the same approximation task; the minimum of the recorded algorithms is used."
-    },
-    "172": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(g,m,1/\\varepsilon,\\log(1/\\delta))$",
-      "classical": "$\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Input parameters, accuracy epsilon, implemented qubits q, gates g, contraction width w and Boolean encoding size s",
-      "model": "Gate/time complexity for the specified normalized additive approximation",
-      "note": "Envelope over precision, representation width and the size of the Boolean path-count encoding. Small-width polynomial regimes and the larger classical simulation costs share the same approximation task; the minimum of the recorded algorithms is used."
-    },
-    "173": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(\\text{word length},\\text{genus},1/\\varepsilon)$",
-      "classical": "$\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Input parameters, accuracy epsilon, implemented qubits q, gates g, contraction width w and Boolean encoding size s",
-      "model": "Gate/time complexity for the specified normalized additive approximation",
-      "note": "Envelope over precision, representation width and the size of the Boolean path-count encoding. Small-width polynomial regimes and the larger classical simulation costs share the same approximation task; the minimum of the recorded algorithms is used."
-    },
-    "174": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          2.4
-        ],
-        [
-          0.05,
-          2.4
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(n,m,\\log|G|,1/\\varepsilon)$",
-      "classical": "$\\operatorname{poly}(n,m,\\log|G|,1/\\varepsilon)$",
-      "parameter": "Strand count n, braid length m, group G and accuracy epsilon; fluxon labels",
-      "model": "Time for the same additive approximation",
-      "note": "Both methods have polynomial cost for fluxon labels; their polynomial degrees are unspecified. This region does not assert an asymptotic advantage."
-    },
-    "175": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
         ]
       ],
       "quantum": "$\\operatorname{poly}(n)$",
-      "classical": "$\\min\\{O(g2^q),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Input parameters, accuracy epsilon, implemented qubits q, gates g, contraction width w and Boolean encoding size s",
-      "model": "Gate/time complexity for the specified normalized additive approximation",
-      "note": "Envelope over precision, representation width and the size of the Boolean path-count encoding. Small-width polynomial regimes and the larger classical simulation costs share the same approximation task; the minimum of the recorded algorithms is used."
+      "classical": "$\\widetilde O(2^{n/2})$",
+      "parameter": "n=log_2 N; M>N^epsilon for fixed epsilon>0",
+      "model": "hidden-shift queries and efficient quantum gates",
+      "note": "Unspecified polynomial degree uses the polynomial class position."
     },
-    "176": {
-      "kind": "curve",
+    "162": {
+      "kind": "point",
       "points": [
         [
-          0.33333333,
-          0.5
-        ],
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$2^{O(n)}$",
+      "parameter": "Group encoding length n=log_2 |G|; stated group family",
+      "model": "Hidden-label oracle queries and the efficient quantum implementation in the stated family",
+      "note": "Polynomial degree and generic exponential constants are unspecified class positions."
+    },
+    "163": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$O(2^n)$",
+      "parameter": "Group encoding length n=log_2 |G|; stated group family",
+      "model": "Hidden-label oracle queries and the efficient quantum implementation in the stated family",
+      "note": "Polynomial degree and generic exponential constants are unspecified class positions."
+    },
+    "164": {
+      "kind": "point",
+      "points": [
+        [
+          1,
+          3.9
+        ]
+      ],
+      "quantum": "$O(n)$",
+      "classical": "$2^{\\Theta(n)}$",
+      "parameter": "Group encoding length n=log_2 |G|",
+      "model": "Coset-oracle queries",
+      "note": "Known classical positive-exponential lower and exponential upper bounds define the exponential class."
+    },
+    "165": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(b)$",
+      "classical": "$2^{O(b)}$",
+      "parameter": "Field bit length b=log_2 q; fixed dimension and characteristic",
+      "model": "The matched resource in the problem statement",
+      "note": "Principal growing-field family; unspecified polynomial degree and exponential constant use class positions."
+    },
+    "166": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.4
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(b)$",
+      "classical": "$\\Omega(2^{b/2})$",
+      "parameter": "Field bit length b=log_2 q; fixed degree and variable count",
+      "model": "Hidden-label oracle queries and the efficient quantum implementation in the stated family",
+      "note": "Classical coordinate is the stated collision lower bound; quantum polynomial degree is unspecified."
+    },
+    "167": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(g,\\log q)$",
+      "classical": "$(\\log q)^{O_g(1)}$; exponential genus dependence",
+      "parameter": "Growing genus and large characteristic",
+      "model": "Bit operations",
+      "note": "Principal large-genus/large-characteristic comparison; the classical position denotes the stated exponential class, not a specified exponential coefficient."
+    },
+    "168": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\min\\{\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "Size/width n; polynomial description length; generic high-width approximation regime",
+      "model": "Gate/time complexity for the specified normalized additive approximation",
+      "note": "Principal complete approximation regime, with polynomial accuracy overhead. The generic high-width circuit is polynomial-sized and its path encoding is at least quadratic; the displayed minimum preserves the recorded simulator alternatives."
+    },
+    "170": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\min\\{\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "Size/width n; polynomial description length; generic high-width approximation regime",
+      "model": "Gate/time complexity for the specified normalized additive approximation",
+      "note": "Principal complete approximation regime, with polynomial accuracy overhead. The generic high-width circuit is polynomial-sized and its path encoding is at least quadratic; the displayed minimum preserves the recorded simulator alternatives."
+    },
+    "171": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\min\\{\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "Size/width n; polynomial description length; generic high-width approximation regime",
+      "model": "Gate/time complexity for the specified normalized additive approximation",
+      "note": "Principal complete approximation regime, with polynomial accuracy overhead. The generic high-width circuit is polynomial-sized and its path encoding is at least quadratic; the displayed minimum preserves the recorded simulator alternatives."
+    },
+    "172": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\min\\{\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "Size/width n; polynomial description length; generic high-width approximation regime",
+      "model": "Gate/time complexity for the specified normalized additive approximation",
+      "note": "Principal complete approximation regime, with polynomial accuracy overhead. The generic high-width circuit is polynomial-sized and its path encoding is at least quadratic; the displayed minimum preserves the recorded simulator alternatives."
+    },
+    "173": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\min\\{\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "Size/width n; polynomial description length; generic high-width approximation regime",
+      "model": "Gate/time complexity for the specified normalized additive approximation",
+      "note": "Principal complete approximation regime, with polynomial accuracy overhead. The generic high-width circuit is polynomial-sized and its path encoding is at least quadratic; the displayed minimum preserves the recorded simulator alternatives."
+    },
+    "174": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          2.4
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(N)$",
+      "classical": "$\\operatorname{poly}(N)$",
+      "parameter": "Encoded input size N; fluxon labels; fixed approximation accuracy",
+      "model": "Time for the same additive approximation",
+      "note": "Both methods use the same polynomial class; no degree is invented."
+    },
+    "175": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          3.9
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\min\\{\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "Size/width n; polynomial description length; generic high-width approximation regime",
+      "model": "Gate/time complexity for the specified normalized additive approximation",
+      "note": "Principal complete approximation regime, with polynomial accuracy overhead. The generic high-width circuit is polynomial-sized and its path encoding is at least quadratic; the displayed minimum preserves the recorded simulator alternatives."
+    },
+    "176": {
+      "kind": "point",
+      "points": [
         [
           0.42857143,
           0.66666667
-        ],
-        [
-          0.46666667,
-          0.75
-        ],
-        [
-          0.48387097,
-          0.8
-        ],
-        [
-          0.49206349,
-          0.83333333
-        ],
-        [
-          0.49606299,
-          0.85714286
-        ],
-        [
-          0.49803922,
-          0.875
-        ],
-        [
-          0.49902153,
-          0.88888889
-        ],
-        [
-          0.49951124,
-          0.9
-        ],
-        [
-          0.49975574,
-          0.90909091
-        ],
-        [
-          0.4998779,
-          0.91666667
-        ],
-        [
-          0.49993896,
-          0.92307692
-        ],
-        [
-          0.49996948,
-          0.92857143
-        ],
-        [
-          0.49998474,
-          0.93333333
-        ],
-        [
-          0.49999237,
-          0.9375
-        ],
-        [
-          0.5,
-          1.0
         ]
       ],
-      "quantum": "$\\Theta(N^{(2^{\\ell-1}-1)/(2^\\ell-1)})$",
-      "classical": "$\\Theta(N^{(\\ell-1)/\\ell})$",
-      "parameter": "Random-function range N and fixed collision multiplicity ell >= 2",
+      "quantum": "$\\Theta(N^{3/7})$",
+      "classical": "$\\Theta(N^{2/3})$",
+      "parameter": "Random-function range N; triple collisions (ell=3)",
       "model": "random-oracle queries",
-      "note": "The joined family varies fixed collision multiplicity; the final endpoint gives the limiting powers."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "177": {
       "kind": "point",
@@ -1986,134 +926,74 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "178": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          3.4
-        ],
-        [
           2.4,
-          3.4
-        ],
-        [
-          2.4,
-          3.4
-        ],
-        [
-          0.05,
           3.4
         ]
       ],
       "quantum": "$\\operatorname{poly}(n)$",
       "classical": "$O(2^{n/2})$",
-      "parameter": "Block bit length n and fixed message length",
+      "parameter": "Block bit length n; fixed message length",
       "model": "chosen-message tag queries",
-      "note": "The quantum polynomial degree is unspecified; the classical generic birthday bound is retained."
+      "note": "Unspecified quantum polynomial degree uses the polynomial class position."
     },
     "179": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.9
-        ],
-        [
           2.4,
-          2.9
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          3.9
         ]
       ],
-      "quantum": "$\\operatorname{poly}(d\\log q)$",
-      "classical": "$q^{O(d)}$",
-      "parameter": "Encoded size d log q; dimension d and field size q",
+      "quantum": "$\\operatorname{poly}(b)$",
+      "classical": "$2^{O(b)}$",
+      "parameter": "Field bit length b=log_2 q; fixed dimension d",
       "model": "Hidden-label oracle queries and the efficient quantum implementation in the stated family",
-      "note": "The region represents unspecified polynomial quantum degrees and the exponential classical range stated for the hard oracle families. Group, field and dimension promises remain part of the comparison."
+      "note": "Principal growing-field family; unspecified polynomial/exponential constants use class positions."
     },
     "180": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.5
-        ],
-        [
-          2.4,
-          2.5
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          2,
+          3.9
         ]
       ],
-      "quantum": "$\\operatorname{poly}(\\lambda)\\text{ gates and at most }n\\lambda\\text{ queries}$",
-      "classical": "$\\Omega(2^{\\lambda^c})\\text{ lower bound};\\ O(n2^n)\\text{ random-codeword search}$",
-      "parameter": "Security parameter lambda, code length n, and code-family constant 0<c<1",
-      "model": "Random-oracle queries; polynomial-time quantum implementation",
-      "note": "The classical region begins at the subexponential lower-bound family 2^(lambda^c), 0<c<1, and extends to the recorded random-codeword search upper bound. It represents the gap between bounds and code-parameter dependence."
+      "quantum": "$O(\\lambda^2)$ queries",
+      "classical": "$O(n2^n)$ queries",
+      "parameter": "Security parameter lambda; n=Theta(lambda); fixed code-family constants",
+      "model": "Random-oracle queries",
+      "note": "The quantum query bound is n*lambda; the classical point uses random-codeword search, while the entry retains its subexponential classical-query lower bound."
     },
     "181": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.4
-        ],
-        [
           2.4,
-          2.4
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          2.63333333
         ]
       ],
       "quantum": "$\\operatorname{poly}(\\lambda)$",
-      "classical": "$\\exp(O(\\lambda^{1/3}(\\log\\lambda)^{2/3}))\\text{ for factoring; parameter-dependent lattice attacks for LWE}$",
-      "parameter": "Security parameter lambda and the chosen protocol instantiation",
+      "classical": "$\\exp(O(\\lambda^{1/3}(\\log\\lambda)^{2/3}))$",
+      "parameter": "lambda-bit modulus; factoring-based protocol",
       "model": "Prover/attack running time at the protocol success target",
-      "note": "Parameter envelope over cryptographic instantiations: the factoring attack lies in the NFS subexponential band; LWE attacks depend on their lattice parameters. The comparison concerns an honest prover versus an attack that reaches the protocol target."
+      "note": "Principal explicit cryptographic instantiation; unknown polynomial degree uses its class position."
     },
     "182": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
           2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          3.9
         ]
       ],
-      "quantum": "$\\operatorname{poly}(T,\\lambda)$",
-      "classical": "$O(G2^q)\\text{ state-vector simulation, with width-dependent improvements}$",
-      "parameter": "Verified circuit size T, security parameter lambda, and the resulting honest prover circuit with G gates and q qubits",
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$\\operatorname{poly}(n)2^{O(n)}$",
+      "parameter": "n-qubit high-width computation; polynomial gate count and security parameter",
       "model": "Honest-prover running time at the same protocol acceptance probability",
-      "note": "The comparison uses simulation of the same honest prover, rather than the classical verifier. Circuit size and width vary with the verified computation and security parameter, giving a simulation-cost region."
+      "note": "Worst-case honest-prover computation, rather than the classical verifier runtime; the simulator alternatives in the entry remain applicable."
     },
     "183": {
       "kind": "unavailable",
@@ -2125,134 +1005,74 @@
       "note": "The separation concerns certified entropy against side information and protocol success, rather than two finite running times for the same classical output guarantee."
     },
     "184": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1.0,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
-        ],
-        [
-          1.0,
-          3.9
-        ],
-        [
-          1.0,
+          2,
           3.9
         ]
       ],
-      "quantum": "$O(g+n)$",
-      "classical": "$\\min\\{O(g2^n),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Common size g+n; qubit count n, gate count g, width w, path-count encoding size s, and sampling accuracy",
+      "quantum": "$O(n^2)$",
+      "classical": "$\\min\\{O(n^2 2^n),\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "n qubits; ideal circuits, g=Theta(n^2), w=Theta(n), s>=Omega(n^2)",
       "model": "Operations per sample from the specified circuit distribution",
-      "note": "With total circuit description size g+n as the common scale, quantum execution is linear. The classical minimum varies from polynomial costs for small width or easy subfamilies through exponential simulation. Noise assumptions and required sampling accuracy remain those of the entry."
+      "note": "Principal ideal high-width regime. Quadratic circuit size prevents a linear-size Boolean encoding from being assumed; classical exponential constants remain unspecified."
     },
     "185": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          2.0,
-          0.05
-        ],
-        [
-          2.0,
-          3.9
-        ],
-        [
-          0.05,
+          2.2,
           3.9
         ]
       ],
-      "quantum": "$O(m^2)$",
-      "classical": "$O(n2^n+mn^2)\\text{; collision-aware and fixed-loss bounds in the entry}$",
-      "parameter": "Scale max(m,n); mode count m, photon count n, loss and target distribution",
+      "quantum": "$O(n^4)$",
+      "classical": "$O(n2^n+n^4)$",
+      "parameter": "n photons; ideal interferometer with m=Theta(n^2) modes",
       "model": "Optical-element implementation cost versus classical sampling operations",
-      "note": "Envelope over photon count, mode count and collisions, including the loss-dependent polynomial regime. The displayed quantum cost is interferometer implementation; the photon-detection/output cost is specified by the physical instance."
+      "note": "The collision-aware Haar-average expression has the same leading exponential rate in this mode regime. This cost setting does not impose a separate hardness claim."
     },
     "186": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          2.0,
-          0.05
-        ],
-        [
-          2.0,
-          3.4
-        ],
-        [
-          0.05,
+          2,
           3.4
         ]
       ],
-      "quantum": "$O(m^2)$",
-      "classical": "$O(mN^3 2^{N/2})\\text{; polynomial subclasses and fixed-loss regimes in the entry}$",
-      "parameter": "Scale max(m,N); mode count m, detected photons N, squeezing, loss and numerical cutoff",
+      "quantum": "$O(N^2)$",
+      "classical": "$O(N^4 2^{N/2})$",
+      "parameter": "N detected photons; ideal general instance with m=Theta(N) modes",
       "model": "Optical-element implementation cost versus classical sampling operations",
-      "note": "Envelope over mode count, detected photons and loss. The conditional classical sampling bound depends exponentially on detected photon count, with the stated polynomial subclasses and loss regimes."
+      "note": "Principal ideal sampling comparison with the stated numerical cutoff; polynomial subclasses are separate regimes."
     },
     "187": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1.0,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
-        ],
-        [
-          1.0,
-          3.9
-        ],
-        [
-          1.0,
+          2,
           3.9
         ]
       ],
-      "quantum": "$O(g+n)$",
-      "classical": "$\\min\\{O(g2^n),\\operatorname{poly}(g)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Common size g+n; qubit count n, gate count g, width w, path-count encoding size s, and sampling accuracy",
+      "quantum": "$O(n^2)$",
+      "classical": "$\\min\\{O(n^2 2^n),\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "n qubits; ideal circuits, g=Theta(n^2), w=Theta(n), s>=Omega(n^2)",
       "model": "Operations per sample from the specified circuit distribution",
-      "note": "With total circuit description size g+n as the common scale, quantum execution is linear. The classical minimum varies from polynomial costs for small width or easy subfamilies through exponential simulation. Noise assumptions and required sampling accuracy remain those of the entry."
+      "note": "Principal ideal high-width regime. Quadratic circuit size prevents a linear-size Boolean encoding from being assumed; classical exponential constants remain unspecified."
     },
     "188": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          2,
+          3.9
         ]
       ],
-      "quantum": "$O(g\\varepsilon^{-2}\\log(1/\\delta))$",
-      "classical": "$\\min\\{O(g2^n\\varepsilon^{-2}\\log(1/\\delta)),\\operatorname{poly}(g,1/\\varepsilon)2^{O(w)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
-      "parameter": "Gate count g, qubits n, additive accuracy epsilon, failure delta, width w and path-count encoding s",
+      "quantum": "$O(n^2)$",
+      "classical": "$\\min\\{O(n^2 2^n),\\operatorname{poly}(n)2^{O(n)},\\operatorname{poly}(s)2^{O(s/\\sqrt{\\log s})}\\}$",
+      "parameter": "n qubits; g=Theta(n^2), linear width, fixed accuracy and failure probability",
       "model": "Gate/time cost for the same normalized-trace accuracy",
-      "note": "Region over circuit size, accuracy and contraction width; the complete cost formulas retain their shared accuracy dependence."
+      "note": "Principal high-width trace-estimation regime; the classical simulator minimum is retained."
     },
     "189": {
       "kind": "point",
@@ -2311,44 +1131,32 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "193": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.63333333
-        ],
-        [
           2.4,
-          2.63333333
-        ],
-        [
-          2.4,
-          2.63333333
-        ],
-        [
-          0.05,
           2.63333333
         ]
       ],
       "quantum": "$\\operatorname{poly}(n)$",
       "classical": "$\\exp(O(n^{1/3}(\\log n)^{2/3}))$",
-      "parameter": "Prime-field bit length n; same classification accuracy and polynomial training overhead",
+      "parameter": "Prime-field bit length n; fixed learning accuracy",
       "model": "Learning time",
-      "note": "Quantum polynomial degree unspecified; the recorded NFS attack has subexponential power one third in prime-field bit length. Logarithmic factors remain in the formula."
+      "note": "Unspecified polynomial degree uses its class position."
     },
     "194": {
       "kind": "point",
       "points": [
         [
           0.5,
-          1.0
+          1
         ]
       ],
-      "quantum": "$O(\\sqrt N)\\ (d\\ge3);\\ O(\\sqrt{N\\log N})\\ (d=2)$",
+      "quantum": "$O(\\sqrt N)$",
       "classical": "$\\Theta(N)$",
-      "parameter": "Lattice vertex count N; all fixed dimensions d >= 2",
+      "parameter": "N lattice vertices; fixed dimension d>=3",
       "model": "Local movement and oracle steps",
-      "note": "For every fixed dimension d >= 2 the leading quantum power is one half; dimension two contributes the displayed sqrt(log N) factor."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "195": {
       "kind": "point",
@@ -2439,50 +1247,18 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "202": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          0.125,
-          0.25
-        ],
-        [
-          0.25,
-          0.5
-        ],
-        [
-          0.375,
-          0.75
-        ],
-        [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\Theta(\\sqrt M)\\ (M\\le N);\\ \\Theta(\\sqrt{N\\log M/(\\log(N/\\log M)+1)})\\ (N<M\\le2^N)$",
-      "classical": "$\\Theta(\\min\\{N,M\\})$",
-      "parameter": "Oracle string length N and concept count M <= 2^N",
+      "quantum": "$\\Theta(\\sqrt N)$",
+      "classical": "$\\Theta(N)$",
+      "parameter": "Oracle string length N; M=N candidate strings",
       "model": "Bit queries",
-      "note": "The query curve covers concept counts from small families to the complete 2^N family, including the transition at M=N. Exact logarithmic factors are in the formula."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "203": {
       "kind": "point",
@@ -2499,502 +1275,102 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "204": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          1.0
-        ],
-        [
-          0.025,
-          1.05
-        ],
-        [
-          0.05,
-          1.1
-        ],
-        [
-          0.075,
-          1.15
-        ],
-        [
-          0.1,
-          1.2
-        ],
-        [
-          0.125,
-          1.25
-        ],
-        [
-          0.15,
-          1.3
-        ],
-        [
-          0.175,
-          1.35
-        ],
-        [
-          0.2,
-          1.4
-        ],
-        [
-          0.225,
-          1.45
-        ],
-        [
-          0.25,
-          1.5
-        ],
-        [
-          0.275,
-          1.55
-        ],
-        [
-          0.3,
-          1.6
-        ],
-        [
-          0.325,
-          1.65
-        ],
-        [
-          0.35,
-          1.7
-        ],
-        [
-          0.375,
-          1.75
-        ],
-        [
-          0.4,
-          1.8
-        ],
-        [
-          0.425,
-          1.85
-        ],
-        [
-          0.45,
-          1.9
-        ],
-        [
-          0.475,
-          1.95
-        ],
-        [
           0.5,
-          2.0
-        ],
-        [
-          0.5,
-          1.95
-        ],
-        [
-          0.5,
-          1.9
-        ],
-        [
-          0.5,
-          1.85
-        ],
-        [
-          0.5,
-          1.8
-        ],
-        [
-          0.5,
-          1.75
-        ],
-        [
-          0.5,
-          1.7
-        ],
-        [
-          0.5,
-          1.65
-        ],
-        [
-          0.5,
-          1.6
-        ],
-        [
-          0.5,
-          1.55
-        ],
-        [
-          0.5,
-          1.5
-        ],
-        [
-          0.5,
-          1.45
-        ],
-        [
-          0.5,
-          1.4
-        ],
-        [
-          0.5,
-          1.35
-        ],
-        [
-          0.5,
-          1.3
-        ],
-        [
-          0.5,
-          1.25
-        ],
-        [
-          0.5,
-          1.2
-        ],
-        [
-          0.5,
-          1.15
-        ],
-        [
-          0.5,
-          1.1
-        ],
-        [
-          0.5,
-          1.05
-        ],
-        [
-          0.5,
-          1.0
+          1
         ]
       ],
       "quantum": "$\\Theta(\\sqrt k)$",
-      "classical": "$\\Theta(k\\log(n/k)+k)$",
-      "parameter": "Scale max(k,1+log(n/k)); defect count k and universe size n",
+      "classical": "$\\Theta(k\\log k)$",
+      "parameter": "k defective items in a universe of size n=k^2",
       "model": "subset-intersection queries",
-      "note": "The curve varies defect count and the information per defect. This retains the logarithmic universe-size factor even when it dominates the defect count."
+      "note": "Principal sparse-defective regime; logarithms remain in the classical formula."
     },
     "205": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          0.05
-        ],
-        [
-          0.0625,
-          0.25
-        ],
-        [
-          0.125,
-          0.5
-        ],
-        [
-          0.1875,
-          0.75
-        ],
-        [
           0.25,
-          1.0
-        ],
-        [
-          0.3125,
-          1.0
-        ],
-        [
-          0.375,
-          1.0
-        ],
-        [
-          0.4375,
-          1.0
-        ],
-        [
-          0.5,
-          1.0
+          1
         ]
       ],
-      "quantum": "$O(\\sqrt{1+k/d})$",
-      "classical": "$\\widetilde\\Theta(\\min\\{k,1+(k/d)^2\\})$",
-      "parameter": "Threshold k and gap 1 <= d <= k",
+      "quantum": "$O(k^{1/4})$",
+      "classical": "$\\widetilde\\Theta(k)$",
+      "parameter": "Threshold k; gap d=Theta(sqrt(k))",
       "model": "subset-intersection queries",
-      "note": "The ratio k/d ranges from bounded to order k. The classical bound saturates at k while the quantum power reaches one half."
+      "note": "The gap at the classical saturation threshold realizes the fourth-power comparison."
     },
     "206": {
-      "kind": "region",
+      "kind": "point",
       "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          3.4,
-          0.05
-        ],
-        [
-          3.4,
-          3.9
-        ],
-        [
-          0.05,
-          3.9
-        ]
-      ],
-      "quantum": "$\\Theta(\\min\\{2^{n/2},\\sqrt{\\log(2+\\varepsilon 2^k)/\\varepsilon}\\})$",
-      "classical": "$O(\\min\\{2^n,k\\log k+k/\\varepsilon\\})$",
-      "parameter": "Boolean dimension n >= 2k, junta size k and distance 0 < epsilon <= 1/8",
-      "model": "Membership queries",
-      "note": "Envelope over junta size and distance, including the truth-table caps at 2^(n/2) quantum and 2^n classical queries. The minimum expressions specify the correlated attainable regimes."
-    },
-    "207": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          1.0,
-          0.05
-        ],
-        [
-          1.0,
-          2.0
-        ],
-        [
-          0.05,
-          2.0
-        ]
-      ],
-      "quantum": "$O(k\\log k/\\varepsilon+2^k\\log(1/\\varepsilon))$",
-      "classical": "$O((k\\log n+2^k)/\\varepsilon)$",
-      "parameter": "Scale max(n,2^k,1/epsilon); input dimension n, junta size k and accuracy epsilon",
-      "model": "Total labeled examples, with quantum examples in the first quantum stage",
-      "note": "Envelope for total example count when dimension, inverse accuracy and truth-table size vary; the quantum method includes its classical-example stage."
-    },
-    "208": {
-      "kind": "region",
-      "points": [
-        [
-          0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          2.5
-        ],
-        [
-          0.05,
-          2.5
-        ]
-      ],
-      "quantum": "$\\operatorname{poly}(n,s,1/\\varepsilon,\\log(1/\\delta))$",
-      "classical": "$n^{O(\\log(s/\\varepsilon))}\\operatorname{poly}(\\log(1/\\delta))$",
-      "parameter": "Common scale max(n,s,1/epsilon); dimension n, concept size s, accuracy epsilon and confidence",
-      "model": "Example-only learning time",
-      "note": "Polynomial quantum degrees are unspecified. The classical region ranges from polynomial to quasipolynomial as concept size and dimension vary; stronger membership-query access is not used in this comparison."
-    },
-    "209": {
-      "kind": "curve",
-      "points": [
-        [
-          1.0,
-          1.0
-        ],
-        [
-          1.0,
-          1.05
-        ],
-        [
-          1.0,
-          1.1
-        ],
-        [
-          1.0,
-          1.15
-        ],
-        [
-          1.0,
-          1.2
-        ],
-        [
-          1.0,
-          1.25
-        ],
-        [
-          1.0,
-          1.3
-        ],
-        [
-          1.0,
-          1.35
-        ],
-        [
-          1.0,
-          1.4
-        ],
-        [
-          1.0,
-          1.45
-        ],
-        [
-          1.0,
-          1.5
-        ],
-        [
-          1.0,
-          1.55
-        ],
-        [
-          1.0,
-          1.6
-        ],
-        [
-          1.0,
-          1.65
-        ],
-        [
-          1.0,
-          1.7
-        ],
-        [
-          1.0,
-          1.75
-        ],
-        [
-          1.0,
-          1.8
-        ],
-        [
-          1.0,
-          1.85
-        ],
-        [
-          1.0,
-          1.9
-        ],
-        [
-          1.0,
-          1.95
-        ],
-        [
-          1.0,
-          2.0
-        ],
-        [
-          0.95,
-          1.95
-        ],
-        [
-          0.9,
-          1.9
-        ],
-        [
-          0.85,
-          1.85
-        ],
-        [
-          0.8,
-          1.8
-        ],
-        [
-          0.75,
-          1.75
-        ],
-        [
-          0.7,
-          1.7
-        ],
-        [
-          0.65,
-          1.65
-        ],
-        [
-          0.6,
-          1.6
-        ],
-        [
-          0.55,
-          1.55
-        ],
         [
           0.5,
-          1.5
-        ],
-        [
-          0.45,
-          1.45
-        ],
-        [
-          0.4,
-          1.4
-        ],
-        [
-          0.35,
-          1.35
-        ],
-        [
-          0.3,
-          1.3
-        ],
-        [
-          0.25,
-          1.25
-        ],
-        [
-          0.2,
-          1.2
-        ],
-        [
-          0.15,
-          1.15
-        ],
-        [
-          0.1,
-          1.1
-        ],
-        [
-          0.05,
-          1.05
-        ],
-        [
-          0.05,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(k)$",
-      "classical": "$\\Theta(nk)$",
-      "parameter": "Scale max(n,k); dimension n and Fourier sparsity k",
-      "model": "Uniform quantum examples versus classical labeled samples",
-      "note": "The curve retains independent growth of dimension and Fourier sparsity; polylogarithmic factors are in the quantum formula."
+      "quantum": "$\\Theta(\\sqrt k)$",
+      "classical": "$O(k\\log k)$",
+      "parameter": "Junta size k; n>=2k and fixed distance epsilon",
+      "model": "Membership queries",
+      "note": "Principal comparison at the displayed parameter setting."
     },
-    "210": {
-      "kind": "region",
+    "207": {
+      "kind": "point",
       "points": [
         [
           0.05,
-          0.05
-        ],
-        [
-          2.4,
-          0.05
-        ],
-        [
-          2.4,
-          2.5
-        ],
-        [
-          0.05,
-          2.5
+          0.18
         ]
       ],
-      "quantum": "$\\operatorname{poly}(n,t,1/\\varepsilon)$",
-      "classical": "$\\operatorname{poly}(n^{\\log t},1/\\varepsilon)$",
-      "parameter": "Common scale max(n,t,1/epsilon); dimension n, concept size t, accuracy epsilon and confidence",
+      "quantum": "$O(1)$",
+      "classical": "$O(\\log n)$",
+      "parameter": "Boolean dimension n; fixed junta size and learning accuracy",
+      "model": "Total labeled examples, with quantum examples in the first quantum stage",
+      "note": "The dimension-independent quantum-example regime; the classical examples recover relevant-coordinate information."
+    },
+    "208": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          2.45
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$n^{O(\\log n)}$",
+      "parameter": "Dimension n; polynomial DNF size and fixed accuracy/confidence",
       "model": "Example-only learning time",
-      "note": "Polynomial quantum degrees are unspecified. The classical region ranges from polynomial to quasipolynomial as concept size and dimension vary; stronger membership-query access is not used in this comparison."
+      "note": "Principal polynomial-size concept class; unspecified degrees use the polynomial/quasipolynomial class positions."
+    },
+    "209": {
+      "kind": "point",
+      "points": [
+        [
+          0.05,
+          1
+        ]
+      ],
+      "quantum": "$O(1)$",
+      "classical": "$\\Theta(n)$",
+      "parameter": "Dimension n; one Fourier character (k=1)",
+      "model": "Uniform quantum examples versus classical labeled samples",
+      "note": "The constant-sparsity parity case gives the strongest dimension dependence and is admitted by the exact learner."
+    },
+    "210": {
+      "kind": "point",
+      "points": [
+        [
+          2.4,
+          2.45
+        ]
+      ],
+      "quantum": "$\\operatorname{poly}(n)$",
+      "classical": "$n^{O(\\log n)}$",
+      "parameter": "Dimension n; polynomial-size trees and fixed accuracy",
+      "model": "Example-only learning time",
+      "note": "Principal polynomial-size tree class; unknown degrees use class positions."
     },
     "211": {
       "kind": "point",
@@ -3025,834 +1401,130 @@
       "note": "The current membership-query comparison depends on inverse distance; both algorithms test the same symmetry property."
     },
     "213": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          0.5,
-          2.0
-        ],
-        [
-          0.5125,
-          2.00493827
-        ],
-        [
-          0.525,
-          2.0097561
-        ],
-        [
-          0.5375,
-          2.01445783
-        ],
-        [
-          0.55,
-          2.01904762
-        ],
-        [
-          0.5625,
-          2.02352941
-        ],
-        [
-          0.575,
-          2.02790698
-        ],
-        [
-          0.5875,
-          2.03218391
-        ],
-        [
-          0.6,
-          2.03636364
-        ],
-        [
-          0.6125,
-          2.04044944
-        ],
-        [
-          0.625,
-          2.04444444
-        ],
-        [
-          0.6375,
-          2.04835165
-        ],
-        [
-          0.65,
-          2.05217391
-        ],
-        [
-          0.6625,
-          2.05591398
-        ],
-        [
-          0.675,
-          2.05957447
-        ],
-        [
-          0.6875,
-          2.06315789
-        ],
-        [
-          0.7,
-          2.06666667
-        ],
-        [
-          0.7125,
-          2.07010309
-        ],
-        [
-          0.725,
-          2.07346939
-        ],
-        [
-          0.7375,
-          2.07676768
-        ],
-        [
-          0.75,
-          2.08
-        ],
-        [
-          0.725,
-          2.06666667
-        ],
-        [
-          0.7,
-          2.05217391
-        ],
-        [
-          0.675,
-          2.03636364
-        ],
-        [
-          0.65,
-          2.01904762
-        ],
-        [
-          0.625,
-          2.0
-        ],
-        [
-          0.6,
-          1.9
-        ],
-        [
-          0.575,
-          1.8
-        ],
-        [
-          0.55,
-          1.7
-        ],
-        [
-          0.525,
-          1.6
-        ],
-        [
-          0.5,
-          1.5
-        ],
-        [
-          0.475,
-          1.4
-        ],
-        [
-          0.45,
-          1.3
-        ],
-        [
-          0.425,
-          1.2
-        ],
-        [
-          0.4,
-          1.1
-        ],
-        [
-          0.375,
-          1.0
-        ],
-        [
-          0.35,
-          0.9
-        ],
-        [
-          0.325,
-          0.8
-        ],
-        [
-          0.3,
-          0.7
-        ],
-        [
-          0.275,
-          0.6
-        ],
         [
           0.25,
           0.5
         ]
       ],
-      "quantum": "$\\widetilde O(n^{1/4}/\\sqrt\\varepsilon)$",
-      "classical": "$\\widetilde O(\\sqrt n/\\varepsilon^2)$",
-      "parameter": "Scale max(n,1/epsilon); Boolean dimension n and distance epsilon",
+      "quantum": "$\\widetilde O(n^{1/4})$",
+      "classical": "$\\widetilde O(\\sqrt n)$",
+      "parameter": "Boolean dimension n; fixed testing distance",
       "model": "Membership queries",
-      "note": "Relative growth of dimension and inverse distance gives the curve. These are the current membership-query bounds, with logarithmic factors suppressed only in position."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "214": {
-      "kind": "region",
+      "kind": "point",
       "points": [
-        [
-          0.05,
-          3.23333333
-        ],
-        [
-          0.05,
-          3.23333333
-        ],
-        [
-          0.05,
-          3.9
-        ],
         [
           0.05,
           3.9
         ]
       ],
-      "quantum": "$O_\\varepsilon(1)$",
-      "classical": "$\\Omega(2^{n/3})\\text{ lower bound; full-domain acquisition at }\\widetilde O(2^n)$",
+      "quantum": "$O(1)$",
+      "classical": "$\\widetilde O(2^n)$",
       "parameter": "Boolean dimension n; fixed distance epsilon",
       "model": "Passive labeled examples",
-      "note": "The classical interval shows the recorded exponential lower bound and full-domain example acquisition upper scale. The quantum bound holds at each fixed distance."
+      "note": "Classical full-domain acquisition supplies the comparison upper bound; the entry retains its exponential classical-example lower bound."
     },
     "215": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          1.0,
+          1,
           3.4
-        ],
-        [
-          3.9,
-          3.4
-        ],
-        [
-          3.9,
-          3.9
-        ],
-        [
-          1.0,
-          3.9
         ]
       ],
-      "quantum": "$O(\\min\\{2^n,n\\log n/\\varepsilon\\})$",
-      "classical": "$\\widetilde\\Theta(2^{n/2})\\text{ at constant distance; }\\widetilde O(2^n)\\text{ by full acquisition}$",
-      "parameter": "Boolean dimension n and distance epsilon",
+      "quantum": "$O(n\\log n)$",
+      "classical": "$\\widetilde\\Theta(2^{n/2})$",
+      "parameter": "Boolean dimension n; fixed distance epsilon",
       "model": "Function-oracle queries",
-      "note": "Accuracy dependence remains explicit. At constant distance the quantum power is one and the classical exponent is one half; increasing required accuracy moves the bound through larger cost classes, with full-domain querying available."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "216": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
           0.5,
-          1.0
-        ],
-        [
-          0.625,
-          1.0
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.875,
-          1.0
-        ],
-        [
-          1.0,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\Theta(k\\log(\\min\\{k,n-k\\}+1))\\text{ copies};\\ \\Theta(\\min\\{k,\\sqrt{k(n-k)}\\})\\text{ with reflections}$",
+      "quantum": "$\\Theta(\\sqrt k)$",
       "classical": "$\\Theta(k\\log k)$",
-      "parameter": "Support size k < n; all complement sizes n-k. The linear endpoint also represents the copy-only leading powers.",
-      "model": "Uniform-state copies, or supplied state reflections, versus independent uniform classical samples",
-      "note": "The reflection-access branch varies with n-k and reaches the linear leading-power endpoint. In the copy-only branch, both leading powers are one; its logarithmic improvement remains explicit. The two quantum input-access models are distinguished in the formulas."
+      "parameter": "Support size k; one missing universe element; reflection access",
+      "model": "Quantum state-preparation/reflection queries versus independent classical samples",
+      "note": "The n-k=1 reflection-access regime attains the largest polynomial saving; the copy-only comparison remains in the problem entry."
     },
     "217": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          1.0,
-          1.0
-        ],
-        [
-          1.025,
-          1.05
-        ],
-        [
-          1.05,
-          1.1
-        ],
-        [
-          1.075,
-          1.15
-        ],
-        [
-          1.1,
-          1.2
-        ],
-        [
-          1.125,
-          1.25
-        ],
-        [
-          1.15,
-          1.3
-        ],
-        [
-          1.175,
-          1.35
-        ],
-        [
-          1.2,
-          1.4
-        ],
-        [
-          1.225,
-          1.45
-        ],
-        [
-          1.25,
-          1.5
-        ],
-        [
-          1.275,
-          1.55
-        ],
-        [
-          1.3,
-          1.6
-        ],
-        [
-          1.325,
-          1.65
-        ],
-        [
-          1.35,
-          1.7
-        ],
-        [
-          1.375,
-          1.75
-        ],
-        [
-          1.4,
-          1.8
-        ],
-        [
-          1.425,
-          1.85
-        ],
-        [
-          1.45,
-          1.9
-        ],
-        [
-          1.475,
-          1.95
-        ],
-        [
-          1.5,
-          2.0
-        ],
-        [
-          1.45,
-          1.95
-        ],
-        [
-          1.4,
-          1.9
-        ],
-        [
-          1.35,
-          1.85
-        ],
-        [
-          1.3,
-          1.8
-        ],
-        [
-          1.25,
-          1.75
-        ],
-        [
-          1.2,
-          1.7
-        ],
-        [
-          1.15,
-          1.65
-        ],
-        [
-          1.1,
-          1.6
-        ],
-        [
-          1.05,
-          1.55
-        ],
-        [
-          1.0,
-          1.5
-        ],
-        [
-          0.975,
-          1.45
-        ],
-        [
-          0.95,
-          1.4
-        ],
-        [
-          0.925,
-          1.35
-        ],
-        [
-          0.9,
-          1.3
-        ],
-        [
-          0.875,
-          1.25
-        ],
-        [
-          0.85,
-          1.2
-        ],
-        [
-          0.825,
-          1.15
-        ],
-        [
-          0.8,
-          1.1
-        ],
-        [
-          0.775,
-          1.05
-        ],
         [
           0.75,
-          1.0
+          1
         ]
       ],
-      "quantum": "$O(m^{3/4}\\sqrt{\\log n\\log m}+\\sqrt m\\log n)$",
-      "classical": "$\\widetilde O(m\\log(n/m))$",
-      "parameter": "Scale max(m,log n); sparse edge count m and vertex count n",
+      "quantum": "$\\widetilde O(m^{3/4})$",
+      "classical": "$\\widetilde O(m)$",
+      "parameter": "m edges; sparse graph with n=Theta(m) vertices",
       "model": "Induced-subgraph edge-existence queries",
-      "note": "The curve retains vertex-label logarithms as well as edge count for the promised matching/cycle families. Polylogarithmic factors in m are retained in the formula."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "218": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          1.0
-        ],
-        [
-          0.5,
-          1.0
-        ],
-        [
-          0.5,
-          2.0
-        ],
-        [
-          0.05,
-          2.0
+          0.18,
+          1
         ]
       ],
-      "quantum": "$O(\\sqrt m\\log m);\\ O(d\\log m);\\ O(1)\\text{ for the stated subclasses}$",
-      "classical": "$\\Omega(m\\log(n^2/m))\\text{; class-specific bounds in the entry}$",
-      "parameter": "Scale max(m,log n); edge count m, vertices n, maximum degree d and the stated structural promise",
+      "quantum": "$O(\\log n)$",
+      "classical": "$\\Omega(n\\log n)$",
+      "parameter": "n vertices; constant maximum degree and m=Theta(n)",
       "model": "Induced-edge-parity queries",
-      "note": "The region covers sparse general graphs and the stated bounded-degree/star/clique subclasses, with their class-specific classical information bounds. Vertex-label costs remain in the formula."
+      "note": "A bounded-degree graph family supplies both the quantum upper bound and its matched classical information lower bound."
     },
     "219": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          1.0
-        ],
-        [
           0.25,
-          1.0
-        ],
-        [
-          0.25,
-          5.2
-        ],
-        [
-          0.05,
-          5.2
+          1
         ]
       ],
       "quantum": "$\\Theta(k^{1/4})$",
-      "classical": "$\\Omega(k\\log(n/k))$",
-      "parameter": "Support size k and universe size n with k <= n/2; fixed exact-half predicate",
+      "classical": "$\\Omega(k)$",
+      "parameter": "Exact-half junta size k; universe size n=2k",
       "model": "Membership queries",
-      "note": "The classical extent is an envelope: the recorded information bound is a lower bound, while general concept elimination and the symmetric predicate determine upper costs. The quantum fourth-root dependence is explicit."
+      "note": "The classical point is the information lower bound in the same exact-half family."
     },
     "220": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          2.0,
-          2.0
-        ],
-        [
-          2.00330579,
-          2.00493827
-        ],
-        [
-          2.00655738,
-          2.0097561
-        ],
-        [
-          2.0097561,
-          2.01445783
-        ],
-        [
-          2.01290323,
-          2.01904762
-        ],
-        [
-          2.016,
-          2.02352941
-        ],
-        [
-          2.01904762,
-          2.02790698
-        ],
-        [
-          2.02204724,
-          2.03218391
-        ],
-        [
-          2.025,
-          2.03636364
-        ],
-        [
-          2.02790698,
-          2.04044944
-        ],
-        [
-          2.03076923,
-          2.04444444
-        ],
-        [
-          2.03358779,
-          2.04835165
-        ],
-        [
-          2.03636364,
-          2.05217391
-        ],
-        [
-          2.03909774,
-          2.05591398
-        ],
-        [
-          2.04179104,
-          2.05957447
-        ],
-        [
-          2.04444444,
-          2.06315789
-        ],
-        [
-          2.04705882,
-          2.06666667
-        ],
-        [
-          2.04963504,
-          2.07010309
-        ],
-        [
-          2.05217391,
-          2.07346939
-        ],
-        [
-          2.05467626,
-          2.07676768
-        ],
-        [
-          2.05714286,
-          2.08
-        ],
-        [
-          2.04179104,
-          2.06666667
-        ],
-        [
-          2.025,
-          2.05217391
-        ],
-        [
-          2.00655738,
-          2.03636364
-        ],
-        [
-          1.93333333,
-          2.01904762
-        ],
-        [
-          1.83333333,
-          2.0
-        ],
-        [
-          1.73333333,
-          1.9
-        ],
-        [
-          1.63333333,
-          1.8
-        ],
-        [
-          1.53333333,
-          1.7
-        ],
-        [
-          1.43333333,
-          1.6
-        ],
-        [
-          1.33333333,
-          1.5
-        ],
-        [
-          1.23333333,
-          1.4
-        ],
-        [
-          1.13333333,
-          1.3
-        ],
-        [
-          1.03333333,
-          1.2
-        ],
-        [
-          0.93333333,
-          1.1
-        ],
-        [
-          0.83333333,
-          1.0
-        ],
-        [
-          0.73333333,
-          0.9
-        ],
-        [
-          0.63333333,
-          0.8
-        ],
-        [
-          0.53333333,
-          0.7
-        ],
-        [
-          0.43333333,
-          0.6
-        ],
         [
           0.33333333,
           0.5
         ]
       ],
-      "quantum": "$O(N^{1/3}/\\varepsilon^2)$",
-      "classical": "$\\Theta(\\sqrt N/\\varepsilon^2)$",
-      "parameter": "Scale max(N,1/epsilon); distribution domain size N and distance epsilon",
+      "quantum": "$O(N^{1/3})$",
+      "classical": "$\\Theta(\\sqrt N)$",
+      "parameter": "Distribution domain size N; fixed testing distance",
       "model": "coherent sampler queries versus independent samples",
-      "note": "Domain size and inverse distance both vary. The curve includes the shared accuracy dependence rather than fixing epsilon."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "221": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
-        [
-          1.0,
-          2.0
-        ],
-        [
-          1.025,
-          2.00493827
-        ],
-        [
-          1.05,
-          2.0097561
-        ],
-        [
-          1.075,
-          2.01445783
-        ],
-        [
-          1.1,
-          2.01904762
-        ],
-        [
-          1.125,
-          2.02352941
-        ],
-        [
-          1.15,
-          2.02790698
-        ],
-        [
-          1.175,
-          2.03218391
-        ],
-        [
-          1.2,
-          2.03636364
-        ],
-        [
-          1.225,
-          2.04044944
-        ],
-        [
-          1.25,
-          2.04444444
-        ],
-        [
-          1.275,
-          2.04835165
-        ],
-        [
-          1.3,
-          2.05217391
-        ],
-        [
-          1.325,
-          2.05591398
-        ],
-        [
-          1.35,
-          2.05957447
-        ],
-        [
-          1.375,
-          2.06315789
-        ],
-        [
-          1.4,
-          2.06666667
-        ],
-        [
-          1.425,
-          2.07010309
-        ],
-        [
-          1.45,
-          2.07346939
-        ],
-        [
-          1.475,
-          2.07676768
-        ],
-        [
-          1.5,
-          2.08
-        ],
-        [
-          1.45,
-          2.06666667
-        ],
-        [
-          1.4,
-          2.05217391
-        ],
-        [
-          1.35,
-          2.03636364
-        ],
-        [
-          1.3,
-          2.01904762
-        ],
-        [
-          1.25,
-          2.0
-        ],
-        [
-          1.2,
-          1.9
-        ],
-        [
-          1.15,
-          1.8
-        ],
-        [
-          1.1,
-          1.7
-        ],
-        [
-          1.05,
-          1.6
-        ],
-        [
-          1.0,
-          1.5
-        ],
-        [
-          0.95,
-          1.4
-        ],
-        [
-          0.9,
-          1.3
-        ],
-        [
-          0.85,
-          1.2
-        ],
-        [
-          0.8,
-          1.1
-        ],
-        [
-          0.75,
-          1.0
-        ],
-        [
-          0.7,
-          0.93333333
-        ],
-        [
-          0.65,
-          0.86666667
-        ],
-        [
-          0.6,
-          0.8
-        ],
-        [
-          0.55,
-          0.73333333
-        ],
         [
           0.5,
           0.66666667
         ]
       ],
-      "quantum": "$O(\\sqrt N/\\varepsilon)$",
-      "classical": "$\\Theta(\\max\\{N^{2/3}/\\varepsilon^{4/3},\\sqrt N/\\varepsilon^2\\})$",
-      "parameter": "Scale max(N,1/epsilon); support bound N and distance epsilon",
+      "quantum": "$O(\\sqrt N)$",
+      "classical": "$\\Theta(N^{2/3})$",
+      "parameter": "Distribution support bound N; fixed testing distance",
       "model": "purified preparation queries versus independent samples",
-      "note": "The curve uses the maximum of the two classical terms as support size and inverse distance vary."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "222": {
       "kind": "point",
@@ -3869,346 +1541,46 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "223": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           0.5,
           0.66666667
-        ],
-        [
-          0.55,
-          0.7
-        ],
-        [
-          0.6,
-          0.73333333
-        ],
-        [
-          0.9,
-          0.93333333
-        ],
-        [
-          1.0,
-          1.0
-        ],
-        [
-          2.0,
-          2.13333333
-        ],
-        [
-          1.95,
-          2.12881356
-        ],
-        [
-          1.9,
-          2.12413793
-        ],
-        [
-          1.85,
-          2.11929825
-        ],
-        [
-          1.8,
-          2.11428571
-        ],
-        [
-          1.75,
-          2.10909091
-        ],
-        [
-          1.7,
-          2.1037037
-        ],
-        [
-          1.65,
-          2.09811321
-        ],
-        [
-          1.6,
-          2.09230769
-        ],
-        [
-          1.55,
-          2.08627451
-        ],
-        [
-          1.5,
-          2.08
-        ],
-        [
-          1.45,
-          2.07346939
-        ],
-        [
-          1.4,
-          2.06666667
-        ],
-        [
-          1.35,
-          2.05957447
-        ],
-        [
-          1.3,
-          2.05217391
-        ],
-        [
-          1.25,
-          2.04444444
-        ],
-        [
-          1.2,
-          2.03636364
-        ],
-        [
-          1.15,
-          2.02790698
-        ],
-        [
-          1.1,
-          2.01904762
-        ],
-        [
-          1.05,
-          2.0097561
-        ],
-        [
-          1.0,
-          2.0
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt{nm}/\\varepsilon)$",
-      "classical": "$\\Theta(\\max\\{n^{2/3}m^{1/3}/\\varepsilon^{4/3},\\sqrt{nm}/\\varepsilon^2\\})$",
-      "parameter": "Scale max(n,m,1/epsilon); alphabet sizes n >= m and distance epsilon",
+      "quantum": "$\\widetilde O(\\sqrt n)$",
+      "classical": "$\\Theta(n^{2/3})$",
+      "parameter": "Alphabet sizes n and m=2; fixed testing distance",
       "model": "purified preparation queries versus independent samples",
-      "note": "Envelope over both alphabet sizes and inverse accuracy, retaining the maximum in the classical bound. The boundary is a hull of the correlated leading-power family."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "224": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          0.5,
-          1.0
-        ],
-        [
-          0.75,
-          1.5
-        ],
-        [
-          1.0,
-          2.0
-        ],
-        [
-          1.5,
-          2.13333333
-        ],
-        [
-          2.0,
-          2.2
-        ],
-        [
-          2.13333333,
-          2.26666667
-        ],
-        [
-          2.2,
-          2.3
-        ],
-        [
-          2.3,
-          2.35
-        ],
-        [
-          2.35,
-          2.375
-        ],
-        [
-          2.3875,
-          2.39375
-        ],
-        [
-          2.39992,
-          2.39996
+          1,
+          2
         ]
       ],
-      "quantum": "$O(n^{k/2}/\\varepsilon)$",
-      "classical": "$O(n^k/\\varepsilon^2)$",
-      "parameter": "Dimension n, fixed k and distance epsilon; powers are related by the square in the displayed formulas",
+      "quantum": "$O(n)$",
+      "classical": "$O(n^2)$",
+      "parameter": "Dimension n; pairwise uniformity (k=2), fixed distance",
       "model": "purified preparation queries versus classical samples",
-      "note": "The quantum and classical leading powers vary together with k and inverse accuracy; the recorded classical expression is an upper bound."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "225": {
-      "kind": "curve",
+      "kind": "point",
       "points": [
         [
-          1.5,
-          2.0
-        ],
-        [
-          1.525,
-          2.0
-        ],
-        [
-          1.55,
-          2.0
-        ],
-        [
-          1.575,
-          2.0
-        ],
-        [
-          1.6,
-          2.0
-        ],
-        [
-          1.625,
-          2.0
-        ],
-        [
-          1.65,
-          2.0
-        ],
-        [
-          1.675,
-          2.0
-        ],
-        [
-          1.7,
-          2.0
-        ],
-        [
-          1.725,
-          2.0
-        ],
-        [
-          1.75,
-          2.0
-        ],
-        [
-          1.775,
-          2.0
-        ],
-        [
-          1.8,
-          2.0
-        ],
-        [
-          1.825,
-          2.0
-        ],
-        [
-          1.85,
-          2.0
-        ],
-        [
-          1.875,
-          2.0
-        ],
-        [
-          1.9,
-          2.0
-        ],
-        [
-          1.925,
-          2.0
-        ],
-        [
-          1.95,
-          2.0
-        ],
-        [
-          1.975,
-          2.0
-        ],
-        [
-          2.0,
-          2.0
-        ],
-        [
-          1.925,
-          1.95
-        ],
-        [
-          1.85,
-          1.9
-        ],
-        [
-          1.775,
-          1.85
-        ],
-        [
-          1.7,
-          1.8
-        ],
-        [
-          1.625,
-          1.75
-        ],
-        [
-          1.55,
-          1.7
-        ],
-        [
-          1.475,
-          1.65
-        ],
-        [
-          1.4,
-          1.6
-        ],
-        [
-          1.325,
-          1.55
-        ],
-        [
-          1.25,
-          1.5
-        ],
-        [
-          1.175,
-          1.45
-        ],
-        [
-          1.1,
-          1.4
-        ],
-        [
-          1.025,
-          1.35
-        ],
-        [
-          0.95,
-          1.3
-        ],
-        [
-          0.875,
-          1.25
-        ],
-        [
-          0.8,
-          1.2
-        ],
-        [
-          0.725,
-          1.15
-        ],
-        [
-          0.65,
-          1.1
-        ],
-        [
-          0.575,
-          1.05
-        ],
-        [
           0.5,
-          1.0
+          1
         ]
       ],
-      "quantum": "$\\widetilde O(\\sqrt N/\\varepsilon^{3/2})$",
-      "classical": "$\\Theta(N/(\\varepsilon\\log N)+\\log^2N/\\varepsilon^2)$",
-      "parameter": "Scale max(N,1/epsilon); support bound N and additive accuracy epsilon",
+      "quantum": "$\\widetilde O(\\sqrt N)$",
+      "classical": "$\\Theta(N/\\log N)$",
+      "parameter": "Distribution support bound N; fixed additive accuracy",
       "model": "purified sample preparation versus independent samples",
-      "note": "The curve compares purified-access queries with classical samples while support and inverse accuracy vary. The alternative probability-oracle bound remains separately identified in the entry."
+      "note": "Principal comparison at the displayed parameter setting."
     },
     "226": {
       "kind": "point",
@@ -4253,56 +1625,32 @@
       "note": "Leading asymptotic powers; logarithmic and subpolynomial factors are retained in the formulas."
     },
     "229": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
           0.05,
           0.25
-        ],
-        [
-          0.05,
-          0.25
-        ],
-        [
-          0.05,
-          1.0
-        ],
-        [
-          0.05,
-          1.0
         ]
       ],
-      "quantum": "$O_\\varepsilon(1)$",
-      "classical": "$\\Omega(n^{1/4}/\\log n)\\text{ lower bound};\\ O(n)\\text{ full oracle acquisition}$",
-      "parameter": "Domain size n and fixed distance epsilon",
+      "quantum": "$O(1)$",
+      "classical": "$\\Omega(n^{1/4}/\\log n)$",
+      "parameter": "Oracle domain size n; fixed testing distance",
       "model": "Function-oracle queries",
-      "note": "The classical range starts at the recorded lower bound and extends to full oracle acquisition. Quantum cost is bounded for each fixed distance."
+      "note": "The displayed classical coordinate is the stated lower bound; the quantum count is the constant-query tester."
     },
     "230": {
-      "kind": "region",
+      "kind": "point",
       "points": [
         [
-          0.05,
-          2.4
-        ],
-        [
           2.4,
-          2.4
-        ],
-        [
-          2.4,
-          3.9
-        ],
-        [
-          0.05,
           3.9
         ]
       ],
       "quantum": "$\\operatorname{poly}(n)$",
-      "classical": "$\\Omega(n^{2k}/\\lambda(n))\\text{ lower bound};\\ O(n^{3k}\\lambda(n)^{-2})\\text{ full truth-table queries}$",
-      "parameter": "Dimension n, constructive inverse-superpolynomial lambda(n), fixed confidence parameter k",
+      "classical": "$O(n^{3k}2^{n-2\\sqrt n})$",
+      "parameter": "Dimension n; lambda(n)=2^(-n/2+sqrt(n)); fixed confidence exponent k",
       "model": "Quantum-example learning and classical membership-query learning at the stated advantage",
-      "note": "The region covers the full permitted inverse-superpolynomial hardness parameter rather than selecting it. Quasipolynomial, subexponential and exponential classical costs depend on lambda(n); its stated lower limit bounds full truth-table querying by the displayed exponential scale."
+      "note": "The chosen constructive lambda lies near the lower allowed end and gives the largest leading exponential truth-table comparator; the polynomial degree is unspecified."
     }
   }
 }

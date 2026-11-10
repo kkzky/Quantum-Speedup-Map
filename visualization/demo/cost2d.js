@@ -1,4 +1,4 @@
-/* Asymptotic complexity plane with points and parameter-dependent ranges. */
+/* Principal quantum and classical complexity comparisons. */
 (function () {
   'use strict';
   class CostScene {
@@ -51,7 +51,7 @@
       this.options = options;
       const selected = points.find(p=>p.slug===options.selectedSlug);
       if (selectionChanged && this.viewMax && selected) {
-        const extent=Math.max(0,...this.geometry(selected).points.flat());
+        const extent=Math.max(0,...(this.costPair(selected)||[]));
         if(extent>this.viewMax)this.viewMax=Math.min(options.costMax||5.25,extent*1.08);
       }
       this.draw();
@@ -74,25 +74,11 @@
       this.draw();
     }
 
-    rgb(color) {
-      if (Array.isArray(color)) return color;
-      const value = String(color || '#ffffff');
-      if (/^#[0-9a-f]{6}$/i.test(value)) return [1, 3, 5].map(i => parseInt(value.slice(i, i + 2), 16));
-      if (/^#[0-9a-f]{3}$/i.test(value)) return [1, 2, 3].map(i => parseInt(value[i] + value[i], 16));
-      const match = value.match(/rgba?\(\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)/i);
-      if (match) return match.slice(1, 4).map(Number);
-      if (!this.colorProbe) this.colorProbe = document.createElement('canvas').getContext('2d');
-      this.colorProbe.clearRect(0, 0, 1, 1);
-      this.colorProbe.fillStyle = value;
-      this.colorProbe.fillRect(0, 0, 1, 1);
-      return Array.from(this.colorProbe.getImageData(0, 0, 1, 1).data).slice(0, 3);
-    }
-
     costRegion(q, classical) {
       if(q>classical)return -1;
-      const polynomial=this.options.polynomialBoundary??2.5,exponential=this.options.exponentialBoundary??2.9;
+      const polynomial=this.options.polynomialBoundary??2.4,exponential=this.options.exponentialBoundary??2.9;
       if (classical <= polynomial || q >= exponential || Math.abs(q-classical)<1e-7) return 0;
-      return q < polynomial ? 2 : 1;
+      return q <= polynomial ? 2 : 1;
     }
 
     background(width, height, maximum) {
@@ -111,87 +97,12 @@
       return image;
     }
 
-    geometry(point) {
-      const g=point.costComparison;
-      if(g)return{...g,points:(g.points||[]).filter(v=>Array.isArray(v)&&v.length===2&&v.every(n=>Number.isFinite(n)&&n>=0))};
-      return Number.isFinite(point.costQ)&&Number.isFinite(point.costC)
-        ?{kind:'point',points:[[point.costQ,point.costC]]}:{kind:'unavailable',points:[]};
-    }
-
-    segmentDistance(x,y,a,b) {
-      const dx=b[0]-a[0],dy=b[1]-a[1],length=dx*dx+dy*dy;
-      const t=length?Math.max(0,Math.min(1,((x-a[0])*dx+(y-a[1])*dy)/length)):0;
-      return Math.hypot(x-a[0]-t*dx,y-a[1]-t*dy);
-    }
-
-    insidePolygon(x,y,vertices) {
-      if(vertices.length<3)return false;
-      let inside=false;
-      for(let i=0,j=vertices.length-1;i<vertices.length;j=i++){
-        const a=vertices[i],b=vertices[j];
-        if(this.segmentDistance(x,y,a,b)<.5)return true;
-        if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;
-      }
-      return inside;
-    }
-
-    clipSegment(a,b,maximum) {
-      let lo=0,hi=1;const dx=b[0]-a[0],dy=b[1]-a[1];
-      for(const[p,q]of[[-dx,a[0]],[dx,maximum-a[0]],[-dy,a[1]],[dy,maximum-a[1]]]){
-        if(!p){if(q<0)return null;continue;}
-        const ratio=q/p;if(p<0)lo=Math.max(lo,ratio);else hi=Math.min(hi,ratio);
-        if(lo>hi)return null;
-      }
-      return[[a[0]+lo*dx,a[1]+lo*dy],[a[0]+hi*dx,a[1]+hi*dy]];
-    }
-
-    clipPolygon(vertices,maximum) {
-      let out=vertices;
-      for(const[axis,bound,sign]of[[0,0,1],[0,maximum,-1],[1,0,1],[1,maximum,-1]]){
-        const input=out;out=[];
-        if(!input.length)break;
-        for(let i=0;i<input.length;i++){
-          const a=input[i],b=input[(i+1)%input.length],ain=sign*(a[axis]-bound)>=0,bin=sign*(b[axis]-bound)>=0;
-          if(ain)out.push(a);
-          if(ain!==bin){const t=(bound-a[axis])/(b[axis]-a[axis]);out.push([a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])]);}
-        }
-      }
-      return out;
-    }
-
-    projectGeometry(point,maximum,mapX,mapY) {
-      const g=this.geometry(point),vertices=g.points;
-      if(g.kind==='unavailable'||!vertices.length)return null;
-      const project=v=>[mapX(v[0]),mapY(v[1])];
-      if(g.kind==='point'){
-        if(vertices[0].some(n=>n>maximum))return null;
-        const v=project(vertices[0]);
-        return{...point,geometryKind:'point',x:v[0],y:v[1],vertices:[v],segments:[],costAnchor:vertices[0]};
-      }
-      const polygon=g.kind==='region'&&vertices.length>2?this.clipPolygon(vertices,maximum):[];
-      const segments=[];
-      for(let i=1;i<vertices.length;i++){
-        const segment=this.clipSegment(vertices[i-1],vertices[i],maximum);
-        if(segment)segments.push(segment.map(project));
-      }
-      if(g.kind==='region'&&vertices.length>2){
-        const segment=this.clipSegment(vertices[vertices.length-1],vertices[0],maximum);
-        if(segment)segments.push(segment.map(project));
-      }
-      if(!polygon.length&&!segments.length)return null;
-      const projectedPolygon=polygon.map(project);
-      let anchor;
-      if(projectedPolygon.length>2)anchor=[0,1].map(axis=>projectedPolygon.reduce((sum,v)=>sum+v[axis],0)/projectedPolygon.length);
-      else{
-        let hash=2166136261;for(const ch of point.slug)hash=Math.imul(hash^ch.charCodeAt(0),16777619);
-        const lengths=segments.map(([a,b])=>Math.hypot(b[0]-a[0],b[1]-a[1]));
-        let remaining=lengths.reduce((a,b)=>a+b,0)*(.2+.6*(hash>>>0)/4294967295);
-        for(let i=0;i<segments.length;i++){
-          if(remaining<=lengths[i]||i===segments.length-1){const[a,b]=segments[i],t=lengths[i]?remaining/lengths[i]:0;anchor=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];break;}
-          remaining-=lengths[i];
-        }
-      }
-      return{...point,geometryKind:g.kind,x:anchor[0],y:anchor[1],vertices:projectedPolygon,segments};
+    costPair(point) {
+      if(point.costComparison?.kind==='unavailable')return null;
+      const pair=Number.isFinite(point.costQ)&&Number.isFinite(point.costC)
+        ?[point.costQ,point.costC]
+        :point.costComparison?.kind==='point'?point.costComparison.points?.[0]:null;
+      return pair?.length===2&&pair.every(n=>Number.isFinite(n)&&n>=0)?pair:null;
     }
 
     hit(x, y) {
@@ -201,12 +112,7 @@
       if(marker)return marker;
       const label=(this.labelBoxes||[]).find(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);
       if(label)return this.projected.find(p=>p.slug===label.slug)||null;
-      const shapes=(this.geometryShapes||[]).filter(p=>p.geometryKind!=='point');
-      const edge=shapes.map(p=>({p,d:Math.min(...p.segments.map(([a,b])=>this.segmentDistance(x,y,a,b)))})).filter(({d})=>d<4)
-        .sort((a,b)=>a.d-b.d||Number(b.p.slug===this.options.selectedSlug)-Number(a.p.slug===this.options.selectedSlug))[0];
-      if(edge)return this.projected.find(p=>p.slug===edge.p.slug)||null;
-      const active=shapes.find(p=>p.slug===this.options.selectedSlug&&this.insidePolygon(x,y,p.vertices));
-      return active?this.projected.find(p=>p.slug===active.slug)||null:null;
+      return null;
     }
 
     draw() {
@@ -216,14 +122,26 @@
       const compact=width<480,maximum=this.viewMax||this.options.costMax||4.25;
       const font='-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif';
       const L=compact?91:105,T=compact?65:42;
-      const unspecified=this.points.filter(p=>this.geometry(p).kind==='unavailable');
+      const unspecified=this.points.filter(p=>!this.costPair(p));
       const stripLeft=22,stripWidth=width-44,stripColumns=Math.max(2,Math.floor(stripWidth/20));
       const stripRows=Math.ceil(unspecified.length/stripColumns);
       const stripHeight=unspecified.length?28+stripRows*20:0;
-      const W=Math.max(125,width-L-20),H=Math.max(115,height-T-94-stripHeight);
-      const mapX=value=>L+W*(1-value/maximum),mapY=value=>T+H*(1-value/maximum);
+      const W=Math.max(125,width-L-20);
+      const mapX=value=>L+W*(1-value/maximum);
+      const ticks=(this.options.costTicks||[]).filter(t=>t.value>=0&&t.value<=maximum);
+      c.font=`500 14px ${font}`;
+      const tickRows=[];
+      const bottomLabels=ticks.map(t=>{
+        const text=String(t.label||''),w=c.measureText(text).width;
+        const x=Math.max(w/2+3,Math.min(width-w/2-3,mapX(t.value)));
+        let row=tickRows.findIndex(items=>items.every(item=>Math.abs(x-item.x)>(w+item.w)/2+8));
+        if(row<0){row=tickRows.length;tickRows.push([]);}
+        const label={...t,text,x,w,row};tickRows[row].push(label);return label;
+      });
+      const axisOffset=26+20*Math.max(1,tickRows.length),stripOffset=axisOffset+26;
+      const H=Math.max(115,height-T-stripOffset-4-stripHeight);
+      const mapY=value=>T+H*(1-value/maximum);
       const frame=()=>{c.beginPath();c.rect(L,T,W,H);};
-      const ticks=this.options.costTicks||[];
       const boundaryStyles=[{color:'#775b74',dash:[7,5],label:'Polynomial boundary'},{color:'#a82525',dash:[3,4],label:'(Sub)exp. → polynomial'}];
       c.font=`500 13px ${font}`;c.textBaseline='middle';c.textAlign='left';
       let legendX=compact?18:L,legendY=13;
@@ -245,56 +163,30 @@
         c.strokeStyle='#ffffffd9';c.lineWidth=5;c.setLineDash([]);c.stroke();
         c.strokeStyle=style.color;c.lineWidth=2;c.setLineDash(style.dash);c.stroke();c.setLineDash([]);
       };
-      const poly=this.options.polynomialBoundary??2.5,exp=this.options.exponentialBoundary??2.9;
+      const poly=this.options.polynomialBoundary??2.4,exp=this.options.exponentialBoundary??2.9;
       drawBoundary([[0,poly],[poly,poly],[exp,exp],[exp,maximum]],boundaryStyles[0]);
       drawBoundary([[poly,poly],[poly,maximum]],boundaryStyles[1]);
       this.boundaries=[{name:'polynomial',vertices:[[0,poly],[poly,poly],[exp,exp],[exp,maximum]]},{name:'to_polynomial',vertices:[[poly,poly],[poly,maximum]]}];
       c.beginPath();c.moveTo(L,T);c.lineTo(L+W,T+H);c.strokeStyle='#b5bfc5';c.lineWidth=1;c.stroke();
       c.save();c.translate(L+W*.32-8,T+H*.32+12);c.rotate(Math.atan2(H,W));c.font='italic 14px Georgia,serif';c.textAlign='center';c.textBaseline='top';c.fillStyle='#77656b';c.fillText('TQ = TC',0,0);c.restore();
-      this.geometryShapes=this.points.map(p=>this.projectGeometry(p,maximum,mapX,mapY)).filter(Boolean);
-      this.projected=this.geometryShapes.map(p=>({...p}));
+      this.projected=this.points.map(p=>{
+        const pair=this.costPair(p);
+        return pair&&pair.every(value=>value<=maximum)?{...p,x:mapX(pair[0]),y:mapY(pair[1]),costAnchor:pair}:null;
+      }).filter(Boolean);
       this.projected=window.quantumPointLayout.spreadPoints(this.projected,(x,y,r,p)=>{
         if(x<L+r||x>L+W-r||y<T+r||y>T+H-r)return false;
         if(!p)return true;
-        if(p.geometryKind==='region'&&p.vertices.length>2)return this.insidePolygon(x,y,p.vertices);
-        if(p.geometryKind!=='point')return p.segments.some(([a,b])=>this.segmentDistance(x,y,a,b)<Math.max(12,r+4));
         const q=maximum*(1-(x-L)/W),cl=maximum*(1-(y-T)/H);
         return this.costRegion(q,cl)===this.costRegion(...p.costAnchor);
       });
-      const shownPaths=new Set();
-      const drawGeometry=(p,active)=>{
-        if(p.geometryKind==='point')return;
-        const signature=JSON.stringify([p.geometryKind,p.vertices,p.segments]);
-        if(!active&&shownPaths.has(signature))return;
-        shownPaths.add(signature);
-        c.save();
-        if(p.geometryKind==='region'&&p.vertices.length>2){
-          c.beginPath();p.vertices.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.closePath();
-          if(active){c.fillStyle='rgba(58,91,112,.11)';c.fill();}
-          c.strokeStyle=active?'#355e77':'rgba(107,91,113,.13)';c.lineWidth=active?2:1;c.setLineDash([5,4]);c.stroke();
-        }else{
-          c.beginPath();p.segments.forEach(([a,b])=>{c.moveTo(...a);c.lineTo(...b);});
-          c.strokeStyle=active?'#355e77':'rgba(107,91,113,.2)';c.lineWidth=active?2.2:1;c.setLineDash(p.geometryKind==='region'?[5,4]:[]);c.stroke();
-        }
-        c.restore();
-      };
-      this.geometryShapes.forEach(p=>drawGeometry(p,false));
-      this.geometryShapes.filter(p=>p.slug===this.options.selectedSlug||p.slug===this.hovered?.slug).forEach(p=>drawGeometry(p,true));
       const drawPoint=p=>{
         const active=p.slug===this.options.selectedSlug||p.slug===this.hovered?.slug;
         const radius=active?Math.max(5.8,p.radius+1):p.radius;
         if(Number.isFinite(p.anchorX)&&Math.hypot(p.x-p.anchorX,p.y-p.anchorY)>3){
           c.beginPath();c.moveTo(p.anchorX,p.anchorY);c.lineTo(p.x,p.y);c.strokeStyle='#987b7b55';c.lineWidth=.6;c.stroke();
         }
-        const shape=r=>{
-          c.beginPath();
-          if(p.geometryKind==='curve'){c.moveTo(p.x,p.y-r-1);c.lineTo(p.x+r+1,p.y);c.lineTo(p.x,p.y+r+1);c.lineTo(p.x-r-1,p.y);c.closePath();}
-          else if(p.geometryKind==='region')c.rect(p.x-r,p.y-r,r*2,r*2);
-          else c.arc(p.x,p.y,r,0,Math.PI*2);
-        };
-        shape(radius+1);c.fillStyle='#fff';c.fill();
-        shape(radius);c.fillStyle=p.geometryKind==='curve'||p.geometryKind==='region'?'#fff':p.color||'#fff';c.fill();c.lineWidth=active?1.6:1;c.strokeStyle='#8e3535';c.stroke();
-        if(p.geometryKind==='curve'||p.geometryKind==='region'){shape(Math.max(1,radius-2));c.fillStyle=p.color||'#fff';c.fill();}
+        c.beginPath();c.arc(p.x,p.y,radius+1,0,Math.PI*2);c.fillStyle='#fff';c.fill();
+        c.beginPath();c.arc(p.x,p.y,radius,0,Math.PI*2);c.fillStyle=p.color||'#fff';c.fill();c.lineWidth=active?1.6:1;c.strokeStyle='#8e3535';c.stroke();
         if(active){c.beginPath();c.arc(p.x,p.y,radius+3,0,Math.PI*2);c.strokeStyle='#243248';c.lineWidth=1.3;c.stroke();}
       };
       this.mainProjected=[...this.projected];
@@ -303,22 +195,30 @@
       frame();c.strokeStyle='#cdbfc2';c.lineWidth=1;c.stroke();
       c.beginPath();c.moveTo(L,T);c.lineTo(L,T+H);c.lineTo(L+W,T+H);c.strokeStyle='#8c7478';c.lineWidth=1.3;c.stroke();
       c.font=`500 14px ${font}`;
-      const bottomLabels=[];
+      const leftLabels=ticks.map(t=>({...t,text:String(t.label||''),y:mapY(t.value)})).sort((a,b)=>a.y-b.y);
+      leftLabels.forEach((label,i)=>{label.drawY=Math.max(label.y,i?leftLabels[i-1].drawY+18:T+7);});
+      for(let i=leftLabels.length-1;i>=0;i--)leftLabels[i].drawY=Math.min(leftLabels[i].drawY,i<leftLabels.length-1?leftLabels[i+1].drawY-18:T+H-7);
+      this.axisTickLabels={bottom:[],left:[]};
       ticks.forEach(t=>{
-        if(t.value<0||t.value>maximum)return;
-        const x=mapX(t.value),y=mapY(t.value),label=String(t.label||'');
+        const x=mapX(t.value),y=mapY(t.value);
         c.beginPath();c.moveTo(x,T+H);c.lineTo(x,T+H+6);c.moveTo(L,y);c.lineTo(L-6,y);c.strokeStyle='#a78f94';c.stroke();
-        const tw=c.measureText(label).width,labelX=Math.max(tw/2+3,Math.min(width-tw/2-3,x));
-        let labelY=T+H+20;
-        if(bottomLabels.some(q=>Math.abs(labelX-q.x)<(tw+q.w)/2+7))labelY+=20;
-        bottomLabels.push({x:labelX,w:tw});
-        c.fillStyle='#594c52';c.textAlign='center';c.textBaseline='middle';c.fillText(label,labelX,labelY);c.textAlign='right';c.fillText(label,L-10,y);
       });
-      c.font=`600 15px ${font}`;c.fillStyle='#57434e';c.textAlign='center';c.textBaseline='middle';c.fillText('QUANTUM COMPLEXITY',L+W/2,T+H+64);
+      bottomLabels.forEach(label=>{
+        const y=T+H+20+label.row*20;
+        c.fillStyle='#594c52';c.textAlign='center';c.textBaseline='middle';c.fillText(label.text,label.x,y);
+        this.axisTickLabels.bottom.push({text:label.text,x:label.x-label.w/2,y:y-8,w:label.w,h:16});
+      });
+      leftLabels.forEach(label=>{
+        if(Math.abs(label.drawY-label.y)>2){c.beginPath();c.moveTo(L-6,label.y);c.lineTo(L-9,label.drawY);c.strokeStyle='#a78f94';c.stroke();}
+        c.fillStyle='#594c52';c.textAlign='right';c.textBaseline='middle';c.fillText(label.text,L-11,label.drawY);
+        const w=c.measureText(label.text).width;
+        this.axisTickLabels.left.push({text:label.text,x:L-11-w,y:label.drawY-8,w,h:16});
+      });
+      c.font=`600 15px ${font}`;c.fillStyle='#57434e';c.textAlign='center';c.textBaseline='middle';c.fillText('QUANTUM COMPLEXITY',L+W/2,T+H+axisOffset);
       c.save();c.translate(16,T+H/2);c.rotate(-Math.PI/2);c.fillText('CLASSICAL COMPLEXITY',0,0);c.restore();
       this.stripProjected=[];
       if(unspecified.length){
-        const stripTop=T+H+90;
+        const stripTop=T+H+stripOffset;
         c.fillStyle='#f8faf9';c.fillRect(12,stripTop,width-24,stripHeight-3);
         const stripPoints=[];
         const items=[...unspecified].sort((a,b)=>window.quantumPointLayout.importance(b)-window.quantumPointLayout.importance(a));
