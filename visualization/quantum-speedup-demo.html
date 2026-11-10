@@ -38,8 +38,8 @@
 .algorithm-index{padding-left:22px;margin:0}
 .algorithm-index li{padding-left:5px;margin-bottom:16px;overflow-wrap:anywhere}
 .small-caps{font-variant:small-caps}
-.math-inline{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle;padding:3px 0;line-height:1.1}
-.math-block{display:block;max-width:100%;overflow-x:auto;padding:10px 0;margin:4px 0}
+.math-inline{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;padding:.2em .05em .5em;line-height:normal}
+.math-block{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;padding:.6em .1em;margin:4px 0}
 #entryContent math{font-family:'Cambria Math','STIX Two Math',math;font-size:1.06em}
 @media(max-width:850px){.detail-meta{font-size:16px;grid-template-columns:1fr;gap:12px}.entry-page{padding-top:24px}#entryContent{padding:30px}.document-heading h1{font-size:31px}}
 @media(max-width:550px){#entryContent{padding:24px 20px;font-size:16px}.document-heading{gap:14px;margin-bottom:25px}.document-heading h1{font-size:28px}#entryContent h2{font-size:24px}#entryContent .document-problem h2{font-size:20px}.entry-navigation a{font-size:15px}.entry-page{padding-bottom:30px}}
@@ -131,7 +131,7 @@
     "model": "Boolean-oracle queries",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.5,
     "costC": 1,
     "papers": [
@@ -330,7 +330,7 @@
     "model": "Resource model stated in the problem",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2344,7 +2344,7 @@
     "model": "Complexity uses quantum gate and sample counts, classical arithmetic time for approximation, and classical bit complexity for exact finite-precision instances.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2430,7 +2430,7 @@
     "model": "Resource model stated in the problem",
     "evidence": 0.5,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2465,7 +2465,7 @@
     "model": "Resource model stated in the problem",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2838,7 +2838,7 @@
     "model": "Complexity counts quantum gates and measurement samples and classical bit operations for the time-indexed binary formulation.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2920,7 +2920,7 @@
     "model": "Complexity counts quantum gates and samples for each local subproblem and classical graph-processing and bit-operation costs for the complete search.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -4669,7 +4669,7 @@
     "model": "The comparison measures quantum example queries and elementary gates, and classical sample complexity and bit-operation time for measured examples.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6267,7 +6267,7 @@
     "model": "Complexity is measured in predicate-oracle queries for the oracle formulation and in classical bit operations for explicitly encoded formulas.",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6417,7 +6417,7 @@
     "model": "Complexity is measured in circuit samples or coherent evaluation-oracle queries for objective evaluation, together with the classical or quantum time for the outer optimization.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6746,7 +6746,7 @@
     "model": "worst-case exact function queries",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.05,
     "costC": 3.9,
     "papers": [
@@ -6777,7 +6777,7 @@
     "model": "bounded-error phase-function queries",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.05,
     "costC": 3.4,
     "papers": [
@@ -6808,7 +6808,7 @@
     "model": "queries for approximate sampling",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.05,
     "costC": 3.9,
     "papers": [
@@ -7024,7 +7024,7 @@
     "model": "Complexity counts prover gates, communication, verification, and certified entropy.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -7059,7 +7059,7 @@
     "model": "Complexity uses gates and classical sampling time.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -7106,7 +7106,7 @@
     "model": "Complexity uses optical operations and classical arithmetic time at specified precision.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -7149,7 +7149,7 @@
     "model": "Complexity uses optical operations and classical sampling time.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -7316,7 +7316,7 @@
     "model": "Private-coin simultaneous messages",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.18,
     "costC": 0.5,
     "papers": [
@@ -7346,7 +7346,7 @@
     "model": "One-way communication",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.18,
     "costC": 0.5,
     "papers": [
@@ -7489,7 +7489,7 @@
     "model": "Complexity uses winning probability and shared entanglement.",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -8025,7 +8025,7 @@ window.SAMPLE_DATA = window.CATALOGUE_POINTS;
   },
   "learning-parity-with-noisy-quantum-examples": {
     "title": "Learning parity with noisy quantum examples",
-    "html": "<div class=\"document-heading\">\n<h1>Learning parity with noisy quantum examples</h1>\n<span class=\"label-cells\"><span class=\"category-cell\" style=\"background:rgb(255,0,0)\" title=\"Strength\" aria-label=\"Strength\"></span><span class=\"category-cell\" style=\"background:rgb(85,85,255)\" title=\"Evidence\" aria-label=\"Evidence\"></span><span class=\"category-cell\" style=\"background:rgb(64,255,64)\" title=\"Hardware\" aria-label=\"Hardware\"></span></span></div>\n<section class=\"document-problem\">\n<h2>Problem <span>(Learning parity with noisy quantum examples)</span></h2>\n<p>Recover <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>a</mi><mo>&#x02208;</mo><msubsup><mi mathvariant=\"double-struck\">F</mi><mn>2</mn><mi>n</mi></msubsup></mrow></math></span> from a noisy quantum example oracle preparing <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mo>&#x02212;</mo><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><msub><mo>&#x02211;</mo><mi>x</mi></msub><mo stretchy=\"false\">&#x0007C;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>a</mi><mo>&#x000B7;</mo><mi>x</mi><mi>&#x027E9;</mi></mrow></math></span>, followed by a specified noise channel. The classical learner receives the same examples measured in the computational basis. For classification noise, the final bit is flipped independently with constant probability <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003B7;</mi><mo>&#x0003C;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></math></span>, producing ordinary learning-parity-with-noise samples <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>a</mi><mo>&#x000B7;</mo><mi>x</mi><mo>&#x0002B;</mo><mi>e</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>. The comparison measures quantum example queries and elementary gates, and classical sample complexity and bit-operation time for measured examples.</p></section>\n<section><h2>Quantum speedup</h2>\n<p><strong>Quantum complexity: <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span> examples and <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span> processing, Cross–Smith–Smolin noisy parity learning.</strong> These bounds hold for fixed noise rate in the analyzed noisy quantum-example models, with failure probability at most <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003B4;</mi></mrow></math></span>. Under classification noise alone, <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span> coherent examples suffice: the Hadamard-basis parity information survives a flip of the result qubit. The logarithmic dependence on <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi></mrow></math></span> covers bitwise reconstruction in the depolarizing-noise treatment. Noise parameters affect the constants.</p>\n<p><strong>Classical complexity: <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span> time and samples at fixed noise, BKW-type LPN algorithms.</strong> The classical input consists of computational-basis measurements of the same examples, giving uniformly random labeled samples with independent classification noise. BKW combines samples to eliminate coordinate blocks, trading increased noise against sample count and memory. The fastest concrete attack depends on the sample budget and noise rate. These are classical noisy-sample costs for the stated access model.</p>\n<div class=\"document-dimension\"><h3>Strength <span class=\"category-cell\" style=\"background:rgb(255,0,0)\" title=\"Strength\" aria-label=\"Strength\"></span></h3><p>Subexponential to polynomial in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi></mrow></math></span>, through Fourier interference in the quantum examples. The availability of coherent examples is part of the input model.</p></div>\n<div class=\"document-dimension\"><h3>Evidence <span class=\"category-cell\" style=\"background:rgb(85,85,255)\" title=\"Evidence\" aria-label=\"Evidence\"></span></h3><p>Strong conditional evidence from classical LPN hardness. The quantum learning theorem is rigorous for its noise channel; the comparison invokes the hardness of learning from measured examples.</p></div>\n<div class=\"document-dimension\"><h3>Hardware <span class=\"category-cell\" style=\"background:rgb(64,255,64)\" title=\"Hardware\" aria-label=\"Hardware\"></span></h3><p>The data register uses <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></math></span> qubits and shallow Hadamard-basis processing. Ristè et al. demonstrated noisy parity learning with a small superconducting processor. This supports the small-instance category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility.</p></div>\n</section><section><h2>Algorithm: Cross–Smith–Smolin noisy quantum parity learning</h2><ul class=\"algorithm-index\">\n<li><a href=\"https://arxiv.org/pdf/1407.5088\" target=\"_blank\" rel=\"noreferrer\">Cross, Smith and Smolin, <em>Quantum Learning Robust Against Noise</em> (2015)</a>. Sections “Learning from ideal queries” and “Learning in the presence of noise”; equations (7)–(8): transformed examples and classification noise; the depolarizing-noise subsection gives reconstruction bounds.</li>\n<li><a href=\"https://arxiv.org/pdf/1512.06069\" target=\"_blank\" rel=\"noreferrer\">Ristè et al., <em>Demonstration of Quantum Advantage in Machine Learning</em> (2017)</a>. Experimental learning circuits and sample-complexity results in the main text and figures.</li>\n</ul></section>\n<nav class=\"entry-navigation\" aria-label=\"Algorithm pages\">\n<a href=\"#algorithm/noisy-parity\">→ Cross–Smith–Smolin noisy quantum parity learning</a>\n</nav>"
+    "html": "<div class=\"document-heading\">\n<h1>Learning parity with noisy quantum examples</h1>\n<span class=\"label-cells\"><span class=\"category-cell\" style=\"background:rgb(255,0,0)\" title=\"Strength\" aria-label=\"Strength\"></span><span class=\"category-cell\" style=\"background:rgb(85,85,255)\" title=\"Evidence\" aria-label=\"Evidence\"></span><span class=\"category-cell\" style=\"background:rgb(64,255,64)\" title=\"Hardware\" aria-label=\"Hardware\"></span></span></div>\n<section class=\"document-problem\">\n<h2>Problem <span>(Learning parity with noisy quantum examples)</span></h2>\n<p>Recover <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>a</mi><mo>&#x02208;</mo><msubsup><mi mathvariant=\"double-struck\">F</mi><mn>2</mn><mi>n</mi></msubsup></mrow></math></span> from a noisy quantum example oracle preparing <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mo>&#x02212;</mo><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><msub><mo>&#x02211;</mo><mi>x</mi></msub><mo stretchy=\"false\">&#x0007C;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>a</mi><mo>&#x000B7;</mo><mi>x</mi><mi>&#x027E9;</mi></mrow></math></span>, followed by a specified noise channel. The classical learner receives the same examples measured in the computational basis. For classification noise, the final bit is flipped independently with constant probability <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003B7;</mi><mo>&#x0003C;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></math></span>, producing ordinary learning-parity-with-noise samples <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>a</mi><mo>&#x000B7;</mo><mi>x</mi><mo>&#x0002B;</mo><mi>e</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>. The comparison measures quantum example queries and elementary gates, and classical sample complexity and bit-operation time for measured examples.</p></section>\n<section><h2>Quantum speedup</h2>\n<p><strong>Quantum complexity: <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span> examples and <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span> processing, Cross–Smith–Smolin noisy parity learning.</strong> These bounds hold for fixed noise rate in the analyzed noisy quantum-example models, with failure probability at most <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003B4;</mi></mrow></math></span>. Under classification noise alone, <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span> coherent examples suffice: the Hadamard-basis parity information survives a flip of the result qubit. The logarithmic dependence on <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi></mrow></math></span> covers bitwise reconstruction in the depolarizing-noise treatment. Noise parameters affect the constants.</p>\n<p><strong>Classical complexity: <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span> time and samples at fixed noise, BKW-type LPN algorithms.</strong> The classical input consists of computational-basis measurements of the same examples, giving uniformly random labeled samples with independent classification noise. BKW combines samples to eliminate coordinate blocks, trading increased noise against sample count and memory. The fastest concrete attack depends on the sample budget and noise rate. These are classical noisy-sample costs for the stated access model.</p>\n<div class=\"document-dimension\"><h3>Strength <span class=\"category-cell\" style=\"background:rgb(255,0,0)\" title=\"Strength\" aria-label=\"Strength\"></span></h3><p>Subexponential to polynomial in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi></mrow></math></span>, through Fourier interference in the quantum examples. The availability of coherent examples is part of the input model.</p></div>\n<div class=\"document-dimension\"><h3>Evidence <span class=\"category-cell\" style=\"background:rgb(85,85,255)\" title=\"Evidence\" aria-label=\"Evidence\"></span></h3><p>Strong conditional evidence from classical LPN hardness. The quantum learning theorem is rigorous for its noise channel; the comparison invokes the hardness of learning from measured examples.</p></div>\n<div class=\"document-dimension\"><h3>Hardware <span class=\"category-cell\" style=\"background:rgb(64,255,64)\" title=\"Hardware\" aria-label=\"Hardware\"></span></h3><p>The data register uses <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></math></span> qubits and shallow Hadamard-basis processing. Ristè et al. demonstrated noisy parity learning with a small superconducting processor. This supports the NISQ category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility.</p></div>\n</section><section><h2>Algorithm: Cross–Smith–Smolin noisy quantum parity learning</h2><ul class=\"algorithm-index\">\n<li><a href=\"https://arxiv.org/pdf/1407.5088\" target=\"_blank\" rel=\"noreferrer\">Cross, Smith and Smolin, <em>Quantum Learning Robust Against Noise</em> (2015)</a>. Sections “Learning from ideal queries” and “Learning in the presence of noise”; equations (7)–(8): transformed examples and classification noise; the depolarizing-noise subsection gives reconstruction bounds.</li>\n<li><a href=\"https://arxiv.org/pdf/1512.06069\" target=\"_blank\" rel=\"noreferrer\">Ristè et al., <em>Demonstration of Quantum Advantage in Machine Learning</em> (2017)</a>. Experimental learning circuits and sample-complexity results in the main text and figures.</li>\n</ul></section>\n<nav class=\"entry-navigation\" aria-label=\"Algorithm pages\">\n<a href=\"#algorithm/noisy-parity\">→ Cross–Smith–Smolin noisy quantum parity learning</a>\n</nav>"
   },
   "the-euclidean-closest-vector-problem": {
     "title": "The Euclidean closest vector problem",
@@ -14090,11 +14090,11 @@ window.ALGORITHM_PROBLEMS = {
       });
       if(compact)this.label('STRENGTH',{x:strengthGridLeft+strengthGridWidth/2,y:strengthGridY+79},'#ad3333',0,0,'center',axisSize);
       const hardwareTicks = this.options.hardwareTicks || [
-        { value: 0, label: 'Small demos' }, { value: 1, label: 'Fault-tolerant' },
+        { value: 0, label: 'NISQ' }, { value: 1, label: 'Fault-tolerant' },
         { value: 2, label: 'Coherent data' }, { value: 3, label: 'Specialized resources' }
       ];
       const hardwareFont=compact?10:11;
-      const hardwareNames={0:'Small demos',1:'Fault-tolerant',2:'Coherent access',3:'Specialized'};
+      const hardwareNames={0:'NISQ',1:'Fault-tolerant',2:'Coherent access',3:'Specialized'};
       hardwareTicks.filter(t=>t.value>=0&&t.value<=maxH).forEach(t=>{
         const p=this.project(0,0,t.value/maxH);
         this.label(hardwareNames[t.value]||t.label,p,'#4c7568',-8,15-t.value*2,'right',hardwareFont);
@@ -14409,7 +14409,7 @@ function layoutFraction(value) {
   for (const char of value) hash=Math.imul(hash^char.charCodeAt(0),16777619);
   return (hash>>>0)/4294967295;
 }
-const hardwareLabels = ['Small demonstrations','Fault-tolerant circuits','Demanding coherent access','Large or specialized coherent resources'];
+const hardwareLabels = ['NISQ','Fault-tolerant circuits','Demanding coherent access','Large or specialized coherent resources'];
 const evidenceLabels = {0:'Unestablished',.5:'Partial evidence',.75:'Conditional evidence',1:'Rigorous comparison'};
 const categoryColorRGB = category => categories[category]?.rgb || categories.none.rgb;
 const colorForCategory = category => `rgb(${categoryColorRGB(category).join(',')})`;
@@ -14483,7 +14483,7 @@ function update() {
   points=visible.map(d=>({...d,selected:d.slug===selected}));
   scene.setData(points,{strengthMax,strengthBoundaries,hardwareMax:3,hardwareUnspecified:3.25,hardwareUnspecifiedLabel:'Not applicable',strengthTicks:ticks,
     evidenceTicks:[{value:0,label:'Unestablished'},{value:.5,label:'Partial'},{value:.75,label:'Conditional'},{value:1,label:'Proved'}],
-    hardwareTicks:[{value:0,label:'Small demos'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],selectedSlug:selected});
+    hardwareTicks:[{value:0,label:'NISQ'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],selectedSlug:selected});
   costScene.setData(points,{costMax,polynomialBoundary:2.5,exponentialBoundary:2.9,selectedSlug:selected,colorForCategory,categoryColorRGB,
     costTicks:plotConfig.costTicks||[{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:2.7,label:'exp(√N)'},{value:3.4,label:'2ᴺᐟ²'}]});
   document.querySelectorAll('.model-count').forEach(el=>el.textContent=`${visible.length} / ${records.length} problems`);

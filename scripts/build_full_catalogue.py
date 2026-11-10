@@ -123,6 +123,9 @@ def main():
             entry['hardware_assessment'] = assessment
             entry['labels']['hardware'].update(color_key=assessment['color_key'],
                 description_latex=assessment['description_latex'])
+        if entry['labels']['hardware']['color_key']=='hardwareSmall':
+            entry['labels']['hardware']['description_latex'] = entry['labels']['hardware']['description_latex'].replace(
+                'This supports the small-instance category;', 'This supports the NISQ category;')
         entry['resource_models'] = [name for name, members in settings.get('resources', {}).items()
                                     if entry['number'] in members]
     for algorithm in full['algorithms']:

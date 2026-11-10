@@ -26,3 +26,5 @@ Problem links use `#entry/<slug>`, algorithm links use `#algorithm/<slug>`, and 
 The build combines `sources/catalogue-preview.tex` with the research records in `data/additions/`, exports the JSON and SQLite databases, and renders mathematical expressions as native MathML. `visualization/catalogue-preview.json` mirrors the full catalogue used by the pages.
 
 Editorial priority and resource-model assignments are stored in `data/visualization_settings.json`.
+
+The most accessible hardware category is labeled NISQ, reflecting its predominance of noisy circuits, analog devices and photonic demonstrations.

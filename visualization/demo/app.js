@@ -13,7 +13,7 @@ function layoutFraction(value) {
   for (const char of value) hash=Math.imul(hash^char.charCodeAt(0),16777619);
   return (hash>>>0)/4294967295;
 }
-const hardwareLabels = ['Small demonstrations','Fault-tolerant circuits','Demanding coherent access','Large or specialized coherent resources'];
+const hardwareLabels = ['NISQ','Fault-tolerant circuits','Demanding coherent access','Large or specialized coherent resources'];
 const evidenceLabels = {0:'Unestablished',.5:'Partial evidence',.75:'Conditional evidence',1:'Rigorous comparison'};
 const categoryColorRGB = category => categories[category]?.rgb || categories.none.rgb;
 const colorForCategory = category => `rgb(${categoryColorRGB(category).join(',')})`;
@@ -87,7 +87,7 @@ function update() {
   points=visible.map(d=>({...d,selected:d.slug===selected}));
   scene.setData(points,{strengthMax,strengthBoundaries,hardwareMax:3,hardwareUnspecified:3.25,hardwareUnspecifiedLabel:'Not applicable',strengthTicks:ticks,
     evidenceTicks:[{value:0,label:'Unestablished'},{value:.5,label:'Partial'},{value:.75,label:'Conditional'},{value:1,label:'Proved'}],
-    hardwareTicks:[{value:0,label:'Small demos'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],selectedSlug:selected});
+    hardwareTicks:[{value:0,label:'NISQ'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],selectedSlug:selected});
   costScene.setData(points,{costMax,polynomialBoundary:2.5,exponentialBoundary:2.9,selectedSlug:selected,colorForCategory,categoryColorRGB,
     costTicks:plotConfig.costTicks||[{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:2.7,label:'exp(√N)'},{value:3.4,label:'2ᴺᐟ²'}]});
   document.querySelectorAll('.model-count').forEach(el=>el.textContent=`${visible.length} / ${records.length} problems`);

@@ -91,7 +91,7 @@ The database also supports direct links from entries to citations, citations to 
 | `entry_aliases` | Original problem numbers and their canonical destinations. |
 | `entity_search` | FTS5 search across both problems and algorithms. |
 
-Category identifiers are stored in `data/catalogue.json`. For example, `strength-exponential-subexponential-to-polynomial` identifies the strongest speedup category, `evidence-proved` identifies the fully rigorous category, and `hardware-small` identifies small-instance physical implementation or benchmark results.
+Category identifiers are stored in `data/catalogue.json`. For example, `strength-exponential-subexponential-to-polynomial` identifies the strongest speedup category, `evidence-proved` identifies the fully rigorous category, and `hardware-small` identifies the NISQ hardware category.
 
 ## Storage and maintenance
 

@@ -269,11 +269,11 @@
       });
       if(compact)this.label('STRENGTH',{x:strengthGridLeft+strengthGridWidth/2,y:strengthGridY+79},'#ad3333',0,0,'center',axisSize);
       const hardwareTicks = this.options.hardwareTicks || [
-        { value: 0, label: 'Small demos' }, { value: 1, label: 'Fault-tolerant' },
+        { value: 0, label: 'NISQ' }, { value: 1, label: 'Fault-tolerant' },
         { value: 2, label: 'Coherent data' }, { value: 3, label: 'Specialized resources' }
       ];
       const hardwareFont=compact?10:11;
-      const hardwareNames={0:'Small demos',1:'Fault-tolerant',2:'Coherent access',3:'Specialized'};
+      const hardwareNames={0:'NISQ',1:'Fault-tolerant',2:'Coherent access',3:'Specialized'};
       hardwareTicks.filter(t=>t.value>=0&&t.value<=maxH).forEach(t=>{
         const p=this.project(0,0,t.value/maxH);
         this.label(hardwareNames[t.value]||t.label,p,'#4c7568',-8,15-t.value*2,'right',hardwareFont);

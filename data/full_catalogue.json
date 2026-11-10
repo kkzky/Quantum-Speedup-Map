@@ -16425,9 +16425,9 @@
         },
         "hardware": {
           "color_key": "hardwareSmall",
-          "description_latex": "The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Rist\\`e et al. demonstrated noisy parity learning with a small superconducting processor. This supports the small-instance category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility.",
+          "description_latex": "The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Rist\\`e et al. demonstrated noisy parity learning with a small superconducting processor. This supports the NISQ category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility.",
           "category_id": "hardware-small",
-          "description_text": "The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Ristè et al. demonstrated noisy parity learning with a small superconducting processor. This supports the small-instance category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility."
+          "description_text": "The data register uses $n+1$ qubits and shallow Hadamard-basis processing. Ristè et al. demonstrated noisy parity learning with a small superconducting processor. This supports the NISQ category; scaling the supplied example oracle and controlling noise determine larger-instance feasibility."
         }
       },
       "algorithm_heading_latex": "Algorithm: Cross--Smith--Smolin noisy quantum parity learning",

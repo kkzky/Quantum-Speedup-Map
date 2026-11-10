@@ -117,7 +117,7 @@ def main():
             cq=cc; explicit=0
         ev={'evidenceProved':1,'evidenceStrong':.75,'evidencePartial':.5,'white':0}[e['labels']['evidence']['color_key']]
         hw={'hardwareDemonstrated':0,'hardwareSmall':0,'hardwarePolynomial':1,'hardwareExponential':3,'white':3.25}[e['labels']['hardware']['color_key']]
-        hardware_label={'hardwareDemonstrated':'Demonstrated advantage','hardwareSmall':'Small demonstrations',
+        hardware_label={'hardwareDemonstrated':'Demonstrated advantage','hardwareSmall':'NISQ',
                         'hardwarePolynomial':'Fault-tolerant circuits','hardwareExponential':'Large coherent resources','white':'Unspecified'}[e['labels']['hardware']['color_key']]
         assessment=e.get('hardware_assessment',{})
         if assessment:

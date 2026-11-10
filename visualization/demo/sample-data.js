@@ -20,7 +20,7 @@ window.CATALOGUE_POINTS = [
     "model": "Boolean-oracle queries",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.5,
     "costC": 1,
     "papers": [
@@ -219,7 +219,7 @@ window.CATALOGUE_POINTS = [
     "model": "Resource model stated in the problem",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2233,7 +2233,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity uses quantum gate and sample counts, classical arithmetic time for approximation, and classical bit complexity for exact finite-precision instances.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2319,7 +2319,7 @@ window.CATALOGUE_POINTS = [
     "model": "Resource model stated in the problem",
     "evidence": 0.5,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2354,7 +2354,7 @@ window.CATALOGUE_POINTS = [
     "model": "Resource model stated in the problem",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2727,7 +2727,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity counts quantum gates and measurement samples and classical bit operations for the time-indexed binary formulation.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -2809,7 +2809,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity counts quantum gates and samples for each local subproblem and classical graph-processing and bit-operation costs for the complete search.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -4558,7 +4558,7 @@ window.CATALOGUE_POINTS = [
     "model": "The comparison measures quantum example queries and elementary gates, and classical sample complexity and bit-operation time for measured examples.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6156,7 +6156,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity is measured in predicate-oracle queries for the oracle formulation and in classical bit operations for explicitly encoded formulas.",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6306,7 +6306,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity is measured in circuit samples or coherent evaluation-oracle queries for objective evaluation, together with the classical or quantum time for the outer optimization.",
     "evidence": 0,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6635,7 +6635,7 @@ window.CATALOGUE_POINTS = [
     "model": "worst-case exact function queries",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.05,
     "costC": 3.9,
     "papers": [
@@ -6666,7 +6666,7 @@ window.CATALOGUE_POINTS = [
     "model": "bounded-error phase-function queries",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.05,
     "costC": 3.4,
     "papers": [
@@ -6697,7 +6697,7 @@ window.CATALOGUE_POINTS = [
     "model": "queries for approximate sampling",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.05,
     "costC": 3.9,
     "papers": [
@@ -6913,7 +6913,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity counts prover gates, communication, verification, and certified entropy.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6948,7 +6948,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity uses gates and classical sampling time.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -6995,7 +6995,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity uses optical operations and classical arithmetic time at specified precision.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -7038,7 +7038,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity uses optical operations and classical sampling time.",
     "evidence": 0.75,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
@@ -7205,7 +7205,7 @@ window.CATALOGUE_POINTS = [
     "model": "Private-coin simultaneous messages",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.18,
     "costC": 0.5,
     "papers": [
@@ -7235,7 +7235,7 @@ window.CATALOGUE_POINTS = [
     "model": "One-way communication",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": 0.18,
     "costC": 0.5,
     "papers": [
@@ -7378,7 +7378,7 @@ window.CATALOGUE_POINTS = [
     "model": "Complexity uses winning probability and shared entanglement.",
     "evidence": 1,
     "hardware": 0,
-    "hardwareLabel": "Small demonstrations",
+    "hardwareLabel": "NISQ",
     "costQ": null,
     "costC": null,
     "papers": [
