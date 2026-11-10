@@ -6,7 +6,7 @@
   "title_latex": "Exact learning of Fourier-sparse Boolean functions",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q18",
   "inventory_ids": [
@@ -86,6 +86,9 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Omega(n)"
   },
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 32,
   "citation_ids": [
     "entry-209-citation-00076"

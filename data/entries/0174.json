@@ -6,7 +6,7 @@
   "title_latex": "Link invariants from quantum doubles of finite groups",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a37",
   "inventory_ids": [
@@ -103,6 +103,9 @@
     "classical_kind": "polynomial",
     "gain": "No established asymptotic speedup"
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 188,
   "citation_ids": [
     "entry-174-citation-00371",

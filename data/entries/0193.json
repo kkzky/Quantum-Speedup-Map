@@ -6,7 +6,7 @@
   "title_latex": "Learning discrete-logarithm interval concepts",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "discrete_logarithm_concept_learning",
   "inventory_ids": [],
@@ -94,6 +94,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Support-vector classification with quantum kernel estimation; Shor order finding and discrete logarithms",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 173,
   "citation_ids": [
     "entry-193-citation-00338"

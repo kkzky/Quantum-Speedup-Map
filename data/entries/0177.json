@@ -6,7 +6,7 @@
   "title_latex": "Distinguishing three-round Feistel networks",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a40",
   "inventory_ids": [
@@ -98,6 +98,9 @@
     "quantum_exponent": 1,
     "classical_exponent": 0.5
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 168,
   "citation_ids": [
     "entry-177-citation-00332"

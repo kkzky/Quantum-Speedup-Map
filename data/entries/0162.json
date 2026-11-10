@@ -6,7 +6,7 @@
   "title_latex": "Hidden subgroups of selected semidirect-product groups",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a19",
   "inventory_ids": [
@@ -77,6 +77,10 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Bacon--Childs--van Dam semidirect-product HSP algorithm",
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 161,
   "citation_ids": [
     "entry-162-citation-00324"

@@ -6,7 +6,7 @@
   "title_latex": "Pattern matching with edits",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g18",
   "inventory_ids": [
@@ -128,6 +128,10 @@
     "classical_kind": "polynomial",
     "gain": "\\widehat\\Omega(\\sqrt{n/k})"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 93,
   "citation_ids": [
     "entry-123-citation-00196"

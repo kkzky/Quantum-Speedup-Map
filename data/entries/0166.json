@@ -6,7 +6,7 @@
   "title_latex": "Hidden quadratic and cubic polynomial graphs",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a23",
   "inventory_ids": [
@@ -103,6 +103,10 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log q"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 165,
   "citation_ids": [
     "entry-166-citation-00328",

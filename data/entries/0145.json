@@ -6,7 +6,7 @@
   "title_latex": "Directed fixed-length path containment",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g47",
   "inventory_ids": [
@@ -87,6 +87,9 @@
     "gain": "\\widetilde\\Omega(n^{1/2+\\alpha_k})",
     "classical_exponent": 2
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 114,
   "citation_ids": [
     "entry-145-citation-00221"

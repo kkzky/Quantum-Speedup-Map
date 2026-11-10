@@ -6,7 +6,7 @@
   "title_latex": "Testing one-to-one periodicity",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q45",
   "inventory_ids": [
@@ -107,6 +107,9 @@
     "quantum_exponent": 0,
     "classical_exponent": 0.25
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 196,
   "citation_ids": [
     "entry-229-citation-00381"

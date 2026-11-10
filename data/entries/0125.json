@@ -6,7 +6,7 @@
   "title_latex": "Run-length Burrows--Wheeler transform",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g20",
   "inventory_ids": [
@@ -121,6 +121,10 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Omega(\\sqrt{n/r})"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 95,
   "citation_ids": [
     "entry-125-citation-00198"

@@ -6,7 +6,7 @@
   "title_latex": "Learning symmetric juntas",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q32",
   "inventory_ids": [
@@ -114,6 +114,9 @@
     "quantum_exponent": 0.25,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 39,
   "citation_ids": [
     "entry-219-citation-00085",

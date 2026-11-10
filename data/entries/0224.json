@@ -6,7 +6,7 @@
   "title_latex": "$k$-wise uniformity testing",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q39",
   "inventory_ids": [
@@ -115,6 +115,9 @@
     "classical_kind": "polynomial",
     "gain": "n^{k/2}/\\varepsilon\\text{ relative to the cited classical upper bound}"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 44,
   "citation_ids": [
     "entry-224-citation-00092"

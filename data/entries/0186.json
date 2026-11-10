@@ -143,6 +143,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Gaussian boson sampling",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 202,
   "citation_ids": [
     "entry-186-citation-00395",

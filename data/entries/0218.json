@@ -6,7 +6,7 @@
   "title_latex": "Learning a graph with edge-parity queries",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q31",
   "inventory_ids": [
@@ -96,6 +96,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 116,
   "citation_ids": [
     "entry-218-citation-00223"

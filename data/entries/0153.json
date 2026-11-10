@@ -6,7 +6,7 @@
   "title_latex": "Constructive membership in a commutative semigroup",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a09",
   "inventory_ids": [
@@ -87,6 +87,9 @@
     "gain": "Polynomial query improvement over generic closure enumeration",
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 153,
   "citation_ids": [
     "entry-153-citation-00315"

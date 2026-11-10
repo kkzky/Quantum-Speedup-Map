@@ -129,6 +129,10 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Theta(n/\\sqrt{\\ell+1})"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 110,
   "citation_ids": [
     "entry-141-citation-00215",

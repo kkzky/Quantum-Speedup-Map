@@ -1,68 +1,67 @@
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const alpha = Math.log2((1 + Math.sqrt(33)) / 4);
-
-// Coordinates embed the ordering of the displayed asymptotic growth rates.
-// Equal ratios share an x coordinate; no finite-size evaluation enters this view.
-const models = {
-  search: {gain:'N<sup>1/2</sup>',gainText:'N¹ᐟ²',Q:'Θ(√N)',C:'Θ(N)',parameter:'N: candidate solutions',model:'Boolean-oracle queries',evidence:1,hardware:0},
-  mst: {gain:'N<sup>1/2</sup>',gainText:'N¹ᐟ²',Q:'Θ(N<sup>3/2</sup>)',C:'Θ(N²)',parameter:'N: graph vertices',model:'Adjacency-matrix queries',evidence:1,hardware:2},
-  formula: {gain:`N<sup>${(alpha-.5).toFixed(3)}…</sup>`,gainText:`N^${(alpha-.5).toFixed(3)}…`,Q:'O(√N)',C:`Θ(N<sup>${alpha.toFixed(3)}…</sup>)`,parameter:'N: leaves of a balanced binary formula',model:'Leaf-value queries',evidence:1,hardware:1},
-  collision: {gain:'N<sup>1/6</sup>',gainText:'N¹ᐟ⁶',Q:'O(N<sup>1/3</sup>)',C:'Θ(√N)',parameter:'N: hash range size',model:'Random-function queries',evidence:1,hardware:3},
-  claw: {gain:'N<sup>1/3</sup>',gainText:'N¹ᐟ³',Q:'O(N<sup>2/3</sup>)',C:'Θ(N)',parameter:'N: size of each function domain',model:'Balanced-domain function queries',evidence:1,hardware:3},
-  local: {gain:'N<sup>1/6</sup>(log N)<sup>1/3</sup>',gainText:'N¹ᐟ⁶(log N)¹ᐟ³',Q:'Θ(N<sup>1/3</sup>(log N)<sup>1/6</sup>)',C:'Θ(N<sup>1/2</sup>(log N)<sup>1/2</sup>)',parameter:'N: vertices of the Boolean hypercube',model:'Value-oracle queries',evidence:1,hardware:2},
-  factoring: {gain:'exp(Θ(N<sup>1/3</sup>(log N)<sup>2/3</sup>))',gainText:'exp(Θ(N¹ᐟ³(log N)²ᐟ³))',Q:'Õ(N²)',C:'exp((c + o(1))N<sup>1/3</sup>(log N)<sup>2/3</sup>)',parameter:'N: integer bit length',model:'Quantum gates / GNFS heuristic time',evidence:.75,hardware:1},
-  even: {gain:'Õ(2<sup>N/2</sup>/N)',gainText:'Õ(2ᴺᐟ²/N)',Q:'O(N)',C:'Õ(2<sup>N/2</sup>)',parameter:'N: block length in bits',model:'Coherent encryption / balanced classical queries',evidence:1,hardware:3}
+const categories = {
+  none:{center:0,range:[0,.18],rgb:[255,255,255]},
+  polynomial:{center:1.8,range:[.55,3.05],rgb:[255,224,224]},
+  intermediate:{center:4.5,range:[4.1,4.9],rgb:[255,208,208]},
+  exp_to_subexp:{center:6,range:[5.2,6.8],rgb:[255,112,112]},
+  to_polynomial:{center:8.75,range:[8,9.5],rgb:[255,0,0]}
 };
+// Category-local offsets separate coincident observations; they do not encode a numerical rate.
+function layoutFraction(value) {
+  let hash=2166136261;
+  for (const char of value) hash=Math.imul(hash^char.charCodeAt(0),16777619);
+  return (hash>>>0)/4294967295;
+}
 const hardwareLabels = ['Small demonstrations','Fault-tolerant circuits','Demanding coherent access','Large or specialized coherent resources'];
 const evidenceLabels = {0:'Unestablished',.5:'Partial evidence',.75:'Conditional evidence',1:'Rigorous comparison'};
-const costPositions = {search:[.5,1],mst:[1.5,2],formula:[.5,alpha],collision:[1/3,.5],claw:[2/3,1],local:[.41,.61],factoring:[2.06,3.33],even:[1,4]};
-const strengthFromGap = gap => Math.log1p(Math.max(0,gap)/.08);
-for (const [slug,[costQ,costC]] of Object.entries(costPositions)) Object.assign(models[slug],{costQ,costC,strength:strengthFromGap(costC-costQ)});
+const categoryColorRGB = category => categories[category]?.rgb || categories.none.rgb;
+const colorForCategory = category => `rgb(${categoryColorRGB(category).join(',')})`;
 const records = (window.CATALOGUE_POINTS || window.SAMPLE_DATA || []).map(record => {
-  const base = models[record.slug] || {};
-  const point = {...base,...record};
+  const point={...record};
+  point.strengthCategory ||= 'none';
+  const category=categories[point.strengthCategory]||categories.none;
+  point.strength=category.center;
+  point.layoutStrength=category.range[0]+layoutFraction(point.slug)*(category.range[1]-category.range[0]);
+  point.color=colorForCategory(point.strengthCategory);
+  point.resourceModels=point.resourceModels?.length?point.resourceModels:['other'];
   point.name ||= point.title || point.slug;
   point.shortName ||= point.name;
-  point.evidence = Number.isFinite(record.evidence) ? record.evidence : (base.evidence ?? 0);
-  point.hardware = Number.isFinite(record.hardware) ? record.hardware : (base.hardware ?? 2);
-  point.evidenceLabel ||= typeof record.evidence === 'string' ? record.evidence : evidenceLabels[point.evidence];
-  point.hardwareLabel ||= typeof record.hardware === 'string' ? record.hardware : hardwareLabels[point.hardware];
-  point.costQ = Number.isFinite(point.costQ) ? point.costQ : null;
-  point.costC = Number.isFinite(point.costC) ? point.costC : null;
-  point.strength = Number.isFinite(record.strength) ? record.strength : strengthFromGap(point.costC-point.costQ);
-  point.importance ||= base.Q ? 'high' : 'normal';
-  point.Q ||= esc(record.quantum?.headline_text || '');
-  point.C ||= esc(record.classical?.headline_text || '');
-  point.gain ||= point.strength === 0 ? 'No established asymptotic advantage' : '';
-  point.parameter ||= '';
-  point.model ||= '';
-  point.papers ||= [];
-  models[point.slug] = point;
+  point.evidenceLabel ||= evidenceLabels[point.evidence];
+  point.hardwareLabel ||= hardwareLabels[point.hardware] || 'Unspecified';
+  point.costQ=Number.isFinite(point.costQ)?point.costQ:null;
+  point.costC=Number.isFinite(point.costC)?point.costC:null;
   return point;
 });
-const bySlug = Object.fromEntries(records.map(p=>[p.slug,p]));
-const plotConfig = window.CATALOGUE_PLOT_CONFIG || {};
-const priority = point => point.importance === 'high' ? 3 : point.importance === 'peripheral' ? 1 : 2;
-const sortedRecords = [...records].sort((a,b)=>priority(b)-priority(a)||a.name.localeCompare(b.name));
-const strengthMax = plotConfig.strengthMax || Math.max(strengthFromGap(3),...records.map(p=>p.strength))*1.1;
-const costMax = Math.max(4.25,...records.flatMap(p=>[p.costQ,p.costC]).filter(Number.isFinite))*1.01;
-const ticks = plotConfig.strengthTicks || [{value:0,label:'1'},{value:strengthFromGap(1/6),label:'N¹ᐟ⁶'},{value:strengthFromGap(.5),label:'N¹ᐟ²'},
-  {value:strengthFromGap(1.27),label:'exp(Θ(N¹ᐟ³(log N)²ᐟ³))'},{value:strengthFromGap(3),label:'2ᴺᐟ²/N'}];
-let selected = bySlug.factoring ? 'factoring' : records[0]?.slug;
-let points = [];
-const colorRGB = s => {
-  const gap = .08*Math.expm1(Math.max(0,s));
-  const saturation = Math.pow(Math.min(1,-Math.expm1(-gap/2)/-Math.expm1(-3/2)),.88);
-  const pale = Math.round(255*(1-saturation));
-  return [255,pale,pale];
-};
-const color = s => `rgb(${colorRGB(s).join(',')})`;
-const gapColor = gap => color(strengthFromGap(gap));
-const gapRGB = gap => colorRGB(strengthFromGap(gap));
-const selectFromChart = slug => select(slug,{scroll:!document.fullscreenElement});
-const scene = new SpeedupScene($('scene'),{onSelect:selectFromChart,onHover:tooltip});
-const costScene = new CostScene($('cost'),{onSelect:selectFromChart,onHover:tooltip});
+const bySlug=Object.fromEntries(records.map(p=>[p.slug,p]));
+const plotConfig=window.CATALOGUE_PLOT_CONFIG||{};
+const priority=p=>p.importance==='high'?3:p.importance==='peripheral'?1:2;
+const sortedRecords=[...records].sort((a,b)=>priority(b)-priority(a)||a.name.localeCompare(b.name));
+const strengthMax=10;
+const strengthBoundaries=[{value:3.55,label:'Above polynomial'},{value:7.35,label:'(Sub)exp. → polynomial'}];
+const costMax=Math.max(4.25,...records.flatMap(p=>[p.costQ,p.costC]).filter(Number.isFinite))*1.01;
+const ticks=[{value:1.8,label:'Polynomial'},{value:4.5,label:'Improved\nexp./subexp.'},{value:6,label:'Exp. →\nsubexp.'},{value:8.75,label:'(Sub)exp. →\npolynomial'}];
+const activeResources=new Set(['oracle','gate','other']);
+const isResourceVisible=p=>p.resourceModels.some(model=>activeResources.has(model));
+let selected=bySlug.factoring?'factoring':records[0]?.slug;
+let points=[];
+const selectFromChart=slug=>select(slug,{scroll:!document.fullscreenElement});
+const scene=new SpeedupScene($('scene'),{onSelect:selectFromChart,onHover:tooltip});
+const costScene=new CostScene($('cost'),{onSelect:selectFromChart,onHover:tooltip});
+function installModelFilters(container,fullscreen=false) {
+  container.classList.add('model-filters');
+  if(fullscreen)container.classList.add('fullscreen-model-filters');
+  container.setAttribute('role','group');container.setAttribute('aria-label','Complexity model');
+  container.innerHTML=`${fullscreen?'':'<span class="model-filter-title">Complexity model</span>'}<div class="model-options">${[['oracle','Oracle based'],['gate','Gate based'],['other','Other models']].map(([key,label])=>`<label><input type="checkbox" data-resource-model="${key}" checked><span>${label}</span></label>`).join('')}</div><span class="model-count" aria-live="polite"></span>`;
+  container.addEventListener('change',event=>{
+    const input=event.target.closest('[data-resource-model]');if(!input)return;
+    if(input.checked)activeResources.add(input.dataset.resourceModel);else activeResources.delete(input.dataset.resourceModel);
+    document.querySelectorAll('[data-resource-model]').forEach(control=>control.checked=activeResources.has(control.dataset.resourceModel));
+    tooltip(null);update();window.dispatchEvent(new Event('plotfilterchange'));
+  });
+}
+installModelFilters($('resourceControls'));
+document.querySelectorAll('.chart-heading').forEach(heading=>{const panel=document.createElement('div');heading.append(panel);installModelFilters(panel,true);});
 
 function select(slug,{scroll=false}={}) {
   if (!bySlug[slug]) return;
@@ -83,20 +82,23 @@ function tooltip(point,position) {
   el.style.top=Math.max(10,Math.min(innerHeight-90,position.y+10))+'px';
 }
 function update() {
-  points=records.map(d=>({...d,color:color(d.strength),selected:d.slug===selected}));
-  scene.setData(points,{strengthMax,hardwareMax:3,hardwareUnspecified:3.25,strengthTicks:ticks,
+  const visible=records.filter(isResourceVisible);
+  if(!visible.some(p=>p.slug===selected))selected=visible[0]?.slug;
+  points=visible.map(d=>({...d,selected:d.slug===selected}));
+  scene.setData(points,{strengthMax,strengthBoundaries,hardwareMax:3,hardwareUnspecified:3.25,strengthTicks:ticks,
     evidenceTicks:[{value:0,label:'Unestablished'},{value:.5,label:'Partial'},{value:.75,label:'Conditional'},{value:1,label:'Proved'}],
     hardwareTicks:[{value:0,label:'Small demos'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],selectedSlug:selected});
-  costScene.setData(points,{costMax,selectedSlug:selected,colorForGap:gapColor,colorRGBForGap:gapRGB,
-    costTicks:plotConfig.costTicks || [{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:3,label:'exp(√N)'},{value:4,label:'2ᴺᐟ²'}]});
-  document.querySelector('.gradient').style.background='linear-gradient(90deg,'+Array.from({length:9},(_,i)=>`${color(strengthFromGap(3*i/8))} ${100*i/8}%`).join(',')+')';
+  costScene.setData(points,{costMax,selectedSlug:selected,colorForCategory,categoryColorRGB,
+    costTicks:plotConfig.costTicks||[{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:3,label:'exp(√N)'},{value:4,label:'2ᴺᐟ²'}]});
+  document.querySelectorAll('.model-count').forEach(el=>el.textContent=`${visible.length} / ${records.length} problems`);
   renderProblemList();
+  window.demoState={points,selected,activeResources:[...activeResources],strengthBoundaries};
   const p=bySlug[selected];
-  if (!p) return;
+  if(!p){$('detail').innerHTML='<p class="no-results">No problems match the selected complexity models.</p>';return;}
   const papers=p.papers.slice(0,4);
   const algorithmLinks=(window.PROBLEM_ALGORITHMS[p.slug]||[]).map(a=>`<a class="algorithm-link" href="#algorithm/${esc(a.id)}">→ ${esc(a.title)}</a>`).join('');
   $('detail').innerHTML=`<div class="detail-top"><div><div class="eyebrow">${esc(p.model)}</div><h2>${esc(p.name)}</h2><p>${p.parameterHtml || esc(p.parameter)}</p></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${p.Q}</div></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${p.C}</div></div></div><div class="gain-row"><span class="field-label">ASYMPTOTIC SPEEDUP, T<sub>C</sub> / T<sub>Q</sub></span><strong>${p.gain}</strong></div><div class="detail-meta"><div><i class="dot blue"></i><strong>Evidence level:</strong> ${esc(p.evidenceLabel||evidenceLabels[p.evidence]||'')}</div><div><i class="dot green"></i><strong>Required hardware:</strong> ${esc(p.hardwareLabel||hardwareLabels[p.hardware]||'')}</div></div><div class="papers">${papers.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div><div class="entry-navigation"><a id="entryLink" href="#entry/${esc(p.slug)}">→ ${esc(p.name)}</a>${algorithmLinks}</div>`;
-  window.demoState={points,selected};
+
 }
 function normalize(value) {return String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
 function matches(query,record) {return normalize(query).trim().split(/\s+/).filter(Boolean).every(term=>normalize(record).includes(term));}
@@ -104,8 +106,8 @@ const entrySearchTerms = new Map((window.PAGE_SEARCH_INDEX||[]).filter(p=>p.kind
 const problemSearchTerms = new Map(records.map(p=>[p.slug,[p.name,p.shortName,entrySearchTerms.get(p.slug)||'',...(window.PROBLEM_ALGORITHMS[p.slug]||[]).flatMap(a=>[a.title,...(a.aliases||[])])].join(' ')]));
 function renderProblemList() {
   const query=$('problemFilter')?.value||'';
-  const visible=sortedRecords.filter(p=>matches(query,problemSearchTerms.get(p.slug)));
-  $('problemList').innerHTML=visible.map(p=>`<button class="problem-button ${p.slug===selected?'selected':''}" data-slug="${esc(p.slug)}" aria-pressed="${p.slug===selected}"><span class="problem-swatch" style="background:${color(p.strength)}"></span>${esc(p.name)}</button>`).join('')||'<p class="no-results">No matches</p>';
+  const visible=sortedRecords.filter(p=>isResourceVisible(p)&&matches(query,problemSearchTerms.get(p.slug)));
+  $('problemList').innerHTML=visible.map(p=>`<button class="problem-button ${p.slug===selected?'selected':''}" data-slug="${esc(p.slug)}" aria-pressed="${p.slug===selected}"><span class="problem-swatch" style="background:${p.color}"></span>${esc(p.name)}</button>`).join('')||'<p class="no-results">No matches</p>';
 }
 $('problemFilter').addEventListener('input',renderProblemList);
 $('problemList').addEventListener('click',event=>{const button=event.target.closest('[data-slug]');if(button)select(button.dataset.slug);});
@@ -127,7 +129,7 @@ function installChartTools(card,chart,tag) {
   const input=panel.querySelector('input'),results=panel.querySelector('.search-results');
   const render=()=>{
     const query=input.value.trim();
-    const found=sortedRecords.filter(p=>matches(query,problemSearchTerms.get(p.slug)));
+    const found=sortedRecords.filter(p=>isResourceVisible(p)&&matches(query,problemSearchTerms.get(p.slug)));
     results.innerHTML=found.map(p=>{
       const alg=(window.PROBLEM_ALGORITHMS[p.slug]||[]).find(a=>query&&matches(query,[a.title,...(a.aliases||[])].join(' ')));
       return `<button type="button" role="option" aria-selected="${selected===p.slug}" data-slug="${esc(p.slug)}"><span>${esc(p.name)}</span>${alg?`<small>${esc(alg.title)}</small>`:''}</button>`;
@@ -139,6 +141,7 @@ function installChartTools(card,chart,tag) {
     if(open){render();input.focus();}
   });
   input.addEventListener('input',render);
+  window.addEventListener('plotfilterchange',render);
   input.addEventListener('keydown',event=>{
     if(event.key==='ArrowDown'){event.preventDefault();results.querySelector('button')?.focus();}
     if(event.key==='Enter'){const button=results.querySelector('button');if(button){select(button.dataset.slug);panel.hidden=true;tools.querySelector('.search-button').setAttribute('aria-expanded','false');}}

@@ -6,7 +6,7 @@
   "title_latex": "Increasing subsequence of length $k$",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g26",
   "inventory_ids": [
@@ -132,6 +132,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 100,
   "citation_ids": [
     "entry-130-citation-00203"

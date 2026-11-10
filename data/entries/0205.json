@@ -6,7 +6,7 @@
   "title_latex": "Gapped group testing",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q12",
   "inventory_ids": [
@@ -86,6 +86,9 @@
     "classical_kind": "polynomial",
     "gain": "Up to a fourth-power relation in the appropriate gap regime"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 28,
   "citation_ids": [
     "entry-205-citation-00069"

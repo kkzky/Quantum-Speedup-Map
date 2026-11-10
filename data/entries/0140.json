@@ -6,7 +6,7 @@
   "title_latex": "Distributed graph diameter",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g42",
   "inventory_ids": [
@@ -121,6 +121,9 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Omega(\\sqrt{n/D})"
   },
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 109,
   "citation_ids": [
     "entry-140-citation-00214"

@@ -6,7 +6,7 @@
   "title_latex": "Hidden radius over a finite field",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a42",
   "inventory_ids": [
@@ -77,6 +77,10 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Childs--Schulman--Vazirani hidden-radius algorithm",
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 170,
   "citation_ids": [
     "entry-179-citation-00334"

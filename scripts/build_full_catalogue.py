@@ -102,10 +102,19 @@ def main():
             others = list(dict.fromkeys(a['problem_number'] for a in algorithms[aid]['applications'] if a['entry_id'] != entry['id']))
             if others: entry['also_used_in'].append({'algorithm_id':aid,'label_latex':algorithms[aid]['title_latex'],'problem_numbers':others})
     full['algorithms'] = list(algorithms.values())
+    settings_path = ROOT / 'data/visualization_settings.json'
+    settings = json.loads(settings_path.read_text(encoding='utf-8')) if settings_path.exists() else {}
+    priorities = settings.get('importance', {})
+    high_priority = set(priorities.get('high', []))
+    medium_priority = set(priorities.get('medium', []))
     plain = LatexNodes2Text()
     for entry in records:
         entry['title'] = plain.latex_to_text(entry['title_latex'])
         entry['problem']['name'] = plain.latex_to_text(entry['problem']['name_latex'])
+        if priorities:
+            entry['importance'] = 'high' if entry['number'] in high_priority else 'medium' if entry['number'] in medium_priority else 'peripheral'
+        entry['resource_models'] = [name for name, members in settings.get('resources', {}).items()
+                                    if entry['number'] in members]
     for algorithm in full['algorithms']:
         algorithm['title'] = plain.latex_to_text(algorithm['title_latex'])
     records.sort(key=lambda e: int(e['chapter_id'].split('-')[-1]))

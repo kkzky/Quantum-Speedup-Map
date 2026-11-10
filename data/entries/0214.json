@@ -6,7 +6,7 @@
   "title_latex": "Triangle-freeness of Boolean functions from examples",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q25",
   "inventory_ids": [
@@ -97,6 +97,9 @@
     "quantum_exponent": 0,
     "classical_exponent": 0.3333333333333333
   },
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 37,
   "citation_ids": [
     "entry-214-citation-00083"

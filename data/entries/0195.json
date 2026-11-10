@@ -120,6 +120,9 @@
     "classical_exponent": null,
     "gain": "\\Omega(2^{n/2}/n^2)"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 209,
   "citation_ids": [
     "entry-195-citation-00415",

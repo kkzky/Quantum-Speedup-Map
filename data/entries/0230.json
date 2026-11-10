@@ -6,7 +6,7 @@
   "title_latex": "PAC learning in the large-error regime",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q46",
   "inventory_ids": [
@@ -86,6 +86,10 @@
     "classical_kind": "unknown",
     "gain": "Superpolynomial separation; exponential or subexponential regimes depend on lambda"
   },
+  "resource_models": [
+    "gate",
+    "other"
+  ],
   "ordinal": 197,
   "citation_ids": [
     "entry-230-citation-00382"

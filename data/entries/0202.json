@@ -6,7 +6,7 @@
   "title_latex": "Oracle identification",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q09",
   "inventory_ids": [
@@ -88,6 +88,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 194,
   "citation_ids": [
     "entry-202-citation-00379"

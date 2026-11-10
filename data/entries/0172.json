@@ -6,7 +6,7 @@
   "title_latex": "Turaev--Viro invariant",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a35",
   "inventory_ids": [
@@ -103,6 +103,9 @@
     "classical_kind": "unknown",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 186,
   "citation_ids": [
     "entry-172-citation-00367",

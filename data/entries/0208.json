@@ -6,7 +6,7 @@
   "title_latex": "Learning DNF from quantum examples",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q16",
   "inventory_ids": [
@@ -104,6 +104,10 @@
     "classical_kind": "subexponential",
     "gain": "Quasipolynomial to polynomial when s is polynomial in n"
   },
+  "resource_models": [
+    "gate",
+    "other"
+  ],
   "ordinal": 31,
   "citation_ids": [
     "entry-208-citation-00074",

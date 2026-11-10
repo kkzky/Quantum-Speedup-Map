@@ -17,7 +17,7 @@ The first three chapters concern discrete objects and configurations, including 
 
 ## Interactive map
 
-The complete map links a rotatable three-dimensional view of speedup, evidence and hardware requirements with a quantum-versus-classical complexity plot. Both plots support fullscreen, problem/algorithm search and reset. Problem and algorithm pages support cross-references and wiki search. Point and label sizes reflect editorial importance.
+The complete map links a rotatable three-dimensional view of speedup, evidence and hardware requirements with a quantum-versus-classical complexity plot. Both plots support fullscreen, problem/algorithm search, reset and shared Oracle/Gate resource-model filters. Speedup regions have explicit boundaries. Problem and algorithm pages support cross-references and wiki search. Point and label sizes reflect editorial importance.
 
 [Open the interactive map](https://kkzky.github.io/Quantum-Speedup-Map/). The [standalone visualization](visualization/quantum-speedup-demo.html) also opens directly in a browser. [Run locally](visualization/README.md).
 

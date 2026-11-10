@@ -93,6 +93,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: BCMVV certified-randomness protocol; Random-circuit certified-randomness protocol",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 199,
   "citation_ids": [
     "entry-183-citation-00384",

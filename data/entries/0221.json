@@ -6,7 +6,7 @@
   "title_latex": "$\\ell_1$-closeness testing of finite distributions",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q36",
   "inventory_ids": [
@@ -115,6 +115,9 @@
     "classical_kind": "polynomial",
     "gain": "Polynomial in domain size and inverse error"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 41,
   "citation_ids": [
     "entry-221-citation-00089"

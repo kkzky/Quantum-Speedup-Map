@@ -6,7 +6,7 @@
   "title_latex": "Longest common substring of run-length encoded strings",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g22",
   "inventory_ids": [
@@ -88,6 +88,10 @@
     "quantum_exponent": 0.6666666666666666,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 96,
   "citation_ids": [
     "entry-126-citation-00199"

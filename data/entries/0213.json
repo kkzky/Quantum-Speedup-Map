@@ -6,7 +6,7 @@
   "title_latex": "Monotonicity testing of Boolean functions",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q22",
   "inventory_ids": [
@@ -115,6 +115,10 @@
     "gain": "Subexponential to polynomial at constant distance",
     "quantum_exponent": 2
   },
+  "resource_models": [
+    "oracle",
+    "other"
+  ],
   "ordinal": 36,
   "citation_ids": [
     "entry-213-citation-00081",

@@ -6,7 +6,7 @@
   "title_latex": "Polynomial factorization over a finite field",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a11",
   "inventory_ids": [
@@ -88,6 +88,9 @@
     "quantum_exponent": 1.3333333333333333,
     "classical_exponent": 1.5
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 155,
   "citation_ids": [
     "entry-155-citation-00317"

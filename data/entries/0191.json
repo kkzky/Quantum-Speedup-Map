@@ -103,6 +103,9 @@
     "classical_exponent": 0.5,
     "gain": "\\Theta(\\sqrt n/\\log n)"
   },
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 207,
   "citation_ids": [
     "entry-191-citation-00411",

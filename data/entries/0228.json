@@ -6,7 +6,7 @@
   "title_latex": "Disjoint-support testing of finite distributions",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q43",
   "inventory_ids": [
@@ -88,6 +88,9 @@
     "quantum_exponent": 0.3333333333333333,
     "classical_exponent": 0.5
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 48,
   "citation_ids": [
     "entry-228-citation-00097"

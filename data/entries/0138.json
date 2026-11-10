@@ -6,7 +6,7 @@
   "title_latex": "Fixed-subgraph containment",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g37",
   "inventory_ids": [
@@ -87,6 +87,9 @@
     "gain": "\\Omega(n^{2/k+t})",
     "classical_exponent": 2
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 107,
   "citation_ids": [
     "entry-138-citation-00212"

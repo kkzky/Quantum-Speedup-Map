@@ -6,7 +6,7 @@
   "title_latex": "Shifted multiplicative characters",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a15",
   "inventory_ids": [
@@ -86,6 +86,10 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial relative to shift enumeration"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 157,
   "citation_ids": [
     "entry-158-citation-00320"

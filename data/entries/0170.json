@@ -6,7 +6,7 @@
   "title_latex": "HOMFLY polynomial approximation",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a33",
   "inventory_ids": [
@@ -111,6 +111,9 @@
     "classical_kind": "unknown",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 184,
   "citation_ids": [
     "entry-170-citation-00363",

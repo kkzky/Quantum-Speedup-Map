@@ -6,7 +6,7 @@
   "title_latex": "Junta testing",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q13",
   "inventory_ids": [
@@ -132,6 +132,9 @@
     "classical_kind": "polynomial",
     "gain": "Nearly quadratic in junta size at constant distance; general error dependence is shown"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 29,
   "citation_ids": [
     "entry-206-citation-00070",

@@ -3,7 +3,13 @@ window.CATALOGUE_POINTS = [
     "slug": "search",
     "name": "Unstructured search",
     "shortName": "Unstructured search",
+    "entryNumber": 1,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -41,13 +47,20 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "black-box-discrete-minimization",
     "name": "Black-box discrete minimization",
     "shortName": "Black-box discrete minimization",
+    "entryNumber": 2,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -65,13 +78,20 @@ window.CATALOGUE_POINTS = [
         "title": "A Quantum Algorithm for Finding the Minimum",
         "url": "https://arxiv.org/pdf/quant-ph/9607014"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "constraint-satisfaction-by-backtracking",
     "name": "Constraint satisfaction by backtracking",
     "shortName": "Constraint satisfaction by backtracking",
+    "entryNumber": 3,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>T</mi><mi>D</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>T</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Nearly quadratic in the size of a specified search tree, through a quantum walk. Fixed-domain, fixed-arity instances also admit the displayed subexponential classical bound, whose exponent has no power saving.",
@@ -100,7 +120,13 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-optimization-by-branch-and-bound",
     "name": "Discrete optimization by branch and bound",
     "shortName": "Discrete optimization by branch and bound",
+    "entryNumber": 4,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>Q</mi></msqrt><mspace width=\"0.167em\" /><mi>D</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>Q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Nearly quadratic polynomial speedup in the work of the selected classical tree-search procedure, based on quantum tree search and subtree estimation.",
@@ -129,7 +155,12 @@ window.CATALOGUE_POINTS = [
     "slug": "fixed-width-boolean-satisfiability",
     "name": "Fixed-width Boolean satisfiability",
     "shortName": "Fixed-width Boolean satisfiability",
+    "entryNumber": 5,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x0002F;</mo><mi>k</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002B;</mo><mi>m</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><msub><mi>O</mi><mi>k</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><msup><mn>2</mn><mrow><msub><mi>O</mi><mi>k</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mi>log</mi><mi>log</mi><mi>n</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -166,7 +197,13 @@ window.CATALOGUE_POINTS = [
     "slug": "approximate-counting-of-feasible-assignments",
     "name": "Approximate counting of feasible assignments",
     "shortName": "Approximate counting of feasible assignments",
+    "entryNumber": 6,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003F5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002F;</mo><msup><mi>&#x003F5;</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Quadratic polynomial improvement in inverse additive precision in the sampling-oracle model, from amplitude estimation. Relative-error improvement also depends on the feasible density <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>a</mi></mrow></math></span>.",
@@ -195,7 +232,12 @@ window.CATALOGUE_POINTS = [
     "slug": "travelling-salesman",
     "name": "Travelling salesman",
     "shortName": "Travelling salesman",
+    "entryNumber": 7,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.728</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.2109</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -221,13 +263,19 @@ window.CATALOGUE_POINTS = [
         "title": "Path Decompositions of Sparse Graphs via Gaussian Sweeps and Faster Exponential Algorithms",
         "url": "https://serggasp.github.io/pathwidth-site/papers/sparse-pathwidth/14-apps-connectivity.html"
       }
-    ]
+    ],
+    "strengthOrder": 1.2672613389746434
   },
   {
     "slug": "set-cover-set-packing-and-set-partition",
     "name": "Set cover, set packing and set partition",
     "shortName": "Set cover, set packing and set partition",
+    "entryNumber": 8,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.7274</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.2114</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -257,13 +305,19 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.268066468336242
   },
   {
     "slug": "set-multicover-with-repeated-sets",
     "name": "Set multicover with repeated sets",
     "shortName": "Set multicover with repeated sets",
-    "importance": "normal",
+    "entryNumber": 9,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002C;</mo><mi>n</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mi>log</mi><mi>n</mi></mrow></msup><msubsup><mi>T</mi><mi>D</mi><mi>n</mi></msubsup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo stretchy=\"false\">&#x00028;</mo><mi>D</mi><mo>&#x0002B;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial speedup through a smaller exponential constant for fixed demand in the general lattice comparison, using quantum search. Linear-incidence instances have a subexponential classical comparator.",
@@ -292,7 +346,12 @@ window.CATALOGUE_POINTS = [
     "slug": "chromatic-number",
     "name": "Chromatic number",
     "shortName": "Chromatic number",
+    "entryNumber": 10,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.7956</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.1555</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -314,13 +373,19 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.1841802966398844
   },
   {
     "slug": "minimum-steiner-tree",
     "name": "Minimum Steiner tree",
     "shortName": "Minimum Steiner tree",
+    "entryNumber": 11,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.812</mn><mi>k</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>&#x003B4;</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mi>k</mi></msup><msup><mi>n</mi><mrow><mi>f</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Polynomial speedup through a smaller exponential constant in terminal count in the general comparison, using amplitude amplification. Sparse unit-weight regimes also have the stated classical vertex-parameter bounds.",
@@ -349,7 +414,12 @@ window.CATALOGUE_POINTS = [
     "slug": "graph-bandwidth",
     "name": "Graph bandwidth",
     "shortName": "Graph bandwidth",
-    "importance": "normal",
+    "entryNumber": 12,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2.946</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>4.383</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.5732</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -367,13 +437,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Speedups for Exponential-Time Dynamic Programming Algorithms",
         "url": "https://arxiv.org/pdf/1807.05209"
       }
-    ]
+    ],
+    "strengthOrder": 1.3677039398948503
   },
   {
     "slug": "exact-treewidth",
     "name": "Exact treewidth",
     "shortName": "Exact treewidth",
+    "entryNumber": 13,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.538</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.7347</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.1736</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -395,13 +471,19 @@ window.CATALOGUE_POINTS = [
         "title": "Large Induced Subgraphs via Triangulations and CMSO",
         "url": "https://arxiv.org/pdf/1309.1559"
       }
-    ]
+    ],
+    "strengthOrder": 1.2795735319244395
   },
   {
     "slug": "pathwidth-and-vertex-separation",
     "name": "Pathwidth and vertex separation",
     "shortName": "Pathwidth and vertex separation",
+    "entryNumber": 14,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.817</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.89</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.05683</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -423,13 +505,19 @@ window.CATALOGUE_POINTS = [
         "title": "Computing Directed Pathwidth in $O(1.89^n)$ Time",
         "url": "https://doi.org/10.1007/s00453-015-0015-9"
       }
-    ]
+    ],
+    "strengthOrder": 1.0659593285647977
   },
   {
     "slug": "minimum-linear-arrangement",
     "name": "Minimum linear arrangement",
     "shortName": "Minimum linear arrangement",
-    "importance": "normal",
+    "entryNumber": 15,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.817</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.1384</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -455,13 +543,19 @@ window.CATALOGUE_POINTS = [
         "title": "A Subexponential Parameterized Algorithm for Interval Completion",
         "url": "https://arxiv.org/pdf/1402.3473"
       }
-    ]
+    ],
+    "strengthOrder": 1.160687397723698
   },
   {
     "slug": "worst-case-subset-sum",
     "name": "Worst-case subset sum",
     "shortName": "Worst-case subset sum",
+    "entryNumber": 18,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mn>2</mn><mi>n</mi><mo>&#x0002F;</mo><mn>7</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mn>0.49</mn><mi>n</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial speedup from <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.49</mn><mi>n</mi></mrow></msup></mrow></math></span> to <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>n</mi><mo>&#x0002F;</mo><mn>7</mn></mrow></msup></mrow></math></span>. The fastest quantum result uses quantum walks; the <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>3</mn></mrow></msup></mrow></math></span> algorithm uses amplitude amplification.",
@@ -498,7 +592,12 @@ window.CATALOGUE_POINTS = [
     "slug": "knapsack-and-binary-integer-programming",
     "name": "Knapsack and binary integer programming",
     "shortName": "Knapsack and binary integer programming",
+    "entryNumber": 19,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><msup><mi>n</mi><mi>d</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -530,7 +629,12 @@ window.CATALOGUE_POINTS = [
     "slug": "independent-set-clique-and-vertex-cover",
     "name": "Independent set, clique and vertex cover",
     "shortName": "Independent set, clique and vertex cover",
+    "entryNumber": 20,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>5</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.1488</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002B;</mo><mo stretchy=\"false\">&#x0007C;</mo><mi>E</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mi>log</mi><mi>log</mi><mi>n</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -567,7 +671,12 @@ window.CATALOGUE_POINTS = [
     "slug": "domatic-number",
     "name": "Domatic number",
     "shortName": "Domatic number",
-    "importance": "normal",
+    "entryNumber": 21,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x02212;</mo><mi>&#x003F5;</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial speedup through a smaller exponential constant for unrestricted domatic number, based on amplitude amplification. Fixed-<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>q</mi></mrow></math></span> decision has the subexponential classical comparison above.",
@@ -600,7 +709,12 @@ window.CATALOGUE_POINTS = [
     "slug": "covering-by-maximal-induced-bicliques",
     "name": "Covering by maximal induced bicliques",
     "shortName": "Covering by maximal induced bicliques",
+    "entryNumber": 24,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.8554</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.1083</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -622,13 +736,19 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.1214153650558647
   },
   {
     "slug": "packing-maximal-induced-matchings",
     "name": "Packing maximal induced matchings",
     "shortName": "Packing maximal induced matchings",
+    "entryNumber": 25,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.8934</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.07902</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -654,13 +774,19 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.0858008198529685
   },
   {
     "slug": "vertex-arboricity",
     "name": "Vertex arboricity",
     "shortName": "Vertex arboricity",
+    "entryNumber": 26,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.9629</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.02701</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -678,13 +804,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Algorithms for Graph Coloring and Other Partitioning, Covering, and Packing Problems",
         "url": "https://arxiv.org/pdf/2311.08042"
       }
-    ]
+    ],
+    "strengthOrder": 1.02776330253835
   },
   {
     "slug": "partition-into-hereditary-graph-classes",
     "name": "Partition into hereditary graph classes",
     "shortName": "Partition into hereditary graph classes",
+    "entryNumber": 27,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.9149</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.06273</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -706,13 +838,19 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.06692949706354
   },
   {
     "slug": "minimum-fill-in",
     "name": "Minimum fill-in",
     "shortName": "Minimum fill-in",
+    "entryNumber": 28,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.817</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>1.7347</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -741,7 +879,12 @@ window.CATALOGUE_POINTS = [
     "slug": "recursive-fourier-sampling",
     "name": "Recursive Fourier sampling",
     "shortName": "Recursive Fourier sampling",
+    "entryNumber": 102,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>h</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mi>h</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Subexponential to polynomial in the strongest comparison: throughout <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo>&#x0003D;</mo><mi>&#x003C9;</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span> and <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>h</mi><mo>&#x0003D;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>, the quantum cost is polynomial in the oracle address length <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x02113;</mi></mrow></math></span>, while the classical cost is superpolynomial. At larger depths within the stated lower-bound range, both costs become superpolynomial and the general bounds describe an intermediate improvement. Fixed depth gives a polynomial query advantage.",
@@ -774,7 +917,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q10",
     "name": "Search with wildcards",
     "shortName": "Search with wildcards",
-    "importance": "high",
+    "entryNumber": 203,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -796,13 +944,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound",
         "url": "https://arxiv.org/abs/1311.6777"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-q11",
     "name": "Combinatorial group testing",
     "shortName": "Combinatorial group testing",
-    "importance": "high",
+    "entryNumber": 204,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>k</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002B;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>k</mi></msqrt><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -827,7 +981,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q12",
     "name": "Gapped group testing",
     "shortName": "Gapped group testing",
-    "importance": "high",
+    "entryNumber": 205,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>k</mi><mo>&#x0002F;</mo><mi>d</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>k</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002B;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mo>&#x0002F;</mo><mi>d</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mn>2</mn></msup><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Up to a fourth-power relation in the appropriate gap regime",
@@ -852,7 +1011,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q13",
     "name": "Junta testing",
     "shortName": "Junta testing",
-    "importance": "high",
+    "entryNumber": 206,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002C;</mo><msqrt><mrow><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>&#x003B5;</mi><msup><mn>2</mn><mi>k</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mi>&#x003B5;</mi></mrow></msqrt><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><msup><mn>2</mn><mi>n</mi></msup><mo>&#x0002C;</mo><mi>k</mi><mi>log</mi><mi>k</mi><mo>&#x0002B;</mo><mi>k</mi><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Nearly quadratic in junta size at constant distance; general error dependence is shown",
@@ -885,7 +1049,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q15",
     "name": "Learning juntas from quantum examples",
     "shortName": "Learning juntas from quantum examples",
-    "importance": "high",
+    "entryNumber": 207,
+    "importance": "peripheral",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mi>log</mi><mi>k</mi><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mi>log</mi><mi>n</mi><mo>&#x0002B;</mo><msup><mn>2</mn><mi>k</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial improvement in the stated resource and parameter regime.",
@@ -910,7 +1079,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q16",
     "name": "Learning DNF from quantum examples",
     "shortName": "Learning DNF from quantum examples",
-    "importance": "high",
+    "entryNumber": 208,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate",
+      "other"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>s</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Quasipolynomial to polynomial when s is polynomial in n",
@@ -939,7 +1114,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q18",
     "name": "Exact learning of Fourier-sparse Boolean functions",
     "shortName": "Exact learning of Fourier-sparse Boolean functions",
-    "importance": "high",
+    "entryNumber": 209,
+    "importance": "peripheral",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -964,7 +1144,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q19",
     "name": "Agnostic learning of decision trees",
     "shortName": "Agnostic learning of decision trees",
-    "importance": "high",
+    "entryNumber": 210,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate",
+      "other"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>t</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mi>log</mi><mi>t</mi></mrow></msup><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Quasipolynomial to polynomial for polynomial t",
@@ -989,7 +1175,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q20",
     "name": "Linearity testing of Boolean functions",
     "shortName": "Linearity testing of Boolean functions",
-    "importance": "normal",
+    "entryNumber": 211,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1007,13 +1198,20 @@ window.CATALOGUE_POINTS = [
         "title": "Improved quantum test for linearity of a Boolean function",
         "url": "https://arxiv.org/abs/1306.6195"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-q21",
     "name": "Symmetry testing of Boolean functions",
     "shortName": "Symmetry testing of Boolean functions",
-    "importance": "normal",
+    "entryNumber": 212,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>O</mi><mi>&#x003B5;</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1041,7 +1239,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q22",
     "name": "Monotonicity testing of Boolean functions",
     "shortName": "Monotonicity testing of Boolean functions",
-    "importance": "high",
+    "entryNumber": 213,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "other"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>exp</mi><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><msqrt><mi>n</mi></msqrt><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo>&#x0002C;</mo><mi>n</mi><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Subexponential to polynomial at constant distance",
@@ -1070,7 +1274,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q25",
     "name": "Triangle-freeness of Boolean functions from examples",
     "shortName": "Triangle-freeness of Boolean functions from examples",
-    "importance": "high",
+    "entryNumber": 214,
+    "importance": "peripheral",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>O</mi><mi>&#x003B5;</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -1094,7 +1303,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q29",
     "name": "Quantum coupon collection",
     "shortName": "Quantum coupon collection",
-    "importance": "high",
+    "entryNumber": 216,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>k</mi><mo>&#x0002C;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy=\"false\">&#x0007D;</mo><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mi>log</mi><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>k</mi><mo>&#x0002F;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>k</mi><mo>&#x0002C;</mo><mi>n</mi><mo>&#x02212;</mo><mi>k</mi><mo stretchy=\"false\">&#x0007D;</mo><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1119,7 +1334,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q32",
     "name": "Learning symmetric juntas",
     "shortName": "Learning symmetric juntas",
-    "importance": "high",
+    "entryNumber": 219,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>k</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>k</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1137,13 +1357,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Algorithms for Learning Symmetric Juntas via the Adversary Bound",
         "url": "https://arxiv.org/abs/1311.6777"
       }
-    ]
+    ],
+    "strengthOrder": 4.0
   },
   {
     "slug": "prior-q34",
     "name": "Identity and uniformity testing of finite distributions",
     "shortName": "Identity and uniformity testing of finite distributions",
+    "entryNumber": 220,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1165,13 +1391,19 @@ window.CATALOGUE_POINTS = [
         "title": "New Results on Quantum Property Testing",
         "url": "https://arxiv.org/abs/1005.0523"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-q36",
     "name": "ℓ_1-closeness testing of finite distributions",
     "shortName": "ℓ_1-closeness testing of finite distributions",
-    "importance": "high",
+    "entryNumber": 221,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mo>max</mo><mo stretchy=\"false\">&#x0007B;</mo><msup><mi>N</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mrow><mn>4</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002C;</mo><msqrt><mi>N</mi></msqrt><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial in domain size and inverse error",
@@ -1196,7 +1428,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q37",
     "name": "ℓ_2-closeness testing of finite distributions",
     "shortName": "ℓ_2-closeness testing of finite distributions",
-    "importance": "high",
+    "entryNumber": 222,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1214,13 +1451,19 @@ window.CATALOGUE_POINTS = [
         "title": "Succinct quantum testers for closeness and k-wise uniformity of probability distributions",
         "url": "https://arxiv.org/abs/2304.12916"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-q38",
     "name": "Independence testing of a finite joint distribution",
     "shortName": "Independence testing of a finite joint distribution",
-    "importance": "high",
+    "entryNumber": 223,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mi>m</mi></mrow></msqrt><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mo>max</mo><mo stretchy=\"false\">&#x0007B;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><msup><mi>m</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mrow><mn>4</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002C;</mo><msqrt><mrow><mi>n</mi><mi>m</mi></mrow></msqrt><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Parameter-dependent polynomial improvement",
@@ -1245,7 +1488,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q39",
     "name": "k-wise uniformity testing",
     "shortName": "k-wise uniformity testing",
-    "importance": "normal",
+    "entryNumber": 224,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mi>k</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mi>k</mi></msup><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mi>k</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mtext>&#x000A0;relative&#x000A0;to&#x000A0;the&#x000A0;cited&#x000A0;classical&#x000A0;upper&#x000A0;bound</mtext></mrow></math></span>",
@@ -1270,7 +1518,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q40",
     "name": "Shannon entropy of a finite distribution",
     "shortName": "Shannon entropy of a finite distribution",
-    "importance": "high",
+    "entryNumber": 225,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003B5;</mi><mi>log</mi><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002B;</mo><msup><mi>log</mi><mn>2</mn></msup><mi>N</mi><mo>&#x0002F;</mo><msup><mi>&#x003B5;</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Nearly quadratic dependence on support size at constant error",
@@ -1299,7 +1552,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q41",
     "name": "Support-size estimation",
     "shortName": "Support-size estimation",
-    "importance": "high",
+    "entryNumber": 226,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>m</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002F;</mo><mi>log</mi><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>m</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1317,13 +1575,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Query Complexity of Entropy Estimation",
         "url": "https://arxiv.org/abs/1710.06025"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-q42",
     "name": "Support-coverage estimation",
     "shortName": "Support-coverage estimation",
-    "importance": "normal",
+    "entryNumber": 227,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>t</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>t</mi><mo>&#x0002F;</mo><mi>log</mi><mi>t</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>t</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1341,13 +1605,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Query Complexity of Entropy Estimation",
         "url": "https://arxiv.org/abs/1710.06025"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-q43",
     "name": "Disjoint-support testing of finite distributions",
     "shortName": "Disjoint-support testing of finite distributions",
-    "importance": "normal",
+    "entryNumber": 228,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1365,13 +1635,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum algorithms for testing properties of distributions",
         "url": "https://arxiv.org/abs/0907.3920"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "mst",
     "name": "Minimum spanning tree",
     "shortName": "Minimum spanning tree",
+    "entryNumber": 31,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1393,13 +1669,19 @@ window.CATALOGUE_POINTS = [
         "title": "A Randomized Linear-Time Algorithm to Find Minimum Spanning Trees",
         "url": "https://doi.org/10.1145/201019.201022"
       }
-    ]
+    ],
+    "strengthOrder": 1.3333333333333333
   },
   {
     "slug": "undirected-graph-connectivity",
     "name": "Undirected graph connectivity",
     "shortName": "Undirected graph connectivity",
+    "entryNumber": 32,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1417,13 +1699,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Query Complexity of Some Graph Problems",
         "url": "https://arxiv.org/pdf/quant-ph/0401091"
       }
-    ]
+    ],
+    "strengthOrder": 1.3333333333333333
   },
   {
     "slug": "strong-connectivity-of-directed-graphs",
     "name": "Strong connectivity of directed graphs",
     "shortName": "Strong connectivity of directed graphs",
+    "entryNumber": 33,
     "importance": "normal",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1445,13 +1733,19 @@ window.CATALOGUE_POINTS = [
         "title": "Depth-First Search and Linear Graph Algorithms",
         "url": "https://doi.org/10.1137/0201010"
       }
-    ]
+    ],
+    "strengthOrder": 1.3333333333333333
   },
   {
     "slug": "single-source-shortest-paths",
     "name": "Single-source shortest paths",
     "shortName": "Single-source shortest paths",
+    "entryNumber": 34,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><msup><mi>log</mi><mn>2</mn></msup><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002F;</mo><msup><mi>log</mi><mn>2</mn></msup><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1473,13 +1767,20 @@ window.CATALOGUE_POINTS = [
         "title": "Breaking the Sorting Barrier for Directed Single-Source Shortest Paths",
         "url": "https://arxiv.org/pdf/2504.17033"
       }
-    ]
+    ],
+    "strengthOrder": 1.3333333333333333
   },
   {
     "slug": "maximum-cardinality-matching",
     "name": "Maximum-cardinality matching",
     "shortName": "Maximum-cardinality matching",
+    "entryNumber": 35,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><msqrt><mrow><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>m</mi><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -1516,7 +1817,13 @@ window.CATALOGUE_POINTS = [
     "slug": "integral-maximum-flow",
     "name": "Integral maximum flow",
     "shortName": "Integral maximum flow",
+    "entryNumber": 36,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><msup><mi>n</mi><mrow><mn>7</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><msqrt><mi>m</mi></msqrt><mspace width=\"0.167em\" /><msup><mi>U</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002C;</mo><mi>m</mi><msqrt><mrow><mi>n</mi><mi>U</mi></mrow></msqrt><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>m</mi><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -1549,7 +1856,12 @@ window.CATALOGUE_POINTS = [
     "slug": "unweighted-triangle-finding",
     "name": "Unweighted triangle finding",
     "shortName": "Unweighted triangle finding",
+    "entryNumber": 37,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>5</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1571,13 +1883,19 @@ window.CATALOGUE_POINTS = [
         "title": "An Upper Bound of $9/4$ for the Matrix Multiplication Exponent",
         "url": "https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.6
   },
   {
     "slug": "graph-collision",
     "name": "Graph collision",
     "shortName": "Graph collision",
+    "entryNumber": 38,
     "importance": "normal",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>11</mn><mo>&#x0002F;</mo><mn>17</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>6</mn><mo>&#x0002F;</mo><mn>17</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1599,13 +1917,20 @@ window.CATALOGUE_POINTS = [
         "title": "Span Programs for Functions with Constant-Sized 1-Certificates",
         "url": "https://arxiv.org/pdf/1105.4024"
       }
-    ]
+    ],
+    "strengthOrder": 1.5454545454545454
   },
   {
     "slug": "testing-bipartiteness-in-bounded-degree-graphs",
     "name": "Testing bipartiteness in bounded-degree graphs",
     "shortName": "Testing bipartiteness in bounded-degree graphs",
+    "entryNumber": 39,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1627,13 +1952,20 @@ window.CATALOGUE_POINTS = [
         "title": "A Sublinear Bipartiteness Tester for Bounded Degree Graphs",
         "url": "https://doi.org/10.1007/s004930050059"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "testing-graph-expansion",
     "name": "Testing graph expansion",
     "shortName": "Testing graph expansion",
+    "entryNumber": 40,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002F;</mo><mi>&#x003A6;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo>&#x0002F;</mo><msup><mi>&#x003A6;</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi></mrow></math></span>, and quadratic improvement in the walk-time dependence <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>&#x003A6;</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mo>&#x02192;</mo><msup><mi>&#x003A6;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math></span>. The mechanism is quantum fast-forwarding and amplitude estimation.",
@@ -1658,7 +1990,12 @@ window.CATALOGUE_POINTS = [
     "slug": "formula",
     "name": "AND–OR formula and game-tree evaluation",
     "shortName": "AND–OR formula and game-tree evaluation",
+    "entryNumber": 41,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>0.753</mn><mi>&#x02026;</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>N</mi><mrow><mn>0.253</mn><mi>&#x02026;</mi></mrow></msup></mrow></math></span>",
@@ -1680,13 +2017,20 @@ window.CATALOGUE_POINTS = [
         "title": "Reflections for Quantum Query Algorithms",
         "url": "https://arxiv.org/pdf/1005.1601"
       }
-    ]
+    ],
+    "strengthOrder": 1.506
   },
   {
     "slug": "matrix-product-verification-over-a-field",
     "name": "Matrix-product verification over a field",
     "shortName": "Matrix-product verification over a field",
+    "entryNumber": 42,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>5</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1708,13 +2052,19 @@ window.CATALOGUE_POINTS = [
         "title": "Checking Matrix Identities",
         "url": "https://www.math.uwaterloo.ca/~anayak/papers/Nayak08.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.2
   },
   {
     "slug": "boolean-matrix-product-verification",
     "name": "Boolean matrix-product verification",
     "shortName": "Boolean matrix-product verification",
+    "entryNumber": 43,
     "importance": "normal",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>17</mn><mo>&#x0002F;</mo><mn>12</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>7</mn><mo>&#x0002F;</mo><mn>12</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -1736,13 +2086,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Verification of Matrix Products",
         "url": "https://arxiv.org/pdf/quant-ph/0409035"
       }
-    ]
+    ],
+    "strengthOrder": 1.4117647058823528
   },
   {
     "slug": "promised-short-path-st-connectivity",
     "name": "Promised short-path s–t connectivity",
     "shortName": "Promised short-path s–t connectivity",
+    "entryNumber": 44,
     "importance": "normal",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><msqrt><mi>d</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial oracle speedup, including <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>&#x02192;</mo><msup><mi>n</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup></mrow></math></span> for the unrestricted path-length regime. The mechanism is a span program and quantum reflections.",
@@ -1767,7 +2123,13 @@ window.CATALOGUE_POINTS = [
     "slug": "global-minimum-cut",
     "name": "Global minimum cut",
     "shortName": "Global minimum cut",
+    "entryNumber": 46,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><msqrt><mi>&#x003C4;</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial oracle improvement; for bounded weight ratio and dense graphs it is <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>&#x02192;</mo><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>.",
@@ -1792,7 +2154,12 @@ window.CATALOGUE_POINTS = [
     "slug": "maxcut-approximation-with-qaoa",
     "name": "MaxCut approximation with QAOA",
     "shortName": "MaxCut approximation with QAOA",
+    "entryNumber": 49,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>p</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>0.87856</mn></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -1833,7 +2200,12 @@ window.CATALOGUE_POINTS = [
     "slug": "bounded-occurrence-max-e3lin2",
     "name": "Bounded-occurrence Max-E3LIN2",
     "shortName": "Bounded-occurrence Max-E3LIN2",
-    "importance": "normal",
+    "entryNumber": 50,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>D</mi><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -1866,7 +2238,12 @@ window.CATALOGUE_POINTS = [
     "slug": "maximum-independent-set-in-rydberg-geometric-graphs",
     "name": "Maximum independent set in Rydberg geometric graphs",
     "shortName": "Maximum independent set in Rydberg geometric graphs",
+    "entryNumber": 51,
     "importance": "high",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mi>&#x02308;</mi><mi>log</mi><mi>&#x003B4;</mi><mo>&#x0002F;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x02212;</mo><mi>p</mi><mo stretchy=\"false\">&#x00029;</mo><mi>&#x02309;</mi></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -1895,7 +2272,12 @@ window.CATALOGUE_POINTS = [
     "slug": "sherringtonkirkpatrick-spin-glass-optimization",
     "name": "Sherrington–Kirkpatrick spin-glass optimization",
     "shortName": "Sherrington–Kirkpatrick spin-glass optimization",
+    "entryNumber": 52,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>p</mi><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>C</mi><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -1932,7 +2314,12 @@ window.CATALOGUE_POINTS = [
     "slug": "exact-bounded-locality-spin-optimization-by-short-paths",
     "name": "Exact bounded-locality spin optimization by short paths",
     "shortName": "Exact bounded-locality spin optimization by short paths",
-    "importance": "normal",
+    "entryNumber": 53,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x02212;</mo><msub><mi>c</mi><mrow><mi mathvariant=\"normal\">c</mi><mi mathvariant=\"normal\">l</mi></mrow></msub><mo stretchy=\"false\">&#x00029;</mo><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x02212;</mo><msub><mi>c</mi><mrow><mi mathvariant=\"normal\">c</mi><mi mathvariant=\"normal\">l</mi></mrow></msub><mo stretchy=\"false\">&#x00029;</mo><mi>n</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -1969,7 +2356,12 @@ window.CATALOGUE_POINTS = [
     "slug": "partition-functions-and-approximate-combinatorial-counting",
     "name": "Partition functions and approximate combinatorial counting",
     "shortName": "Partition functions and approximate combinatorial counting",
+    "entryNumber": 54,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x0007C;</mo><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003B5;</mi><msqrt><mi>&#x003B4;</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mn>2</mn></msup><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial improvement for the stated sampling model, including <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mo>&#x02192;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math></span> and <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>&#x003B4;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x02192;</mo><msup><mi>&#x003B4;</mi><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup></mrow></math></span>. Quantum amplitude estimation and quantum walks supply these factors.",
@@ -2002,7 +2394,13 @@ window.CATALOGUE_POINTS = [
     "slug": "traversing-a-randomly-welded-pair-of-trees",
     "name": "Traversing a randomly welded pair of trees",
     "shortName": "Traversing a randomly welded pair of trees",
+    "entryNumber": 55,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>h</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>h</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential to polynomial, through continuous-time quantum transport and interference.",
@@ -2027,7 +2425,12 @@ window.CATALOGUE_POINTS = [
     "slug": "gibbs-sampling-and-quantum-simulated-annealing",
     "name": "Gibbs sampling and quantum simulated annealing",
     "shortName": "Gibbs sampling and quantum simulated annealing",
+    "entryNumber": 56,
     "importance": "normal",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002F;</mo><msqrt><mi>&#x003B4;</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Quadratic improvement in inverse spectral gap for the specified chain sequence, from quantum-walk phase detection and state transformations. An exponentially small gap gives an improvement in the exponential constant of that chain-based bound.",
@@ -2060,7 +2463,12 @@ window.CATALOGUE_POINTS = [
     "slug": "all-pairs-shortest-paths",
     "name": "All-pairs shortest paths",
     "shortName": "All-pairs shortest paths",
+    "entryNumber": 59,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>5</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2.998</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial for arbitrary real weights: approximately a factor <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>0.498</mn></mrow></msup></mrow></math></span> between the displayed upper bounds, with quantum logarithmic factors suppressed. The mechanism is minimum finding.",
@@ -2093,7 +2501,13 @@ window.CATALOGUE_POINTS = [
     "slug": "optimal-polynomial-intersection-by-decoded-quantum-interferometry",
     "name": "Optimal polynomial intersection by decoded quantum interferometry",
     "shortName": "Optimal polynomial intersection by decoded quantum interferometry",
+    "entryNumber": 60,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>p</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>n</mi><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>p</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Candidate exponential-to-polynomial advantage for the explicit random-instance approximation target; a superpolynomial query separation for the folded oracle family. The mechanism is decoded Fourier interference.",
@@ -2130,7 +2544,12 @@ window.CATALOGUE_POINTS = [
     "slug": "maximum-k-cut-with-variational-quantum-circuits",
     "name": "Maximum k-cut with variational quantum circuits",
     "shortName": "Maximum k-cut with variational quantum circuits",
-    "importance": "normal",
+    "entryNumber": 103,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>K</mi><mi>S</mi><mi>p</mi><mi>k</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>m</mi><mo>&#x0002C;</mo><mi>W</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mi>k</mi><mrow><mi>&#x003C9;</mi><mi>n</mi><mo>&#x0002F;</mo><mn>3</mn></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -2175,7 +2594,12 @@ window.CATALOGUE_POINTS = [
     "slug": "maximum-bisection-with-constraint-preserving-qaoa",
     "name": "Maximum bisection with constraint-preserving QAOA",
     "shortName": "Maximum bisection with constraint-preserving QAOA",
+    "entryNumber": 104,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>K</mi><mi>S</mi><mi>p</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002B;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>0.8776</mn></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -2212,7 +2636,12 @@ window.CATALOGUE_POINTS = [
     "slug": "job-shop-scheduling-with-delivery-and-changeover-costs",
     "name": "Job-shop scheduling with delivery and changeover costs",
     "shortName": "Job-shop scheduling with delivery and changeover costs",
-    "importance": "normal",
+    "entryNumber": 105,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>K</mi><mi>S</mi><mi>p</mi><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>N</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo>&#x0002C;</mo><mi>q</mi><mo>&#x0002C;</mo><mi>W</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>&#x003C9;</mi><mi>N</mi><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>L</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -2249,7 +2678,12 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-portfolio-rebalancing-with-constrained-mixers",
     "name": "Discrete portfolio rebalancing with constrained mixers",
     "shortName": "Discrete portfolio rebalancing with constrained mixers",
+    "entryNumber": 106,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>K</mi><mi>S</mi><mi>p</mi><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>3</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>W</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>3</mn><mrow><mi>&#x003C9;</mi><mi>n</mi><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>L</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -2282,7 +2716,12 @@ window.CATALOGUE_POINTS = [
     "slug": "two-community-modularity-maximization-by-variational-local-search",
     "name": "Two-community modularity maximization by variational local search",
     "shortName": "Two-community modularity maximization by variational local search",
-    "importance": "normal",
+    "entryNumber": 107,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>I</mi><mi>K</mi><mi>S</mi><mi>p</mi><msup><mi>b</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>&#x003C9;</mi><mi>n</mi><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -2319,7 +2758,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g01",
     "name": "Element distinctness and k-distinctness",
     "shortName": "Element distinctness and k-distinctness",
+    "entryNumber": 108,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup></mrow></math></span>",
@@ -2341,13 +2786,19 @@ window.CATALOGUE_POINTS = [
         "title": "Learning-Graph-Based Quantum Algorithm for k-distinctness",
         "url": "https://arxiv.org/abs/1205.1534"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g03",
     "name": "k-sum",
     "shortName": "k-sum",
+    "entryNumber": 110,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mi>k</mi><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -2376,7 +2827,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g04",
     "name": "Ordered search",
     "shortName": "Ordered search",
+    "entryNumber": 111,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>ln</mi><mi>n</mi><mo>&#x0002F;</mo><mi>&#x003C0;</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x02308;</mi><msub><mi>log</mi><mn>2</mn></msub><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mi>&#x02309;</mi></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -2401,7 +2857,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g05",
     "name": "Approximate median",
     "shortName": "Approximate median",
-    "importance": "normal",
+    "entryNumber": 112,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2419,13 +2880,20 @@ window.CATALOGUE_POINTS = [
         "title": "The quantum query complexity of approximating the median and related statistics",
         "url": "https://arxiv.org/abs/quant-ph/9804066"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g06",
     "name": "Exact string matching",
     "shortName": "Exact string matching",
+    "entryNumber": 113,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo>&#x0002B;</mo><msqrt><mi>m</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002B;</mo><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mo>&#x0002B;</mo><mi>m</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2443,13 +2911,20 @@ window.CATALOGUE_POINTS = [
         "title": "String Matching in tilde O(sqrt(n)+sqrt(m)) Quantum Time",
         "url": "https://arxiv.org/abs/quant-ph/0011049"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g07",
     "name": "Average-case multidimensional pattern matching",
     "shortName": "Average-case multidimensional pattern matching",
-    "importance": "high",
+    "entryNumber": 114,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "exp_to_subexp",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>m</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mi>d</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>d</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><msqrt><mrow><mi>log</mi><mi>m</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>m</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mi>d</mi></msup><mo>&#x0002B;</mo><msup><mi>n</mi><mrow><mi>d</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Strongest regime: exponential to subexponential in log n when m is comparable to n",
@@ -2474,7 +2949,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g08",
     "name": "Longest common substring",
     "shortName": "Longest common substring",
+    "entryNumber": 115,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2492,13 +2973,19 @@ window.CATALOGUE_POINTS = [
         "title": "Near-Optimal Quantum Algorithms for String Problems",
         "url": "https://arxiv.org/abs/2110.09696"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g09",
     "name": "Lexicographically minimal cyclic rotation",
     "shortName": "Lexicographically minimal cyclic rotation",
-    "importance": "normal",
+    "entryNumber": 116,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x02212;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -2516,13 +3003,19 @@ window.CATALOGUE_POINTS = [
         "title": "Near-Optimal Quantum Algorithms for String Problems",
         "url": "https://arxiv.org/abs/2110.09696"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g10",
     "name": "Longest square substring",
     "shortName": "Longest square substring",
-    "importance": "normal",
+    "entryNumber": 117,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2540,13 +3033,19 @@ window.CATALOGUE_POINTS = [
         "title": "Near-Optimal Quantum Algorithms for String Problems",
         "url": "https://arxiv.org/abs/2110.09696"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g12",
     "name": "Longest Lyndon substring",
     "shortName": "Longest Lyndon substring",
-    "importance": "normal",
+    "entryNumber": 118,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x02212;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -2564,13 +3063,19 @@ window.CATALOGUE_POINTS = [
         "title": "Near-Optimal Quantum Algorithms for String Problems",
         "url": "https://arxiv.org/abs/2110.09696"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g14",
     "name": "Longest palindromic substring",
     "shortName": "Longest palindromic substring",
-    "importance": "normal",
+    "entryNumber": 119,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2588,13 +3093,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Meets Fine-grained Complexity: Sublinear Time Quantum Algorithms for String Problems",
         "url": "https://arxiv.org/abs/2010.12122"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g15",
     "name": "Approximate Ulam distance",
     "shortName": "Approximate Ulam distance",
-    "importance": "normal",
+    "entryNumber": 120,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>u</mi><mo>&#x0002B;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><msqrt><mi>n</mi></msqrt><mo>&#x0002F;</mo><mi>u</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2619,7 +3130,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g16",
     "name": "Bounded edit distance",
     "shortName": "Bounded edit distance",
+    "entryNumber": 121,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mi>k</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mo>&#x0002F;</mo><mi>k</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2644,7 +3161,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g17",
     "name": "Pattern matching with mismatches",
     "shortName": "Pattern matching with mismatches",
-    "importance": "high",
+    "entryNumber": 122,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0005E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mi>k</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0005E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mo>&#x0002F;</mo><mi>k</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2669,7 +3192,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g18",
     "name": "Pattern matching with edits",
     "shortName": "Pattern matching with edits",
-    "importance": "high",
+    "entryNumber": 123,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0005E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mi>k</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0005E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mo>&#x0002F;</mo><mi>k</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2694,7 +3223,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g19",
     "name": "Lempel–Ziv factorization",
     "shortName": "Lempel–Ziv factorization",
-    "importance": "high",
+    "entryNumber": 124,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mi>z</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mo>&#x0002F;</mo><mi>z</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2719,7 +3254,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g20",
     "name": "Run-length Burrows–Wheeler transform",
     "shortName": "Run-length Burrows–Wheeler transform",
-    "importance": "high",
+    "entryNumber": 125,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mi>r</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mo>&#x0002F;</mo><mi>r</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2744,7 +3285,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g22",
     "name": "Longest common substring of run-length encoded strings",
     "shortName": "Longest common substring of run-length encoded strings",
-    "importance": "normal",
+    "entryNumber": 126,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><msup><mi>d</mi><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "O(n)",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><msup><mi>d</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn><mo>&#x02212;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2762,13 +3309,19 @@ window.CATALOGUE_POINTS = [
         "title": "Near-Optimal Quantum Algorithm for Finding the Longest Common Substring between Run-Length Encoded Strings",
         "url": "https://arxiv.org/abs/2411.02421"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g23",
     "name": "Star-free regular-language membership",
     "shortName": "Star-free regular-language membership",
-    "importance": "high",
+    "entryNumber": 127,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2786,13 +3339,19 @@ window.CATALOGUE_POINTS = [
         "title": "A Quantum Query Complexity Trichotomy for Regular Languages",
         "url": "https://arxiv.org/abs/1812.04219"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g24",
     "name": "Bounded-height Dyck language",
     "shortName": "Bounded-height Dyck language",
-    "importance": "normal",
+    "entryNumber": 128,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>n</mi><mo>&#x0002C;</mo><msqrt><mi>n</mi></msqrt><msup><mi>log</mi><mrow><mi>h</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mi>n</mi><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mo>max</mo><mo stretchy=\"false\">&#x0007B;</mo><mn>1</mn><mo>&#x0002C;</mo><msqrt><mi>n</mi></msqrt><mo>&#x0002F;</mo><msup><mi>log</mi><mrow><mi>h</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mi>n</mi><mo stretchy=\"false\">&#x0007D;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2817,7 +3376,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g25",
     "name": "Common subsequence of length k",
     "shortName": "Common subsequence of length k",
-    "importance": "normal",
+    "entryNumber": 129,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><msup><mi>log</mi><mrow><mi>k</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo>&#x0002F;</mo><msup><mi>log</mi><mrow><mi>k</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2835,13 +3399,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum divide and conquer",
         "url": "https://arxiv.org/abs/2210.06419"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g26",
     "name": "Increasing subsequence of length k",
     "shortName": "Increasing subsequence of length k",
-    "importance": "normal",
+    "entryNumber": 130,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2859,13 +3429,19 @@ window.CATALOGUE_POINTS = [
         "title": "On the quantum time complexity of divide and conquer",
         "url": "https://arxiv.org/abs/2311.16401"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-g27",
     "name": "Longest substring with distinct characters",
     "shortName": "Longest substring with distinct characters",
-    "importance": "normal",
+    "entryNumber": 131,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2883,13 +3459,19 @@ window.CATALOGUE_POINTS = [
         "title": "On the quantum time complexity of divide and conquer",
         "url": "https://arxiv.org/abs/2311.16401"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g31",
     "name": "Maximum-sum submatrix",
     "shortName": "Maximum-sum submatrix",
-    "importance": "high",
+    "entryNumber": 132,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>&#x0002F;</mo><msup><mn>2</mn><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>log</mi><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x02212;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -2911,13 +3493,19 @@ window.CATALOGUE_POINTS = [
         "title": "Faster All-Pairs Shortest Paths via Circuit Complexity",
         "url": "https://arxiv.org/abs/1312.6680"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g32",
     "name": "Euclidean closest pair",
     "shortName": "Euclidean closest pair",
-    "importance": "high",
+    "entryNumber": 133,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2935,13 +3523,19 @@ window.CATALOGUE_POINTS = [
         "title": "On the Quantum Complexity of Closest Pair and Related Problems",
         "url": "https://arxiv.org/abs/1911.01973"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g33",
     "name": "Bichromatic closest pair",
     "shortName": "Bichromatic closest pair",
+    "entryNumber": 134,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>&#x003BE;</mi><mrow><mo>&#x02212;</mo><mi>d</mi></mrow></msup><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -2959,13 +3553,19 @@ window.CATALOGUE_POINTS = [
         "title": "On the Quantum Complexity of Closest Pair and Related Problems",
         "url": "https://arxiv.org/abs/1911.01973"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g35",
     "name": "Planarity",
     "shortName": "Planarity",
+    "entryNumber": 136,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup></mrow></math></span>",
@@ -2983,13 +3583,20 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum query complexity of minor-closed graph properties",
         "url": "https://arxiv.org/abs/1011.1443"
       }
-    ]
+    ],
+    "strengthOrder": 1.3333333333333333
   },
   {
     "slug": "prior-g36",
     "name": "Cycle detection",
     "shortName": "Cycle detection",
-    "importance": "high",
+    "entryNumber": 137,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3007,13 +3614,19 @@ window.CATALOGUE_POINTS = [
         "title": "Time and Space Efficient Quantum Algorithms for Detecting Cycles and Testing Bipartiteness",
         "url": "https://arxiv.org/abs/1610.00581"
       }
-    ]
+    ],
+    "strengthOrder": 1.3333333333333333
   },
   {
     "slug": "prior-g37",
     "name": "Fixed-subgraph containment",
     "shortName": "Fixed-subgraph containment",
-    "importance": "high",
+    "entryNumber": 138,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x02212;</mo><mn>2</mn><mo>&#x0002F;</mo><mi>k</mi><mo>&#x02212;</mo><mi>t</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mi>k</mi><mo>&#x0002B;</mo><mi>t</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3038,7 +3651,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g38",
     "name": "Cycle finding from an edge list",
     "shortName": "Cycle finding from an edge list",
-    "importance": "normal",
+    "entryNumber": 139,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>m</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>4</mn><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>&#x0002B;</mo><mn>2</mn></mrow></msup><mo>&#x02212;</mo><mn>4</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "O(m)",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>m</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>&#x0002B;</mo><mn>2</mn></mrow></msup><mo>&#x02212;</mo><mn>4</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x02212;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -3063,7 +3681,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g42",
     "name": "Distributed graph diameter",
     "shortName": "Distributed graph diameter",
-    "importance": "high",
+    "entryNumber": 140,
+    "importance": "peripheral",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mi>D</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>n</mi><mo>&#x0002F;</mo><mi>D</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3088,7 +3711,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g43",
     "name": "Boolean matrix multiplication",
     "shortName": "Boolean matrix multiplication",
+    "entryNumber": 141,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><msqrt><mrow><mi>&#x02113;</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>&#x02113;</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3121,7 +3750,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g44",
     "name": "Random spanning-tree sampling",
     "shortName": "Random spanning-tree sampling",
-    "importance": "high",
+    "entryNumber": 142,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>m</mi><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>m</mi><mo>&#x0002F;</mo><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3146,7 +3781,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g45",
     "name": "Signed graph clusterability testing",
     "shortName": "Signed graph clusterability testing",
-    "importance": "high",
+    "entryNumber": 143,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3164,13 +3804,19 @@ window.CATALOGUE_POINTS = [
         "title": "(Quantum) complexity of testing signed graph clusterability",
         "url": "https://arxiv.org/abs/2311.10480"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-g46",
     "name": "Directed subgraph-freeness testing",
     "shortName": "Directed subgraph-freeness testing",
-    "importance": "high",
+    "entryNumber": 144,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>k</mi></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>k</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>k</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>k</mi></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -3195,7 +3841,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-g47",
     "name": "Directed fixed-length path containment",
     "shortName": "Directed fixed-length path containment",
-    "importance": "high",
+    "entryNumber": 145,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x02212;</mo><msub><mi>&#x003B1;</mi><mi>k</mi></msub></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><msub><mi>&#x003B1;</mi><mi>k</mi></msub></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3220,7 +3871,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q30",
     "name": "Learning a graph with edge-existence queries",
     "shortName": "Learning a graph with edge-existence queries",
-    "importance": "high",
+    "entryNumber": 217,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>m</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>m</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3238,13 +3894,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum algorithms for learning a hidden graph and beyond",
         "url": "https://arxiv.org/abs/2011.08611"
       }
-    ]
+    ],
+    "strengthOrder": 1.3333333333333333
   },
   {
     "slug": "prior-q31",
     "name": "Learning a graph with edge-parity queries",
     "shortName": "Learning a graph with edge-parity queries",
-    "importance": "high",
+    "entryNumber": 218,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>m</mi></msqrt><mi>log</mi><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo>&#x0002F;</mo><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial query separation; stronger for structured graph families",
@@ -3262,13 +3924,20 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum algorithms for learning a hidden graph and beyond",
         "url": "https://arxiv.org/abs/2011.08611"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "spatial-lattice-search",
     "name": "Spatial search on a lattice",
     "shortName": "Spatial search on a lattice",
+    "entryNumber": 194,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>N</mi><mi>log</mi><mi>N</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>N</mi><mo>&#x0002F;</mo><mi>log</mi><mi>N</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3294,13 +3963,19 @@ window.CATALOGUE_POINTS = [
         "title": "Electrostatic Limits on Quantum Spatial Search",
         "url": "https://arxiv.org/abs/2610.23560"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "factoring",
     "name": "Integer factorization",
     "shortName": "Integer factorization",
+    "entryNumber": 61,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>exp</mi><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>c</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>exp</mi><mo stretchy=\"false\">&#x00028;</mo><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3341,7 +4016,13 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-logarithms-in-finite-fields",
     "name": "Discrete logarithms in finite fields",
     "shortName": "Discrete logarithms in finite fields",
+    "entryNumber": 62,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>L</mi><mi>q</mi></msub><mo stretchy=\"false\">[</mo><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn><mo>&#x0002C;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>64</mn><mo>&#x0002F;</mo><mn>9</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">]</mo></mrow></math></span>",
     "gain": "Subexponential to polynomial for large prime fields; quasi-polynomial to polynomial in the stated small-characteristic families. The quantum mechanism is abelian Fourier sampling.",
@@ -3370,7 +4051,13 @@ window.CATALOGUE_POINTS = [
     "slug": "elliptic-curve-discrete-logarithm",
     "name": "Elliptic-curve discrete logarithm",
     "shortName": "Elliptic-curve discrete logarithm",
+    "entryNumber": 63,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>n</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Subexponential to polynomial for explicit prime-field curves, through Fourier sampling. The generic-group comparison is exponential to polynomial.",
@@ -3403,7 +4090,13 @@ window.CATALOGUE_POINTS = [
     "slug": "order-finding-in-a-black-box-cyclic-group",
     "name": "Order finding in a black-box cyclic group",
     "shortName": "Order finding in a black-box cyclic group",
+    "entryNumber": 64,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>R</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>R</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>log</mi><mi>R</mi></mrow></math></span> relative to generic order-search algorithms. Fourier sampling extracts global periodic information from the group operation.",
@@ -3432,7 +4125,12 @@ window.CATALOGUE_POINTS = [
     "slug": "pell-s-equation-and-the-real-quadratic-regulator",
     "name": "Pell's equation and the real quadratic regulator",
     "shortName": "Pell's equation and the real quadratic regulator",
+    "entryNumber": 65,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>d</mi><mo>&#x0002C;</mo><mtext>precision</mtext><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>L</mi><mi>d</mi></msub><mo stretchy=\"false\">[</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002C;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">]</mo></mrow></math></span>",
     "gain": "Subexponential to polynomial in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>log</mi><mi>d</mi></mrow></math></span>, through Fourier sampling of a periodic function over the reals.",
@@ -3457,7 +4155,12 @@ window.CATALOGUE_POINTS = [
     "slug": "the-principal-ideal-problem",
     "name": "The principal ideal problem",
     "shortName": "The principal ideal problem",
+    "entryNumber": 66,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "Polynomial time in the input parameters, Hallgren and Biasse–Song principal-ideal algorithms.",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>L</mi><mrow><mo stretchy=\"false\">&#x0007C;</mo><msub><mi>&#x00394;</mi><mi>K</mi></msub><mo stretchy=\"false\">&#x0007C;</mo></mrow></msub><mo stretchy=\"false\">[</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002C;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">]</mo></mrow></math></span>",
     "gain": "Subexponential to polynomial in the matched quadratic-field regime. Quantum Fourier methods supply the hidden-lattice information needed for the generator.",
@@ -3486,7 +4189,12 @@ window.CATALOGUE_POINTS = [
     "slug": "computing-ideal-class-groups",
     "name": "Computing ideal class groups",
     "shortName": "Computing ideal class groups",
+    "entryNumber": 67,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "Polynomial time under GRH, Biasse–Song class-group computation.",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>L</mi><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>&#x00394;</mi><mo stretchy=\"false\">&#x0007C;</mo></mrow></msub><mo stretchy=\"false\">[</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002C;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">]</mo></mrow></math></span>",
     "gain": "Subexponential to polynomial in the quadratic-field regime, through hidden-lattice Fourier methods.",
@@ -3511,7 +4219,13 @@ window.CATALOGUE_POINTS = [
     "slug": "vectorization-for-commutative-isogeny-actions",
     "name": "Vectorization for commutative isogeny actions",
     "shortName": "Vectorization for commutative isogeny actions",
+    "entryNumber": 68,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo><mspace width=\"0.167em\" /><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><msup><mn>2</mn><mi>t</mi></msup><msup><mi>p</mi><mi>k</mi></msup><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>log</mi><mi>N</mi></mrow></math></span> for generic actions with <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mi>t</mi></msup><msup><mi>p</mi><mi>k</mi></msup><mi>G</mi><mo>&#x0003D;</mo><mo stretchy=\"false\">&#x0007B;</mo><mn>0</mn><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span> and fixed <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>p</mi><mo>&#x0002C;</mo><mi>t</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></math></span>. General abelian hidden shifts give exponential-to-subexponential improvement, with power saving in the exponent. These comparisons use the action-oracle model; explicit isogeny costs include arithmetic evaluation.",
@@ -3548,7 +4262,12 @@ window.CATALOGUE_POINTS = [
     "slug": "supersingular-isogeny-path-finding",
     "name": "Supersingular isogeny path finding",
     "shortName": "Supersingular isogeny path finding",
+    "entryNumber": 69,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>p</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>p</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Polynomial speedup through a smaller exponential constant in the input bit length <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>log</mi><mi>p</mi></mrow></math></span>, from <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></math></span> to <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></math></span>. Amplitude amplification is an essential quantum component.",
@@ -3577,7 +4296,13 @@ window.CATALOGUE_POINTS = [
     "slug": "sidh-secret-isogeny-recovery",
     "name": "SIDH secret-isogeny recovery",
     "shortName": "SIDH secret-isogeny recovery",
+    "entryNumber": 70,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>p</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>p</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -3610,7 +4335,13 @@ window.CATALOGUE_POINTS = [
     "slug": "the-euclidean-shortest-vector-problem",
     "name": "The Euclidean shortest vector problem",
     "shortName": "The Euclidean shortest vector problem",
+    "entryNumber": 71,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.247</mn><mi>n</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.409</mn><mi>n</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.162</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -3640,13 +4371,19 @@ window.CATALOGUE_POINTS = [
         "title": "Improved Classical and Quantum Algorithms for the Shortest Vector Problem via Bounded Distance Decoding",
         "url": "https://ir.cwi.nl/pub/35122/35122.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.6558704453441295
   },
   {
     "slug": "isomorphism-to-the-standard-integer-lattice",
     "name": "Isomorphism to the standard integer lattice",
     "shortName": "Isomorphism to the standard integer lattice",
-    "importance": "normal",
+    "entryNumber": 72,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.1235</mn><mi>n</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.2045</mn><mi>n</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.081</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -3668,13 +4405,20 @@ window.CATALOGUE_POINTS = [
         "title": "Superlattice Methods for the Shortest Vector Problem and Discrete Gaussian Sampling",
         "url": "https://eprint.iacr.org/2026/2761"
       }
-    ]
+    ],
+    "strengthOrder": 1.6558704453441295
   },
   {
     "slug": "learning-parity-with-noisy-quantum-examples",
     "name": "Learning parity with noisy quantum examples",
     "shortName": "Learning parity with noisy quantum examples",
+    "entryNumber": 73,
     "importance": "high",
+    "resourceModels": [
+      "gate",
+      "other"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Subexponential to polynomial in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>n</mi></mrow></math></span>, through Fourier interference in the quantum examples. The availability of coherent examples is part of the input model.",
@@ -3703,7 +4447,13 @@ window.CATALOGUE_POINTS = [
     "slug": "the-euclidean-closest-vector-problem",
     "name": "The Euclidean closest vector problem",
     "shortName": "The Euclidean closest vector problem",
+    "entryNumber": 74,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>T</mi></msqrt><mspace width=\"0.167em\" /><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Quadratic acceleration in enumeration-tree size. The total-runtime comparison with the best classical solver depends on <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>T</mi></mrow></math></span>, basis quality and the target-distance promise.",
@@ -3736,7 +4486,12 @@ window.CATALOGUE_POINTS = [
     "slug": "bounded-distance-decoding-on-periodic-lattices",
     "name": "Bounded distance decoding on periodic lattices",
     "shortName": "Bounded distance decoding on periodic lattices",
+    "entryNumber": 75,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>log</mi><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "Deterministic polynomial time in the same radius regime, Ducas–van Woerden decoding as developed by Allen et al.",
     "gain": "No established asymptotic speedup",
@@ -3765,7 +4520,12 @@ window.CATALOGUE_POINTS = [
     "slug": "learning-with-errors-with-classical-samples",
     "name": "Learning with errors with classical samples",
     "shortName": "Learning with errors with classical samples",
+    "entryNumber": 76,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.2563</mn><mi>&#x003B2;</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003B2;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.2925</mn><mi>&#x003B2;</mi><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003B2;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Polynomial speedup through a smaller exponential constant for the matched lattice-reduction subroutines. In the bounded-error regimes, the subexponential classical algorithms enter the minimum for the complete attack.",
@@ -3802,7 +4562,12 @@ window.CATALOGUE_POINTS = [
     "slug": "short-integer-solutions-with-a-wide-public-matrix",
     "name": "Short integer solutions with a wide public matrix",
     "shortName": "Short integer solutions with a wide public matrix",
+    "entryNumber": 77,
     "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>q</mi></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002C;</mo><mi>log</mi><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -3831,7 +4596,12 @@ window.CATALOGUE_POINTS = [
     "slug": "binary-syndrome-decoding",
     "name": "Binary syndrome decoding",
     "shortName": "Binary syndrome decoding",
+    "entryNumber": 78,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><msqrt><mrow><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00028;</mo><mfrac linethickness=\"0\"><mi>n</mi><mi>w</mi></mfrac><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00029;</mo><mo>&#x0002F;</mo><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00028;</mo><mfrac linethickness=\"0\"><mrow><mi>n</mi><mo>&#x02212;</mo><mi>k</mi></mrow><mrow><mi>w</mi></mrow></mfrac><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00029;</mo></mrow></msqrt></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mi>p</mi></mrow></math></span>",
     "gain": "Polynomial speedup for dense random codes: quadratic acceleration of Prange and further reductions in the exponential constant from quantum walks. Sparse parity checks have the stated subexponential classical comparator.",
@@ -3868,7 +4638,13 @@ window.CATALOGUE_POINTS = [
     "slug": "minimum-weight-nonzero-codewords",
     "name": "Minimum-weight nonzero codewords",
     "shortName": "Minimum-weight nonzero codewords",
+    "entryNumber": 79,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>k</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0</mn><mi>k</mi></mrow></msup></mrow></math></span>",
@@ -3904,7 +4680,12 @@ window.CATALOGUE_POINTS = [
     "slug": "random-subset-sum-at-cryptographic-density",
     "name": "Random subset sum at cryptographic density",
     "shortName": "Random subset sum at cryptographic density",
+    "entryNumber": 80,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mn>0.2182</mn><mi>n</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mn>0.283</mn><mi>n</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0.0648</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -3926,13 +4707,19 @@ window.CATALOGUE_POINTS = [
         "title": "Subset Sum in Time $2^{0.49n}$",
         "url": "https://github.com/openai/math/tree/main/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026"
       }
-    ]
+    ],
+    "strengthOrder": 1.2969752520623279
   },
   {
     "slug": "boolean-multivariate-quadratic-equations",
     "name": "Boolean multivariate quadratic equations",
     "shortName": "Boolean multivariate quadratic equations",
+    "entryNumber": 81,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><msup><mi>n</mi><mn>2</mn></msup><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002C;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mn>0.6943</mn><mi>n</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mo>&#x02212;</mo><mn>0.3057</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -3969,7 +4756,13 @@ window.CATALOGUE_POINTS = [
     "slug": "collision",
     "name": "Hash collisions",
     "shortName": "Hash collisions",
+    "entryNumber": 84,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -3995,13 +4788,20 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "claw",
     "name": "Claw finding and double-encryption key recovery",
     "shortName": "Claw finding and double-encryption key recovery",
+    "entryNumber": 85,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -4027,13 +4827,20 @@ window.CATALOGUE_POINTS = [
         "title": "The Exponential Time Hypothesis Is False",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "generalized-birthday-search-random-k-xor",
     "name": "Generalized birthday search: random k-XOR",
     "shortName": "Generalized birthday search: random k-XOR",
+    "entryNumber": 87,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>&#x0230A;</mi><msub><mi>log</mi><mn>2</mn></msub><mi>k</mi><mi>&#x0230B;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mi>&#x0230A;</mi><msub><mi>log</mi><mn>2</mn></msub><mi>k</mi><mi>&#x0230B;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -4065,7 +4872,13 @@ window.CATALOGUE_POINTS = [
     "slug": "even",
     "name": "Even–Mansour recovery with quantum queries",
     "shortName": "Even–Mansour recovery with quantum queries",
+    "entryNumber": 88,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002F;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -4093,7 +4906,13 @@ window.CATALOGUE_POINTS = [
     "slug": "evenmansour-recovery-with-classical-queries",
     "name": "Even–Mansour recovery with classical queries",
     "shortName": "Even–Mansour recovery with classical queries",
+    "entryNumber": 89,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>&#x0002F;</mo><mi>D</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo>&#x0002F;</mo><mi>D</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -4121,7 +4940,13 @@ window.CATALOGUE_POINTS = [
     "slug": "differential-and-linear-cryptanalysis",
     "name": "Differential and linear cryptanalysis",
     "shortName": "Differential and linear cryptanalysis",
+    "entryNumber": 90,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>p</mi><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>p</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Quadratic improvements in the specified sampling and search components, from amplitude amplification or estimation. The exponent of a complete attack depends on the selected characteristic and key-recovery strategy.",
@@ -4154,7 +4979,12 @@ window.CATALOGUE_POINTS = [
     "slug": "vector-subset-sum-over-f3",
     "name": "Vector subset sum over F3",
     "shortName": "Vector subset sum over F3",
+    "entryNumber": 101,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002F;</mo><mi>n</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><msub><mi>O</mi><mi>&#x003BA;</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mi>&#x02308;</mi><msup><mi>n</mi><mn>2</mn></msup><mo>&#x0002F;</mo><mi>m</mi><mi>&#x02309;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>m</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002F;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Subexponential to polynomial in the strongest comparison. The quantum tradeoff reaches polynomial time throughout <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>m</mi><mo>&#x0003D;</mo><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>, extending below the smallest reported classical polynomial-time vector-count threshold. The general bounds also describe intermediate improvements when both algorithms have superpolynomial time; their degree depends on the input density <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>m</mi><mo>&#x0002F;</mo><mi>n</mi></mrow></math></span>.",
@@ -4191,7 +5021,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a01",
     "name": "Finite abelian-group decomposition",
     "shortName": "Finite abelian-group decomposition",
+    "entryNumber": 146,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in the generic representation",
@@ -4224,7 +5060,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a02",
     "name": "Isomorphism of coprime abelian-by-cyclic groups",
     "shortName": "Isomorphism of coprime abelian-by-cyclic groups",
-    "importance": "high",
+    "entryNumber": 147,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential to polynomial in log N",
@@ -4249,7 +5091,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a04",
     "name": "Group commutativity",
     "shortName": "Group commutativity",
-    "importance": "high",
+    "entryNumber": 148,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>k</mi><mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x003A9;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>k</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -4267,13 +5114,20 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum Complexity of Testing Group Commutativity",
         "url": "https://arxiv.org/abs/quant-ph/0506265"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "prior-a05",
     "name": "Basis representation of a finite black-box ring",
     "shortName": "Basis representation of a finite black-box ring",
-    "importance": "high",
+    "entryNumber": 149,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>R</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x0007C;</mo><mi>R</mi><msup><mo stretchy=\"false\">&#x0007C;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in log |R|",
@@ -4302,7 +5156,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a06",
     "name": "Ideal operations in finite rings",
     "shortName": "Ideal operations in finite rings",
-    "importance": "high",
+    "entryNumber": 150,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>R</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x0007C;</mo><mi>R</mi><msup><mo stretchy=\"false\">&#x0007C;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Strongest regime: generic black-box input",
@@ -4327,7 +5187,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a07",
     "name": "Multilinear identity testing over a finite ring",
     "shortName": "Multilinear identity testing over a finite ring",
-    "importance": "normal",
+    "entryNumber": 151,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mi>&#x003B1;</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mi>m</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><msup><mi>k</mi><mrow><mi>m</mi><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>4</mn><mi>m</mi></msup><mi>m</mi><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial in k for fixed m and alpha",
@@ -4352,7 +5217,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a08",
     "name": "Discrete logarithms in finite semigroups",
     "shortName": "Discrete logarithms in finite semigroups",
-    "importance": "high",
+    "entryNumber": 152,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>S</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mo stretchy=\"false\">&#x0007C;</mo><mi>S</mi><msup><mo stretchy=\"false\">&#x0007C;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in log |S|",
@@ -4377,7 +5248,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a09",
     "name": "Constructive membership in a commutative semigroup",
     "shortName": "Constructive membership in a commutative semigroup",
-    "importance": "normal",
+    "entryNumber": 153,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "O(kN)",
     "gain": "Polynomial query improvement over generic closure enumeration",
@@ -4402,7 +5278,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a10",
     "name": "Semidirect discrete logarithm",
     "shortName": "Semidirect discrete logarithm",
-    "importance": "high",
+    "entryNumber": 154,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>r</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial when r is exponential in the encoding length",
@@ -4427,7 +5309,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a11",
     "name": "Polynomial factorization over a finite field",
     "shortName": "Polynomial factorization over a finite field",
-    "importance": "high",
+    "entryNumber": 155,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>4</mn><mo>&#x0002F;</mo><mn>3</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><msup><mi>log</mi><mrow><mn>2</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>3</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><msup><mi>log</mi><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mi>q</mi><mo>&#x0002B;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><msup><mi>log</mi><mrow><mn>2</mn><mo>&#x0002B;</mo><mi>o</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial degree saving in the applicable field-size regime",
@@ -4445,13 +5332,19 @@ window.CATALOGUE_POINTS = [
         "title": "Toward an Optimal Quantum Algorithm for Polynomial Factorization over Finite Fields",
         "url": "https://arxiv.org/abs/1807.09675"
       }
-    ]
+    ],
+    "strengthOrder": 1.125
   },
   {
     "slug": "prior-a12",
     "name": "Polynomial interpolation over finite fields",
     "shortName": "Polynomial interpolation over finite fields",
-    "importance": "high",
+    "entryNumber": 156,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x02308;</mi><mfrac><mrow><mi>d</mi></mrow><mrow><mi>n</mi><mo>&#x0002B;</mo><mi>d</mi></mrow></mfrac><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00028;</mo><mfrac linethickness=\"0\"><mrow><mi>n</mi><mo>&#x0002B;</mo><mi>d</mi></mrow><mrow><mi>d</mi></mrow></mfrac><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00029;</mo><mi>&#x02309;</mi></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00028;</mo><mfrac linethickness=\"0\"><mrow><mi>n</mi><mo>&#x0002B;</mo><mi>d</mi></mrow><mrow><mi>d</mi></mrow></mfrac><mo minsize=\"2.047em\" maxsize=\"2.047em\">&#x00029;</mo></mrow></math></span>",
     "gain": "(n+d)/d",
@@ -4480,7 +5373,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a15",
     "name": "Shifted multiplicative characters",
     "shortName": "Shifted multiplicative characters",
-    "importance": "high",
+    "entryNumber": 158,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>O</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial relative to shift enumeration",
@@ -4505,7 +5404,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a16",
     "name": "Hidden shifts of bent Boolean functions",
     "shortName": "Hidden shifts of bent Boolean functions",
+    "entryNumber": 159,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "O(n)",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential to polynomial query separation",
@@ -4530,7 +5434,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a17",
     "name": "Random Boolean hidden shift",
     "shortName": "Random Boolean hidden shift",
-    "importance": "normal",
+    "entryNumber": 160,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "O(1)",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -4554,7 +5463,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a18",
     "name": "Generalized hidden shift",
     "shortName": "Generalized hidden shift",
+    "entryNumber": 161,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in log N",
@@ -4579,7 +5494,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a19",
     "name": "Hidden subgroups of selected semidirect-product groups",
     "shortName": "Hidden subgroups of selected semidirect-product groups",
-    "importance": "high",
+    "entryNumber": 162,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo></mrow></math></span>",
     "gain": "Exponential or subexponential to polynomial in the strongest stated regime.",
@@ -4604,7 +5525,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a20",
     "name": "Hidden subgroups of nilpotency-class-two groups",
     "shortName": "Hidden subgroups of nilpotency-class-two groups",
-    "importance": "high",
+    "entryNumber": 163,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><msup><mo stretchy=\"false\">&#x0007C;</mo><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential to polynomial",
@@ -4629,7 +5556,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a21",
     "name": "Normal hidden subgroup",
     "shortName": "Normal hidden subgroup",
-    "importance": "high",
+    "entryNumber": 164,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><msup><mo stretchy=\"false\">&#x0007C;</mo><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential to polynomial in log |G|",
@@ -4654,7 +5586,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a22",
     "name": "Hidden quadratic level sets",
     "shortName": "Hidden quadratic level sets",
-    "importance": "high",
+    "entryNumber": 165,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>log</mi><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>q</mi><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential or subexponential to polynomial in the strongest stated regime.",
@@ -4679,7 +5617,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a23",
     "name": "Hidden quadratic and cubic polynomial graphs",
     "shortName": "Hidden quadratic and cubic polynomial graphs",
-    "importance": "high",
+    "entryNumber": 166,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>q</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in log q",
@@ -4708,7 +5652,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a24",
     "name": "Zeta functions of curves over finite fields",
     "shortName": "Zeta functions of curves over finite fields",
-    "importance": "high",
+    "entryNumber": 167,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo>&#x0002C;</mo><mi>log</mi><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>q</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><msub><mi>O</mi><mi>g</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential or subexponential to polynomial in the strongest stated regime.",
@@ -4733,7 +5682,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a39",
     "name": "Multicollisions in a random function",
     "shortName": "Multicollisions in a random function",
-    "importance": "high",
+    "entryNumber": 176,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>&#x02113;</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>&#x02113;</mi></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>&#x02113;</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mi>&#x02113;</mi></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>N</mi><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>&#x02113;</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mi>&#x02113;</mi><mo>&#x02212;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>&#x02113;</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>&#x02113;</mi></msup><mo>&#x02212;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
@@ -4758,7 +5712,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a40",
     "name": "Distinguishing three-round Feistel networks",
     "shortName": "Distinguishing three-round Feistel networks",
-    "importance": "high",
+    "entryNumber": 177,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "O(n)",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002F;</mo><mi>n</mi></mrow></math></span>",
@@ -4782,7 +5741,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a41",
     "name": "CBC-MAC forgery under superposition access",
     "shortName": "CBC-MAC forgery under superposition access",
-    "importance": "high",
+    "entryNumber": 178,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in the superposition-query attack model",
@@ -4807,7 +5771,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a42",
     "name": "Hidden radius over a finite field",
     "shortName": "Hidden radius over a finite field",
-    "importance": "high",
+    "entryNumber": 179,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>d</mi><mi>log</mi><mi>q</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>q</mi><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>d</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "Exponential or subexponential to polynomial in the strongest stated regime.",
@@ -4832,7 +5802,13 @@ window.CATALOGUE_POINTS = [
     "slug": "yz-codeword-hash-search",
     "name": "Codeword search with random hash constraints",
     "shortName": "Codeword search with random hash constraints",
+    "entryNumber": 180,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003BB;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><msup><mi>&#x003BB;</mi><mi>c</mi></msup></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><msup><mi>&#x003BB;</mi><mi>c</mi></msup></mrow></msup><mo>&#x0002F;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003BB;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -4857,7 +5833,12 @@ window.CATALOGUE_POINTS = [
     "slug": "trapdoor-claw-proof-quantumness",
     "name": "Interactive proofs of quantumness",
     "shortName": "Interactive proofs of quantumness",
+    "entryNumber": 181,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003BB;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>&#x0002B;</mo><mn>4</mn><msub><mi>p</mi><mrow><mi mathvariant=\"normal\">C</mi><mi mathvariant=\"normal\">H</mi><mi mathvariant=\"normal\">S</mi><mi mathvariant=\"normal\">H</mi></mrow></msub><mo>&#x02212;</mo><mn>4</mn><mo>&#x02264;</mo><mo>negl</mo><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003BB;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial quantum proving versus superpolynomial classical attacks under the selected cryptographic assumption.",
@@ -4886,7 +5867,12 @@ window.CATALOGUE_POINTS = [
     "slug": "discrete-logarithm-concept-learning",
     "name": "Learning discrete-logarithm interval concepts",
     "shortName": "Learning discrete-logarithm interval concepts",
-    "importance": "high",
+    "entryNumber": 193,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002F;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Subexponential known classical preprocessing to polynomial quantum learning.",
@@ -4911,7 +5897,12 @@ window.CATALOGUE_POINTS = [
     "slug": "local",
     "name": "Local minima on the Boolean hypercube",
     "shortName": "Local minima on the Boolean hypercube",
+    "entryNumber": 91,
     "importance": "normal",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>N</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>6</mn></mrow></msup><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>N</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>3</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -4933,13 +5924,19 @@ window.CATALOGUE_POINTS = [
         "title": "Lower Bounds for Local Search by Quantum Arguments",
         "url": "https://arxiv.org/pdf/quant-ph/0307149"
       }
-    ]
+    ],
+    "strengthOrder": 1.5
   },
   {
     "slug": "total-boolean-decision-problems-a-fourth-power-bound",
     "name": "Total Boolean decision problems: a fourth-power bound",
     "shortName": "Total Boolean decision problems: a fourth-power bound",
+    "entryNumber": 92,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>Q</mi><mo stretchy=\"false\">&#x00028;</mo><mi>f</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>D</mi><mo stretchy=\"false\">&#x00028;</mo><mi>f</mi><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0003D;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>Q</mi><mo stretchy=\"false\">&#x00028;</mo><mi>f</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mn>4</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "A polynomial upper bound on the possible query advantage, including separations greater than quadratic. The fourth-power relationship concerns deterministic classical complexity.",
@@ -4964,7 +5961,12 @@ window.CATALOGUE_POINTS = [
     "slug": "symmetric-promise-problems-and-graph-properties",
     "name": "Symmetric promise problems and graph properties",
     "shortName": "Symmetric promise problems and graph properties",
-    "importance": "normal",
+    "entryNumber": 93,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mo>&#x0002F;</mo><mi>&#x003B5;</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>exp</mi><mo stretchy=\"false\">&#x00028;</mo><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>k</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial query complexity in <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>k</mi></mrow></math></span> for adjacency-list testing of <span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi mathvariant=\"script\">P</mi><mi>k</mi></msub></mrow></math></span>. Full permutation symmetry and adjacency-matrix graph symmetry impose the stated polynomial limits.",
@@ -4993,7 +5995,12 @@ window.CATALOGUE_POINTS = [
     "slug": "exact-counting-and-parity-of-feasible-solutions",
     "name": "Exact counting and parity of feasible solutions",
     "shortName": "Exact counting and parity of feasible solutions",
+    "entryNumber": 94,
     "importance": "normal",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x02308;</mi><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn><mi>&#x02309;</mi></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>N</mi></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5022,7 +6029,12 @@ window.CATALOGUE_POINTS = [
     "slug": "fine-grained-complexity-of-satisfiability-and-string-problems",
     "name": "Fine-grained complexity of satisfiability and string problems",
     "shortName": "Fine-grained complexity of satisfiability and string problems",
+    "entryNumber": 96,
     "importance": "normal",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002B;</mo><mi>m</mi><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><msub><mi>O</mi><mi>k</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><msup><mn>2</mn><mrow><msub><mi>O</mi><mi>k</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mi>log</mi><mi>log</mi><mi>n</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5055,7 +6067,13 @@ window.CATALOGUE_POINTS = [
     "slug": "stoquastic-frustration-free-constraint-satisfaction",
     "name": "Stoquastic frustration-free constraint satisfaction",
     "shortName": "Stoquastic frustration-free constraint satisfaction",
-    "importance": "normal",
+    "entryNumber": 97,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate",
+      "other"
+    ],
+    "strengthCategory": "none",
     "Q": "Polynomial evolution time for a suitably gapped, initialized path, stoquastic frustration-free adiabatic evolution.",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><msup><mi>&#x003B4;</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5080,7 +6098,13 @@ window.CATALOGUE_POINTS = [
     "slug": "local-hamiltonian-ground-energy-optimization",
     "name": "Local Hamiltonian ground-energy optimization",
     "shortName": "Local Hamiltonian ground-energy optimization",
+    "entryNumber": 98,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>O</mi><mo>&#x0002A;</mo></msup><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mn>0</mn><mi>n</mi></mrow></msup></mrow></math></span>",
@@ -5116,7 +6140,13 @@ window.CATALOGUE_POINTS = [
     "slug": "global-optimization-of-variational-circuit-parameters",
     "name": "Global optimization of variational-circuit parameters",
     "shortName": "Global optimization of variational-circuit parameters",
-    "importance": "normal",
+    "entryNumber": 99,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>K</mi><msup><mi>&#x003B4;</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>n</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5149,7 +6179,13 @@ window.CATALOGUE_POINTS = [
     "slug": "adiabatic-optimization-spectral-gap-costs-and-oracle-bounds",
     "name": "Adiabatic optimization: spectral-gap costs and oracle bounds",
     "shortName": "Adiabatic optimization: spectral-gap costs and oracle bounds",
+    "entryNumber": 100,
     "importance": "normal",
+    "resourceModels": [
+      "oracle",
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>N</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Tight square-root oracle improvement for unstructured search; the general-path runtime depends on the gap and derivatives. The search schedule realizes the adiabatic form of Grover&#x27;s improvement.",
@@ -5182,7 +6218,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a31",
     "name": "Jones polynomial approximation",
     "shortName": "Jones polynomial approximation",
+    "entryNumber": 168,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>q</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>w</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>s</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime",
@@ -5215,7 +6256,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a33",
     "name": "HOMFLY polynomial approximation",
     "shortName": "HOMFLY polynomial approximation",
-    "importance": "high",
+    "entryNumber": 170,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>q</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>w</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>s</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime",
@@ -5244,7 +6290,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a34",
     "name": "Additive approximation of the planar Tutte polynomial",
     "shortName": "Additive approximation of the planar Tutte polynomial",
-    "importance": "high",
+    "entryNumber": 171,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>q</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>w</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>s</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime",
@@ -5273,7 +6324,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a35",
     "name": "Turaev–Viro invariant",
     "shortName": "Turaev–Viro invariant",
-    "importance": "high",
+    "entryNumber": 172,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>q</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>w</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>s</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime",
@@ -5302,7 +6358,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a36",
     "name": "Witten–Reshetikhin–Turaev invariant",
     "shortName": "Witten–Reshetikhin–Turaev invariant",
-    "importance": "normal",
+    "entryNumber": 173,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>q</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>w</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>s</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime",
@@ -5331,7 +6392,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a37",
     "name": "Link invariants from quantum doubles of finite groups",
     "shortName": "Link invariants from quantum doubles of finite groups",
-    "importance": "high",
+    "entryNumber": 174,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>m</mi><mo>&#x0002C;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>m</mi><mo>&#x0002C;</mo><mi>log</mi><mo stretchy=\"false\">&#x0007C;</mo><mi>G</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5360,7 +6426,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-a38",
     "name": "Quadratically signed weight enumerators",
     "shortName": "Quadratically signed weight enumerators",
-    "importance": "high",
+    "entryNumber": 175,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>L</mi><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B5;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>min</mo><mo stretchy=\"false\">&#x0007B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>q</mi></msup><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>w</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo>&#x0002C;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo stretchy=\"false\">&#x00029;</mo><msup><mn>2</mn><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>s</mi><mo>&#x0002F;</mo><msqrt><mrow><mi>log</mi><mi>s</mi></mrow></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mo stretchy=\"false\">&#x0007D;</mo></mrow></math></span>",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime",
@@ -5389,7 +6460,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q01",
     "name": "Deutsch–Jozsa promise problem",
     "shortName": "Deutsch–Jozsa promise problem",
+    "entryNumber": 198,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "1",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0002B;</mo><mn>1</mn></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></msup><mtext>&#x000A0;for&#x000A0;exact&#x000A0;decision</mtext></mrow></math></span>",
@@ -5413,7 +6490,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q04",
     "name": "Forrelation",
     "shortName": "Forrelation",
+    "entryNumber": 199,
     "importance": "high",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "O(1)",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5437,7 +6520,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q05",
     "name": "Fourier sampling of a Boolean function",
     "shortName": "Fourier sampling of a Boolean function",
-    "importance": "high",
+    "entryNumber": 200,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "1",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5461,7 +6550,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q08",
     "name": "Full oracle interrogation",
     "shortName": "Full oracle interrogation",
-    "importance": "high",
+    "entryNumber": 201,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002B;</mo><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>N</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>N</mi></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5486,7 +6580,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q09",
     "name": "Oracle identification",
     "shortName": "Oracle identification",
-    "importance": "high",
+    "entryNumber": 202,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>M</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>M</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>M</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5504,13 +6603,20 @@ window.CATALOGUE_POINTS = [
         "title": "An optimal quantum algorithm for the oracle identification problem",
         "url": "https://arxiv.org/abs/1311.7685"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "prior-q26",
     "name": "Boolean-function isomorphism under coordinate permutations",
     "shortName": "Boolean-function isomorphism under coordinate permutations",
-    "importance": "high",
+    "entryNumber": 215,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle",
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mover><mi>&#x00398;</mi><mo>&#x0007E;</mo></mover><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002F;</mo><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5534,7 +6640,12 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q45",
     "name": "Testing one-to-one periodicity",
     "shortName": "Testing one-to-one periodicity",
-    "importance": "high",
+    "entryNumber": 229,
+    "importance": "peripheral",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mi>O</mi><mi>&#x003B5;</mi></msub><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></msup><mo>&#x0002F;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Exponential to polynomial in the oracle address length log n",
@@ -5558,7 +6669,13 @@ window.CATALOGUE_POINTS = [
     "slug": "prior-q46",
     "name": "PAC learning in the large-error regime",
     "shortName": "PAC learning in the large-error regime",
-    "importance": "high",
+    "entryNumber": 230,
+    "importance": "peripheral",
+    "resourceModels": [
+      "gate",
+      "other"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mrow><mn>2</mn><mi>k</mi></mrow></msup><mo>&#x0002F;</mo><mi>&#x003BB;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Superpolynomial separation; exponential or subexponential regimes depend on lambda",
@@ -5583,7 +6700,12 @@ window.CATALOGUE_POINTS = [
     "slug": "classical-verification-bqp",
     "name": "Classical verification of quantum computation",
     "shortName": "Classical verification of quantum computation",
+    "entryNumber": 182,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>T</mi><mo>&#x0002C;</mo><mi>&#x003BB;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>poly</mo><mo stretchy=\"false\">&#x00028;</mo><mi>T</mi><mo>&#x0002C;</mo><mi>&#x003BB;</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5608,7 +6730,12 @@ window.CATALOGUE_POINTS = [
     "slug": "certified-randomness",
     "name": "Certified randomness from an untrusted quantum device",
     "shortName": "Certified randomness from an untrusted quantum device",
+    "entryNumber": 183,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>71</mn><mrow><mo>&#x0002C;</mo></mrow><mn>313</mn></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1.1</mn><mo>&#x000D7;</mo><msup><mn>10</mn><mrow><mn>18</mn></mrow></msup></mrow></math></span>",
     "gain": "No established asymptotic speedup",
@@ -5637,7 +6764,12 @@ window.CATALOGUE_POINTS = [
     "slug": "random-circuit-sampling",
     "name": "Random circuit sampling",
     "shortName": "Random circuit sampling",
+    "entryNumber": 184,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo>&#x0002B;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Ideal sampling compares polynomial quantum cost with the best applicable exponential or subexponential generic classical simulator.",
@@ -5678,7 +6810,12 @@ window.CATALOGUE_POINTS = [
     "slug": "fock-boson-sampling",
     "name": "Fock-state boson sampling",
     "shortName": "Fock-state boson sampling",
+    "entryNumber": 185,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>m</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><msup><mn>2</mn><mi>n</mi></msup><mo>&#x0002B;</mo><mi>m</mi><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Ideal sampling compares polynomial optical resources with exponential classical bounds, keeping photon and mode counts independent.",
@@ -5715,7 +6852,12 @@ window.CATALOGUE_POINTS = [
     "slug": "gaussian-boson-sampling",
     "name": "Gaussian boson sampling",
     "shortName": "Gaussian boson sampling",
+    "entryNumber": 186,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>m</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>m</mi><msup><mi>N</mi><mn>3</mn></msup><msup><mn>2</mn><mrow><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "General ideal instances compare polynomial optical resources with exponential hafnian-based sampling time; structure and loss determine the comparator.",
@@ -5756,7 +6898,12 @@ window.CATALOGUE_POINTS = [
     "slug": "iqp-sampling",
     "name": "Sampling commuting quantum circuits",
     "shortName": "Sampling commuting quantum circuits",
+    "entryNumber": 187,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><mo>&#x0002B;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial quantum sampling versus the best applicable exponential or subexponential classical simulator.",
@@ -5793,7 +6940,12 @@ window.CATALOGUE_POINTS = [
     "slug": "dqc1-trace-estimation",
     "name": "Normalized trace estimation for a quantum circuit",
     "shortName": "Normalized trace estimation for a quantum circuit",
+    "entryNumber": 188,
     "importance": "high",
+    "resourceModels": [
+      "gate"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>g</mi><msup><mn>2</mn><mi>n</mi></msup><msup><mi>&#x003B5;</mi><mrow><mo>&#x02212;</mo><mn>2</mn></mrow></msup><mi>log</mi><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003B4;</mi><mo stretchy=\"false\">&#x00029;</mo><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "Polynomial quantum gates versus the best applicable exponential or subexponential generic classical trace computation.",
@@ -5830,7 +6982,12 @@ window.CATALOGUE_POINTS = [
     "slug": "two-dimensional-hidden-linear-function",
     "name": "Two-dimensional hidden linear function",
     "shortName": "Two-dimensional hidden linear function",
+    "entryNumber": 189,
     "importance": "high",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "O(1)",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5858,7 +7015,12 @@ window.CATALOGUE_POINTS = [
     "slug": "equality-quantum-fingerprinting",
     "name": "Equality in simultaneous-message communication",
     "shortName": "Equality in simultaneous-message communication",
+    "entryNumber": 190,
     "importance": "high",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo>&#x0002F;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5882,7 +7044,12 @@ window.CATALOGUE_POINTS = [
     "slug": "hidden-matching-communication",
     "name": "Hidden matching in one-way communication",
     "shortName": "Hidden matching in one-way communication",
+    "entryNumber": 191,
     "importance": "high",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo>&#x0002F;</mo><mi>log</mi><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5910,7 +7077,12 @@ window.CATALOGUE_POINTS = [
     "slug": "set-disjointness-communication",
     "name": "Set disjointness in two-party communication",
     "shortName": "Set disjointness in two-party communication",
+    "entryNumber": 192,
     "importance": "high",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x00398;</mi><mo stretchy=\"false\">&#x00028;</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5932,13 +7104,19 @@ window.CATALOGUE_POINTS = [
         "title": "Quantum communication complexity of symmetric predicates",
         "url": "https://arxiv.org/abs/quant-ph/0204025"
       }
-    ]
+    ],
+    "strengthOrder": 2.0
   },
   {
     "slug": "general-hsp-query-identification",
     "name": "Hidden subgroup identification in a general finite group",
     "shortName": "Hidden subgroup identification in a general finite group",
+    "entryNumber": 195,
     "importance": "high",
+    "resourceModels": [
+      "oracle"
+    ],
+    "strengthCategory": "to_polynomial",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "gain": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003A9;</mi><mo stretchy=\"false\">&#x00028;</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msup><mo>&#x0002F;</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
@@ -5971,7 +7149,12 @@ window.CATALOGUE_POINTS = [
     "slug": "anonymous-leader-election",
     "name": "Exact leader election in anonymous networks",
     "shortName": "Exact leader election in anonymous networks",
-    "importance": "normal",
+    "entryNumber": 196,
+    "importance": "peripheral",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>O</mi><mo stretchy=\"false\">&#x00028;</mo><mi>n</mi><mo stretchy=\"false\">&#x00029;</mo></mrow></math></span>",
     "C": "Exact bounded-time leader election is impossible on general anonymous classical networks even with known n. Symmetric executions on symmetric topologies keep processors indistinguishable.",
     "gain": "No established asymptotic speedup",
@@ -6000,7 +7183,12 @@ window.CATALOGUE_POINTS = [
     "slug": "magic-square-game",
     "name": "Mermin–Peres magic-square game",
     "shortName": "Mermin–Peres magic-square game",
-    "importance": "normal",
+    "entryNumber": 197,
+    "importance": "peripheral",
+    "resourceModels": [
+      "other"
+    ],
+    "strengthCategory": "none",
     "Q": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn></mrow></math></span>",
     "C": "<span class=\"math-inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>8</mn><mo>&#x0002F;</mo><mn>9</mn></mrow></math></span>",
     "gain": "No established asymptotic speedup",

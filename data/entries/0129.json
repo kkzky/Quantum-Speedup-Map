@@ -6,7 +6,7 @@
   "title_latex": "Common subsequence of length $k$",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g25",
   "inventory_ids": [
@@ -132,6 +132,9 @@
     "quantum_exponent": 0.6666666666666666,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 99,
   "citation_ids": [
     "entry-129-citation-00202"

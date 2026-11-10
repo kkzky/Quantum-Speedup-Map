@@ -123,6 +123,10 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 83,
   "citation_ids": [
     "entry-113-citation-00186"

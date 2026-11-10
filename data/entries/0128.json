@@ -6,7 +6,7 @@
   "title_latex": "Bounded-height Dyck language",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g24",
   "inventory_ids": [
@@ -121,6 +121,9 @@
     "classical_kind": "polynomial",
     "gain": "\\Omega(\\max\\{1,\\sqrt n/\\log^{h/2}n\\})"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 98,
   "citation_ids": [
     "entry-128-citation-00201"

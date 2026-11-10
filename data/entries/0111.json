@@ -86,6 +86,9 @@
     "classical_kind": "logarithmic",
     "gain": "\\pi/\\ln 2\\text{ in the leading query coefficient}"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 81,
   "citation_ids": [
     "entry-111-citation-00184"

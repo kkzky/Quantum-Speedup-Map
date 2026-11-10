@@ -6,7 +6,7 @@
   "title_latex": "Euclidean closest pair",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g32",
   "inventory_ids": [
@@ -96,6 +96,9 @@
     "quantum_exponent": 0.6666666666666666,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 103,
   "citation_ids": [
     "entry-133-citation-00207"

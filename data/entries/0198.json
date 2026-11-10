@@ -88,6 +88,10 @@
     "quantum_exponent": 0,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 190,
   "citation_ids": [
     "entry-198-citation-00375"

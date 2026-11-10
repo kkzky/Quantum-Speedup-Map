@@ -6,7 +6,7 @@
   "title_latex": "Cycle detection",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g36",
   "inventory_ids": [
@@ -96,6 +96,10 @@
     "quantum_exponent": 1.5,
     "classical_exponent": 2
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 106,
   "citation_ids": [
     "entry-137-citation-00211"

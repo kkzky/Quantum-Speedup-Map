@@ -6,7 +6,7 @@
   "title_latex": "Isomorphism of coprime abelian-by-cyclic groups",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a02",
   "inventory_ids": [
@@ -105,6 +105,10 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log N"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 147,
   "citation_ids": [
     "entry-147-citation-00308"

@@ -6,7 +6,7 @@
   "title_latex": "Full oracle interrogation",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q08",
   "inventory_ids": [
@@ -88,6 +88,9 @@
     "quantum_exponent": 1,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 193,
   "citation_ids": [
     "entry-201-citation-00378"

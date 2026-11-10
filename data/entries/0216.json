@@ -6,7 +6,7 @@
   "title_latex": "Quantum coupon collection",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q29",
   "inventory_ids": [
@@ -86,6 +86,10 @@
     "classical_kind": "polynomial",
     "gain": "\\Theta(\\log k/\\log(\\min\\{k,n-k\\}+1))"
   },
+  "resource_models": [
+    "oracle",
+    "other"
+  ],
   "ordinal": 38,
   "citation_ids": [
     "entry-216-citation-00084"

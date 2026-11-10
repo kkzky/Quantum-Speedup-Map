@@ -126,6 +126,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Knill--Laflamme normalized-trace algorithm",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 204,
   "citation_ids": [
     "entry-188-citation-00404",

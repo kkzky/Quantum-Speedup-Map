@@ -6,7 +6,7 @@
   "title_latex": "Linearity testing of Boolean functions",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q20",
   "inventory_ids": [
@@ -130,6 +130,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 34,
   "citation_ids": [
     "entry-211-citation-00078"

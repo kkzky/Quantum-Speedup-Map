@@ -6,7 +6,7 @@
   "title_latex": "$\\ell_2$-closeness testing of finite distributions",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q37",
   "inventory_ids": [
@@ -117,6 +117,9 @@
     "quantum_exponent": 1,
     "classical_exponent": 2
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 42,
   "citation_ids": [
     "entry-222-citation-00090"

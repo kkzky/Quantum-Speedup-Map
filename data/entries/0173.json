@@ -6,7 +6,7 @@
   "title_latex": "Witten--Reshetikhin--Turaev invariant",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a36",
   "inventory_ids": [
@@ -103,6 +103,9 @@
     "classical_kind": "unknown",
     "gain": "Classical cost depends on width and encoding size; quantum polynomial time in the covered regime"
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 187,
   "citation_ids": [
     "entry-173-citation-00369",

@@ -6,7 +6,7 @@
   "title_latex": "Random Boolean hidden shift",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a17",
   "inventory_ids": [
@@ -88,6 +88,9 @@
     "quantum_exponent": 0,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 159,
   "citation_ids": [
     "entry-160-citation-00322"

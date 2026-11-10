@@ -6,7 +6,7 @@
   "title_latex": "Multilinear identity testing over a finite ring",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a07",
   "inventory_ids": [
@@ -86,6 +86,9 @@
     "classical_kind": "polynomial",
     "gain": "Polynomial in k for fixed m and alpha"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 151,
   "citation_ids": [
     "entry-151-citation-00313"

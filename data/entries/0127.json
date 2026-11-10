@@ -6,7 +6,7 @@
   "title_latex": "Star-free regular-language membership",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g23",
   "inventory_ids": [
@@ -88,6 +88,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 97,
   "citation_ids": [
     "entry-127-citation-00200"

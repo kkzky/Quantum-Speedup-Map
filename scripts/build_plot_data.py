@@ -8,6 +8,11 @@ from import_catalogue import text
 from build_entry_pages import rich
 
 ROOT=Path(__file__).resolve().parents[1]
+STRENGTH_CATEGORIES = {
+    'white':'none', 'strengthPolynomial':'polynomial',
+    'strengthIntermediate':'intermediate', 'strengthExpToSubexp':'exp_to_subexp',
+    'strengthPolynomialTime':'to_polynomial',
+}
 CORE={
     1:(.5,1,r'$\Theta(\sqrt N)$',r'$\Theta(N)$','N: oracle domain size','Boolean-oracle queries',r'$\Theta(\sqrt N)$'),
     2:(.5,1,r'$\Theta(\sqrt N)$',r'$\Theta(N)$','N: objective domain size','Value-oracle queries',r'$\Theta(\sqrt N)$'),
@@ -69,16 +74,23 @@ def main():
         strength=e['labels']['strength']['color_key']
         gain=e['labels']['strength']['description_latex']
         model=''; parameter=''; cq=cc=None
-        explicit=None
+        explicit=None; strength_order=None
         if e['number'] in CORE:
             cq,cc,q,c,parameter,model,gain=CORE[e['number']]
             if e['number']==61: explicit=math.log1p(1.27/.08)
+            elif e['number']==91: strength_order=1.5
+            elif 0<cq<cc<=2: strength_order=cc/cq
         elif e.get('plot'):
             p=e['plot']; q=display_formula(p.get('quantum',q)); c=display_formula(p.get('classical',c))
             parameter=p.get('parameter',''); model=p.get('model','');gain=p.get('gain',gain)
             gain=display_formula(gain)
             cq=coordinate(p.get('quantum_kind'),p.get('quantum_exponent'))
             cc=coordinate(p.get('classical_kind'),p.get('classical_exponent'))
+            qe,ce=p.get('quantum_exponent'),p.get('classical_exponent')
+            if (p.get('quantum_kind')==p.get('classical_kind') and
+                    p.get('quantum_kind') in ('polynomial','exponential') and
+                    qe is not None and ce is not None and 0<qe<ce):
+                strength_order=ce/qe
         else:
             qp,cp=parse_exponential(q),parse_exponential(c)
             if qp and cp and qp[1]==cp[1]:
@@ -86,6 +98,7 @@ def main():
                 parameter=qp[1]+': the size parameter in the stated comparison'
                 model='Running time, with the entry’s input and memory assumptions'
                 gain='$2^{'+format(cp[0]-qp[0],'.4g')+qp[1]+'}$'
+                if 0<qp[0]<cp[0]: strength_order=cp[0]/qp[0]
         if not model:
             statement=text(e['problem']['statement_latex'])
             match=re.search(r'(?:Complexity|The comparison|The quantum comparison|The quantum bound)[^.]+\.',statement)
@@ -109,11 +122,16 @@ def main():
             for link in item['links']:
                 if link['url'] not in {p['url'] for p in papers}: papers.append({'title':link['title'],'url':link['url']})
         point={'slug':e['slug'],'name':e['title'],'shortName':e['title'],
+               'entryNumber':e['number'],
                'importance':{'medium':'normal'}.get(e['importance'],e['importance']),
+               'resourceModels':e.get('resource_models',[]),
+               'strengthCategory':STRENGTH_CATEGORIES[strength],
                'Q':rich(q),'C':rich(c),'gain':rich(gain),'gainText':text(gain),
                'parameter':text(parameter),'parameterHtml':rich(parameter),'model':model,'evidence':ev,'hardware':hw,
                'hardwareLabel':hardware_label,'costQ':cq,'costC':cc,'papers':papers}
         if explicit is not None: point['strength']=explicit
+        if strength=='strengthPolynomial' and strength_order is not None:
+            point['strengthOrder']=strength_order
         points.append(point)
     output=ROOT/'visualization/demo/sample-data.js'
     output.write_text('window.CATALOGUE_POINTS = '+json.dumps(points,ensure_ascii=False,indent=2)+';\nwindow.SAMPLE_DATA = window.CATALOGUE_POINTS;\n',encoding='utf-8')

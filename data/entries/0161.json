@@ -86,6 +86,10 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log N"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 160,
   "citation_ids": [
     "entry-161-citation-00323"

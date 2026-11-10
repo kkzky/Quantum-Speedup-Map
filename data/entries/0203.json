@@ -6,7 +6,7 @@
   "title_latex": "Search with wildcards",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q10",
   "inventory_ids": [
@@ -105,6 +105,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 26,
   "citation_ids": [
     "entry-203-citation-00066",

@@ -6,7 +6,7 @@
   "title_latex": "Support-coverage estimation",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q42",
   "inventory_ids": [
@@ -115,6 +115,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 47,
   "citation_ids": [
     "entry-227-citation-00096"

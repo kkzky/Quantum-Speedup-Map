@@ -6,7 +6,7 @@
   "title_latex": "Average-case multidimensional pattern matching",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g07",
   "inventory_ids": [
@@ -129,6 +129,10 @@
     "classical_kind": "polynomial",
     "gain": "Strongest regime: exponential to subexponential in log n when m is comparable to n"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 84,
   "citation_ids": [
     "entry-114-citation-00187"

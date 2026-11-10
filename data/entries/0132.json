@@ -6,7 +6,7 @@
   "title_latex": "Maximum-sum submatrix",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g31",
   "inventory_ids": [
@@ -141,6 +141,9 @@
     "quantum_exponent": 2,
     "classical_exponent": 3
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 102,
   "citation_ids": [
     "entry-132-citation-00205",

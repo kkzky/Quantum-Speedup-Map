@@ -112,6 +112,9 @@
     "gain": "n^{1/(k+1)}",
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 80,
   "citation_ids": [
     "entry-110-citation-00182",

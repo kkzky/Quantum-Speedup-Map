@@ -140,6 +140,10 @@
     "gain": "Exponential to polynomial in the generic representation",
     "classical_exponent": 0.5
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 146,
   "citation_ids": [
     "entry-146-citation-00305",

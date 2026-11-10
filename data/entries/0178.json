@@ -6,7 +6,7 @@
   "title_latex": "CBC-MAC forgery under superposition access",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a41",
   "inventory_ids": [
@@ -97,6 +97,9 @@
     "gain": "Exponential to polynomial in the superposition-query attack model",
     "classical_exponent": 0.5
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 169,
   "citation_ids": [
     "entry-178-citation-00333"

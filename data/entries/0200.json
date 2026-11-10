@@ -6,7 +6,7 @@
   "title_latex": "Fourier sampling of a Boolean function",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q05",
   "inventory_ids": [
@@ -88,6 +88,10 @@
     "quantum_exponent": 0,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 192,
   "citation_ids": [
     "entry-200-citation-00377"

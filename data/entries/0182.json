@@ -75,6 +75,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Mahadev verification protocol",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 198,
   "citation_ids": [
     "entry-182-citation-00383"

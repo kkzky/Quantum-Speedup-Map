@@ -6,7 +6,7 @@
   "title_latex": "Zeta functions of curves over finite fields",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a24",
   "inventory_ids": [
@@ -86,6 +86,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Kedlaya quantum zeta-function algorithm; Watrous solvable-group order algorithm",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 166,
   "citation_ids": [
     "entry-167-citation-00330"

@@ -6,7 +6,7 @@
   "title_latex": "Hidden quadratic level sets",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a22",
   "inventory_ids": [
@@ -77,6 +77,10 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Decker--Draisma--Ivanyos--Santha hidden-symmetry algorithm",
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 164,
   "citation_ids": [
     "entry-165-citation-00327"

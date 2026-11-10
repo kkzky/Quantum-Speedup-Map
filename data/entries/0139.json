@@ -6,7 +6,7 @@
   "title_latex": "Cycle finding from an edge list",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g38",
   "inventory_ids": [
@@ -95,6 +95,9 @@
     "gain": "m^{1/4+1/(2^{k+2}-4)-o(1)}",
     "classical_exponent": 1
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 108,
   "citation_ids": [
     "entry-139-citation-00213"

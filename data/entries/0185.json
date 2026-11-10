@@ -126,6 +126,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Linear-optical boson sampling",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 201,
   "citation_ids": [
     "entry-185-citation-00391",

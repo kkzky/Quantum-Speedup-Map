@@ -6,7 +6,7 @@
   "title_latex": "Independence testing of a finite joint distribution",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q38",
   "inventory_ids": [
@@ -115,6 +115,9 @@
     "classical_kind": "polynomial",
     "gain": "Parameter-dependent polynomial improvement"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 43,
   "citation_ids": [
     "entry-223-citation-00091"

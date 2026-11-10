@@ -121,6 +121,10 @@
     "classical_exponent": 1,
     "gain": "\\Omega(\\sqrt{N/\\log N})"
   },
+  "resource_models": [
+    "oracle",
+    "other"
+  ],
   "ordinal": 117,
   "citation_ids": [
     "entry-194-citation-00224",

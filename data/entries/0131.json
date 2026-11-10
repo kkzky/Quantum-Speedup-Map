@@ -6,7 +6,7 @@
   "title_latex": "Longest substring with distinct characters",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g27",
   "inventory_ids": [
@@ -124,6 +124,9 @@
     "quantum_exponent": 0.6666666666666666,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 101,
   "citation_ids": [
     "entry-131-citation-00204"

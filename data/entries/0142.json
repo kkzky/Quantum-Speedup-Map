@@ -6,7 +6,7 @@
   "title_latex": "Random spanning-tree sampling",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g44",
   "inventory_ids": [
@@ -86,6 +86,10 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Theta(\\sqrt{m/n})"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 111,
   "citation_ids": [
     "entry-142-citation-00218"

@@ -6,7 +6,7 @@
   "title_latex": "Hidden subgroups of nilpotency-class-two groups",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a20",
   "inventory_ids": [
@@ -86,6 +86,10 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 162,
   "citation_ids": [
     "entry-163-citation-00325"

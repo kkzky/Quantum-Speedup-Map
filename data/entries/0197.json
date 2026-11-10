@@ -6,7 +6,7 @@
   "title_latex": "Mermin--Peres magic-square game",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "magic_square_game",
   "inventory_ids": [],
@@ -92,6 +92,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Mermin--Peres magic-square strategy",
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 211,
   "citation_ids": [
     "entry-197-citation-00420",

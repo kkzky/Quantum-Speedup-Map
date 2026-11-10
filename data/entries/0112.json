@@ -6,7 +6,7 @@
   "title_latex": "Approximate median",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g05",
   "inventory_ids": [
@@ -108,6 +108,9 @@
     "quantum_exponent": 1,
     "classical_exponent": 2
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 82,
   "citation_ids": [
     "entry-112-citation-00185"

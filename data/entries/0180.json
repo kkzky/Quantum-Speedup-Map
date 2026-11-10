@@ -94,6 +94,10 @@
     "classical_exponent": null,
     "gain": "2^{\\lambda^c}/\\operatorname{poly}(\\lambda)"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 171,
   "citation_ids": [
     "entry-180-citation-00335"

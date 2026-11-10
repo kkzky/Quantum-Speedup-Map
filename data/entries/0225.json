@@ -6,7 +6,7 @@
   "title_latex": "Shannon entropy of a finite distribution",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q40",
   "inventory_ids": [
@@ -123,6 +123,9 @@
     "classical_kind": "polynomial",
     "gain": "Nearly quadratic dependence on support size at constant error"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 45,
   "citation_ids": [
     "entry-225-citation-00093",

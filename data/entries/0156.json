@@ -6,7 +6,7 @@
   "title_latex": "Polynomial interpolation over finite fields",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a12",
   "inventory_ids": [
@@ -104,6 +104,9 @@
     "classical_kind": "polynomial",
     "gain": "(n+d)/d"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 156,
   "citation_ids": [
     "entry-156-citation-00318",

@@ -6,7 +6,7 @@
   "title_latex": "Exact leader election in anonymous networks",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "anonymous_leader_election",
   "inventory_ids": [],
@@ -92,6 +92,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Kobayashi--Matsumoto--Tani leader election",
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 210,
   "citation_ids": [
     "entry-196-citation-00418",

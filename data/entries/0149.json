@@ -6,7 +6,7 @@
   "title_latex": "Basis representation of a finite black-box ring",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a05",
   "inventory_ids": [
@@ -122,6 +122,10 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log |R|"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 149,
   "citation_ids": [
     "entry-149-citation-00310",

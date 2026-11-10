@@ -123,6 +123,9 @@
     "quantum_exponent": 1.5,
     "classical_exponent": 2
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 105,
   "citation_ids": [
     "entry-136-citation-00210"

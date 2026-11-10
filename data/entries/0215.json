@@ -6,7 +6,7 @@
   "title_latex": "Boolean-function isomorphism under coordinate permutations",
   "aliases": [],
   "chapter_id": "chapter-4",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q26",
   "inventory_ids": [
@@ -88,6 +88,10 @@
     "quantum_exponent": 1,
     "classical_exponent": 0.5
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 195,
   "citation_ids": [
     "entry-215-citation-00380"

@@ -121,6 +121,10 @@
     "classical_kind": "polynomial",
     "gain": "\\widetilde\\Omega(\\sqrt{n/k})"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 91,
   "citation_ids": [
     "entry-121-citation-00194"

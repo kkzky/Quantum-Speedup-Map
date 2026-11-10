@@ -6,7 +6,7 @@
   "title_latex": "Agnostic learning of decision trees",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q19",
   "inventory_ids": [
@@ -86,6 +86,10 @@
     "classical_kind": "subexponential",
     "gain": "Quasipolynomial to polynomial for polynomial t"
   },
+  "resource_models": [
+    "gate",
+    "other"
+  ],
   "ordinal": 33,
   "citation_ids": [
     "entry-210-citation-00077"

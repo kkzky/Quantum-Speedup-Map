@@ -6,7 +6,7 @@
   "title_latex": "Normal hidden subgroup",
   "aliases": [],
   "chapter_id": "chapter-3",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-a21",
   "inventory_ids": [
@@ -86,6 +86,9 @@
     "classical_kind": "exponential",
     "gain": "Exponential to polynomial in log |G|"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 163,
   "citation_ids": [
     "entry-164-citation-00326"

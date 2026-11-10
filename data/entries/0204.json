@@ -6,7 +6,7 @@
   "title_latex": "Combinatorial group testing",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q11",
   "inventory_ids": [
@@ -94,6 +94,9 @@
     "classical_kind": "polynomial",
     "gain": "\\Theta(\\sqrt k(1+\\log(n/k)))"
   },
+  "resource_models": [
+    "oracle"
+  ],
   "ordinal": 27,
   "citation_ids": [
     "entry-204-citation-00068"

@@ -6,7 +6,7 @@
   "title_latex": "Pattern matching with mismatches",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g17",
   "inventory_ids": [
@@ -128,6 +128,10 @@
     "classical_kind": "polynomial",
     "gain": "\\widehat\\Omega(\\sqrt{n/k})"
   },
+  "resource_models": [
+    "oracle",
+    "gate"
+  ],
   "ordinal": 92,
   "citation_ids": [
     "entry-122-citation-00195"

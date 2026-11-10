@@ -24,6 +24,7 @@ The manuscript supplies 92 merged problem entries and 61 algorithm records. Rese
 | `algorithm_items` | Literature index items, including definitions and algorithm locators. |
 | `algorithm_ids`, `also_used_in` | Shared algorithm nodes and their other problem applications. |
 | `importance` | Editorial display priority: high, medium or peripheral. |
+| `resource_models` | Applicable visualization filters: oracle, gate, or other (such as samples, communication or circuit depth). |
 | `inventory_ids` | Candidate-inventory records incorporated into this problem. |
 | `plot` | Optional formulas, parameters, resource model and growth rates for the visual comparison. |
 | `citation_ids` | Citations occurring in the entry. |

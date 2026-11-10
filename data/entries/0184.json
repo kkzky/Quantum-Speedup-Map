@@ -143,6 +143,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Random-circuit execution",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 200,
   "citation_ids": [
     "entry-184-citation-00386",

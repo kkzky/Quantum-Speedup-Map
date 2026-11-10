@@ -6,7 +6,7 @@
   "title_latex": "Longest palindromic substring",
   "aliases": [],
   "chapter_id": "chapter-2",
-  "importance": "medium",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-g14",
   "inventory_ids": [
@@ -123,6 +123,9 @@
     "quantum_exponent": 0.5,
     "classical_exponent": 1
   },
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 89,
   "citation_ids": [
     "entry-119-citation-00192"

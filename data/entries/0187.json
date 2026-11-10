@@ -126,6 +126,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: IQP circuit sampling",
+  "resource_models": [
+    "gate"
+  ],
   "ordinal": 203,
   "citation_ids": [
     "entry-187-citation-00400",

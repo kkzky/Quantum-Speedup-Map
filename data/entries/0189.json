@@ -103,6 +103,9 @@
     "classical_exponent": null,
     "gain": "\\Omega(\\log n)"
   },
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 205,
   "citation_ids": [
     "entry-189-citation-00408",

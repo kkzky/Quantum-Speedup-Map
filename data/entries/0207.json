@@ -6,7 +6,7 @@
   "title_latex": "Learning juntas from quantum examples",
   "aliases": [],
   "chapter_id": "chapter-1",
-  "importance": "high",
+  "importance": "peripheral",
   "origin": "research",
   "research_key": "prior-q15",
   "inventory_ids": [
@@ -85,6 +85,9 @@
   ],
   "source_latex": "",
   "algorithm_heading_latex": "Algorithm: Atici--Servedio Fourier junta learning and testing",
+  "resource_models": [
+    "other"
+  ],
   "ordinal": 30,
   "citation_ids": [
     "entry-207-citation-00073"
