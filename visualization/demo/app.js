@@ -39,7 +39,7 @@ const priority=p=>p.featured?4:p.importance==='high'?3:p.importance==='periphera
 const sortedRecords=[...records].sort((a,b)=>priority(b)-priority(a)||a.name.localeCompare(b.name));
 const strengthMax=10;
 const strengthBoundaries=[{value:4.6,label:'Above polynomial'},{value:5.5,label:'(Sub)exp. → polynomial'}];
-const costMax=Math.max(3.65,...records.flatMap(p=>[p.costQ,p.costC]).filter(Number.isFinite))*1.01;
+const costMax=Math.max(5.2,...records.flatMap(p=>p.costComparison?.points?.flat()||[p.costQ,p.costC]).filter(Number.isFinite))*1.01;
 const ticks=[{category:'polynomial',value:2.4,label:'Polynomial'},{category:'intermediate',value:4.78,label:'Improved\nexp./subexp.'},{category:'exp_to_subexp',value:5.18,label:'Exp. →\nsubexp.'},{category:'to_polynomial',value:7.8,label:'(Sub)exp. →\npolynomial'}].filter(t=>records.some(p=>p.strengthCategory===t.category));
 const activeResources=new Set(['oracle','gate','other']);
 const isResourceVisible=p=>p.resourceModels.some(model=>activeResources.has(model));
@@ -47,7 +47,7 @@ let selected=bySlug.factoring?'factoring':records[0]?.slug;
 let points=[];
 const selectFromChart=slug=>select(slug,{scroll:!document.fullscreenElement});
 const scene=new SpeedupScene($('scene'),{onSelect:selectFromChart,onHover:tooltip});
-const costScene=new CostScene($('cost'),{onSelect:selectFromChart,onHover:tooltip});
+const costScene=new CostScene($('cost'),{onSelect:selectFromChart,onHover:(point,position)=>tooltip(point,position,true)});
 function installModelFilters(container,fullscreen=false) {
   container.classList.add('model-filters');
   if(fullscreen)container.classList.add('fullscreen-model-filters');
@@ -73,13 +73,14 @@ function select(slug,{scroll=false}={}) {
     $('detail').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
   }
 }
-function tooltip(point,position) {
+function tooltip(point,position,showComparison=false) {
   const el=$('tooltip');
   if (!point) {el.hidden=true;return;}
   el.hidden=false;
-  el.innerHTML=`<b>${esc(point.name)}</b><small>${point.gain}</small>`;
+  const comparison=showComparison&&point.costComparison;
+  el.innerHTML=`<b>${esc(point.name)}</b><small>${point.gain}</small>${comparison?`<small>${comparison.noteHtml||esc(comparison.note)}</small>`:''}`;
   el.style.left=Math.max(8,Math.min(innerWidth-310,position.x+15))+'px';
-  el.style.top=Math.max(10,Math.min(innerHeight-90,position.y+10))+'px';
+  el.style.top=Math.max(10,Math.min(innerHeight-el.offsetHeight-10,position.y+10))+'px';
 }
 function update() {
   const visible=records.filter(isResourceVisible);
@@ -88,16 +89,19 @@ function update() {
   scene.setData(points,{strengthMax,strengthBoundaries,hardwareMax:3,hardwareUnspecified:3.25,hardwareUnspecifiedLabel:'Not applicable',strengthTicks:ticks,
     evidenceTicks:[{value:0,label:'Unestablished'},{value:.5,label:'Partial'},{value:.75,label:'Conditional'},{value:1,label:'Proved'}],
     hardwareTicks:[{value:0,label:'NISQ'},{value:1,label:'Fault-tolerant'},{value:2,label:'Coherent data'},{value:3,label:'Specialized resources'}],selectedSlug:selected});
-  costScene.setData(points,{costMax,polynomialBoundary:2.5,exponentialBoundary:2.9,selectedSlug:selected,colorForCategory,categoryColorRGB,
-    costTicks:plotConfig.costTicks||[{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:2.7,label:'exp(√N)'},{value:3.4,label:'2ᴺᐟ²'}]});
+  costScene.setData(points,{costMax,polynomialBoundary:2.4,exponentialBoundary:2.9,selectedSlug:selected,colorForCategory,categoryColorRGB,
+    costTicks:plotConfig.costTicks||[{value:.5,label:'√N'},{value:1,label:'N'},{value:2,label:'N²'},{value:2.7,label:'exp(√N)'},{value:3.9,label:'2ᴺ'},{value:4.9,label:'2²ᴺ'}]});
   document.querySelectorAll('.model-count').forEach(el=>el.textContent=`${visible.length} / ${records.length} problems`);
+  const costs=visible.reduce((counts,p)=>{const kind=p.costComparison?.kind||'unavailable';counts[kind]=(counts[kind]||0)+1;return counts;},{});
+  $('costCoverage').textContent=`${(costs.point||0)+(costs.curve||0)+(costs.region||0)} in plot · ${costs.unavailable||0} below`;
   renderProblemList();
   window.demoState={points,selected,activeResources:[...activeResources],strengthBoundaries};
   const p=bySlug[selected];
   if(!p){$('detail').innerHTML='<p class="no-results">No problems match the selected complexity models.</p>';return;}
   const papers=p.papers.slice(0,4);
   const algorithmLinks=(window.PROBLEM_ALGORITHMS[p.slug]||[]).map(a=>`<a class="algorithm-link" href="#algorithm/${esc(a.id)}">→ ${esc(a.title)}</a>`).join('');
-  $('detail').innerHTML=`<div class="detail-top"><div><div class="eyebrow">${esc(p.model)}</div><h2>${esc(p.name)}</h2><p>${p.parameterHtml || esc(p.parameter)}</p></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${p.Q}</div></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${p.C}</div></div></div><div class="gain-row"><span class="field-label">ASYMPTOTIC SPEEDUP, T<sub>C</sub> / T<sub>Q</sub></span><strong>${p.gain}</strong></div><div class="detail-meta"><div><i class="dot blue"></i><strong>Evidence level:</strong> ${esc(p.evidenceLabel||evidenceLabels[p.evidence]||'')}</div><div><i class="dot green"></i><strong>Required hardware:</strong> ${esc(p.hardwareLabel||hardwareLabels[p.hardware]||'')}</div></div><div class="papers">${papers.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div><div class="entry-navigation"><a id="entryLink" href="#entry/${esc(p.slug)}">→ ${esc(p.name)}</a>${algorithmLinks}</div>`;
+  $('detail').innerHTML=`<div class="detail-top"><div><div class="eyebrow">${esc(p.model)}</div><h2>${esc(p.name)}</h2><p>${p.parameterHtml || esc(p.parameter)}</p></div></div><div class="comparison"><div><span class="field-label">QUANTUM COMPLEXITY</span><div class="formula">${p.Q}</div></div><div><span class="field-label">CLASSICAL COMPLEXITY</span><div class="formula">${p.C}</div></div></div><div class="gain-row"><span class="field-label">QUANTUM SPEEDUP</span><span class="gain-text">${p.gain}</span></div><div class="detail-meta"><div><i class="dot blue"></i><strong>Evidence level:</strong> ${esc(p.evidenceLabel||evidenceLabels[p.evidence]||'')}</div><div><i class="dot green"></i><strong>Required hardware:</strong> ${esc(p.hardwareLabel||hardwareLabels[p.hardware]||'')}</div></div><div class="papers">${papers.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.title.replace(/\$/g,''))} ↗</a>`).join('')}</div><div class="entry-navigation"><a id="entryLink" href="#entry/${esc(p.slug)}">→ ${esc(p.name)}</a>${algorithmLinks}</div>`;
+  if(p.costComparison){const note=document.createElement('p');note.className='cost-comparison-note';note.innerHTML=p.costComparison.noteHtml||esc(p.costComparison.note);$('detail').querySelector('.comparison').after(note);}
 
 }
 function normalize(value) {return String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
